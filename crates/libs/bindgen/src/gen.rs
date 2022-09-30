@@ -1,17 +1,23 @@
 use super::*;
 
+pub trait ExternalNamespaceResolver {
+    fn resolve(&self, namespace: &str) -> Option<String>;
+    fn is_external(&self, namespace: &str) -> bool;
+}
+
 pub struct Gen<'a> {
     pub reader: &'a Reader<'a>,
     pub namespace: &'a str,
     pub sys: bool,
     pub cfg: bool,
     pub doc: bool,
+    pub extern_namespaces: Option<&'a dyn ExternalNamespaceResolver>,
     pub component: bool,
 }
 
 impl<'a> Gen<'a> {
     pub fn new(reader: &'a Reader) -> Self {
-        Self { reader, namespace: "", sys: false, cfg: false, doc: false, component: false }
+        Self { reader, namespace: "", sys: false, cfg: false, doc: false, extern_namespaces: None, component: false }
     }
 
     //
@@ -315,7 +321,7 @@ impl<'a> Gen<'a> {
         } else {
             let mut tokens = format!(r#"`\"{}\"`"#, to_feature(self.namespace));
 
-            let features = cfg_features(cfg, self.namespace);
+            let features = cfg_features(cfg, self.namespace, self.extern_namespaces);
             for features in features {
                 write!(tokens, r#", `\"{}\"`"#, to_feature(features)).unwrap();
             }
@@ -330,7 +336,7 @@ impl<'a> Gen<'a> {
         if !self.doc {
             quote! {}
         } else {
-            let features = cfg_features(cfg, self.namespace);
+            let features = cfg_features(cfg, self.namespace, self.extern_namespaces);
             if features.is_empty() {
                 quote! {}
             } else {
@@ -359,7 +365,7 @@ impl<'a> Gen<'a> {
                 }
             };
 
-            let features = cfg_features(cfg, self.namespace);
+            let features = cfg_features(cfg, self.namespace, self.extern_namespaces);
 
             let features = match features.len() {
                 0 => quote! {},
@@ -378,7 +384,7 @@ impl<'a> Gen<'a> {
     }
 
     fn cfg_not_features(&self, cfg: &Cfg) -> TokenStream {
-        let features = cfg_features(cfg, self.namespace);
+        let features = cfg_features(cfg, self.namespace, self.extern_namespaces);
         if !self.cfg || features.is_empty() {
             quote! {}
         } else {
@@ -404,7 +410,10 @@ impl<'a> Gen<'a> {
         if namespace == self.namespace {
             quote! {}
         } else {
-            let is_external = namespace.starts_with("Windows.") && !self.namespace.starts_with("Windows");
+            if let Some(res) = self.extern_namespaces.and_then(|r| r.resolve(namespace)) {
+                return res.into();
+            }
+
             let mut relative = self.namespace.split('.').peekable();
             let mut namespace = namespace.split('.').peekable();
 
@@ -418,13 +427,8 @@ impl<'a> Gen<'a> {
 
             let mut tokens = TokenStream::new();
 
-            if is_external {
-                tokens.push_str("::windows::");
-                namespace.next();
-            } else {
-                for _ in 0..relative.count() {
-                    tokens.push_str("super::");
-                }
+            for _ in 0..relative.count() {
+                tokens.push_str("super::");
             }
 
             for namespace in namespace {
@@ -1137,7 +1141,7 @@ fn to_feature(name: &str) -> String {
     feature
 }
 
-pub fn cfg_features<'a>(cfg: &'a Cfg, namespace: &'a str) -> Vec<&'a str> {
+pub fn cfg_features<'a>(cfg: &'a Cfg, namespace: &'a str, extern_namespaces: Option<&'a dyn ExternalNamespaceResolver>) -> Vec<&'a str> {
     let mut compact = Vec::<&'static str>::new();
     for feature in cfg.types.keys() {
         if !feature.is_empty() && !starts_with(namespace, feature) {
@@ -1149,6 +1153,10 @@ pub fn cfg_features<'a>(cfg: &'a Cfg, namespace: &'a str) -> Vec<&'a str> {
             }
             compact.push(feature);
         }
+    }
+
+    if let Some(resolver) = extern_namespaces {
+        compact.retain(|f| !resolver.is_external(f))
     }
     compact
 }

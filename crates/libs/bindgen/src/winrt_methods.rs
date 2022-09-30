@@ -3,8 +3,16 @@ use super::*;
 // TODO take Signature instead of MethodDef (wherever MethodDef is found)
 pub fn gen(gen: &Gen, def: TypeDef, generic_types: &[Type], kind: InterfaceKind, method: MethodDef, method_names: &mut MethodNames, virtual_names: &mut MethodNames) -> TokenStream {
     let signature = gen.reader.method_def_signature(method, generic_types);
-    let params = &signature.params;
-    let name = method_names.add(gen, method);
+    let params = if kind == InterfaceKind::Composable { &signature.params[..signature.params.len() - 2] } else { &signature.params };
+
+    let (name, name_compose) = if kind == InterfaceKind::Composable && signature.params.len() == 2 {
+        ("new".into(), "compose".into())
+    } else {
+        let name = method_names.add(gen, method);
+        let name_compose = name.join("_compose");
+        (name, name_compose)
+    };
+
     let interface_name = gen.type_def_name(def, generic_types);
     let vname = virtual_names.add(gen, method);
     let generics = gen.constraint_generics(params);
@@ -38,24 +46,44 @@ pub fn gen(gen: &Gen, def: TypeDef, generic_types: &[Type], kind: InterfaceKind,
         quote! {}
     };
 
-    let vcall = if let Some(return_type) = &signature.return_type {
+    let composable_args = match kind {
+        InterfaceKind::Composable => quote! {
+            ::core::mem::transmute_copy(&derived__), base__ as *mut _ as _,
+        },
+        _ => quote! {},
+    };
+
+    let (vcall, vcall_none) = if let Some(return_type) = &signature.return_type {
         if return_type.is_winrt_array() {
-            quote! {
-                let mut result__ = ::core::mem::MaybeUninit::zeroed();
-                (::windows::core::Vtable::vtable(this).#vname)(::windows::core::Vtable::as_raw(this), #args #return_arg)
-                    .and_then(|| result__.assume_init())
-            }
+            (
+                quote! {
+                    let mut result__ = ::core::mem::MaybeUninit::zeroed();
+                    (::windows::core::Vtable::vtable(this).#vname)(::windows::core::Vtable::as_raw(this), #args #composable_args #return_arg)
+                        .and_then(|| result__.assume_init())
+                },
+                quote! {},
+            )
         } else {
-            quote! {
-                let mut result__ = ::core::mem::MaybeUninit::zeroed();
-                    (::windows::core::Vtable::vtable(this).#vname)(::windows::core::Vtable::as_raw(this), #args #return_arg)
-                        .from_abi::<#return_type_tokens>(result__ )
-            }
+            (
+                quote! {
+                    let mut result__ = ::core::mem::MaybeUninit::zeroed();
+                        (::windows::core::Vtable::vtable(this).#vname)(::windows::core::Vtable::as_raw(this), #args #composable_args #return_arg)
+                            .from_abi::<#return_type_tokens>(result__ )
+                },
+                quote! {
+                    let mut result__ = ::core::mem::MaybeUninit::zeroed();
+                        (::windows::core::Vtable::vtable(this).#vname)(::windows::core::Vtable::as_raw(this), #args ::core::ptr::null_mut(), &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _, #return_arg)
+                            .from_abi::<#return_type_tokens>(result__ )
+                },
+            )
         }
     } else {
-        quote! {
-            (::windows::core::Vtable::vtable(this).#vname)(::windows::core::Vtable::as_raw(this), #args).ok()
-        }
+        (
+            quote! {
+                (::windows::core::Vtable::vtable(this).#vname)(::windows::core::Vtable::as_raw(this), #args #composable_args).ok()
+            },
+            quote! {},
+        )
     };
 
     match kind {
@@ -87,6 +115,25 @@ pub fn gen(gen: &Gen, def: TypeDef, generic_types: &[Type], kind: InterfaceKind,
                 #features
                 pub fn #name<#generics>(#params) -> ::windows::core::Result<#return_type_tokens> #where_clause {
                     Self::#interface_name(|this| unsafe { #vcall })
+                }
+            }
+        }
+        InterfaceKind::Composable => {
+            let generics_compose = expand_generics(generics.clone(), quote!(T));
+            let where_clause_compose = expand_where_clause(where_clause.clone(), quote!(T: ::windows::core::Compose));
+            quote! {
+                #doc
+                #features
+                pub fn #name<#generics>(#params) -> ::windows::core::Result<#return_type_tokens> #where_clause {
+                    Self::#interface_name(|this| unsafe { #vcall_none })
+                }
+                #doc
+                #features
+                pub fn #name_compose<#generics_compose>(#params compose: T) -> ::windows::core::Result<#return_type_tokens> #where_clause_compose {
+                    Self::#interface_name(|this| unsafe {
+                        let (derived__, base__) = ::windows::core::Compose::compose(compose);
+                        #vcall
+                    })
                 }
             }
         }

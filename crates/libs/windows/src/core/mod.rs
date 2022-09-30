@@ -4,6 +4,7 @@ mod array;
 mod as_impl;
 pub(crate) mod bindings;
 mod borrowed;
+mod compose;
 mod delay_load;
 mod error;
 mod event;
@@ -34,6 +35,8 @@ pub use array::*;
 #[doc(hidden)]
 pub use as_impl::*;
 pub use borrowed::*;
+#[doc(hidden)]
+pub use compose::*;
 pub(crate) use delay_load::*;
 pub use error::*;
 pub use event::*;
