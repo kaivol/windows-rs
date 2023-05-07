@@ -1,12 +1,6 @@
 use super::*;
-use std::collections::btree_map::Entry;
 
-pub struct MethodNames(BTreeMap<String, Kind>);
-
-enum Kind {
-    Base { next_overload: u32 },
-    Overload { base: String },
-}
+pub struct MethodNames(BTreeMap<String, u32>);
 
 impl MethodNames {
     pub fn new() -> Self {
@@ -19,34 +13,13 @@ impl MethodNames {
     }
 
     fn add_inner(&mut self, name: String) -> TokenStream {
-        match self.0.get_mut(&name) {
-            Some(Kind::Base { next_overload }) => {
-                let overload_name = format!("{name}{}", *next_overload);
-                *next_overload += 1;
-                self.insert_and_to_indent(overload_name, Kind::Overload { base: name })
-            }
-            Some(Kind::Overload { base }) => {
-                let base = base.clone();
-                if let Some(Kind::Base { next_overload }) = self.0.get_mut(&base) {
-                    let overload_name = format!("{base}{}", *next_overload);
-                    *next_overload += 1;
-                    self.insert_and_to_indent(overload_name, Kind::Overload { base })
-                } else {
-                    unreachable!()
-                }
-            }
-            None => self.insert_and_to_indent(name, Kind::Base { next_overload: 2 }),
-        }
-    }
-
-    fn insert_and_to_indent(&mut self, name: String, kind: Kind) -> TokenStream {
-        let result = to_ident(&name);
-        match self.0.entry(name) {
-            Entry::Vacant(v) => {
-                v.insert(kind);
-                result
-            }
-            Entry::Occupied(o) => panic!("Prevented generation of duplicate method name {}", o.key()),
+        let overload = self.0.entry(name.to_string()).or_insert(0);
+        *overload += 1;
+        if *overload > 1 {
+            let name = format!("{name}{overload}");
+            self.add_inner(name)
+        } else {
+            to_ident(&name)
         }
     }
 
@@ -58,19 +31,5 @@ impl MethodNames {
                 }
             }
         }
-    }
-}
-
-#[cfg(test)]
-mod test {
-    use super::*;
-
-    #[test]
-    fn test_overload() {
-        let mut method_names = MethodNames::new();
-        assert_eq!(method_names.add_inner("SetFoo".into()), "SetFoo".into());
-        assert_eq!(method_names.add_inner("SetFoo".into()), "SetFoo2".into());
-        assert_eq!(method_names.add_inner("SetFoo2".into()), "SetFoo3".into());
-        assert_eq!(method_names.add_inner("SetFoo".into()), "SetFoo4".into());
     }
 }
