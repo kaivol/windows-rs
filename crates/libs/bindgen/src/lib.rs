@@ -41,9 +41,14 @@ pub fn namespace(gen: &Gen, tree: &Tree) -> String {
 
     for (name, tree) in &tree.nested {
         let name = to_ident(name);
-        let namespace = tree.namespace[tree.namespace.find('.').unwrap() + 1..].replace('.', "_");
-        if !gen.component {
-            tokens.combine(&quote! { #[cfg(feature = #namespace)] });
+        match gen.component {
+            Component::False => {
+                let namespace = tree.namespace[tree.namespace.find('.').unwrap() + 1..].replace('.', "_");
+                tokens.combine(&quote! { #[cfg(feature = #namespace)] }) },
+            Component::True { include_cfg: true, .. } => {
+                let namespace = tree.namespace.replace('.', "_");
+                tokens.combine(&quote! { #[cfg(feature = #namespace)] }) },
+            Component::True { include_cfg: false, .. } => {},
         }
         tokens.combine(&quote! { pub mod #name; });
     }
@@ -194,7 +199,19 @@ pub fn component(namespace: &str, files: &[File]) -> String {
     let tree = reader.tree(namespace, &Default::default());
     let mut gen = Gen::new(reader);
     gen.namespace = tree.namespace;
-    gen.component = true;
+    struct DefaultResolver;
+    impl ExternalNamespaceResolver for DefaultResolver {
+        fn resolve(&self, namespace: &str) -> Option<String> {
+            namespace.strip_prefix("Windows.").map(|r|{
+                format!("::windows::{}::", r)
+            })
+        }
+    }
+    let resolver = &DefaultResolver;
+    gen.component = Component::True {
+        include_cfg: false,
+        resolver,
+    };
     let mut bindings = crate::namespace(&gen, &tree);
     bindings.push_str(&namespace_impl(&gen, &tree));
     try_format(bindings)
