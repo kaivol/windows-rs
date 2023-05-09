@@ -2,7 +2,10 @@ use super::*;
 
 pub fn gen(gen: &Gen, def: TypeDef) -> TokenStream {
     if gen.reader.type_def_kind(def) != TypeKind::Interface
-        || (matches!(gen.component, Component::False) && !gen.reader.type_def_can_implement(def))
+        || (
+            matches!(gen.component, Component::False | Component::True { skip_exclusive_interfaces: true, ..})
+                && !gen.reader.type_def_can_implement(def)
+        )
     {
         return quote! {};
     }

@@ -211,6 +211,7 @@ pub fn component(namespace: &str, files: &[File]) -> String {
     gen.component = Component::True {
         include_cfg: false,
         resolver,
+        skip_exclusive_interfaces: false,
     };
     let mut bindings = crate::namespace(&gen, &tree);
     bindings.push_str(&namespace_impl(&gen, &tree));

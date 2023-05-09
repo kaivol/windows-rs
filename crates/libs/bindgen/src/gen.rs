@@ -12,6 +12,7 @@ pub enum Component<'a> {
     True {
         include_cfg: bool,
         resolver: &'a dyn ExternalNamespaceResolver,
+        skip_exclusive_interfaces: bool,
     },
 }
 
