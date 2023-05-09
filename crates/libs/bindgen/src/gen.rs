@@ -407,11 +407,11 @@ impl<'a> Gen<'a> {
         let features = match features.len() {
             0 => quote! {},
             1 => {
-                let features = features.iter().cloned().map(|| self.to_feature);
+                let features = features.iter().cloned().map(|f| self.to_feature(f));
                 quote! { #[cfg(#(feature = #features)*)] }
             }
             _ => {
-                let features = features.iter().cloned().map(|| self.to_feature);
+                let features = features.iter().cloned().map(|f| self.to_feature(f));
                 quote! { #[cfg(all( #(feature = #features),* ))] }
             }
         };
@@ -445,11 +445,11 @@ impl<'a> Gen<'a> {
             match features.len() {
                 0 => quote! {},
                 1 => {
-                    let features = features.iter().cloned().map(|| self.to_feature);
+                    let features = features.iter().cloned().map(|f| self.to_feature(f));
                     quote! { #[cfg(not(#(feature = #features)*))] }
                 }
                 _ => {
-                    let features = features.iter().cloned().map(|| self.to_feature);
+                    let features = features.iter().cloned().map(|f| self.to_feature(f));
                     quote! { #[cfg(not(all( #(feature = #features),* )))] }
                 }
             }
@@ -1330,7 +1330,11 @@ impl<'a> Gen<'a> {
     fn to_feature(&self, name: &str) -> String {
         let mut feature = String::new();
 
-        for name in name.split('.') {
+        let skip = match self.component {
+            Component::False => 1,
+            Component::True {..} => 0,
+        };
+        for name in name.split('.').skip(skip) {
             feature.push_str(name);
             feature.push('_');
         }
