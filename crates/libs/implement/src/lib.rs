@@ -85,7 +85,7 @@ pub fn implement(attributes: proc_macro::TokenStream, original_type: proc_macro:
             base: ::core::option::Option<::windows::core::IInspectable>,
             identity: *const ::windows::core::IInspectable_Vtbl,
             vtables: (#(*const #vtbl_idents,)*),
-             this: #original_ident::#generics,
+            this: #original_ident::#generics,
             count: ::windows::core::imp::WeakRefCount,
         }
         impl #generics #impl_ident::#generics where #constraints {
@@ -101,7 +101,7 @@ pub fn implement(attributes: proc_macro::TokenStream, original_type: proc_macro:
                 }
             }
         }
-         impl #generics ::windows::core::IUnknownImpl for #impl_ident::#generics where #constraints {
+        impl #generics ::windows::core::IUnknownImpl for #impl_ident::#generics where #constraints {
             type Impl = #original_ident::#generics;
             fn get_impl(&self) -> &Self::Impl {
                 &self.this
@@ -125,7 +125,7 @@ pub fn implement(attributes: proc_macro::TokenStream, original_type: proc_macro:
 
                     if (*interface).is_null() {
                         if let Some(base) = &self.base {
-                            ::windows::core::Interface::query(base, iid, interface)
+                            ::windows::core::ComInterface::query(base, iid, interface)
                         } else {
                             ::windows::core::HRESULT(0x8000_4002) // E_NOINTERFACE
                         }
@@ -146,7 +146,7 @@ pub fn implement(attributes: proc_macro::TokenStream, original_type: proc_macro:
                 }
                 remaining
             }
-         }
+        }
         impl #generics #original_ident::#generics where #constraints {
             /// Try casting as the provided interface
             ///
@@ -159,12 +159,11 @@ pub fn implement(attributes: proc_macro::TokenStream, original_type: proc_macro:
                 let mut result = None;
                 <#impl_ident::#generics as ::windows::core::IUnknownImpl>::QueryInterface(&*boxed, &I::IID, &mut result as *mut _ as _).and_some(result)
             }
-        }
-        impl <#constraints> ::windows::core::Compose for #original_ident::<#(#generics,)*> {
-            unsafe fn compose<'a>(implementation: Self) -> (::windows::core::IInspectable, &'a mut ::core::option::Option<::windows::core::IInspectable>) {
+
+            pub unsafe fn compose<'a>(implementation: Self) -> (::windows::core::IInspectable, &'a mut ::core::option::Option<::windows::core::IInspectable>) {
                 let inspectable: ::windows::core::IInspectable = implementation.into();
-                let this: *mut ::core::ffi::c_void = ::windows::core::Vtable::as_raw(&inspectable);
-                let this = (this as *mut *mut ::core::ffi::c_void).sub(1) as *mut #impl_ident::<#(#generics,)*>;
+                let this: *mut ::core::ffi::c_void = ::windows::core::Interface::as_raw(&inspectable);
+                let this = (this as *mut *mut ::core::ffi::c_void).sub(1) as *mut #impl_ident::#generics;
                 (inspectable, &mut (*this).base)
             }
         }
