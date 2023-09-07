@@ -5,7 +5,7 @@
 ///
 /// # Safety
 pub unsafe trait Interface: Sized {
-    type Vtable;
+    type Vtable: 'static;
 
     /// A reference to the interface's vtable
     #[doc(hidden)]

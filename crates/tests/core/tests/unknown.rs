@@ -4,7 +4,7 @@ use windows::core::*;
 
 #[interface("f7ea748b-8121-41c1-aaee-406ba6f148a9")]
 unsafe trait ITest: IUnknown {
-    unsafe fn Test(&self) -> u32;
+    unsafe fn Test(this: &Self::This) -> u32;
 }
 
 #[implement(ITest)]
@@ -13,8 +13,8 @@ struct Test {
 }
 
 impl ITest_Impl for Test {
-    unsafe fn Test(&self) -> u32 {
-        *self.drop
+    unsafe fn Test(this: &Self::This) -> u32 {
+        *this.drop
     }
 }
 
@@ -30,7 +30,7 @@ impl Drop for Test {
 fn test_unknown() {
     unsafe {
         let mut dropped = 0;
-        let test: ITest = Test { drop: &mut dropped }.into();
+        let test: ITest = Test { drop: &mut dropped }.into_interface();
 
         {
             let raw_borrowed: *mut std::ffi::c_void = test.as_raw();
@@ -59,7 +59,7 @@ fn test_unknown() {
 fn test_pointer_conversion_functions() {
     unsafe {
         let mut dropped = 0;
-        let test: ITest = Test { drop: &mut dropped }.into();
+        let test: ITest = Test { drop: &mut dropped }.into_interface();
 
         {
             let raw_borrowed: *mut std::ffi::c_void = test.as_raw();

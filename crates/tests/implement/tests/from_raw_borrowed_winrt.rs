@@ -5,22 +5,22 @@ use windows::{core::*, ApplicationModel::Background::*, Foundation::*, Win32::Fo
 
 #[interface("a563f463-3d23-42cd-a2b5-6d21ee898aae")]
 unsafe trait IBorrowed: IUnknown {
-    unsafe fn Call(&self) -> u32;
+    unsafe fn Call(this: &Self::This) -> u32;
 }
 
 #[implement(IBackgroundTask, IBorrowed, IBackgroundTaskInstance)]
 struct Borrowed(RwLock<u32>);
 
 impl IBorrowed_Impl for Borrowed {
-    unsafe fn Call(&self) -> u32 {
-        *self.0.read().unwrap()
+    unsafe fn Call(this: &Self::This) -> u32 {
+        *this.0.read().unwrap()
     }
 }
 
 impl IBackgroundTask_Impl for Borrowed {
-    fn Run(&self, instance: Option<&IBackgroundTaskInstance>) -> Result<()> {
+    fn Run(this: &Self::This, instance: Option<&IBackgroundTaskInstance>) -> Result<()> {
         if let Some(instance) = instance {
-            assert_eq!(instance.SuspendedCount()?, *self.0.read().unwrap());
+            assert_eq!(instance.SuspendedCount()?, *this.0.read().unwrap());
             Ok(())
         } else {
             Err(E_INVALIDARG.into())
@@ -29,34 +29,34 @@ impl IBackgroundTask_Impl for Borrowed {
 }
 
 impl IBackgroundTaskInstance_Impl for Borrowed {
-    fn InstanceId(&self) -> Result<GUID> {
+    fn InstanceId(_this: &Self::This) -> Result<GUID> {
         unimplemented!()
     }
-    fn Task(&self) -> Result<BackgroundTaskRegistration> {
+    fn Task(_this: &Self::This) -> Result<BackgroundTaskRegistration> {
         unimplemented!()
     }
-    fn Progress(&self) -> Result<u32> {
+    fn Progress(_this: &Self::This) -> Result<u32> {
         unimplemented!()
     }
-    fn SetProgress(&self, _value: u32) -> Result<()> {
+    fn SetProgress(_this: &Self::This, _value: u32) -> Result<()> {
         unimplemented!()
     }
-    fn TriggerDetails(&self) -> Result<IInspectable> {
+    fn TriggerDetails(_this: &Self::This) -> Result<IInspectable> {
         unimplemented!()
     }
     fn Canceled(
-        &self,
+        _this: &Self::This,
         _cancelhandler: Option<&BackgroundTaskCanceledEventHandler>,
     ) -> Result<EventRegistrationToken> {
         unimplemented!()
     }
-    fn RemoveCanceled(&self, _cookie: &EventRegistrationToken) -> Result<()> {
+    fn RemoveCanceled(_this: &Self::This, _cookie: &EventRegistrationToken) -> Result<()> {
         unimplemented!()
     }
-    fn SuspendedCount(&self) -> Result<u32> {
-        Ok(*self.0.read().unwrap())
+    fn SuspendedCount(this: &Self::This) -> Result<u32> {
+        Ok(*this.0.read().unwrap())
     }
-    fn GetDeferral(&self) -> Result<BackgroundTaskDeferral> {
+    fn GetDeferral(_this: &Self::This) -> Result<BackgroundTaskDeferral> {
         unimplemented!()
     }
 }
@@ -64,7 +64,7 @@ impl IBackgroundTaskInstance_Impl for Borrowed {
 #[test]
 fn test() -> Result<()> {
     unsafe {
-        let one_two_three: IBorrowed = Borrowed(RwLock::new(123)).into();
+        let one_two_three: IBorrowed = Borrowed(RwLock::new(123)).into_interface();
         assert_eq!(one_two_three.Call(), 123);
 
         let task = one_two_three.cast::<IBackgroundTask>()?;

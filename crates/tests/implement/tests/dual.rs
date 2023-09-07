@@ -11,7 +11,7 @@ fn implement() -> Result<()> {
             sender,
         };
 
-        let s: IStringable = t.into();
+        let s: IStringable = t.into_interface();
         assert_eq!(s.ToString()?, "hello");
 
         let c: IClosable = s.cast()?;
@@ -27,7 +27,7 @@ fn implement() -> Result<()> {
             sender,
         };
 
-        let c: IClosable = t.into();
+        let c: IClosable = t.into_interface();
         c.Close()?;
         assert!(receiver.recv().unwrap() == "close: world");
 
@@ -43,7 +43,7 @@ fn implement() -> Result<()> {
             sender,
         };
 
-        let s: IStringable = t.into();
+        let s: IStringable = t.into_interface();
         assert!(s.ToString()? == "object");
 
         // Confirms that the conversion to `IInspectable` properly handles
@@ -55,7 +55,7 @@ fn implement() -> Result<()> {
     Ok(())
 }
 
-#[implement({IStringable, IClosable})]
+#[implement(IStringable, IClosable)]
 struct Thing {
     value: String,
     sender: std::sync::mpsc::Sender<String>,
@@ -68,14 +68,14 @@ impl Drop for Thing {
 }
 
 impl IStringable_Impl for Thing {
-    fn ToString(&self) -> Result<HSTRING> {
-        Ok(HSTRING::from(&self.value))
+    fn ToString(this: &Self::This) -> Result<HSTRING> {
+        Ok(HSTRING::from(&this.value))
     }
 }
 
 impl IClosable_Impl for Thing {
-    fn Close(&self) -> Result<()> {
-        self.sender.send(format!("close: {}", self.value)).unwrap();
+    fn Close(this: &Self::This) -> Result<()> {
+        this.sender.send(format!("close: {}", this.value)).unwrap();
         Ok(())
     }
 }

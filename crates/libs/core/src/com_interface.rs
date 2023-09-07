@@ -31,12 +31,16 @@ pub unsafe trait ComInterface: Interface + Clone {
         // SAFETY: `result` is valid for writing an interface pointer and it is safe
         // to cast the `result` pointer as `T` on success because we are using the `IID` tied
         // to `T` which the implementor of `ComInterface` has guaranteed is correct
-        unsafe { self.query(&T::IID, &mut result as *mut _ as _).and_some(result) }
+        unsafe {
+            self.query(&T::IID, &mut result as *mut _ as _)
+                .and_some(result)
+        }
     }
 
     /// Attempts to create a [`Weak`] reference to this object.
     fn downgrade(&self) -> Result<Weak<Self>> {
-        self.cast::<crate::imp::IWeakReferenceSource>().and_then(|source| Weak::downgrade(&source))
+        self.cast::<crate::imp::IWeakReferenceSource>()
+            .and_then(|source| Weak::downgrade(&source))
     }
 
     /// Call `QueryInterface` on this interface

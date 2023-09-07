@@ -42,7 +42,12 @@ impl BSTR {
             return Ok(Self::new());
         }
 
-        let result = unsafe { Self(crate::imp::SysAllocStringLen(value.as_ptr(), value.len().try_into()?)) };
+        let result = unsafe {
+            Self(crate::imp::SysAllocStringLen(
+                value.as_ptr(),
+                value.len().try_into()?,
+            ))
+        };
 
         if result.is_empty() {
             Err(crate::imp::E_OUTOFMEMORY.into())
@@ -113,7 +118,11 @@ impl std::default::Default for BSTR {
 
 impl std::fmt::Display for BSTR {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        std::write!(f, "{}", crate::Decode(|| std::char::decode_utf16(self.as_wide().iter().cloned())))
+        std::write!(
+            f,
+            "{}",
+            crate::Decode(|| std::char::decode_utf16(self.as_wide().iter().cloned()))
+        )
     }
 }
 
@@ -145,7 +154,10 @@ impl std::cmp::PartialEq<BSTR> for String {
 
 impl<T: AsRef<str> + ?Sized> std::cmp::PartialEq<T> for BSTR {
     fn eq(&self, other: &T) -> bool {
-        self.as_wide().iter().copied().eq(other.as_ref().encode_utf16())
+        self.as_wide()
+            .iter()
+            .copied()
+            .eq(other.as_ref().encode_utf16())
     }
 }
 

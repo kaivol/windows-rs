@@ -25,13 +25,13 @@ impl Drop for Test {
 }
 
 impl IStringable_Impl for Test {
-    fn ToString(&self) -> Result<HSTRING> {
-        Ok(self.0.as_str().into())
+    fn ToString(this: &Self::This) -> Result<HSTRING> {
+        Ok(this.0.as_str().into())
     }
 }
 
 impl IClosable_Impl for Test {
-    fn Close(&self) -> Result<()> {
+    fn Close(_this: &Self::This) -> Result<()> {
         Ok(())
     }
 }
@@ -41,7 +41,7 @@ fn identity() -> Result<()> {
     unsafe {
         assert_eq!(COUNTER, 0);
         {
-            let a: IStringable = Test::new("test").into();
+            let a: IStringable = Test::new("test").into_interface();
             assert!(a.ToString()? == "test");
 
             let b: IClosable = a.cast()?;
@@ -54,30 +54,30 @@ fn identity() -> Result<()> {
             assert!(a == d.cast()?);
         }
         {
-            let a: IUnknown = Test::new("test").into();
+            let a: IUnknown = Test::new("test").into_interface();
             let b: IClosable = a.cast()?;
             let c: IStringable = b.cast()?;
             assert!(c.ToString()? == "test");
         }
         {
-            let a: IInspectable = Test::new("test").into();
+            let a: IInspectable = Test::new("test").into_interface();
             let b: IStringable = a.cast()?;
             assert!(b.ToString()? == "test");
         }
         {
-            let a: IInspectable = Test::new("test").into();
-            assert_eq!(a.GetRuntimeClassName()?, "Windows.Foundation.IStringable");
+            let a: IInspectable = Test::new("test").into_interface();
+            assert_eq!(a.GetRuntimeClassName()?, "identity.Test");
 
             let b: IStringable = a.cast()?;
             let c: &IInspectable = b.can_into();
-            assert_eq!(c.GetRuntimeClassName()?, "Windows.Foundation.IStringable");
+            assert_eq!(c.GetRuntimeClassName()?, "identity.Test");
 
             let d: IClosable = a.cast()?;
             let e: &IInspectable = d.can_into();
-            assert_eq!(e.GetRuntimeClassName()?, "Windows.Foundation.IClosable");
+            assert_eq!(e.GetRuntimeClassName()?, "identity.Test");
 
             let f: IInspectable = e.cast()?;
-            assert_eq!(f.GetRuntimeClassName()?, "Windows.Foundation.IStringable");
+            assert_eq!(f.GetRuntimeClassName()?, "identity.Test");
         }
         assert_eq!(COUNTER, 0);
         Ok(())

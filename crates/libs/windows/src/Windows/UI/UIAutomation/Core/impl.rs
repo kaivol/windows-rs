@@ -1,63 +1,53 @@
-pub trait ICoreAutomationConnectionBoundObjectProvider_Impl: Sized {
-    fn IsComThreadingRequired(&self) -> ::windows_core::Result<bool>;
+pub trait ICoreAutomationConnectionBoundObjectProvider_Impl: ::windows_core::BaseImpl {
+    fn IsComThreadingRequired(this: &Self::This) -> ::windows_core::Result<bool>;
 }
-impl ::windows_core::RuntimeName for ICoreAutomationConnectionBoundObjectProvider {
-    const NAME: &'static str = "Windows.UI.UIAutomation.Core.ICoreAutomationConnectionBoundObjectProvider";
+impl ::windows_core::Iids for ICoreAutomationConnectionBoundObjectProvider {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
-impl ICoreAutomationConnectionBoundObjectProvider_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICoreAutomationConnectionBoundObjectProvider_Impl, const OFFSET: isize>() -> ICoreAutomationConnectionBoundObjectProvider_Vtbl {
-        unsafe extern "system" fn IsComThreadingRequired<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICoreAutomationConnectionBoundObjectProvider_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut bool) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsComThreadingRequired() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreAutomationConnectionBoundObjectProvider_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ICoreAutomationConnectionBoundObjectProvider {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn IsComThreadingRequired<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreAutomationConnectionBoundObjectProvider_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut bool) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsComThreadingRequired(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, ICoreAutomationConnectionBoundObjectProvider, OFFSET>(),
+        ICoreAutomationConnectionBoundObjectProvider_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             IsComThreadingRequired: IsComThreadingRequired::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ICoreAutomationConnectionBoundObjectProvider as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait ICoreAutomationRemoteOperationExtensionProvider_Impl: Sized {
-    fn CallExtension(&self, extensionid: &::windows_core::GUID, context: ::core::option::Option<&CoreAutomationRemoteOperationContext>, operandids: &[AutomationRemoteOperationOperandId]) -> ::windows_core::Result<()>;
-    fn IsExtensionSupported(&self, extensionid: &::windows_core::GUID) -> ::windows_core::Result<bool>;
+pub trait ICoreAutomationRemoteOperationExtensionProvider_Impl: ::windows_core::BaseImpl {
+    fn CallExtension(this: &Self::This, extensionid: &::windows_core::GUID, context: ::core::option::Option<&CoreAutomationRemoteOperationContext>, operandids: &[AutomationRemoteOperationOperandId]) -> ::windows_core::Result<()>;
+    fn IsExtensionSupported(this: &Self::This, extensionid: &::windows_core::GUID) -> ::windows_core::Result<bool>;
 }
-impl ::windows_core::RuntimeName for ICoreAutomationRemoteOperationExtensionProvider {
-    const NAME: &'static str = "Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider";
+impl ::windows_core::Iids for ICoreAutomationRemoteOperationExtensionProvider {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
-impl ICoreAutomationRemoteOperationExtensionProvider_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICoreAutomationRemoteOperationExtensionProvider_Impl, const OFFSET: isize>() -> ICoreAutomationRemoteOperationExtensionProvider_Vtbl {
-        unsafe extern "system" fn CallExtension<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICoreAutomationRemoteOperationExtensionProvider_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, extensionid: ::windows_core::GUID, context: *mut ::core::ffi::c_void, operandIds_array_size: u32, operandids: *const AutomationRemoteOperationOperandId) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.CallExtension(::core::mem::transmute(&extensionid), ::windows_core::from_raw_borrowed(&context), ::core::slice::from_raw_parts(::core::mem::transmute_copy(&operandids), operandIds_array_size as usize)).into()
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreAutomationRemoteOperationExtensionProvider_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ICoreAutomationRemoteOperationExtensionProvider {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn CallExtension<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreAutomationRemoteOperationExtensionProvider_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, extensionid: ::windows_core::GUID, context: *mut ::core::ffi::c_void, operandIds_array_size: u32, operandids: *const AutomationRemoteOperationOperandId) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::CallExtension(this, ::core::mem::transmute(&extensionid), ::windows_core::from_raw_borrowed(&context), ::core::slice::from_raw_parts(::core::mem::transmute_copy(&operandids), operandIds_array_size as usize)).into())
         }
-        unsafe extern "system" fn IsExtensionSupported<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICoreAutomationRemoteOperationExtensionProvider_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, extensionid: ::windows_core::GUID, result__: *mut bool) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsExtensionSupported(::core::mem::transmute(&extensionid)) {
+        unsafe extern "system" fn IsExtensionSupported<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreAutomationRemoteOperationExtensionProvider_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, extensionid: ::windows_core::GUID, result__: *mut bool) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsExtensionSupported(this, ::core::mem::transmute(&extensionid)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, ICoreAutomationRemoteOperationExtensionProvider, OFFSET>(),
+        ICoreAutomationRemoteOperationExtensionProvider_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             CallExtension: CallExtension::<Identity, Impl, OFFSET>,
             IsExtensionSupported: IsExtensionSupported::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ICoreAutomationRemoteOperationExtensionProvider as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

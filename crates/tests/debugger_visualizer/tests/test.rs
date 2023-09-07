@@ -12,19 +12,19 @@ fn __break() {}
 struct Test;
 
 impl IErrorInfo_Impl for Test {
-    fn GetGUID(&self) -> Result<GUID> {
+    fn GetGUID(_this: &Self::This) -> Result<GUID> {
         Err(Error::new(E_OUTOFMEMORY, "Out of memory message".into()))
     }
-    fn GetSource(&self) -> Result<BSTR> {
+    fn GetSource(_this: &Self::This) -> Result<BSTR> {
         Err(Error::new(E_INVALIDARG, "Invalid argument message".into()))
     }
-    fn GetDescription(&self) -> Result<BSTR> {
+    fn GetDescription(_this: &Self::This) -> Result<BSTR> {
         Ok(BSTR::new())
     }
-    fn GetHelpFile(&self) -> Result<BSTR> {
+    fn GetHelpFile(_this: &Self::This) -> Result<BSTR> {
         Ok(BSTR::new())
     }
-    fn GetHelpContext(&self) -> Result<u32> {
+    fn GetHelpContext(_this: &Self::This) -> Result<u32> {
         Ok(1)
     }
 }
@@ -151,7 +151,7 @@ empty            : "" [Type: windows_core::strings::hstring::HSTRING]
 hstring          : "This is an HSTRING" [Type: windows_core::strings::hstring::HSTRING]
     [<Raw View>]     [Type: windows_core::strings::hstring::HSTRING]
     [len]            : 0x12 [Type: unsigned int]
-    [ref_count]      : 1 [Type: windows_core::imp::ref_count::RefCount]
+    [ref_count]      : 0x1 [Type: windows_core::imp::ref_count::RefCount]
     [flags]          : 0x0 [Type: unsigned int]
     [chars]
         [0]              : 0x54 'T' [Type: char16_t]
@@ -241,7 +241,7 @@ fn test_debugger_visualizer() {
     assert!(!hstring.is_empty());
     assert!(hstring.len() == 18);
 
-    let test: IErrorInfo = Test.into();
+    let test: IErrorInfo = Test.into_interface();
 
     unsafe {
         // Test debugger visualizations for Error

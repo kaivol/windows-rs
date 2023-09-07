@@ -1,24 +1,16 @@
-pub trait IWebUICommandBarElement_Impl: Sized {}
-impl ::windows_core::RuntimeName for IWebUICommandBarElement {
-    const NAME: &'static str = "Windows.UI.WebUI.Core.IWebUICommandBarElement";
+pub trait IWebUICommandBarElement_Impl: ::windows_core::BaseImpl {}
+impl ::windows_core::Iids for IWebUICommandBarElement {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
-impl IWebUICommandBarElement_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebUICommandBarElement_Impl, const OFFSET: isize>() -> IWebUICommandBarElement_Vtbl {
-        Self { base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IWebUICommandBarElement, OFFSET>() }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IWebUICommandBarElement as ::windows_core::ComInterface>::IID
-    }
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebUICommandBarElement_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IWebUICommandBarElement {
+    const VTABLE: Self::Vtable = { IWebUICommandBarElement_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IWebUICommandBarIcon_Impl: Sized {}
-impl ::windows_core::RuntimeName for IWebUICommandBarIcon {
-    const NAME: &'static str = "Windows.UI.WebUI.Core.IWebUICommandBarIcon";
+pub trait IWebUICommandBarIcon_Impl: ::windows_core::BaseImpl {}
+impl ::windows_core::Iids for IWebUICommandBarIcon {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
-impl IWebUICommandBarIcon_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebUICommandBarIcon_Impl, const OFFSET: isize>() -> IWebUICommandBarIcon_Vtbl {
-        Self { base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IWebUICommandBarIcon, OFFSET>() }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IWebUICommandBarIcon as ::windows_core::ComInterface>::IID
-    }
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebUICommandBarIcon_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IWebUICommandBarIcon {
+    const VTABLE: Self::Vtable = { IWebUICommandBarIcon_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

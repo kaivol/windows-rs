@@ -15,6 +15,7 @@ pub(crate) fn err_memory() -> Error {
 }
 
 #[implement(
+    IIterable<T>,
     IVector<T>,
     IVectorView<T>,
 )]
@@ -62,26 +63,26 @@ where
     T: RuntimeType + 'static,
     <T as Type<T>>::Default: PartialEq + Clone,
 {
-    fn GetAt(&self, index: u32) -> Result<T> {
-        self.GetAt(index)
+    fn GetAt(this: &Self::This, index: u32) -> Result<T> {
+        this.GetAt(index)
     }
-    fn Size(&self) -> Result<u32> {
-        self.Size()
+    fn Size(this: &Self::This) -> Result<u32> {
+        this.Size()
     }
-    fn GetView(&self) -> Result<windows::Foundation::Collections::IVectorView<T>> {
-        unsafe { self.cast() }
+    fn GetView(this: &Self::This) -> Result<windows::Foundation::Collections::IVectorView<T>> {
+        Ok(this.to_interface())
     }
-    fn IndexOf(&self, value: &T::Default, result: &mut u32) -> Result<bool> {
-        self.IndexOf(value, result)
+    fn IndexOf(this: &Self::This, value: &T::Default, result: &mut u32) -> Result<bool> {
+        this.IndexOf(value, result)
     }
-    fn SetAt(&self, index: u32, value: &T::Default) -> Result<()> {
-        let mut writer = self.0.write().unwrap();
+    fn SetAt(this: &Self::This, index: u32, value: &T::Default) -> Result<()> {
+        let mut writer = this.0.write().unwrap();
         let item = writer.get_mut(index as usize).ok_or_else(err_bounds)?;
         *item = value.clone();
         Ok(())
     }
-    fn InsertAt(&self, index: u32, value: &T::Default) -> Result<()> {
-        let mut writer = self.0.write().unwrap();
+    fn InsertAt(this: &Self::This, index: u32, value: &T::Default) -> Result<()> {
+        let mut writer = this.0.write().unwrap();
         let index = index as usize;
         if index > writer.len() {
             Err(err_bounds())
@@ -92,8 +93,8 @@ where
             Ok(())
         }
     }
-    fn RemoveAt(&self, index: u32) -> Result<()> {
-        let mut writer = self.0.write().unwrap();
+    fn RemoveAt(this: &Self::This, index: u32) -> Result<()> {
+        let mut writer = this.0.write().unwrap();
         let index = index as usize;
         if index < writer.len() {
             writer.remove(index);
@@ -102,31 +103,31 @@ where
             Err(err_bounds())
         }
     }
-    fn Append(&self, value: &T::Default) -> Result<()> {
-        let mut writer = self.0.write().unwrap();
+    fn Append(this: &Self::This, value: &T::Default) -> Result<()> {
+        let mut writer = this.0.write().unwrap();
         let len = writer.len();
         writer.try_reserve(len + 1).map_err(|_| err_memory())?;
         writer.insert(len, value.clone());
         Ok(())
     }
-    fn RemoveAtEnd(&self) -> Result<()> {
-        let mut writer = self.0.write().unwrap();
+    fn RemoveAtEnd(this: &Self::This) -> Result<()> {
+        let mut writer = this.0.write().unwrap();
         if !writer.is_empty() {
             let len = writer.len();
             writer.truncate(len - 1);
         }
         Ok(())
     }
-    fn Clear(&self) -> Result<()> {
-        let mut writer = self.0.write().unwrap();
+    fn Clear(this: &Self::This) -> Result<()> {
+        let mut writer = this.0.write().unwrap();
         writer.clear();
         Ok(())
     }
-    fn GetMany(&self, startindex: u32, items: &mut [T::Default]) -> Result<u32> {
-        self.GetMany(startindex, items)
+    fn GetMany(this: &Self::This, startindex: u32, items: &mut [T::Default]) -> Result<u32> {
+        this.GetMany(startindex, items)
     }
-    fn ReplaceAll(&self, items: &[T::Default]) -> Result<()> {
-        let mut writer = self.0.write().unwrap();
+    fn ReplaceAll(this: &Self::This, items: &[T::Default]) -> Result<()> {
+        let mut writer = this.0.write().unwrap();
         writer
             .try_reserve(items.len() + 1)
             .map_err(|_| err_memory())?;
@@ -142,17 +143,17 @@ where
     T: RuntimeType + 'static,
     <T as Type<T>>::Default: PartialEq + Clone,
 {
-    fn GetAt(&self, index: u32) -> Result<T> {
-        self.GetAt(index)
+    fn GetAt(this: &Self::This, index: u32) -> Result<T> {
+        this.GetAt(index)
     }
-    fn Size(&self) -> Result<u32> {
-        self.Size()
+    fn Size(this: &Self::This) -> Result<u32> {
+        this.Size()
     }
-    fn IndexOf(&self, value: &T::Default, result: &mut u32) -> Result<bool> {
-        self.IndexOf(value, result)
+    fn IndexOf(this: &Self::This, value: &T::Default, result: &mut u32) -> Result<bool> {
+        this.IndexOf(value, result)
     }
-    fn GetMany(&self, startindex: u32, items: &mut [T::Default]) -> Result<u32> {
-        self.GetMany(startindex, items)
+    fn GetMany(this: &Self::This, startindex: u32, items: &mut [T::Default]) -> Result<u32> {
+        this.GetMany(startindex, items)
     }
 }
 
@@ -161,22 +162,22 @@ where
     T: RuntimeType + 'static,
     <T as Type<T>>::Default: PartialEq + Clone,
 {
-    fn First(&self) -> Result<IIterator<T>> {
+    fn First(_this: &Self::This) -> Result<IIterator<T>> {
         unimplemented!()
     }
 }
 
 #[test]
 fn GetAt() -> Result<()> {
-    let v: IVector<i32> = Vector::new(vec![123]).into();
+    let v: IVector<i32> = Vector::<i32>::new(vec![123]).into_interface();
     assert_eq!(v.GetAt(0)?, 123);
     assert_eq!(v.GetAt(1).unwrap_err().code(), E_BOUNDS);
 
-    let v: IVector<IStringable> = Vector::new(vec![
+    let v: IVector<IStringable> = Vector::<IStringable>::new(vec![
         Some(Uri::CreateUri(&HSTRING::from("http://test/"))?.cast()?),
         None,
     ])
-    .into();
+    .into_interface();
     assert_eq!(v.GetAt(0)?.ToString()?, "http://test/");
     assert_eq!(v.GetAt(1).unwrap_err().code(), S_OK);
 
@@ -185,7 +186,7 @@ fn GetAt() -> Result<()> {
 
 #[test]
 fn Size() -> Result<()> {
-    let v: IVector<i32> = Vector::new(vec![]).into();
+    let v: IVector<i32> = Vector::<i32>::new(vec![]).into_interface();
     assert_eq!(v.Size()?, 0);
     v.Append(123)?;
     assert_eq!(v.Size()?, 1);
@@ -194,7 +195,7 @@ fn Size() -> Result<()> {
 
 #[test]
 fn IndexOf() -> Result<()> {
-    let v: IVector<i32> = Vector::new(vec![123, 456]).into();
+    let v: IVector<i32> = Vector::<i32>::new(vec![123, 456]).into_interface();
     let mut index = 0;
     assert_eq!(v.IndexOf(123, &mut index)?, true);
     assert_eq!(index, 0);
@@ -203,7 +204,8 @@ fn IndexOf() -> Result<()> {
     assert_eq!(v.IndexOf(789, &mut index)?, false);
 
     let uri = Uri::CreateUri(&HSTRING::from("http://test/"))?;
-    let v: IVector<IStringable> = Vector::new(vec![Some(uri.cast()?), None]).into();
+    let v: IVector<IStringable> =
+        Vector::<IStringable>::new(vec![Some(uri.cast()?), None]).into_interface();
     assert_eq!(v.IndexOf(&uri.cast::<IStringable>()?, &mut index)?, true);
     assert_eq!(index, 0);
     assert_eq!(v.IndexOf(None, &mut index)?, true);
@@ -221,7 +223,7 @@ fn IndexOf() -> Result<()> {
 
 #[test]
 fn GetView() -> Result<()> {
-    let vector: IVector<i32> = Vector::new(vec![123, 456, 789]).into();
+    let vector: IVector<i32> = Vector::<i32>::new(vec![123, 456, 789]).into_interface();
     let view: IVectorView<i32> = vector.GetView()?;
     assert_eq!(view.Size()?, 3);
     Ok(())
@@ -229,17 +231,14 @@ fn GetView() -> Result<()> {
 
 #[test]
 fn test() -> Result<()> {
-    let v: IVector<i32> = Vector::new(vec![10, 20, 30]).into();
+    let v: IVector<i32> = Vector::<i32>::new(vec![10, 20, 30]).into_interface();
     assert_eq!(10, v.GetAt(0)?);
     assert_eq!(20, v.GetAt(1)?);
     assert_eq!(30, v.GetAt(2)?);
     assert!(v.GetAt(20).is_err());
     assert_eq!(3, v.Size()?);
     let c: &IInspectable = v.can_into();
-    assert_eq!(
-        c.GetRuntimeClassName()?,
-        "Windows.Foundation.Collections.IVector"
-    ); // TODO: needs to have `1<Int32>
+    assert_eq!(c.GetRuntimeClassName()?, "vector.Vector<i32>"); // TODO: needs to have `1<Int32>
 
     let mut index = 0;
     assert_eq!(true, v.IndexOf(20, &mut index)?);
@@ -248,7 +247,8 @@ fn test() -> Result<()> {
     assert_eq!(2, index);
     assert_eq!(false, v.IndexOf(123, &mut index)?);
 
-    let v: IVectorView<HSTRING> = Vector::new(vec!["10".into(), "20".into(), "30".into()]).into();
+    let v: IVectorView<HSTRING> =
+        Vector::<HSTRING>::new(vec!["10".into(), "20".into(), "30".into()]).into_interface();
     assert_eq!("10", v.GetAt(0)?);
     assert_eq!("20", v.GetAt(1)?);
     assert_eq!("30", v.GetAt(2)?);
@@ -261,12 +261,12 @@ fn test() -> Result<()> {
     assert_eq!(2, index);
     assert_eq!(false, v.IndexOf(&HSTRING::from("123"), &mut index)?);
 
-    let v: IVectorView<IStringable> = Vector::new(vec![
-        Some(Uri::CreateUri(&HSTRING::from("http://one/"))?.cast()?),
-        Some(Uri::CreateUri(&HSTRING::from("http://two/"))?.cast()?),
-        Some(Uri::CreateUri(&HSTRING::from("http://three/"))?.cast()?),
+    let v: IVectorView<IStringable> = Vector::<IStringable>::new(vec![
+        Some(Uri::CreateUri(h!("http://one/"))?.cast()?),
+        Some(Uri::CreateUri(h!("http://two/"))?.cast()?),
+        Some(Uri::CreateUri(h!("http://three/"))?.cast()?),
     ])
-    .into();
+    .into_interface();
 
     assert_eq!("http://one/", v.GetAt(0)?.ToString()?);
     assert_eq!("http://two/", v.GetAt(1)?.ToString()?);

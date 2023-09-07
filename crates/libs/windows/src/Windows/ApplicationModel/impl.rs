@@ -1,189 +1,157 @@
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
-pub trait IEnteredBackgroundEventArgs_Impl: Sized {
-    fn GetDeferral(&self) -> ::windows_core::Result<super::Foundation::Deferral>;
+pub trait IEnteredBackgroundEventArgs_Impl: ::windows_core::BaseImpl {
+    fn GetDeferral(this: &Self::This) -> ::windows_core::Result<super::Foundation::Deferral>;
 }
 #[cfg(feature = "Foundation")]
-impl ::windows_core::RuntimeName for IEnteredBackgroundEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.IEnteredBackgroundEventArgs";
+impl ::windows_core::Iids for IEnteredBackgroundEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
 #[cfg(feature = "Foundation")]
-impl IEnteredBackgroundEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IEnteredBackgroundEventArgs_Impl, const OFFSET: isize>() -> IEnteredBackgroundEventArgs_Vtbl {
-        unsafe extern "system" fn GetDeferral<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IEnteredBackgroundEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.GetDeferral() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnteredBackgroundEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IEnteredBackgroundEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn GetDeferral<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnteredBackgroundEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::GetDeferral(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IEnteredBackgroundEventArgs, OFFSET>(),
-            GetDeferral: GetDeferral::<Identity, Impl, OFFSET>,
-        }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IEnteredBackgroundEventArgs as ::windows_core::ComInterface>::IID
-    }
+        IEnteredBackgroundEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDeferral: GetDeferral::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
-pub trait ILeavingBackgroundEventArgs_Impl: Sized {
-    fn GetDeferral(&self) -> ::windows_core::Result<super::Foundation::Deferral>;
+pub trait ILeavingBackgroundEventArgs_Impl: ::windows_core::BaseImpl {
+    fn GetDeferral(this: &Self::This) -> ::windows_core::Result<super::Foundation::Deferral>;
 }
 #[cfg(feature = "Foundation")]
-impl ::windows_core::RuntimeName for ILeavingBackgroundEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.ILeavingBackgroundEventArgs";
+impl ::windows_core::Iids for ILeavingBackgroundEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
 #[cfg(feature = "Foundation")]
-impl ILeavingBackgroundEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ILeavingBackgroundEventArgs_Impl, const OFFSET: isize>() -> ILeavingBackgroundEventArgs_Vtbl {
-        unsafe extern "system" fn GetDeferral<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ILeavingBackgroundEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.GetDeferral() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILeavingBackgroundEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ILeavingBackgroundEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn GetDeferral<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILeavingBackgroundEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::GetDeferral(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, ILeavingBackgroundEventArgs, OFFSET>(),
-            GetDeferral: GetDeferral::<Identity, Impl, OFFSET>,
-        }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ILeavingBackgroundEventArgs as ::windows_core::ComInterface>::IID
-    }
+        ILeavingBackgroundEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDeferral: GetDeferral::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IPackageCatalogStatics2_Impl: Sized {
-    fn OpenForPackage(&self, package: ::core::option::Option<&Package>) -> ::windows_core::Result<PackageCatalog>;
+pub trait IPackageCatalogStatics2_Impl: ::windows_core::BaseImpl {
+    fn OpenForPackage(this: &Self::This, package: ::core::option::Option<&Package>) -> ::windows_core::Result<PackageCatalog>;
 }
-impl ::windows_core::RuntimeName for IPackageCatalogStatics2 {
-    const NAME: &'static str = "Windows.ApplicationModel.IPackageCatalogStatics2";
+impl ::windows_core::Iids for IPackageCatalogStatics2 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
-impl IPackageCatalogStatics2_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IPackageCatalogStatics2_Impl, const OFFSET: isize>() -> IPackageCatalogStatics2_Vtbl {
-        unsafe extern "system" fn OpenForPackage<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IPackageCatalogStatics2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, package: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.OpenForPackage(::windows_core::from_raw_borrowed(&package)) {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPackageCatalogStatics2_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IPackageCatalogStatics2 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn OpenForPackage<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPackageCatalogStatics2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, package: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::OpenForPackage(this, ::windows_core::from_raw_borrowed(&package)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IPackageCatalogStatics2, OFFSET>(),
+        IPackageCatalogStatics2_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             OpenForPackage: OpenForPackage::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IPackageCatalogStatics2 as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait ISuspendingDeferral_Impl: Sized {
-    fn Complete(&self) -> ::windows_core::Result<()>;
+pub trait ISuspendingDeferral_Impl: ::windows_core::BaseImpl {
+    fn Complete(this: &Self::This) -> ::windows_core::Result<()>;
 }
-impl ::windows_core::RuntimeName for ISuspendingDeferral {
-    const NAME: &'static str = "Windows.ApplicationModel.ISuspendingDeferral";
+impl ::windows_core::Iids for ISuspendingDeferral {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
-impl ISuspendingDeferral_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISuspendingDeferral_Impl, const OFFSET: isize>() -> ISuspendingDeferral_Vtbl {
-        unsafe extern "system" fn Complete<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISuspendingDeferral_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.Complete().into()
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISuspendingDeferral_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ISuspendingDeferral {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Complete<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISuspendingDeferral_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::Complete(this).into())
         }
-        Self { base__: ::windows_core::IInspectable_Vtbl::new::<Identity, ISuspendingDeferral, OFFSET>(), Complete: Complete::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ISuspendingDeferral as ::windows_core::ComInterface>::IID
-    }
+        ISuspendingDeferral_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Complete: Complete::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait ISuspendingEventArgs_Impl: Sized {
-    fn SuspendingOperation(&self) -> ::windows_core::Result<SuspendingOperation>;
+pub trait ISuspendingEventArgs_Impl: ::windows_core::BaseImpl {
+    fn SuspendingOperation(this: &Self::This) -> ::windows_core::Result<SuspendingOperation>;
 }
-impl ::windows_core::RuntimeName for ISuspendingEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.ISuspendingEventArgs";
+impl ::windows_core::Iids for ISuspendingEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
-impl ISuspendingEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISuspendingEventArgs_Impl, const OFFSET: isize>() -> ISuspendingEventArgs_Vtbl {
-        unsafe extern "system" fn SuspendingOperation<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISuspendingEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.SuspendingOperation() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISuspendingEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ISuspendingEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn SuspendingOperation<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISuspendingEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::SuspendingOperation(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, ISuspendingEventArgs, OFFSET>(),
+        ISuspendingEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             SuspendingOperation: SuspendingOperation::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ISuspendingEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
-pub trait ISuspendingOperation_Impl: Sized {
-    fn GetDeferral(&self) -> ::windows_core::Result<SuspendingDeferral>;
-    fn Deadline(&self) -> ::windows_core::Result<super::Foundation::DateTime>;
+pub trait ISuspendingOperation_Impl: ::windows_core::BaseImpl {
+    fn GetDeferral(this: &Self::This) -> ::windows_core::Result<SuspendingDeferral>;
+    fn Deadline(this: &Self::This) -> ::windows_core::Result<super::Foundation::DateTime>;
 }
 #[cfg(feature = "Foundation")]
-impl ::windows_core::RuntimeName for ISuspendingOperation {
-    const NAME: &'static str = "Windows.ApplicationModel.ISuspendingOperation";
+impl ::windows_core::Iids for ISuspendingOperation {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
 #[cfg(feature = "Foundation")]
-impl ISuspendingOperation_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISuspendingOperation_Impl, const OFFSET: isize>() -> ISuspendingOperation_Vtbl {
-        unsafe extern "system" fn GetDeferral<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISuspendingOperation_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.GetDeferral() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISuspendingOperation_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ISuspendingOperation {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn GetDeferral<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISuspendingOperation_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::GetDeferral(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Deadline<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISuspendingOperation_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut super::Foundation::DateTime) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Deadline() {
+        unsafe extern "system" fn Deadline<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISuspendingOperation_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut super::Foundation::DateTime) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Deadline(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, ISuspendingOperation, OFFSET>(),
+        ISuspendingOperation_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             GetDeferral: GetDeferral::<Identity, Impl, OFFSET>,
             Deadline: Deadline::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ISuspendingOperation as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

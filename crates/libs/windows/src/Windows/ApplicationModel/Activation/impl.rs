@@ -1,2240 +1,1965 @@
-pub trait IActivatedEventArgs_Impl: Sized {
-    fn Kind(&self) -> ::windows_core::Result<ActivationKind>;
-    fn PreviousExecutionState(&self) -> ::windows_core::Result<ApplicationExecutionState>;
-    fn SplashScreen(&self) -> ::windows_core::Result<SplashScreen>;
+pub trait IActivatedEventArgs_Impl: ::windows_core::BaseImpl {
+    fn Kind(this: &Self::This) -> ::windows_core::Result<ActivationKind>;
+    fn PreviousExecutionState(this: &Self::This) -> ::windows_core::Result<ApplicationExecutionState>;
+    fn SplashScreen(this: &Self::This) -> ::windows_core::Result<SplashScreen>;
 }
-impl ::windows_core::RuntimeName for IActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IActivatedEventArgs";
+impl ::windows_core::Iids for IActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
-impl IActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IActivatedEventArgs_Impl, const OFFSET: isize>() -> IActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn Kind<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ActivationKind) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Kind() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Kind<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ActivationKind) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Kind(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn PreviousExecutionState<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ApplicationExecutionState) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.PreviousExecutionState() {
+        unsafe extern "system" fn PreviousExecutionState<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ApplicationExecutionState) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::PreviousExecutionState(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SplashScreen<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.SplashScreen() {
+        unsafe extern "system" fn SplashScreen<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::SplashScreen(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IActivatedEventArgs, OFFSET>(),
+        IActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             Kind: Kind::<Identity, Impl, OFFSET>,
             PreviousExecutionState: PreviousExecutionState::<Identity, Impl, OFFSET>,
             SplashScreen: SplashScreen::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"System\"`"]
 #[cfg(feature = "System")]
-pub trait IActivatedEventArgsWithUser_Impl: Sized + IActivatedEventArgs_Impl {
-    fn User(&self) -> ::windows_core::Result<super::super::System::User>;
+pub trait IActivatedEventArgsWithUser_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn User(this: &Self::This) -> ::windows_core::Result<super::super::System::User>;
 }
 #[cfg(feature = "System")]
-impl ::windows_core::RuntimeName for IActivatedEventArgsWithUser {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser";
+impl ::windows_core::Iids for IActivatedEventArgsWithUser {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "System")]
-impl IActivatedEventArgsWithUser_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IActivatedEventArgsWithUser_Impl, const OFFSET: isize>() -> IActivatedEventArgsWithUser_Vtbl {
-        unsafe extern "system" fn User<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IActivatedEventArgsWithUser_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.User() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActivatedEventArgsWithUser_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IActivatedEventArgsWithUser {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn User<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActivatedEventArgsWithUser_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::User(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IActivatedEventArgsWithUser, OFFSET>(), User: User::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IActivatedEventArgsWithUser as ::windows_core::ComInterface>::IID
-    }
+        IActivatedEventArgsWithUser_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, User: User::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IApplicationViewActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn CurrentlyShownApplicationViewId(&self) -> ::windows_core::Result<i32>;
+pub trait IApplicationViewActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn CurrentlyShownApplicationViewId(this: &Self::This) -> ::windows_core::Result<i32>;
 }
-impl ::windows_core::RuntimeName for IApplicationViewActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs";
+impl ::windows_core::Iids for IApplicationViewActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl IApplicationViewActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IApplicationViewActivatedEventArgs_Impl, const OFFSET: isize>() -> IApplicationViewActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn CurrentlyShownApplicationViewId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IApplicationViewActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CurrentlyShownApplicationViewId() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IApplicationViewActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IApplicationViewActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn CurrentlyShownApplicationViewId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IApplicationViewActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CurrentlyShownApplicationViewId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IApplicationViewActivatedEventArgs, OFFSET>(),
+        IApplicationViewActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             CurrentlyShownApplicationViewId: CurrentlyShownApplicationViewId::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IApplicationViewActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IAppointmentsProviderActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn Verb(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
+pub trait IAppointmentsProviderActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn Verb(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
 }
-impl ::windows_core::RuntimeName for IAppointmentsProviderActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs";
+impl ::windows_core::Iids for IAppointmentsProviderActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl IAppointmentsProviderActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAppointmentsProviderActivatedEventArgs_Impl, const OFFSET: isize>() -> IAppointmentsProviderActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn Verb<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAppointmentsProviderActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Verb() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsProviderActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IAppointmentsProviderActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Verb<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsProviderActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Verb(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IAppointmentsProviderActivatedEventArgs, OFFSET>(),
-            Verb: Verb::<Identity, Impl, OFFSET>,
-        }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IAppointmentsProviderActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+        IAppointmentsProviderActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Verb: Verb::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Appointments_AppointmentsProvider\"`"]
 #[cfg(feature = "ApplicationModel_Appointments_AppointmentsProvider")]
-pub trait IAppointmentsProviderAddAppointmentActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl + IAppointmentsProviderActivatedEventArgs_Impl {
-    fn AddAppointmentOperation(&self) -> ::windows_core::Result<super::Appointments::AppointmentsProvider::AddAppointmentOperation>;
+pub trait IAppointmentsProviderAddAppointmentActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + IAppointmentsProviderActivatedEventArgs_Impl {
+    fn AddAppointmentOperation(this: &Self::This) -> ::windows_core::Result<super::Appointments::AppointmentsProvider::AddAppointmentOperation>;
 }
 #[cfg(feature = "ApplicationModel_Appointments_AppointmentsProvider")]
-impl ::windows_core::RuntimeName for IAppointmentsProviderAddAppointmentActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IAppointmentsProviderAddAppointmentActivatedEventArgs";
+impl ::windows_core::Iids for IAppointmentsProviderAddAppointmentActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID, <IAppointmentsProviderActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "ApplicationModel_Appointments_AppointmentsProvider")]
-impl IAppointmentsProviderAddAppointmentActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAppointmentsProviderAddAppointmentActivatedEventArgs_Impl, const OFFSET: isize>() -> IAppointmentsProviderAddAppointmentActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn AddAppointmentOperation<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAppointmentsProviderAddAppointmentActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.AddAppointmentOperation() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsProviderAddAppointmentActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IAppointmentsProviderAddAppointmentActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn AddAppointmentOperation<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsProviderAddAppointmentActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::AddAppointmentOperation(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IAppointmentsProviderAddAppointmentActivatedEventArgs, OFFSET>(),
+        IAppointmentsProviderAddAppointmentActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             AddAppointmentOperation: AddAppointmentOperation::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IAppointmentsProviderAddAppointmentActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Appointments_AppointmentsProvider\"`"]
 #[cfg(feature = "ApplicationModel_Appointments_AppointmentsProvider")]
-pub trait IAppointmentsProviderRemoveAppointmentActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl + IAppointmentsProviderActivatedEventArgs_Impl {
-    fn RemoveAppointmentOperation(&self) -> ::windows_core::Result<super::Appointments::AppointmentsProvider::RemoveAppointmentOperation>;
+pub trait IAppointmentsProviderRemoveAppointmentActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + IAppointmentsProviderActivatedEventArgs_Impl {
+    fn RemoveAppointmentOperation(this: &Self::This) -> ::windows_core::Result<super::Appointments::AppointmentsProvider::RemoveAppointmentOperation>;
 }
 #[cfg(feature = "ApplicationModel_Appointments_AppointmentsProvider")]
-impl ::windows_core::RuntimeName for IAppointmentsProviderRemoveAppointmentActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs";
+impl ::windows_core::Iids for IAppointmentsProviderRemoveAppointmentActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID, <IAppointmentsProviderActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "ApplicationModel_Appointments_AppointmentsProvider")]
-impl IAppointmentsProviderRemoveAppointmentActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAppointmentsProviderRemoveAppointmentActivatedEventArgs_Impl, const OFFSET: isize>() -> IAppointmentsProviderRemoveAppointmentActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn RemoveAppointmentOperation<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAppointmentsProviderRemoveAppointmentActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RemoveAppointmentOperation() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsProviderRemoveAppointmentActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IAppointmentsProviderRemoveAppointmentActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn RemoveAppointmentOperation<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsProviderRemoveAppointmentActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RemoveAppointmentOperation(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IAppointmentsProviderRemoveAppointmentActivatedEventArgs, OFFSET>(),
+        IAppointmentsProviderRemoveAppointmentActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             RemoveAppointmentOperation: RemoveAppointmentOperation::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IAppointmentsProviderRemoveAppointmentActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Appointments_AppointmentsProvider\"`"]
 #[cfg(feature = "ApplicationModel_Appointments_AppointmentsProvider")]
-pub trait IAppointmentsProviderReplaceAppointmentActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl + IAppointmentsProviderActivatedEventArgs_Impl {
-    fn ReplaceAppointmentOperation(&self) -> ::windows_core::Result<super::Appointments::AppointmentsProvider::ReplaceAppointmentOperation>;
+pub trait IAppointmentsProviderReplaceAppointmentActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + IAppointmentsProviderActivatedEventArgs_Impl {
+    fn ReplaceAppointmentOperation(this: &Self::This) -> ::windows_core::Result<super::Appointments::AppointmentsProvider::ReplaceAppointmentOperation>;
 }
 #[cfg(feature = "ApplicationModel_Appointments_AppointmentsProvider")]
-impl ::windows_core::RuntimeName for IAppointmentsProviderReplaceAppointmentActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs";
+impl ::windows_core::Iids for IAppointmentsProviderReplaceAppointmentActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID, <IAppointmentsProviderActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "ApplicationModel_Appointments_AppointmentsProvider")]
-impl IAppointmentsProviderReplaceAppointmentActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAppointmentsProviderReplaceAppointmentActivatedEventArgs_Impl, const OFFSET: isize>() -> IAppointmentsProviderReplaceAppointmentActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn ReplaceAppointmentOperation<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAppointmentsProviderReplaceAppointmentActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ReplaceAppointmentOperation() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsProviderReplaceAppointmentActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IAppointmentsProviderReplaceAppointmentActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ReplaceAppointmentOperation<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsProviderReplaceAppointmentActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ReplaceAppointmentOperation(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IAppointmentsProviderReplaceAppointmentActivatedEventArgs, OFFSET>(),
+        IAppointmentsProviderReplaceAppointmentActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             ReplaceAppointmentOperation: ReplaceAppointmentOperation::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IAppointmentsProviderReplaceAppointmentActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
-pub trait IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl + IAppointmentsProviderActivatedEventArgs_Impl {
-    fn InstanceStartDate(&self) -> ::windows_core::Result<super::super::Foundation::IReference<super::super::Foundation::DateTime>>;
-    fn LocalId(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
-    fn RoamingId(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
+pub trait IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + IAppointmentsProviderActivatedEventArgs_Impl {
+    fn InstanceStartDate(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::IReference<super::super::Foundation::DateTime>>;
+    fn LocalId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
+    fn RoamingId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
 }
 #[cfg(feature = "Foundation")]
-impl ::windows_core::RuntimeName for IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs";
+impl ::windows_core::Iids for IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID, <IAppointmentsProviderActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "Foundation")]
-impl IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_Impl, const OFFSET: isize>() -> IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn InstanceStartDate<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.InstanceStartDate() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn InstanceStartDate<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::InstanceStartDate(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn LocalId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.LocalId() {
+        unsafe extern "system" fn LocalId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::LocalId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn RoamingId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RoamingId() {
+        unsafe extern "system" fn RoamingId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RoamingId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, OFFSET>(),
+        IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             InstanceStartDate: InstanceStartDate::<Identity, Impl, OFFSET>,
             LocalId: LocalId::<Identity, Impl, OFFSET>,
             RoamingId: RoamingId::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
-pub trait IAppointmentsProviderShowTimeFrameActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl + IAppointmentsProviderActivatedEventArgs_Impl {
-    fn TimeToShow(&self) -> ::windows_core::Result<super::super::Foundation::DateTime>;
-    fn Duration(&self) -> ::windows_core::Result<super::super::Foundation::TimeSpan>;
+pub trait IAppointmentsProviderShowTimeFrameActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + IAppointmentsProviderActivatedEventArgs_Impl {
+    fn TimeToShow(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::DateTime>;
+    fn Duration(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::TimeSpan>;
 }
 #[cfg(feature = "Foundation")]
-impl ::windows_core::RuntimeName for IAppointmentsProviderShowTimeFrameActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs";
+impl ::windows_core::Iids for IAppointmentsProviderShowTimeFrameActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID, <IAppointmentsProviderActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "Foundation")]
-impl IAppointmentsProviderShowTimeFrameActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAppointmentsProviderShowTimeFrameActivatedEventArgs_Impl, const OFFSET: isize>() -> IAppointmentsProviderShowTimeFrameActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn TimeToShow<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAppointmentsProviderShowTimeFrameActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut super::super::Foundation::DateTime) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.TimeToShow() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsProviderShowTimeFrameActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IAppointmentsProviderShowTimeFrameActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn TimeToShow<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsProviderShowTimeFrameActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut super::super::Foundation::DateTime) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::TimeToShow(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Duration<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAppointmentsProviderShowTimeFrameActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut super::super::Foundation::TimeSpan) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Duration() {
+        unsafe extern "system" fn Duration<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsProviderShowTimeFrameActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut super::super::Foundation::TimeSpan) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Duration(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IAppointmentsProviderShowTimeFrameActivatedEventArgs, OFFSET>(),
+        IAppointmentsProviderShowTimeFrameActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             TimeToShow: TimeToShow::<Identity, Impl, OFFSET>,
             Duration: Duration::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IAppointmentsProviderShowTimeFrameActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Background\"`"]
 #[cfg(feature = "ApplicationModel_Background")]
-pub trait IBackgroundActivatedEventArgs_Impl: Sized {
-    fn TaskInstance(&self) -> ::windows_core::Result<super::Background::IBackgroundTaskInstance>;
+pub trait IBackgroundActivatedEventArgs_Impl: ::windows_core::BaseImpl {
+    fn TaskInstance(this: &Self::This) -> ::windows_core::Result<super::Background::IBackgroundTaskInstance>;
 }
 #[cfg(feature = "ApplicationModel_Background")]
-impl ::windows_core::RuntimeName for IBackgroundActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs";
+impl ::windows_core::Iids for IBackgroundActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
 #[cfg(feature = "ApplicationModel_Background")]
-impl IBackgroundActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IBackgroundActivatedEventArgs_Impl, const OFFSET: isize>() -> IBackgroundActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn TaskInstance<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IBackgroundActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.TaskInstance() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IBackgroundActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn TaskInstance<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::TaskInstance(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IBackgroundActivatedEventArgs, OFFSET>(),
-            TaskInstance: TaskInstance::<Identity, Impl, OFFSET>,
-        }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IBackgroundActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+        IBackgroundActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, TaskInstance: TaskInstance::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IBarcodeScannerPreviewActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn ConnectionId(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
+pub trait IBarcodeScannerPreviewActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn ConnectionId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
 }
-impl ::windows_core::RuntimeName for IBarcodeScannerPreviewActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IBarcodeScannerPreviewActivatedEventArgs";
+impl ::windows_core::Iids for IBarcodeScannerPreviewActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl IBarcodeScannerPreviewActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IBarcodeScannerPreviewActivatedEventArgs_Impl, const OFFSET: isize>() -> IBarcodeScannerPreviewActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn ConnectionId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IBarcodeScannerPreviewActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ConnectionId() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBarcodeScannerPreviewActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IBarcodeScannerPreviewActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ConnectionId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBarcodeScannerPreviewActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ConnectionId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IBarcodeScannerPreviewActivatedEventArgs, OFFSET>(),
-            ConnectionId: ConnectionId::<Identity, Impl, OFFSET>,
-        }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IBarcodeScannerPreviewActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+        IBarcodeScannerPreviewActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ConnectionId: ConnectionId::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Storage_Provider\"`"]
 #[cfg(feature = "Storage_Provider")]
-pub trait ICachedFileUpdaterActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn CachedFileUpdaterUI(&self) -> ::windows_core::Result<super::super::Storage::Provider::CachedFileUpdaterUI>;
+pub trait ICachedFileUpdaterActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn CachedFileUpdaterUI(this: &Self::This) -> ::windows_core::Result<super::super::Storage::Provider::CachedFileUpdaterUI>;
 }
 #[cfg(feature = "Storage_Provider")]
-impl ::windows_core::RuntimeName for ICachedFileUpdaterActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs";
+impl ::windows_core::Iids for ICachedFileUpdaterActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "Storage_Provider")]
-impl ICachedFileUpdaterActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICachedFileUpdaterActivatedEventArgs_Impl, const OFFSET: isize>() -> ICachedFileUpdaterActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn CachedFileUpdaterUI<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICachedFileUpdaterActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CachedFileUpdaterUI() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICachedFileUpdaterActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ICachedFileUpdaterActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn CachedFileUpdaterUI<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICachedFileUpdaterActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CachedFileUpdaterUI(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, ICachedFileUpdaterActivatedEventArgs, OFFSET>(),
+        ICachedFileUpdaterActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             CachedFileUpdaterUI: CachedFileUpdaterUI::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ICachedFileUpdaterActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait ICameraSettingsActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn VideoDeviceController(&self) -> ::windows_core::Result<::windows_core::IInspectable>;
-    fn VideoDeviceExtension(&self) -> ::windows_core::Result<::windows_core::IInspectable>;
+pub trait ICameraSettingsActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn VideoDeviceController(this: &Self::This) -> ::windows_core::Result<::windows_core::IInspectable>;
+    fn VideoDeviceExtension(this: &Self::This) -> ::windows_core::Result<::windows_core::IInspectable>;
 }
-impl ::windows_core::RuntimeName for ICameraSettingsActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs";
+impl ::windows_core::Iids for ICameraSettingsActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl ICameraSettingsActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICameraSettingsActivatedEventArgs_Impl, const OFFSET: isize>() -> ICameraSettingsActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn VideoDeviceController<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICameraSettingsActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.VideoDeviceController() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICameraSettingsActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ICameraSettingsActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn VideoDeviceController<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICameraSettingsActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::VideoDeviceController(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn VideoDeviceExtension<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICameraSettingsActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.VideoDeviceExtension() {
+        unsafe extern "system" fn VideoDeviceExtension<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICameraSettingsActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::VideoDeviceExtension(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, ICameraSettingsActivatedEventArgs, OFFSET>(),
+        ICameraSettingsActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             VideoDeviceController: VideoDeviceController::<Identity, Impl, OFFSET>,
             VideoDeviceExtension: VideoDeviceExtension::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ICameraSettingsActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait ICommandLineActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn Operation(&self) -> ::windows_core::Result<CommandLineActivationOperation>;
+pub trait ICommandLineActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn Operation(this: &Self::This) -> ::windows_core::Result<CommandLineActivationOperation>;
 }
-impl ::windows_core::RuntimeName for ICommandLineActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.ICommandLineActivatedEventArgs";
+impl ::windows_core::Iids for ICommandLineActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl ICommandLineActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICommandLineActivatedEventArgs_Impl, const OFFSET: isize>() -> ICommandLineActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn Operation<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICommandLineActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Operation() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICommandLineActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ICommandLineActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Operation<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICommandLineActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Operation(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, ICommandLineActivatedEventArgs, OFFSET>(),
-            Operation: Operation::<Identity, Impl, OFFSET>,
-        }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ICommandLineActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+        ICommandLineActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Operation: Operation::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IContactActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn Verb(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
+pub trait IContactActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn Verb(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
 }
-impl ::windows_core::RuntimeName for IContactActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IContactActivatedEventArgs";
+impl ::windows_core::Iids for IContactActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl IContactActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactActivatedEventArgs_Impl, const OFFSET: isize>() -> IContactActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn Verb<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Verb() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IContactActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Verb<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Verb(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IContactActivatedEventArgs, OFFSET>(), Verb: Verb::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IContactActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+        IContactActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Verb: Verb::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Contacts\"`"]
 #[cfg(feature = "ApplicationModel_Contacts")]
-pub trait IContactCallActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl + IContactActivatedEventArgs_Impl {
-    fn ServiceId(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
-    fn ServiceUserId(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
-    fn Contact(&self) -> ::windows_core::Result<super::Contacts::Contact>;
+pub trait IContactCallActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + IContactActivatedEventArgs_Impl {
+    fn ServiceId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
+    fn ServiceUserId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
+    fn Contact(this: &Self::This) -> ::windows_core::Result<super::Contacts::Contact>;
 }
 #[cfg(feature = "ApplicationModel_Contacts")]
-impl ::windows_core::RuntimeName for IContactCallActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs";
+impl ::windows_core::Iids for IContactCallActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID, <IContactActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "ApplicationModel_Contacts")]
-impl IContactCallActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactCallActivatedEventArgs_Impl, const OFFSET: isize>() -> IContactCallActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn ServiceId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactCallActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ServiceId() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactCallActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IContactCallActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ServiceId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactCallActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ServiceId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ServiceUserId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactCallActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ServiceUserId() {
+        unsafe extern "system" fn ServiceUserId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactCallActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ServiceUserId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Contact<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactCallActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Contact() {
+        unsafe extern "system" fn Contact<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactCallActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Contact(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IContactCallActivatedEventArgs, OFFSET>(),
+        IContactCallActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             ServiceId: ServiceId::<Identity, Impl, OFFSET>,
             ServiceUserId: ServiceUserId::<Identity, Impl, OFFSET>,
             Contact: Contact::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IContactCallActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Contacts\"`"]
 #[cfg(feature = "ApplicationModel_Contacts")]
-pub trait IContactMapActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl + IContactActivatedEventArgs_Impl {
-    fn Address(&self) -> ::windows_core::Result<super::Contacts::ContactAddress>;
-    fn Contact(&self) -> ::windows_core::Result<super::Contacts::Contact>;
+pub trait IContactMapActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + IContactActivatedEventArgs_Impl {
+    fn Address(this: &Self::This) -> ::windows_core::Result<super::Contacts::ContactAddress>;
+    fn Contact(this: &Self::This) -> ::windows_core::Result<super::Contacts::Contact>;
 }
 #[cfg(feature = "ApplicationModel_Contacts")]
-impl ::windows_core::RuntimeName for IContactMapActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs";
+impl ::windows_core::Iids for IContactMapActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID, <IContactActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "ApplicationModel_Contacts")]
-impl IContactMapActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactMapActivatedEventArgs_Impl, const OFFSET: isize>() -> IContactMapActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn Address<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactMapActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Address() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactMapActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IContactMapActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Address<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactMapActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Address(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Contact<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactMapActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Contact() {
+        unsafe extern "system" fn Contact<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactMapActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Contact(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IContactMapActivatedEventArgs, OFFSET>(),
+        IContactMapActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             Address: Address::<Identity, Impl, OFFSET>,
             Contact: Contact::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IContactMapActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Contacts\"`"]
 #[cfg(feature = "ApplicationModel_Contacts")]
-pub trait IContactMessageActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl + IContactActivatedEventArgs_Impl {
-    fn ServiceId(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
-    fn ServiceUserId(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
-    fn Contact(&self) -> ::windows_core::Result<super::Contacts::Contact>;
+pub trait IContactMessageActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + IContactActivatedEventArgs_Impl {
+    fn ServiceId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
+    fn ServiceUserId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
+    fn Contact(this: &Self::This) -> ::windows_core::Result<super::Contacts::Contact>;
 }
 #[cfg(feature = "ApplicationModel_Contacts")]
-impl ::windows_core::RuntimeName for IContactMessageActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs";
+impl ::windows_core::Iids for IContactMessageActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID, <IContactActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "ApplicationModel_Contacts")]
-impl IContactMessageActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactMessageActivatedEventArgs_Impl, const OFFSET: isize>() -> IContactMessageActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn ServiceId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactMessageActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ServiceId() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactMessageActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IContactMessageActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ServiceId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactMessageActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ServiceId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ServiceUserId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactMessageActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ServiceUserId() {
+        unsafe extern "system" fn ServiceUserId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactMessageActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ServiceUserId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Contact<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactMessageActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Contact() {
+        unsafe extern "system" fn Contact<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactMessageActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Contact(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IContactMessageActivatedEventArgs, OFFSET>(),
+        IContactMessageActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             ServiceId: ServiceId::<Identity, Impl, OFFSET>,
             ServiceUserId: ServiceUserId::<Identity, Impl, OFFSET>,
             Contact: Contact::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IContactMessageActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Contacts\"`"]
 #[cfg(feature = "ApplicationModel_Contacts")]
-pub trait IContactPanelActivatedEventArgs_Impl: Sized {
-    fn ContactPanel(&self) -> ::windows_core::Result<super::Contacts::ContactPanel>;
-    fn Contact(&self) -> ::windows_core::Result<super::Contacts::Contact>;
+pub trait IContactPanelActivatedEventArgs_Impl: ::windows_core::BaseImpl {
+    fn ContactPanel(this: &Self::This) -> ::windows_core::Result<super::Contacts::ContactPanel>;
+    fn Contact(this: &Self::This) -> ::windows_core::Result<super::Contacts::Contact>;
 }
 #[cfg(feature = "ApplicationModel_Contacts")]
-impl ::windows_core::RuntimeName for IContactPanelActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IContactPanelActivatedEventArgs";
+impl ::windows_core::Iids for IContactPanelActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
 #[cfg(feature = "ApplicationModel_Contacts")]
-impl IContactPanelActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactPanelActivatedEventArgs_Impl, const OFFSET: isize>() -> IContactPanelActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn ContactPanel<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactPanelActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ContactPanel() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactPanelActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IContactPanelActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ContactPanel<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactPanelActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ContactPanel(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Contact<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactPanelActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Contact() {
+        unsafe extern "system" fn Contact<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactPanelActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Contact(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IContactPanelActivatedEventArgs, OFFSET>(),
+        IContactPanelActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             ContactPanel: ContactPanel::<Identity, Impl, OFFSET>,
             Contact: Contact::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IContactPanelActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Contacts_Provider\"`"]
 #[cfg(feature = "ApplicationModel_Contacts_Provider")]
-pub trait IContactPickerActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn ContactPickerUI(&self) -> ::windows_core::Result<super::Contacts::Provider::ContactPickerUI>;
+pub trait IContactPickerActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn ContactPickerUI(this: &Self::This) -> ::windows_core::Result<super::Contacts::Provider::ContactPickerUI>;
 }
 #[cfg(feature = "ApplicationModel_Contacts_Provider")]
-impl ::windows_core::RuntimeName for IContactPickerActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs";
+impl ::windows_core::Iids for IContactPickerActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "ApplicationModel_Contacts_Provider")]
-impl IContactPickerActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactPickerActivatedEventArgs_Impl, const OFFSET: isize>() -> IContactPickerActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn ContactPickerUI<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactPickerActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ContactPickerUI() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactPickerActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IContactPickerActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ContactPickerUI<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactPickerActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ContactPickerUI(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IContactPickerActivatedEventArgs, OFFSET>(),
+        IContactPickerActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             ContactPickerUI: ContactPickerUI::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IContactPickerActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Contacts\"`"]
 #[cfg(feature = "ApplicationModel_Contacts")]
-pub trait IContactPostActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl + IContactActivatedEventArgs_Impl {
-    fn ServiceId(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
-    fn ServiceUserId(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
-    fn Contact(&self) -> ::windows_core::Result<super::Contacts::Contact>;
+pub trait IContactPostActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + IContactActivatedEventArgs_Impl {
+    fn ServiceId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
+    fn ServiceUserId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
+    fn Contact(this: &Self::This) -> ::windows_core::Result<super::Contacts::Contact>;
 }
 #[cfg(feature = "ApplicationModel_Contacts")]
-impl ::windows_core::RuntimeName for IContactPostActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs";
+impl ::windows_core::Iids for IContactPostActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID, <IContactActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "ApplicationModel_Contacts")]
-impl IContactPostActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactPostActivatedEventArgs_Impl, const OFFSET: isize>() -> IContactPostActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn ServiceId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactPostActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ServiceId() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactPostActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IContactPostActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ServiceId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactPostActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ServiceId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ServiceUserId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactPostActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ServiceUserId() {
+        unsafe extern "system" fn ServiceUserId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactPostActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ServiceUserId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Contact<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactPostActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Contact() {
+        unsafe extern "system" fn Contact<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactPostActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Contact(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IContactPostActivatedEventArgs, OFFSET>(),
+        IContactPostActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             ServiceId: ServiceId::<Identity, Impl, OFFSET>,
             ServiceUserId: ServiceUserId::<Identity, Impl, OFFSET>,
             Contact: Contact::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IContactPostActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Contacts\"`"]
 #[cfg(feature = "ApplicationModel_Contacts")]
-pub trait IContactVideoCallActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl + IContactActivatedEventArgs_Impl {
-    fn ServiceId(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
-    fn ServiceUserId(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
-    fn Contact(&self) -> ::windows_core::Result<super::Contacts::Contact>;
+pub trait IContactVideoCallActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + IContactActivatedEventArgs_Impl {
+    fn ServiceId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
+    fn ServiceUserId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
+    fn Contact(this: &Self::This) -> ::windows_core::Result<super::Contacts::Contact>;
 }
 #[cfg(feature = "ApplicationModel_Contacts")]
-impl ::windows_core::RuntimeName for IContactVideoCallActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs";
+impl ::windows_core::Iids for IContactVideoCallActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID, <IContactActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "ApplicationModel_Contacts")]
-impl IContactVideoCallActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactVideoCallActivatedEventArgs_Impl, const OFFSET: isize>() -> IContactVideoCallActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn ServiceId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactVideoCallActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ServiceId() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactVideoCallActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IContactVideoCallActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ServiceId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactVideoCallActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ServiceId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ServiceUserId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactVideoCallActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ServiceUserId() {
+        unsafe extern "system" fn ServiceUserId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactVideoCallActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ServiceUserId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Contact<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactVideoCallActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Contact() {
+        unsafe extern "system" fn Contact<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactVideoCallActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Contact(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IContactVideoCallActivatedEventArgs, OFFSET>(),
+        IContactVideoCallActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             ServiceId: ServiceId::<Identity, Impl, OFFSET>,
             ServiceUserId: ServiceUserId::<Identity, Impl, OFFSET>,
             Contact: Contact::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IContactVideoCallActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IContactsProviderActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn Verb(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
+pub trait IContactsProviderActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn Verb(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
 }
-impl ::windows_core::RuntimeName for IContactsProviderActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs";
+impl ::windows_core::Iids for IContactsProviderActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl IContactsProviderActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactsProviderActivatedEventArgs_Impl, const OFFSET: isize>() -> IContactsProviderActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn Verb<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContactsProviderActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Verb() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactsProviderActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IContactsProviderActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Verb<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactsProviderActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Verb(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IContactsProviderActivatedEventArgs, OFFSET>(), Verb: Verb::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IContactsProviderActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+        IContactsProviderActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Verb: Verb::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
-pub trait IContinuationActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn ContinuationData(&self) -> ::windows_core::Result<super::super::Foundation::Collections::ValueSet>;
+pub trait IContinuationActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn ContinuationData(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::Collections::ValueSet>;
 }
 #[cfg(feature = "Foundation_Collections")]
-impl ::windows_core::RuntimeName for IContinuationActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs";
+impl ::windows_core::Iids for IContinuationActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "Foundation_Collections")]
-impl IContinuationActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContinuationActivatedEventArgs_Impl, const OFFSET: isize>() -> IContinuationActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn ContinuationData<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IContinuationActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ContinuationData() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContinuationActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IContinuationActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ContinuationData<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContinuationActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ContinuationData(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IContinuationActivatedEventArgs, OFFSET>(),
+        IContinuationActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             ContinuationData: ContinuationData::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IContinuationActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IDeviceActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn DeviceInformationId(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
-    fn Verb(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
+pub trait IDeviceActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn DeviceInformationId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
+    fn Verb(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
 }
-impl ::windows_core::RuntimeName for IDeviceActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IDeviceActivatedEventArgs";
+impl ::windows_core::Iids for IDeviceActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl IDeviceActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDeviceActivatedEventArgs_Impl, const OFFSET: isize>() -> IDeviceActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn DeviceInformationId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDeviceActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DeviceInformationId() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDeviceActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDeviceActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn DeviceInformationId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDeviceActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DeviceInformationId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Verb<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDeviceActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Verb() {
+        unsafe extern "system" fn Verb<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDeviceActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Verb(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IDeviceActivatedEventArgs, OFFSET>(),
+        IDeviceActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             DeviceInformationId: DeviceInformationId::<Identity, Impl, OFFSET>,
             Verb: Verb::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IDeviceActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Devices_Enumeration\"`"]
 #[cfg(feature = "Devices_Enumeration")]
-pub trait IDevicePairingActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn DeviceInformation(&self) -> ::windows_core::Result<super::super::Devices::Enumeration::DeviceInformation>;
+pub trait IDevicePairingActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn DeviceInformation(this: &Self::This) -> ::windows_core::Result<super::super::Devices::Enumeration::DeviceInformation>;
 }
 #[cfg(feature = "Devices_Enumeration")]
-impl ::windows_core::RuntimeName for IDevicePairingActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IDevicePairingActivatedEventArgs";
+impl ::windows_core::Iids for IDevicePairingActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "Devices_Enumeration")]
-impl IDevicePairingActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDevicePairingActivatedEventArgs_Impl, const OFFSET: isize>() -> IDevicePairingActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn DeviceInformation<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDevicePairingActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DeviceInformation() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDevicePairingActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDevicePairingActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn DeviceInformation<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDevicePairingActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DeviceInformation(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IDevicePairingActivatedEventArgs, OFFSET>(),
+        IDevicePairingActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             DeviceInformation: DeviceInformation::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IDevicePairingActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IDialReceiverActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl + ILaunchActivatedEventArgs_Impl {
-    fn AppName(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
+pub trait IDialReceiverActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + ILaunchActivatedEventArgs_Impl {
+    fn AppName(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
 }
-impl ::windows_core::RuntimeName for IDialReceiverActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IDialReceiverActivatedEventArgs";
+impl ::windows_core::Iids for IDialReceiverActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID, <ILaunchActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl IDialReceiverActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDialReceiverActivatedEventArgs_Impl, const OFFSET: isize>() -> IDialReceiverActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn AppName<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDialReceiverActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.AppName() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDialReceiverActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDialReceiverActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn AppName<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDialReceiverActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::AppName(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IDialReceiverActivatedEventArgs, OFFSET>(),
-            AppName: AppName::<Identity, Impl, OFFSET>,
-        }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IDialReceiverActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+        IDialReceiverActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, AppName: AppName::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Storage\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage"))]
-pub trait IFileActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn Files(&self) -> ::windows_core::Result<super::super::Foundation::Collections::IVectorView<super::super::Storage::IStorageItem>>;
-    fn Verb(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
+pub trait IFileActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn Files(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::Collections::IVectorView<super::super::Storage::IStorageItem>>;
+    fn Verb(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
 }
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage"))]
-impl ::windows_core::RuntimeName for IFileActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IFileActivatedEventArgs";
+impl ::windows_core::Iids for IFileActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage"))]
-impl IFileActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileActivatedEventArgs_Impl, const OFFSET: isize>() -> IFileActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn Files<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Files() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IFileActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Files<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Files(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Verb<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Verb() {
+        unsafe extern "system" fn Verb<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Verb(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IFileActivatedEventArgs, OFFSET>(),
+        IFileActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             Files: Files::<Identity, Impl, OFFSET>,
             Verb: Verb::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IFileActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IFileActivatedEventArgsWithCallerPackageFamilyName_Impl: Sized + IActivatedEventArgs_Impl {
-    fn CallerPackageFamilyName(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
+pub trait IFileActivatedEventArgsWithCallerPackageFamilyName_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn CallerPackageFamilyName(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
 }
-impl ::windows_core::RuntimeName for IFileActivatedEventArgsWithCallerPackageFamilyName {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithCallerPackageFamilyName";
+impl ::windows_core::Iids for IFileActivatedEventArgsWithCallerPackageFamilyName {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl IFileActivatedEventArgsWithCallerPackageFamilyName_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileActivatedEventArgsWithCallerPackageFamilyName_Impl, const OFFSET: isize>() -> IFileActivatedEventArgsWithCallerPackageFamilyName_Vtbl {
-        unsafe extern "system" fn CallerPackageFamilyName<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileActivatedEventArgsWithCallerPackageFamilyName_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CallerPackageFamilyName() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileActivatedEventArgsWithCallerPackageFamilyName_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IFileActivatedEventArgsWithCallerPackageFamilyName {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn CallerPackageFamilyName<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileActivatedEventArgsWithCallerPackageFamilyName_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CallerPackageFamilyName(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IFileActivatedEventArgsWithCallerPackageFamilyName, OFFSET>(),
+        IFileActivatedEventArgsWithCallerPackageFamilyName_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             CallerPackageFamilyName: CallerPackageFamilyName::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IFileActivatedEventArgsWithCallerPackageFamilyName as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Storage_Search\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage_Search"))]
-pub trait IFileActivatedEventArgsWithNeighboringFiles_Impl: Sized + IActivatedEventArgs_Impl + IFileActivatedEventArgs_Impl {
-    fn NeighboringFilesQuery(&self) -> ::windows_core::Result<super::super::Storage::Search::StorageFileQueryResult>;
+pub trait IFileActivatedEventArgsWithNeighboringFiles_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + IFileActivatedEventArgs_Impl {
+    fn NeighboringFilesQuery(this: &Self::This) -> ::windows_core::Result<super::super::Storage::Search::StorageFileQueryResult>;
 }
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage_Search"))]
-impl ::windows_core::RuntimeName for IFileActivatedEventArgsWithNeighboringFiles {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithNeighboringFiles";
+impl ::windows_core::Iids for IFileActivatedEventArgsWithNeighboringFiles {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID, <IFileActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage_Search"))]
-impl IFileActivatedEventArgsWithNeighboringFiles_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileActivatedEventArgsWithNeighboringFiles_Impl, const OFFSET: isize>() -> IFileActivatedEventArgsWithNeighboringFiles_Vtbl {
-        unsafe extern "system" fn NeighboringFilesQuery<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileActivatedEventArgsWithNeighboringFiles_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.NeighboringFilesQuery() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileActivatedEventArgsWithNeighboringFiles_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IFileActivatedEventArgsWithNeighboringFiles {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn NeighboringFilesQuery<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileActivatedEventArgsWithNeighboringFiles_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::NeighboringFilesQuery(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IFileActivatedEventArgsWithNeighboringFiles, OFFSET>(),
+        IFileActivatedEventArgsWithNeighboringFiles_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             NeighboringFilesQuery: NeighboringFilesQuery::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IFileActivatedEventArgsWithNeighboringFiles as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Storage_Pickers_Provider\"`"]
 #[cfg(feature = "Storage_Pickers_Provider")]
-pub trait IFileOpenPickerActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn FileOpenPickerUI(&self) -> ::windows_core::Result<super::super::Storage::Pickers::Provider::FileOpenPickerUI>;
+pub trait IFileOpenPickerActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn FileOpenPickerUI(this: &Self::This) -> ::windows_core::Result<super::super::Storage::Pickers::Provider::FileOpenPickerUI>;
 }
 #[cfg(feature = "Storage_Pickers_Provider")]
-impl ::windows_core::RuntimeName for IFileOpenPickerActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs";
+impl ::windows_core::Iids for IFileOpenPickerActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "Storage_Pickers_Provider")]
-impl IFileOpenPickerActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileOpenPickerActivatedEventArgs_Impl, const OFFSET: isize>() -> IFileOpenPickerActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn FileOpenPickerUI<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileOpenPickerActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.FileOpenPickerUI() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileOpenPickerActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IFileOpenPickerActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn FileOpenPickerUI<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileOpenPickerActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::FileOpenPickerUI(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IFileOpenPickerActivatedEventArgs, OFFSET>(),
+        IFileOpenPickerActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             FileOpenPickerUI: FileOpenPickerUI::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IFileOpenPickerActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IFileOpenPickerActivatedEventArgs2_Impl: Sized {
-    fn CallerPackageFamilyName(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
+pub trait IFileOpenPickerActivatedEventArgs2_Impl: ::windows_core::BaseImpl {
+    fn CallerPackageFamilyName(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
 }
-impl ::windows_core::RuntimeName for IFileOpenPickerActivatedEventArgs2 {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs2";
+impl ::windows_core::Iids for IFileOpenPickerActivatedEventArgs2 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
-impl IFileOpenPickerActivatedEventArgs2_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileOpenPickerActivatedEventArgs2_Impl, const OFFSET: isize>() -> IFileOpenPickerActivatedEventArgs2_Vtbl {
-        unsafe extern "system" fn CallerPackageFamilyName<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileOpenPickerActivatedEventArgs2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CallerPackageFamilyName() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileOpenPickerActivatedEventArgs2_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IFileOpenPickerActivatedEventArgs2 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn CallerPackageFamilyName<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileOpenPickerActivatedEventArgs2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CallerPackageFamilyName(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IFileOpenPickerActivatedEventArgs2, OFFSET>(),
+        IFileOpenPickerActivatedEventArgs2_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             CallerPackageFamilyName: CallerPackageFamilyName::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IFileOpenPickerActivatedEventArgs2 as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Storage\"`, `\"deprecated\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage", feature = "deprecated"))]
-pub trait IFileOpenPickerContinuationEventArgs_Impl: Sized + IActivatedEventArgs_Impl + IContinuationActivatedEventArgs_Impl {
-    fn Files(&self) -> ::windows_core::Result<super::super::Foundation::Collections::IVectorView<super::super::Storage::StorageFile>>;
+pub trait IFileOpenPickerContinuationEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + IContinuationActivatedEventArgs_Impl {
+    fn Files(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::Collections::IVectorView<super::super::Storage::StorageFile>>;
 }
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage", feature = "deprecated"))]
-impl ::windows_core::RuntimeName for IFileOpenPickerContinuationEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IFileOpenPickerContinuationEventArgs";
+impl ::windows_core::Iids for IFileOpenPickerContinuationEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID, <IContinuationActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage", feature = "deprecated"))]
-impl IFileOpenPickerContinuationEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileOpenPickerContinuationEventArgs_Impl, const OFFSET: isize>() -> IFileOpenPickerContinuationEventArgs_Vtbl {
-        unsafe extern "system" fn Files<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileOpenPickerContinuationEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Files() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileOpenPickerContinuationEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IFileOpenPickerContinuationEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Files<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileOpenPickerContinuationEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Files(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IFileOpenPickerContinuationEventArgs, OFFSET>(),
-            Files: Files::<Identity, Impl, OFFSET>,
-        }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IFileOpenPickerContinuationEventArgs as ::windows_core::ComInterface>::IID
-    }
+        IFileOpenPickerContinuationEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Files: Files::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Storage_Pickers_Provider\"`"]
 #[cfg(feature = "Storage_Pickers_Provider")]
-pub trait IFileSavePickerActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn FileSavePickerUI(&self) -> ::windows_core::Result<super::super::Storage::Pickers::Provider::FileSavePickerUI>;
+pub trait IFileSavePickerActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn FileSavePickerUI(this: &Self::This) -> ::windows_core::Result<super::super::Storage::Pickers::Provider::FileSavePickerUI>;
 }
 #[cfg(feature = "Storage_Pickers_Provider")]
-impl ::windows_core::RuntimeName for IFileSavePickerActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs";
+impl ::windows_core::Iids for IFileSavePickerActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "Storage_Pickers_Provider")]
-impl IFileSavePickerActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileSavePickerActivatedEventArgs_Impl, const OFFSET: isize>() -> IFileSavePickerActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn FileSavePickerUI<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileSavePickerActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.FileSavePickerUI() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileSavePickerActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IFileSavePickerActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn FileSavePickerUI<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileSavePickerActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::FileSavePickerUI(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IFileSavePickerActivatedEventArgs, OFFSET>(),
+        IFileSavePickerActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             FileSavePickerUI: FileSavePickerUI::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IFileSavePickerActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IFileSavePickerActivatedEventArgs2_Impl: Sized {
-    fn CallerPackageFamilyName(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
-    fn EnterpriseId(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
+pub trait IFileSavePickerActivatedEventArgs2_Impl: ::windows_core::BaseImpl {
+    fn CallerPackageFamilyName(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
+    fn EnterpriseId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
 }
-impl ::windows_core::RuntimeName for IFileSavePickerActivatedEventArgs2 {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs2";
+impl ::windows_core::Iids for IFileSavePickerActivatedEventArgs2 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
-impl IFileSavePickerActivatedEventArgs2_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileSavePickerActivatedEventArgs2_Impl, const OFFSET: isize>() -> IFileSavePickerActivatedEventArgs2_Vtbl {
-        unsafe extern "system" fn CallerPackageFamilyName<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileSavePickerActivatedEventArgs2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CallerPackageFamilyName() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileSavePickerActivatedEventArgs2_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IFileSavePickerActivatedEventArgs2 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn CallerPackageFamilyName<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileSavePickerActivatedEventArgs2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CallerPackageFamilyName(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn EnterpriseId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileSavePickerActivatedEventArgs2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.EnterpriseId() {
+        unsafe extern "system" fn EnterpriseId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileSavePickerActivatedEventArgs2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::EnterpriseId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IFileSavePickerActivatedEventArgs2, OFFSET>(),
+        IFileSavePickerActivatedEventArgs2_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             CallerPackageFamilyName: CallerPackageFamilyName::<Identity, Impl, OFFSET>,
             EnterpriseId: EnterpriseId::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IFileSavePickerActivatedEventArgs2 as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Storage\"`, `\"deprecated\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage", feature = "deprecated"))]
-pub trait IFileSavePickerContinuationEventArgs_Impl: Sized + IActivatedEventArgs_Impl + IContinuationActivatedEventArgs_Impl {
-    fn File(&self) -> ::windows_core::Result<super::super::Storage::StorageFile>;
+pub trait IFileSavePickerContinuationEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + IContinuationActivatedEventArgs_Impl {
+    fn File(this: &Self::This) -> ::windows_core::Result<super::super::Storage::StorageFile>;
 }
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage", feature = "deprecated"))]
-impl ::windows_core::RuntimeName for IFileSavePickerContinuationEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IFileSavePickerContinuationEventArgs";
+impl ::windows_core::Iids for IFileSavePickerContinuationEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID, <IContinuationActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage", feature = "deprecated"))]
-impl IFileSavePickerContinuationEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileSavePickerContinuationEventArgs_Impl, const OFFSET: isize>() -> IFileSavePickerContinuationEventArgs_Vtbl {
-        unsafe extern "system" fn File<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFileSavePickerContinuationEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.File() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileSavePickerContinuationEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IFileSavePickerContinuationEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn File<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileSavePickerContinuationEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::File(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IFileSavePickerContinuationEventArgs, OFFSET>(), File: File::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IFileSavePickerContinuationEventArgs as ::windows_core::ComInterface>::IID
-    }
+        IFileSavePickerContinuationEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, File: File::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Storage\"`, `\"deprecated\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage", feature = "deprecated"))]
-pub trait IFolderPickerContinuationEventArgs_Impl: Sized + IActivatedEventArgs_Impl + IContinuationActivatedEventArgs_Impl {
-    fn Folder(&self) -> ::windows_core::Result<super::super::Storage::StorageFolder>;
+pub trait IFolderPickerContinuationEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + IContinuationActivatedEventArgs_Impl {
+    fn Folder(this: &Self::This) -> ::windows_core::Result<super::super::Storage::StorageFolder>;
 }
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage", feature = "deprecated"))]
-impl ::windows_core::RuntimeName for IFolderPickerContinuationEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IFolderPickerContinuationEventArgs";
+impl ::windows_core::Iids for IFolderPickerContinuationEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID, <IContinuationActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage", feature = "deprecated"))]
-impl IFolderPickerContinuationEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFolderPickerContinuationEventArgs_Impl, const OFFSET: isize>() -> IFolderPickerContinuationEventArgs_Vtbl {
-        unsafe extern "system" fn Folder<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IFolderPickerContinuationEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Folder() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFolderPickerContinuationEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IFolderPickerContinuationEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Folder<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFolderPickerContinuationEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Folder(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IFolderPickerContinuationEventArgs, OFFSET>(),
-            Folder: Folder::<Identity, Impl, OFFSET>,
-        }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IFolderPickerContinuationEventArgs as ::windows_core::ComInterface>::IID
-    }
+        IFolderPickerContinuationEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Folder: Folder::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait ILaunchActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn Arguments(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
-    fn TileId(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
+pub trait ILaunchActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn Arguments(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
+    fn TileId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
 }
-impl ::windows_core::RuntimeName for ILaunchActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs";
+impl ::windows_core::Iids for ILaunchActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl ILaunchActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ILaunchActivatedEventArgs_Impl, const OFFSET: isize>() -> ILaunchActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn Arguments<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ILaunchActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Arguments() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILaunchActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ILaunchActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Arguments<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILaunchActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Arguments(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn TileId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ILaunchActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.TileId() {
+        unsafe extern "system" fn TileId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILaunchActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::TileId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, ILaunchActivatedEventArgs, OFFSET>(),
+        ILaunchActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             Arguments: Arguments::<Identity, Impl, OFFSET>,
             TileId: TileId::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ILaunchActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait ILaunchActivatedEventArgs2_Impl: Sized + IActivatedEventArgs_Impl + ILaunchActivatedEventArgs_Impl {
-    fn TileActivatedInfo(&self) -> ::windows_core::Result<TileActivatedInfo>;
+pub trait ILaunchActivatedEventArgs2_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + ILaunchActivatedEventArgs_Impl {
+    fn TileActivatedInfo(this: &Self::This) -> ::windows_core::Result<TileActivatedInfo>;
 }
-impl ::windows_core::RuntimeName for ILaunchActivatedEventArgs2 {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs2";
+impl ::windows_core::Iids for ILaunchActivatedEventArgs2 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID, <ILaunchActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl ILaunchActivatedEventArgs2_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ILaunchActivatedEventArgs2_Impl, const OFFSET: isize>() -> ILaunchActivatedEventArgs2_Vtbl {
-        unsafe extern "system" fn TileActivatedInfo<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ILaunchActivatedEventArgs2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.TileActivatedInfo() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILaunchActivatedEventArgs2_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ILaunchActivatedEventArgs2 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn TileActivatedInfo<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILaunchActivatedEventArgs2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::TileActivatedInfo(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, ILaunchActivatedEventArgs2, OFFSET>(),
+        ILaunchActivatedEventArgs2_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             TileActivatedInfo: TileActivatedInfo::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ILaunchActivatedEventArgs2 as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait ILockScreenActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn Info(&self) -> ::windows_core::Result<::windows_core::IInspectable>;
+pub trait ILockScreenActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn Info(this: &Self::This) -> ::windows_core::Result<::windows_core::IInspectable>;
 }
-impl ::windows_core::RuntimeName for ILockScreenActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.ILockScreenActivatedEventArgs";
+impl ::windows_core::Iids for ILockScreenActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl ILockScreenActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ILockScreenActivatedEventArgs_Impl, const OFFSET: isize>() -> ILockScreenActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn Info<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ILockScreenActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Info() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILockScreenActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ILockScreenActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Info<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILockScreenActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Info(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: ::windows_core::IInspectable_Vtbl::new::<Identity, ILockScreenActivatedEventArgs, OFFSET>(), Info: Info::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ILockScreenActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+        ILockScreenActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Info: Info::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Calls\"`"]
 #[cfg(feature = "ApplicationModel_Calls")]
-pub trait ILockScreenCallActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl + ILaunchActivatedEventArgs_Impl {
-    fn CallUI(&self) -> ::windows_core::Result<super::Calls::LockScreenCallUI>;
+pub trait ILockScreenCallActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + ILaunchActivatedEventArgs_Impl {
+    fn CallUI(this: &Self::This) -> ::windows_core::Result<super::Calls::LockScreenCallUI>;
 }
 #[cfg(feature = "ApplicationModel_Calls")]
-impl ::windows_core::RuntimeName for ILockScreenCallActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs";
+impl ::windows_core::Iids for ILockScreenCallActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID, <ILaunchActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "ApplicationModel_Calls")]
-impl ILockScreenCallActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ILockScreenCallActivatedEventArgs_Impl, const OFFSET: isize>() -> ILockScreenCallActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn CallUI<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ILockScreenCallActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CallUI() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILockScreenCallActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ILockScreenCallActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn CallUI<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILockScreenCallActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CallUI(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, ILockScreenCallActivatedEventArgs, OFFSET>(),
-            CallUI: CallUI::<Identity, Impl, OFFSET>,
-        }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ILockScreenCallActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+        ILockScreenCallActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CallUI: CallUI::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IPhoneCallActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn LineId(&self) -> ::windows_core::Result<::windows_core::GUID>;
+pub trait IPhoneCallActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn LineId(this: &Self::This) -> ::windows_core::Result<::windows_core::GUID>;
 }
-impl ::windows_core::RuntimeName for IPhoneCallActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IPhoneCallActivatedEventArgs";
+impl ::windows_core::Iids for IPhoneCallActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl IPhoneCallActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IPhoneCallActivatedEventArgs_Impl, const OFFSET: isize>() -> IPhoneCallActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn LineId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IPhoneCallActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::windows_core::GUID) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.LineId() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPhoneCallActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IPhoneCallActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn LineId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPhoneCallActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::windows_core::GUID) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::LineId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IPhoneCallActivatedEventArgs, OFFSET>(), LineId: LineId::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IPhoneCallActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+        IPhoneCallActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, LineId: LineId::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IPickerReturnedActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn PickerOperationId(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
+pub trait IPickerReturnedActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn PickerOperationId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
 }
-impl ::windows_core::RuntimeName for IPickerReturnedActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IPickerReturnedActivatedEventArgs";
+impl ::windows_core::Iids for IPickerReturnedActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl IPickerReturnedActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IPickerReturnedActivatedEventArgs_Impl, const OFFSET: isize>() -> IPickerReturnedActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn PickerOperationId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IPickerReturnedActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.PickerOperationId() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPickerReturnedActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IPickerReturnedActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn PickerOperationId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPickerReturnedActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::PickerOperationId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IPickerReturnedActivatedEventArgs, OFFSET>(),
+        IPickerReturnedActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             PickerOperationId: PickerOperationId::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IPickerReturnedActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IPrelaunchActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn PrelaunchActivated(&self) -> ::windows_core::Result<bool>;
+pub trait IPrelaunchActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn PrelaunchActivated(this: &Self::This) -> ::windows_core::Result<bool>;
 }
-impl ::windows_core::RuntimeName for IPrelaunchActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IPrelaunchActivatedEventArgs";
+impl ::windows_core::Iids for IPrelaunchActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl IPrelaunchActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IPrelaunchActivatedEventArgs_Impl, const OFFSET: isize>() -> IPrelaunchActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn PrelaunchActivated<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IPrelaunchActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut bool) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.PrelaunchActivated() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrelaunchActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IPrelaunchActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn PrelaunchActivated<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrelaunchActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut bool) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::PrelaunchActivated(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IPrelaunchActivatedEventArgs, OFFSET>(),
+        IPrelaunchActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             PrelaunchActivated: PrelaunchActivated::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IPrelaunchActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Devices_Printers_Extensions\"`"]
 #[cfg(feature = "Devices_Printers_Extensions")]
-pub trait IPrint3DWorkflowActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn Workflow(&self) -> ::windows_core::Result<super::super::Devices::Printers::Extensions::Print3DWorkflow>;
+pub trait IPrint3DWorkflowActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn Workflow(this: &Self::This) -> ::windows_core::Result<super::super::Devices::Printers::Extensions::Print3DWorkflow>;
 }
 #[cfg(feature = "Devices_Printers_Extensions")]
-impl ::windows_core::RuntimeName for IPrint3DWorkflowActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IPrint3DWorkflowActivatedEventArgs";
+impl ::windows_core::Iids for IPrint3DWorkflowActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "Devices_Printers_Extensions")]
-impl IPrint3DWorkflowActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IPrint3DWorkflowActivatedEventArgs_Impl, const OFFSET: isize>() -> IPrint3DWorkflowActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn Workflow<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IPrint3DWorkflowActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Workflow() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrint3DWorkflowActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IPrint3DWorkflowActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Workflow<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrint3DWorkflowActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Workflow(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IPrint3DWorkflowActivatedEventArgs, OFFSET>(),
-            Workflow: Workflow::<Identity, Impl, OFFSET>,
-        }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IPrint3DWorkflowActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+        IPrint3DWorkflowActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Workflow: Workflow::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Devices_Printers_Extensions\"`"]
 #[cfg(feature = "Devices_Printers_Extensions")]
-pub trait IPrintTaskSettingsActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn Configuration(&self) -> ::windows_core::Result<super::super::Devices::Printers::Extensions::PrintTaskConfiguration>;
+pub trait IPrintTaskSettingsActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn Configuration(this: &Self::This) -> ::windows_core::Result<super::super::Devices::Printers::Extensions::PrintTaskConfiguration>;
 }
 #[cfg(feature = "Devices_Printers_Extensions")]
-impl ::windows_core::RuntimeName for IPrintTaskSettingsActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs";
+impl ::windows_core::Iids for IPrintTaskSettingsActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "Devices_Printers_Extensions")]
-impl IPrintTaskSettingsActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IPrintTaskSettingsActivatedEventArgs_Impl, const OFFSET: isize>() -> IPrintTaskSettingsActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn Configuration<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IPrintTaskSettingsActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Configuration() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintTaskSettingsActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IPrintTaskSettingsActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Configuration<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintTaskSettingsActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Configuration(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IPrintTaskSettingsActivatedEventArgs, OFFSET>(),
+        IPrintTaskSettingsActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             Configuration: Configuration::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IPrintTaskSettingsActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
-pub trait IProtocolActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn Uri(&self) -> ::windows_core::Result<super::super::Foundation::Uri>;
+pub trait IProtocolActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn Uri(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::Uri>;
 }
 #[cfg(feature = "Foundation")]
-impl ::windows_core::RuntimeName for IProtocolActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IProtocolActivatedEventArgs";
+impl ::windows_core::Iids for IProtocolActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "Foundation")]
-impl IProtocolActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IProtocolActivatedEventArgs_Impl, const OFFSET: isize>() -> IProtocolActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn Uri<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IProtocolActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Uri() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProtocolActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IProtocolActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Uri<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProtocolActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Uri(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IProtocolActivatedEventArgs, OFFSET>(), Uri: Uri::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IProtocolActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+        IProtocolActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Uri: Uri::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
-pub trait IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_Impl: Sized + IActivatedEventArgs_Impl {
-    fn CallerPackageFamilyName(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
-    fn Data(&self) -> ::windows_core::Result<super::super::Foundation::Collections::ValueSet>;
+pub trait IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn CallerPackageFamilyName(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
+    fn Data(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::Collections::ValueSet>;
 }
 #[cfg(feature = "Foundation_Collections")]
-impl ::windows_core::RuntimeName for IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData";
+impl ::windows_core::Iids for IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "Foundation_Collections")]
-impl IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_Impl, const OFFSET: isize>() -> IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_Vtbl {
-        unsafe extern "system" fn CallerPackageFamilyName<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CallerPackageFamilyName() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn CallerPackageFamilyName<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CallerPackageFamilyName(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Data<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Data() {
+        unsafe extern "system" fn Data<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Data(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, OFFSET>(),
+        IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             CallerPackageFamilyName: CallerPackageFamilyName::<Identity, Impl, OFFSET>,
             Data: Data::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"System\"`"]
 #[cfg(feature = "System")]
-pub trait IProtocolForResultsActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn ProtocolForResultsOperation(&self) -> ::windows_core::Result<super::super::System::ProtocolForResultsOperation>;
+pub trait IProtocolForResultsActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn ProtocolForResultsOperation(this: &Self::This) -> ::windows_core::Result<super::super::System::ProtocolForResultsOperation>;
 }
 #[cfg(feature = "System")]
-impl ::windows_core::RuntimeName for IProtocolForResultsActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IProtocolForResultsActivatedEventArgs";
+impl ::windows_core::Iids for IProtocolForResultsActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "System")]
-impl IProtocolForResultsActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IProtocolForResultsActivatedEventArgs_Impl, const OFFSET: isize>() -> IProtocolForResultsActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn ProtocolForResultsOperation<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IProtocolForResultsActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ProtocolForResultsOperation() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProtocolForResultsActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IProtocolForResultsActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ProtocolForResultsOperation<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProtocolForResultsActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ProtocolForResultsOperation(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IProtocolForResultsActivatedEventArgs, OFFSET>(),
+        IProtocolForResultsActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             ProtocolForResultsOperation: ProtocolForResultsOperation::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IProtocolForResultsActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IRestrictedLaunchActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn SharedContext(&self) -> ::windows_core::Result<::windows_core::IInspectable>;
+pub trait IRestrictedLaunchActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn SharedContext(this: &Self::This) -> ::windows_core::Result<::windows_core::IInspectable>;
 }
-impl ::windows_core::RuntimeName for IRestrictedLaunchActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IRestrictedLaunchActivatedEventArgs";
+impl ::windows_core::Iids for IRestrictedLaunchActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl IRestrictedLaunchActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IRestrictedLaunchActivatedEventArgs_Impl, const OFFSET: isize>() -> IRestrictedLaunchActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn SharedContext<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IRestrictedLaunchActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.SharedContext() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRestrictedLaunchActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IRestrictedLaunchActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn SharedContext<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRestrictedLaunchActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::SharedContext(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IRestrictedLaunchActivatedEventArgs, OFFSET>(),
+        IRestrictedLaunchActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             SharedContext: SharedContext::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IRestrictedLaunchActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait ISearchActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn QueryText(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
-    fn Language(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
+pub trait ISearchActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn QueryText(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
+    fn Language(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
 }
-impl ::windows_core::RuntimeName for ISearchActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.ISearchActivatedEventArgs";
+impl ::windows_core::Iids for ISearchActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl ISearchActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISearchActivatedEventArgs_Impl, const OFFSET: isize>() -> ISearchActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn QueryText<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISearchActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.QueryText() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ISearchActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn QueryText<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::QueryText(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Language<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISearchActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Language() {
+        unsafe extern "system" fn Language<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Language(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, ISearchActivatedEventArgs, OFFSET>(),
+        ISearchActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             QueryText: QueryText::<Identity, Impl, OFFSET>,
             Language: Language::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ISearchActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Search\"`"]
 #[cfg(feature = "ApplicationModel_Search")]
-pub trait ISearchActivatedEventArgsWithLinguisticDetails_Impl: Sized {
-    fn LinguisticDetails(&self) -> ::windows_core::Result<super::Search::SearchPaneQueryLinguisticDetails>;
+pub trait ISearchActivatedEventArgsWithLinguisticDetails_Impl: ::windows_core::BaseImpl {
+    fn LinguisticDetails(this: &Self::This) -> ::windows_core::Result<super::Search::SearchPaneQueryLinguisticDetails>;
 }
 #[cfg(feature = "ApplicationModel_Search")]
-impl ::windows_core::RuntimeName for ISearchActivatedEventArgsWithLinguisticDetails {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.ISearchActivatedEventArgsWithLinguisticDetails";
+impl ::windows_core::Iids for ISearchActivatedEventArgsWithLinguisticDetails {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
 #[cfg(feature = "ApplicationModel_Search")]
-impl ISearchActivatedEventArgsWithLinguisticDetails_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISearchActivatedEventArgsWithLinguisticDetails_Impl, const OFFSET: isize>() -> ISearchActivatedEventArgsWithLinguisticDetails_Vtbl {
-        unsafe extern "system" fn LinguisticDetails<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISearchActivatedEventArgsWithLinguisticDetails_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.LinguisticDetails() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchActivatedEventArgsWithLinguisticDetails_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ISearchActivatedEventArgsWithLinguisticDetails {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn LinguisticDetails<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchActivatedEventArgsWithLinguisticDetails_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::LinguisticDetails(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, ISearchActivatedEventArgsWithLinguisticDetails, OFFSET>(),
+        ISearchActivatedEventArgsWithLinguisticDetails_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             LinguisticDetails: LinguisticDetails::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ISearchActivatedEventArgsWithLinguisticDetails as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_DataTransfer_ShareTarget\"`"]
 #[cfg(feature = "ApplicationModel_DataTransfer_ShareTarget")]
-pub trait IShareTargetActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn ShareOperation(&self) -> ::windows_core::Result<super::DataTransfer::ShareTarget::ShareOperation>;
+pub trait IShareTargetActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn ShareOperation(this: &Self::This) -> ::windows_core::Result<super::DataTransfer::ShareTarget::ShareOperation>;
 }
 #[cfg(feature = "ApplicationModel_DataTransfer_ShareTarget")]
-impl ::windows_core::RuntimeName for IShareTargetActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs";
+impl ::windows_core::Iids for IShareTargetActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "ApplicationModel_DataTransfer_ShareTarget")]
-impl IShareTargetActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IShareTargetActivatedEventArgs_Impl, const OFFSET: isize>() -> IShareTargetActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn ShareOperation<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IShareTargetActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ShareOperation() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IShareTargetActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IShareTargetActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ShareOperation<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IShareTargetActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ShareOperation(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IShareTargetActivatedEventArgs, OFFSET>(),
+        IShareTargetActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             ShareOperation: ShareOperation::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IShareTargetActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IStartupTaskActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn TaskId(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
+pub trait IStartupTaskActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn TaskId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
 }
-impl ::windows_core::RuntimeName for IStartupTaskActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IStartupTaskActivatedEventArgs";
+impl ::windows_core::Iids for IStartupTaskActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
-impl IStartupTaskActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IStartupTaskActivatedEventArgs_Impl, const OFFSET: isize>() -> IStartupTaskActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn TaskId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IStartupTaskActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.TaskId() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStartupTaskActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IStartupTaskActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn TaskId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStartupTaskActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::TaskId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IStartupTaskActivatedEventArgs, OFFSET>(), TaskId: TaskId::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IStartupTaskActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+        IStartupTaskActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, TaskId: TaskId::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
-pub trait IToastNotificationActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn Argument(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
-    fn UserInput(&self) -> ::windows_core::Result<super::super::Foundation::Collections::ValueSet>;
+pub trait IToastNotificationActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn Argument(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
+    fn UserInput(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::Collections::ValueSet>;
 }
 #[cfg(feature = "Foundation_Collections")]
-impl ::windows_core::RuntimeName for IToastNotificationActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IToastNotificationActivatedEventArgs";
+impl ::windows_core::Iids for IToastNotificationActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "Foundation_Collections")]
-impl IToastNotificationActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IToastNotificationActivatedEventArgs_Impl, const OFFSET: isize>() -> IToastNotificationActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn Argument<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IToastNotificationActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Argument() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IToastNotificationActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IToastNotificationActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Argument<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IToastNotificationActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Argument(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn UserInput<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IToastNotificationActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.UserInput() {
+        unsafe extern "system" fn UserInput<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IToastNotificationActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::UserInput(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IToastNotificationActivatedEventArgs, OFFSET>(),
+        IToastNotificationActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             Argument: Argument::<Identity, Impl, OFFSET>,
             UserInput: UserInput::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IToastNotificationActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_UserDataAccounts_Provider\"`"]
 #[cfg(feature = "ApplicationModel_UserDataAccounts_Provider")]
-pub trait IUserDataAccountProviderActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn Operation(&self) -> ::windows_core::Result<super::UserDataAccounts::Provider::IUserDataAccountProviderOperation>;
+pub trait IUserDataAccountProviderActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn Operation(this: &Self::This) -> ::windows_core::Result<super::UserDataAccounts::Provider::IUserDataAccountProviderOperation>;
 }
 #[cfg(feature = "ApplicationModel_UserDataAccounts_Provider")]
-impl ::windows_core::RuntimeName for IUserDataAccountProviderActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IUserDataAccountProviderActivatedEventArgs";
+impl ::windows_core::Iids for IUserDataAccountProviderActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "ApplicationModel_UserDataAccounts_Provider")]
-impl IUserDataAccountProviderActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUserDataAccountProviderActivatedEventArgs_Impl, const OFFSET: isize>() -> IUserDataAccountProviderActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn Operation<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUserDataAccountProviderActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Operation() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUserDataAccountProviderActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUserDataAccountProviderActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Operation<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUserDataAccountProviderActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Operation(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IUserDataAccountProviderActivatedEventArgs, OFFSET>(),
-            Operation: Operation::<Identity, Impl, OFFSET>,
-        }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUserDataAccountProviderActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+        IUserDataAccountProviderActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Operation: Operation::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"UI_ViewManagement\"`"]
 #[cfg(feature = "UI_ViewManagement")]
-pub trait IViewSwitcherProvider_Impl: Sized + IActivatedEventArgs_Impl {
-    fn ViewSwitcher(&self) -> ::windows_core::Result<super::super::UI::ViewManagement::ActivationViewSwitcher>;
+pub trait IViewSwitcherProvider_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn ViewSwitcher(this: &Self::This) -> ::windows_core::Result<super::super::UI::ViewManagement::ActivationViewSwitcher>;
 }
 #[cfg(feature = "UI_ViewManagement")]
-impl ::windows_core::RuntimeName for IViewSwitcherProvider {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IViewSwitcherProvider";
+impl ::windows_core::Iids for IViewSwitcherProvider {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "UI_ViewManagement")]
-impl IViewSwitcherProvider_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IViewSwitcherProvider_Impl, const OFFSET: isize>() -> IViewSwitcherProvider_Vtbl {
-        unsafe extern "system" fn ViewSwitcher<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IViewSwitcherProvider_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ViewSwitcher() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IViewSwitcherProvider_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IViewSwitcherProvider {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ViewSwitcher<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IViewSwitcherProvider_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ViewSwitcher(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IViewSwitcherProvider, OFFSET>(),
-            ViewSwitcher: ViewSwitcher::<Identity, Impl, OFFSET>,
-        }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IViewSwitcherProvider as ::windows_core::ComInterface>::IID
-    }
+        IViewSwitcherProvider_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ViewSwitcher: ViewSwitcher::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Media_SpeechRecognition\"`"]
 #[cfg(feature = "Media_SpeechRecognition")]
-pub trait IVoiceCommandActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn Result(&self) -> ::windows_core::Result<super::super::Media::SpeechRecognition::SpeechRecognitionResult>;
+pub trait IVoiceCommandActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn Result(this: &Self::This) -> ::windows_core::Result<super::super::Media::SpeechRecognition::SpeechRecognitionResult>;
 }
 #[cfg(feature = "Media_SpeechRecognition")]
-impl ::windows_core::RuntimeName for IVoiceCommandActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IVoiceCommandActivatedEventArgs";
+impl ::windows_core::Iids for IVoiceCommandActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "Media_SpeechRecognition")]
-impl IVoiceCommandActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IVoiceCommandActivatedEventArgs_Impl, const OFFSET: isize>() -> IVoiceCommandActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn Result<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IVoiceCommandActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Result() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVoiceCommandActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IVoiceCommandActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Result<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVoiceCommandActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Result(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IVoiceCommandActivatedEventArgs, OFFSET>(), Result: Result::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IVoiceCommandActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+        IVoiceCommandActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Result: Result::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Wallet\"`, `\"deprecated\"`"]
 #[cfg(all(feature = "ApplicationModel_Wallet", feature = "deprecated"))]
-pub trait IWalletActionActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn ItemId(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
-    fn ActionKind(&self) -> ::windows_core::Result<super::Wallet::WalletActionKind>;
-    fn ActionId(&self) -> ::windows_core::Result<::windows_core::HSTRING>;
+pub trait IWalletActionActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn ItemId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
+    fn ActionKind(this: &Self::This) -> ::windows_core::Result<super::Wallet::WalletActionKind>;
+    fn ActionId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
 }
 #[cfg(all(feature = "ApplicationModel_Wallet", feature = "deprecated"))]
-impl ::windows_core::RuntimeName for IWalletActionActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs";
+impl ::windows_core::Iids for IWalletActionActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(all(feature = "ApplicationModel_Wallet", feature = "deprecated"))]
-impl IWalletActionActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWalletActionActivatedEventArgs_Impl, const OFFSET: isize>() -> IWalletActionActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn ItemId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWalletActionActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ItemId() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWalletActionActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IWalletActionActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ItemId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWalletActionActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ItemId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ActionKind<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWalletActionActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut super::Wallet::WalletActionKind) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ActionKind() {
+        unsafe extern "system" fn ActionKind<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWalletActionActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut super::Wallet::WalletActionKind) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ActionKind(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ActionId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWalletActionActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ActionId() {
+        unsafe extern "system" fn ActionId<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWalletActionActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ActionId(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IWalletActionActivatedEventArgs, OFFSET>(),
+        IWalletActionActivatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             ItemId: ItemId::<Identity, Impl, OFFSET>,
             ActionKind: ActionKind::<Identity, Impl, OFFSET>,
             ActionId: ActionId::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IWalletActionActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Security_Authentication_Web_Provider\"`"]
 #[cfg(feature = "Security_Authentication_Web_Provider")]
-pub trait IWebAccountProviderActivatedEventArgs_Impl: Sized + IActivatedEventArgs_Impl {
-    fn Operation(&self) -> ::windows_core::Result<super::super::Security::Authentication::Web::Provider::IWebAccountProviderOperation>;
+pub trait IWebAccountProviderActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
+    fn Operation(this: &Self::This) -> ::windows_core::Result<super::super::Security::Authentication::Web::Provider::IWebAccountProviderOperation>;
 }
 #[cfg(feature = "Security_Authentication_Web_Provider")]
-impl ::windows_core::RuntimeName for IWebAccountProviderActivatedEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IWebAccountProviderActivatedEventArgs";
+impl ::windows_core::Iids for IWebAccountProviderActivatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(feature = "Security_Authentication_Web_Provider")]
-impl IWebAccountProviderActivatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebAccountProviderActivatedEventArgs_Impl, const OFFSET: isize>() -> IWebAccountProviderActivatedEventArgs_Vtbl {
-        unsafe extern "system" fn Operation<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebAccountProviderActivatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Operation() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebAccountProviderActivatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IWebAccountProviderActivatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Operation<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebAccountProviderActivatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Operation(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IWebAccountProviderActivatedEventArgs, OFFSET>(),
-            Operation: Operation::<Identity, Impl, OFFSET>,
-        }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IWebAccountProviderActivatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+        IWebAccountProviderActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Operation: Operation::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Security_Authentication_Web\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Security_Authentication_Web"))]
-pub trait IWebAuthenticationBrokerContinuationEventArgs_Impl: Sized + IActivatedEventArgs_Impl + IContinuationActivatedEventArgs_Impl {
-    fn WebAuthenticationResult(&self) -> ::windows_core::Result<super::super::Security::Authentication::Web::WebAuthenticationResult>;
+pub trait IWebAuthenticationBrokerContinuationEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + IContinuationActivatedEventArgs_Impl {
+    fn WebAuthenticationResult(this: &Self::This) -> ::windows_core::Result<super::super::Security::Authentication::Web::WebAuthenticationResult>;
 }
 #[cfg(all(feature = "Foundation_Collections", feature = "Security_Authentication_Web"))]
-impl ::windows_core::RuntimeName for IWebAuthenticationBrokerContinuationEventArgs {
-    const NAME: &'static str = "Windows.ApplicationModel.Activation.IWebAuthenticationBrokerContinuationEventArgs";
+impl ::windows_core::Iids for IWebAuthenticationBrokerContinuationEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
+    const REQUIRED_IIDS: &'static [::windows_core::GUID] = &[<IActivatedEventArgs as ::windows_core::ComInterface>::IID, <IContinuationActivatedEventArgs as ::windows_core::ComInterface>::IID];
 }
 #[cfg(all(feature = "Foundation_Collections", feature = "Security_Authentication_Web"))]
-impl IWebAuthenticationBrokerContinuationEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebAuthenticationBrokerContinuationEventArgs_Impl, const OFFSET: isize>() -> IWebAuthenticationBrokerContinuationEventArgs_Vtbl {
-        unsafe extern "system" fn WebAuthenticationResult<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebAuthenticationBrokerContinuationEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.WebAuthenticationResult() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebAuthenticationBrokerContinuationEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IWebAuthenticationBrokerContinuationEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn WebAuthenticationResult<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebAuthenticationBrokerContinuationEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::WebAuthenticationResult(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IWebAuthenticationBrokerContinuationEventArgs, OFFSET>(),
+        IWebAuthenticationBrokerContinuationEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             WebAuthenticationResult: WebAuthenticationResult::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IWebAuthenticationBrokerContinuationEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

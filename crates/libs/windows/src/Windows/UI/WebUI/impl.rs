@@ -1,93 +1,79 @@
-pub trait IActivatedEventArgsDeferral_Impl: Sized {
-    fn ActivatedOperation(&self) -> ::windows_core::Result<ActivatedOperation>;
+pub trait IActivatedEventArgsDeferral_Impl: ::windows_core::BaseImpl {
+    fn ActivatedOperation(this: &Self::This) -> ::windows_core::Result<ActivatedOperation>;
 }
-impl ::windows_core::RuntimeName for IActivatedEventArgsDeferral {
-    const NAME: &'static str = "Windows.UI.WebUI.IActivatedEventArgsDeferral";
+impl ::windows_core::Iids for IActivatedEventArgsDeferral {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
-impl IActivatedEventArgsDeferral_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IActivatedEventArgsDeferral_Impl, const OFFSET: isize>() -> IActivatedEventArgsDeferral_Vtbl {
-        unsafe extern "system" fn ActivatedOperation<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IActivatedEventArgsDeferral_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ActivatedOperation() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActivatedEventArgsDeferral_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IActivatedEventArgsDeferral {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ActivatedOperation<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActivatedEventArgsDeferral_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ActivatedOperation(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IActivatedEventArgsDeferral, OFFSET>(),
+        IActivatedEventArgsDeferral_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             ActivatedOperation: ActivatedOperation::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IActivatedEventArgsDeferral as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IWebUIBackgroundTaskInstance_Impl: Sized {
-    fn Succeeded(&self) -> ::windows_core::Result<bool>;
-    fn SetSucceeded(&self, succeeded: bool) -> ::windows_core::Result<()>;
+pub trait IWebUIBackgroundTaskInstance_Impl: ::windows_core::BaseImpl {
+    fn Succeeded(this: &Self::This) -> ::windows_core::Result<bool>;
+    fn SetSucceeded(this: &Self::This, succeeded: bool) -> ::windows_core::Result<()>;
 }
-impl ::windows_core::RuntimeName for IWebUIBackgroundTaskInstance {
-    const NAME: &'static str = "Windows.UI.WebUI.IWebUIBackgroundTaskInstance";
+impl ::windows_core::Iids for IWebUIBackgroundTaskInstance {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
-impl IWebUIBackgroundTaskInstance_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebUIBackgroundTaskInstance_Impl, const OFFSET: isize>() -> IWebUIBackgroundTaskInstance_Vtbl {
-        unsafe extern "system" fn Succeeded<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebUIBackgroundTaskInstance_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut bool) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Succeeded() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebUIBackgroundTaskInstance_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IWebUIBackgroundTaskInstance {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Succeeded<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebUIBackgroundTaskInstance_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut bool) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Succeeded(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetSucceeded<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebUIBackgroundTaskInstance_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, succeeded: bool) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetSucceeded(succeeded).into()
+        unsafe extern "system" fn SetSucceeded<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebUIBackgroundTaskInstance_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, succeeded: bool) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetSucceeded(this, succeeded).into())
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IWebUIBackgroundTaskInstance, OFFSET>(),
+        IWebUIBackgroundTaskInstance_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             Succeeded: Succeeded::<Identity, Impl, OFFSET>,
             SetSucceeded: SetSucceeded::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IWebUIBackgroundTaskInstance as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IWebUINavigatedEventArgs_Impl: Sized {
-    fn NavigatedOperation(&self) -> ::windows_core::Result<WebUINavigatedOperation>;
+pub trait IWebUINavigatedEventArgs_Impl: ::windows_core::BaseImpl {
+    fn NavigatedOperation(this: &Self::This) -> ::windows_core::Result<WebUINavigatedOperation>;
 }
-impl ::windows_core::RuntimeName for IWebUINavigatedEventArgs {
-    const NAME: &'static str = "Windows.UI.WebUI.IWebUINavigatedEventArgs";
+impl ::windows_core::Iids for IWebUINavigatedEventArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
-impl IWebUINavigatedEventArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebUINavigatedEventArgs_Impl, const OFFSET: isize>() -> IWebUINavigatedEventArgs_Vtbl {
-        unsafe extern "system" fn NavigatedOperation<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebUINavigatedEventArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.NavigatedOperation() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebUINavigatedEventArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IWebUINavigatedEventArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn NavigatedOperation<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebUINavigatedEventArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::NavigatedOperation(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IWebUINavigatedEventArgs, OFFSET>(),
+        IWebUINavigatedEventArgs_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             NavigatedOperation: NavigatedOperation::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IWebUINavigatedEventArgs as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

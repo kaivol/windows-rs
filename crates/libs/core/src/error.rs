@@ -9,13 +9,19 @@ pub struct Error {
 
 impl Error {
     /// An error object without any failure information.
-    pub const OK: Self = Self { code: HRESULT(0), info: None };
+    pub const OK: Self = Self {
+        code: HRESULT(0),
+        info: None,
+    };
 
     /// This creates a new WinRT error object, capturing the stack and other information about the
     /// point of failure.
     pub fn new(code: HRESULT, message: HSTRING) -> Self {
         unsafe {
-            if let Some(function) = crate::imp::delay_load::<RoOriginateError>(s!("combase.dll"), s!("RoOriginateError")) {
+            if let Some(function) = crate::imp::delay_load::<RoOriginateError>(
+                s!("combase.dll"),
+                s!("RoOriginateError"),
+            ) {
                 function(code, std::mem::transmute_copy(&message));
             }
             let info = GetErrorInfo().and_then(|e| e.cast()).ok();
@@ -24,7 +30,12 @@ impl Error {
     }
 
     pub fn from_win32() -> Self {
-        unsafe { Self { code: HRESULT::from_win32(crate::imp::GetLastError()), info: None } }
+        unsafe {
+            Self {
+                code: HRESULT::from_win32(crate::imp::GetLastError()),
+                info: None,
+            }
+        }
     }
 
     /// The error code describing the error.
@@ -46,12 +57,22 @@ impl Error {
             let mut code = HRESULT(0);
 
             unsafe {
-                let _ = info.GetErrorDetails(&mut fallback, &mut code, &mut message, &mut BSTR::default());
+                let _ = info.GetErrorDetails(
+                    &mut fallback,
+                    &mut code,
+                    &mut message,
+                    &mut BSTR::default(),
+                );
             }
 
             if self.code == code {
-                let message = if !message.is_empty() { message } else { fallback };
-                return HSTRING::from_wide(crate::imp::wide_trim_end(message.as_wide())).unwrap_or_default();
+                let message = if !message.is_empty() {
+                    message
+                } else {
+                    fallback
+                };
+                return HSTRING::from_wide(crate::imp::wide_trim_end(message.as_wide()))
+                    .unwrap_or_default();
             }
         }
 
@@ -80,19 +101,28 @@ impl std::convert::From<Error> for std::io::Error {
 
 impl std::convert::From<std::string::FromUtf16Error> for Error {
     fn from(_: std::string::FromUtf16Error) -> Self {
-        Self { code: HRESULT::from_win32(crate::imp::ERROR_NO_UNICODE_TRANSLATION), info: None }
+        Self {
+            code: HRESULT::from_win32(crate::imp::ERROR_NO_UNICODE_TRANSLATION),
+            info: None,
+        }
     }
 }
 
 impl std::convert::From<std::string::FromUtf8Error> for Error {
     fn from(_: std::string::FromUtf8Error) -> Self {
-        Self { code: HRESULT::from_win32(crate::imp::ERROR_NO_UNICODE_TRANSLATION), info: None }
+        Self {
+            code: HRESULT::from_win32(crate::imp::ERROR_NO_UNICODE_TRANSLATION),
+            info: None,
+        }
     }
 }
 
 impl std::convert::From<std::num::TryFromIntError> for Error {
     fn from(_: std::num::TryFromIntError) -> Self {
-        Self { code: HRESULT(crate::imp::E_INVALIDARG), info: None }
+        Self {
+            code: HRESULT(crate::imp::E_INVALIDARG),
+            info: None,
+        }
     }
 }
 
@@ -108,7 +138,8 @@ impl std::convert::From<std::convert::Infallible> for Error {
 
 impl std::convert::From<HRESULT> for Error {
     fn from(code: HRESULT) -> Self {
-        let info: Option<crate::imp::IRestrictedErrorInfo> = GetErrorInfo().and_then(|e| e.cast()).ok();
+        let info: Option<crate::imp::IRestrictedErrorInfo> =
+            GetErrorInfo().and_then(|e| e.cast()).ok();
 
         if let Some(info) = info {
             // If it does (and therefore running on a recent version of Windows)
@@ -120,12 +151,18 @@ impl std::convert::From<HRESULT> for Error {
                 }
             }
 
-            return Self { code, info: Some(info) };
+            return Self {
+                code,
+                info: Some(info),
+            };
         }
 
         if let Ok(info) = GetErrorInfo() {
             let message = unsafe { info.GetDescription().unwrap_or_default() };
-            Self::new(code, HSTRING::from_wide(message.as_wide()).unwrap_or_default())
+            Self::new(
+                code,
+                HSTRING::from_wide(message.as_wide()).unwrap_or_default(),
+            )
         } else {
             Self { code, info: None }
         }
@@ -135,7 +172,10 @@ impl std::convert::From<HRESULT> for Error {
 impl std::fmt::Debug for Error {
     fn fmt(&self, fmt: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let mut debug = fmt.debug_struct("Error");
-        debug.field("code", &self.code).field("message", &self.message()).finish()
+        debug
+            .field("code", &self.code)
+            .field("message", &self.message())
+            .finish()
     }
 }
 

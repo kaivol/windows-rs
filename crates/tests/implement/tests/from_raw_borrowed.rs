@@ -4,34 +4,38 @@ use windows::{core::*, Win32::System::Com::*, Win32::UI::Shell::*};
 
 #[interface("a563f463-3d23-42cd-a2b5-6d21ee898aae")]
 unsafe trait IBorrowed: IUnknown {
-    unsafe fn Call(&self) -> u32;
+    unsafe fn Call(this: &Self::This) -> u32;
 }
 
 #[implement(IServiceProvider, IBorrowed, IProfferService)]
 struct Borrowed(u32);
 
 impl IBorrowed_Impl for Borrowed {
-    unsafe fn Call(&self) -> u32 {
-        self.0
+    unsafe fn Call(this: &Self::This) -> u32 {
+        this.0
     }
 }
 
 impl IServiceProvider_Impl for Borrowed {
     fn QueryService(
-        &self,
+        this: &Self::This,
         _service: *const GUID,
         iid: *const GUID,
         object: *mut *mut std::ffi::c_void,
     ) -> Result<()> {
         unsafe {
-            let unknown: IUnknown = self.cast()?;
+            let unknown: IUnknown = this.to_interface();
             unknown.query(iid, object).ok()
         }
     }
 }
 
 impl IProfferService_Impl for Borrowed {
-    fn ProfferService(&self, _: *const GUID, provider: Option<&IServiceProvider>) -> Result<u32> {
+    fn ProfferService(
+        _this: &Self::This,
+        _: *const GUID,
+        provider: Option<&IServiceProvider>,
+    ) -> Result<u32> {
         unsafe {
             if let Some(provider) = provider {
                 Ok(provider.cast::<IBorrowed>()?.Call())
@@ -41,7 +45,7 @@ impl IProfferService_Impl for Borrowed {
         }
     }
 
-    fn RevokeService(&self, _: u32) -> Result<()> {
+    fn RevokeService(_this: &Self::This, _: u32) -> Result<()> {
         Ok(())
     }
 }
@@ -49,10 +53,10 @@ impl IProfferService_Impl for Borrowed {
 #[test]
 fn test() -> Result<()> {
     unsafe {
-        let one_two_three: IBorrowed = Borrowed(123).into();
+        let one_two_three: IBorrowed = Borrowed(123).into_interface();
         assert_eq!(one_two_three.Call(), 123);
 
-        let four_five_six: IBorrowed = Borrowed(456).into();
+        let four_five_six: IBorrowed = Borrowed(456).into_interface();
         assert_eq!(four_five_six.Call(), 456);
 
         let service = one_two_three.cast::<IProfferService>()?;

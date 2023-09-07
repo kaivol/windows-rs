@@ -20,7 +20,11 @@ impl<T: ComInterface> Default for Event<T> {
 impl<T: ComInterface> Event<T> {
     /// Creates a new, empty `Event<T>`.
     pub fn new() -> Self {
-        Self { delegates: Array::new(), swap: Mutex::default(), change: Mutex::default() }
+        Self {
+            delegates: Array::new(),
+            swap: Mutex::default(),
+            change: Mutex::default(),
+        }
     }
 
     /// Registers a delegate with the event object.
@@ -99,7 +103,12 @@ impl<T: ComInterface> Event<T> {
         for delegate in lock_free_calls.as_slice() {
             if let Err(error) = delegate.call(&mut callback) {
                 const RPC_E_SERVER_UNAVAILABLE: HRESULT = HRESULT(-2147023174); // HRESULT_FROM_WIN32(RPC_S_SERVER_UNAVAILABLE)
-                if matches!(error.code(), crate::imp::RPC_E_DISCONNECTED | crate::imp::JSCRIPT_E_CANTEXECUTE | RPC_E_SERVER_UNAVAILABLE) {
+                if matches!(
+                    error.code(),
+                    crate::imp::RPC_E_DISCONNECTED
+                        | crate::imp::JSCRIPT_E_CANTEXECUTE
+                        | RPC_E_SERVER_UNAVAILABLE
+                ) {
                     self.remove(delegate.to_token())?;
                 }
             }
@@ -124,12 +133,20 @@ impl<T: ComInterface> Default for Array<T> {
 impl<T: ComInterface> Array<T> {
     /// Creates a new, empty `Array<T>` with no capacity.
     fn new() -> Self {
-        Self { buffer: std::ptr::null_mut(), len: 0, _phantom: std::marker::PhantomData }
+        Self {
+            buffer: std::ptr::null_mut(),
+            len: 0,
+            _phantom: std::marker::PhantomData,
+        }
     }
 
     /// Creates a new, empty `Array<T>` with the specified capacity.
     fn with_capacity(capacity: usize) -> Result<Self> {
-        Ok(Self { buffer: Buffer::new(capacity)?, len: 0, _phantom: std::marker::PhantomData })
+        Ok(Self {
+            buffer: Buffer::new(capacity)?,
+            len: 0,
+            _phantom: std::marker::PhantomData,
+        })
     }
 
     /// Swaps the contents of two `Array<T>` objects.
@@ -181,7 +198,11 @@ impl<T: ComInterface> Clone for Array<T> {
         if !self.is_empty() {
             unsafe { (*self.buffer).0.add_ref() };
         }
-        Self { buffer: self.buffer, len: self.len, _phantom: std::marker::PhantomData }
+        Self {
+            buffer: self.buffer,
+            len: self.len,
+            _phantom: std::marker::PhantomData,
+        }
     }
 }
 
@@ -248,8 +269,12 @@ impl<T: ComInterface> Delegate<T> {
     fn to_token(&self) -> i64 {
         unsafe {
             match self {
-                Self::Direct(delegate) => crate::imp::EncodePointer(std::mem::transmute_copy(delegate)) as i64,
-                Self::Indirect(delegate) => crate::imp::EncodePointer(std::mem::transmute_copy(delegate)) as i64,
+                Self::Direct(delegate) => {
+                    crate::imp::EncodePointer(std::mem::transmute_copy(delegate)) as i64
+                }
+                Self::Indirect(delegate) => {
+                    crate::imp::EncodePointer(std::mem::transmute_copy(delegate)) as i64
+                }
             }
         }
     }

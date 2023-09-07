@@ -1,12 +1,8 @@
-pub trait IRemoteSystemFilter_Impl: Sized {}
-impl ::windows_core::RuntimeName for IRemoteSystemFilter {
-    const NAME: &'static str = "Windows.System.RemoteSystems.IRemoteSystemFilter";
+pub trait IRemoteSystemFilter_Impl: ::windows_core::BaseImpl {}
+impl ::windows_core::Iids for IRemoteSystemFilter {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
-impl IRemoteSystemFilter_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IRemoteSystemFilter_Impl, const OFFSET: isize>() -> IRemoteSystemFilter_Vtbl {
-        Self { base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IRemoteSystemFilter, OFFSET>() }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IRemoteSystemFilter as ::windows_core::ComInterface>::IID
-    }
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRemoteSystemFilter_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IRemoteSystemFilter {
+    const VTABLE: Self::Vtable = { IRemoteSystemFilter_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

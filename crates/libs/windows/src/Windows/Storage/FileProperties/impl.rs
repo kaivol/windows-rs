@@ -1,61 +1,53 @@
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
-pub trait IStorageItemExtraProperties_Impl: Sized {
-    fn RetrievePropertiesAsync(&self, propertiestoretrieve: ::core::option::Option<&super::super::Foundation::Collections::IIterable<::windows_core::HSTRING>>) -> ::windows_core::Result<super::super::Foundation::IAsyncOperation<super::super::Foundation::Collections::IMap<::windows_core::HSTRING, ::windows_core::IInspectable>>>;
-    fn SavePropertiesAsync(&self, propertiestosave: ::core::option::Option<&super::super::Foundation::Collections::IIterable<super::super::Foundation::Collections::IKeyValuePair<::windows_core::HSTRING, ::windows_core::IInspectable>>>) -> ::windows_core::Result<super::super::Foundation::IAsyncAction>;
-    fn SavePropertiesAsyncOverloadDefault(&self) -> ::windows_core::Result<super::super::Foundation::IAsyncAction>;
+pub trait IStorageItemExtraProperties_Impl: ::windows_core::BaseImpl {
+    fn RetrievePropertiesAsync(this: &Self::This, propertiestoretrieve: ::core::option::Option<&super::super::Foundation::Collections::IIterable<::windows_core::HSTRING>>) -> ::windows_core::Result<super::super::Foundation::IAsyncOperation<super::super::Foundation::Collections::IMap<::windows_core::HSTRING, ::windows_core::IInspectable>>>;
+    fn SavePropertiesAsync(this: &Self::This, propertiestosave: ::core::option::Option<&super::super::Foundation::Collections::IIterable<super::super::Foundation::Collections::IKeyValuePair<::windows_core::HSTRING, ::windows_core::IInspectable>>>) -> ::windows_core::Result<super::super::Foundation::IAsyncAction>;
+    fn SavePropertiesAsyncOverloadDefault(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::IAsyncAction>;
 }
 #[cfg(feature = "Foundation_Collections")]
-impl ::windows_core::RuntimeName for IStorageItemExtraProperties {
-    const NAME: &'static str = "Windows.Storage.FileProperties.IStorageItemExtraProperties";
+impl ::windows_core::Iids for IStorageItemExtraProperties {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
 #[cfg(feature = "Foundation_Collections")]
-impl IStorageItemExtraProperties_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IStorageItemExtraProperties_Impl, const OFFSET: isize>() -> IStorageItemExtraProperties_Vtbl {
-        unsafe extern "system" fn RetrievePropertiesAsync<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IStorageItemExtraProperties_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, propertiestoretrieve: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RetrievePropertiesAsync(::windows_core::from_raw_borrowed(&propertiestoretrieve)) {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageItemExtraProperties_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IStorageItemExtraProperties {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn RetrievePropertiesAsync<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageItemExtraProperties_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, propertiestoretrieve: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RetrievePropertiesAsync(this, ::windows_core::from_raw_borrowed(&propertiestoretrieve)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SavePropertiesAsync<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IStorageItemExtraProperties_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, propertiestosave: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.SavePropertiesAsync(::windows_core::from_raw_borrowed(&propertiestosave)) {
+        unsafe extern "system" fn SavePropertiesAsync<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageItemExtraProperties_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, propertiestosave: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::SavePropertiesAsync(this, ::windows_core::from_raw_borrowed(&propertiestosave)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SavePropertiesAsyncOverloadDefault<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IStorageItemExtraProperties_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.SavePropertiesAsyncOverloadDefault() {
+        unsafe extern "system" fn SavePropertiesAsyncOverloadDefault<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageItemExtraProperties_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::SavePropertiesAsyncOverloadDefault(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IStorageItemExtraProperties, OFFSET>(),
+        IStorageItemExtraProperties_Vtbl {
+            base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             RetrievePropertiesAsync: RetrievePropertiesAsync::<Identity, Impl, OFFSET>,
             SavePropertiesAsync: SavePropertiesAsync::<Identity, Impl, OFFSET>,
             SavePropertiesAsyncOverloadDefault: SavePropertiesAsyncOverloadDefault::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IStorageItemExtraProperties as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

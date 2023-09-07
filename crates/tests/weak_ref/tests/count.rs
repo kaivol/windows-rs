@@ -1,6 +1,8 @@
-use windows::core::imp::WeakRefCount;
-use windows::core::ComInterface;
-use windows::Win32::System::WinRT::IWeakReferenceSource;
+use std::mem;
+use std::mem::ManuallyDrop;
+use std::ptr::NonNull;
+use windows::core::WeakRefCount;
+use windows::core::{IUnknown, Interface};
 
 #[test]
 fn test() {
@@ -12,9 +14,12 @@ fn test() {
     assert_eq!(count.release(), 1);
 
     // Query implies add_ref
-    unsafe {
-        count.query(&IWeakReferenceSource::IID, core::ptr::null_mut());
-    }
+    let weak_reference_source = unsafe {
+        count.query(ManuallyDrop::new(IUnknown::from_raw(
+            NonNull::dangling().as_ptr(),
+        )))
+    };
+    mem::forget(weak_reference_source);
 
     // Ref count is now owned by tearoff
     assert_eq!(count.add_ref(), 3);

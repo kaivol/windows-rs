@@ -4,7 +4,7 @@ use windows::{core::*, Foundation::*, Win32::Foundation::*, Win32::System::WinRT
 struct Stringable;
 
 impl IStringable_Impl for Stringable {
-    fn ToString(&self) -> Result<HSTRING> {
+    fn ToString(_this: &Self::This) -> Result<HSTRING> {
         todo!()
     }
 }
@@ -17,7 +17,7 @@ fn test() {
         let delegate: EventHandler<i32> = EventHandler::<i32>::new(move |_, _| todo!());
         test_query(&delegate);
 
-        let interface: IStringable = Stringable.into();
+        let interface: IStringable = Stringable.into_interface();
         test_query(&interface);
 
         let source: IWeakReferenceSource = interface.cast().unwrap();

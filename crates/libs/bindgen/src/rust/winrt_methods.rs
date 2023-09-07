@@ -173,8 +173,8 @@ fn gen_winrt_abi_args(writer: &Writer, params: &[SignatureParam]) -> TokenStream
     tokens
 }
 
-pub fn gen_upcall(writer: &Writer, sig: &Signature, inner: TokenStream) -> TokenStream {
-    let invoke_args = sig.params.iter().map(|param| gen_winrt_invoke_arg(writer, param));
+pub fn gen_upcall(writer: &Writer, sig: &Signature, inner: TokenStream, this: Option<TokenStream>) -> TokenStream {
+    let invoke_args = this.into_iter().chain(sig.params.iter().map(|param| gen_winrt_invoke_arg(writer, param)));
 
     match &sig.return_type {
         Type::Void => quote! {

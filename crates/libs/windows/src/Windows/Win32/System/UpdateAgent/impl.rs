@@ -1,68 +1,56 @@
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IAutomaticUpdates_Impl: Sized + super::Com::IDispatch_Impl {
-    fn DetectNow(&self) -> ::windows_core::Result<()>;
-    fn Pause(&self) -> ::windows_core::Result<()>;
-    fn Resume(&self) -> ::windows_core::Result<()>;
-    fn ShowSettingsDialog(&self) -> ::windows_core::Result<()>;
-    fn Settings(&self) -> ::windows_core::Result<IAutomaticUpdatesSettings>;
-    fn ServiceEnabled(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn EnableService(&self) -> ::windows_core::Result<()>;
+pub trait IAutomaticUpdates_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn DetectNow(this: &Self::This) -> ::windows_core::Result<()>;
+    fn Pause(this: &Self::This) -> ::windows_core::Result<()>;
+    fn Resume(this: &Self::This) -> ::windows_core::Result<()>;
+    fn ShowSettingsDialog(this: &Self::This) -> ::windows_core::Result<()>;
+    fn Settings(this: &Self::This) -> ::windows_core::Result<IAutomaticUpdatesSettings>;
+    fn ServiceEnabled(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn EnableService(this: &Self::This) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IAutomaticUpdates {}
+impl ::windows_core::Iids for IAutomaticUpdates {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IAutomaticUpdates_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdates_Impl, const OFFSET: isize>() -> IAutomaticUpdates_Vtbl {
-        unsafe extern "system" fn DetectNow<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdates_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.DetectNow().into()
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdates_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IAutomaticUpdates {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn DetectNow<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdates_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::DetectNow(this).into())
         }
-        unsafe extern "system" fn Pause<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdates_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.Pause().into()
+        unsafe extern "system" fn Pause<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdates_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::Pause(this).into())
         }
-        unsafe extern "system" fn Resume<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdates_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.Resume().into()
+        unsafe extern "system" fn Resume<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdates_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::Resume(this).into())
         }
-        unsafe extern "system" fn ShowSettingsDialog<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdates_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.ShowSettingsDialog().into()
+        unsafe extern "system" fn ShowSettingsDialog<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdates_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::ShowSettingsDialog(this).into())
         }
-        unsafe extern "system" fn Settings<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdates_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Settings() {
+        unsafe extern "system" fn Settings<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdates_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Settings(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ServiceEnabled<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdates_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ServiceEnabled() {
+        unsafe extern "system" fn ServiceEnabled<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdates_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ServiceEnabled(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn EnableService<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdates_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.EnableService().into()
+        unsafe extern "system" fn EnableService<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdates_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::EnableService(this).into())
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IAutomaticUpdates_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             DetectNow: DetectNow::<Identity, Impl, OFFSET>,
             Pause: Pause::<Identity, Impl, OFFSET>,
             Resume: Resume::<Identity, Impl, OFFSET>,
@@ -71,182 +59,156 @@ impl IAutomaticUpdates_Vtbl {
             ServiceEnabled: ServiceEnabled::<Identity, Impl, OFFSET>,
             EnableService: EnableService::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IAutomaticUpdates as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IAutomaticUpdates2_Impl: Sized + IAutomaticUpdates_Impl {
-    fn Results(&self) -> ::windows_core::Result<IAutomaticUpdatesResults>;
+pub trait IAutomaticUpdates2_Impl: ::windows_core::BaseImpl + IAutomaticUpdates_Impl {
+    fn Results(this: &Self::This) -> ::windows_core::Result<IAutomaticUpdatesResults>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IAutomaticUpdates2 {}
+impl ::windows_core::Iids for IAutomaticUpdates2 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IAutomaticUpdates);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IAutomaticUpdates2_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdates2_Impl, const OFFSET: isize>() -> IAutomaticUpdates2_Vtbl {
-        unsafe extern "system" fn Results<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdates2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Results() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdates2_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IAutomaticUpdates2 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Results<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdates2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Results(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: IAutomaticUpdates_Vtbl::new::<Identity, Impl, OFFSET>(), Results: Results::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IAutomaticUpdates2 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IAutomaticUpdates as ::windows_core::ComInterface>::IID
-    }
+        IAutomaticUpdates2_Vtbl { base__: <IAutomaticUpdates as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Results: Results::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IAutomaticUpdatesResults_Impl: Sized + super::Com::IDispatch_Impl {
-    fn LastSearchSuccessDate(&self) -> ::windows_core::Result<super::Variant::VARIANT>;
-    fn LastInstallationSuccessDate(&self) -> ::windows_core::Result<super::Variant::VARIANT>;
+pub trait IAutomaticUpdatesResults_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn LastSearchSuccessDate(this: &Self::This) -> ::windows_core::Result<super::Variant::VARIANT>;
+    fn LastInstallationSuccessDate(this: &Self::This) -> ::windows_core::Result<super::Variant::VARIANT>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IAutomaticUpdatesResults {}
+impl ::windows_core::Iids for IAutomaticUpdatesResults {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IAutomaticUpdatesResults_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesResults_Impl, const OFFSET: isize>() -> IAutomaticUpdatesResults_Vtbl {
-        unsafe extern "system" fn LastSearchSuccessDate<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesResults_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::Variant::VARIANT) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.LastSearchSuccessDate() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesResults_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IAutomaticUpdatesResults {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn LastSearchSuccessDate<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesResults_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::Variant::VARIANT) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::LastSearchSuccessDate(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn LastInstallationSuccessDate<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesResults_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::Variant::VARIANT) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.LastInstallationSuccessDate() {
+        unsafe extern "system" fn LastInstallationSuccessDate<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesResults_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::Variant::VARIANT) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::LastInstallationSuccessDate(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IAutomaticUpdatesResults_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             LastSearchSuccessDate: LastSearchSuccessDate::<Identity, Impl, OFFSET>,
             LastInstallationSuccessDate: LastInstallationSuccessDate::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IAutomaticUpdatesResults as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IAutomaticUpdatesSettings_Impl: Sized + super::Com::IDispatch_Impl {
-    fn NotificationLevel(&self) -> ::windows_core::Result<AutomaticUpdatesNotificationLevel>;
-    fn SetNotificationLevel(&self, value: AutomaticUpdatesNotificationLevel) -> ::windows_core::Result<()>;
-    fn ReadOnly(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn Required(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn ScheduledInstallationDay(&self) -> ::windows_core::Result<AutomaticUpdatesScheduledInstallationDay>;
-    fn SetScheduledInstallationDay(&self, value: AutomaticUpdatesScheduledInstallationDay) -> ::windows_core::Result<()>;
-    fn ScheduledInstallationTime(&self) -> ::windows_core::Result<i32>;
-    fn SetScheduledInstallationTime(&self, value: i32) -> ::windows_core::Result<()>;
-    fn Refresh(&self) -> ::windows_core::Result<()>;
-    fn Save(&self) -> ::windows_core::Result<()>;
+pub trait IAutomaticUpdatesSettings_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn NotificationLevel(this: &Self::This) -> ::windows_core::Result<AutomaticUpdatesNotificationLevel>;
+    fn SetNotificationLevel(this: &Self::This, value: AutomaticUpdatesNotificationLevel) -> ::windows_core::Result<()>;
+    fn ReadOnly(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn Required(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn ScheduledInstallationDay(this: &Self::This) -> ::windows_core::Result<AutomaticUpdatesScheduledInstallationDay>;
+    fn SetScheduledInstallationDay(this: &Self::This, value: AutomaticUpdatesScheduledInstallationDay) -> ::windows_core::Result<()>;
+    fn ScheduledInstallationTime(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn SetScheduledInstallationTime(this: &Self::This, value: i32) -> ::windows_core::Result<()>;
+    fn Refresh(this: &Self::This) -> ::windows_core::Result<()>;
+    fn Save(this: &Self::This) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IAutomaticUpdatesSettings {}
+impl ::windows_core::Iids for IAutomaticUpdatesSettings {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IAutomaticUpdatesSettings_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: isize>() -> IAutomaticUpdatesSettings_Vtbl {
-        unsafe extern "system" fn NotificationLevel<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut AutomaticUpdatesNotificationLevel) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.NotificationLevel() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IAutomaticUpdatesSettings {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn NotificationLevel<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut AutomaticUpdatesNotificationLevel) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::NotificationLevel(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetNotificationLevel<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: AutomaticUpdatesNotificationLevel) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetNotificationLevel(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetNotificationLevel<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: AutomaticUpdatesNotificationLevel) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetNotificationLevel(this, ::core::mem::transmute_copy(&value)).into())
         }
-        unsafe extern "system" fn ReadOnly<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ReadOnly() {
+        unsafe extern "system" fn ReadOnly<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ReadOnly(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Required<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Required() {
+        unsafe extern "system" fn Required<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Required(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ScheduledInstallationDay<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut AutomaticUpdatesScheduledInstallationDay) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ScheduledInstallationDay() {
+        unsafe extern "system" fn ScheduledInstallationDay<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut AutomaticUpdatesScheduledInstallationDay) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ScheduledInstallationDay(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetScheduledInstallationDay<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: AutomaticUpdatesScheduledInstallationDay) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetScheduledInstallationDay(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetScheduledInstallationDay<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: AutomaticUpdatesScheduledInstallationDay) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetScheduledInstallationDay(this, ::core::mem::transmute_copy(&value)).into())
         }
-        unsafe extern "system" fn ScheduledInstallationTime<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ScheduledInstallationTime() {
+        unsafe extern "system" fn ScheduledInstallationTime<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ScheduledInstallationTime(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetScheduledInstallationTime<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetScheduledInstallationTime(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetScheduledInstallationTime<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetScheduledInstallationTime(this, ::core::mem::transmute_copy(&value)).into())
         }
-        unsafe extern "system" fn Refresh<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.Refresh().into()
+        unsafe extern "system" fn Refresh<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::Refresh(this).into())
         }
-        unsafe extern "system" fn Save<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.Save().into()
+        unsafe extern "system" fn Save<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::Save(this).into())
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IAutomaticUpdatesSettings_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             NotificationLevel: NotificationLevel::<Identity, Impl, OFFSET>,
             SetNotificationLevel: SetNotificationLevel::<Identity, Impl, OFFSET>,
             ReadOnly: ReadOnly::<Identity, Impl, OFFSET>,
@@ -258,237 +220,205 @@ impl IAutomaticUpdatesSettings_Vtbl {
             Refresh: Refresh::<Identity, Impl, OFFSET>,
             Save: Save::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IAutomaticUpdatesSettings as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IAutomaticUpdatesSettings2_Impl: Sized + IAutomaticUpdatesSettings_Impl {
-    fn IncludeRecommendedUpdates(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn SetIncludeRecommendedUpdates(&self, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
-    fn CheckPermission(&self, usertype: AutomaticUpdatesUserType, permissiontype: AutomaticUpdatesPermissionType) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+pub trait IAutomaticUpdatesSettings2_Impl: ::windows_core::BaseImpl + IAutomaticUpdatesSettings_Impl {
+    fn IncludeRecommendedUpdates(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn SetIncludeRecommendedUpdates(this: &Self::This, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
+    fn CheckPermission(this: &Self::This, usertype: AutomaticUpdatesUserType, permissiontype: AutomaticUpdatesPermissionType) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IAutomaticUpdatesSettings2 {}
+impl ::windows_core::Iids for IAutomaticUpdatesSettings2 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IAutomaticUpdatesSettings);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IAutomaticUpdatesSettings2_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings2_Impl, const OFFSET: isize>() -> IAutomaticUpdatesSettings2_Vtbl {
-        unsafe extern "system" fn IncludeRecommendedUpdates<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IncludeRecommendedUpdates() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings2_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IAutomaticUpdatesSettings2 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn IncludeRecommendedUpdates<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IncludeRecommendedUpdates(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetIncludeRecommendedUpdates<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetIncludeRecommendedUpdates(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetIncludeRecommendedUpdates<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetIncludeRecommendedUpdates(this, ::core::mem::transmute_copy(&value)).into())
         }
-        unsafe extern "system" fn CheckPermission<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, usertype: AutomaticUpdatesUserType, permissiontype: AutomaticUpdatesPermissionType, userhaspermission: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CheckPermission(::core::mem::transmute_copy(&usertype), ::core::mem::transmute_copy(&permissiontype)) {
+        unsafe extern "system" fn CheckPermission<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, usertype: AutomaticUpdatesUserType, permissiontype: AutomaticUpdatesPermissionType, userhaspermission: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CheckPermission(this, ::core::mem::transmute_copy(&usertype), ::core::mem::transmute_copy(&permissiontype)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(userhaspermission, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: IAutomaticUpdatesSettings_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IAutomaticUpdatesSettings2_Vtbl {
+            base__: <IAutomaticUpdatesSettings as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             IncludeRecommendedUpdates: IncludeRecommendedUpdates::<Identity, Impl, OFFSET>,
             SetIncludeRecommendedUpdates: SetIncludeRecommendedUpdates::<Identity, Impl, OFFSET>,
             CheckPermission: CheckPermission::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IAutomaticUpdatesSettings2 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IAutomaticUpdatesSettings as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IAutomaticUpdatesSettings3_Impl: Sized + IAutomaticUpdatesSettings2_Impl {
-    fn NonAdministratorsElevated(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn SetNonAdministratorsElevated(&self, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
-    fn FeaturedUpdatesEnabled(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn SetFeaturedUpdatesEnabled(&self, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
+pub trait IAutomaticUpdatesSettings3_Impl: ::windows_core::BaseImpl + IAutomaticUpdatesSettings2_Impl {
+    fn NonAdministratorsElevated(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn SetNonAdministratorsElevated(this: &Self::This, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
+    fn FeaturedUpdatesEnabled(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn SetFeaturedUpdatesEnabled(this: &Self::This, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IAutomaticUpdatesSettings3 {}
+impl ::windows_core::Iids for IAutomaticUpdatesSettings3 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IAutomaticUpdatesSettings2);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IAutomaticUpdatesSettings3_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings3_Impl, const OFFSET: isize>() -> IAutomaticUpdatesSettings3_Vtbl {
-        unsafe extern "system" fn NonAdministratorsElevated<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings3_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.NonAdministratorsElevated() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings3_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IAutomaticUpdatesSettings3 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn NonAdministratorsElevated<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings3_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::NonAdministratorsElevated(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetNonAdministratorsElevated<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings3_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetNonAdministratorsElevated(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetNonAdministratorsElevated<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings3_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetNonAdministratorsElevated(this, ::core::mem::transmute_copy(&value)).into())
         }
-        unsafe extern "system" fn FeaturedUpdatesEnabled<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings3_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.FeaturedUpdatesEnabled() {
+        unsafe extern "system" fn FeaturedUpdatesEnabled<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings3_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::FeaturedUpdatesEnabled(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetFeaturedUpdatesEnabled<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IAutomaticUpdatesSettings3_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetFeaturedUpdatesEnabled(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetFeaturedUpdatesEnabled<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAutomaticUpdatesSettings3_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetFeaturedUpdatesEnabled(this, ::core::mem::transmute_copy(&value)).into())
         }
-        Self {
-            base__: IAutomaticUpdatesSettings2_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IAutomaticUpdatesSettings3_Vtbl {
+            base__: <IAutomaticUpdatesSettings2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             NonAdministratorsElevated: NonAdministratorsElevated::<Identity, Impl, OFFSET>,
             SetNonAdministratorsElevated: SetNonAdministratorsElevated::<Identity, Impl, OFFSET>,
             FeaturedUpdatesEnabled: FeaturedUpdatesEnabled::<Identity, Impl, OFFSET>,
             SetFeaturedUpdatesEnabled: SetFeaturedUpdatesEnabled::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IAutomaticUpdatesSettings3 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IAutomaticUpdatesSettings as ::windows_core::ComInterface>::IID || *iid == <IAutomaticUpdatesSettings2 as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait ICategory_Impl: Sized + super::Com::IDispatch_Impl {
-    fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn CategoryID(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn Children(&self) -> ::windows_core::Result<ICategoryCollection>;
-    fn Description(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn Image(&self) -> ::windows_core::Result<IImageInformation>;
-    fn Order(&self) -> ::windows_core::Result<i32>;
-    fn Parent(&self) -> ::windows_core::Result<ICategory>;
-    fn Type(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn Updates(&self) -> ::windows_core::Result<IUpdateCollection>;
+pub trait ICategory_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn Name(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn CategoryID(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn Children(this: &Self::This) -> ::windows_core::Result<ICategoryCollection>;
+    fn Description(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn Image(this: &Self::This) -> ::windows_core::Result<IImageInformation>;
+    fn Order(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn Parent(this: &Self::This) -> ::windows_core::Result<ICategory>;
+    fn Type(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn Updates(this: &Self::This) -> ::windows_core::Result<IUpdateCollection>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for ICategory {}
+impl ::windows_core::Iids for ICategory {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ICategory_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: isize>() -> ICategory_Vtbl {
-        unsafe extern "system" fn Name<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Name() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ICategory {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Name<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Name(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn CategoryID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CategoryID() {
+        unsafe extern "system" fn CategoryID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CategoryID(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Children<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Children() {
+        unsafe extern "system" fn Children<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Children(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Description<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Description() {
+        unsafe extern "system" fn Description<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Description(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Image<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Image() {
+        unsafe extern "system" fn Image<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Image(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Order<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Order() {
+        unsafe extern "system" fn Order<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Order(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Parent<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Parent() {
+        unsafe extern "system" fn Parent<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Parent(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Type<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Type() {
+        unsafe extern "system" fn Type<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Type(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Updates<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Updates() {
+        unsafe extern "system" fn Updates<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICategory_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Updates(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        ICategory_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             Name: Name::<Identity, Impl, OFFSET>,
             CategoryID: CategoryID::<Identity, Impl, OFFSET>,
             Children: Children::<Identity, Impl, OFFSET>,
@@ -499,173 +429,151 @@ impl ICategory_Vtbl {
             Type: Type::<Identity, Impl, OFFSET>,
             Updates: Updates::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ICategory as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait ICategoryCollection_Impl: Sized + super::Com::IDispatch_Impl {
-    fn get_Item(&self, index: i32) -> ::windows_core::Result<ICategory>;
-    fn _NewEnum(&self) -> ::windows_core::Result<::windows_core::IUnknown>;
-    fn Count(&self) -> ::windows_core::Result<i32>;
+pub trait ICategoryCollection_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn get_Item(this: &Self::This, index: i32) -> ::windows_core::Result<ICategory>;
+    fn _NewEnum(this: &Self::This) -> ::windows_core::Result<::windows_core::IUnknown>;
+    fn Count(this: &Self::This) -> ::windows_core::Result<i32>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for ICategoryCollection {}
+impl ::windows_core::Iids for ICategoryCollection {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ICategoryCollection_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICategoryCollection_Impl, const OFFSET: isize>() -> ICategoryCollection_Vtbl {
-        unsafe extern "system" fn get_Item<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICategoryCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, index: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.get_Item(::core::mem::transmute_copy(&index)) {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICategoryCollection_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ICategoryCollection {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn get_Item<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICategoryCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, index: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::get_Item(this, ::core::mem::transmute_copy(&index)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn _NewEnum<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICategoryCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this._NewEnum() {
+        unsafe extern "system" fn _NewEnum<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICategoryCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::_NewEnum(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Count<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ICategoryCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Count() {
+        unsafe extern "system" fn Count<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICategoryCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Count(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        ICategoryCollection_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             get_Item: get_Item::<Identity, Impl, OFFSET>,
             _NewEnum: _NewEnum::<Identity, Impl, OFFSET>,
             Count: Count::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ICategoryCollection as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
-pub trait IDownloadCompletedCallback_Impl: Sized {
-    fn Invoke(&self, downloadjob: ::core::option::Option<&IDownloadJob>, callbackargs: ::core::option::Option<&IDownloadCompletedCallbackArgs>) -> ::windows_core::Result<()>;
+pub trait IDownloadCompletedCallback_Impl: ::windows_core::BaseImpl {
+    fn Invoke(this: &Self::This, downloadjob: ::core::option::Option<&IDownloadJob>, callbackargs: ::core::option::Option<&IDownloadCompletedCallbackArgs>) -> ::windows_core::Result<()>;
 }
 #[cfg(feature = "Win32_System_Com")]
-impl ::windows_core::RuntimeName for IDownloadCompletedCallback {}
+impl ::windows_core::Iids for IDownloadCompletedCallback {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IUnknown);
+}
 #[cfg(feature = "Win32_System_Com")]
-impl IDownloadCompletedCallback_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadCompletedCallback_Impl, const OFFSET: isize>() -> IDownloadCompletedCallback_Vtbl {
-        unsafe extern "system" fn Invoke<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadCompletedCallback_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, downloadjob: *mut ::core::ffi::c_void, callbackargs: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.Invoke(::windows_core::from_raw_borrowed(&downloadjob), ::windows_core::from_raw_borrowed(&callbackargs)).into()
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadCompletedCallback_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDownloadCompletedCallback {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Invoke<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadCompletedCallback_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, downloadjob: *mut ::core::ffi::c_void, callbackargs: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::Invoke(this, ::windows_core::from_raw_borrowed(&downloadjob), ::windows_core::from_raw_borrowed(&callbackargs)).into())
         }
-        Self { base__: ::windows_core::IUnknown_Vtbl::new::<Identity, OFFSET>(), Invoke: Invoke::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IDownloadCompletedCallback as ::windows_core::ComInterface>::IID
-    }
+        IDownloadCompletedCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Invoke: Invoke::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IDownloadCompletedCallbackArgs_Impl: Sized + super::Com::IDispatch_Impl {}
+pub trait IDownloadCompletedCallbackArgs_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IDownloadCompletedCallbackArgs {}
+impl ::windows_core::Iids for IDownloadCompletedCallbackArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IDownloadCompletedCallbackArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadCompletedCallbackArgs_Impl, const OFFSET: isize>() -> IDownloadCompletedCallbackArgs_Vtbl {
-        Self { base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>() }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IDownloadCompletedCallbackArgs as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadCompletedCallbackArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDownloadCompletedCallbackArgs {
+    const VTABLE: Self::Vtable = { IDownloadCompletedCallbackArgs_Vtbl { base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IDownloadJob_Impl: Sized + super::Com::IDispatch_Impl {
-    fn AsyncState(&self) -> ::windows_core::Result<super::Variant::VARIANT>;
-    fn IsCompleted(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn Updates(&self) -> ::windows_core::Result<IUpdateCollection>;
-    fn CleanUp(&self) -> ::windows_core::Result<()>;
-    fn GetProgress(&self) -> ::windows_core::Result<IDownloadProgress>;
-    fn RequestAbort(&self) -> ::windows_core::Result<()>;
+pub trait IDownloadJob_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn AsyncState(this: &Self::This) -> ::windows_core::Result<super::Variant::VARIANT>;
+    fn IsCompleted(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn Updates(this: &Self::This) -> ::windows_core::Result<IUpdateCollection>;
+    fn CleanUp(this: &Self::This) -> ::windows_core::Result<()>;
+    fn GetProgress(this: &Self::This) -> ::windows_core::Result<IDownloadProgress>;
+    fn RequestAbort(this: &Self::This) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IDownloadJob {}
+impl ::windows_core::Iids for IDownloadJob {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IDownloadJob_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadJob_Impl, const OFFSET: isize>() -> IDownloadJob_Vtbl {
-        unsafe extern "system" fn AsyncState<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadJob_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::Variant::VARIANT) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.AsyncState() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadJob_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDownloadJob {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn AsyncState<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadJob_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::Variant::VARIANT) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::AsyncState(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn IsCompleted<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadJob_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsCompleted() {
+        unsafe extern "system" fn IsCompleted<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadJob_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsCompleted(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Updates<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadJob_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Updates() {
+        unsafe extern "system" fn Updates<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadJob_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Updates(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn CleanUp<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadJob_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.CleanUp().into()
+        unsafe extern "system" fn CleanUp<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadJob_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::CleanUp(this).into())
         }
-        unsafe extern "system" fn GetProgress<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadJob_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.GetProgress() {
+        unsafe extern "system" fn GetProgress<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadJob_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::GetProgress(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn RequestAbort<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadJob_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.RequestAbort().into()
+        unsafe extern "system" fn RequestAbort<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadJob_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::RequestAbort(this).into())
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IDownloadJob_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             AsyncState: AsyncState::<Identity, Impl, OFFSET>,
             IsCompleted: IsCompleted::<Identity, Impl, OFFSET>,
             Updates: Updates::<Identity, Impl, OFFSET>,
@@ -673,130 +581,112 @@ impl IDownloadJob_Vtbl {
             GetProgress: GetProgress::<Identity, Impl, OFFSET>,
             RequestAbort: RequestAbort::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IDownloadJob as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IDownloadProgress_Impl: Sized + super::Com::IDispatch_Impl {
-    fn CurrentUpdateBytesDownloaded(&self) -> ::windows_core::Result<super::super::Foundation::DECIMAL>;
-    fn CurrentUpdateBytesToDownload(&self) -> ::windows_core::Result<super::super::Foundation::DECIMAL>;
-    fn CurrentUpdateIndex(&self) -> ::windows_core::Result<i32>;
-    fn PercentComplete(&self) -> ::windows_core::Result<i32>;
-    fn TotalBytesDownloaded(&self) -> ::windows_core::Result<super::super::Foundation::DECIMAL>;
-    fn TotalBytesToDownload(&self) -> ::windows_core::Result<super::super::Foundation::DECIMAL>;
-    fn GetUpdateResult(&self, updateindex: i32) -> ::windows_core::Result<IUpdateDownloadResult>;
-    fn CurrentUpdateDownloadPhase(&self) -> ::windows_core::Result<DownloadPhase>;
-    fn CurrentUpdatePercentComplete(&self) -> ::windows_core::Result<i32>;
+pub trait IDownloadProgress_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn CurrentUpdateBytesDownloaded(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::DECIMAL>;
+    fn CurrentUpdateBytesToDownload(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::DECIMAL>;
+    fn CurrentUpdateIndex(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn PercentComplete(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn TotalBytesDownloaded(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::DECIMAL>;
+    fn TotalBytesToDownload(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::DECIMAL>;
+    fn GetUpdateResult(this: &Self::This, updateindex: i32) -> ::windows_core::Result<IUpdateDownloadResult>;
+    fn CurrentUpdateDownloadPhase(this: &Self::This) -> ::windows_core::Result<DownloadPhase>;
+    fn CurrentUpdatePercentComplete(this: &Self::This) -> ::windows_core::Result<i32>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IDownloadProgress {}
+impl ::windows_core::Iids for IDownloadProgress {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IDownloadProgress_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: isize>() -> IDownloadProgress_Vtbl {
-        unsafe extern "system" fn CurrentUpdateBytesDownloaded<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::DECIMAL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CurrentUpdateBytesDownloaded() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDownloadProgress {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn CurrentUpdateBytesDownloaded<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::DECIMAL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CurrentUpdateBytesDownloaded(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn CurrentUpdateBytesToDownload<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::DECIMAL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CurrentUpdateBytesToDownload() {
+        unsafe extern "system" fn CurrentUpdateBytesToDownload<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::DECIMAL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CurrentUpdateBytesToDownload(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn CurrentUpdateIndex<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CurrentUpdateIndex() {
+        unsafe extern "system" fn CurrentUpdateIndex<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CurrentUpdateIndex(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn PercentComplete<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.PercentComplete() {
+        unsafe extern "system" fn PercentComplete<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::PercentComplete(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn TotalBytesDownloaded<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::DECIMAL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.TotalBytesDownloaded() {
+        unsafe extern "system" fn TotalBytesDownloaded<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::DECIMAL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::TotalBytesDownloaded(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn TotalBytesToDownload<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::DECIMAL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.TotalBytesToDownload() {
+        unsafe extern "system" fn TotalBytesToDownload<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::DECIMAL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::TotalBytesToDownload(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn GetUpdateResult<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, updateindex: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.GetUpdateResult(::core::mem::transmute_copy(&updateindex)) {
+        unsafe extern "system" fn GetUpdateResult<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, updateindex: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::GetUpdateResult(this, ::core::mem::transmute_copy(&updateindex)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn CurrentUpdateDownloadPhase<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut DownloadPhase) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CurrentUpdateDownloadPhase() {
+        unsafe extern "system" fn CurrentUpdateDownloadPhase<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut DownloadPhase) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CurrentUpdateDownloadPhase(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn CurrentUpdatePercentComplete<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CurrentUpdatePercentComplete() {
+        unsafe extern "system" fn CurrentUpdatePercentComplete<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadProgress_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CurrentUpdatePercentComplete(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IDownloadProgress_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             CurrentUpdateBytesDownloaded: CurrentUpdateBytesDownloaded::<Identity, Impl, OFFSET>,
             CurrentUpdateBytesToDownload: CurrentUpdateBytesToDownload::<Identity, Impl, OFFSET>,
             CurrentUpdateIndex: CurrentUpdateIndex::<Identity, Impl, OFFSET>,
@@ -807,383 +697,339 @@ impl IDownloadProgress_Vtbl {
             CurrentUpdateDownloadPhase: CurrentUpdateDownloadPhase::<Identity, Impl, OFFSET>,
             CurrentUpdatePercentComplete: CurrentUpdatePercentComplete::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IDownloadProgress as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
-pub trait IDownloadProgressChangedCallback_Impl: Sized {
-    fn Invoke(&self, downloadjob: ::core::option::Option<&IDownloadJob>, callbackargs: ::core::option::Option<&IDownloadProgressChangedCallbackArgs>) -> ::windows_core::Result<()>;
+pub trait IDownloadProgressChangedCallback_Impl: ::windows_core::BaseImpl {
+    fn Invoke(this: &Self::This, downloadjob: ::core::option::Option<&IDownloadJob>, callbackargs: ::core::option::Option<&IDownloadProgressChangedCallbackArgs>) -> ::windows_core::Result<()>;
 }
 #[cfg(feature = "Win32_System_Com")]
-impl ::windows_core::RuntimeName for IDownloadProgressChangedCallback {}
+impl ::windows_core::Iids for IDownloadProgressChangedCallback {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IUnknown);
+}
 #[cfg(feature = "Win32_System_Com")]
-impl IDownloadProgressChangedCallback_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadProgressChangedCallback_Impl, const OFFSET: isize>() -> IDownloadProgressChangedCallback_Vtbl {
-        unsafe extern "system" fn Invoke<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadProgressChangedCallback_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, downloadjob: *mut ::core::ffi::c_void, callbackargs: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.Invoke(::windows_core::from_raw_borrowed(&downloadjob), ::windows_core::from_raw_borrowed(&callbackargs)).into()
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadProgressChangedCallback_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDownloadProgressChangedCallback {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Invoke<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadProgressChangedCallback_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, downloadjob: *mut ::core::ffi::c_void, callbackargs: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::Invoke(this, ::windows_core::from_raw_borrowed(&downloadjob), ::windows_core::from_raw_borrowed(&callbackargs)).into())
         }
-        Self { base__: ::windows_core::IUnknown_Vtbl::new::<Identity, OFFSET>(), Invoke: Invoke::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IDownloadProgressChangedCallback as ::windows_core::ComInterface>::IID
-    }
+        IDownloadProgressChangedCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Invoke: Invoke::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IDownloadProgressChangedCallbackArgs_Impl: Sized + super::Com::IDispatch_Impl {
-    fn Progress(&self) -> ::windows_core::Result<IDownloadProgress>;
+pub trait IDownloadProgressChangedCallbackArgs_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn Progress(this: &Self::This) -> ::windows_core::Result<IDownloadProgress>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IDownloadProgressChangedCallbackArgs {}
+impl ::windows_core::Iids for IDownloadProgressChangedCallbackArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IDownloadProgressChangedCallbackArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadProgressChangedCallbackArgs_Impl, const OFFSET: isize>() -> IDownloadProgressChangedCallbackArgs_Vtbl {
-        unsafe extern "system" fn Progress<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadProgressChangedCallbackArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Progress() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadProgressChangedCallbackArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDownloadProgressChangedCallbackArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Progress<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadProgressChangedCallbackArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Progress(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(), Progress: Progress::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IDownloadProgressChangedCallbackArgs as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+        IDownloadProgressChangedCallbackArgs_Vtbl { base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Progress: Progress::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IDownloadResult_Impl: Sized + super::Com::IDispatch_Impl {
-    fn HResult(&self) -> ::windows_core::Result<i32>;
-    fn ResultCode(&self) -> ::windows_core::Result<OperationResultCode>;
-    fn GetUpdateResult(&self, updateindex: i32) -> ::windows_core::Result<IUpdateDownloadResult>;
+pub trait IDownloadResult_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn HResult(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn ResultCode(this: &Self::This) -> ::windows_core::Result<OperationResultCode>;
+    fn GetUpdateResult(this: &Self::This, updateindex: i32) -> ::windows_core::Result<IUpdateDownloadResult>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IDownloadResult {}
+impl ::windows_core::Iids for IDownloadResult {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IDownloadResult_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadResult_Impl, const OFFSET: isize>() -> IDownloadResult_Vtbl {
-        unsafe extern "system" fn HResult<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadResult_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.HResult() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadResult_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDownloadResult {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn HResult<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadResult_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::HResult(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ResultCode<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadResult_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut OperationResultCode) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ResultCode() {
+        unsafe extern "system" fn ResultCode<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadResult_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut OperationResultCode) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ResultCode(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn GetUpdateResult<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IDownloadResult_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, updateindex: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.GetUpdateResult(::core::mem::transmute_copy(&updateindex)) {
+        unsafe extern "system" fn GetUpdateResult<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDownloadResult_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, updateindex: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::GetUpdateResult(this, ::core::mem::transmute_copy(&updateindex)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IDownloadResult_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             HResult: HResult::<Identity, Impl, OFFSET>,
             ResultCode: ResultCode::<Identity, Impl, OFFSET>,
             GetUpdateResult: GetUpdateResult::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IDownloadResult as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IImageInformation_Impl: Sized + super::Com::IDispatch_Impl {
-    fn AltText(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn Height(&self) -> ::windows_core::Result<i32>;
-    fn Source(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn Width(&self) -> ::windows_core::Result<i32>;
+pub trait IImageInformation_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn AltText(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn Height(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn Source(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn Width(this: &Self::This) -> ::windows_core::Result<i32>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IImageInformation {}
+impl ::windows_core::Iids for IImageInformation {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IImageInformation_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IImageInformation_Impl, const OFFSET: isize>() -> IImageInformation_Vtbl {
-        unsafe extern "system" fn AltText<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IImageInformation_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.AltText() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IImageInformation_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IImageInformation {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn AltText<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IImageInformation_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::AltText(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Height<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IImageInformation_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Height() {
+        unsafe extern "system" fn Height<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IImageInformation_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Height(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Source<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IImageInformation_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Source() {
+        unsafe extern "system" fn Source<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IImageInformation_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Source(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Width<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IImageInformation_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Width() {
+        unsafe extern "system" fn Width<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IImageInformation_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Width(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IImageInformation_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             AltText: AltText::<Identity, Impl, OFFSET>,
             Height: Height::<Identity, Impl, OFFSET>,
             Source: Source::<Identity, Impl, OFFSET>,
             Width: Width::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IImageInformation as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IInstallationAgent_Impl: Sized + super::Com::IDispatch_Impl {
-    fn RecordInstallationResult(&self, installationresultcookie: &::windows_core::BSTR, hresult: i32, extendedreportingdata: ::core::option::Option<&IStringCollection>) -> ::windows_core::Result<()>;
+pub trait IInstallationAgent_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn RecordInstallationResult(this: &Self::This, installationresultcookie: &::windows_core::BSTR, hresult: i32, extendedreportingdata: ::core::option::Option<&IStringCollection>) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IInstallationAgent {}
+impl ::windows_core::Iids for IInstallationAgent {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IInstallationAgent_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationAgent_Impl, const OFFSET: isize>() -> IInstallationAgent_Vtbl {
-        unsafe extern "system" fn RecordInstallationResult<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationAgent_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, installationresultcookie: ::std::mem::MaybeUninit<::windows_core::BSTR>, hresult: i32, extendedreportingdata: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.RecordInstallationResult(::core::mem::transmute(&installationresultcookie), ::core::mem::transmute_copy(&hresult), ::windows_core::from_raw_borrowed(&extendedreportingdata)).into()
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationAgent_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IInstallationAgent {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn RecordInstallationResult<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationAgent_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, installationresultcookie: ::std::mem::MaybeUninit<::windows_core::BSTR>, hresult: i32, extendedreportingdata: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::RecordInstallationResult(this, ::core::mem::transmute(&installationresultcookie), ::core::mem::transmute_copy(&hresult), ::windows_core::from_raw_borrowed(&extendedreportingdata)).into())
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IInstallationAgent_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             RecordInstallationResult: RecordInstallationResult::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IInstallationAgent as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IInstallationBehavior_Impl: Sized + super::Com::IDispatch_Impl {
-    fn CanRequestUserInput(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn Impact(&self) -> ::windows_core::Result<InstallationImpact>;
-    fn RebootBehavior(&self) -> ::windows_core::Result<InstallationRebootBehavior>;
-    fn RequiresNetworkConnectivity(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+pub trait IInstallationBehavior_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn CanRequestUserInput(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn Impact(this: &Self::This) -> ::windows_core::Result<InstallationImpact>;
+    fn RebootBehavior(this: &Self::This) -> ::windows_core::Result<InstallationRebootBehavior>;
+    fn RequiresNetworkConnectivity(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IInstallationBehavior {}
+impl ::windows_core::Iids for IInstallationBehavior {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IInstallationBehavior_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationBehavior_Impl, const OFFSET: isize>() -> IInstallationBehavior_Vtbl {
-        unsafe extern "system" fn CanRequestUserInput<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationBehavior_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CanRequestUserInput() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationBehavior_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IInstallationBehavior {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn CanRequestUserInput<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationBehavior_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CanRequestUserInput(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Impact<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationBehavior_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut InstallationImpact) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Impact() {
+        unsafe extern "system" fn Impact<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationBehavior_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut InstallationImpact) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Impact(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn RebootBehavior<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationBehavior_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut InstallationRebootBehavior) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RebootBehavior() {
+        unsafe extern "system" fn RebootBehavior<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationBehavior_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut InstallationRebootBehavior) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RebootBehavior(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn RequiresNetworkConnectivity<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationBehavior_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RequiresNetworkConnectivity() {
+        unsafe extern "system" fn RequiresNetworkConnectivity<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationBehavior_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RequiresNetworkConnectivity(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IInstallationBehavior_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             CanRequestUserInput: CanRequestUserInput::<Identity, Impl, OFFSET>,
             Impact: Impact::<Identity, Impl, OFFSET>,
             RebootBehavior: RebootBehavior::<Identity, Impl, OFFSET>,
             RequiresNetworkConnectivity: RequiresNetworkConnectivity::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IInstallationBehavior as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
-pub trait IInstallationCompletedCallback_Impl: Sized {
-    fn Invoke(&self, installationjob: ::core::option::Option<&IInstallationJob>, callbackargs: ::core::option::Option<&IInstallationCompletedCallbackArgs>) -> ::windows_core::Result<()>;
+pub trait IInstallationCompletedCallback_Impl: ::windows_core::BaseImpl {
+    fn Invoke(this: &Self::This, installationjob: ::core::option::Option<&IInstallationJob>, callbackargs: ::core::option::Option<&IInstallationCompletedCallbackArgs>) -> ::windows_core::Result<()>;
 }
 #[cfg(feature = "Win32_System_Com")]
-impl ::windows_core::RuntimeName for IInstallationCompletedCallback {}
+impl ::windows_core::Iids for IInstallationCompletedCallback {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IUnknown);
+}
 #[cfg(feature = "Win32_System_Com")]
-impl IInstallationCompletedCallback_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationCompletedCallback_Impl, const OFFSET: isize>() -> IInstallationCompletedCallback_Vtbl {
-        unsafe extern "system" fn Invoke<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationCompletedCallback_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, installationjob: *mut ::core::ffi::c_void, callbackargs: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.Invoke(::windows_core::from_raw_borrowed(&installationjob), ::windows_core::from_raw_borrowed(&callbackargs)).into()
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationCompletedCallback_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IInstallationCompletedCallback {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Invoke<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationCompletedCallback_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, installationjob: *mut ::core::ffi::c_void, callbackargs: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::Invoke(this, ::windows_core::from_raw_borrowed(&installationjob), ::windows_core::from_raw_borrowed(&callbackargs)).into())
         }
-        Self { base__: ::windows_core::IUnknown_Vtbl::new::<Identity, OFFSET>(), Invoke: Invoke::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IInstallationCompletedCallback as ::windows_core::ComInterface>::IID
-    }
+        IInstallationCompletedCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Invoke: Invoke::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IInstallationCompletedCallbackArgs_Impl: Sized + super::Com::IDispatch_Impl {}
+pub trait IInstallationCompletedCallbackArgs_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IInstallationCompletedCallbackArgs {}
+impl ::windows_core::Iids for IInstallationCompletedCallbackArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IInstallationCompletedCallbackArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationCompletedCallbackArgs_Impl, const OFFSET: isize>() -> IInstallationCompletedCallbackArgs_Vtbl {
-        Self { base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>() }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IInstallationCompletedCallbackArgs as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationCompletedCallbackArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IInstallationCompletedCallbackArgs {
+    const VTABLE: Self::Vtable = { IInstallationCompletedCallbackArgs_Vtbl { base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IInstallationJob_Impl: Sized + super::Com::IDispatch_Impl {
-    fn AsyncState(&self) -> ::windows_core::Result<super::Variant::VARIANT>;
-    fn IsCompleted(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn Updates(&self) -> ::windows_core::Result<IUpdateCollection>;
-    fn CleanUp(&self) -> ::windows_core::Result<()>;
-    fn GetProgress(&self) -> ::windows_core::Result<IInstallationProgress>;
-    fn RequestAbort(&self) -> ::windows_core::Result<()>;
+pub trait IInstallationJob_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn AsyncState(this: &Self::This) -> ::windows_core::Result<super::Variant::VARIANT>;
+    fn IsCompleted(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn Updates(this: &Self::This) -> ::windows_core::Result<IUpdateCollection>;
+    fn CleanUp(this: &Self::This) -> ::windows_core::Result<()>;
+    fn GetProgress(this: &Self::This) -> ::windows_core::Result<IInstallationProgress>;
+    fn RequestAbort(this: &Self::This) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IInstallationJob {}
+impl ::windows_core::Iids for IInstallationJob {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IInstallationJob_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationJob_Impl, const OFFSET: isize>() -> IInstallationJob_Vtbl {
-        unsafe extern "system" fn AsyncState<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationJob_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::Variant::VARIANT) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.AsyncState() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationJob_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IInstallationJob {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn AsyncState<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationJob_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::Variant::VARIANT) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::AsyncState(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn IsCompleted<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationJob_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsCompleted() {
+        unsafe extern "system" fn IsCompleted<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationJob_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsCompleted(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Updates<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationJob_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Updates() {
+        unsafe extern "system" fn Updates<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationJob_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Updates(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn CleanUp<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationJob_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.CleanUp().into()
+        unsafe extern "system" fn CleanUp<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationJob_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::CleanUp(this).into())
         }
-        unsafe extern "system" fn GetProgress<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationJob_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.GetProgress() {
+        unsafe extern "system" fn GetProgress<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationJob_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::GetProgress(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn RequestAbort<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationJob_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.RequestAbort().into()
+        unsafe extern "system" fn RequestAbort<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationJob_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::RequestAbort(this).into())
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IInstallationJob_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             AsyncState: AsyncState::<Identity, Impl, OFFSET>,
             IsCompleted: IsCompleted::<Identity, Impl, OFFSET>,
             Updates: Updates::<Identity, Impl, OFFSET>,
@@ -1191,492 +1037,430 @@ impl IInstallationJob_Vtbl {
             GetProgress: GetProgress::<Identity, Impl, OFFSET>,
             RequestAbort: RequestAbort::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IInstallationJob as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IInstallationProgress_Impl: Sized + super::Com::IDispatch_Impl {
-    fn CurrentUpdateIndex(&self) -> ::windows_core::Result<i32>;
-    fn CurrentUpdatePercentComplete(&self) -> ::windows_core::Result<i32>;
-    fn PercentComplete(&self) -> ::windows_core::Result<i32>;
-    fn GetUpdateResult(&self, updateindex: i32) -> ::windows_core::Result<IUpdateInstallationResult>;
+pub trait IInstallationProgress_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn CurrentUpdateIndex(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn CurrentUpdatePercentComplete(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn PercentComplete(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn GetUpdateResult(this: &Self::This, updateindex: i32) -> ::windows_core::Result<IUpdateInstallationResult>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IInstallationProgress {}
+impl ::windows_core::Iids for IInstallationProgress {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IInstallationProgress_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationProgress_Impl, const OFFSET: isize>() -> IInstallationProgress_Vtbl {
-        unsafe extern "system" fn CurrentUpdateIndex<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationProgress_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CurrentUpdateIndex() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationProgress_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IInstallationProgress {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn CurrentUpdateIndex<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationProgress_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CurrentUpdateIndex(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn CurrentUpdatePercentComplete<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationProgress_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CurrentUpdatePercentComplete() {
+        unsafe extern "system" fn CurrentUpdatePercentComplete<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationProgress_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CurrentUpdatePercentComplete(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn PercentComplete<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationProgress_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.PercentComplete() {
+        unsafe extern "system" fn PercentComplete<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationProgress_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::PercentComplete(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn GetUpdateResult<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationProgress_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, updateindex: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.GetUpdateResult(::core::mem::transmute_copy(&updateindex)) {
+        unsafe extern "system" fn GetUpdateResult<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationProgress_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, updateindex: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::GetUpdateResult(this, ::core::mem::transmute_copy(&updateindex)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IInstallationProgress_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             CurrentUpdateIndex: CurrentUpdateIndex::<Identity, Impl, OFFSET>,
             CurrentUpdatePercentComplete: CurrentUpdatePercentComplete::<Identity, Impl, OFFSET>,
             PercentComplete: PercentComplete::<Identity, Impl, OFFSET>,
             GetUpdateResult: GetUpdateResult::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IInstallationProgress as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
-pub trait IInstallationProgressChangedCallback_Impl: Sized {
-    fn Invoke(&self, installationjob: ::core::option::Option<&IInstallationJob>, callbackargs: ::core::option::Option<&IInstallationProgressChangedCallbackArgs>) -> ::windows_core::Result<()>;
+pub trait IInstallationProgressChangedCallback_Impl: ::windows_core::BaseImpl {
+    fn Invoke(this: &Self::This, installationjob: ::core::option::Option<&IInstallationJob>, callbackargs: ::core::option::Option<&IInstallationProgressChangedCallbackArgs>) -> ::windows_core::Result<()>;
 }
 #[cfg(feature = "Win32_System_Com")]
-impl ::windows_core::RuntimeName for IInstallationProgressChangedCallback {}
+impl ::windows_core::Iids for IInstallationProgressChangedCallback {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IUnknown);
+}
 #[cfg(feature = "Win32_System_Com")]
-impl IInstallationProgressChangedCallback_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationProgressChangedCallback_Impl, const OFFSET: isize>() -> IInstallationProgressChangedCallback_Vtbl {
-        unsafe extern "system" fn Invoke<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationProgressChangedCallback_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, installationjob: *mut ::core::ffi::c_void, callbackargs: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.Invoke(::windows_core::from_raw_borrowed(&installationjob), ::windows_core::from_raw_borrowed(&callbackargs)).into()
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationProgressChangedCallback_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IInstallationProgressChangedCallback {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Invoke<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationProgressChangedCallback_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, installationjob: *mut ::core::ffi::c_void, callbackargs: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::Invoke(this, ::windows_core::from_raw_borrowed(&installationjob), ::windows_core::from_raw_borrowed(&callbackargs)).into())
         }
-        Self { base__: ::windows_core::IUnknown_Vtbl::new::<Identity, OFFSET>(), Invoke: Invoke::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IInstallationProgressChangedCallback as ::windows_core::ComInterface>::IID
-    }
+        IInstallationProgressChangedCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Invoke: Invoke::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IInstallationProgressChangedCallbackArgs_Impl: Sized + super::Com::IDispatch_Impl {
-    fn Progress(&self) -> ::windows_core::Result<IInstallationProgress>;
+pub trait IInstallationProgressChangedCallbackArgs_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn Progress(this: &Self::This) -> ::windows_core::Result<IInstallationProgress>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IInstallationProgressChangedCallbackArgs {}
+impl ::windows_core::Iids for IInstallationProgressChangedCallbackArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IInstallationProgressChangedCallbackArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationProgressChangedCallbackArgs_Impl, const OFFSET: isize>() -> IInstallationProgressChangedCallbackArgs_Vtbl {
-        unsafe extern "system" fn Progress<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationProgressChangedCallbackArgs_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Progress() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationProgressChangedCallbackArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IInstallationProgressChangedCallbackArgs {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Progress<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationProgressChangedCallbackArgs_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Progress(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(), Progress: Progress::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IInstallationProgressChangedCallbackArgs as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+        IInstallationProgressChangedCallbackArgs_Vtbl { base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Progress: Progress::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IInstallationResult_Impl: Sized + super::Com::IDispatch_Impl {
-    fn HResult(&self) -> ::windows_core::Result<i32>;
-    fn RebootRequired(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn ResultCode(&self) -> ::windows_core::Result<OperationResultCode>;
-    fn GetUpdateResult(&self, updateindex: i32) -> ::windows_core::Result<IUpdateInstallationResult>;
+pub trait IInstallationResult_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn HResult(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn RebootRequired(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn ResultCode(this: &Self::This) -> ::windows_core::Result<OperationResultCode>;
+    fn GetUpdateResult(this: &Self::This, updateindex: i32) -> ::windows_core::Result<IUpdateInstallationResult>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IInstallationResult {}
+impl ::windows_core::Iids for IInstallationResult {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IInstallationResult_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationResult_Impl, const OFFSET: isize>() -> IInstallationResult_Vtbl {
-        unsafe extern "system" fn HResult<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationResult_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.HResult() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationResult_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IInstallationResult {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn HResult<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationResult_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::HResult(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn RebootRequired<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationResult_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RebootRequired() {
+        unsafe extern "system" fn RebootRequired<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationResult_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RebootRequired(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ResultCode<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationResult_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut OperationResultCode) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ResultCode() {
+        unsafe extern "system" fn ResultCode<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationResult_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut OperationResultCode) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ResultCode(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn GetUpdateResult<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInstallationResult_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, updateindex: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.GetUpdateResult(::core::mem::transmute_copy(&updateindex)) {
+        unsafe extern "system" fn GetUpdateResult<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInstallationResult_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, updateindex: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::GetUpdateResult(this, ::core::mem::transmute_copy(&updateindex)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IInstallationResult_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             HResult: HResult::<Identity, Impl, OFFSET>,
             RebootRequired: RebootRequired::<Identity, Impl, OFFSET>,
             ResultCode: ResultCode::<Identity, Impl, OFFSET>,
             GetUpdateResult: GetUpdateResult::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IInstallationResult as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IInvalidProductLicenseException_Impl: Sized + IUpdateException_Impl {
-    fn Product(&self) -> ::windows_core::Result<::windows_core::BSTR>;
+pub trait IInvalidProductLicenseException_Impl: ::windows_core::BaseImpl + IUpdateException_Impl {
+    fn Product(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IInvalidProductLicenseException {}
+impl ::windows_core::Iids for IInvalidProductLicenseException {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IUpdateException);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IInvalidProductLicenseException_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInvalidProductLicenseException_Impl, const OFFSET: isize>() -> IInvalidProductLicenseException_Vtbl {
-        unsafe extern "system" fn Product<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IInvalidProductLicenseException_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Product() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInvalidProductLicenseException_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IInvalidProductLicenseException {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Product<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInvalidProductLicenseException_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Product(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: IUpdateException_Vtbl::new::<Identity, Impl, OFFSET>(), Product: Product::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IInvalidProductLicenseException as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdateException as ::windows_core::ComInterface>::IID
-    }
+        IInvalidProductLicenseException_Vtbl { base__: <IUpdateException as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Product: Product::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
-pub trait ISearchCompletedCallback_Impl: Sized {
-    fn Invoke(&self, searchjob: ::core::option::Option<&ISearchJob>, callbackargs: ::core::option::Option<&ISearchCompletedCallbackArgs>) -> ::windows_core::Result<()>;
+pub trait ISearchCompletedCallback_Impl: ::windows_core::BaseImpl {
+    fn Invoke(this: &Self::This, searchjob: ::core::option::Option<&ISearchJob>, callbackargs: ::core::option::Option<&ISearchCompletedCallbackArgs>) -> ::windows_core::Result<()>;
 }
 #[cfg(feature = "Win32_System_Com")]
-impl ::windows_core::RuntimeName for ISearchCompletedCallback {}
+impl ::windows_core::Iids for ISearchCompletedCallback {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IUnknown);
+}
 #[cfg(feature = "Win32_System_Com")]
-impl ISearchCompletedCallback_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISearchCompletedCallback_Impl, const OFFSET: isize>() -> ISearchCompletedCallback_Vtbl {
-        unsafe extern "system" fn Invoke<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISearchCompletedCallback_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, searchjob: *mut ::core::ffi::c_void, callbackargs: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.Invoke(::windows_core::from_raw_borrowed(&searchjob), ::windows_core::from_raw_borrowed(&callbackargs)).into()
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchCompletedCallback_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ISearchCompletedCallback {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Invoke<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchCompletedCallback_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, searchjob: *mut ::core::ffi::c_void, callbackargs: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::Invoke(this, ::windows_core::from_raw_borrowed(&searchjob), ::windows_core::from_raw_borrowed(&callbackargs)).into())
         }
-        Self { base__: ::windows_core::IUnknown_Vtbl::new::<Identity, OFFSET>(), Invoke: Invoke::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ISearchCompletedCallback as ::windows_core::ComInterface>::IID
-    }
+        ISearchCompletedCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Invoke: Invoke::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait ISearchCompletedCallbackArgs_Impl: Sized + super::Com::IDispatch_Impl {}
+pub trait ISearchCompletedCallbackArgs_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for ISearchCompletedCallbackArgs {}
+impl ::windows_core::Iids for ISearchCompletedCallbackArgs {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ISearchCompletedCallbackArgs_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISearchCompletedCallbackArgs_Impl, const OFFSET: isize>() -> ISearchCompletedCallbackArgs_Vtbl {
-        Self { base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>() }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ISearchCompletedCallbackArgs as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchCompletedCallbackArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ISearchCompletedCallbackArgs {
+    const VTABLE: Self::Vtable = { ISearchCompletedCallbackArgs_Vtbl { base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait ISearchJob_Impl: Sized + super::Com::IDispatch_Impl {
-    fn AsyncState(&self) -> ::windows_core::Result<super::Variant::VARIANT>;
-    fn IsCompleted(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn CleanUp(&self) -> ::windows_core::Result<()>;
-    fn RequestAbort(&self) -> ::windows_core::Result<()>;
+pub trait ISearchJob_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn AsyncState(this: &Self::This) -> ::windows_core::Result<super::Variant::VARIANT>;
+    fn IsCompleted(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn CleanUp(this: &Self::This) -> ::windows_core::Result<()>;
+    fn RequestAbort(this: &Self::This) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for ISearchJob {}
+impl ::windows_core::Iids for ISearchJob {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ISearchJob_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISearchJob_Impl, const OFFSET: isize>() -> ISearchJob_Vtbl {
-        unsafe extern "system" fn AsyncState<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISearchJob_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::Variant::VARIANT) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.AsyncState() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchJob_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ISearchJob {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn AsyncState<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchJob_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::Variant::VARIANT) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::AsyncState(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn IsCompleted<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISearchJob_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsCompleted() {
+        unsafe extern "system" fn IsCompleted<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchJob_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsCompleted(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn CleanUp<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISearchJob_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.CleanUp().into()
+        unsafe extern "system" fn CleanUp<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchJob_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::CleanUp(this).into())
         }
-        unsafe extern "system" fn RequestAbort<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISearchJob_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.RequestAbort().into()
+        unsafe extern "system" fn RequestAbort<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchJob_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::RequestAbort(this).into())
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        ISearchJob_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             AsyncState: AsyncState::<Identity, Impl, OFFSET>,
             IsCompleted: IsCompleted::<Identity, Impl, OFFSET>,
             CleanUp: CleanUp::<Identity, Impl, OFFSET>,
             RequestAbort: RequestAbort::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ISearchJob as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait ISearchResult_Impl: Sized + super::Com::IDispatch_Impl {
-    fn ResultCode(&self) -> ::windows_core::Result<OperationResultCode>;
-    fn RootCategories(&self) -> ::windows_core::Result<ICategoryCollection>;
-    fn Updates(&self) -> ::windows_core::Result<IUpdateCollection>;
-    fn Warnings(&self) -> ::windows_core::Result<IUpdateExceptionCollection>;
+pub trait ISearchResult_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn ResultCode(this: &Self::This) -> ::windows_core::Result<OperationResultCode>;
+    fn RootCategories(this: &Self::This) -> ::windows_core::Result<ICategoryCollection>;
+    fn Updates(this: &Self::This) -> ::windows_core::Result<IUpdateCollection>;
+    fn Warnings(this: &Self::This) -> ::windows_core::Result<IUpdateExceptionCollection>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for ISearchResult {}
+impl ::windows_core::Iids for ISearchResult {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ISearchResult_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISearchResult_Impl, const OFFSET: isize>() -> ISearchResult_Vtbl {
-        unsafe extern "system" fn ResultCode<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISearchResult_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut OperationResultCode) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ResultCode() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchResult_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ISearchResult {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ResultCode<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchResult_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut OperationResultCode) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ResultCode(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn RootCategories<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISearchResult_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RootCategories() {
+        unsafe extern "system" fn RootCategories<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchResult_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RootCategories(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Updates<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISearchResult_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Updates() {
+        unsafe extern "system" fn Updates<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchResult_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Updates(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Warnings<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISearchResult_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Warnings() {
+        unsafe extern "system" fn Warnings<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchResult_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Warnings(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        ISearchResult_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             ResultCode: ResultCode::<Identity, Impl, OFFSET>,
             RootCategories: RootCategories::<Identity, Impl, OFFSET>,
             Updates: Updates::<Identity, Impl, OFFSET>,
             Warnings: Warnings::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ISearchResult as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IStringCollection_Impl: Sized + super::Com::IDispatch_Impl {
-    fn get_Item(&self, index: i32) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn put_Item(&self, index: i32, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
-    fn _NewEnum(&self) -> ::windows_core::Result<::windows_core::IUnknown>;
-    fn Count(&self) -> ::windows_core::Result<i32>;
-    fn ReadOnly(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn Add(&self, value: &::windows_core::BSTR) -> ::windows_core::Result<i32>;
-    fn Clear(&self) -> ::windows_core::Result<()>;
-    fn Copy(&self) -> ::windows_core::Result<IStringCollection>;
-    fn Insert(&self, index: i32, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
-    fn RemoveAt(&self, index: i32) -> ::windows_core::Result<()>;
+pub trait IStringCollection_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn get_Item(this: &Self::This, index: i32) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn put_Item(this: &Self::This, index: i32, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
+    fn _NewEnum(this: &Self::This) -> ::windows_core::Result<::windows_core::IUnknown>;
+    fn Count(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn ReadOnly(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn Add(this: &Self::This, value: &::windows_core::BSTR) -> ::windows_core::Result<i32>;
+    fn Clear(this: &Self::This) -> ::windows_core::Result<()>;
+    fn Copy(this: &Self::This) -> ::windows_core::Result<IStringCollection>;
+    fn Insert(this: &Self::This, index: i32, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
+    fn RemoveAt(this: &Self::This, index: i32) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IStringCollection {}
+impl ::windows_core::Iids for IStringCollection {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IStringCollection_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: isize>() -> IStringCollection_Vtbl {
-        unsafe extern "system" fn get_Item<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, index: i32, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.get_Item(::core::mem::transmute_copy(&index)) {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IStringCollection {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn get_Item<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, index: i32, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::get_Item(this, ::core::mem::transmute_copy(&index)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn put_Item<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, index: i32, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.put_Item(::core::mem::transmute_copy(&index), ::core::mem::transmute(&value)).into()
+        unsafe extern "system" fn put_Item<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, index: i32, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::put_Item(this, ::core::mem::transmute_copy(&index), ::core::mem::transmute(&value)).into())
         }
-        unsafe extern "system" fn _NewEnum<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this._NewEnum() {
+        unsafe extern "system" fn _NewEnum<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::_NewEnum(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Count<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Count() {
+        unsafe extern "system" fn Count<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Count(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ReadOnly<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ReadOnly() {
+        unsafe extern "system" fn ReadOnly<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ReadOnly(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Add<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Add(::core::mem::transmute(&value)) {
+        unsafe extern "system" fn Add<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Add(this, ::core::mem::transmute(&value)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Clear<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.Clear().into()
+        unsafe extern "system" fn Clear<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::Clear(this).into())
         }
-        unsafe extern "system" fn Copy<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Copy() {
+        unsafe extern "system" fn Copy<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Copy(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Insert<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, index: i32, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.Insert(::core::mem::transmute_copy(&index), ::core::mem::transmute(&value)).into()
+        unsafe extern "system" fn Insert<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, index: i32, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::Insert(this, ::core::mem::transmute_copy(&index), ::core::mem::transmute(&value)).into())
         }
-        unsafe extern "system" fn RemoveAt<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, index: i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.RemoveAt(::core::mem::transmute_copy(&index)).into()
+        unsafe extern "system" fn RemoveAt<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStringCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, index: i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::RemoveAt(this, ::core::mem::transmute_copy(&index)).into())
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IStringCollection_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             get_Item: get_Item::<Identity, Impl, OFFSET>,
             put_Item: put_Item::<Identity, Impl, OFFSET>,
             _NewEnum: _NewEnum::<Identity, Impl, OFFSET>,
@@ -1688,587 +1472,493 @@ impl IStringCollection_Vtbl {
             Insert: Insert::<Identity, Impl, OFFSET>,
             RemoveAt: RemoveAt::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IStringCollection as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait ISystemInformation_Impl: Sized + super::Com::IDispatch_Impl {
-    fn OemHardwareSupportLink(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn RebootRequired(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+pub trait ISystemInformation_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn OemHardwareSupportLink(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn RebootRequired(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for ISystemInformation {}
+impl ::windows_core::Iids for ISystemInformation {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ISystemInformation_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISystemInformation_Impl, const OFFSET: isize>() -> ISystemInformation_Vtbl {
-        unsafe extern "system" fn OemHardwareSupportLink<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISystemInformation_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.OemHardwareSupportLink() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISystemInformation_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ISystemInformation {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn OemHardwareSupportLink<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISystemInformation_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::OemHardwareSupportLink(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn RebootRequired<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: ISystemInformation_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RebootRequired() {
+        unsafe extern "system" fn RebootRequired<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISystemInformation_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RebootRequired(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        ISystemInformation_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             OemHardwareSupportLink: OemHardwareSupportLink::<Identity, Impl, OFFSET>,
             RebootRequired: RebootRequired::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <ISystemInformation as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdate_Impl: Sized + super::Com::IDispatch_Impl {
-    fn Title(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn AutoSelectOnWebSites(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn BundledUpdates(&self) -> ::windows_core::Result<IUpdateCollection>;
-    fn CanRequireSource(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn Categories(&self) -> ::windows_core::Result<ICategoryCollection>;
-    fn Deadline(&self) -> ::windows_core::Result<super::Variant::VARIANT>;
-    fn DeltaCompressedContentAvailable(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn DeltaCompressedContentPreferred(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn Description(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn EulaAccepted(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn EulaText(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn HandlerID(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn Identity(&self) -> ::windows_core::Result<IUpdateIdentity>;
-    fn Image(&self) -> ::windows_core::Result<IImageInformation>;
-    fn InstallationBehavior(&self) -> ::windows_core::Result<IInstallationBehavior>;
-    fn IsBeta(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn IsDownloaded(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn IsHidden(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn SetIsHidden(&self, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
-    fn IsInstalled(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn IsMandatory(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn IsUninstallable(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn Languages(&self) -> ::windows_core::Result<IStringCollection>;
-    fn LastDeploymentChangeTime(&self) -> ::windows_core::Result<f64>;
-    fn MaxDownloadSize(&self) -> ::windows_core::Result<super::super::Foundation::DECIMAL>;
-    fn MinDownloadSize(&self) -> ::windows_core::Result<super::super::Foundation::DECIMAL>;
-    fn MoreInfoUrls(&self) -> ::windows_core::Result<IStringCollection>;
-    fn MsrcSeverity(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn RecommendedCpuSpeed(&self) -> ::windows_core::Result<i32>;
-    fn RecommendedHardDiskSpace(&self) -> ::windows_core::Result<i32>;
-    fn RecommendedMemory(&self) -> ::windows_core::Result<i32>;
-    fn ReleaseNotes(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn SecurityBulletinIDs(&self) -> ::windows_core::Result<IStringCollection>;
-    fn SupersededUpdateIDs(&self) -> ::windows_core::Result<IStringCollection>;
-    fn SupportUrl(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn Type(&self) -> ::windows_core::Result<UpdateType>;
-    fn UninstallationNotes(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn UninstallationBehavior(&self) -> ::windows_core::Result<IInstallationBehavior>;
-    fn UninstallationSteps(&self) -> ::windows_core::Result<IStringCollection>;
-    fn KBArticleIDs(&self) -> ::windows_core::Result<IStringCollection>;
-    fn AcceptEula(&self) -> ::windows_core::Result<()>;
-    fn DeploymentAction(&self) -> ::windows_core::Result<DeploymentAction>;
-    fn CopyFromCache(&self, path: &::windows_core::BSTR, toextractcabfiles: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
-    fn DownloadPriority(&self) -> ::windows_core::Result<DownloadPriority>;
-    fn DownloadContents(&self) -> ::windows_core::Result<IUpdateDownloadContentCollection>;
+pub trait IUpdate_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn Title(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn AutoSelectOnWebSites(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn BundledUpdates(this: &Self::This) -> ::windows_core::Result<IUpdateCollection>;
+    fn CanRequireSource(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn Categories(this: &Self::This) -> ::windows_core::Result<ICategoryCollection>;
+    fn Deadline(this: &Self::This) -> ::windows_core::Result<super::Variant::VARIANT>;
+    fn DeltaCompressedContentAvailable(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn DeltaCompressedContentPreferred(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn Description(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn EulaAccepted(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn EulaText(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn HandlerID(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn Identity(this: &Self::This) -> ::windows_core::Result<IUpdateIdentity>;
+    fn Image(this: &Self::This) -> ::windows_core::Result<IImageInformation>;
+    fn InstallationBehavior(this: &Self::This) -> ::windows_core::Result<IInstallationBehavior>;
+    fn IsBeta(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn IsDownloaded(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn IsHidden(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn SetIsHidden(this: &Self::This, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
+    fn IsInstalled(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn IsMandatory(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn IsUninstallable(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn Languages(this: &Self::This) -> ::windows_core::Result<IStringCollection>;
+    fn LastDeploymentChangeTime(this: &Self::This) -> ::windows_core::Result<f64>;
+    fn MaxDownloadSize(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::DECIMAL>;
+    fn MinDownloadSize(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::DECIMAL>;
+    fn MoreInfoUrls(this: &Self::This) -> ::windows_core::Result<IStringCollection>;
+    fn MsrcSeverity(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn RecommendedCpuSpeed(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn RecommendedHardDiskSpace(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn RecommendedMemory(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn ReleaseNotes(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn SecurityBulletinIDs(this: &Self::This) -> ::windows_core::Result<IStringCollection>;
+    fn SupersededUpdateIDs(this: &Self::This) -> ::windows_core::Result<IStringCollection>;
+    fn SupportUrl(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn Type(this: &Self::This) -> ::windows_core::Result<UpdateType>;
+    fn UninstallationNotes(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn UninstallationBehavior(this: &Self::This) -> ::windows_core::Result<IInstallationBehavior>;
+    fn UninstallationSteps(this: &Self::This) -> ::windows_core::Result<IStringCollection>;
+    fn KBArticleIDs(this: &Self::This) -> ::windows_core::Result<IStringCollection>;
+    fn AcceptEula(this: &Self::This) -> ::windows_core::Result<()>;
+    fn DeploymentAction(this: &Self::This) -> ::windows_core::Result<DeploymentAction>;
+    fn CopyFromCache(this: &Self::This, path: &::windows_core::BSTR, toextractcabfiles: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
+    fn DownloadPriority(this: &Self::This) -> ::windows_core::Result<DownloadPriority>;
+    fn DownloadContents(this: &Self::This) -> ::windows_core::Result<IUpdateDownloadContentCollection>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdate {}
+impl ::windows_core::Iids for IUpdate {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdate_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>() -> IUpdate_Vtbl {
-        unsafe extern "system" fn Title<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Title() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdate {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Title<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Title(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn AutoSelectOnWebSites<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.AutoSelectOnWebSites() {
+        unsafe extern "system" fn AutoSelectOnWebSites<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::AutoSelectOnWebSites(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn BundledUpdates<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.BundledUpdates() {
+        unsafe extern "system" fn BundledUpdates<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::BundledUpdates(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn CanRequireSource<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CanRequireSource() {
+        unsafe extern "system" fn CanRequireSource<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CanRequireSource(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Categories<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Categories() {
+        unsafe extern "system" fn Categories<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Categories(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Deadline<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::Variant::VARIANT) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Deadline() {
+        unsafe extern "system" fn Deadline<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::Variant::VARIANT) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Deadline(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn DeltaCompressedContentAvailable<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DeltaCompressedContentAvailable() {
+        unsafe extern "system" fn DeltaCompressedContentAvailable<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DeltaCompressedContentAvailable(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn DeltaCompressedContentPreferred<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DeltaCompressedContentPreferred() {
+        unsafe extern "system" fn DeltaCompressedContentPreferred<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DeltaCompressedContentPreferred(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Description<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Description() {
+        unsafe extern "system" fn Description<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Description(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn EulaAccepted<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.EulaAccepted() {
+        unsafe extern "system" fn EulaAccepted<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::EulaAccepted(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn EulaText<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.EulaText() {
+        unsafe extern "system" fn EulaText<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::EulaText(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn HandlerID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.HandlerID() {
+        unsafe extern "system" fn HandlerID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::HandlerID(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Identity<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Identity() {
+        unsafe extern "system" fn Identity<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Identity(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Image<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Image() {
+        unsafe extern "system" fn Image<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Image(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn InstallationBehavior<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.InstallationBehavior() {
+        unsafe extern "system" fn InstallationBehavior<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::InstallationBehavior(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn IsBeta<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsBeta() {
+        unsafe extern "system" fn IsBeta<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsBeta(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn IsDownloaded<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsDownloaded() {
+        unsafe extern "system" fn IsDownloaded<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsDownloaded(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn IsHidden<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsHidden() {
+        unsafe extern "system" fn IsHidden<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsHidden(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetIsHidden<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetIsHidden(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetIsHidden<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetIsHidden(this, ::core::mem::transmute_copy(&value)).into())
         }
-        unsafe extern "system" fn IsInstalled<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsInstalled() {
+        unsafe extern "system" fn IsInstalled<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsInstalled(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn IsMandatory<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsMandatory() {
+        unsafe extern "system" fn IsMandatory<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsMandatory(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn IsUninstallable<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsUninstallable() {
+        unsafe extern "system" fn IsUninstallable<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsUninstallable(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Languages<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Languages() {
+        unsafe extern "system" fn Languages<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Languages(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn LastDeploymentChangeTime<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut f64) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.LastDeploymentChangeTime() {
+        unsafe extern "system" fn LastDeploymentChangeTime<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut f64) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::LastDeploymentChangeTime(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn MaxDownloadSize<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::DECIMAL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.MaxDownloadSize() {
+        unsafe extern "system" fn MaxDownloadSize<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::DECIMAL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::MaxDownloadSize(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn MinDownloadSize<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::DECIMAL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.MinDownloadSize() {
+        unsafe extern "system" fn MinDownloadSize<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::DECIMAL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::MinDownloadSize(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn MoreInfoUrls<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.MoreInfoUrls() {
+        unsafe extern "system" fn MoreInfoUrls<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::MoreInfoUrls(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn MsrcSeverity<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.MsrcSeverity() {
+        unsafe extern "system" fn MsrcSeverity<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::MsrcSeverity(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn RecommendedCpuSpeed<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RecommendedCpuSpeed() {
+        unsafe extern "system" fn RecommendedCpuSpeed<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RecommendedCpuSpeed(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn RecommendedHardDiskSpace<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RecommendedHardDiskSpace() {
+        unsafe extern "system" fn RecommendedHardDiskSpace<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RecommendedHardDiskSpace(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn RecommendedMemory<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RecommendedMemory() {
+        unsafe extern "system" fn RecommendedMemory<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RecommendedMemory(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ReleaseNotes<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ReleaseNotes() {
+        unsafe extern "system" fn ReleaseNotes<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ReleaseNotes(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SecurityBulletinIDs<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.SecurityBulletinIDs() {
+        unsafe extern "system" fn SecurityBulletinIDs<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::SecurityBulletinIDs(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SupersededUpdateIDs<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.SupersededUpdateIDs() {
+        unsafe extern "system" fn SupersededUpdateIDs<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::SupersededUpdateIDs(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SupportUrl<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.SupportUrl() {
+        unsafe extern "system" fn SupportUrl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::SupportUrl(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Type<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut UpdateType) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Type() {
+        unsafe extern "system" fn Type<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut UpdateType) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Type(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn UninstallationNotes<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.UninstallationNotes() {
+        unsafe extern "system" fn UninstallationNotes<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::UninstallationNotes(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn UninstallationBehavior<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.UninstallationBehavior() {
+        unsafe extern "system" fn UninstallationBehavior<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::UninstallationBehavior(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn UninstallationSteps<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.UninstallationSteps() {
+        unsafe extern "system" fn UninstallationSteps<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::UninstallationSteps(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn KBArticleIDs<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.KBArticleIDs() {
+        unsafe extern "system" fn KBArticleIDs<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::KBArticleIDs(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn AcceptEula<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.AcceptEula().into()
+        unsafe extern "system" fn AcceptEula<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::AcceptEula(this).into())
         }
-        unsafe extern "system" fn DeploymentAction<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut DeploymentAction) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DeploymentAction() {
+        unsafe extern "system" fn DeploymentAction<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut DeploymentAction) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DeploymentAction(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn CopyFromCache<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, path: ::std::mem::MaybeUninit<::windows_core::BSTR>, toextractcabfiles: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.CopyFromCache(::core::mem::transmute(&path), ::core::mem::transmute_copy(&toextractcabfiles)).into()
+        unsafe extern "system" fn CopyFromCache<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, path: ::std::mem::MaybeUninit<::windows_core::BSTR>, toextractcabfiles: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::CopyFromCache(this, ::core::mem::transmute(&path), ::core::mem::transmute_copy(&toextractcabfiles)).into())
         }
-        unsafe extern "system" fn DownloadPriority<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut DownloadPriority) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DownloadPriority() {
+        unsafe extern "system" fn DownloadPriority<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut DownloadPriority) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DownloadPriority(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn DownloadContents<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DownloadContents() {
+        unsafe extern "system" fn DownloadContents<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DownloadContents(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdate_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             Title: Title::<Identity, Impl, OFFSET>,
             AutoSelectOnWebSites: AutoSelectOnWebSites::<Identity, Impl, OFFSET>,
             BundledUpdates: BundledUpdates::<Identity, Impl, OFFSET>,
@@ -2315,278 +2005,242 @@ impl IUpdate_Vtbl {
             DownloadPriority: DownloadPriority::<Identity, Impl, OFFSET>,
             DownloadContents: DownloadContents::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdate as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdate2_Impl: Sized + IUpdate_Impl {
-    fn RebootRequired(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn IsPresent(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn CveIDs(&self) -> ::windows_core::Result<IStringCollection>;
-    fn CopyToCache(&self, pfiles: ::core::option::Option<&IStringCollection>) -> ::windows_core::Result<()>;
+pub trait IUpdate2_Impl: ::windows_core::BaseImpl + IUpdate_Impl {
+    fn RebootRequired(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn IsPresent(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn CveIDs(this: &Self::This) -> ::windows_core::Result<IStringCollection>;
+    fn CopyToCache(this: &Self::This, pfiles: ::core::option::Option<&IStringCollection>) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdate2 {}
+impl ::windows_core::Iids for IUpdate2 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IUpdate);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdate2_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate2_Impl, const OFFSET: isize>() -> IUpdate2_Vtbl {
-        unsafe extern "system" fn RebootRequired<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RebootRequired() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate2_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdate2 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn RebootRequired<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RebootRequired(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn IsPresent<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsPresent() {
+        unsafe extern "system" fn IsPresent<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsPresent(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn CveIDs<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CveIDs() {
+        unsafe extern "system" fn CveIDs<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CveIDs(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn CopyToCache<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, pfiles: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.CopyToCache(::windows_core::from_raw_borrowed(&pfiles)).into()
+        unsafe extern "system" fn CopyToCache<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, pfiles: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::CopyToCache(this, ::windows_core::from_raw_borrowed(&pfiles)).into())
         }
-        Self {
-            base__: IUpdate_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdate2_Vtbl {
+            base__: <IUpdate as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             RebootRequired: RebootRequired::<Identity, Impl, OFFSET>,
             IsPresent: IsPresent::<Identity, Impl, OFFSET>,
             CveIDs: CveIDs::<Identity, Impl, OFFSET>,
             CopyToCache: CopyToCache::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdate2 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdate as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdate3_Impl: Sized + IUpdate2_Impl {
-    fn BrowseOnly(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+pub trait IUpdate3_Impl: ::windows_core::BaseImpl + IUpdate2_Impl {
+    fn BrowseOnly(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdate3 {}
+impl ::windows_core::Iids for IUpdate3 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IUpdate2);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdate3_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate3_Impl, const OFFSET: isize>() -> IUpdate3_Vtbl {
-        unsafe extern "system" fn BrowseOnly<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate3_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.BrowseOnly() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate3_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdate3 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn BrowseOnly<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate3_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::BrowseOnly(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: IUpdate2_Vtbl::new::<Identity, Impl, OFFSET>(), BrowseOnly: BrowseOnly::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdate3 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdate as ::windows_core::ComInterface>::IID || *iid == <IUpdate2 as ::windows_core::ComInterface>::IID
-    }
+        IUpdate3_Vtbl { base__: <IUpdate2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, BrowseOnly: BrowseOnly::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdate4_Impl: Sized + IUpdate3_Impl {
-    fn PerUser(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+pub trait IUpdate4_Impl: ::windows_core::BaseImpl + IUpdate3_Impl {
+    fn PerUser(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdate4 {}
+impl ::windows_core::Iids for IUpdate4 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IUpdate3);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdate4_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate4_Impl, const OFFSET: isize>() -> IUpdate4_Vtbl {
-        unsafe extern "system" fn PerUser<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate4_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.PerUser() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate4_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdate4 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn PerUser<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate4_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::PerUser(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: IUpdate3_Vtbl::new::<Identity, Impl, OFFSET>(), PerUser: PerUser::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdate4 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdate as ::windows_core::ComInterface>::IID || *iid == <IUpdate2 as ::windows_core::ComInterface>::IID || *iid == <IUpdate3 as ::windows_core::ComInterface>::IID
-    }
+        IUpdate4_Vtbl { base__: <IUpdate3 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, PerUser: PerUser::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdate5_Impl: Sized + IUpdate4_Impl {
-    fn AutoSelection(&self) -> ::windows_core::Result<AutoSelectionMode>;
-    fn AutoDownload(&self) -> ::windows_core::Result<AutoDownloadMode>;
+pub trait IUpdate5_Impl: ::windows_core::BaseImpl + IUpdate4_Impl {
+    fn AutoSelection(this: &Self::This) -> ::windows_core::Result<AutoSelectionMode>;
+    fn AutoDownload(this: &Self::This) -> ::windows_core::Result<AutoDownloadMode>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdate5 {}
+impl ::windows_core::Iids for IUpdate5 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IUpdate4);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdate5_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate5_Impl, const OFFSET: isize>() -> IUpdate5_Vtbl {
-        unsafe extern "system" fn AutoSelection<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate5_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut AutoSelectionMode) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.AutoSelection() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate5_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdate5 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn AutoSelection<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate5_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut AutoSelectionMode) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::AutoSelection(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn AutoDownload<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdate5_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut AutoDownloadMode) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.AutoDownload() {
+        unsafe extern "system" fn AutoDownload<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdate5_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut AutoDownloadMode) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::AutoDownload(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: IUpdate4_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdate5_Vtbl {
+            base__: <IUpdate4 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             AutoSelection: AutoSelection::<Identity, Impl, OFFSET>,
             AutoDownload: AutoDownload::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdate5 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdate as ::windows_core::ComInterface>::IID || *iid == <IUpdate2 as ::windows_core::ComInterface>::IID || *iid == <IUpdate3 as ::windows_core::ComInterface>::IID || *iid == <IUpdate4 as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateCollection_Impl: Sized + super::Com::IDispatch_Impl {
-    fn get_Item(&self, index: i32) -> ::windows_core::Result<IUpdate>;
-    fn put_Item(&self, index: i32, value: ::core::option::Option<&IUpdate>) -> ::windows_core::Result<()>;
-    fn _NewEnum(&self) -> ::windows_core::Result<::windows_core::IUnknown>;
-    fn Count(&self) -> ::windows_core::Result<i32>;
-    fn ReadOnly(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn Add(&self, value: ::core::option::Option<&IUpdate>) -> ::windows_core::Result<i32>;
-    fn Clear(&self) -> ::windows_core::Result<()>;
-    fn Copy(&self) -> ::windows_core::Result<IUpdateCollection>;
-    fn Insert(&self, index: i32, value: ::core::option::Option<&IUpdate>) -> ::windows_core::Result<()>;
-    fn RemoveAt(&self, index: i32) -> ::windows_core::Result<()>;
+pub trait IUpdateCollection_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn get_Item(this: &Self::This, index: i32) -> ::windows_core::Result<IUpdate>;
+    fn put_Item(this: &Self::This, index: i32, value: ::core::option::Option<&IUpdate>) -> ::windows_core::Result<()>;
+    fn _NewEnum(this: &Self::This) -> ::windows_core::Result<::windows_core::IUnknown>;
+    fn Count(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn ReadOnly(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn Add(this: &Self::This, value: ::core::option::Option<&IUpdate>) -> ::windows_core::Result<i32>;
+    fn Clear(this: &Self::This) -> ::windows_core::Result<()>;
+    fn Copy(this: &Self::This) -> ::windows_core::Result<IUpdateCollection>;
+    fn Insert(this: &Self::This, index: i32, value: ::core::option::Option<&IUpdate>) -> ::windows_core::Result<()>;
+    fn RemoveAt(this: &Self::This, index: i32) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateCollection {}
+impl ::windows_core::Iids for IUpdateCollection {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateCollection_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: isize>() -> IUpdateCollection_Vtbl {
-        unsafe extern "system" fn get_Item<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, index: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.get_Item(::core::mem::transmute_copy(&index)) {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateCollection {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn get_Item<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, index: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::get_Item(this, ::core::mem::transmute_copy(&index)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn put_Item<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, index: i32, value: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.put_Item(::core::mem::transmute_copy(&index), ::windows_core::from_raw_borrowed(&value)).into()
+        unsafe extern "system" fn put_Item<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, index: i32, value: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::put_Item(this, ::core::mem::transmute_copy(&index), ::windows_core::from_raw_borrowed(&value)).into())
         }
-        unsafe extern "system" fn _NewEnum<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this._NewEnum() {
+        unsafe extern "system" fn _NewEnum<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::_NewEnum(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Count<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Count() {
+        unsafe extern "system" fn Count<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Count(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ReadOnly<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ReadOnly() {
+        unsafe extern "system" fn ReadOnly<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ReadOnly(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Add<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Add(::windows_core::from_raw_borrowed(&value)) {
+        unsafe extern "system" fn Add<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Add(this, ::windows_core::from_raw_borrowed(&value)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Clear<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.Clear().into()
+        unsafe extern "system" fn Clear<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::Clear(this).into())
         }
-        unsafe extern "system" fn Copy<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Copy() {
+        unsafe extern "system" fn Copy<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Copy(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Insert<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, index: i32, value: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.Insert(::core::mem::transmute_copy(&index), ::windows_core::from_raw_borrowed(&value)).into()
+        unsafe extern "system" fn Insert<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, index: i32, value: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::Insert(this, ::core::mem::transmute_copy(&index), ::windows_core::from_raw_borrowed(&value)).into())
         }
-        unsafe extern "system" fn RemoveAt<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, index: i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.RemoveAt(::core::mem::transmute_copy(&index)).into()
+        unsafe extern "system" fn RemoveAt<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, index: i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::RemoveAt(this, ::core::mem::transmute_copy(&index)).into())
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateCollection_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             get_Item: get_Item::<Identity, Impl, OFFSET>,
             put_Item: put_Item::<Identity, Impl, OFFSET>,
             _NewEnum: _NewEnum::<Identity, Impl, OFFSET>,
@@ -2598,286 +2252,250 @@ impl IUpdateCollection_Vtbl {
             Insert: Insert::<Identity, Impl, OFFSET>,
             RemoveAt: RemoveAt::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateCollection as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateDownloadContent_Impl: Sized + super::Com::IDispatch_Impl {
-    fn DownloadUrl(&self) -> ::windows_core::Result<::windows_core::BSTR>;
+pub trait IUpdateDownloadContent_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn DownloadUrl(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateDownloadContent {}
+impl ::windows_core::Iids for IUpdateDownloadContent {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateDownloadContent_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloadContent_Impl, const OFFSET: isize>() -> IUpdateDownloadContent_Vtbl {
-        unsafe extern "system" fn DownloadUrl<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloadContent_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DownloadUrl() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloadContent_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateDownloadContent {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn DownloadUrl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloadContent_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DownloadUrl(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(), DownloadUrl: DownloadUrl::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateDownloadContent as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+        IUpdateDownloadContent_Vtbl { base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, DownloadUrl: DownloadUrl::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateDownloadContent2_Impl: Sized + IUpdateDownloadContent_Impl {
-    fn IsDeltaCompressedContent(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+pub trait IUpdateDownloadContent2_Impl: ::windows_core::BaseImpl + IUpdateDownloadContent_Impl {
+    fn IsDeltaCompressedContent(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateDownloadContent2 {}
+impl ::windows_core::Iids for IUpdateDownloadContent2 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IUpdateDownloadContent);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateDownloadContent2_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloadContent2_Impl, const OFFSET: isize>() -> IUpdateDownloadContent2_Vtbl {
-        unsafe extern "system" fn IsDeltaCompressedContent<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloadContent2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsDeltaCompressedContent() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloadContent2_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateDownloadContent2 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn IsDeltaCompressedContent<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloadContent2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsDeltaCompressedContent(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: IUpdateDownloadContent_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateDownloadContent2_Vtbl {
+            base__: <IUpdateDownloadContent as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             IsDeltaCompressedContent: IsDeltaCompressedContent::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateDownloadContent2 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdateDownloadContent as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateDownloadContentCollection_Impl: Sized + super::Com::IDispatch_Impl {
-    fn get_Item(&self, index: i32) -> ::windows_core::Result<IUpdateDownloadContent>;
-    fn _NewEnum(&self) -> ::windows_core::Result<::windows_core::IUnknown>;
-    fn Count(&self) -> ::windows_core::Result<i32>;
+pub trait IUpdateDownloadContentCollection_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn get_Item(this: &Self::This, index: i32) -> ::windows_core::Result<IUpdateDownloadContent>;
+    fn _NewEnum(this: &Self::This) -> ::windows_core::Result<::windows_core::IUnknown>;
+    fn Count(this: &Self::This) -> ::windows_core::Result<i32>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateDownloadContentCollection {}
+impl ::windows_core::Iids for IUpdateDownloadContentCollection {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateDownloadContentCollection_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloadContentCollection_Impl, const OFFSET: isize>() -> IUpdateDownloadContentCollection_Vtbl {
-        unsafe extern "system" fn get_Item<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloadContentCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, index: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.get_Item(::core::mem::transmute_copy(&index)) {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloadContentCollection_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateDownloadContentCollection {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn get_Item<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloadContentCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, index: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::get_Item(this, ::core::mem::transmute_copy(&index)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn _NewEnum<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloadContentCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this._NewEnum() {
+        unsafe extern "system" fn _NewEnum<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloadContentCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::_NewEnum(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Count<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloadContentCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Count() {
+        unsafe extern "system" fn Count<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloadContentCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Count(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateDownloadContentCollection_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             get_Item: get_Item::<Identity, Impl, OFFSET>,
             _NewEnum: _NewEnum::<Identity, Impl, OFFSET>,
             Count: Count::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateDownloadContentCollection as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateDownloadResult_Impl: Sized + super::Com::IDispatch_Impl {
-    fn HResult(&self) -> ::windows_core::Result<i32>;
-    fn ResultCode(&self) -> ::windows_core::Result<OperationResultCode>;
+pub trait IUpdateDownloadResult_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn HResult(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn ResultCode(this: &Self::This) -> ::windows_core::Result<OperationResultCode>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateDownloadResult {}
+impl ::windows_core::Iids for IUpdateDownloadResult {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateDownloadResult_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloadResult_Impl, const OFFSET: isize>() -> IUpdateDownloadResult_Vtbl {
-        unsafe extern "system" fn HResult<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloadResult_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.HResult() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloadResult_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateDownloadResult {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn HResult<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloadResult_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::HResult(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ResultCode<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloadResult_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut OperationResultCode) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ResultCode() {
+        unsafe extern "system" fn ResultCode<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloadResult_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut OperationResultCode) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ResultCode(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateDownloadResult_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             HResult: HResult::<Identity, Impl, OFFSET>,
             ResultCode: ResultCode::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateDownloadResult as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateDownloader_Impl: Sized + super::Com::IDispatch_Impl {
-    fn ClientApplicationID(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn SetClientApplicationID(&self, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
-    fn IsForced(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn SetIsForced(&self, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
-    fn Priority(&self) -> ::windows_core::Result<DownloadPriority>;
-    fn SetPriority(&self, value: DownloadPriority) -> ::windows_core::Result<()>;
-    fn Updates(&self) -> ::windows_core::Result<IUpdateCollection>;
-    fn SetUpdates(&self, value: ::core::option::Option<&IUpdateCollection>) -> ::windows_core::Result<()>;
-    fn BeginDownload(&self, onprogresschanged: ::core::option::Option<&::windows_core::IUnknown>, oncompleted: ::core::option::Option<&::windows_core::IUnknown>, state: &super::Variant::VARIANT) -> ::windows_core::Result<IDownloadJob>;
-    fn Download(&self) -> ::windows_core::Result<IDownloadResult>;
-    fn EndDownload(&self, value: ::core::option::Option<&IDownloadJob>) -> ::windows_core::Result<IDownloadResult>;
+pub trait IUpdateDownloader_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn ClientApplicationID(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn SetClientApplicationID(this: &Self::This, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
+    fn IsForced(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn SetIsForced(this: &Self::This, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
+    fn Priority(this: &Self::This) -> ::windows_core::Result<DownloadPriority>;
+    fn SetPriority(this: &Self::This, value: DownloadPriority) -> ::windows_core::Result<()>;
+    fn Updates(this: &Self::This) -> ::windows_core::Result<IUpdateCollection>;
+    fn SetUpdates(this: &Self::This, value: ::core::option::Option<&IUpdateCollection>) -> ::windows_core::Result<()>;
+    fn BeginDownload(this: &Self::This, onprogresschanged: ::core::option::Option<&::windows_core::IUnknown>, oncompleted: ::core::option::Option<&::windows_core::IUnknown>, state: &super::Variant::VARIANT) -> ::windows_core::Result<IDownloadJob>;
+    fn Download(this: &Self::This) -> ::windows_core::Result<IDownloadResult>;
+    fn EndDownload(this: &Self::This, value: ::core::option::Option<&IDownloadJob>) -> ::windows_core::Result<IDownloadResult>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateDownloader {}
+impl ::windows_core::Iids for IUpdateDownloader {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateDownloader_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: isize>() -> IUpdateDownloader_Vtbl {
-        unsafe extern "system" fn ClientApplicationID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ClientApplicationID() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateDownloader {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ClientApplicationID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ClientApplicationID(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetClientApplicationID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetClientApplicationID(::core::mem::transmute(&value)).into()
+        unsafe extern "system" fn SetClientApplicationID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetClientApplicationID(this, ::core::mem::transmute(&value)).into())
         }
-        unsafe extern "system" fn IsForced<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsForced() {
+        unsafe extern "system" fn IsForced<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsForced(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetIsForced<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetIsForced(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetIsForced<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetIsForced(this, ::core::mem::transmute_copy(&value)).into())
         }
-        unsafe extern "system" fn Priority<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut DownloadPriority) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Priority() {
+        unsafe extern "system" fn Priority<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut DownloadPriority) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Priority(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetPriority<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: DownloadPriority) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetPriority(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetPriority<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: DownloadPriority) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetPriority(this, ::core::mem::transmute_copy(&value)).into())
         }
-        unsafe extern "system" fn Updates<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Updates() {
+        unsafe extern "system" fn Updates<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Updates(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetUpdates<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetUpdates(::windows_core::from_raw_borrowed(&value)).into()
+        unsafe extern "system" fn SetUpdates<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetUpdates(this, ::windows_core::from_raw_borrowed(&value)).into())
         }
-        unsafe extern "system" fn BeginDownload<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, onprogresschanged: *mut ::core::ffi::c_void, oncompleted: *mut ::core::ffi::c_void, state: super::Variant::VARIANT, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.BeginDownload(::windows_core::from_raw_borrowed(&onprogresschanged), ::windows_core::from_raw_borrowed(&oncompleted), ::core::mem::transmute(&state)) {
+        unsafe extern "system" fn BeginDownload<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, onprogresschanged: *mut ::core::ffi::c_void, oncompleted: *mut ::core::ffi::c_void, state: super::Variant::VARIANT, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::BeginDownload(this, ::windows_core::from_raw_borrowed(&onprogresschanged), ::windows_core::from_raw_borrowed(&oncompleted), ::core::mem::transmute(&state)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Download<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Download() {
+        unsafe extern "system" fn Download<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Download(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn EndDownload<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.EndDownload(::windows_core::from_raw_borrowed(&value)) {
+        unsafe extern "system" fn EndDownload<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateDownloader_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::EndDownload(this, ::windows_core::from_raw_borrowed(&value)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateDownloader_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             ClientApplicationID: ClientApplicationID::<Identity, Impl, OFFSET>,
             SetClientApplicationID: SetClientApplicationID::<Identity, Impl, OFFSET>,
             IsForced: IsForced::<Identity, Impl, OFFSET>,
@@ -2890,302 +2508,262 @@ impl IUpdateDownloader_Vtbl {
             Download: Download::<Identity, Impl, OFFSET>,
             EndDownload: EndDownload::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateDownloader as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateException_Impl: Sized + super::Com::IDispatch_Impl {
-    fn Message(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn HResult(&self) -> ::windows_core::Result<i32>;
-    fn Context(&self) -> ::windows_core::Result<UpdateExceptionContext>;
+pub trait IUpdateException_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn Message(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn HResult(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn Context(this: &Self::This) -> ::windows_core::Result<UpdateExceptionContext>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateException {}
+impl ::windows_core::Iids for IUpdateException {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateException_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateException_Impl, const OFFSET: isize>() -> IUpdateException_Vtbl {
-        unsafe extern "system" fn Message<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateException_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Message() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateException_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateException {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Message<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateException_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Message(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn HResult<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateException_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.HResult() {
+        unsafe extern "system" fn HResult<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateException_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::HResult(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Context<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateException_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut UpdateExceptionContext) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Context() {
+        unsafe extern "system" fn Context<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateException_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut UpdateExceptionContext) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Context(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateException_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             Message: Message::<Identity, Impl, OFFSET>,
             HResult: HResult::<Identity, Impl, OFFSET>,
             Context: Context::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateException as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateExceptionCollection_Impl: Sized + super::Com::IDispatch_Impl {
-    fn get_Item(&self, index: i32) -> ::windows_core::Result<IUpdateException>;
-    fn _NewEnum(&self) -> ::windows_core::Result<::windows_core::IUnknown>;
-    fn Count(&self) -> ::windows_core::Result<i32>;
+pub trait IUpdateExceptionCollection_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn get_Item(this: &Self::This, index: i32) -> ::windows_core::Result<IUpdateException>;
+    fn _NewEnum(this: &Self::This) -> ::windows_core::Result<::windows_core::IUnknown>;
+    fn Count(this: &Self::This) -> ::windows_core::Result<i32>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateExceptionCollection {}
+impl ::windows_core::Iids for IUpdateExceptionCollection {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateExceptionCollection_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateExceptionCollection_Impl, const OFFSET: isize>() -> IUpdateExceptionCollection_Vtbl {
-        unsafe extern "system" fn get_Item<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateExceptionCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, index: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.get_Item(::core::mem::transmute_copy(&index)) {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateExceptionCollection_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateExceptionCollection {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn get_Item<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateExceptionCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, index: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::get_Item(this, ::core::mem::transmute_copy(&index)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn _NewEnum<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateExceptionCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this._NewEnum() {
+        unsafe extern "system" fn _NewEnum<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateExceptionCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::_NewEnum(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Count<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateExceptionCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Count() {
+        unsafe extern "system" fn Count<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateExceptionCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Count(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateExceptionCollection_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             get_Item: get_Item::<Identity, Impl, OFFSET>,
             _NewEnum: _NewEnum::<Identity, Impl, OFFSET>,
             Count: Count::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateExceptionCollection as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateHistoryEntry_Impl: Sized + super::Com::IDispatch_Impl {
-    fn Operation(&self) -> ::windows_core::Result<UpdateOperation>;
-    fn ResultCode(&self) -> ::windows_core::Result<OperationResultCode>;
-    fn HResult(&self) -> ::windows_core::Result<i32>;
-    fn Date(&self) -> ::windows_core::Result<f64>;
-    fn UpdateIdentity(&self) -> ::windows_core::Result<IUpdateIdentity>;
-    fn Title(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn Description(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn UnmappedResultCode(&self) -> ::windows_core::Result<i32>;
-    fn ClientApplicationID(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn ServerSelection(&self) -> ::windows_core::Result<ServerSelection>;
-    fn ServiceID(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn UninstallationSteps(&self) -> ::windows_core::Result<IStringCollection>;
-    fn UninstallationNotes(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn SupportUrl(&self) -> ::windows_core::Result<::windows_core::BSTR>;
+pub trait IUpdateHistoryEntry_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn Operation(this: &Self::This) -> ::windows_core::Result<UpdateOperation>;
+    fn ResultCode(this: &Self::This) -> ::windows_core::Result<OperationResultCode>;
+    fn HResult(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn Date(this: &Self::This) -> ::windows_core::Result<f64>;
+    fn UpdateIdentity(this: &Self::This) -> ::windows_core::Result<IUpdateIdentity>;
+    fn Title(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn Description(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn UnmappedResultCode(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn ClientApplicationID(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn ServerSelection(this: &Self::This) -> ::windows_core::Result<ServerSelection>;
+    fn ServiceID(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn UninstallationSteps(this: &Self::This) -> ::windows_core::Result<IStringCollection>;
+    fn UninstallationNotes(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn SupportUrl(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateHistoryEntry {}
+impl ::windows_core::Iids for IUpdateHistoryEntry {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateHistoryEntry_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: isize>() -> IUpdateHistoryEntry_Vtbl {
-        unsafe extern "system" fn Operation<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut UpdateOperation) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Operation() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateHistoryEntry {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Operation<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut UpdateOperation) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Operation(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ResultCode<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut OperationResultCode) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ResultCode() {
+        unsafe extern "system" fn ResultCode<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut OperationResultCode) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ResultCode(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn HResult<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.HResult() {
+        unsafe extern "system" fn HResult<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::HResult(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Date<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut f64) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Date() {
+        unsafe extern "system" fn Date<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut f64) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Date(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn UpdateIdentity<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.UpdateIdentity() {
+        unsafe extern "system" fn UpdateIdentity<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::UpdateIdentity(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Title<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Title() {
+        unsafe extern "system" fn Title<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Title(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Description<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Description() {
+        unsafe extern "system" fn Description<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Description(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn UnmappedResultCode<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.UnmappedResultCode() {
+        unsafe extern "system" fn UnmappedResultCode<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::UnmappedResultCode(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ClientApplicationID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ClientApplicationID() {
+        unsafe extern "system" fn ClientApplicationID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ClientApplicationID(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ServerSelection<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ServerSelection) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ServerSelection() {
+        unsafe extern "system" fn ServerSelection<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ServerSelection) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ServerSelection(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ServiceID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ServiceID() {
+        unsafe extern "system" fn ServiceID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ServiceID(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn UninstallationSteps<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.UninstallationSteps() {
+        unsafe extern "system" fn UninstallationSteps<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::UninstallationSteps(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn UninstallationNotes<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.UninstallationNotes() {
+        unsafe extern "system" fn UninstallationNotes<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::UninstallationNotes(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SupportUrl<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.SupportUrl() {
+        unsafe extern "system" fn SupportUrl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::SupportUrl(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateHistoryEntry_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             Operation: Operation::<Identity, Impl, OFFSET>,
             ResultCode: ResultCode::<Identity, Impl, OFFSET>,
             HResult: HResult::<Identity, Impl, OFFSET>,
@@ -3201,420 +2779,360 @@ impl IUpdateHistoryEntry_Vtbl {
             UninstallationNotes: UninstallationNotes::<Identity, Impl, OFFSET>,
             SupportUrl: SupportUrl::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateHistoryEntry as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateHistoryEntry2_Impl: Sized + IUpdateHistoryEntry_Impl {
-    fn Categories(&self) -> ::windows_core::Result<ICategoryCollection>;
+pub trait IUpdateHistoryEntry2_Impl: ::windows_core::BaseImpl + IUpdateHistoryEntry_Impl {
+    fn Categories(this: &Self::This) -> ::windows_core::Result<ICategoryCollection>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateHistoryEntry2 {}
+impl ::windows_core::Iids for IUpdateHistoryEntry2 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IUpdateHistoryEntry);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateHistoryEntry2_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntry2_Impl, const OFFSET: isize>() -> IUpdateHistoryEntry2_Vtbl {
-        unsafe extern "system" fn Categories<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntry2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Categories() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntry2_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateHistoryEntry2 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Categories<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntry2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Categories(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: IUpdateHistoryEntry_Vtbl::new::<Identity, Impl, OFFSET>(), Categories: Categories::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateHistoryEntry2 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdateHistoryEntry as ::windows_core::ComInterface>::IID
-    }
+        IUpdateHistoryEntry2_Vtbl { base__: <IUpdateHistoryEntry as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Categories: Categories::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateHistoryEntryCollection_Impl: Sized + super::Com::IDispatch_Impl {
-    fn get_Item(&self, index: i32) -> ::windows_core::Result<IUpdateHistoryEntry>;
-    fn _NewEnum(&self) -> ::windows_core::Result<::windows_core::IUnknown>;
-    fn Count(&self) -> ::windows_core::Result<i32>;
+pub trait IUpdateHistoryEntryCollection_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn get_Item(this: &Self::This, index: i32) -> ::windows_core::Result<IUpdateHistoryEntry>;
+    fn _NewEnum(this: &Self::This) -> ::windows_core::Result<::windows_core::IUnknown>;
+    fn Count(this: &Self::This) -> ::windows_core::Result<i32>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateHistoryEntryCollection {}
+impl ::windows_core::Iids for IUpdateHistoryEntryCollection {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateHistoryEntryCollection_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntryCollection_Impl, const OFFSET: isize>() -> IUpdateHistoryEntryCollection_Vtbl {
-        unsafe extern "system" fn get_Item<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntryCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, index: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.get_Item(::core::mem::transmute_copy(&index)) {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntryCollection_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateHistoryEntryCollection {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn get_Item<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntryCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, index: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::get_Item(this, ::core::mem::transmute_copy(&index)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn _NewEnum<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntryCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this._NewEnum() {
+        unsafe extern "system" fn _NewEnum<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntryCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::_NewEnum(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Count<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateHistoryEntryCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Count() {
+        unsafe extern "system" fn Count<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateHistoryEntryCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Count(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateHistoryEntryCollection_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             get_Item: get_Item::<Identity, Impl, OFFSET>,
             _NewEnum: _NewEnum::<Identity, Impl, OFFSET>,
             Count: Count::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateHistoryEntryCollection as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateIdentity_Impl: Sized + super::Com::IDispatch_Impl {
-    fn RevisionNumber(&self) -> ::windows_core::Result<i32>;
-    fn UpdateID(&self) -> ::windows_core::Result<::windows_core::BSTR>;
+pub trait IUpdateIdentity_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn RevisionNumber(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn UpdateID(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateIdentity {}
+impl ::windows_core::Iids for IUpdateIdentity {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateIdentity_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateIdentity_Impl, const OFFSET: isize>() -> IUpdateIdentity_Vtbl {
-        unsafe extern "system" fn RevisionNumber<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateIdentity_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RevisionNumber() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateIdentity_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateIdentity {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn RevisionNumber<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateIdentity_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RevisionNumber(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn UpdateID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateIdentity_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.UpdateID() {
+        unsafe extern "system" fn UpdateID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateIdentity_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::UpdateID(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateIdentity_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             RevisionNumber: RevisionNumber::<Identity, Impl, OFFSET>,
             UpdateID: UpdateID::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateIdentity as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateInstallationResult_Impl: Sized + super::Com::IDispatch_Impl {
-    fn HResult(&self) -> ::windows_core::Result<i32>;
-    fn RebootRequired(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn ResultCode(&self) -> ::windows_core::Result<OperationResultCode>;
+pub trait IUpdateInstallationResult_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn HResult(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn RebootRequired(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn ResultCode(this: &Self::This) -> ::windows_core::Result<OperationResultCode>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateInstallationResult {}
+impl ::windows_core::Iids for IUpdateInstallationResult {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateInstallationResult_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstallationResult_Impl, const OFFSET: isize>() -> IUpdateInstallationResult_Vtbl {
-        unsafe extern "system" fn HResult<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstallationResult_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.HResult() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstallationResult_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateInstallationResult {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn HResult<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstallationResult_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::HResult(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn RebootRequired<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstallationResult_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RebootRequired() {
+        unsafe extern "system" fn RebootRequired<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstallationResult_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RebootRequired(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ResultCode<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstallationResult_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut OperationResultCode) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ResultCode() {
+        unsafe extern "system" fn ResultCode<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstallationResult_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut OperationResultCode) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ResultCode(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateInstallationResult_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             HResult: HResult::<Identity, Impl, OFFSET>,
             RebootRequired: RebootRequired::<Identity, Impl, OFFSET>,
             ResultCode: ResultCode::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateInstallationResult as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateInstaller_Impl: Sized + super::Com::IDispatch_Impl {
-    fn ClientApplicationID(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn SetClientApplicationID(&self, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
-    fn IsForced(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn SetIsForced(&self, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
-    fn ParentHwnd(&self) -> ::windows_core::Result<super::super::Foundation::HWND>;
-    fn SetParentHwnd(&self, value: super::super::Foundation::HWND) -> ::windows_core::Result<()>;
-    fn SetParentWindow(&self, value: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
-    fn ParentWindow(&self) -> ::windows_core::Result<::windows_core::IUnknown>;
-    fn Updates(&self) -> ::windows_core::Result<IUpdateCollection>;
-    fn SetUpdates(&self, value: ::core::option::Option<&IUpdateCollection>) -> ::windows_core::Result<()>;
-    fn BeginInstall(&self, onprogresschanged: ::core::option::Option<&::windows_core::IUnknown>, oncompleted: ::core::option::Option<&::windows_core::IUnknown>, state: &super::Variant::VARIANT) -> ::windows_core::Result<IInstallationJob>;
-    fn BeginUninstall(&self, onprogresschanged: ::core::option::Option<&::windows_core::IUnknown>, oncompleted: ::core::option::Option<&::windows_core::IUnknown>, state: &super::Variant::VARIANT) -> ::windows_core::Result<IInstallationJob>;
-    fn EndInstall(&self, value: ::core::option::Option<&IInstallationJob>) -> ::windows_core::Result<IInstallationResult>;
-    fn EndUninstall(&self, value: ::core::option::Option<&IInstallationJob>) -> ::windows_core::Result<IInstallationResult>;
-    fn Install(&self) -> ::windows_core::Result<IInstallationResult>;
-    fn RunWizard(&self, dialogtitle: &::windows_core::BSTR) -> ::windows_core::Result<IInstallationResult>;
-    fn IsBusy(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn Uninstall(&self) -> ::windows_core::Result<IInstallationResult>;
-    fn AllowSourcePrompts(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn SetAllowSourcePrompts(&self, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
-    fn RebootRequiredBeforeInstallation(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+pub trait IUpdateInstaller_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn ClientApplicationID(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn SetClientApplicationID(this: &Self::This, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
+    fn IsForced(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn SetIsForced(this: &Self::This, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
+    fn ParentHwnd(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::HWND>;
+    fn SetParentHwnd(this: &Self::This, value: super::super::Foundation::HWND) -> ::windows_core::Result<()>;
+    fn SetParentWindow(this: &Self::This, value: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
+    fn ParentWindow(this: &Self::This) -> ::windows_core::Result<::windows_core::IUnknown>;
+    fn Updates(this: &Self::This) -> ::windows_core::Result<IUpdateCollection>;
+    fn SetUpdates(this: &Self::This, value: ::core::option::Option<&IUpdateCollection>) -> ::windows_core::Result<()>;
+    fn BeginInstall(this: &Self::This, onprogresschanged: ::core::option::Option<&::windows_core::IUnknown>, oncompleted: ::core::option::Option<&::windows_core::IUnknown>, state: &super::Variant::VARIANT) -> ::windows_core::Result<IInstallationJob>;
+    fn BeginUninstall(this: &Self::This, onprogresschanged: ::core::option::Option<&::windows_core::IUnknown>, oncompleted: ::core::option::Option<&::windows_core::IUnknown>, state: &super::Variant::VARIANT) -> ::windows_core::Result<IInstallationJob>;
+    fn EndInstall(this: &Self::This, value: ::core::option::Option<&IInstallationJob>) -> ::windows_core::Result<IInstallationResult>;
+    fn EndUninstall(this: &Self::This, value: ::core::option::Option<&IInstallationJob>) -> ::windows_core::Result<IInstallationResult>;
+    fn Install(this: &Self::This) -> ::windows_core::Result<IInstallationResult>;
+    fn RunWizard(this: &Self::This, dialogtitle: &::windows_core::BSTR) -> ::windows_core::Result<IInstallationResult>;
+    fn IsBusy(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn Uninstall(this: &Self::This) -> ::windows_core::Result<IInstallationResult>;
+    fn AllowSourcePrompts(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn SetAllowSourcePrompts(this: &Self::This, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
+    fn RebootRequiredBeforeInstallation(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateInstaller {}
+impl ::windows_core::Iids for IUpdateInstaller {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateInstaller_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>() -> IUpdateInstaller_Vtbl {
-        unsafe extern "system" fn ClientApplicationID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ClientApplicationID() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateInstaller {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ClientApplicationID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ClientApplicationID(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetClientApplicationID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetClientApplicationID(::core::mem::transmute(&value)).into()
+        unsafe extern "system" fn SetClientApplicationID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetClientApplicationID(this, ::core::mem::transmute(&value)).into())
         }
-        unsafe extern "system" fn IsForced<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsForced() {
+        unsafe extern "system" fn IsForced<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsForced(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetIsForced<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetIsForced(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetIsForced<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetIsForced(this, ::core::mem::transmute_copy(&value)).into())
         }
-        unsafe extern "system" fn ParentHwnd<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::HWND) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ParentHwnd() {
+        unsafe extern "system" fn ParentHwnd<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::HWND) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ParentHwnd(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetParentHwnd<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::HWND) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetParentHwnd(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetParentHwnd<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::HWND) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetParentHwnd(this, ::core::mem::transmute_copy(&value)).into())
         }
-        unsafe extern "system" fn SetParentWindow<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetParentWindow(::windows_core::from_raw_borrowed(&value)).into()
+        unsafe extern "system" fn SetParentWindow<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetParentWindow(this, ::windows_core::from_raw_borrowed(&value)).into())
         }
-        unsafe extern "system" fn ParentWindow<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ParentWindow() {
+        unsafe extern "system" fn ParentWindow<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ParentWindow(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Updates<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Updates() {
+        unsafe extern "system" fn Updates<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Updates(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetUpdates<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetUpdates(::windows_core::from_raw_borrowed(&value)).into()
+        unsafe extern "system" fn SetUpdates<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetUpdates(this, ::windows_core::from_raw_borrowed(&value)).into())
         }
-        unsafe extern "system" fn BeginInstall<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, onprogresschanged: *mut ::core::ffi::c_void, oncompleted: *mut ::core::ffi::c_void, state: super::Variant::VARIANT, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.BeginInstall(::windows_core::from_raw_borrowed(&onprogresschanged), ::windows_core::from_raw_borrowed(&oncompleted), ::core::mem::transmute(&state)) {
+        unsafe extern "system" fn BeginInstall<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, onprogresschanged: *mut ::core::ffi::c_void, oncompleted: *mut ::core::ffi::c_void, state: super::Variant::VARIANT, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::BeginInstall(this, ::windows_core::from_raw_borrowed(&onprogresschanged), ::windows_core::from_raw_borrowed(&oncompleted), ::core::mem::transmute(&state)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn BeginUninstall<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, onprogresschanged: *mut ::core::ffi::c_void, oncompleted: *mut ::core::ffi::c_void, state: super::Variant::VARIANT, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.BeginUninstall(::windows_core::from_raw_borrowed(&onprogresschanged), ::windows_core::from_raw_borrowed(&oncompleted), ::core::mem::transmute(&state)) {
+        unsafe extern "system" fn BeginUninstall<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, onprogresschanged: *mut ::core::ffi::c_void, oncompleted: *mut ::core::ffi::c_void, state: super::Variant::VARIANT, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::BeginUninstall(this, ::windows_core::from_raw_borrowed(&onprogresschanged), ::windows_core::from_raw_borrowed(&oncompleted), ::core::mem::transmute(&state)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn EndInstall<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.EndInstall(::windows_core::from_raw_borrowed(&value)) {
+        unsafe extern "system" fn EndInstall<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::EndInstall(this, ::windows_core::from_raw_borrowed(&value)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn EndUninstall<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.EndUninstall(::windows_core::from_raw_borrowed(&value)) {
+        unsafe extern "system" fn EndUninstall<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::EndUninstall(this, ::windows_core::from_raw_borrowed(&value)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Install<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Install() {
+        unsafe extern "system" fn Install<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Install(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn RunWizard<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, dialogtitle: ::std::mem::MaybeUninit<::windows_core::BSTR>, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RunWizard(::core::mem::transmute(&dialogtitle)) {
+        unsafe extern "system" fn RunWizard<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, dialogtitle: ::std::mem::MaybeUninit<::windows_core::BSTR>, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RunWizard(this, ::core::mem::transmute(&dialogtitle)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn IsBusy<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsBusy() {
+        unsafe extern "system" fn IsBusy<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsBusy(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Uninstall<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Uninstall() {
+        unsafe extern "system" fn Uninstall<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Uninstall(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn AllowSourcePrompts<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.AllowSourcePrompts() {
+        unsafe extern "system" fn AllowSourcePrompts<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::AllowSourcePrompts(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetAllowSourcePrompts<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetAllowSourcePrompts(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetAllowSourcePrompts<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetAllowSourcePrompts(this, ::core::mem::transmute_copy(&value)).into())
         }
-        unsafe extern "system" fn RebootRequiredBeforeInstallation<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RebootRequiredBeforeInstallation() {
+        unsafe extern "system" fn RebootRequiredBeforeInstallation<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RebootRequiredBeforeInstallation(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateInstaller_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             ClientApplicationID: ClientApplicationID::<Identity, Impl, OFFSET>,
             SetClientApplicationID: SetClientApplicationID::<Identity, Impl, OFFSET>,
             IsForced: IsForced::<Identity, Impl, OFFSET>,
@@ -3637,314 +3155,266 @@ impl IUpdateInstaller_Vtbl {
             SetAllowSourcePrompts: SetAllowSourcePrompts::<Identity, Impl, OFFSET>,
             RebootRequiredBeforeInstallation: RebootRequiredBeforeInstallation::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateInstaller as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateInstaller2_Impl: Sized + IUpdateInstaller_Impl {
-    fn ForceQuiet(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn SetForceQuiet(&self, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
+pub trait IUpdateInstaller2_Impl: ::windows_core::BaseImpl + IUpdateInstaller_Impl {
+    fn ForceQuiet(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn SetForceQuiet(this: &Self::This, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateInstaller2 {}
+impl ::windows_core::Iids for IUpdateInstaller2 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IUpdateInstaller);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateInstaller2_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller2_Impl, const OFFSET: isize>() -> IUpdateInstaller2_Vtbl {
-        unsafe extern "system" fn ForceQuiet<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ForceQuiet() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller2_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateInstaller2 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ForceQuiet<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ForceQuiet(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetForceQuiet<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetForceQuiet(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetForceQuiet<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetForceQuiet(this, ::core::mem::transmute_copy(&value)).into())
         }
-        Self {
-            base__: IUpdateInstaller_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateInstaller2_Vtbl {
+            base__: <IUpdateInstaller as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             ForceQuiet: ForceQuiet::<Identity, Impl, OFFSET>,
             SetForceQuiet: SetForceQuiet::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateInstaller2 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdateInstaller as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateInstaller3_Impl: Sized + IUpdateInstaller2_Impl {
-    fn AttemptCloseAppsIfNecessary(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn SetAttemptCloseAppsIfNecessary(&self, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
+pub trait IUpdateInstaller3_Impl: ::windows_core::BaseImpl + IUpdateInstaller2_Impl {
+    fn AttemptCloseAppsIfNecessary(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn SetAttemptCloseAppsIfNecessary(this: &Self::This, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateInstaller3 {}
+impl ::windows_core::Iids for IUpdateInstaller3 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IUpdateInstaller2);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateInstaller3_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller3_Impl, const OFFSET: isize>() -> IUpdateInstaller3_Vtbl {
-        unsafe extern "system" fn AttemptCloseAppsIfNecessary<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller3_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.AttemptCloseAppsIfNecessary() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller3_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateInstaller3 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn AttemptCloseAppsIfNecessary<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller3_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::AttemptCloseAppsIfNecessary(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetAttemptCloseAppsIfNecessary<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller3_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetAttemptCloseAppsIfNecessary(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetAttemptCloseAppsIfNecessary<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller3_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetAttemptCloseAppsIfNecessary(this, ::core::mem::transmute_copy(&value)).into())
         }
-        Self {
-            base__: IUpdateInstaller2_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateInstaller3_Vtbl {
+            base__: <IUpdateInstaller2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             AttemptCloseAppsIfNecessary: AttemptCloseAppsIfNecessary::<Identity, Impl, OFFSET>,
             SetAttemptCloseAppsIfNecessary: SetAttemptCloseAppsIfNecessary::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateInstaller3 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdateInstaller as ::windows_core::ComInterface>::IID || *iid == <IUpdateInstaller2 as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateInstaller4_Impl: Sized + IUpdateInstaller3_Impl {
-    fn Commit(&self, dwflags: u32) -> ::windows_core::Result<()>;
+pub trait IUpdateInstaller4_Impl: ::windows_core::BaseImpl + IUpdateInstaller3_Impl {
+    fn Commit(this: &Self::This, dwflags: u32) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateInstaller4 {}
+impl ::windows_core::Iids for IUpdateInstaller4 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IUpdateInstaller3);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateInstaller4_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller4_Impl, const OFFSET: isize>() -> IUpdateInstaller4_Vtbl {
-        unsafe extern "system" fn Commit<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateInstaller4_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, dwflags: u32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.Commit(::core::mem::transmute_copy(&dwflags)).into()
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller4_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateInstaller4 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Commit<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateInstaller4_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, dwflags: u32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::Commit(this, ::core::mem::transmute_copy(&dwflags)).into())
         }
-        Self { base__: IUpdateInstaller3_Vtbl::new::<Identity, Impl, OFFSET>(), Commit: Commit::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateInstaller4 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdateInstaller as ::windows_core::ComInterface>::IID || *iid == <IUpdateInstaller2 as ::windows_core::ComInterface>::IID || *iid == <IUpdateInstaller3 as ::windows_core::ComInterface>::IID
-    }
+        IUpdateInstaller4_Vtbl { base__: <IUpdateInstaller3 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Commit: Commit::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
-pub trait IUpdateLockdown_Impl: Sized {
-    fn LockDown(&self, flags: i32) -> ::windows_core::Result<()>;
+pub trait IUpdateLockdown_Impl: ::windows_core::BaseImpl {
+    fn LockDown(this: &Self::This, flags: i32) -> ::windows_core::Result<()>;
 }
-impl ::windows_core::RuntimeName for IUpdateLockdown {}
-impl IUpdateLockdown_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateLockdown_Impl, const OFFSET: isize>() -> IUpdateLockdown_Vtbl {
-        unsafe extern "system" fn LockDown<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateLockdown_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, flags: i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.LockDown(::core::mem::transmute_copy(&flags)).into()
+impl ::windows_core::Iids for IUpdateLockdown {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IUnknown);
+}
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateLockdown_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateLockdown {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn LockDown<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateLockdown_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, flags: i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::LockDown(this, ::core::mem::transmute_copy(&flags)).into())
         }
-        Self { base__: ::windows_core::IUnknown_Vtbl::new::<Identity, OFFSET>(), LockDown: LockDown::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateLockdown as ::windows_core::ComInterface>::IID
-    }
+        IUpdateLockdown_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, LockDown: LockDown::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateSearcher_Impl: Sized + super::Com::IDispatch_Impl {
-    fn CanAutomaticallyUpgradeService(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn SetCanAutomaticallyUpgradeService(&self, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
-    fn ClientApplicationID(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn SetClientApplicationID(&self, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
-    fn IncludePotentiallySupersededUpdates(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn SetIncludePotentiallySupersededUpdates(&self, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
-    fn ServerSelection(&self) -> ::windows_core::Result<ServerSelection>;
-    fn SetServerSelection(&self, value: ServerSelection) -> ::windows_core::Result<()>;
-    fn BeginSearch(&self, criteria: &::windows_core::BSTR, oncompleted: ::core::option::Option<&::windows_core::IUnknown>, state: &super::Variant::VARIANT) -> ::windows_core::Result<ISearchJob>;
-    fn EndSearch(&self, searchjob: ::core::option::Option<&ISearchJob>) -> ::windows_core::Result<ISearchResult>;
-    fn EscapeString(&self, unescaped: &::windows_core::BSTR) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn QueryHistory(&self, startindex: i32, count: i32) -> ::windows_core::Result<IUpdateHistoryEntryCollection>;
-    fn Search(&self, criteria: &::windows_core::BSTR) -> ::windows_core::Result<ISearchResult>;
-    fn Online(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn SetOnline(&self, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
-    fn GetTotalHistoryCount(&self) -> ::windows_core::Result<i32>;
-    fn ServiceID(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn SetServiceID(&self, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
+pub trait IUpdateSearcher_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn CanAutomaticallyUpgradeService(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn SetCanAutomaticallyUpgradeService(this: &Self::This, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
+    fn ClientApplicationID(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn SetClientApplicationID(this: &Self::This, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
+    fn IncludePotentiallySupersededUpdates(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn SetIncludePotentiallySupersededUpdates(this: &Self::This, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
+    fn ServerSelection(this: &Self::This) -> ::windows_core::Result<ServerSelection>;
+    fn SetServerSelection(this: &Self::This, value: ServerSelection) -> ::windows_core::Result<()>;
+    fn BeginSearch(this: &Self::This, criteria: &::windows_core::BSTR, oncompleted: ::core::option::Option<&::windows_core::IUnknown>, state: &super::Variant::VARIANT) -> ::windows_core::Result<ISearchJob>;
+    fn EndSearch(this: &Self::This, searchjob: ::core::option::Option<&ISearchJob>) -> ::windows_core::Result<ISearchResult>;
+    fn EscapeString(this: &Self::This, unescaped: &::windows_core::BSTR) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn QueryHistory(this: &Self::This, startindex: i32, count: i32) -> ::windows_core::Result<IUpdateHistoryEntryCollection>;
+    fn Search(this: &Self::This, criteria: &::windows_core::BSTR) -> ::windows_core::Result<ISearchResult>;
+    fn Online(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn SetOnline(this: &Self::This, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
+    fn GetTotalHistoryCount(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn ServiceID(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn SetServiceID(this: &Self::This, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateSearcher {}
+impl ::windows_core::Iids for IUpdateSearcher {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateSearcher_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>() -> IUpdateSearcher_Vtbl {
-        unsafe extern "system" fn CanAutomaticallyUpgradeService<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CanAutomaticallyUpgradeService() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateSearcher {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn CanAutomaticallyUpgradeService<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CanAutomaticallyUpgradeService(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetCanAutomaticallyUpgradeService<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetCanAutomaticallyUpgradeService(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetCanAutomaticallyUpgradeService<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetCanAutomaticallyUpgradeService(this, ::core::mem::transmute_copy(&value)).into())
         }
-        unsafe extern "system" fn ClientApplicationID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ClientApplicationID() {
+        unsafe extern "system" fn ClientApplicationID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ClientApplicationID(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetClientApplicationID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetClientApplicationID(::core::mem::transmute(&value)).into()
+        unsafe extern "system" fn SetClientApplicationID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetClientApplicationID(this, ::core::mem::transmute(&value)).into())
         }
-        unsafe extern "system" fn IncludePotentiallySupersededUpdates<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IncludePotentiallySupersededUpdates() {
+        unsafe extern "system" fn IncludePotentiallySupersededUpdates<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IncludePotentiallySupersededUpdates(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetIncludePotentiallySupersededUpdates<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetIncludePotentiallySupersededUpdates(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetIncludePotentiallySupersededUpdates<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetIncludePotentiallySupersededUpdates(this, ::core::mem::transmute_copy(&value)).into())
         }
-        unsafe extern "system" fn ServerSelection<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ServerSelection) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ServerSelection() {
+        unsafe extern "system" fn ServerSelection<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ServerSelection) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ServerSelection(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetServerSelection<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: ServerSelection) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetServerSelection(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetServerSelection<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: ServerSelection) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetServerSelection(this, ::core::mem::transmute_copy(&value)).into())
         }
-        unsafe extern "system" fn BeginSearch<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, criteria: ::std::mem::MaybeUninit<::windows_core::BSTR>, oncompleted: *mut ::core::ffi::c_void, state: super::Variant::VARIANT, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.BeginSearch(::core::mem::transmute(&criteria), ::windows_core::from_raw_borrowed(&oncompleted), ::core::mem::transmute(&state)) {
+        unsafe extern "system" fn BeginSearch<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, criteria: ::std::mem::MaybeUninit<::windows_core::BSTR>, oncompleted: *mut ::core::ffi::c_void, state: super::Variant::VARIANT, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::BeginSearch(this, ::core::mem::transmute(&criteria), ::windows_core::from_raw_borrowed(&oncompleted), ::core::mem::transmute(&state)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn EndSearch<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, searchjob: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.EndSearch(::windows_core::from_raw_borrowed(&searchjob)) {
+        unsafe extern "system" fn EndSearch<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, searchjob: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::EndSearch(this, ::windows_core::from_raw_borrowed(&searchjob)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn EscapeString<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, unescaped: ::std::mem::MaybeUninit<::windows_core::BSTR>, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.EscapeString(::core::mem::transmute(&unescaped)) {
+        unsafe extern "system" fn EscapeString<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, unescaped: ::std::mem::MaybeUninit<::windows_core::BSTR>, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::EscapeString(this, ::core::mem::transmute(&unescaped)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn QueryHistory<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, startindex: i32, count: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.QueryHistory(::core::mem::transmute_copy(&startindex), ::core::mem::transmute_copy(&count)) {
+        unsafe extern "system" fn QueryHistory<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, startindex: i32, count: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::QueryHistory(this, ::core::mem::transmute_copy(&startindex), ::core::mem::transmute_copy(&count)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Search<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, criteria: ::std::mem::MaybeUninit<::windows_core::BSTR>, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Search(::core::mem::transmute(&criteria)) {
+        unsafe extern "system" fn Search<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, criteria: ::std::mem::MaybeUninit<::windows_core::BSTR>, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Search(this, ::core::mem::transmute(&criteria)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Online<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Online() {
+        unsafe extern "system" fn Online<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Online(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetOnline<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetOnline(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetOnline<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetOnline(this, ::core::mem::transmute_copy(&value)).into())
         }
-        unsafe extern "system" fn GetTotalHistoryCount<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.GetTotalHistoryCount() {
+        unsafe extern "system" fn GetTotalHistoryCount<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::GetTotalHistoryCount(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ServiceID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ServiceID() {
+        unsafe extern "system" fn ServiceID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ServiceID(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetServiceID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetServiceID(::core::mem::transmute(&value)).into()
+        unsafe extern "system" fn SetServiceID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetServiceID(this, ::core::mem::transmute(&value)).into())
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateSearcher_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             CanAutomaticallyUpgradeService: CanAutomaticallyUpgradeService::<Identity, Impl, OFFSET>,
             SetCanAutomaticallyUpgradeService: SetCanAutomaticallyUpgradeService::<Identity, Impl, OFFSET>,
             ClientApplicationID: ClientApplicationID::<Identity, Impl, OFFSET>,
@@ -3964,252 +3434,218 @@ impl IUpdateSearcher_Vtbl {
             ServiceID: ServiceID::<Identity, Impl, OFFSET>,
             SetServiceID: SetServiceID::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateSearcher as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateSearcher2_Impl: Sized + IUpdateSearcher_Impl {
-    fn IgnoreDownloadPriority(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn SetIgnoreDownloadPriority(&self, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
+pub trait IUpdateSearcher2_Impl: ::windows_core::BaseImpl + IUpdateSearcher_Impl {
+    fn IgnoreDownloadPriority(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn SetIgnoreDownloadPriority(this: &Self::This, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateSearcher2 {}
+impl ::windows_core::Iids for IUpdateSearcher2 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IUpdateSearcher);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateSearcher2_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher2_Impl, const OFFSET: isize>() -> IUpdateSearcher2_Vtbl {
-        unsafe extern "system" fn IgnoreDownloadPriority<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IgnoreDownloadPriority() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher2_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateSearcher2 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn IgnoreDownloadPriority<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IgnoreDownloadPriority(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetIgnoreDownloadPriority<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetIgnoreDownloadPriority(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetIgnoreDownloadPriority<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetIgnoreDownloadPriority(this, ::core::mem::transmute_copy(&value)).into())
         }
-        Self {
-            base__: IUpdateSearcher_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateSearcher2_Vtbl {
+            base__: <IUpdateSearcher as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             IgnoreDownloadPriority: IgnoreDownloadPriority::<Identity, Impl, OFFSET>,
             SetIgnoreDownloadPriority: SetIgnoreDownloadPriority::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateSearcher2 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdateSearcher as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateSearcher3_Impl: Sized + IUpdateSearcher2_Impl {
-    fn SearchScope(&self) -> ::windows_core::Result<SearchScope>;
-    fn SetSearchScope(&self, value: SearchScope) -> ::windows_core::Result<()>;
+pub trait IUpdateSearcher3_Impl: ::windows_core::BaseImpl + IUpdateSearcher2_Impl {
+    fn SearchScope(this: &Self::This) -> ::windows_core::Result<SearchScope>;
+    fn SetSearchScope(this: &Self::This, value: SearchScope) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateSearcher3 {}
+impl ::windows_core::Iids for IUpdateSearcher3 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IUpdateSearcher2);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateSearcher3_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher3_Impl, const OFFSET: isize>() -> IUpdateSearcher3_Vtbl {
-        unsafe extern "system" fn SearchScope<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher3_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut SearchScope) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.SearchScope() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher3_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateSearcher3 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn SearchScope<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher3_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut SearchScope) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::SearchScope(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetSearchScope<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSearcher3_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: SearchScope) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetSearchScope(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetSearchScope<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSearcher3_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: SearchScope) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetSearchScope(this, ::core::mem::transmute_copy(&value)).into())
         }
-        Self {
-            base__: IUpdateSearcher2_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateSearcher3_Vtbl {
+            base__: <IUpdateSearcher2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             SearchScope: SearchScope::<Identity, Impl, OFFSET>,
             SetSearchScope: SetSearchScope::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateSearcher3 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdateSearcher as ::windows_core::ComInterface>::IID || *iid == <IUpdateSearcher2 as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateService_Impl: Sized + super::Com::IDispatch_Impl {
-    fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn ContentValidationCert(&self) -> ::windows_core::Result<super::Variant::VARIANT>;
-    fn ExpirationDate(&self) -> ::windows_core::Result<f64>;
-    fn IsManaged(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn IsRegisteredWithAU(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn IssueDate(&self) -> ::windows_core::Result<f64>;
-    fn OffersWindowsUpdates(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn RedirectUrls(&self) -> ::windows_core::Result<IStringCollection>;
-    fn ServiceID(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn IsScanPackageService(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn CanRegisterWithAU(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn ServiceUrl(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn SetupPrefix(&self) -> ::windows_core::Result<::windows_core::BSTR>;
+pub trait IUpdateService_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn Name(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn ContentValidationCert(this: &Self::This) -> ::windows_core::Result<super::Variant::VARIANT>;
+    fn ExpirationDate(this: &Self::This) -> ::windows_core::Result<f64>;
+    fn IsManaged(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn IsRegisteredWithAU(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn IssueDate(this: &Self::This) -> ::windows_core::Result<f64>;
+    fn OffersWindowsUpdates(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn RedirectUrls(this: &Self::This) -> ::windows_core::Result<IStringCollection>;
+    fn ServiceID(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn IsScanPackageService(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn CanRegisterWithAU(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn ServiceUrl(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn SetupPrefix(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateService {}
+impl ::windows_core::Iids for IUpdateService {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateService_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: isize>() -> IUpdateService_Vtbl {
-        unsafe extern "system" fn Name<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Name() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateService {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Name<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Name(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ContentValidationCert<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::Variant::VARIANT) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ContentValidationCert() {
+        unsafe extern "system" fn ContentValidationCert<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::Variant::VARIANT) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ContentValidationCert(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ExpirationDate<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut f64) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ExpirationDate() {
+        unsafe extern "system" fn ExpirationDate<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut f64) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ExpirationDate(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn IsManaged<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsManaged() {
+        unsafe extern "system" fn IsManaged<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsManaged(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn IsRegisteredWithAU<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsRegisteredWithAU() {
+        unsafe extern "system" fn IsRegisteredWithAU<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsRegisteredWithAU(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn IssueDate<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut f64) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IssueDate() {
+        unsafe extern "system" fn IssueDate<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut f64) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IssueDate(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn OffersWindowsUpdates<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.OffersWindowsUpdates() {
+        unsafe extern "system" fn OffersWindowsUpdates<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::OffersWindowsUpdates(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn RedirectUrls<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RedirectUrls() {
+        unsafe extern "system" fn RedirectUrls<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RedirectUrls(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ServiceID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ServiceID() {
+        unsafe extern "system" fn ServiceID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ServiceID(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn IsScanPackageService<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsScanPackageService() {
+        unsafe extern "system" fn IsScanPackageService<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsScanPackageService(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn CanRegisterWithAU<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CanRegisterWithAU() {
+        unsafe extern "system" fn CanRegisterWithAU<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CanRegisterWithAU(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ServiceUrl<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ServiceUrl() {
+        unsafe extern "system" fn ServiceUrl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ServiceUrl(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetupPrefix<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.SetupPrefix() {
+        unsafe extern "system" fn SetupPrefix<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateService_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::SetupPrefix(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateService_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             Name: Name::<Identity, Impl, OFFSET>,
             ContentValidationCert: ContentValidationCert::<Identity, Impl, OFFSET>,
             ExpirationDate: ExpirationDate::<Identity, Impl, OFFSET>,
@@ -4224,165 +3660,143 @@ impl IUpdateService_Vtbl {
             ServiceUrl: ServiceUrl::<Identity, Impl, OFFSET>,
             SetupPrefix: SetupPrefix::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateService as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateService2_Impl: Sized + IUpdateService_Impl {
-    fn IsDefaultAUService(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+pub trait IUpdateService2_Impl: ::windows_core::BaseImpl + IUpdateService_Impl {
+    fn IsDefaultAUService(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateService2 {}
+impl ::windows_core::Iids for IUpdateService2 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IUpdateService);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateService2_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateService2_Impl, const OFFSET: isize>() -> IUpdateService2_Vtbl {
-        unsafe extern "system" fn IsDefaultAUService<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateService2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsDefaultAUService() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateService2_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateService2 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn IsDefaultAUService<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateService2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsDefaultAUService(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: IUpdateService_Vtbl::new::<Identity, Impl, OFFSET>(), IsDefaultAUService: IsDefaultAUService::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateService2 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdateService as ::windows_core::ComInterface>::IID
-    }
+        IUpdateService2_Vtbl { base__: <IUpdateService as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, IsDefaultAUService: IsDefaultAUService::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateServiceCollection_Impl: Sized + super::Com::IDispatch_Impl {
-    fn get_Item(&self, index: i32) -> ::windows_core::Result<IUpdateService>;
-    fn _NewEnum(&self) -> ::windows_core::Result<::windows_core::IUnknown>;
-    fn Count(&self) -> ::windows_core::Result<i32>;
+pub trait IUpdateServiceCollection_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn get_Item(this: &Self::This, index: i32) -> ::windows_core::Result<IUpdateService>;
+    fn _NewEnum(this: &Self::This) -> ::windows_core::Result<::windows_core::IUnknown>;
+    fn Count(this: &Self::This) -> ::windows_core::Result<i32>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateServiceCollection {}
+impl ::windows_core::Iids for IUpdateServiceCollection {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateServiceCollection_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceCollection_Impl, const OFFSET: isize>() -> IUpdateServiceCollection_Vtbl {
-        unsafe extern "system" fn get_Item<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, index: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.get_Item(::core::mem::transmute_copy(&index)) {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceCollection_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateServiceCollection {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn get_Item<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, index: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::get_Item(this, ::core::mem::transmute_copy(&index)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn _NewEnum<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this._NewEnum() {
+        unsafe extern "system" fn _NewEnum<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::_NewEnum(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Count<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Count() {
+        unsafe extern "system" fn Count<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Count(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateServiceCollection_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             get_Item: get_Item::<Identity, Impl, OFFSET>,
             _NewEnum: _NewEnum::<Identity, Impl, OFFSET>,
             Count: Count::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateServiceCollection as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateServiceManager_Impl: Sized + super::Com::IDispatch_Impl {
-    fn Services(&self) -> ::windows_core::Result<IUpdateServiceCollection>;
-    fn AddService(&self, serviceid: &::windows_core::BSTR, authorizationcabpath: &::windows_core::BSTR) -> ::windows_core::Result<IUpdateService>;
-    fn RegisterServiceWithAU(&self, serviceid: &::windows_core::BSTR) -> ::windows_core::Result<()>;
-    fn RemoveService(&self, serviceid: &::windows_core::BSTR) -> ::windows_core::Result<()>;
-    fn UnregisterServiceWithAU(&self, serviceid: &::windows_core::BSTR) -> ::windows_core::Result<()>;
-    fn AddScanPackageService(&self, servicename: &::windows_core::BSTR, scanfilelocation: &::windows_core::BSTR, flags: i32) -> ::windows_core::Result<IUpdateService>;
-    fn SetOption(&self, optionname: &::windows_core::BSTR, optionvalue: &super::Variant::VARIANT) -> ::windows_core::Result<()>;
+pub trait IUpdateServiceManager_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn Services(this: &Self::This) -> ::windows_core::Result<IUpdateServiceCollection>;
+    fn AddService(this: &Self::This, serviceid: &::windows_core::BSTR, authorizationcabpath: &::windows_core::BSTR) -> ::windows_core::Result<IUpdateService>;
+    fn RegisterServiceWithAU(this: &Self::This, serviceid: &::windows_core::BSTR) -> ::windows_core::Result<()>;
+    fn RemoveService(this: &Self::This, serviceid: &::windows_core::BSTR) -> ::windows_core::Result<()>;
+    fn UnregisterServiceWithAU(this: &Self::This, serviceid: &::windows_core::BSTR) -> ::windows_core::Result<()>;
+    fn AddScanPackageService(this: &Self::This, servicename: &::windows_core::BSTR, scanfilelocation: &::windows_core::BSTR, flags: i32) -> ::windows_core::Result<IUpdateService>;
+    fn SetOption(this: &Self::This, optionname: &::windows_core::BSTR, optionvalue: &super::Variant::VARIANT) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateServiceManager {}
+impl ::windows_core::Iids for IUpdateServiceManager {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateServiceManager_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceManager_Impl, const OFFSET: isize>() -> IUpdateServiceManager_Vtbl {
-        unsafe extern "system" fn Services<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceManager_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Services() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceManager_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateServiceManager {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Services<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceManager_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Services(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn AddService<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceManager_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, serviceid: ::std::mem::MaybeUninit<::windows_core::BSTR>, authorizationcabpath: ::std::mem::MaybeUninit<::windows_core::BSTR>, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.AddService(::core::mem::transmute(&serviceid), ::core::mem::transmute(&authorizationcabpath)) {
+        unsafe extern "system" fn AddService<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceManager_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, serviceid: ::std::mem::MaybeUninit<::windows_core::BSTR>, authorizationcabpath: ::std::mem::MaybeUninit<::windows_core::BSTR>, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::AddService(this, ::core::mem::transmute(&serviceid), ::core::mem::transmute(&authorizationcabpath)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn RegisterServiceWithAU<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceManager_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, serviceid: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.RegisterServiceWithAU(::core::mem::transmute(&serviceid)).into()
+        unsafe extern "system" fn RegisterServiceWithAU<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceManager_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, serviceid: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::RegisterServiceWithAU(this, ::core::mem::transmute(&serviceid)).into())
         }
-        unsafe extern "system" fn RemoveService<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceManager_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, serviceid: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.RemoveService(::core::mem::transmute(&serviceid)).into()
+        unsafe extern "system" fn RemoveService<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceManager_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, serviceid: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::RemoveService(this, ::core::mem::transmute(&serviceid)).into())
         }
-        unsafe extern "system" fn UnregisterServiceWithAU<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceManager_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, serviceid: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.UnregisterServiceWithAU(::core::mem::transmute(&serviceid)).into()
+        unsafe extern "system" fn UnregisterServiceWithAU<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceManager_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, serviceid: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::UnregisterServiceWithAU(this, ::core::mem::transmute(&serviceid)).into())
         }
-        unsafe extern "system" fn AddScanPackageService<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceManager_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, servicename: ::std::mem::MaybeUninit<::windows_core::BSTR>, scanfilelocation: ::std::mem::MaybeUninit<::windows_core::BSTR>, flags: i32, ppservice: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.AddScanPackageService(::core::mem::transmute(&servicename), ::core::mem::transmute(&scanfilelocation), ::core::mem::transmute_copy(&flags)) {
+        unsafe extern "system" fn AddScanPackageService<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceManager_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, servicename: ::std::mem::MaybeUninit<::windows_core::BSTR>, scanfilelocation: ::std::mem::MaybeUninit<::windows_core::BSTR>, flags: i32, ppservice: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::AddScanPackageService(this, ::core::mem::transmute(&servicename), ::core::mem::transmute(&scanfilelocation), ::core::mem::transmute_copy(&flags)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(ppservice, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetOption<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceManager_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, optionname: ::std::mem::MaybeUninit<::windows_core::BSTR>, optionvalue: super::Variant::VARIANT) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetOption(::core::mem::transmute(&optionname), ::core::mem::transmute(&optionvalue)).into()
+        unsafe extern "system" fn SetOption<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceManager_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, optionname: ::std::mem::MaybeUninit<::windows_core::BSTR>, optionvalue: super::Variant::VARIANT) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetOption(this, ::core::mem::transmute(&optionname), ::core::mem::transmute(&optionvalue)).into())
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateServiceManager_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             Services: Services::<Identity, Impl, OFFSET>,
             AddService: AddService::<Identity, Impl, OFFSET>,
             RegisterServiceWithAU: RegisterServiceWithAU::<Identity, Impl, OFFSET>,
@@ -4391,238 +3805,206 @@ impl IUpdateServiceManager_Vtbl {
             AddScanPackageService: AddScanPackageService::<Identity, Impl, OFFSET>,
             SetOption: SetOption::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateServiceManager as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateServiceManager2_Impl: Sized + IUpdateServiceManager_Impl {
-    fn ClientApplicationID(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn SetClientApplicationID(&self, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
-    fn QueryServiceRegistration(&self, serviceid: &::windows_core::BSTR) -> ::windows_core::Result<IUpdateServiceRegistration>;
-    fn AddService2(&self, serviceid: &::windows_core::BSTR, flags: i32, authorizationcabpath: &::windows_core::BSTR) -> ::windows_core::Result<IUpdateServiceRegistration>;
+pub trait IUpdateServiceManager2_Impl: ::windows_core::BaseImpl + IUpdateServiceManager_Impl {
+    fn ClientApplicationID(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn SetClientApplicationID(this: &Self::This, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
+    fn QueryServiceRegistration(this: &Self::This, serviceid: &::windows_core::BSTR) -> ::windows_core::Result<IUpdateServiceRegistration>;
+    fn AddService2(this: &Self::This, serviceid: &::windows_core::BSTR, flags: i32, authorizationcabpath: &::windows_core::BSTR) -> ::windows_core::Result<IUpdateServiceRegistration>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateServiceManager2 {}
+impl ::windows_core::Iids for IUpdateServiceManager2 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IUpdateServiceManager);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateServiceManager2_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceManager2_Impl, const OFFSET: isize>() -> IUpdateServiceManager2_Vtbl {
-        unsafe extern "system" fn ClientApplicationID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceManager2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ClientApplicationID() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceManager2_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateServiceManager2 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ClientApplicationID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceManager2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ClientApplicationID(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetClientApplicationID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceManager2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetClientApplicationID(::core::mem::transmute(&value)).into()
+        unsafe extern "system" fn SetClientApplicationID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceManager2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetClientApplicationID(this, ::core::mem::transmute(&value)).into())
         }
-        unsafe extern "system" fn QueryServiceRegistration<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceManager2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, serviceid: ::std::mem::MaybeUninit<::windows_core::BSTR>, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.QueryServiceRegistration(::core::mem::transmute(&serviceid)) {
+        unsafe extern "system" fn QueryServiceRegistration<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceManager2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, serviceid: ::std::mem::MaybeUninit<::windows_core::BSTR>, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::QueryServiceRegistration(this, ::core::mem::transmute(&serviceid)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn AddService2<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceManager2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, serviceid: ::std::mem::MaybeUninit<::windows_core::BSTR>, flags: i32, authorizationcabpath: ::std::mem::MaybeUninit<::windows_core::BSTR>, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.AddService2(::core::mem::transmute(&serviceid), ::core::mem::transmute_copy(&flags), ::core::mem::transmute(&authorizationcabpath)) {
+        unsafe extern "system" fn AddService2<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceManager2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, serviceid: ::std::mem::MaybeUninit<::windows_core::BSTR>, flags: i32, authorizationcabpath: ::std::mem::MaybeUninit<::windows_core::BSTR>, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::AddService2(this, ::core::mem::transmute(&serviceid), ::core::mem::transmute_copy(&flags), ::core::mem::transmute(&authorizationcabpath)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: IUpdateServiceManager_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateServiceManager2_Vtbl {
+            base__: <IUpdateServiceManager as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             ClientApplicationID: ClientApplicationID::<Identity, Impl, OFFSET>,
             SetClientApplicationID: SetClientApplicationID::<Identity, Impl, OFFSET>,
             QueryServiceRegistration: QueryServiceRegistration::<Identity, Impl, OFFSET>,
             AddService2: AddService2::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateServiceManager2 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdateServiceManager as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateServiceRegistration_Impl: Sized + super::Com::IDispatch_Impl {
-    fn RegistrationState(&self) -> ::windows_core::Result<UpdateServiceRegistrationState>;
-    fn ServiceID(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn IsPendingRegistrationWithAU(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn Service(&self) -> ::windows_core::Result<IUpdateService2>;
+pub trait IUpdateServiceRegistration_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn RegistrationState(this: &Self::This) -> ::windows_core::Result<UpdateServiceRegistrationState>;
+    fn ServiceID(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn IsPendingRegistrationWithAU(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn Service(this: &Self::This) -> ::windows_core::Result<IUpdateService2>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateServiceRegistration {}
+impl ::windows_core::Iids for IUpdateServiceRegistration {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateServiceRegistration_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceRegistration_Impl, const OFFSET: isize>() -> IUpdateServiceRegistration_Vtbl {
-        unsafe extern "system" fn RegistrationState<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceRegistration_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut UpdateServiceRegistrationState) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RegistrationState() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceRegistration_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateServiceRegistration {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn RegistrationState<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceRegistration_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut UpdateServiceRegistrationState) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RegistrationState(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn ServiceID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceRegistration_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ServiceID() {
+        unsafe extern "system" fn ServiceID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceRegistration_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ServiceID(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn IsPendingRegistrationWithAU<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceRegistration_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsPendingRegistrationWithAU() {
+        unsafe extern "system" fn IsPendingRegistrationWithAU<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceRegistration_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsPendingRegistrationWithAU(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Service<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateServiceRegistration_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Service() {
+        unsafe extern "system" fn Service<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateServiceRegistration_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Service(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateServiceRegistration_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             RegistrationState: RegistrationState::<Identity, Impl, OFFSET>,
             ServiceID: ServiceID::<Identity, Impl, OFFSET>,
             IsPendingRegistrationWithAU: IsPendingRegistrationWithAU::<Identity, Impl, OFFSET>,
             Service: Service::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateServiceRegistration as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateSession_Impl: Sized + super::Com::IDispatch_Impl {
-    fn ClientApplicationID(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn SetClientApplicationID(&self, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
-    fn ReadOnly(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn WebProxy(&self) -> ::windows_core::Result<IWebProxy>;
-    fn SetWebProxy(&self, value: ::core::option::Option<&IWebProxy>) -> ::windows_core::Result<()>;
-    fn CreateUpdateSearcher(&self) -> ::windows_core::Result<IUpdateSearcher>;
-    fn CreateUpdateDownloader(&self) -> ::windows_core::Result<IUpdateDownloader>;
-    fn CreateUpdateInstaller(&self) -> ::windows_core::Result<IUpdateInstaller>;
+pub trait IUpdateSession_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn ClientApplicationID(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn SetClientApplicationID(this: &Self::This, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
+    fn ReadOnly(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn WebProxy(this: &Self::This) -> ::windows_core::Result<IWebProxy>;
+    fn SetWebProxy(this: &Self::This, value: ::core::option::Option<&IWebProxy>) -> ::windows_core::Result<()>;
+    fn CreateUpdateSearcher(this: &Self::This) -> ::windows_core::Result<IUpdateSearcher>;
+    fn CreateUpdateDownloader(this: &Self::This) -> ::windows_core::Result<IUpdateDownloader>;
+    fn CreateUpdateInstaller(this: &Self::This) -> ::windows_core::Result<IUpdateInstaller>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateSession {}
+impl ::windows_core::Iids for IUpdateSession {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateSession_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSession_Impl, const OFFSET: isize>() -> IUpdateSession_Vtbl {
-        unsafe extern "system" fn ClientApplicationID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSession_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ClientApplicationID() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSession_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateSession {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn ClientApplicationID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSession_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ClientApplicationID(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetClientApplicationID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSession_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetClientApplicationID(::core::mem::transmute(&value)).into()
+        unsafe extern "system" fn SetClientApplicationID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSession_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetClientApplicationID(this, ::core::mem::transmute(&value)).into())
         }
-        unsafe extern "system" fn ReadOnly<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSession_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ReadOnly() {
+        unsafe extern "system" fn ReadOnly<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSession_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ReadOnly(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn WebProxy<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSession_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.WebProxy() {
+        unsafe extern "system" fn WebProxy<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSession_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::WebProxy(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetWebProxy<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSession_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetWebProxy(::windows_core::from_raw_borrowed(&value)).into()
+        unsafe extern "system" fn SetWebProxy<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSession_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetWebProxy(this, ::windows_core::from_raw_borrowed(&value)).into())
         }
-        unsafe extern "system" fn CreateUpdateSearcher<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSession_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CreateUpdateSearcher() {
+        unsafe extern "system" fn CreateUpdateSearcher<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSession_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CreateUpdateSearcher(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn CreateUpdateDownloader<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSession_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CreateUpdateDownloader() {
+        unsafe extern "system" fn CreateUpdateDownloader<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSession_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CreateUpdateDownloader(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn CreateUpdateInstaller<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSession_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CreateUpdateInstaller() {
+        unsafe extern "system" fn CreateUpdateInstaller<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSession_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CreateUpdateInstaller(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateSession_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             ClientApplicationID: ClientApplicationID::<Identity, Impl, OFFSET>,
             SetClientApplicationID: SetClientApplicationID::<Identity, Impl, OFFSET>,
             ReadOnly: ReadOnly::<Identity, Impl, OFFSET>,
@@ -4632,222 +4014,186 @@ impl IUpdateSession_Vtbl {
             CreateUpdateDownloader: CreateUpdateDownloader::<Identity, Impl, OFFSET>,
             CreateUpdateInstaller: CreateUpdateInstaller::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateSession as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateSession2_Impl: Sized + IUpdateSession_Impl {
-    fn UserLocale(&self) -> ::windows_core::Result<u32>;
-    fn SetUserLocale(&self, lcid: u32) -> ::windows_core::Result<()>;
+pub trait IUpdateSession2_Impl: ::windows_core::BaseImpl + IUpdateSession_Impl {
+    fn UserLocale(this: &Self::This) -> ::windows_core::Result<u32>;
+    fn SetUserLocale(this: &Self::This, lcid: u32) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateSession2 {}
+impl ::windows_core::Iids for IUpdateSession2 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IUpdateSession);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateSession2_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSession2_Impl, const OFFSET: isize>() -> IUpdateSession2_Vtbl {
-        unsafe extern "system" fn UserLocale<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSession2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut u32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.UserLocale() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSession2_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateSession2 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn UserLocale<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSession2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut u32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::UserLocale(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetUserLocale<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSession2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, lcid: u32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetUserLocale(::core::mem::transmute_copy(&lcid)).into()
+        unsafe extern "system" fn SetUserLocale<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSession2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, lcid: u32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetUserLocale(this, ::core::mem::transmute_copy(&lcid)).into())
         }
-        Self {
-            base__: IUpdateSession_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateSession2_Vtbl {
+            base__: <IUpdateSession as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             UserLocale: UserLocale::<Identity, Impl, OFFSET>,
             SetUserLocale: SetUserLocale::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateSession2 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdateSession as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IUpdateSession3_Impl: Sized + IUpdateSession2_Impl {
-    fn CreateUpdateServiceManager(&self) -> ::windows_core::Result<IUpdateServiceManager2>;
-    fn QueryHistory(&self, criteria: &::windows_core::BSTR, startindex: i32, count: i32) -> ::windows_core::Result<IUpdateHistoryEntryCollection>;
+pub trait IUpdateSession3_Impl: ::windows_core::BaseImpl + IUpdateSession2_Impl {
+    fn CreateUpdateServiceManager(this: &Self::This) -> ::windows_core::Result<IUpdateServiceManager2>;
+    fn QueryHistory(this: &Self::This, criteria: &::windows_core::BSTR, startindex: i32, count: i32) -> ::windows_core::Result<IUpdateHistoryEntryCollection>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IUpdateSession3 {}
+impl ::windows_core::Iids for IUpdateSession3 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IUpdateSession2);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IUpdateSession3_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSession3_Impl, const OFFSET: isize>() -> IUpdateSession3_Vtbl {
-        unsafe extern "system" fn CreateUpdateServiceManager<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSession3_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CreateUpdateServiceManager() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSession3_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IUpdateSession3 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn CreateUpdateServiceManager<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSession3_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CreateUpdateServiceManager(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn QueryHistory<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IUpdateSession3_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, criteria: ::std::mem::MaybeUninit<::windows_core::BSTR>, startindex: i32, count: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.QueryHistory(::core::mem::transmute(&criteria), ::core::mem::transmute_copy(&startindex), ::core::mem::transmute_copy(&count)) {
+        unsafe extern "system" fn QueryHistory<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUpdateSession3_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, criteria: ::std::mem::MaybeUninit<::windows_core::BSTR>, startindex: i32, count: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::QueryHistory(this, ::core::mem::transmute(&criteria), ::core::mem::transmute_copy(&startindex), ::core::mem::transmute_copy(&count)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: IUpdateSession2_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IUpdateSession3_Vtbl {
+            base__: <IUpdateSession2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             CreateUpdateServiceManager: CreateUpdateServiceManager::<Identity, Impl, OFFSET>,
             QueryHistory: QueryHistory::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IUpdateSession3 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdateSession as ::windows_core::ComInterface>::IID || *iid == <IUpdateSession2 as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IWebProxy_Impl: Sized + super::Com::IDispatch_Impl {
-    fn Address(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn SetAddress(&self, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
-    fn BypassList(&self) -> ::windows_core::Result<IStringCollection>;
-    fn SetBypassList(&self, value: ::core::option::Option<&IStringCollection>) -> ::windows_core::Result<()>;
-    fn BypassProxyOnLocal(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn SetBypassProxyOnLocal(&self, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
-    fn ReadOnly(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn UserName(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn SetUserName(&self, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
-    fn SetPassword(&self, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
-    fn PromptForCredentials(&self, parentwindow: ::core::option::Option<&::windows_core::IUnknown>, title: &::windows_core::BSTR) -> ::windows_core::Result<()>;
-    fn PromptForCredentialsFromHwnd(&self, parentwindow: super::super::Foundation::HWND, title: &::windows_core::BSTR) -> ::windows_core::Result<()>;
-    fn AutoDetect(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn SetAutoDetect(&self, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
+pub trait IWebProxy_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn Address(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn SetAddress(this: &Self::This, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
+    fn BypassList(this: &Self::This) -> ::windows_core::Result<IStringCollection>;
+    fn SetBypassList(this: &Self::This, value: ::core::option::Option<&IStringCollection>) -> ::windows_core::Result<()>;
+    fn BypassProxyOnLocal(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn SetBypassProxyOnLocal(this: &Self::This, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
+    fn ReadOnly(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn UserName(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn SetUserName(this: &Self::This, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
+    fn SetPassword(this: &Self::This, value: &::windows_core::BSTR) -> ::windows_core::Result<()>;
+    fn PromptForCredentials(this: &Self::This, parentwindow: ::core::option::Option<&::windows_core::IUnknown>, title: &::windows_core::BSTR) -> ::windows_core::Result<()>;
+    fn PromptForCredentialsFromHwnd(this: &Self::This, parentwindow: super::super::Foundation::HWND, title: &::windows_core::BSTR) -> ::windows_core::Result<()>;
+    fn AutoDetect(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn SetAutoDetect(this: &Self::This, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IWebProxy {}
+impl ::windows_core::Iids for IWebProxy {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IWebProxy_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: isize>() -> IWebProxy_Vtbl {
-        unsafe extern "system" fn Address<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Address() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IWebProxy {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn Address<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Address(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetAddress<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetAddress(::core::mem::transmute(&value)).into()
+        unsafe extern "system" fn SetAddress<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetAddress(this, ::core::mem::transmute(&value)).into())
         }
-        unsafe extern "system" fn BypassList<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.BypassList() {
+        unsafe extern "system" fn BypassList<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::BypassList(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetBypassList<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetBypassList(::windows_core::from_raw_borrowed(&value)).into()
+        unsafe extern "system" fn SetBypassList<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetBypassList(this, ::windows_core::from_raw_borrowed(&value)).into())
         }
-        unsafe extern "system" fn BypassProxyOnLocal<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.BypassProxyOnLocal() {
+        unsafe extern "system" fn BypassProxyOnLocal<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::BypassProxyOnLocal(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetBypassProxyOnLocal<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetBypassProxyOnLocal(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetBypassProxyOnLocal<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetBypassProxyOnLocal(this, ::core::mem::transmute_copy(&value)).into())
         }
-        unsafe extern "system" fn ReadOnly<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.ReadOnly() {
+        unsafe extern "system" fn ReadOnly<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::ReadOnly(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn UserName<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.UserName() {
+        unsafe extern "system" fn UserName<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::UserName(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetUserName<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetUserName(::core::mem::transmute(&value)).into()
+        unsafe extern "system" fn SetUserName<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetUserName(this, ::core::mem::transmute(&value)).into())
         }
-        unsafe extern "system" fn SetPassword<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetPassword(::core::mem::transmute(&value)).into()
+        unsafe extern "system" fn SetPassword<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetPassword(this, ::core::mem::transmute(&value)).into())
         }
-        unsafe extern "system" fn PromptForCredentials<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, parentwindow: *mut ::core::ffi::c_void, title: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.PromptForCredentials(::windows_core::from_raw_borrowed(&parentwindow), ::core::mem::transmute(&title)).into()
+        unsafe extern "system" fn PromptForCredentials<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, parentwindow: *mut ::core::ffi::c_void, title: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::PromptForCredentials(this, ::windows_core::from_raw_borrowed(&parentwindow), ::core::mem::transmute(&title)).into())
         }
-        unsafe extern "system" fn PromptForCredentialsFromHwnd<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, parentwindow: super::super::Foundation::HWND, title: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.PromptForCredentialsFromHwnd(::core::mem::transmute_copy(&parentwindow), ::core::mem::transmute(&title)).into()
+        unsafe extern "system" fn PromptForCredentialsFromHwnd<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, parentwindow: super::super::Foundation::HWND, title: ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::PromptForCredentialsFromHwnd(this, ::core::mem::transmute_copy(&parentwindow), ::core::mem::transmute(&title)).into())
         }
-        unsafe extern "system" fn AutoDetect<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.AutoDetect() {
+        unsafe extern "system" fn AutoDetect<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::AutoDetect(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn SetAutoDetect<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetAutoDetect(::core::mem::transmute_copy(&value)).into()
+        unsafe extern "system" fn SetAutoDetect<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebProxy_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, value: super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetAutoDetect(this, ::core::mem::transmute_copy(&value)).into())
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IWebProxy_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             Address: Address::<Identity, Impl, OFFSET>,
             SetAddress: SetAddress::<Identity, Impl, OFFSET>,
             BypassList: BypassList::<Identity, Impl, OFFSET>,
@@ -4863,118 +4209,102 @@ impl IWebProxy_Vtbl {
             AutoDetect: AutoDetect::<Identity, Impl, OFFSET>,
             SetAutoDetect: SetAutoDetect::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IWebProxy as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IWindowsDriverUpdate_Impl: Sized + IUpdate_Impl {
-    fn DriverClass(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn DriverHardwareID(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn DriverManufacturer(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn DriverModel(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn DriverProvider(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn DriverVerDate(&self) -> ::windows_core::Result<f64>;
-    fn DeviceProblemNumber(&self) -> ::windows_core::Result<i32>;
-    fn DeviceStatus(&self) -> ::windows_core::Result<i32>;
+pub trait IWindowsDriverUpdate_Impl: ::windows_core::BaseImpl + IUpdate_Impl {
+    fn DriverClass(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn DriverHardwareID(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn DriverManufacturer(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn DriverModel(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn DriverProvider(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn DriverVerDate(this: &Self::This) -> ::windows_core::Result<f64>;
+    fn DeviceProblemNumber(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn DeviceStatus(this: &Self::This) -> ::windows_core::Result<i32>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IWindowsDriverUpdate {}
+impl ::windows_core::Iids for IWindowsDriverUpdate {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IUpdate);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IWindowsDriverUpdate_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate_Impl, const OFFSET: isize>() -> IWindowsDriverUpdate_Vtbl {
-        unsafe extern "system" fn DriverClass<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DriverClass() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IWindowsDriverUpdate {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn DriverClass<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DriverClass(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn DriverHardwareID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DriverHardwareID() {
+        unsafe extern "system" fn DriverHardwareID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DriverHardwareID(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn DriverManufacturer<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DriverManufacturer() {
+        unsafe extern "system" fn DriverManufacturer<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DriverManufacturer(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn DriverModel<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DriverModel() {
+        unsafe extern "system" fn DriverModel<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DriverModel(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn DriverProvider<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DriverProvider() {
+        unsafe extern "system" fn DriverProvider<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DriverProvider(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn DriverVerDate<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut f64) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DriverVerDate() {
+        unsafe extern "system" fn DriverVerDate<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut f64) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DriverVerDate(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn DeviceProblemNumber<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DeviceProblemNumber() {
+        unsafe extern "system" fn DeviceProblemNumber<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DeviceProblemNumber(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn DeviceStatus<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DeviceStatus() {
+        unsafe extern "system" fn DeviceStatus<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DeviceStatus(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: IUpdate_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IWindowsDriverUpdate_Vtbl {
+            base__: <IUpdate as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             DriverClass: DriverClass::<Identity, Impl, OFFSET>,
             DriverHardwareID: DriverHardwareID::<Identity, Impl, OFFSET>,
             DriverManufacturer: DriverManufacturer::<Identity, Impl, OFFSET>,
@@ -4984,294 +4314,260 @@ impl IWindowsDriverUpdate_Vtbl {
             DeviceProblemNumber: DeviceProblemNumber::<Identity, Impl, OFFSET>,
             DeviceStatus: DeviceStatus::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IWindowsDriverUpdate as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdate as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IWindowsDriverUpdate2_Impl: Sized + IWindowsDriverUpdate_Impl {
-    fn RebootRequired(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn IsPresent(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
-    fn CveIDs(&self) -> ::windows_core::Result<IStringCollection>;
-    fn CopyToCache(&self, pfiles: ::core::option::Option<&IStringCollection>) -> ::windows_core::Result<()>;
+pub trait IWindowsDriverUpdate2_Impl: ::windows_core::BaseImpl + IWindowsDriverUpdate_Impl {
+    fn RebootRequired(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn IsPresent(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+    fn CveIDs(this: &Self::This) -> ::windows_core::Result<IStringCollection>;
+    fn CopyToCache(this: &Self::This, pfiles: ::core::option::Option<&IStringCollection>) -> ::windows_core::Result<()>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IWindowsDriverUpdate2 {}
+impl ::windows_core::Iids for IWindowsDriverUpdate2 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IWindowsDriverUpdate);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IWindowsDriverUpdate2_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate2_Impl, const OFFSET: isize>() -> IWindowsDriverUpdate2_Vtbl {
-        unsafe extern "system" fn RebootRequired<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.RebootRequired() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate2_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IWindowsDriverUpdate2 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn RebootRequired<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::RebootRequired(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn IsPresent<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.IsPresent() {
+        unsafe extern "system" fn IsPresent<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::IsPresent(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn CveIDs<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.CveIDs() {
+        unsafe extern "system" fn CveIDs<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::CveIDs(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn CopyToCache<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate2_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, pfiles: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.CopyToCache(::windows_core::from_raw_borrowed(&pfiles)).into()
+        unsafe extern "system" fn CopyToCache<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate2_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, pfiles: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::CopyToCache(this, ::windows_core::from_raw_borrowed(&pfiles)).into())
         }
-        Self {
-            base__: IWindowsDriverUpdate_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IWindowsDriverUpdate2_Vtbl {
+            base__: <IWindowsDriverUpdate as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             RebootRequired: RebootRequired::<Identity, Impl, OFFSET>,
             IsPresent: IsPresent::<Identity, Impl, OFFSET>,
             CveIDs: CveIDs::<Identity, Impl, OFFSET>,
             CopyToCache: CopyToCache::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IWindowsDriverUpdate2 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdate as ::windows_core::ComInterface>::IID || *iid == <IWindowsDriverUpdate as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IWindowsDriverUpdate3_Impl: Sized + IWindowsDriverUpdate2_Impl {
-    fn BrowseOnly(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+pub trait IWindowsDriverUpdate3_Impl: ::windows_core::BaseImpl + IWindowsDriverUpdate2_Impl {
+    fn BrowseOnly(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IWindowsDriverUpdate3 {}
+impl ::windows_core::Iids for IWindowsDriverUpdate3 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IWindowsDriverUpdate2);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IWindowsDriverUpdate3_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate3_Impl, const OFFSET: isize>() -> IWindowsDriverUpdate3_Vtbl {
-        unsafe extern "system" fn BrowseOnly<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate3_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.BrowseOnly() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate3_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IWindowsDriverUpdate3 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn BrowseOnly<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate3_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::BrowseOnly(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: IWindowsDriverUpdate2_Vtbl::new::<Identity, Impl, OFFSET>(), BrowseOnly: BrowseOnly::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IWindowsDriverUpdate3 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdate as ::windows_core::ComInterface>::IID || *iid == <IWindowsDriverUpdate as ::windows_core::ComInterface>::IID || *iid == <IWindowsDriverUpdate2 as ::windows_core::ComInterface>::IID
-    }
+        IWindowsDriverUpdate3_Vtbl { base__: <IWindowsDriverUpdate2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, BrowseOnly: BrowseOnly::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IWindowsDriverUpdate4_Impl: Sized + IWindowsDriverUpdate3_Impl {
-    fn WindowsDriverUpdateEntries(&self) -> ::windows_core::Result<IWindowsDriverUpdateEntryCollection>;
-    fn PerUser(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
+pub trait IWindowsDriverUpdate4_Impl: ::windows_core::BaseImpl + IWindowsDriverUpdate3_Impl {
+    fn WindowsDriverUpdateEntries(this: &Self::This) -> ::windows_core::Result<IWindowsDriverUpdateEntryCollection>;
+    fn PerUser(this: &Self::This) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IWindowsDriverUpdate4 {}
+impl ::windows_core::Iids for IWindowsDriverUpdate4 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IWindowsDriverUpdate3);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IWindowsDriverUpdate4_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate4_Impl, const OFFSET: isize>() -> IWindowsDriverUpdate4_Vtbl {
-        unsafe extern "system" fn WindowsDriverUpdateEntries<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate4_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.WindowsDriverUpdateEntries() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate4_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IWindowsDriverUpdate4 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn WindowsDriverUpdateEntries<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate4_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::WindowsDriverUpdateEntries(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn PerUser<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate4_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.PerUser() {
+        unsafe extern "system" fn PerUser<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate4_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::PerUser(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: IWindowsDriverUpdate3_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IWindowsDriverUpdate4_Vtbl {
+            base__: <IWindowsDriverUpdate3 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             WindowsDriverUpdateEntries: WindowsDriverUpdateEntries::<Identity, Impl, OFFSET>,
             PerUser: PerUser::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IWindowsDriverUpdate4 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdate as ::windows_core::ComInterface>::IID || *iid == <IWindowsDriverUpdate as ::windows_core::ComInterface>::IID || *iid == <IWindowsDriverUpdate2 as ::windows_core::ComInterface>::IID || *iid == <IWindowsDriverUpdate3 as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IWindowsDriverUpdate5_Impl: Sized + IWindowsDriverUpdate4_Impl {
-    fn AutoSelection(&self) -> ::windows_core::Result<AutoSelectionMode>;
-    fn AutoDownload(&self) -> ::windows_core::Result<AutoDownloadMode>;
+pub trait IWindowsDriverUpdate5_Impl: ::windows_core::BaseImpl + IWindowsDriverUpdate4_Impl {
+    fn AutoSelection(this: &Self::This) -> ::windows_core::Result<AutoSelectionMode>;
+    fn AutoDownload(this: &Self::This) -> ::windows_core::Result<AutoDownloadMode>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IWindowsDriverUpdate5 {}
+impl ::windows_core::Iids for IWindowsDriverUpdate5 {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(IWindowsDriverUpdate4);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IWindowsDriverUpdate5_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate5_Impl, const OFFSET: isize>() -> IWindowsDriverUpdate5_Vtbl {
-        unsafe extern "system" fn AutoSelection<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate5_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut AutoSelectionMode) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.AutoSelection() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate5_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IWindowsDriverUpdate5 {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn AutoSelection<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate5_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut AutoSelectionMode) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::AutoSelection(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn AutoDownload<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdate5_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut AutoDownloadMode) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.AutoDownload() {
+        unsafe extern "system" fn AutoDownload<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdate5_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut AutoDownloadMode) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::AutoDownload(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: IWindowsDriverUpdate4_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IWindowsDriverUpdate5_Vtbl {
+            base__: <IWindowsDriverUpdate4 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             AutoSelection: AutoSelection::<Identity, Impl, OFFSET>,
             AutoDownload: AutoDownload::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IWindowsDriverUpdate5 as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID || *iid == <IUpdate as ::windows_core::ComInterface>::IID || *iid == <IWindowsDriverUpdate as ::windows_core::ComInterface>::IID || *iid == <IWindowsDriverUpdate2 as ::windows_core::ComInterface>::IID || *iid == <IWindowsDriverUpdate3 as ::windows_core::ComInterface>::IID || *iid == <IWindowsDriverUpdate4 as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IWindowsDriverUpdateEntry_Impl: Sized + super::Com::IDispatch_Impl {
-    fn DriverClass(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn DriverHardwareID(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn DriverManufacturer(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn DriverModel(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn DriverProvider(&self) -> ::windows_core::Result<::windows_core::BSTR>;
-    fn DriverVerDate(&self) -> ::windows_core::Result<f64>;
-    fn DeviceProblemNumber(&self) -> ::windows_core::Result<i32>;
-    fn DeviceStatus(&self) -> ::windows_core::Result<i32>;
+pub trait IWindowsDriverUpdateEntry_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn DriverClass(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn DriverHardwareID(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn DriverManufacturer(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn DriverModel(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn DriverProvider(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
+    fn DriverVerDate(this: &Self::This) -> ::windows_core::Result<f64>;
+    fn DeviceProblemNumber(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn DeviceStatus(this: &Self::This) -> ::windows_core::Result<i32>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IWindowsDriverUpdateEntry {}
+impl ::windows_core::Iids for IWindowsDriverUpdateEntry {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IWindowsDriverUpdateEntry_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdateEntry_Impl, const OFFSET: isize>() -> IWindowsDriverUpdateEntry_Vtbl {
-        unsafe extern "system" fn DriverClass<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdateEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DriverClass() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdateEntry_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IWindowsDriverUpdateEntry {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn DriverClass<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdateEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DriverClass(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn DriverHardwareID<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdateEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DriverHardwareID() {
+        unsafe extern "system" fn DriverHardwareID<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdateEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DriverHardwareID(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn DriverManufacturer<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdateEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DriverManufacturer() {
+        unsafe extern "system" fn DriverManufacturer<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdateEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DriverManufacturer(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn DriverModel<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdateEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DriverModel() {
+        unsafe extern "system" fn DriverModel<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdateEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DriverModel(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn DriverProvider<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdateEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DriverProvider() {
+        unsafe extern "system" fn DriverProvider<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdateEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut ::std::mem::MaybeUninit<::windows_core::BSTR>) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DriverProvider(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn DriverVerDate<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdateEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut f64) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DriverVerDate() {
+        unsafe extern "system" fn DriverVerDate<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdateEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut f64) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DriverVerDate(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn DeviceProblemNumber<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdateEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DeviceProblemNumber() {
+        unsafe extern "system" fn DeviceProblemNumber<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdateEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DeviceProblemNumber(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn DeviceStatus<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdateEntry_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.DeviceStatus() {
+        unsafe extern "system" fn DeviceStatus<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdateEntry_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::DeviceStatus(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IWindowsDriverUpdateEntry_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             DriverClass: DriverClass::<Identity, Impl, OFFSET>,
             DriverHardwareID: DriverHardwareID::<Identity, Impl, OFFSET>,
             DriverManufacturer: DriverManufacturer::<Identity, Impl, OFFSET>,
@@ -5281,91 +4577,81 @@ impl IWindowsDriverUpdateEntry_Vtbl {
             DeviceProblemNumber: DeviceProblemNumber::<Identity, Impl, OFFSET>,
             DeviceStatus: DeviceStatus::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IWindowsDriverUpdateEntry as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IWindowsDriverUpdateEntryCollection_Impl: Sized + super::Com::IDispatch_Impl {
-    fn get_Item(&self, index: i32) -> ::windows_core::Result<IWindowsDriverUpdateEntry>;
-    fn _NewEnum(&self) -> ::windows_core::Result<::windows_core::IUnknown>;
-    fn Count(&self) -> ::windows_core::Result<i32>;
+pub trait IWindowsDriverUpdateEntryCollection_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn get_Item(this: &Self::This, index: i32) -> ::windows_core::Result<IWindowsDriverUpdateEntry>;
+    fn _NewEnum(this: &Self::This) -> ::windows_core::Result<::windows_core::IUnknown>;
+    fn Count(this: &Self::This) -> ::windows_core::Result<i32>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IWindowsDriverUpdateEntryCollection {}
+impl ::windows_core::Iids for IWindowsDriverUpdateEntryCollection {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IWindowsDriverUpdateEntryCollection_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdateEntryCollection_Impl, const OFFSET: isize>() -> IWindowsDriverUpdateEntryCollection_Vtbl {
-        unsafe extern "system" fn get_Item<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdateEntryCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, index: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.get_Item(::core::mem::transmute_copy(&index)) {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdateEntryCollection_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IWindowsDriverUpdateEntryCollection {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn get_Item<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdateEntryCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, index: i32, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::get_Item(this, ::core::mem::transmute_copy(&index)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn _NewEnum<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdateEntryCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this._NewEnum() {
+        unsafe extern "system" fn _NewEnum<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdateEntryCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::_NewEnum(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        unsafe extern "system" fn Count<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsDriverUpdateEntryCollection_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Count() {
+        unsafe extern "system" fn Count<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDriverUpdateEntryCollection_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, retval: *mut i32) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Count(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self {
-            base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(),
+        IWindowsDriverUpdateEntryCollection_Vtbl {
+            base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             get_Item: get_Item::<Identity, Impl, OFFSET>,
             _NewEnum: _NewEnum::<Identity, Impl, OFFSET>,
             Count: Count::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IWindowsDriverUpdateEntryCollection as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-pub trait IWindowsUpdateAgentInfo_Impl: Sized + super::Com::IDispatch_Impl {
-    fn GetInfo(&self, varinfoidentifier: &super::Variant::VARIANT) -> ::windows_core::Result<super::Variant::VARIANT>;
+pub trait IWindowsUpdateAgentInfo_Impl: ::windows_core::BaseImpl + super::Com::IDispatch_Impl {
+    fn GetInfo(this: &Self::This, varinfoidentifier: &super::Variant::VARIANT) -> ::windows_core::Result<super::Variant::VARIANT>;
 }
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl ::windows_core::RuntimeName for IWindowsUpdateAgentInfo {}
+impl ::windows_core::Iids for IWindowsUpdateAgentInfo {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(super::Com::IDispatch);
+}
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
-impl IWindowsUpdateAgentInfo_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsUpdateAgentInfo_Impl, const OFFSET: isize>() -> IWindowsUpdateAgentInfo_Vtbl {
-        unsafe extern "system" fn GetInfo<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWindowsUpdateAgentInfo_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, varinfoidentifier: super::Variant::VARIANT, retval: *mut super::Variant::VARIANT) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.GetInfo(::core::mem::transmute(&varinfoidentifier)) {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsUpdateAgentInfo_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IWindowsUpdateAgentInfo {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn GetInfo<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsUpdateAgentInfo_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, varinfoidentifier: super::Variant::VARIANT, retval: *mut super::Variant::VARIANT) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::GetInfo(this, ::core::mem::transmute(&varinfoidentifier)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(retval, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: super::Com::IDispatch_Vtbl::new::<Identity, Impl, OFFSET>(), GetInfo: GetInfo::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IWindowsUpdateAgentInfo as ::windows_core::ComInterface>::IID || *iid == <super::Com::IDispatch as ::windows_core::ComInterface>::IID
-    }
+        IWindowsUpdateAgentInfo_Vtbl { base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetInfo: GetInfo::<Identity, Impl, OFFSET> }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

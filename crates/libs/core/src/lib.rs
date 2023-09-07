@@ -4,7 +4,10 @@ Learn more about Rust for Windows here: <https://github.com/microsoft/windows-rs
 
 #![doc(html_no_source)]
 #![allow(non_snake_case)]
-#![cfg_attr(windows_debugger_visualizer, debugger_visualizer(natvis_file = "../windows.natvis"))]
+#![cfg_attr(
+    windows_debugger_visualizer,
+    debugger_visualizer(natvis_file = "../windows.natvis")
+)]
 
 extern crate self as windows_core;
 
@@ -13,7 +16,8 @@ pub mod imp;
 
 mod agile_reference;
 mod array;
-mod as_impl;
+#[cfg(feature = "implement")]
+mod com_implement;
 mod com_interface;
 mod error;
 mod event;
@@ -32,7 +36,8 @@ mod weak;
 
 pub use agile_reference::*;
 pub use array::*;
-pub use as_impl::*;
+#[cfg(feature = "implement")]
+pub use com_implement::*;
 pub use com_interface::*;
 pub use error::*;
 pub use event::*;

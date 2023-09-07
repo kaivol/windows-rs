@@ -139,7 +139,11 @@ unsafe impl Sync for HSTRING {}
 
 impl std::fmt::Display for HSTRING {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "{}", Decode(|| std::char::decode_utf16(self.as_wide().iter().cloned())))
+        write!(
+            f,
+            "{}",
+            Decode(|| std::char::decode_utf16(self.as_wide().iter().cloned()))
+        )
     }
 }
 
@@ -177,7 +181,13 @@ impl std::convert::From<&std::path::Path> for HSTRING {
 #[cfg(windows)]
 impl std::convert::From<&std::ffi::OsStr> for HSTRING {
     fn from(value: &std::ffi::OsStr) -> Self {
-        unsafe { Self::from_wide_iter(std::os::windows::ffi::OsStrExt::encode_wide(value), value.len()).unwrap() }
+        unsafe {
+            Self::from_wide_iter(
+                std::os::windows::ffi::OsStrExt::encode_wide(value),
+                value.len(),
+            )
+            .unwrap()
+        }
     }
 }
 
@@ -311,7 +321,10 @@ impl PartialEq<&std::ffi::OsString> for HSTRING {
 #[cfg(windows)]
 impl PartialEq<std::ffi::OsStr> for HSTRING {
     fn eq(&self, other: &std::ffi::OsStr) -> bool {
-        self.as_wide().iter().copied().eq(std::os::windows::ffi::OsStrExt::encode_wide(other))
+        self.as_wide()
+            .iter()
+            .copied()
+            .eq(std::os::windows::ffi::OsStrExt::encode_wide(other))
     }
 }
 

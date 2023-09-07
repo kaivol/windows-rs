@@ -15,7 +15,10 @@ pub struct ScopedInterface<'a, T: Interface> {
 
 impl<'a, T: Interface> ScopedInterface<'a, T> {
     pub fn new(interface: T) -> Self {
-        Self { interface, lifetime: std::marker::PhantomData }
+        Self {
+            interface,
+            lifetime: std::marker::PhantomData,
+        }
     }
 }
 
@@ -30,7 +33,8 @@ impl<'a, T: Interface> std::ops::Deref for ScopedInterface<'a, T> {
 impl<'a, T: Interface> Drop for ScopedInterface<'a, T> {
     fn drop(&mut self) {
         unsafe {
-            let _ = std::boxed::Box::from_raw(self.interface.as_raw() as *const _ as *mut ScopedHeap);
+            let _ =
+                std::boxed::Box::from_raw(self.interface.as_raw() as *const _ as *mut ScopedHeap);
         }
     }
 }

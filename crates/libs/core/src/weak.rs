@@ -13,7 +13,9 @@ impl<I: ComInterface> Weak<I> {
 
     /// Attempts to upgrade the weak reference to a strong reference.
     pub fn upgrade(&self) -> Option<I> {
-        self.0.as_ref().and_then(|inner| unsafe { inner.Resolve().ok() })
+        self.0
+            .as_ref()
+            .and_then(|inner| unsafe { inner.Resolve().ok() })
     }
 
     pub(crate) fn downgrade(source: &crate::imp::IWeakReferenceSource) -> Result<Self> {

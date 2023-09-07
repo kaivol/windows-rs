@@ -8,7 +8,7 @@ use windows::{core::*, Foundation::*};
 struct Stringable;
 
 impl IStringable_Impl for Stringable {
-    fn ToString(&self) -> Result<HSTRING> {
+    fn ToString(_this: &Self::This) -> Result<HSTRING> {
         Ok("client".into())
     }
 }
@@ -38,8 +38,8 @@ fn test() -> Result<()> {
     assert_eq!(a, c[..]);
     assert_eq!(a, d[..]);
 
-    let c: IStringable = Stringable.into();
-    let d = Callback::new(Ok);
+    let c: IStringable = Stringable.into_interface();
+    let d = Callback::new(|input| Ok(input));
     class.Input(&class, &class, &c, &d)?;
     assert!(class.Input(None, None, None, None).is_err());
 
@@ -47,11 +47,6 @@ fn test() -> Result<()> {
     let inspectable: IInspectable = class.cast()?;
     // Notice GetRuntimeClassName returns the class name.
     assert_eq!(inspectable.GetRuntimeClassName()?, "test_component.Class");
-
-    // This just casts down to IInspectable since the vtable already includes IInspectable.
-    let inspectable: &IInspectable = class.can_into();
-    // Notice GetRuntimeClassName returns the specific interface name.
-    assert_eq!(inspectable.GetRuntimeClassName()?, "test_component.IClass");
 
     Ok(())
 }

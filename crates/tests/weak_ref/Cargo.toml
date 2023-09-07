@@ -7,5 +7,6 @@ publish = false
 [dependencies.windows]
 path = "../../libs/windows"
 features = [
+    "implement",
     "Win32_System_WinRT",
 ]

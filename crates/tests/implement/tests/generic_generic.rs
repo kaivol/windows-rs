@@ -4,6 +4,7 @@ use windows::Foundation::*;
 
 #[implement(
     IVectorView<T>,
+    IIterable<T>,
 )]
 struct Thing<T>(Vec<T>)
 where
@@ -16,19 +17,19 @@ where
     T: RuntimeType + 'static + Clone,
     <T as Type<T>>::Default: PartialEq,
 {
-    fn GetAt(&self, index: u32) -> Result<T> {
-        self.0.get(index as usize).cloned().ok_or_else(|| panic!())
+    fn GetAt(this: &Self::This, index: u32) -> Result<T> {
+        this.0.get(index as usize).cloned().ok_or_else(|| panic!())
     }
 
-    fn Size(&self) -> Result<u32> {
+    fn Size(_this: &Self::This) -> Result<u32> {
         panic!();
     }
 
-    fn IndexOf(&self, _value: &T::Default, _index: &mut u32) -> Result<bool> {
+    fn IndexOf(_this: &Self::This, _value: &T::Default, _index: &mut u32) -> Result<bool> {
         panic!();
     }
 
-    fn GetMany(&self, _startindex: u32, _items: &mut [T::Default]) -> Result<u32> {
+    fn GetMany(_this: &Self::This, _startindex: u32, _items: &mut [T::Default]) -> Result<u32> {
         panic!();
     }
 }
@@ -38,19 +39,20 @@ where
     T: RuntimeType + 'static + Clone,
     <T as Type<T>>::Default: PartialEq,
 {
-    fn First(&self) -> Result<IIterator<T>> {
+    fn First(_this: &Self::This) -> Result<IIterator<T>> {
         unimplemented!()
     }
 }
 
 #[test]
 fn test_implement() -> Result<()> {
-    let v: IVectorView<i32> = Thing(vec![10, 20, 30]).into();
+    let v: IVectorView<i32> = Thing(vec![10, 20, 30]).into_interface();
     assert_eq!(10, v.GetAt(0)?);
     assert_eq!(20, v.GetAt(1)?);
     assert_eq!(30, v.GetAt(2)?);
 
-    let v: IVectorView<HSTRING> = Thing(vec!["10".into(), "20".into(), "30".into()]).into();
+    let v: IVectorView<HSTRING> =
+        Thing::<HSTRING>(vec!["10".into(), "20".into(), "30".into()]).into_interface();
     assert_eq!("10", v.GetAt(0)?);
     assert_eq!("20", v.GetAt(1)?);
     assert_eq!("30", v.GetAt(2)?);
@@ -58,12 +60,12 @@ fn test_implement() -> Result<()> {
     let url1: HSTRING = "http://one/".into();
     let url2: HSTRING = "http://two/".into();
     let url3: HSTRING = "http://three/".into();
-    let v: IVectorView<IStringable> = Thing(vec![
+    let v: IVectorView<IStringable> = Thing::<IStringable>(vec![
         Uri::CreateUri(&url1)?.cast()?,
         Uri::CreateUri(&url2)?.cast()?,
         Uri::CreateUri(&url3)?.cast()?,
     ])
-    .into();
+    .into_interface();
 
     assert_eq!("http://one/", v.GetAt(0)?.ToString()?);
     assert_eq!("http://two/", v.GetAt(1)?.ToString()?);

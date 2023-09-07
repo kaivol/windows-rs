@@ -34,6 +34,7 @@ jobs:
             >> $env:GITHUB_ENV
       - name: Run cargo clippy
         run: |
+          cargo clippy -p miri_implement &&
           cargo clippy -p riddle &&
           cargo clippy -p sample_bits &&
           cargo clippy -p sample_com_uri &&

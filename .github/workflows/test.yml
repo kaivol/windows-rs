@@ -41,6 +41,7 @@ jobs:
         uses: ./.github/actions/fix-environment
       - name: Test
         run: >
+          cargo test -p miri_implement &&
           cargo test -p riddle &&
           cargo test -p sample_bits &&
           cargo test -p sample_com_uri &&
