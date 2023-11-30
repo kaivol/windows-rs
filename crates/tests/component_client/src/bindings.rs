@@ -361,7 +361,7 @@ impl<F: FnMut(i32) -> ::windows_core::Result<i32> + ::core::marker::Send + 'stat
             || *iid == <::windows_core::IUnknown as ::windows_core::ComInterface>::IID
             || *iid == <::windows_core::imp::IAgileObject as ::windows_core::ComInterface>::IID
         {
-            &mut (*this).vtable as *mut _ as _
+            this as *mut _
         } else {
             ::core::ptr::null_mut()
         };

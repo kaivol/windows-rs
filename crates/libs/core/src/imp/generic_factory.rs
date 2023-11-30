@@ -10,7 +10,12 @@ impl IGenericFactory {
     pub fn ActivateInstance<I: crate::ComInterface>(&self) -> crate::Result<I> {
         unsafe {
             let mut result__ = std::mem::zeroed();
-            (crate::Interface::vtable(self).ActivateInstance)(std::mem::transmute_copy(self), &mut result__ as *mut _ as *mut _).from_abi::<crate::IInspectable>(result__)?.cast()
+            (crate::Interface::vtable(self).ActivateInstance)(
+                std::mem::transmute_copy(self),
+                &mut result__ as *mut _ as *mut _,
+            )
+            .from_abi::<crate::IInspectable>(result__)?
+            .cast()
         }
     }
 }
@@ -18,7 +23,10 @@ impl IGenericFactory {
 #[repr(C)]
 pub struct IGenericFactory_Vtbl {
     pub base__: crate::IInspectable_Vtbl,
-    pub ActivateInstance: unsafe extern "system" fn(this: *mut std::ffi::c_void, instance: *mut *mut std::ffi::c_void) -> crate::HRESULT,
+    pub ActivateInstance: unsafe extern "system" fn(
+        this: *mut std::ffi::c_void,
+        instance: *mut *mut std::ffi::c_void,
+    ) -> crate::HRESULT,
 }
 
 unsafe impl crate::Interface for IGenericFactory {

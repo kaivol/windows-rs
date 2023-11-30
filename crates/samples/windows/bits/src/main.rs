@@ -21,7 +21,7 @@ fn main() -> Result<()> {
         let job = job.unwrap();
         job.AddFile(w!("https://kennykerr.ca/favicon.svg"), w!("D:\\rust.svg"))?;
 
-        let callback: IBackgroundCopyCallback = Callback.into();
+        let callback: IBackgroundCopyCallback = Callback.into_interface();
         job.SetNotifyInterface(&callback)?;
         job.SetNotifyFlags(BG_NOTIFY_JOB_TRANSFERRED | BG_NOTIFY_JOB_ERROR)?;
 
@@ -39,7 +39,7 @@ fn main() -> Result<()> {
 struct Callback;
 
 impl IBackgroundCopyCallback_Impl for Callback {
-    fn JobTransferred(&self, job: Option<&IBackgroundCopyJob>) -> Result<()> {
+    fn JobTransferred(_this: &Self::This, job: Option<&IBackgroundCopyJob>) -> Result<()> {
         let job = job.unwrap();
         unsafe { job.Complete()? };
         println!("done");
@@ -47,7 +47,7 @@ impl IBackgroundCopyCallback_Impl for Callback {
     }
 
     fn JobError(
-        &self,
+        _this: &Self::This,
         job: Option<&IBackgroundCopyJob>,
         error: Option<&IBackgroundCopyError>,
     ) -> Result<()> {
@@ -60,7 +60,7 @@ impl IBackgroundCopyCallback_Impl for Callback {
         std::process::exit(0);
     }
 
-    fn JobModification(&self, _: Option<&IBackgroundCopyJob>, _: u32) -> Result<()> {
+    fn JobModification(_this: &Self::This, _: Option<&IBackgroundCopyJob>, _: u32) -> Result<()> {
         Ok(())
     }
 }

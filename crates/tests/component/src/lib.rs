@@ -2,23 +2,28 @@ mod bindings;
 use std::sync::*;
 use windows::{core::*, Foundation::*, Win32::Foundation::*, Win32::System::WinRT::*};
 
-#[implement(bindings::Class)]
+#[implement(bindings::IClass)]
 struct Class(RwLock<i32>);
 
 impl bindings::IClass_Impl for Class {
-    fn Property(&self) -> Result<i32> {
-        let reader = self.0.read().unwrap();
+    fn Property(this: &Self::This) -> Result<i32> {
+        let reader = this.0.read().unwrap();
         Ok(*reader)
     }
-    fn SetProperty(&self, value: i32) -> Result<()> {
-        let mut writer = self.0.write().unwrap();
+    fn SetProperty(this: &Self::This, value: i32) -> Result<()> {
+        let mut writer = this.0.write().unwrap();
         *writer = value;
         Ok(())
     }
-    fn Flags(&self) -> Result<bindings::Flags> {
+    fn Flags(_this: &Self::This) -> Result<bindings::Flags> {
         Ok(bindings::Flags::Ok)
     }
-    fn Int32Array(&self, a: &[i32], b: &mut [i32], c: &mut Array<i32>) -> Result<Array<i32>> {
+    fn Int32Array(
+        _this: &Self::This,
+        a: &[i32],
+        b: &mut [i32],
+        c: &mut Array<i32>,
+    ) -> Result<Array<i32>> {
         assert_eq!(a.len(), b.len());
         assert!(c.is_empty());
         b.copy_from_slice(a);
@@ -26,7 +31,7 @@ impl bindings::IClass_Impl for Class {
         Ok(Array::from_slice(a))
     }
     fn StringArray(
-        &self,
+        _this: &Self::This,
         a: &[HSTRING],
         b: &mut [HSTRING],
         c: &mut Array<HSTRING>,
@@ -38,7 +43,7 @@ impl bindings::IClass_Impl for Class {
         Ok(Array::from_slice(a))
     }
     fn Input(
-        &self,
+        _this: &Self::This,
         a: Option<&IInspectable>,
         b: Option<&bindings::Class>,
         c: Option<&IStringable>,
@@ -63,8 +68,8 @@ impl bindings::IClass_Impl for Class {
 struct ClassFactory;
 
 impl IActivationFactory_Impl for ClassFactory {
-    fn ActivateInstance(&self) -> Result<IInspectable> {
-        Ok(Class(RwLock::new(0)).into())
+    fn ActivateInstance(_this: &Self::This) -> Result<IInspectable> {
+        Ok(Class(RwLock::new(0)).into_interface())
     }
 }
 
@@ -74,7 +79,7 @@ unsafe extern "system" fn DllGetActivationFactory(
     result: *mut *mut std::ffi::c_void,
 ) -> HRESULT {
     let factory: Option<IActivationFactory> = match (*name).to_string().as_str() {
-        "test_component.Class" => Some(ClassFactory.into()),
+        "test_component.Class" => Some(ClassFactory.into_interface()),
         _ => None,
     };
 

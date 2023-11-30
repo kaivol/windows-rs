@@ -85,20 +85,39 @@ impl HRESULT {
         let mut message = HeapString(std::ptr::null_mut());
 
         unsafe {
-            let size = crate::imp::FormatMessageW(crate::imp::FORMAT_MESSAGE_ALLOCATE_BUFFER | crate::imp::FORMAT_MESSAGE_FROM_SYSTEM | crate::imp::FORMAT_MESSAGE_IGNORE_INSERTS, std::ptr::null(), self.0 as u32, 0, &mut message.0 as *mut _ as *mut _, 0, std::ptr::null());
+            let size = crate::imp::FormatMessageW(
+                crate::imp::FORMAT_MESSAGE_ALLOCATE_BUFFER
+                    | crate::imp::FORMAT_MESSAGE_FROM_SYSTEM
+                    | crate::imp::FORMAT_MESSAGE_IGNORE_INSERTS,
+                std::ptr::null(),
+                self.0 as u32,
+                0,
+                &mut message.0 as *mut _ as *mut _,
+                0,
+                std::ptr::null(),
+            );
 
-            HSTRING::from_wide(crate::imp::wide_trim_end(std::slice::from_raw_parts(message.0 as *const u16, size as usize))).unwrap_or_default()
+            HSTRING::from_wide(crate::imp::wide_trim_end(std::slice::from_raw_parts(
+                message.0 as *const u16,
+                size as usize,
+            )))
+            .unwrap_or_default()
         }
     }
 
     /// Maps a Win32 error code to an HRESULT value.
     pub const fn from_win32(error: u32) -> Self {
-        Self(if error as i32 <= 0 { error } else { (error & 0x0000_FFFF) | (7 << 16) | 0x8000_0000 } as i32)
+        Self(if error as i32 <= 0 {
+            error
+        } else {
+            (error & 0x0000_FFFF) | (7 << 16) | 0x8000_0000
+        } as i32)
     }
 }
 
 impl RuntimeType for HRESULT {
-    const SIGNATURE: crate::imp::ConstBuffer = crate::imp::ConstBuffer::from_slice(b"struct(Windows.Foundation.HResult;i32)");
+    const SIGNATURE: crate::imp::ConstBuffer =
+        crate::imp::ConstBuffer::from_slice(b"struct(Windows.Foundation.HResult;i32)");
 }
 
 impl TypeKind for HRESULT {

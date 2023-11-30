@@ -1,0 +1,17 @@
+[package]
+name = "miri_implement"
+version = "0.0.0"
+authors = ["Microsoft"]
+edition = "2018"
+
+[dependencies.windows]
+path = "../../libs/windows"
+features = [
+    "implement",
+    "Foundation",
+    "System_Threading",
+    "Win32_Foundation",
+    "Win32_System_WinRT",
+    "Win32_Graphics_Direct3D",
+    "Win32_Graphics_Direct3D10",
+]

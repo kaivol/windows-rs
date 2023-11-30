@@ -1,27 +1,28 @@
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
-pub trait IWaaSAssessor_Impl: Sized {
-    fn GetOSUpdateAssessment(&self) -> ::windows_core::Result<OSUpdateAssessment>;
+pub trait IWaaSAssessor_Impl: ::windows_core::BaseImpl {
+    fn GetOSUpdateAssessment(this: &Self::This) -> ::windows_core::Result<OSUpdateAssessment>;
 }
 #[cfg(feature = "Win32_Foundation")]
-impl ::windows_core::RuntimeName for IWaaSAssessor {}
+impl ::windows_core::Iids for IWaaSAssessor {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IUnknown);
+}
 #[cfg(feature = "Win32_Foundation")]
-impl IWaaSAssessor_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWaaSAssessor_Impl, const OFFSET: isize>() -> IWaaSAssessor_Vtbl {
-        unsafe extern "system" fn GetOSUpdateAssessment<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IWaaSAssessor_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, result: *mut OSUpdateAssessment) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.GetOSUpdateAssessment() {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWaaSAssessor_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IWaaSAssessor {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn GetOSUpdateAssessment<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWaaSAssessor_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, result: *mut OSUpdateAssessment) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::GetOSUpdateAssessment(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: ::windows_core::IUnknown_Vtbl::new::<Identity, OFFSET>(), GetOSUpdateAssessment: GetOSUpdateAssessment::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IWaaSAssessor as ::windows_core::ComInterface>::IID
-    }
+        IWaaSAssessor_Vtbl {
+            base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
+            GetOSUpdateAssessment: GetOSUpdateAssessment::<Identity, Impl, OFFSET>,
+        }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

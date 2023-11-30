@@ -1044,7 +1044,7 @@ impl Writer {
         tokens
     }
 
-    pub fn impl_signature(&self, def: TypeDef, signature: &Signature) -> TokenStream {
+    pub fn impl_signature(&self, def: TypeDef, signature: &Signature, has_unknown_base: bool) -> TokenStream {
         if def.flags().contains(TypeAttributes::WindowsRuntime) {
             let is_delegate = def.kind() == TypeKind::Delegate;
             let params = signature.params.iter().map(|p| self.winrt_produce_type(p, !is_delegate));
@@ -1064,6 +1064,8 @@ impl Writer {
 
             let this = if is_delegate {
                 quote! {}
+            } else if has_unknown_base {
+                quote! { this: &Self::This, }
             } else {
                 quote! { &self, }
             };
@@ -1095,7 +1097,13 @@ impl Writer {
                 _ => self.return_sig(signature),
             };
 
-            quote! { (&self, #params) #return_type }
+            let this = if has_unknown_base {
+                quote! { this: &Self::This, }
+            } else {
+                quote! { &self, }
+            };
+
+            quote! { (#this #params) #return_type }
         }
     }
     fn winrt_produce_type(&self, param: &SignatureParam, include_param_names: bool) -> TokenStream {

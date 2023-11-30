@@ -1,0 +1,25 @@
+name: miri
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+env:
+  RUSTFLAGS: -Dwarnings
+
+jobs:
+  miri:
+    name: miri
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Update toolchain
+        run: rustup update --no-self-update nightly && rustup default nightly
+      - name: Install miri
+        run: rustup component add miri
+      - name: Run miri
+        run: cargo miri test -p miri_implement

@@ -5,7 +5,7 @@ use windows::Win32::Foundation::E_BOUNDS;
 #[implement(
     windows::Foundation::Collections::IIterator<T>,
 )]
-struct Iterator<T>(std::cell::UnsafeCell<(IIterable<T>, usize)>)
+struct Iterator<T>(std::cell::UnsafeCell<(ComObject<Iterable<T>>, usize)>)
 where
     T: RuntimeType + 'static + Clone,
     <T as Type<T>>::Default: PartialEq;
@@ -16,10 +16,10 @@ where
     T: RuntimeType + 'static + Clone,
     <T as Type<T>>::Default: PartialEq,
 {
-    fn Current(&self) -> Result<T> {
+    fn Current(this: &Self::This) -> Result<T> {
         unsafe {
-            let this = self.0.get();
-            let owner = (*this).0.as_impl();
+            let this = this.0.get();
+            let owner = &(*this).0;
 
             if owner.0.len() > (*this).1 {
                 Ok(owner.0[(*this).1].clone())
@@ -29,24 +29,24 @@ where
         }
     }
 
-    fn HasCurrent(&self) -> Result<bool> {
+    fn HasCurrent(this: &Self::This) -> Result<bool> {
         unsafe {
-            let this = self.0.get();
-            let owner = (*this).0.as_impl();
+            let this = this.0.get();
+            let owner = &(*this).0;
             Ok(owner.0.len() > (*this).1)
         }
     }
 
-    fn MoveNext(&self) -> Result<bool> {
+    fn MoveNext(this: &Self::This) -> Result<bool> {
         unsafe {
-            let this = self.0.get();
-            let owner = (*this).0.as_impl();
+            let this = this.0.get();
+            let owner = &(*this).0;
             (*this).1 += 1;
             Ok(owner.0.len() > (*this).1)
         }
     }
 
-    fn GetMany(&self, _items: &mut [T::Default]) -> Result<u32> {
+    fn GetMany(_this: &Self::This, _items: &mut [T::Default]) -> Result<u32> {
         panic!(); // TODO: arrays still need some work.
     }
 }
@@ -65,14 +65,14 @@ where
     T: RuntimeType + 'static + Clone,
     <T as Type<T>>::Default: PartialEq,
 {
-    fn First(&self) -> Result<IIterator<T>> {
-        Ok(Iterator::<T>((unsafe { self.cast()? }, 0).into()).into())
+    fn First(this: &Self::This) -> Result<IIterator<T>> {
+        Ok(Iterator::<T>((this.clone(), 0).into()).into_interface())
     }
 }
 
 #[test]
 fn test_collect() -> Result<()> {
-    let source: IIterable<i32> = Iterable(vec![10, 20, 30]).into();
+    let source: IIterable<i32> = Iterable(vec![10, 20, 30]).into_interface();
 
     // TODO: not sure why this won't compile.
     // let values: Vec<i32> = source.collect();
@@ -90,7 +90,7 @@ fn test_collect() -> Result<()> {
 
 #[test]
 fn test_explicit() -> Result<()> {
-    let iterable: IIterable<i32> = Iterable(vec![10, 20, 30]).into();
+    let iterable: IIterable<i32> = Iterable(vec![10, 20, 30]).into_interface();
     let it1 = iterable.First()?;
 
     assert_eq!(it1.Current()?, 10);

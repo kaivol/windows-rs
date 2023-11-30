@@ -7,7 +7,7 @@ use windows::Foundation::*;
 struct BaseTrust;
 
 impl IStringable_Impl for BaseTrust {
-    fn ToString(&self) -> Result<HSTRING> {
+    fn ToString(_this: &Self::This) -> Result<HSTRING> {
         Ok("BaseTrust".into())
     }
 }
@@ -16,13 +16,13 @@ impl IStringable_Impl for BaseTrust {
 struct PartialTrust;
 
 impl IStringable_Impl for PartialTrust {
-    fn ToString(&self) -> Result<HSTRING> {
+    fn ToString(_this: &Self::This) -> Result<HSTRING> {
         Ok("PartialTrust".into())
     }
 }
 
 impl IClosable_Impl for PartialTrust {
-    fn Close(&self) -> Result<()> {
+    fn Close(_this: &Self::This) -> Result<()> {
         Ok(())
     }
 }
@@ -31,22 +31,22 @@ impl IClosable_Impl for PartialTrust {
 struct FullTrust;
 
 impl IStringable_Impl for FullTrust {
-    fn ToString(&self) -> Result<HSTRING> {
+    fn ToString(_this: &Self::This) -> Result<HSTRING> {
         Ok("FullTrust".into())
     }
 }
 
 #[test]
 fn test() -> Result<()> {
-    let base: IStringable = BaseTrust.into();
+    let base: IStringable = BaseTrust.into_interface();
     assert_eq!(base.ToString()?, "BaseTrust");
     assert_eq!(base.cast::<IInspectable>()?.GetTrustLevel()?, 0);
 
-    let partial: IStringable = PartialTrust.into();
+    let partial: IStringable = PartialTrust.into_interface();
     assert_eq!(partial.ToString()?, "PartialTrust");
     assert_eq!(partial.cast::<IInspectable>()?.GetTrustLevel()?, 1);
 
-    let full: IStringable = FullTrust.into();
+    let full: IStringable = FullTrust.into_interface();
     assert_eq!(full.ToString()?, "FullTrust");
     assert_eq!(full.cast::<IInspectable>()?.GetTrustLevel()?, 2);
 

@@ -7,26 +7,35 @@ use windows::{
 struct DataObject();
 
 impl IDataObject_Impl for DataObject {
-    fn GetData(&self, _: *const FORMATETC) -> Result<STGMEDIUM> {
+    fn GetData(_this: &Self::This, _: *const FORMATETC) -> Result<STGMEDIUM> {
         unimplemented!()
     }
-    fn GetDataHere(&self, _: *const FORMATETC, _: *mut STGMEDIUM) -> Result<()> {
+    fn GetDataHere(_this: &Self::This, _: *const FORMATETC, _: *mut STGMEDIUM) -> Result<()> {
         unimplemented!()
     }
-    fn QueryGetData(&self, _: *const FORMATETC) -> HRESULT {
+    fn QueryGetData(_this: &Self::This, _: *const FORMATETC) -> HRESULT {
         unimplemented!()
     }
-    fn GetCanonicalFormatEtc(&self, _: *const FORMATETC, _: *mut FORMATETC) -> HRESULT {
+    fn GetCanonicalFormatEtc(
+        _this: &Self::This,
+        _: *const FORMATETC,
+        _: *mut FORMATETC,
+    ) -> HRESULT {
         unimplemented!()
     }
-    fn SetData(&self, _: *const FORMATETC, _: *const STGMEDIUM, _: BOOL) -> Result<()> {
+    fn SetData(
+        _this: &Self::This,
+        _: *const FORMATETC,
+        _: *const STGMEDIUM,
+        _: BOOL,
+    ) -> Result<()> {
         unimplemented!()
     }
-    fn EnumFormatEtc(&self, _: u32) -> Result<IEnumFORMATETC> {
+    fn EnumFormatEtc(_this: &Self::This, _: u32) -> Result<IEnumFORMATETC> {
         unimplemented!()
     }
     fn DAdvise(
-        &self,
+        _this: &Self::This,
         format: *const FORMATETC,
         value: u32,
         sink: Option<&IAdviseSink>,
@@ -36,10 +45,10 @@ impl IDataObject_Impl for DataObject {
         assert!(sink.is_none());
         Ok(123)
     }
-    fn DUnadvise(&self, _: u32) -> Result<()> {
+    fn DUnadvise(_this: &Self::This, _: u32) -> Result<()> {
         unimplemented!()
     }
-    fn EnumDAdvise(&self) -> Result<IEnumSTATDATA> {
+    fn EnumDAdvise(_this: &Self::This) -> Result<IEnumSTATDATA> {
         unimplemented!()
     }
 }
@@ -49,7 +58,7 @@ struct DropTarget();
 
 impl IDropTarget_Impl for DropTarget {
     fn DragEnter(
-        &self,
+        _this: &Self::This,
         object: Option<&IDataObject>,
         state: MODIFIERKEYS_FLAGS,
         point: &POINTL,
@@ -67,14 +76,19 @@ impl IDropTarget_Impl for DropTarget {
             Ok(())
         }
     }
-    fn DragOver(&self, _: MODIFIERKEYS_FLAGS, _: &POINTL, _: *mut DROPEFFECT) -> Result<()> {
+    fn DragOver(
+        _this: &Self::This,
+        _: MODIFIERKEYS_FLAGS,
+        _: &POINTL,
+        _: *mut DROPEFFECT,
+    ) -> Result<()> {
         unimplemented!()
     }
-    fn DragLeave(&self) -> Result<()> {
+    fn DragLeave(_this: &Self::This) -> Result<()> {
         Ok(())
     }
     fn Drop(
-        &self,
+        _this: &Self::This,
         _: Option<&IDataObject>,
         _: MODIFIERKEYS_FLAGS,
         _: &POINTL,
@@ -87,9 +101,9 @@ impl IDropTarget_Impl for DropTarget {
 #[test]
 fn test() -> Result<()> {
     unsafe {
-        let object: IDataObject = DataObject().into();
+        let object: IDataObject = DataObject().into_interface();
 
-        let target: IDropTarget = DropTarget().into();
+        let target: IDropTarget = DropTarget().into_interface();
         target.DragLeave()?;
 
         let mut effect = DROPEFFECT_LINK;

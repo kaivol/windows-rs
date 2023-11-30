@@ -66,7 +66,7 @@ fn gen_win_delegate(writer: &Writer, def: TypeDef) -> TokenStream {
 
     let vtbl_signature = writer.vtbl_signature(def, generics, &signature);
     let invoke = winrt_methods::writer(writer, def, generics, InterfaceKind::Default, method, &mut MethodNames::new(), &mut MethodNames::new());
-    let invoke_upcall = winrt_methods::gen_upcall(writer, &signature, quote! { ((*this).invoke) });
+    let invoke_upcall = winrt_methods::gen_upcall(writer, &signature, quote! { ((*this).invoke) }, None);
 
     let mut tokens = quote! {
         #doc
@@ -112,7 +112,7 @@ fn gen_win_delegate(writer: &Writer, def: TypeDef) -> TokenStream {
                 *interface = if *iid == <#ident as ::windows_core::ComInterface>::IID ||
                     *iid == <::windows_core::IUnknown as ::windows_core::ComInterface>::IID ||
                     *iid == <::windows_core::imp::IAgileObject as ::windows_core::ComInterface>::IID {
-                        &mut (*this).vtable as *mut _ as _
+                        this as *mut _
                     } else {
                         ::core::ptr::null_mut()
                     };
@@ -154,7 +154,7 @@ fn gen_win_delegate(writer: &Writer, def: TypeDef) -> TokenStream {
 }
 
 fn gen_fn_constraint(writer: &Writer, def: TypeDef, signature: &Signature) -> TokenStream {
-    let signature = writer.impl_signature(def, signature);
+    let signature = writer.impl_signature(def, signature, true);
 
     quote! { F: FnMut #signature + ::core::marker::Send + 'static }
 }

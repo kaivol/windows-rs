@@ -1,27 +1,28 @@
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
-pub trait IIsolatedEnvironmentInterop_Impl: Sized {
-    fn GetHostHwndInterop(&self, containerhwnd: super::super::super::Foundation::HWND) -> ::windows_core::Result<super::super::super::Foundation::HWND>;
+pub trait IIsolatedEnvironmentInterop_Impl: ::windows_core::BaseImpl {
+    fn GetHostHwndInterop(this: &Self::This, containerhwnd: super::super::super::Foundation::HWND) -> ::windows_core::Result<super::super::super::Foundation::HWND>;
 }
 #[cfg(feature = "Win32_Foundation")]
-impl ::windows_core::RuntimeName for IIsolatedEnvironmentInterop {}
+impl ::windows_core::Iids for IIsolatedEnvironmentInterop {
+    const IIDS: &'static [::windows_core::GUID] = ::windows_core::concat_iids!(::windows_core::IUnknown);
+}
 #[cfg(feature = "Win32_Foundation")]
-impl IIsolatedEnvironmentInterop_Vtbl {
-    pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IIsolatedEnvironmentInterop_Impl, const OFFSET: isize>() -> IIsolatedEnvironmentInterop_Vtbl {
-        unsafe extern "system" fn GetHostHwndInterop<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IIsolatedEnvironmentInterop_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, containerhwnd: super::super::super::Foundation::HWND, hosthwnd: *mut super::super::super::Foundation::HWND) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.GetHostHwndInterop(::core::mem::transmute_copy(&containerhwnd)) {
+impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IIsolatedEnvironmentInterop_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IIsolatedEnvironmentInterop {
+    const VTABLE: Self::Vtable = {
+        unsafe extern "system" fn GetHostHwndInterop<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IIsolatedEnvironmentInterop_Impl, const OFFSET: usize>(this: *mut ::core::ffi::c_void, containerhwnd: super::super::super::Foundation::HWND, hosthwnd: *mut super::super::super::Foundation::HWND) -> ::windows_core::HRESULT {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::GetHostHwndInterop(this, ::core::mem::transmute_copy(&containerhwnd)) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(hosthwnd, ::core::mem::transmute(ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
-        Self { base__: ::windows_core::IUnknown_Vtbl::new::<Identity, OFFSET>(), GetHostHwndInterop: GetHostHwndInterop::<Identity, Impl, OFFSET> }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IIsolatedEnvironmentInterop as ::windows_core::ComInterface>::IID
-    }
+        IIsolatedEnvironmentInterop_Vtbl {
+            base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
+            GetHostHwndInterop: GetHostHwndInterop::<Identity, Impl, OFFSET>,
+        }
+    };
+    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

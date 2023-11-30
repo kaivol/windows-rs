@@ -16,16 +16,12 @@ where
     <K as ::windows_core::Type<K>>::Default: std::clone::Clone + std::cmp::Ord,
     <V as ::windows_core::Type<V>>::Default: std::clone::Clone,
 {
-    fn First(&self) -> ::windows_core::Result<IIterator<IKeyValuePair<K, V>>> {
-        unsafe {
-            // TODO: ideally we can do an AddRef rather than a QI here (via cast)...
-            // and then we can get rid of the unsafe as well.
-            Ok(StockMapViewIterator::<K, V> {
-                _owner: self.cast()?,
-                current: std::sync::RwLock::new(self.map.iter()),
-            }
-            .into())
-        }
+    fn First(this: &Self::This) -> ::windows_core::Result<IIterator<IKeyValuePair<K, V>>> {
+        use windows_core::ComObjectImplExt;
+        Ok(StockMapViewIterator::<K, V> {
+            _owner: this.clone(),
+            current: std::sync::RwLock::new(this.map.iter())
+        }.into_interface())
     }
 }
 
@@ -36,24 +32,17 @@ where
     <K as ::windows_core::Type<K>>::Default: std::clone::Clone + std::cmp::Ord,
     <V as ::windows_core::Type<V>>::Default: std::clone::Clone,
 {
-    fn Lookup(&self, key: &K::Default) -> ::windows_core::Result<V> {
-        let value = self
-            .map
-            .get(key)
-            .ok_or_else(|| ::windows_core::Error::from(::windows_core::imp::E_BOUNDS))?;
+    fn Lookup(this: &Self::This, key: &K::Default) -> ::windows_core::Result<V> {
+        let value = this.map.get(key).ok_or_else(|| ::windows_core::Error::from(::windows_core::imp::E_BOUNDS))?;
         V::from_default(value)
     }
-    fn Size(&self) -> ::windows_core::Result<u32> {
-        Ok(self.map.len().try_into()?)
+    fn Size(this: &Self::This) -> ::windows_core::Result<u32> {
+        Ok(this.map.len().try_into()?)
     }
-    fn HasKey(&self, key: &K::Default) -> ::windows_core::Result<bool> {
-        Ok(self.map.contains_key(key))
+    fn HasKey(this: &Self::This, key: &K::Default) -> ::windows_core::Result<bool> {
+        Ok(this.map.contains_key(key))
     }
-    fn Split(
-        &self,
-        first: &mut std::option::Option<IMapView<K, V>>,
-        second: &mut std::option::Option<IMapView<K, V>>,
-    ) -> ::windows_core::Result<()> {
+    fn Split(_: &Self::This, first: &mut std::option::Option<IMapView<K, V>>, second: &mut std::option::Option<IMapView<K, V>>) -> ::windows_core::Result<()> {
         *first = None;
         *second = None;
         Ok(())
@@ -68,7 +57,7 @@ where
     <K as ::windows_core::Type<K>>::Default: std::clone::Clone + std::cmp::Ord,
     <V as ::windows_core::Type<V>>::Default: std::clone::Clone,
 {
-    _owner: IIterable<IKeyValuePair<K, V>>,
+    _owner: ::windows_core::ComObject<StockMapView<K, V>>,
     current: ::std::sync::RwLock<std::collections::btree_map::Iter<'a, K::Default, V::Default>>,
 }
 
@@ -79,53 +68,45 @@ where
     <K as ::windows_core::Type<K>>::Default: std::clone::Clone + std::cmp::Ord,
     <V as ::windows_core::Type<V>>::Default: std::clone::Clone,
 {
-    fn Current(&self) -> ::windows_core::Result<IKeyValuePair<K, V>> {
-        let mut current = self.current.read().unwrap().clone().peekable();
+    fn Current(this: &Self::This) -> ::windows_core::Result<IKeyValuePair<K, V>> {
+        let mut current = this.current.read().unwrap().clone().peekable();
 
         if let Some((key, value)) = current.peek() {
-            Ok(StockKeyValuePair {
-                key: (*key).clone(),
-                value: (*value).clone(),
-            }
-            .into())
+            use windows_core::ComObjectImplExt;
+            Ok(StockKeyValuePair::<K, V> { key: (*key).clone(), value: (*value).clone() }.into_interface())
         } else {
             Err(::windows_core::Error::from(::windows_core::imp::E_BOUNDS))
         }
     }
 
-    fn HasCurrent(&self) -> ::windows_core::Result<bool> {
-        let mut current = self.current.read().unwrap().clone().peekable();
+    fn HasCurrent(this: &Self::This) -> ::windows_core::Result<bool> {
+        let mut current = this.current.read().unwrap().clone().peekable();
 
         Ok(current.peek().is_some())
     }
 
-    fn MoveNext(&self) -> ::windows_core::Result<bool> {
-        let mut current = self.current.write().unwrap();
+    fn MoveNext(this: &Self::This) -> ::windows_core::Result<bool> {
+        let mut current = this.current.write().unwrap();
 
         current.next();
         Ok(current.clone().peekable().peek().is_some())
     }
 
-    fn GetMany(&self, pairs: &mut [Option<IKeyValuePair<K, V>>]) -> ::windows_core::Result<u32> {
-        let mut current = self.current.write().unwrap();
+    fn GetMany(this: &Self::This, pairs: &mut [Option<IKeyValuePair<K, V>>]) -> ::windows_core::Result<u32> {
+        let mut current = this.current.write().unwrap();
         let mut actual = 0;
 
         for pair in pairs {
             if let Some((key, value)) = current.next() {
-                *pair = Some(
-                    StockKeyValuePair {
-                        key: (*key).clone(),
-                        value: (*value).clone(),
-                    }
-                    .into(),
-                );
+                use windows_core::ComObjectImplExt;
+                *pair = Some(StockKeyValuePair::<K,V> { key: (*key).clone(), value: (*value).clone() }.into_interface());
                 actual += 1;
             } else {
                 break;
             }
         }
 
-        Ok(actual)
+        Ok(actual as _)
     }
 }
 
@@ -148,16 +129,15 @@ where
     <K as ::windows_core::Type<K>>::Default: std::clone::Clone,
     <V as ::windows_core::Type<V>>::Default: std::clone::Clone,
 {
-    fn Key(&self) -> ::windows_core::Result<K> {
-        K::from_default(&self.key)
+    fn Key(this: &Self::This) -> ::windows_core::Result<K> {
+        K::from_default(&this.key)
     }
-    fn Value(&self) -> ::windows_core::Result<V> {
-        V::from_default(&self.value)
+    fn Value(this: &Self::This) -> ::windows_core::Result<V> {
+        V::from_default(&this.value)
     }
 }
 
-impl<K, V> ::core::convert::TryFrom<std::collections::BTreeMap<K::Default, V::Default>>
-    for IMapView<K, V>
+impl<K, V> ::core::convert::TryFrom<std::collections::BTreeMap<K::Default, V::Default>> for IMapView<K, V>
 where
     K: ::windows_core::RuntimeType,
     V: ::windows_core::RuntimeType,
@@ -165,10 +145,9 @@ where
     <V as ::windows_core::Type<V>>::Default: std::clone::Clone,
 {
     type Error = ::windows_core::Error;
-    fn try_from(
-        map: std::collections::BTreeMap<K::Default, V::Default>,
-    ) -> ::windows_core::Result<Self> {
+    fn try_from(map: std::collections::BTreeMap<K::Default, V::Default>) -> ::windows_core::Result<Self> {
         // TODO: should provide a fallible try_into or more explicit allocator
-        Ok(StockMapView { map }.into())
+        use windows_core::ComObjectImplExt;
+        Ok(StockMapView::<K, V> { map }.into_interface())
     }
 }

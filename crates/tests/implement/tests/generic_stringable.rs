@@ -3,31 +3,36 @@ use windows::Foundation::Collections::*;
 use windows::Foundation::*;
 
 #[implement(
-    windows::Foundation::Collections::IVectorView<windows::Foundation::IStringable>,
+    IIterable<IStringable>,
+    IVectorView<IStringable>,
 )]
 struct Thing(Vec<IStringable>);
 
 #[allow(non_snake_case)]
 impl IVectorView_Impl<IStringable> for Thing {
-    fn GetAt(&self, index: u32) -> Result<IStringable> {
-        self.0.get(index as usize).cloned().ok_or_else(|| panic!())
+    fn GetAt(this: &Self::This, index: u32) -> Result<IStringable> {
+        this.0.get(index as usize).cloned().ok_or_else(|| panic!())
     }
 
-    fn Size(&self) -> Result<u32> {
+    fn Size(_this: &Self::This) -> Result<u32> {
         panic!();
     }
 
-    fn IndexOf(&self, _value: &Option<IStringable>, _index: &mut u32) -> Result<bool> {
+    fn IndexOf(_this: &Self::This, _value: &Option<IStringable>, _index: &mut u32) -> Result<bool> {
         panic!();
     }
 
-    fn GetMany(&self, _startindex: u32, _items: &mut [Option<IStringable>]) -> Result<u32> {
+    fn GetMany(
+        _this: &Self::This,
+        _startindex: u32,
+        _items: &mut [Option<IStringable>],
+    ) -> Result<u32> {
         panic!();
     }
 }
 
 impl IIterable_Impl<IStringable> for Thing {
-    fn First(&self) -> Result<IIterator<IStringable>> {
+    fn First(_this: &Self::This) -> Result<IIterator<IStringable>> {
         unimplemented!()
     }
 }
@@ -42,7 +47,7 @@ fn test_implement() -> Result<()> {
         Uri::CreateUri(&url2)?.cast()?,
         Uri::CreateUri(&url3)?.cast()?,
     ])
-    .into();
+    .into_interface();
 
     assert_eq!("http://one/", v.GetAt(0)?.ToString()?);
     assert_eq!("http://two/", v.GetAt(1)?.ToString()?);

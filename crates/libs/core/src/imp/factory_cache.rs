@@ -12,7 +12,11 @@ pub struct FactoryCache<C, I> {
 
 impl<C, I> FactoryCache<C, I> {
     pub const fn new() -> Self {
-        Self { shared: AtomicPtr::new(std::ptr::null_mut()), _c: PhantomData, _i: PhantomData }
+        Self {
+            shared: AtomicPtr::new(std::ptr::null_mut()),
+            _c: PhantomData,
+            _i: PhantomData,
+        }
     }
 }
 
@@ -32,7 +36,16 @@ impl<C: crate::RuntimeName, I: crate::ComInterface> FactoryCache<C, I> {
 
             // If the factory is agile, we can safely cache it.
             if factory.cast::<IAgileObject>().is_ok() {
-                if self.shared.compare_exchange_weak(std::ptr::null_mut(), factory.as_raw(), Ordering::Relaxed, Ordering::Relaxed).is_ok() {
+                if self
+                    .shared
+                    .compare_exchange_weak(
+                        std::ptr::null_mut(),
+                        factory.as_raw(),
+                        Ordering::Relaxed,
+                        Ordering::Relaxed,
+                    )
+                    .is_ok()
+                {
                     std::mem::forget(factory);
                 }
             } else {
@@ -53,20 +66,36 @@ pub fn factory<C: crate::RuntimeName, I: crate::ComInterface>() -> crate::Result
     let mut factory: Option<I> = None;
     let name = crate::HSTRING::from(C::NAME);
 
-    let code = if let Some(function) = unsafe { delay_load::<RoGetActivationFactory>(crate::s!("combase.dll"), crate::s!("RoGetActivationFactory")) } {
+    let code = if let Some(function) = unsafe {
+        delay_load::<RoGetActivationFactory>(
+            crate::s!("combase.dll"),
+            crate::s!("RoGetActivationFactory"),
+        )
+    } {
         unsafe {
-            let mut code = function(std::mem::transmute_copy(&name), &I::IID, &mut factory as *mut _ as *mut _);
+            let mut code = function(
+                std::mem::transmute_copy(&name),
+                &I::IID,
+                &mut factory as *mut _ as *mut _,
+            );
 
             // If RoGetActivationFactory fails because combase hasn't been loaded yet then load combase
             // automatically so that it "just works" for apartment-agnostic code.
             if code == CO_E_NOTINITIALIZED {
-                if let Some(mta) = delay_load::<CoIncrementMTAUsage>(crate::s!("ole32.dll"), crate::s!("CoIncrementMTAUsage")) {
+                if let Some(mta) = delay_load::<CoIncrementMTAUsage>(
+                    crate::s!("ole32.dll"),
+                    crate::s!("CoIncrementMTAUsage"),
+                ) {
                     let mut cookie = std::ptr::null_mut();
                     let _ = mta(&mut cookie);
                 }
 
                 // Now try a second time to get the activation factory via the OS.
-                code = function(std::mem::transmute_copy(&name), &I::IID, &mut factory as *mut _ as *mut _);
+                code = function(
+                    std::mem::transmute_copy(&name),
+                    &I::IID,
+                    &mut factory as *mut _ as *mut _,
+                );
             }
 
             code
@@ -85,7 +114,9 @@ pub fn factory<C: crate::RuntimeName, I: crate::ComInterface>() -> crate::Result
     let original: crate::Error = code.into();
 
     // Now attempt to find the factory's implementation heuristically.
-    if let Some(i) = search_path(C::NAME, |library| unsafe { get_activation_factory(library, &name) }) {
+    if let Some(i) = search_path(C::NAME, |library| unsafe {
+        get_activation_factory(library, &name)
+    }) {
         i.cast()
     } else {
         Err(original)
@@ -118,15 +149,27 @@ where
     None
 }
 
-unsafe fn get_activation_factory(library: crate::PCSTR, name: &crate::HSTRING) -> crate::Result<IGenericFactory> {
-    let function = delay_load::<DllGetActivationFactory>(library, crate::s!("DllGetActivationFactory")).ok_or_else(crate::Error::from_win32)?;
+unsafe fn get_activation_factory(
+    library: crate::PCSTR,
+    name: &crate::HSTRING,
+) -> crate::Result<IGenericFactory> {
+    let function =
+        delay_load::<DllGetActivationFactory>(library, crate::s!("DllGetActivationFactory"))
+            .ok_or_else(crate::Error::from_win32)?;
     let mut abi = std::ptr::null_mut();
     function(std::mem::transmute_copy(name), &mut abi).from_abi(abi)
 }
 
 type CoIncrementMTAUsage = extern "system" fn(cookie: *mut *mut std::ffi::c_void) -> crate::HRESULT;
-type RoGetActivationFactory = extern "system" fn(hstring: *mut std::ffi::c_void, interface: &crate::GUID, result: *mut *mut std::ffi::c_void) -> crate::HRESULT;
-type DllGetActivationFactory = extern "system" fn(name: *mut std::ffi::c_void, factory: *mut *mut std::ffi::c_void) -> crate::HRESULT;
+type RoGetActivationFactory = extern "system" fn(
+    hstring: *mut std::ffi::c_void,
+    interface: &crate::GUID,
+    result: *mut *mut std::ffi::c_void,
+) -> crate::HRESULT;
+type DllGetActivationFactory = extern "system" fn(
+    name: *mut std::ffi::c_void,
+    factory: *mut *mut std::ffi::c_void,
+) -> crate::HRESULT;
 
 #[cfg(test)]
 mod tests {

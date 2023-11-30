@@ -20,65 +20,70 @@ struct TestData {
 struct Test(std::cell::UnsafeCell<TestData>);
 
 impl IDataObject_Impl for Test {
-    fn GetData(&self, _: *const FORMATETC) -> Result<STGMEDIUM> {
+    fn GetData(this: &Self::This, _: *const FORMATETC) -> Result<STGMEDIUM> {
         unsafe {
-            (*self.0.get()).GetData = true;
+            (*this.0.get()).GetData = true;
             Ok(STGMEDIUM::default())
         }
     }
 
-    fn GetDataHere(&self, _: *const FORMATETC, _: *mut STGMEDIUM) -> Result<()> {
+    fn GetDataHere(this: &Self::This, _: *const FORMATETC, _: *mut STGMEDIUM) -> Result<()> {
         unsafe {
-            (*self.0.get()).GetDataHere = true;
+            (*this.0.get()).GetDataHere = true;
             Ok(())
         }
     }
 
-    fn QueryGetData(&self, _: *const FORMATETC) -> HRESULT {
+    fn QueryGetData(this: &Self::This, _: *const FORMATETC) -> HRESULT {
         unsafe {
-            (*self.0.get()).QueryGetData = true;
+            (*this.0.get()).QueryGetData = true;
             S_OK
         }
     }
 
-    fn GetCanonicalFormatEtc(&self, _: *const FORMATETC, _: *mut FORMATETC) -> HRESULT {
+    fn GetCanonicalFormatEtc(this: &Self::This, _: *const FORMATETC, _: *mut FORMATETC) -> HRESULT {
         unsafe {
-            (*self.0.get()).GetCanonicalFormatEtc = true;
+            (*this.0.get()).GetCanonicalFormatEtc = true;
             S_OK
         }
     }
 
-    fn SetData(&self, _: *const FORMATETC, _: *const STGMEDIUM, _: BOOL) -> Result<()> {
+    fn SetData(this: &Self::This, _: *const FORMATETC, _: *const STGMEDIUM, _: BOOL) -> Result<()> {
         unsafe {
-            (*self.0.get()).SetData = true;
+            (*this.0.get()).SetData = true;
             Ok(())
         }
     }
 
-    fn EnumFormatEtc(&self, _: u32) -> Result<IEnumFORMATETC> {
+    fn EnumFormatEtc(this: &Self::This, _: u32) -> Result<IEnumFORMATETC> {
         unsafe {
-            (*self.0.get()).EnumFormatEtc = true;
+            (*this.0.get()).EnumFormatEtc = true;
             Err(Error::OK)
         }
     }
 
-    fn DAdvise(&self, _: *const FORMATETC, _: u32, _: Option<&IAdviseSink>) -> Result<u32> {
+    fn DAdvise(
+        this: &Self::This,
+        _: *const FORMATETC,
+        _: u32,
+        _: Option<&IAdviseSink>,
+    ) -> Result<u32> {
         unsafe {
-            (*self.0.get()).DAdvise = true;
+            (*this.0.get()).DAdvise = true;
             Ok(0)
         }
     }
 
-    fn DUnadvise(&self, _: u32) -> Result<()> {
+    fn DUnadvise(this: &Self::This, _: u32) -> Result<()> {
         unsafe {
-            (*self.0.get()).DUnadvise = true;
+            (*this.0.get()).DUnadvise = true;
             Ok(())
         }
     }
 
-    fn EnumDAdvise(&self) -> Result<IEnumSTATDATA> {
+    fn EnumDAdvise(this: &Self::This) -> Result<IEnumSTATDATA> {
         unsafe {
-            (*self.0.get()).EnumDAdvise = true;
+            (*this.0.get()).EnumDAdvise = true;
             Err(Error::OK)
         }
     }
@@ -87,7 +92,8 @@ impl IDataObject_Impl for Test {
 #[test]
 fn test() -> Result<()> {
     unsafe {
-        let d: IDataObject = Test::default().into();
+        let com_object = Test::default().into_object();
+        let d: IDataObject = com_object.to_interface();
         d.GetData(&Default::default())?;
         d.GetDataHere(&Default::default(), &mut Default::default())?;
         d.QueryGetData(&Default::default()).ok()?;
@@ -104,7 +110,7 @@ fn test() -> Result<()> {
 
         d.DAdvise(&Default::default(), 0, None)?;
 
-        let i = d.as_impl().0.get();
+        let i = com_object.0.get();
         assert!((*i).GetData);
         assert!((*i).GetDataHere);
         assert!((*i).QueryGetData);

@@ -10,35 +10,31 @@ use windows::{
     UI::Core::*,
 };
 
-#[implement(IFrameworkViewSource)]
+#[implement(IFrameworkViewSource, IFrameworkView)]
 struct CoreApp();
 
 #[allow(non_snake_case)]
 impl IFrameworkViewSource_Impl for CoreApp {
-    fn CreateView(&self) -> Result<IFrameworkView> {
-        // TODO: need self query `self.into()` to support implementing both IFrameworkViewSource and IFrameworkView on the same object.
-        Ok(CoreAppView().into())
+    fn CreateView(this: &Self::This) -> Result<IFrameworkView> {
+        Ok(this.to_interface())
     }
 }
 
-#[implement(IFrameworkView)]
-struct CoreAppView();
-
 #[allow(non_snake_case)]
-impl IFrameworkView_Impl for CoreAppView {
-    fn Initialize(&self, _: Option<&CoreApplicationView>) -> Result<()> {
+impl IFrameworkView_Impl for CoreApp {
+    fn Initialize(_this: &Self::This, _: Option<&CoreApplicationView>) -> Result<()> {
         Ok(())
     }
 
-    fn Load(&self, _: &HSTRING) -> Result<()> {
+    fn Load(_this: &Self::This, _: &HSTRING) -> Result<()> {
         Ok(())
     }
 
-    fn Uninitialize(&self) -> Result<()> {
+    fn Uninitialize(_this: &Self::This) -> Result<()> {
         Ok(())
     }
 
-    fn Run(&self) -> Result<()> {
+    fn Run(_this: &Self::This) -> Result<()> {
         let window = CoreWindow::GetForCurrentThread()?;
         window.Activate()?;
 
@@ -48,7 +44,7 @@ impl IFrameworkView_Impl for CoreAppView {
         Ok(())
     }
 
-    fn SetWindow(&self, _: Option<&CoreWindow>) -> Result<()> {
+    fn SetWindow(_this: &Self::This, _: Option<&CoreWindow>) -> Result<()> {
         Ok(())
     }
 }
@@ -68,7 +64,7 @@ fn main() -> Result<()> {
         }
     }
 
-    let app: IFrameworkViewSource = CoreApp().into();
+    let app: IFrameworkViewSource = CoreApp().into_interface();
     CoreApplication::Run(&app)?;
     Ok(())
 }

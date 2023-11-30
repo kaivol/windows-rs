@@ -168,13 +168,13 @@ fn hstring() -> Result<()> {
 struct Stringable(HSTRING);
 
 impl IStringable_Impl for Stringable {
-    fn ToString(&self) -> Result<HSTRING> {
-        Ok(self.0.clone())
+    fn ToString(this: &Self::This) -> Result<HSTRING> {
+        Ok(this.0.clone())
     }
 }
 
 fn stringable(value: &str) -> IStringable {
-    Stringable(value.into()).into()
+    Stringable(value.into()).into_interface()
 }
 
 #[test]

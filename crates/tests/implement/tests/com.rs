@@ -12,29 +12,29 @@ use windows::Win32::System::WinRT::Display::*;
 struct Mix;
 
 impl IStringable_Impl for Mix {
-    fn ToString(&self) -> Result<HSTRING> {
+    fn ToString(_this: &Self::This) -> Result<HSTRING> {
         Ok("Mix".into())
     }
 }
 
 impl IDisplayPathInterop_Impl for Mix {
-    fn GetSourceId(&self) -> Result<u32> {
+    fn GetSourceId(_this: &Self::This) -> Result<u32> {
         Ok(123)
     }
 
-    fn CreateSourcePresentationHandle(&self) -> Result<HANDLE> {
+    fn CreateSourcePresentationHandle(_this: &Self::This) -> Result<HANDLE> {
         Ok(HANDLE::default())
     }
 }
 
 #[test]
 fn mix() -> Result<()> {
-    let a: IUnknown = Mix.into();
+    let a: IUnknown = Mix.into_interface();
 
     let b: IStringable = a.cast()?;
     assert!(b.ToString()? == "Mix");
 
-    let c: IStringable = Mix.into();
+    let c: IStringable = Mix.into_interface();
     assert!(c.ToString()? == "Mix");
 
     let d: IUnknown = c.cast()?;

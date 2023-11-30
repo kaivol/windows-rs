@@ -8,25 +8,25 @@ use windows::Win32::System::Com::*;
 struct Test();
 
 impl IPersist_Impl for Test {
-    fn GetClassID(&self) -> Result<GUID> {
+    fn GetClassID(_this: &Self::This) -> Result<GUID> {
         Ok(GUID::zeroed())
     }
 }
 
 impl IPersistStream_Impl for Test {
-    fn IsDirty(&self) -> HRESULT {
+    fn IsDirty(_this: &Self::This) -> HRESULT {
         S_OK
     }
 
-    fn Load(&self, _: Option<&IStream>) -> Result<()> {
+    fn Load(_this: &Self::This, _: Option<&IStream>) -> Result<()> {
         Ok(())
     }
 
-    fn Save(&self, _: Option<&IStream>, _: BOOL) -> Result<()> {
+    fn Save(_this: &Self::This, _: Option<&IStream>, _: BOOL) -> Result<()> {
         Ok(())
     }
 
-    fn GetSizeMax(&self) -> Result<u64> {
+    fn GetSizeMax(_this: &Self::This) -> Result<u64> {
         Ok(0)
     }
 }
@@ -34,7 +34,7 @@ impl IPersistStream_Impl for Test {
 #[test]
 fn test() -> Result<()> {
     unsafe {
-        let stream: IPersistStream = Test().into();
+        let stream: IPersistStream = Test().into_interface();
         stream.GetClassID()?; // IPersist
         stream.IsDirty().ok()?; // IPersistStream
         stream.cast::<IPersistStream>()?;

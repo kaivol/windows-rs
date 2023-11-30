@@ -45,37 +45,39 @@ pub mod Nested {
         pub Method:
             unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT,
     }
-    pub trait IThing_Impl: Sized {
-        fn Method(&self) -> ::windows_core::Result<()>;
+    pub trait IThing_Impl: ::windows_core::BaseImpl {
+        fn Method(this: &Self::This) -> ::windows_core::Result<()>;
     }
-    impl ::windows_core::RuntimeName for IThing {
-        const NAME: &'static str = "test_component.Nested.IThing";
+    impl ::windows_core::Iids for IThing {
+        const IIDS: &'static [::windows_core::GUID] =
+            ::windows_core::concat_iids!(::windows_core::IInspectable);
     }
-    impl IThing_Vtbl {
-        pub const fn new<
-            Identity: ::windows_core::IUnknownImpl<Impl = Impl>,
+    impl<
+            Identity: ::windows_core::ImplProvider<Impl = Impl>,
             Impl: IThing_Impl,
-            const OFFSET: isize,
-        >() -> IThing_Vtbl {
+            const OFFSET: usize,
+        > ::windows_core::Vtable<Identity, OFFSET> for IThing
+    {
+        const VTABLE: Self::Vtable = {
             unsafe extern "system" fn Method<
-                Identity: ::windows_core::IUnknownImpl<Impl = Impl>,
+                Identity: ::windows_core::ImplProvider<Impl = Impl>,
                 Impl: IThing_Impl,
-                const OFFSET: isize,
+                const OFFSET: usize,
             >(
                 this: *mut ::core::ffi::c_void,
             ) -> ::windows_core::HRESULT {
-                let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-                let this = (*this).get_impl();
-                this.Method().into()
+                Identity::call_impl::<_, OFFSET>(this, |this| Impl::Method(this).into())
             }
-            Self {
-                base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IThing, OFFSET>(),
+            IThing_Vtbl {
+                base__: <::windows_core::IInspectable as ::windows_core::Vtable<
+                    Identity,
+                    OFFSET,
+                >>::VTABLE,
                 Method: Method::<Identity, Impl, OFFSET>,
             }
-        }
-        pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-            *iid == <IThing as ::windows_core::ComInterface>::IID
-        }
+        };
+        const VTABLE_REF: &'static Self::Vtable =
+            &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
     }
 }
 #[doc(hidden)]
@@ -393,7 +395,7 @@ impl<F: FnMut(i32) -> ::windows_core::Result<i32> + ::core::marker::Send + 'stat
             || *iid == <::windows_core::IUnknown as ::windows_core::ComInterface>::IID
             || *iid == <::windows_core::imp::IAgileObject as ::windows_core::ComInterface>::IID
         {
-            &mut (*this).vtable as *mut _ as _
+            this as *mut _
         } else {
             ::core::ptr::null_mut()
         };
@@ -452,91 +454,87 @@ pub struct Callback_Vtbl {
         result__: *mut i32,
     ) -> ::windows_core::HRESULT,
 }
-pub trait IClass_Impl: Sized {
-    fn Property(&self) -> ::windows_core::Result<i32>;
-    fn SetProperty(&self, value: i32) -> ::windows_core::Result<()>;
-    fn Flags(&self) -> ::windows_core::Result<Flags>;
+pub trait IClass_Impl: ::windows_core::BaseImpl {
+    fn Property(this: &Self::This) -> ::windows_core::Result<i32>;
+    fn SetProperty(this: &Self::This, value: i32) -> ::windows_core::Result<()>;
+    fn Flags(this: &Self::This) -> ::windows_core::Result<Flags>;
     fn Int32Array(
-        &self,
+        this: &Self::This,
         a: &[i32],
         b: &mut [i32],
         c: &mut ::windows_core::Array<i32>,
     ) -> ::windows_core::Result<::windows_core::Array<i32>>;
     fn StringArray(
-        &self,
+        this: &Self::This,
         a: &[::windows_core::HSTRING],
         b: &mut [::windows_core::HSTRING],
         c: &mut ::windows_core::Array<::windows_core::HSTRING>,
     ) -> ::windows_core::Result<::windows_core::Array<::windows_core::HSTRING>>;
     fn Input(
-        &self,
+        this: &Self::This,
         a: ::core::option::Option<&::windows_core::IInspectable>,
         b: ::core::option::Option<&Class>,
         c: ::core::option::Option<&::windows::Foundation::IStringable>,
         d: ::core::option::Option<&Callback>,
     ) -> ::windows_core::Result<()>;
 }
-impl ::windows_core::RuntimeName for IClass {
-    const NAME: &'static str = "test_component.IClass";
+impl ::windows_core::Iids for IClass {
+    const IIDS: &'static [::windows_core::GUID] =
+        ::windows_core::concat_iids!(::windows_core::IInspectable);
 }
-impl IClass_Vtbl {
-    pub const fn new<
-        Identity: ::windows_core::IUnknownImpl<Impl = Impl>,
+impl<
+        Identity: ::windows_core::ImplProvider<Impl = Impl>,
         Impl: IClass_Impl,
-        const OFFSET: isize,
-    >() -> IClass_Vtbl {
+        const OFFSET: usize,
+    > ::windows_core::Vtable<Identity, OFFSET> for IClass
+{
+    const VTABLE: Self::Vtable = {
         unsafe extern "system" fn Property<
-            Identity: ::windows_core::IUnknownImpl<Impl = Impl>,
+            Identity: ::windows_core::ImplProvider<Impl = Impl>,
             Impl: IClass_Impl,
-            const OFFSET: isize,
+            const OFFSET: usize,
         >(
             this: *mut ::core::ffi::c_void,
             result__: *mut i32,
         ) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Property() {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Property(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
         unsafe extern "system" fn SetProperty<
-            Identity: ::windows_core::IUnknownImpl<Impl = Impl>,
+            Identity: ::windows_core::ImplProvider<Impl = Impl>,
             Impl: IClass_Impl,
-            const OFFSET: isize,
+            const OFFSET: usize,
         >(
             this: *mut ::core::ffi::c_void,
             value: i32,
         ) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.SetProperty(value).into()
+            Identity::call_impl::<_, OFFSET>(this, |this| Impl::SetProperty(this, value).into())
         }
         unsafe extern "system" fn Flags<
-            Identity: ::windows_core::IUnknownImpl<Impl = Impl>,
+            Identity: ::windows_core::ImplProvider<Impl = Impl>,
             Impl: IClass_Impl,
-            const OFFSET: isize,
+            const OFFSET: usize,
         >(
             this: *mut ::core::ffi::c_void,
             result__: *mut Flags,
         ) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Flags() {
+            Identity::call_impl::<_, OFFSET>(this, |this| match Impl::Flags(this) {
                 ::core::result::Result::Ok(ok__) => {
                     ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::windows_core::HRESULT(0)
                 }
                 ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
         unsafe extern "system" fn Int32Array<
-            Identity: ::windows_core::IUnknownImpl<Impl = Impl>,
+            Identity: ::windows_core::ImplProvider<Impl = Impl>,
             Impl: IClass_Impl,
-            const OFFSET: isize,
+            const OFFSET: usize,
         >(
             this: *mut ::core::ffi::c_void,
             a_array_size: u32,
@@ -548,36 +546,37 @@ impl IClass_Vtbl {
             result_size__: *mut u32,
             result__: *mut *mut i32,
         ) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.Int32Array(
-                ::core::slice::from_raw_parts(
-                    ::core::mem::transmute_copy(&a),
-                    a_array_size as usize,
-                ),
-                ::core::slice::from_raw_parts_mut(
-                    ::core::mem::transmute_copy(&b),
-                    b_array_size as usize,
-                ),
-                ::windows_core::ArrayProxy::from_raw_parts(
-                    ::core::mem::transmute_copy(&c),
-                    c_array_size,
-                )
-                .as_array(),
-            ) {
-                ::core::result::Result::Ok(ok__) => {
-                    let (ok_data__, ok_data_len__) = ok__.into_abi();
-                    ::core::ptr::write(result__, ok_data__);
-                    ::core::ptr::write(result_size__, ok_data_len__);
-                    ::windows_core::HRESULT(0)
+            Identity::call_impl::<_, OFFSET>(this, |this| {
+                match Impl::Int32Array(
+                    this,
+                    ::core::slice::from_raw_parts(
+                        ::core::mem::transmute_copy(&a),
+                        a_array_size as usize,
+                    ),
+                    ::core::slice::from_raw_parts_mut(
+                        ::core::mem::transmute_copy(&b),
+                        b_array_size as usize,
+                    ),
+                    ::windows_core::ArrayProxy::from_raw_parts(
+                        ::core::mem::transmute_copy(&c),
+                        c_array_size,
+                    )
+                    .as_array(),
+                ) {
+                    ::core::result::Result::Ok(ok__) => {
+                        let (ok_data__, ok_data_len__) = ok__.into_abi();
+                        ::core::ptr::write(result__, ok_data__);
+                        ::core::ptr::write(result_size__, ok_data_len__);
+                        ::windows_core::HRESULT(0)
+                    }
+                    ::core::result::Result::Err(err) => err.into(),
                 }
-                ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
         unsafe extern "system" fn StringArray<
-            Identity: ::windows_core::IUnknownImpl<Impl = Impl>,
+            Identity: ::windows_core::ImplProvider<Impl = Impl>,
             Impl: IClass_Impl,
-            const OFFSET: isize,
+            const OFFSET: usize,
         >(
             this: *mut ::core::ffi::c_void,
             a_array_size: u32,
@@ -589,36 +588,37 @@ impl IClass_Vtbl {
             result_size__: *mut u32,
             result__: *mut *mut ::std::mem::MaybeUninit<::windows_core::HSTRING>,
         ) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            match this.StringArray(
-                ::core::slice::from_raw_parts(
-                    ::core::mem::transmute_copy(&a),
-                    a_array_size as usize,
-                ),
-                ::core::slice::from_raw_parts_mut(
-                    ::core::mem::transmute_copy(&b),
-                    b_array_size as usize,
-                ),
-                ::windows_core::ArrayProxy::from_raw_parts(
-                    ::core::mem::transmute_copy(&c),
-                    c_array_size,
-                )
-                .as_array(),
-            ) {
-                ::core::result::Result::Ok(ok__) => {
-                    let (ok_data__, ok_data_len__) = ok__.into_abi();
-                    ::core::ptr::write(result__, ok_data__);
-                    ::core::ptr::write(result_size__, ok_data_len__);
-                    ::windows_core::HRESULT(0)
+            Identity::call_impl::<_, OFFSET>(this, |this| {
+                match Impl::StringArray(
+                    this,
+                    ::core::slice::from_raw_parts(
+                        ::core::mem::transmute_copy(&a),
+                        a_array_size as usize,
+                    ),
+                    ::core::slice::from_raw_parts_mut(
+                        ::core::mem::transmute_copy(&b),
+                        b_array_size as usize,
+                    ),
+                    ::windows_core::ArrayProxy::from_raw_parts(
+                        ::core::mem::transmute_copy(&c),
+                        c_array_size,
+                    )
+                    .as_array(),
+                ) {
+                    ::core::result::Result::Ok(ok__) => {
+                        let (ok_data__, ok_data_len__) = ok__.into_abi();
+                        ::core::ptr::write(result__, ok_data__);
+                        ::core::ptr::write(result_size__, ok_data_len__);
+                        ::windows_core::HRESULT(0)
+                    }
+                    ::core::result::Result::Err(err) => err.into(),
                 }
-                ::core::result::Result::Err(err) => err.into(),
-            }
+            })
         }
         unsafe extern "system" fn Input<
-            Identity: ::windows_core::IUnknownImpl<Impl = Impl>,
+            Identity: ::windows_core::ImplProvider<Impl = Impl>,
             Impl: IClass_Impl,
-            const OFFSET: isize,
+            const OFFSET: usize,
         >(
             this: *mut ::core::ffi::c_void,
             a: *mut ::core::ffi::c_void,
@@ -626,18 +626,20 @@ impl IClass_Vtbl {
             c: *mut ::core::ffi::c_void,
             d: *mut ::core::ffi::c_void,
         ) -> ::windows_core::HRESULT {
-            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
-            let this = (*this).get_impl();
-            this.Input(
-                ::windows_core::from_raw_borrowed(&a),
-                ::windows_core::from_raw_borrowed(&b),
-                ::windows_core::from_raw_borrowed(&c),
-                ::windows_core::from_raw_borrowed(&d),
-            )
-            .into()
+            Identity::call_impl::<_, OFFSET>(this, |this| {
+                Impl::Input(
+                    this,
+                    ::windows_core::from_raw_borrowed(&a),
+                    ::windows_core::from_raw_borrowed(&b),
+                    ::windows_core::from_raw_borrowed(&c),
+                    ::windows_core::from_raw_borrowed(&d),
+                )
+                .into()
+            })
         }
-        Self {
-            base__: ::windows_core::IInspectable_Vtbl::new::<Identity, IClass, OFFSET>(),
+        IClass_Vtbl {
+            base__:
+                <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE,
             Property: Property::<Identity, Impl, OFFSET>,
             SetProperty: SetProperty::<Identity, Impl, OFFSET>,
             Flags: Flags::<Identity, Impl, OFFSET>,
@@ -645,8 +647,7 @@ impl IClass_Vtbl {
             StringArray: StringArray::<Identity, Impl, OFFSET>,
             Input: Input::<Identity, Impl, OFFSET>,
         }
-    }
-    pub unsafe fn matches(iid: *const ::windows_core::GUID) -> bool {
-        *iid == <IClass as ::windows_core::ComInterface>::IID
-    }
+    };
+    const VTABLE_REF: &'static Self::Vtable =
+        &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

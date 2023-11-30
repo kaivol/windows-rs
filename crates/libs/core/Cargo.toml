@@ -3,7 +3,7 @@ name = "windows-core"
 version = "0.52.0"
 authors = ["Microsoft"]
 edition = "2021"
-rust-version = "1.56"
+rust-version = "1.57"
 license = "MIT OR Apache-2.0"
 description = "Rust for Windows"
 repository = "https://github.com/microsoft/windows-rs"
@@ -17,6 +17,9 @@ targets = []
 [dependencies.windows-targets]
 version = "0.52.0"
 path = "../targets"
+
+[dependencies]
+sptr = "0.3.2"
 
 [features]
 default = []

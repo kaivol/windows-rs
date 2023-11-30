@@ -6,40 +6,45 @@ use windows::{core::*, Win32::Foundation::*, Win32::System::Com::*};
 #[interface("a39ee748-6a27-4817-a6f2-13914bef5890")]
 unsafe trait ICustomUri: IUnknown {
     unsafe fn GetPropertyBSTR(
-        &self,
+        this: &Self::This,
         property: Uri_PROPERTY,
         value: *mut BSTR,
         flags: u32,
     ) -> HRESULT;
-    unsafe fn GetPropertyLength(&self) -> HRESULT;
+    unsafe fn GetPropertyLength(this: &Self::This) -> HRESULT;
     unsafe fn GetPropertyDWORD(
-        &self,
+        this: &Self::This,
         property: Uri_PROPERTY,
         value: *mut u32,
         flags: u32,
     ) -> HRESULT;
-    unsafe fn HasProperty(&self); // Note: this definition is missing its return value
-    unsafe fn GetAbsoluteUri(&self) -> HRESULT;
-    unsafe fn GetAuthority(&self) -> HRESULT;
-    unsafe fn GetDisplayUri(&self) -> i32;
-    unsafe fn GetDomain(&self, value: *mut BSTR) -> HRESULT;
+    unsafe fn HasProperty(this: &Self::This); // Note: this definition is missing its return value
+    unsafe fn GetAbsoluteUri(this: &Self::This) -> HRESULT;
+    unsafe fn GetAuthority(this: &Self::This) -> HRESULT;
+    unsafe fn GetDisplayUri(this: &Self::This) -> i32;
+    unsafe fn GetDomain(this: &Self::This, value: *mut BSTR) -> HRESULT;
     // etc
 }
 
 /// A custom declaration of implementation of `IPersist`
 #[interface("0000010c-0000-0000-C000-000000000046")]
 unsafe trait ICustomPersist: windows::core::IUnknown {
-    unsafe fn GetClassID(&self, clsid: *mut GUID) -> HRESULT;
+    unsafe fn GetClassID(this: &Self::This, clsid: *mut GUID) -> HRESULT;
 }
 
 /// A custom declaration of implementation of `IPersistMemory`
 #[interface("BD1AE5E0-A6AE-11CE-BD37-504200C10000")]
 unsafe trait ICustomPersistMemory: ICustomPersist {
-    unsafe fn IsDirty(&self) -> HRESULT;
-    unsafe fn Load(&self, input: *const core::ffi::c_void, size: u32) -> HRESULT;
-    unsafe fn Save(&self, output: *mut core::ffi::c_void, clear_dirty: BOOL, size: u32) -> HRESULT;
-    unsafe fn GetSizeMax(&self, len: *mut u32) -> HRESULT;
-    unsafe fn InitNew(&self) -> HRESULT;
+    unsafe fn IsDirty(this: &Self::This) -> HRESULT;
+    unsafe fn Load(this: &Self::This, input: *const core::ffi::c_void, size: u32) -> HRESULT;
+    unsafe fn Save(
+        this: &Self::This,
+        output: *mut core::ffi::c_void,
+        clear_dirty: BOOL,
+        size: u32,
+    ) -> HRESULT;
+    unsafe fn GetSizeMax(this: &Self::This, len: *mut u32) -> HRESULT;
+    unsafe fn InitNew(this: &Self::This) -> HRESULT;
 }
 
 /// A custom in-memory store
@@ -60,15 +65,15 @@ struct PersistState {
 }
 
 impl ICustomPersist_Impl for Persist {
-    unsafe fn GetClassID(&self, clsid: *mut GUID) -> HRESULT {
+    unsafe fn GetClassID(_this: &Self::This, clsid: *mut GUID) -> HRESULT {
         *clsid = "117fb826-2155-483a-b50d-bc99a2c7cca3".into();
         S_OK
     }
 }
 
 impl ICustomPersistMemory_Impl for Persist {
-    unsafe fn IsDirty(&self) -> HRESULT {
-        let reader = self.0.read().unwrap();
+    unsafe fn IsDirty(this: &Self::This) -> HRESULT {
+        let reader = this.0.read().unwrap();
         if reader.dirty {
             S_OK
         } else {
@@ -76,8 +81,8 @@ impl ICustomPersistMemory_Impl for Persist {
         }
     }
 
-    unsafe fn Load(&self, input: *const core::ffi::c_void, size: u32) -> HRESULT {
-        let mut writer = self.0.write().unwrap();
+    unsafe fn Load(this: &Self::This, input: *const core::ffi::c_void, size: u32) -> HRESULT {
+        let mut writer = this.0.write().unwrap();
         if size <= writer.memory.len() as u32 {
             std::ptr::copy(input, writer.memory.as_mut_ptr() as _, size as usize);
             writer.dirty = true;
@@ -87,8 +92,13 @@ impl ICustomPersistMemory_Impl for Persist {
         }
     }
 
-    unsafe fn Save(&self, output: *mut core::ffi::c_void, clear_dirty: BOOL, size: u32) -> HRESULT {
-        let mut writer = self.0.write().unwrap();
+    unsafe fn Save(
+        this: &Self::This,
+        output: *mut core::ffi::c_void,
+        clear_dirty: BOOL,
+        size: u32,
+    ) -> HRESULT {
+        let mut writer = this.0.write().unwrap();
         if size <= writer.memory.len() as u32 {
             std::ptr::copy(writer.memory.as_mut_ptr() as _, output, size as usize);
             if clear_dirty.as_bool() {
@@ -100,14 +110,14 @@ impl ICustomPersistMemory_Impl for Persist {
         }
     }
 
-    unsafe fn GetSizeMax(&self, len: *mut u32) -> HRESULT {
-        let reader = self.0.read().unwrap();
+    unsafe fn GetSizeMax(this: &Self::This, len: *mut u32) -> HRESULT {
+        let reader = this.0.read().unwrap();
         *len = reader.memory.len() as u32;
         S_OK
     }
 
-    unsafe fn InitNew(&self) -> HRESULT {
-        let mut writer = self.0.write().unwrap();
+    unsafe fn InitNew(this: &Self::This) -> HRESULT {
+        let mut writer = this.0.write().unwrap();
         writer.memory = Default::default();
         writer.dirty = false;
         S_OK
@@ -131,7 +141,7 @@ fn test_custom_interface() -> windows::core::Result<()> {
         assert_eq!(property, 80);
 
         // Use the custom implementation of `Persist` through the OS `IPersistMemory` interface
-        let p: ICustomPersistMemory = Persist::new().into();
+        let p: ICustomPersistMemory = Persist::new().into_interface();
         // This works because `ICustomPersistMemory` and `IPersistMemory` share the same guid
         let p: IPersistMemory = p.cast()?;
         assert_eq!(

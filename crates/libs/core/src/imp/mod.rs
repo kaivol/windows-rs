@@ -1,4 +1,6 @@
+#[rustfmt::skip]
 mod bindings;
+#[rustfmt::skip]
 mod com_bindings;
 mod delay_load;
 mod factory_cache;
@@ -7,7 +9,6 @@ mod heap;
 mod ref_count;
 mod sha1;
 mod waiter;
-mod weak_ref_count;
 
 pub use bindings::*;
 pub use com_bindings::*;
@@ -18,9 +19,8 @@ pub use heap::*;
 pub use ref_count::*;
 pub use sha1::*;
 pub use waiter::*;
-pub use weak_ref_count::*;
 
-// This is a workaround since 1.56 does not include `bool::then_some`.
+// This is a workaround since 1.57 does not include `bool::then_some`.
 pub fn then_some<T>(value: bool, t: T) -> Option<T> {
     if value {
         Some(t)

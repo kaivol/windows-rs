@@ -2,6 +2,7 @@
 resolver = "2"
 members = [
     "crates/libs/*",
+    "crates/miri/*",
     "crates/samples/windows-sys/*",
     "crates/samples/windows/*",
     "crates/targets/*",

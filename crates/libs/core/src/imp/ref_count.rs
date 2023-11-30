@@ -1,19 +1,24 @@
-use std::sync::atomic::{fence, AtomicI32, Ordering};
+use std::process::abort;
+use std::sync::atomic::{fence, AtomicU32, Ordering};
 
 #[doc(hidden)]
 #[repr(transparent)]
 #[derive(Default)]
-pub struct RefCount(pub(crate) AtomicI32);
+pub struct RefCount(pub(crate) AtomicU32);
 
 impl RefCount {
     /// Creates a new `RefCount` with an initial value of `1`.
     pub fn new(count: u32) -> Self {
-        Self(AtomicI32::new(count as i32))
+        Self(AtomicU32::new(count))
     }
 
     /// Increments the reference count, returning the new value.
     pub fn add_ref(&self) -> u32 {
-        (self.0.fetch_add(1, Ordering::Relaxed) + 1) as u32
+        let old = self.0.fetch_add(1, Ordering::Relaxed);
+        if old == u32::MAX {
+            abort();
+        }
+        old + 1
     }
 
     /// Decrements the reference count, returning the new value.
@@ -21,14 +26,17 @@ impl RefCount {
     /// This operation inserts an `Acquire` fence when the reference count reaches zero.
     /// This prevents reordering before the object is destroyed.
     pub fn release(&self) -> u32 {
-        let remaining = self.0.fetch_sub(1, Ordering::Release) - 1;
+        let old = self.0.fetch_sub(1, Ordering::Release);
 
-        match remaining.cmp(&0) {
-            std::cmp::Ordering::Equal => fence(Ordering::Acquire),
-            std::cmp::Ordering::Less => panic!("Object has been over-released."),
-            std::cmp::Ordering::Greater => {}
+        // Object has been over-released
+        if old == 0 {
+            abort()
         }
 
-        remaining as u32
+        if old == 1 {
+            fence(Ordering::Acquire);
+        }
+
+        old - 1
     }
 }

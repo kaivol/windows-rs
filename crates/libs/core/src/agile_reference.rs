@@ -9,7 +9,14 @@ pub struct AgileReference<T>(crate::imp::IAgileReference, PhantomData<T>);
 impl<T: ComInterface> AgileReference<T> {
     /// Creates an agile reference to the object.
     pub fn new(object: &T) -> Result<Self> {
-        unsafe { crate::imp::RoGetAgileReference(crate::imp::AGILEREFERENCE_DEFAULT, &T::IID, object.as_unknown()).map(|reference| Self(reference, Default::default())) }
+        unsafe {
+            crate::imp::RoGetAgileReference(
+                crate::imp::AGILEREFERENCE_DEFAULT,
+                &T::IID,
+                object.as_unknown(),
+            )
+            .map(|reference| Self(reference, Default::default()))
+        }
     }
 
     /// Retrieves a proxy to the target of the `AgileReference` object that may safely be used within any thread context in which get is called.

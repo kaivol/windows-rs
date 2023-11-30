@@ -9,31 +9,31 @@ use windows::{
 struct Object();
 
 impl IInitializeWithStream_Impl for Object {
-    fn Initialize(&self, _: Option<&IStream>, _: u32) -> Result<()> {
+    fn Initialize(_this: &Self::This, _: Option<&IStream>, _: u32) -> Result<()> {
         Ok(())
     }
 }
 
 impl IPropertyStore_Impl for Object {
-    fn GetCount(&self) -> Result<u32> {
+    fn GetCount(_this: &Self::This) -> Result<u32> {
         Ok(123)
     }
-    fn GetAt(&self, _: u32, _: *mut PROPERTYKEY) -> Result<()> {
+    fn GetAt(_this: &Self::This, _: u32, _: *mut PROPERTYKEY) -> Result<()> {
         unimplemented!()
     }
-    fn GetValue(&self, _: *const PROPERTYKEY) -> Result<PROPVARIANT> {
+    fn GetValue(_this: &Self::This, _: *const PROPERTYKEY) -> Result<PROPVARIANT> {
         unimplemented!()
     }
-    fn SetValue(&self, _: *const PROPERTYKEY, _: *const PROPVARIANT) -> Result<()> {
+    fn SetValue(_this: &Self::This, _: *const PROPERTYKEY, _: *const PROPVARIANT) -> Result<()> {
         unimplemented!()
     }
-    fn Commit(&self) -> Result<()> {
+    fn Commit(_this: &Self::This) -> Result<()> {
         unimplemented!()
     }
 }
 
 impl IPropertyStoreCapabilities_Impl for Object {
-    fn IsPropertyWritable(&self, _: *const PROPERTYKEY) -> Result<()> {
+    fn IsPropertyWritable(_this: &Self::This, _: *const PROPERTYKEY) -> Result<()> {
         Ok(())
     }
 }
@@ -41,7 +41,7 @@ impl IPropertyStoreCapabilities_Impl for Object {
 #[test]
 fn test() -> Result<()> {
     unsafe {
-        let a: IInitializeWithStream = Object().into();
+        let a: IInitializeWithStream = Object().into_interface();
         a.Initialize(None, 0)?;
 
         let b: IPropertyStore = a.cast()?;
