@@ -19,14 +19,14 @@ fn clone() {
 
     let a = BSTR::default();
     assert!(a.is_empty());
-    assert!(a.len() == 0);
+    assert!(a.is_empty());
     let b = a.clone();
     assert_eq!(a, "");
     assert_eq!(b, "");
 
     let a = BSTR::new();
     assert!(a.is_empty());
-    assert!(a.len() == 0);
+    assert!(a.is_empty());
     assert_eq!(a.len(), 0);
     assert_eq!(a.as_wide().len(), 0);
 
@@ -40,11 +40,11 @@ fn clone() {
 
     let a: BSTR = "".into();
     assert!(a.is_empty());
-    assert!(a.len() == 0);
+    assert!(a.is_empty());
 
     let a: BSTR = unsafe { SysAllocStringLen(None) };
     assert!(a.is_empty());
-    assert!(a.len() == 0);
+    assert!(a.is_empty());
 
     let a = BSTR::from("a");
     assert_eq!(a, String::from("a"));

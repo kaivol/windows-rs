@@ -340,7 +340,7 @@ impl Writer {
     //
 
     /// Generates doc comments for types, free functions, and constants.
-    pub(crate) fn cfg_doc(&self, cfg: &cfg::Cfg) -> TokenStream {
+    pub(crate) fn cfg_doc(&self, cfg: &Cfg) -> TokenStream {
         if !self.package {
             quote! {}
         } else {
@@ -355,7 +355,7 @@ impl Writer {
         }
     }
 
-    pub(crate) fn cfg_features(&self, cfg: &cfg::Cfg) -> TokenStream {
+    pub(crate) fn cfg_features(&self, cfg: &Cfg) -> TokenStream {
         let arches = &cfg.arches;
         let arch = match arches.len() {
             0 => quote! {},
@@ -382,7 +382,7 @@ impl Writer {
         quote! { #arch #features }
     }
 
-    fn cfg_features_imp(&self, cfg: &cfg::Cfg, namespace: &str) -> Vec<String> {
+    fn cfg_features_imp(&self, cfg: &Cfg, namespace: &str) -> Vec<String> {
         if self.package {
             let mut compact = Vec::<&'static str>::new();
             for feature in cfg.types.keys() {
@@ -406,7 +406,7 @@ impl Writer {
         }
     }
 
-    fn cfg_not_features(&self, cfg: &cfg::Cfg) -> TokenStream {
+    fn cfg_not_features(&self, cfg: &Cfg) -> TokenStream {
         let features = self.cfg_features_imp(cfg, self.namespace);
         match features.len() {
             0 => quote! {},
@@ -421,7 +421,7 @@ impl Writer {
 
     pub(crate) fn namespace(&self, namespace: &str) -> TokenStream {
         if self.flatten || namespace == self.namespace {
-            return quote! {}
+            return quote! {};
         }
         if let Some((prefix, Some(crat))) = self.externals.get_longest_common_prefix(namespace) {
             let mut tokens = TokenStream::new();
@@ -756,7 +756,7 @@ impl Writer {
             }
             let name = method_names.add(method);
             let signature = metadata::method_def_signature(def.namespace(), method, generics);
-            let mut cfg = cfg::signature_cfg(method);
+            let mut cfg = signature_cfg(method);
             let signature = self.vtbl_signature(def, generics, &signature);
             cfg.add_feature(def.namespace());
             let cfg_all = self.cfg_features(&cfg);

@@ -22,7 +22,7 @@ use cfg::*;
 use rayon::prelude::*;
 use std::collections::{BTreeMap, BTreeSet};
 
-pub fn from_reader(reader: &'static metadata::Reader, mut config: std::collections::BTreeMap<&str, &str>, output: &str, externals: StringPatriciaMap<Option<String>>) -> Result<()> {
+pub fn from_reader(reader: &'static metadata::Reader, mut config: BTreeMap<&str, &str>, output: &str, externals: StringPatriciaMap<Option<String>>) -> Result<()> {
     let mut writer = Writer::new(reader, output, externals);
     writer.package = config.remove("package").is_some();
     writer.flatten = config.remove("flatten").is_some();
@@ -210,7 +210,7 @@ fn namespace(writer: &Writer, tree: &Tree) -> String {
     }
 
     let mut functions = std::collections::BTreeMap::<&str, TokenStream>::new();
-    let mut types = std::collections::BTreeMap::<metadata::TypeKind, std::collections::BTreeMap<&str, TokenStream>>::new();
+    let mut types = std::collections::BTreeMap::<metadata::TypeKind, BTreeMap<&str, TokenStream>>::new();
 
     for item in writer.reader.namespace_items(writer.namespace) {
         match item {
@@ -238,7 +238,7 @@ fn namespace(writer: &Writer, tree: &Tree) -> String {
                                 let ident = to_ident(name);
                                 let value = writer.guid(&guid);
                                 let guid = writer.type_name(&metadata::Type::GUID);
-                                let cfg = cfg::type_def_cfg(def, &[]);
+                                let cfg = type_def_cfg(def, &[]);
                                 let doc = writer.cfg_doc(&cfg);
                                 let constant = quote! {
                                     #doc

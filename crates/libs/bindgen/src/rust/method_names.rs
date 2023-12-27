@@ -1,7 +1,7 @@
 use super::*;
 use metadata::HasAttributes;
 
-pub struct MethodNames(std::collections::BTreeMap<String, u32>);
+pub struct MethodNames(BTreeMap<String, u32>);
 
 impl MethodNames {
     pub fn new() -> Self {

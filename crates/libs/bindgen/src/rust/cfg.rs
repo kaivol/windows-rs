@@ -3,9 +3,9 @@ use metadata::{AsRow, HasAttributes};
 
 #[derive(Default, Clone)]
 pub struct Cfg {
-    pub types: std::collections::BTreeMap<&'static str, std::collections::BTreeSet<metadata::TypeDef>>,
-    pub core_types: std::collections::BTreeSet<metadata::Type>,
-    pub arches: std::collections::BTreeSet<&'static str>,
+    pub types: BTreeMap<&'static str, BTreeSet<metadata::TypeDef>>,
+    pub core_types: BTreeSet<metadata::Type>,
+    pub arches: BTreeSet<&'static str>,
     pub implement: bool,
     pub deprecated: bool,
 }

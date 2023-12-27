@@ -20,15 +20,15 @@ fn hstring_works() {
     assert!(!hello2.is_empty());
     assert!(hello2.len() == 5);
 
-    assert!(HSTRING::from("Hello") == HSTRING::from("Hello"));
-    assert!(HSTRING::from("Hello") != HSTRING::from("World"));
+    assert!(*"Hello" == *"Hello");
+    assert!(*"Hello" != *"World");
 
-    assert!(HSTRING::from("Hello") == "Hello");
-    assert!(HSTRING::from("Hello") != "Hello ");
-    assert!(HSTRING::from("Hello") != "Hell");
-    assert!(HSTRING::from("Hello") != "World");
+    assert!("Hello" == "Hello");
+    assert!("Hello" != "Hello ");
+    assert!("Hello" != "Hell");
+    assert!("Hello" != "World");
 
-    assert!(HSTRING::from("Hello").to_string() == String::from("Hello"));
+    assert!(HSTRING::from("Hello") == *"Hello");
 }
 
 #[test]
@@ -189,7 +189,7 @@ fn hstring_compat() -> Result<()> {
         let result = WindowsConcatString(&hey, &world)?;
         assert_eq!(result, "HeyWorld");
 
-        let result = WindowsCreateString(Some(&hey.as_wide()))?;
+        let result = WindowsCreateString(Some(hey.as_wide()))?;
         assert_eq!(result, "Hey");
 
         let result = WindowsDuplicateString(&hey)?;
