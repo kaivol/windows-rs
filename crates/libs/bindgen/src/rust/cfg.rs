@@ -7,6 +7,7 @@ pub struct Cfg {
     pub core_types: std::collections::BTreeSet<metadata::Type>,
     pub arches: std::collections::BTreeSet<&'static str>,
     pub implement: bool,
+    pub deprecated: bool,
 }
 
 impl Cfg {
@@ -27,6 +28,7 @@ impl Cfg {
         other.arches.iter().for_each(|arch| {
             union.arches.insert(arch);
         });
+        union.deprecated = self.deprecated || other.deprecated;
         union
     }
 }
@@ -137,7 +139,7 @@ fn cfg_add_attributes<R: AsRow + Into<metadata::HasAttribute>>(cfg: &mut Cfg, ro
                 }
             }
             "DeprecatedAttribute" => {
-                cfg.add_feature("deprecated");
+                cfg.deprecated = true;
             }
             _ => {}
         }

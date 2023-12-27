@@ -2,7 +2,7 @@ use super::*;
 use metadata::HasAttributes;
 
 pub fn writer(writer: &Writer, def: metadata::TypeDef) -> TokenStream {
-    if def.kind() != metadata::TypeKind::Interface || (!writer.implement && def.has_attribute("ExclusiveToAttribute")) {
+    if def.kind() != metadata::TypeKind::Interface || (!writer.implement && def.has_attribute("ExclusiveToAttribute") && !def.name().ends_with("Overrides")) {
         return quote! {};
     }
 

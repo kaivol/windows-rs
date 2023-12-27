@@ -9,7 +9,7 @@ pub fn writer(writer: &Writer, def: metadata::TypeDef, kind: metadata::Interface
     let where_clause = writer.where_clause(&signature.params);
     let mut cfg = cfg::signature_cfg(method);
     cfg.add_feature(def.namespace());
-    let doc = writer.cfg_method_doc(&cfg);
+    let doc = writer.cfg_doc(&cfg);
     let features = writer.cfg_features(&cfg);
 
     if kind == metadata::InterfaceKind::None {

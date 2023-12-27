@@ -41,8 +41,8 @@ impl IGeometrySource2DInterop_Vtbl {
         *iid == <IGeometrySource2DInterop as ::windows_core::ComInterface>::IID
     }
 }
-#[doc = "Required features: `\"Foundation\"`, `\"Graphics_Effects\"`"]
-#[cfg(all(feature = "Foundation", feature = "Graphics_Effects"))]
+#[doc = "Required features: `\"Graphics_Effects\"`"]
+#[cfg(feature = "Graphics_Effects")]
 pub trait IGraphicsEffectD2D1Interop_Impl: Sized {
     fn GetEffectId(&self) -> ::windows_core::Result<::windows_core::GUID>;
     fn GetNamedPropertyMapping(&self, name: &::windows_core::PCWSTR, index: *mut u32, mapping: *mut GRAPHICS_EFFECT_PROPERTY_MAPPING) -> ::windows_core::Result<()>;
@@ -51,9 +51,9 @@ pub trait IGraphicsEffectD2D1Interop_Impl: Sized {
     fn GetSource(&self, index: u32) -> ::windows_core::Result<super::super::super::super::super::Graphics::Effects::IGraphicsEffectSource>;
     fn GetSourceCount(&self) -> ::windows_core::Result<u32>;
 }
-#[cfg(all(feature = "Foundation", feature = "Graphics_Effects"))]
+#[cfg(feature = "Graphics_Effects")]
 impl ::windows_core::RuntimeName for IGraphicsEffectD2D1Interop {}
-#[cfg(all(feature = "Foundation", feature = "Graphics_Effects"))]
+#[cfg(feature = "Graphics_Effects")]
 impl IGraphicsEffectD2D1Interop_Vtbl {
     pub const fn new<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IGraphicsEffectD2D1Interop_Impl, const OFFSET: isize>() -> IGraphicsEffectD2D1Interop_Vtbl {
         unsafe extern "system" fn GetEffectId<Identity: ::windows_core::IUnknownImpl<Impl = Impl>, Impl: IGraphicsEffectD2D1Interop_Impl, const OFFSET: isize>(this: *mut ::core::ffi::c_void, id: *mut ::windows_core::GUID) -> ::windows_core::HRESULT {

@@ -8,6 +8,7 @@ mod tree;
 mod winmd;
 
 pub use error::{Error, Result};
+use patricia_tree::StringPatriciaMap;
 use tree::Tree;
 
 enum ArgKind {
@@ -16,6 +17,7 @@ enum ArgKind {
     Output,
     Filter,
     Config,
+    External,
 }
 
 pub fn bindgen<I, S>(args: I) -> Result<String>
@@ -31,6 +33,7 @@ where
     let mut input = Vec::<&str>::new();
     let mut include = Vec::<&str>::new();
     let mut exclude = Vec::<&str>::new();
+    let mut externals = StringPatriciaMap::<Option<String>>::new();
     let mut config = std::collections::BTreeMap::<&str, &str>::new();
     let mut format = false;
 
@@ -44,6 +47,7 @@ where
                 "-i" | "--in" => kind = ArgKind::Input,
                 "-o" | "--out" => kind = ArgKind::Output,
                 "-f" | "--filter" => kind = ArgKind::Filter,
+                "-e" | "--external" => kind = ArgKind::External,
                 "--config" => kind = ArgKind::Config,
                 "--format" => format = true,
                 _ => return Err(Error::new(&format!("invalid option `{arg}`"))),
@@ -61,6 +65,24 @@ where
                     exclude.push(rest);
                 } else {
                     include.push(arg.as_str());
+                }
+            }
+            ArgKind::External => {
+                if let Some((crat, namespaces)) = arg.split_once('=') {
+                    let namespaces = namespaces.split(',');
+                    for namespace in namespaces {
+                        match namespace.strip_prefix('!') {
+                            None => {
+                                externals.insert(namespace, Some(crat.to_owned()));
+                            }
+                            Some(namespace) if !externals.contains_key(namespace) => {
+                                externals.insert(namespace, None);
+                            }
+                            _ => {}
+                        };
+                    }
+                } else {
+                    return Err(Error::new("invalid format of external"));
                 }
             }
             ArgKind::Config => {
@@ -111,7 +133,7 @@ where
     match extension(&output) {
         "rdl" => rdl::from_reader(reader, config, &output)?,
         "winmd" => winmd::from_reader(reader, config, &output)?,
-        "rs" => rust::from_reader(reader, config, &output)?,
+        "rs" => rust::from_reader(reader, config, &output, externals)?,
         _ => return Err(Error::new("output extension must be one of winmd/rdl/rs")),
     }
 

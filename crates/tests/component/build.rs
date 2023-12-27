@@ -40,6 +40,8 @@ fn main() {
         "test_component",
         "--config",
         "implement",
+        "--external",
+        "windows=Windows",
     ]);
 
     if !command.status().unwrap().success() {
