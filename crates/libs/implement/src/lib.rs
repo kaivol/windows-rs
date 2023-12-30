@@ -126,7 +126,7 @@ pub fn implement(attributes: proc_macro::TokenStream, original_type: proc_macro:
             }
         }
         impl #generics #original_ident::#generics where #constraints {
-            pub unsafe fn compose<'a>(implementation: Self) -> (::windows::core::IInspectable, &'a mut ::core::option::Option<::windows::core::IInspectable>) {
+            pub unsafe fn compose<'compose_lifetime>(implementation: Self) -> (::windows::core::IInspectable, &'compose_lifetime mut ::core::option::Option<::windows::core::IInspectable>) {
                 let inspectable: ::windows::core::IInspectable = implementation.into();
                 let this: *mut ::core::ffi::c_void = ::windows::core::Interface::as_raw(&inspectable);
                 let this = (this as *mut *mut ::core::ffi::c_void).sub(1) as *mut #impl_ident::#generics;
