@@ -73,27 +73,30 @@ pub fn writer(writer: &Writer, def: metadata::TypeDef, generic_types: &[metadata
                 }
             }
         },
-        metadata::InterfaceKind::None | metadata::InterfaceKind::Base | metadata::InterfaceKind::Overridable => {
-            quote! {
-                #doc
-                #features
-                pub fn #name<#generics>(&self, #params) -> ::windows_core::Result<#return_type_tokens> #where_clause {
-                    let this = &::windows_core::ComInterface::cast::<#interface_name>(self)?;
-                    unsafe {
-                        #vcall
-                    }
+        metadata::InterfaceKind::None | metadata::InterfaceKind::Base | metadata::InterfaceKind::Overridable =>  quote! {
+            #doc
+            #features
+            pub fn #name<#generics>(&self, #params) -> ::windows_core::Result<#return_type_tokens> #where_clause {
+                let this = &::windows_core::ComInterface::cast::<#interface_name>(self)?;
+                unsafe {
+                    #vcall
                 }
             }
-        }
-        metadata::InterfaceKind::Static => {
-            quote! {
-                #doc
-                #features
-                pub fn #name<#generics>(#params) -> ::windows_core::Result<#return_type_tokens> #where_clause {
-                    Self::#interface_name(|this| unsafe { #vcall })
-                }
+        },
+        metadata::InterfaceKind::Static => quote! {
+            #doc
+            #features
+            pub fn #name<#generics>(#params) -> ::windows_core::Result<#return_type_tokens> #where_clause {
+                Self::#interface_name(|this| unsafe { #vcall })
             }
-        }
+        },
+        metadata::InterfaceKind::Composable => quote! {
+            #doc
+            #features
+            pub unsafe fn #name<#generics>(#params) -> ::windows_core::Result<#return_type_tokens> #where_clause {
+                Self::#interface_name(|this| unsafe { #vcall })
+            }
+        },
     }
 }
 

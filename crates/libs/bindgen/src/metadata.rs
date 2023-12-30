@@ -14,6 +14,7 @@ pub enum InterfaceKind {
     Overridable,
     Static,
     Base,
+    Composable,
 }
 
 #[derive(Copy, Clone, PartialEq, Eq)]
@@ -481,17 +482,18 @@ pub fn type_interfaces(ty: &Type) -> Vec<Interface> {
                 walk(&mut result, &Type::TypeDef(base, Vec::new()), true);
             }
             for attribute in row.attributes() {
-                match attribute.name() {
-                    "StaticAttribute" | "ActivatableAttribute" => {
-                        for (_, arg) in attribute.args() {
-                            if let Value::TypeName(type_name) = arg {
-                                let def = row.reader().get_type_def(type_name.namespace, type_name.name).next().expect("Type not found");
-                                result.push(Interface { ty: Type::TypeDef(def, Vec::new()), kind: InterfaceKind::Static });
-                                break;
-                            }
+                if let Some((_, kind)) = [
+                    ("StaticAttribute", InterfaceKind::Static),
+                    ("ActivatableAttribute", InterfaceKind::Static),
+                    ("ComposableAttribute", InterfaceKind::Composable),
+                ].into_iter().find(|(attribute_name, _)| *attribute_name == attribute.name()) {
+                    for (_, arg) in attribute.args() {
+                        if let Value::TypeName(type_name) = arg {
+                            let def = row.reader().get_type_def(type_name.namespace, type_name.name).next().expect("Type not found");
+                            result.push(Interface { ty: Type::TypeDef(def, Vec::new()), kind });
+                            break;
                         }
                     }
-                    _ => {}
                 }
             }
         }
