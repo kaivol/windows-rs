@@ -1,7 +1,7 @@
 use super::*;
 use metadata::HasAttributes;
 
-pub struct MethodNames(std::collections::BTreeMap<String, u32>);
+pub struct MethodNames(BTreeMap<String, u32>);
 
 impl MethodNames {
     pub fn new() -> Self {
@@ -33,25 +33,28 @@ impl MethodNames {
 fn method_def_special_name(row: metadata::MethodDef) -> String {
     let name = row.name();
     if row.flags().contains(metadata::MethodAttributes::SpecialName) {
-        if name.starts_with("get") {
-            name[4..].to_string()
-        } else if name.starts_with("put") {
-            format!("Set{}", &name[4..])
-        } else if name.starts_with("add") {
-            name[4..].to_string()
-        } else if name.starts_with("remove") {
-            format!("Remove{}", &name[7..])
+        return if let Some(getter) = name.strip_prefix("get_") {
+            getter.to_owned()
+        } else if let Some(setter) = name.strip_prefix("put_") {
+            format!("Set{}", setter)
+        } else if let Some(add) = name.strip_prefix("add_") {
+            add.to_owned()
+        } else if let Some(remove) = name.strip_prefix("remove_") {
+            format!("Remove{}", remove)
         } else {
             name.to_string()
-        }
-    } else {
-        if let Some(attribute) = row.find_attribute("OverloadAttribute") {
-            for (_, arg) in attribute.args() {
-                if let metadata::Value::String(name) = arg {
-                    return name;
+        };
+    } else if let Some(attribute) = row.find_attribute("OverloadAttribute") {
+        for (_, arg) in attribute.args() {
+            if let metadata::Value::String(overload) = arg {
+                if let Some(suffix) = overload.strip_prefix(name) {
+                    if suffix.chars().all(|c| c.is_numeric()) {
+                        return name.to_owned();
+                    }
                 }
+                return overload;
             }
         }
-        name.to_string()
     }
+    name.to_string()
 }

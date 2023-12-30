@@ -17,11 +17,13 @@ mod try_format;
 mod winrt_methods;
 mod writer;
 use super::*;
-use crate::Result;
+use crate::{metadata, Error, Result, Tree};
+use cfg::*;
 use rayon::prelude::*;
+use std::collections::{BTreeMap, BTreeSet};
 
-pub fn from_reader(reader: &'static metadata::Reader, mut config: std::collections::BTreeMap<&str, &str>, output: &str) -> Result<()> {
-    let mut writer = Writer::new(reader, output);
+pub fn from_reader(reader: &'static metadata::Reader, mut config: BTreeMap<&str, &str>, output: &str, externals: StringPatriciaMap<Option<String>>) -> Result<()> {
+    let mut writer = Writer::new(reader, output, externals);
     writer.package = config.remove("package").is_some();
     writer.flatten = config.remove("flatten").is_some();
     writer.std = config.remove("std").is_some();
@@ -29,6 +31,8 @@ pub fn from_reader(reader: &'static metadata::Reader, mut config: std::collectio
     writer.implement = config.remove("implement").is_some();
     writer.minimal = config.remove("minimal").is_some();
     writer.no_inner_attributes = config.remove("no-inner-attributes").is_some();
+    writer.single_namespace = config.remove("single-namespace").is_some();
+    writer.default_namespaces = config.remove("default-namespaces").map(|namespaces| namespaces.split(',').map(ToOwned::to_owned).collect()).unwrap_or_default();
 
     if writer.package && writer.flatten {
         return Err(Error::new("cannot combine `package` and `flatten` configuration values"));
@@ -40,6 +44,10 @@ pub fn from_reader(reader: &'static metadata::Reader, mut config: std::collectio
 
     if let Some((key, _)) = config.first_key_value() {
         return Err(Error::new(&format!("invalid configuration value `{key}`")));
+    }
+
+    if writer.single_namespace && !writer.externals.is_empty() {
+        return Err(Error::new("cannot combine `single-namespace` and external dependencies"));
     }
 
     if writer.package {
@@ -68,38 +76,52 @@ fn gen_file(writer: &Writer) -> Result<()> {
     }
 }
 
-fn gen_package(writer: &Writer) -> Result<()> {
+pub fn gen_package(writer: &Writer) -> Result<()> {
     let directory = directory(&writer.output);
     let root = Tree::new(writer.reader);
-    let mut root_len = 0;
 
     for tree in root.nested.values() {
-        root_len = tree.namespace.len();
         _ = std::fs::remove_dir_all(format!("{directory}/{}", tree.namespace));
     }
 
     let trees = root.flatten();
 
-    trees.par_iter().try_for_each(|tree| {
-        let directory = format!("{directory}/{}", tree.namespace.replace('.', "/"));
-        let mut tokens = namespace(writer, tree);
+    let result = trees
+        .par_iter()
+        .map(|tree| {
+            let directory = format!("{directory}/{}", tree.namespace.replace('.', "/"));
+            let mut tokens = namespace(writer, tree);
 
-        let tokens_impl = if !writer.sys { namespace_impl(writer, tree) } else { String::new() };
+            let tokens_impl = if !writer.sys { namespace_impl(writer, tree) } else { String::new() };
 
-        if !writer.sys && !tokens_impl.is_empty() {
-            tokens.push_str("#[cfg(feature = \"implement\")]\n::core::include!(\"impl.rs\");\n");
-        }
+            if !writer.sys && !tokens_impl.is_empty() {
+                tokens.push_str("#[cfg(feature = \"implement\")]\n::core::include!(\"impl.rs\");\n");
+            }
 
-        let output = format!("{directory}/mod.rs");
-        write_to_file(&output, try_format(writer, &tokens))?;
+            let output = format!("{directory}/mod.rs");
+            write_to_file(&output, try_format(writer, &tokens))?;
 
-        if !writer.sys && !tokens_impl.is_empty() {
-            let output = format!("{directory}/impl.rs");
-            write_to_file(&output, try_format(writer, &tokens_impl))?;
-        }
+            if !writer.sys && !tokens_impl.is_empty() {
+                let output = format!("{directory}/impl.rs");
+                write_to_file(&output, try_format(writer, &tokens_impl))?;
+            }
 
-        Ok::<(), Error>(())
-    })?;
+            let mut dependencies = BTreeSet::new();
+
+            for item in writer.reader.namespace_items(tree.namespace) {
+                match item {
+                    Item::Type(typ) => {
+                        dependencies.extend(type_def_cfg(typ, &[]).types.into_keys());
+                        dependencies.extend(typ.methods().flat_map(|method| signature_cfg(method).types.into_keys()));
+                    }
+                    Item::Fn(method, _) => dependencies.extend(signature_cfg(method).types.into_keys()),
+                    Item::Const(field) => dependencies.extend(field_cfg(field).types.into_keys()),
+                }
+            }
+
+            Ok::<_, Error>((tree.namespace, dependencies))
+        })
+        .collect::<Result<Vec<_>>>()?;
 
     let cargo_toml = format!("{}/Cargo.toml", super::directory(directory));
     let mut toml = String::new();
@@ -113,21 +135,46 @@ fn gen_package(writer: &Writer) -> Result<()> {
         }
     }
 
-    for tree in trees.iter().skip(1) {
-        let feature = tree.namespace[root_len + 1..].replace('.', "_");
+    let mut features = BTreeMap::<String, Vec<String>>::new();
+
+    result.iter().flat_map(|(_, dep)| dep).copied().filter(|&namespace| writer.external_crate(namespace).is_some()).collect::<BTreeSet<_>>().into_iter().for_each(|namespace| {
+        let (prefix, crat) = writer.external_crate(namespace).unwrap();
+        let sub = namespace.trim_start_matches(prefix).trim_start_matches('.').replace('.', "_");
+        let sub = crat.split_once("::").map_or_else(
+            || format!("{crat}/{sub}"),
+            |(crat, begin_sub)| {
+                let begin_sub = begin_sub.replace("::", "_");
+                if sub.is_empty() {
+                    format!("{crat}/{begin_sub}")
+                } else {
+                    format!("{crat}/{begin_sub}_{sub}")
+                }
+            },
+        );
+
+        features.entry(writer.to_feature(namespace)).or_default().push(sub);
+    });
+
+    for (namespace, sub_dependencies) in result.into_iter().skip(if writer.single_namespace { 1 } else { 0 }) {
+        let feature = writer.to_feature(namespace);
+
+        let deps = features.entry(feature.clone()).or_default();
 
         if let Some(pos) = feature.rfind('_') {
-            let dependency = &feature[..pos];
-
-            toml.push_str(&format!("{feature} = [\"{dependency}\"]\n"));
-        } else if tree.namespace.starts_with("Windows.Win32") || tree.namespace.starts_with("Windows.Wdk") {
-            toml.push_str(&format!("{feature} = [\"Win32_Foundation\"]\n"));
-        } else if tree.namespace != "Windows.Foundation" {
-            toml.push_str(&format!("{feature} = [\"Foundation\"]\n"));
-        } else {
-            toml.push_str(&format!("{feature} = []\n"));
+            deps.push(feature[..pos].to_owned());
         }
+
+        sub_dependencies.into_iter().filter(|&dep| writer.default_namespaces.contains(dep) && dep != namespace).for_each(|d| deps.push(writer.to_feature(d)));
     }
+
+    toml.extend(features.into_iter().map(|(feature, deps)| {
+        if deps.is_empty() {
+            format!("{feature} = []\n")
+        } else {
+            let deps = deps.join("\", \"");
+            format!("{feature} = [\"{deps}\"]\n")
+        }
+    }));
 
     write_to_file(&cargo_toml, toml)
 }
@@ -136,6 +183,7 @@ use method_names::*;
 use std::fmt::Write;
 use tokens::*;
 use try_format::*;
+use windows_metadata::Item;
 use writer::*;
 
 fn namespace(writer: &Writer, tree: &Tree) -> String {
@@ -145,7 +193,7 @@ fn namespace(writer: &Writer, tree: &Tree) -> String {
 
     for (name, tree) in &tree.nested {
         let name = to_ident(name);
-        let feature = tree.namespace[tree.namespace.find('.').unwrap() + 1..].replace('.', "_");
+        let feature = writer.to_feature(tree.namespace);
         let doc = format!(r#"Required features: `\"{feature}\"`"#);
         if writer.package {
             tokens.combine(&quote! {
@@ -162,7 +210,7 @@ fn namespace(writer: &Writer, tree: &Tree) -> String {
     }
 
     let mut functions = std::collections::BTreeMap::<&str, TokenStream>::new();
-    let mut types = std::collections::BTreeMap::<metadata::TypeKind, std::collections::BTreeMap<&str, TokenStream>>::new();
+    let mut types = std::collections::BTreeMap::<metadata::TypeKind, BTreeMap<&str, TokenStream>>::new();
 
     for item in writer.reader.namespace_items(writer.namespace) {
         match item {
@@ -190,7 +238,7 @@ fn namespace(writer: &Writer, tree: &Tree) -> String {
                                 let ident = to_ident(name);
                                 let value = writer.guid(&guid);
                                 let guid = writer.type_name(&metadata::Type::GUID);
-                                let cfg = cfg::type_def_cfg(def, &[]);
+                                let cfg = type_def_cfg(def, &[]);
                                 let doc = writer.cfg_doc(&cfg);
                                 let constant = quote! {
                                     #doc

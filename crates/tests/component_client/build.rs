@@ -15,6 +15,8 @@ fn main() {
         "src/bindings.rs",
         "--filter",
         "test_component",
+        "--external",
+        "windows=Windows",
     ]);
 
     if !command.status().unwrap().success() {

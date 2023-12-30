@@ -27,7 +27,7 @@ fn gen_win_interface(writer: &Writer, def: metadata::TypeDef) -> TokenStream {
     let is_exclusive = metadata::type_def_is_exclusive(def);
     let phantoms = writer.generic_phantoms(generics);
     let constraints = writer.generic_constraints(generics);
-    let cfg = cfg::type_def_cfg(def, &[]);
+    let cfg = type_def_cfg(def, &[]);
     let doc = writer.cfg_doc(&cfg);
     let features = writer.cfg_features(&cfg);
     let interfaces = metadata::type_interfaces(&metadata::Type::TypeDef(def, generics.to_vec()));
@@ -110,7 +110,7 @@ fn gen_win_interface(writer: &Writer, def: metadata::TypeDef) -> TokenStream {
                 let into = writer.type_name(ty);
 
                 write!(&mut hierarchy, ", {into}").unwrap();
-                hierarchy_cfg = hierarchy_cfg.union(&cfg::type_cfg(ty));
+                hierarchy_cfg = hierarchy_cfg.union(&type_cfg(ty));
             }
 
             hierarchy.push_str(");");
@@ -119,7 +119,7 @@ fn gen_win_interface(writer: &Writer, def: metadata::TypeDef) -> TokenStream {
         } else {
             for ty in &vtables {
                 let into = writer.type_name(ty);
-                let cfg = writer.cfg_features(&cfg.union(&cfg::type_cfg(ty)));
+                let cfg = writer.cfg_features(&cfg.union(&type_cfg(ty)));
                 tokens.combine(&quote! {
                     #cfg
                     impl<#constraints> ::windows_core::CanInto<#into> for #ident {}
@@ -130,7 +130,7 @@ fn gen_win_interface(writer: &Writer, def: metadata::TypeDef) -> TokenStream {
         if def.flags().contains(metadata::TypeAttributes::WindowsRuntime) {
             for interface in &interfaces {
                 let into = writer.type_name(&interface.ty);
-                let cfg = writer.cfg_features(&cfg.union(&cfg::type_cfg(&interface.ty)));
+                let cfg = writer.cfg_features(&cfg.union(&type_cfg(&interface.ty)));
                 tokens.combine(&quote! {
                     #cfg
                     impl<#constraints> ::windows_core::CanTryInto<#into> for #ident {}

@@ -45,17 +45,17 @@ pub struct IDnssdServiceInstance_Vtbl {
     #[cfg(not(feature = "Foundation_Collections"))]
     TextAttributes: usize,
     #[cfg(feature = "Networking_Sockets")]
-    pub RegisterStreamSocketListenerAsync1: unsafe extern "system" fn(this: *mut ::core::ffi::c_void, socket: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT,
+    pub RegisterStreamSocketListenerAsync: unsafe extern "system" fn(this: *mut ::core::ffi::c_void, socket: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT,
     #[cfg(not(feature = "Networking_Sockets"))]
-    RegisterStreamSocketListenerAsync1: usize,
+    RegisterStreamSocketListenerAsync: usize,
     #[cfg(all(feature = "Networking_Connectivity", feature = "Networking_Sockets"))]
     pub RegisterStreamSocketListenerAsync2: unsafe extern "system" fn(this: *mut ::core::ffi::c_void, socket: *mut ::core::ffi::c_void, adapter: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT,
     #[cfg(not(all(feature = "Networking_Connectivity", feature = "Networking_Sockets")))]
     RegisterStreamSocketListenerAsync2: usize,
     #[cfg(feature = "Networking_Sockets")]
-    pub RegisterDatagramSocketAsync1: unsafe extern "system" fn(this: *mut ::core::ffi::c_void, socket: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT,
+    pub RegisterDatagramSocketAsync: unsafe extern "system" fn(this: *mut ::core::ffi::c_void, socket: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT,
     #[cfg(not(feature = "Networking_Sockets"))]
-    RegisterDatagramSocketAsync1: usize,
+    RegisterDatagramSocketAsync: usize,
     #[cfg(all(feature = "Networking_Connectivity", feature = "Networking_Sockets"))]
     pub RegisterDatagramSocketAsync2: unsafe extern "system" fn(this: *mut ::core::ffi::c_void, socket: *mut ::core::ffi::c_void, adapter: *mut ::core::ffi::c_void, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT,
     #[cfg(not(all(feature = "Networking_Connectivity", feature = "Networking_Sockets")))]
@@ -230,14 +230,14 @@ impl DnssdServiceInstance {
     }
     #[doc = "Required features: `\"Networking_Sockets\"`"]
     #[cfg(feature = "Networking_Sockets")]
-    pub fn RegisterStreamSocketListenerAsync1<P0>(&self, socket: P0) -> ::windows_core::Result<super::super::super::Foundation::IAsyncOperation<DnssdRegistrationResult>>
+    pub fn RegisterStreamSocketListenerAsync<P0>(&self, socket: P0) -> ::windows_core::Result<super::super::super::Foundation::IAsyncOperation<DnssdRegistrationResult>>
     where
         P0: ::windows_core::IntoParam<super::super::Sockets::StreamSocketListener>,
     {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RegisterStreamSocketListenerAsync1)(::windows_core::Interface::as_raw(this), socket.into_param().abi(), &mut result__).from_abi(result__)
+            (::windows_core::Interface::vtable(this).RegisterStreamSocketListenerAsync)(::windows_core::Interface::as_raw(this), socket.into_param().abi(), &mut result__).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Networking_Connectivity\"`, `\"Networking_Sockets\"`"]
@@ -255,14 +255,14 @@ impl DnssdServiceInstance {
     }
     #[doc = "Required features: `\"Networking_Sockets\"`"]
     #[cfg(feature = "Networking_Sockets")]
-    pub fn RegisterDatagramSocketAsync1<P0>(&self, socket: P0) -> ::windows_core::Result<super::super::super::Foundation::IAsyncOperation<DnssdRegistrationResult>>
+    pub fn RegisterDatagramSocketAsync<P0>(&self, socket: P0) -> ::windows_core::Result<super::super::super::Foundation::IAsyncOperation<DnssdRegistrationResult>>
     where
         P0: ::windows_core::IntoParam<super::super::Sockets::DatagramSocket>,
     {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RegisterDatagramSocketAsync1)(::windows_core::Interface::as_raw(this), socket.into_param().abi(), &mut result__).from_abi(result__)
+            (::windows_core::Interface::vtable(this).RegisterDatagramSocketAsync)(::windows_core::Interface::as_raw(this), socket.into_param().abi(), &mut result__).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Networking_Connectivity\"`, `\"Networking_Sockets\"`"]

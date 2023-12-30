@@ -26,7 +26,7 @@ fn gen_class(writer: &Writer, def: metadata::TypeDef) -> TokenStream {
     let mut methods = quote! {};
     let mut method_names = MethodNames::new();
 
-    let cfg = cfg::type_def_cfg(def, &[]);
+    let cfg = type_def_cfg(def, &[]);
     let doc = writer.cfg_doc(&cfg);
     let features = writer.cfg_features(&cfg);
 
@@ -41,11 +41,11 @@ fn gen_class(writer: &Writer, def: metadata::TypeDef) -> TokenStream {
     }
 
     let factories = interfaces.iter().filter_map(|interface| match interface.kind {
-        metadata::InterfaceKind::Static => {
+        metadata::InterfaceKind::Static | metadata::InterfaceKind::Composable => {
             if let metadata::Type::TypeDef(def, generics) = &interface.ty {
                 if def.methods().next().is_some() {
                     let interface_type = writer.type_name(&interface.ty);
-                    let features = writer.cfg_features(&cfg::type_def_cfg(*def, generics));
+                    let features = writer.cfg_features(&type_def_cfg(*def, generics));
 
                     return Some(quote! {
                         #[doc(hidden)]
@@ -122,7 +122,7 @@ fn gen_class(writer: &Writer, def: metadata::TypeDef) -> TokenStream {
     }
 }
 
-fn gen_conversions(writer: &Writer, def: metadata::TypeDef, name: &TokenStream, interfaces: &[metadata::Interface], cfg: &cfg::Cfg) -> TokenStream {
+fn gen_conversions(writer: &Writer, def: metadata::TypeDef, name: &TokenStream, interfaces: &[metadata::Interface], cfg: &Cfg) -> TokenStream {
     let features = writer.cfg_features(cfg);
     let mut tokens = quote! {
         #features
@@ -139,7 +139,7 @@ fn gen_conversions(writer: &Writer, def: metadata::TypeDef, name: &TokenStream, 
         }
 
         let into = writer.type_name(&interface.ty);
-        let features = writer.cfg_features(&cfg.union(&cfg::type_cfg(&interface.ty)));
+        let features = writer.cfg_features(&cfg.union(&type_cfg(&interface.ty)));
 
         tokens.combine(&quote! {
             #features
@@ -149,7 +149,7 @@ fn gen_conversions(writer: &Writer, def: metadata::TypeDef, name: &TokenStream, 
 
     for def in metadata::type_def_bases(def) {
         let into = writer.type_def_name(def, &[]);
-        let features = writer.cfg_features(&cfg.union(&cfg::type_def_cfg(def, &[])));
+        let features = writer.cfg_features(&cfg.union(&type_def_cfg(def, &[])));
 
         tokens.combine(&quote! {
             #features

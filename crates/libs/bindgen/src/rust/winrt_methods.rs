@@ -9,9 +9,9 @@ pub fn writer(writer: &Writer, def: metadata::TypeDef, generic_types: &[metadata
     let vname = virtual_names.add(method);
     let generics = writer.constraint_generics(params);
     let where_clause = writer.where_clause(params);
-    let mut cfg = cfg::signature_cfg(method);
-    cfg::type_def_cfg_combine(def, generic_types, &mut cfg);
-    let doc = writer.cfg_method_doc(&cfg);
+    let mut cfg = signature_cfg(method);
+    type_def_cfg_combine(def, generic_types, &mut cfg);
+    let doc = writer.cfg_doc(&cfg);
     let features = writer.cfg_features(&cfg);
     let args = gen_winrt_abi_args(writer, params);
     let params = gen_winrt_params(writer, params);
@@ -73,27 +73,30 @@ pub fn writer(writer: &Writer, def: metadata::TypeDef, generic_types: &[metadata
                 }
             }
         },
-        metadata::InterfaceKind::None | metadata::InterfaceKind::Base | metadata::InterfaceKind::Overridable => {
-            quote! {
-                #doc
-                #features
-                pub fn #name<#generics>(&self, #params) -> ::windows_core::Result<#return_type_tokens> #where_clause {
-                    let this = &::windows_core::ComInterface::cast::<#interface_name>(self)?;
-                    unsafe {
-                        #vcall
-                    }
+        metadata::InterfaceKind::None | metadata::InterfaceKind::Base | metadata::InterfaceKind::Overridable => quote! {
+            #doc
+            #features
+            pub fn #name<#generics>(&self, #params) -> ::windows_core::Result<#return_type_tokens> #where_clause {
+                let this = &::windows_core::ComInterface::cast::<#interface_name>(self)?;
+                unsafe {
+                    #vcall
                 }
             }
-        }
-        metadata::InterfaceKind::Static => {
-            quote! {
-                #doc
-                #features
-                pub fn #name<#generics>(#params) -> ::windows_core::Result<#return_type_tokens> #where_clause {
-                    Self::#interface_name(|this| unsafe { #vcall })
-                }
+        },
+        metadata::InterfaceKind::Static => quote! {
+            #doc
+            #features
+            pub fn #name<#generics>(#params) -> ::windows_core::Result<#return_type_tokens> #where_clause {
+                Self::#interface_name(|this| unsafe { #vcall })
             }
-        }
+        },
+        metadata::InterfaceKind::Composable => quote! {
+            #doc
+            #features
+            pub unsafe fn #name<#generics>(#params) -> ::windows_core::Result<#return_type_tokens> #where_clause {
+                Self::#interface_name(|this| unsafe { #vcall })
+            }
+        },
     }
 }
 

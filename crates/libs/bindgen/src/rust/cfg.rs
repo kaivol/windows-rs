@@ -3,10 +3,11 @@ use metadata::{AsRow, HasAttributes};
 
 #[derive(Default, Clone)]
 pub struct Cfg {
-    pub types: std::collections::BTreeMap<&'static str, std::collections::BTreeSet<metadata::TypeDef>>,
-    pub core_types: std::collections::BTreeSet<metadata::Type>,
-    pub arches: std::collections::BTreeSet<&'static str>,
+    pub types: BTreeMap<&'static str, BTreeSet<metadata::TypeDef>>,
+    pub core_types: BTreeSet<metadata::Type>,
+    pub arches: BTreeSet<&'static str>,
     pub implement: bool,
+    pub deprecated: bool,
 }
 
 impl Cfg {
@@ -27,6 +28,7 @@ impl Cfg {
         other.arches.iter().for_each(|arch| {
             union.arches.insert(arch);
         });
+        union.deprecated = self.deprecated || other.deprecated;
         union
     }
 }
@@ -137,7 +139,7 @@ fn cfg_add_attributes<R: AsRow + Into<metadata::HasAttribute>>(cfg: &mut Cfg, ro
                 }
             }
             "DeprecatedAttribute" => {
-                cfg.add_feature("deprecated");
+                cfg.deprecated = true;
             }
             _ => {}
         }

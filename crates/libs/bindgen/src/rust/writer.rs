@@ -1,5 +1,6 @@
 use super::*;
 use metadata::HasAttributes;
+use patricia_tree::StringPatriciaMap;
 
 #[derive(Clone)]
 pub struct Writer {
@@ -19,10 +20,13 @@ pub struct Writer {
     pub package: bool,             // default is single file with no cfg - implies !flatten
     pub minimal: bool,             // strips out enumerators - in future possibly other helpers as well
     pub no_inner_attributes: bool, // skips the inner attributes at the start of the file
+    pub single_namespace: bool,
+    pub default_namespaces: BTreeSet<String>,
+    pub externals: StringPatriciaMap<Option<String>>,
 }
 
 impl Writer {
-    pub fn new(reader: &'static metadata::Reader, output: &str) -> Self {
+    pub fn new(reader: &'static metadata::Reader, output: &str, externals: StringPatriciaMap<Option<String>>) -> Self {
         Self {
             reader,
             output: output.to_string(),
@@ -34,6 +38,9 @@ impl Writer {
             package: false,
             minimal: false,
             no_inner_attributes: false,
+            single_namespace: false,
+            default_namespaces: BTreeSet::new(),
+            externals,
         }
     }
 
@@ -333,49 +340,22 @@ impl Writer {
     //
 
     /// Generates doc comments for types, free functions, and constants.
-    pub(crate) fn cfg_doc(&self, cfg: &cfg::Cfg) -> TokenStream {
-        if !self.package {
-            quote! {}
-        } else {
-            let mut tokens = String::new();
-
-            for features in self.cfg_features_imp(cfg, self.namespace) {
-                write!(tokens, r#"`\"{}\"`, "#, to_feature(features)).unwrap();
-            }
-
-            if tokens.is_empty() {
-                TokenStream::new()
-            } else {
-                tokens.truncate(tokens.len() - 2);
-                format!(r#" #[doc = "Required features: {tokens}"]"#).into()
-            }
-        }
-    }
-
-    /// Generates doc comments for member functions (methods) and avoids redundantly declaring the
-    /// enclosing module feature required by the method's type.
-    pub(crate) fn cfg_method_doc(&self, cfg: &cfg::Cfg) -> TokenStream {
+    pub(crate) fn cfg_doc(&self, cfg: &Cfg) -> TokenStream {
         if !self.package {
             quote! {}
         } else {
             let features = self.cfg_features_imp(cfg, self.namespace);
 
             if features.is_empty() {
-                quote! {}
+                TokenStream::new()
             } else {
-                let mut tokens = String::new();
-
-                for features in features {
-                    write!(tokens, r#"`\"{}\"`, "#, to_feature(features)).unwrap();
-                }
-
-                tokens.truncate(tokens.len() - 2);
-                format!(r#"#[doc = "Required features: {tokens}"]"#).into()
+                let tokens = features.join(r#"\"`, `\""#);
+                format!(r#" #[doc = "Required features: `\"{tokens}\"`"]"#).into()
             }
         }
     }
 
-    pub(crate) fn cfg_features(&self, cfg: &cfg::Cfg) -> TokenStream {
+    pub(crate) fn cfg_features(&self, cfg: &Cfg) -> TokenStream {
         let arches = &cfg.arches;
         let arch = match arches.len() {
             0 => quote! {},
@@ -392,11 +372,9 @@ impl Writer {
         let features = match features.len() {
             0 => quote! {},
             1 => {
-                let features = features.iter().cloned().map(to_feature);
                 quote! { #[cfg(#(feature = #features)*)] }
             }
             _ => {
-                let features = features.iter().cloned().map(to_feature);
                 quote! { #[cfg(all( #(feature = #features),* ))] }
             }
         };
@@ -404,11 +382,11 @@ impl Writer {
         quote! { #arch #features }
     }
 
-    fn cfg_features_imp(&self, cfg: &cfg::Cfg, namespace: &str) -> Vec<&'static str> {
-        let mut compact = Vec::<&'static str>::new();
+    fn cfg_features_imp(&self, cfg: &Cfg, namespace: &str) -> Vec<String> {
         if self.package {
+            let mut compact = Vec::<&'static str>::new();
             for feature in cfg.types.keys() {
-                if !feature.is_empty() && !starts_with(namespace, feature) && !is_defaulted_foundation_feature(namespace, feature) {
+                if !feature.is_empty() && !starts_with(namespace, feature) && !self.default_namespaces.contains(*feature) {
                     for pos in 0..compact.len() {
                         if starts_with(feature, unsafe { compact.get_unchecked(pos) }) {
                             compact.remove(pos);
@@ -418,26 +396,22 @@ impl Writer {
                     compact.push(feature);
                 }
             }
+            let mut features = compact.into_iter().map(|f| self.to_feature(f)).collect::<Vec<_>>();
+            if cfg.deprecated {
+                features.push("deprecated".to_owned())
+            }
+            features
+        } else {
+            vec![]
         }
-        compact
     }
 
-    fn cfg_not_features(&self, cfg: &cfg::Cfg) -> TokenStream {
+    fn cfg_not_features(&self, cfg: &Cfg) -> TokenStream {
         let features = self.cfg_features_imp(cfg, self.namespace);
-        if features.is_empty() {
-            quote! {}
-        } else {
-            match features.len() {
-                0 => quote! {},
-                1 => {
-                    let features = features.iter().cloned().map(to_feature);
-                    quote! { #[cfg(not(#(feature = #features)*))] }
-                }
-                _ => {
-                    let features = features.iter().cloned().map(to_feature);
-                    quote! { #[cfg(not(all( #(feature = #features),* )))] }
-                }
-            }
+        match features.len() {
+            0 => quote! {},
+            1 => quote! { #[cfg(not(#(feature = #features)*))] },
+            _ => quote! { #[cfg(not(all( #(feature = #features),* )))] },
         }
     }
 
@@ -447,9 +421,17 @@ impl Writer {
 
     pub(crate) fn namespace(&self, namespace: &str) -> TokenStream {
         if self.flatten || namespace == self.namespace {
-            quote! {}
+            return quote! {};
+        }
+        if let Some((prefix, Some(crat))) = self.externals.get_longest_common_prefix(namespace) {
+            let mut tokens = TokenStream::new();
+            tokens.push_str("::");
+            tokens.push_str(crat);
+            let relative = namespace.trim_start_matches(prefix);
+            tokens.push_str(&relative.replace('.', "::"));
+            tokens.push_str("::");
+            tokens
         } else {
-            let is_external = namespace.starts_with("Windows.") && !self.namespace.starts_with("Windows");
             let mut relative = self.namespace.split('.').peekable();
             let mut namespace = namespace.split('.').peekable();
 
@@ -463,13 +445,8 @@ impl Writer {
 
             let mut tokens = TokenStream::new();
 
-            if is_external {
-                tokens.push_str("::windows::");
-                namespace.next();
-            } else {
-                for _ in 0..relative.count() {
-                    tokens.push_str("super::");
-                }
+            for _ in 0..relative.count() {
+                tokens.push_str("super::");
             }
 
             for namespace in namespace {
@@ -779,7 +756,7 @@ impl Writer {
             }
             let name = method_names.add(method);
             let signature = metadata::method_def_signature(def.namespace(), method, generics);
-            let mut cfg = cfg::signature_cfg(method);
+            let mut cfg = signature_cfg(method);
             let signature = self.vtbl_signature(def, generics, &signature);
             cfg.add_feature(def.namespace());
             let cfg_all = self.cfg_features(&cfg);
@@ -1143,6 +1120,23 @@ impl Writer {
             quote! { #name: #kind, }
         }
     }
+
+    pub(crate) fn to_feature(&self, name: &str) -> String {
+        let skip = match (self.single_namespace, self.externals.get_longest_common_prefix(name)) {
+            (_, Some((_, Some(_)))) => 0, // don't truncate external dependencies
+            (false, _) => 0,              // don't truncate if single_namespace is false
+            _ => 1,
+        };
+        name.split('.').skip(skip).collect::<Vec<&str>>().join("_")
+    }
+
+    pub(crate) fn external_crate<'a, 'b>(&'a self, namespace: &'b str) -> Option<(&'b str, &'a str)> {
+        if let Some((prefix, Some(crat))) = self.externals.get_longest_common_prefix(namespace) {
+            Some((prefix, crat.as_str()))
+        } else {
+            None
+        }
+    }
 }
 
 fn mut_ptrs(pointers: usize) -> TokenStream {
@@ -1151,23 +1145,6 @@ fn mut_ptrs(pointers: usize) -> TokenStream {
 
 fn const_ptrs(pointers: usize) -> TokenStream {
     "*const ".repeat(pointers).into()
-}
-
-fn to_feature(name: &str) -> String {
-    let mut feature = String::new();
-
-    for name in name.split('.').skip(1) {
-        feature.push_str(name);
-        feature.push('_');
-    }
-
-    if feature.is_empty() {
-        feature = name.to_string();
-    } else {
-        feature.truncate(feature.len() - 1);
-    }
-
-    feature
 }
 
 fn starts_with(namespace: &str, feature: &str) -> bool {
@@ -1180,16 +1157,6 @@ fn starts_with(namespace: &str, feature: &str) -> bool {
     }
 
     false
-}
-
-fn is_defaulted_foundation_feature(namespace: &str, feature: &str) -> bool {
-    let is_winrt = !starts_with(namespace, "Windows.Win32") && !starts_with(namespace, "Windows.Wdk");
-
-    if !is_winrt && feature == "Windows.Win32.Foundation" {
-        true
-    } else {
-        is_winrt && feature == "Windows.Foundation"
-    }
 }
 
 fn gen_mut_ptrs(pointers: usize) -> TokenStream {

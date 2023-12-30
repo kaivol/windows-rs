@@ -119,7 +119,7 @@ pub fn standalone_imp(writer: &Writer) -> String {
 }
 
 #[derive(Default)]
-struct SortedTokens(std::collections::BTreeMap<String, TokenStream>);
+struct SortedTokens(BTreeMap<String, TokenStream>);
 
 impl SortedTokens {
     fn insert(&mut self, key: &str, tokens: TokenStream) {
@@ -127,7 +127,7 @@ impl SortedTokens {
     }
 }
 
-fn item_collect_standalone(item: metadata::Item, set: &mut std::collections::BTreeSet<metadata::Type>) {
+fn item_collect_standalone(item: Item, set: &mut BTreeSet<metadata::Type>) {
     match item {
         metadata::Item::Type(def) => type_collect_standalone(&metadata::Type::TypeDef(def, vec![]), set),
         metadata::Item::Const(def) => type_collect_standalone(&def.ty(None).to_const_type(), set),
@@ -139,7 +139,7 @@ fn item_collect_standalone(item: metadata::Item, set: &mut std::collections::BTr
     }
 }
 // TODO: remove or move to riddle
-fn type_collect_standalone(ty: &metadata::Type, set: &mut std::collections::BTreeSet<metadata::Type>) {
+fn type_collect_standalone(ty: &metadata::Type, set: &mut BTreeSet<metadata::Type>) {
     let ty = ty.to_underlying_type();
     if !set.insert(ty.clone()) {
         return;
@@ -198,7 +198,7 @@ fn type_collect_standalone(ty: &metadata::Type, set: &mut std::collections::BTre
     type_collect_standalone_nested(def, set);
 }
 
-fn type_collect_standalone_nested(td: metadata::TypeDef, set: &mut std::collections::BTreeSet<metadata::Type>) {
+fn type_collect_standalone_nested(td: metadata::TypeDef, set: &mut BTreeSet<metadata::Type>) {
     for nested in td.reader().nested_types(td) {
         type_collect_standalone_nested(nested, set);
 

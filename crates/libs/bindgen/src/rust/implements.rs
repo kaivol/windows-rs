@@ -2,7 +2,7 @@ use super::*;
 use metadata::HasAttributes;
 
 pub fn writer(writer: &Writer, def: metadata::TypeDef) -> TokenStream {
-    if def.kind() != metadata::TypeKind::Interface || (!writer.implement && def.has_attribute("ExclusiveToAttribute")) {
+    if def.kind() != metadata::TypeKind::Interface || (!writer.implement && def.has_attribute("ExclusiveToAttribute") && !def.name().ends_with("Overrides")) {
         return quote! {};
     }
 
@@ -14,7 +14,7 @@ pub fn writer(writer: &Writer, def: metadata::TypeDef) -> TokenStream {
     let constraints = writer.generic_constraints(generics);
     let generic_names = writer.generic_names(generics);
     let named_phantoms = writer.generic_named_phantoms(generics);
-    let cfg = cfg::type_def_cfg_impl(def, generics);
+    let cfg = type_def_cfg_impl(def, generics);
     let doc = writer.cfg_doc(&cfg);
     let features = writer.cfg_features(&cfg);
     let mut requires = quote! {};

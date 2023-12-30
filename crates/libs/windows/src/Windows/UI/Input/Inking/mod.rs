@@ -216,9 +216,9 @@ pub struct IInkManager_Vtbl {
     pub ProcessPointerUp: unsafe extern "system" fn(this: *mut ::core::ffi::c_void, pointerpoint: *mut ::core::ffi::c_void, result__: *mut super::super::super::Foundation::Rect) -> ::windows_core::HRESULT,
     pub SetDefaultDrawingAttributes: unsafe extern "system" fn(this: *mut ::core::ffi::c_void, drawingattributes: *mut ::core::ffi::c_void) -> ::windows_core::HRESULT,
     #[cfg(feature = "Foundation_Collections")]
-    pub RecognizeAsync2: unsafe extern "system" fn(this: *mut ::core::ffi::c_void, recognitiontarget: InkRecognitionTarget, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT,
+    pub RecognizeAsync: unsafe extern "system" fn(this: *mut ::core::ffi::c_void, recognitiontarget: InkRecognitionTarget, result__: *mut *mut ::core::ffi::c_void) -> ::windows_core::HRESULT,
     #[cfg(not(feature = "Foundation_Collections"))]
-    RecognizeAsync2: usize,
+    RecognizeAsync: usize,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -1620,11 +1620,11 @@ impl InkManager {
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
-    pub fn RecognizeAsync2(&self, recognitiontarget: InkRecognitionTarget) -> ::windows_core::Result<super::super::super::Foundation::IAsyncOperation<super::super::super::Foundation::Collections::IVectorView<InkRecognitionResult>>> {
+    pub fn RecognizeAsync(&self, recognitiontarget: InkRecognitionTarget) -> ::windows_core::Result<super::super::super::Foundation::IAsyncOperation<super::super::super::Foundation::Collections::IVectorView<InkRecognitionResult>>> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RecognizeAsync2)(::windows_core::Interface::as_raw(this), recognitiontarget, &mut result__).from_abi(result__)
+            (::windows_core::Interface::vtable(this).RecognizeAsync)(::windows_core::Interface::as_raw(this), recognitiontarget, &mut result__).from_abi(result__)
         }
     }
     pub fn SetDefaultRecognizer<P0>(&self, recognizer: P0) -> ::windows_core::Result<()>
@@ -1636,7 +1636,7 @@ impl InkManager {
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
-    pub fn RecognizeAsync<P0>(&self, strokecollection: P0, recognitiontarget: InkRecognitionTarget) -> ::windows_core::Result<super::super::super::Foundation::IAsyncOperation<super::super::super::Foundation::Collections::IVectorView<InkRecognitionResult>>>
+    pub fn RecognizeAsync2<P0>(&self, strokecollection: P0, recognitiontarget: InkRecognitionTarget) -> ::windows_core::Result<super::super::super::Foundation::IAsyncOperation<super::super::super::Foundation::Collections::IVectorView<InkRecognitionResult>>>
     where
         P0: ::windows_core::IntoParam<InkStrokeContainer>,
     {

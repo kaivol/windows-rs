@@ -13,7 +13,7 @@ pub fn writer(writer: &Writer, def: metadata::TypeDef) -> TokenStream {
     gen_struct_with_name(writer, def, def.name(), &cfg::Cfg::default())
 }
 
-fn gen_struct_with_name(writer: &Writer, def: metadata::TypeDef, struct_name: &str, cfg: &cfg::Cfg) -> TokenStream {
+fn gen_struct_with_name(writer: &Writer, def: metadata::TypeDef, struct_name: &str, cfg: &Cfg) -> TokenStream {
     let name = to_ident(struct_name);
 
     if def.fields().next().is_none() {
@@ -38,7 +38,7 @@ fn gen_struct_with_name(writer: &Writer, def: metadata::TypeDef, struct_name: &s
     }
 
     let flags = def.flags();
-    let cfg = cfg.union(&cfg::type_def_cfg(def, &[]));
+    let cfg = cfg.union(&type_def_cfg(def, &[]));
 
     let repr = if let Some(layout) = def.class_layout() {
         let packing = Literal::usize_unsuffixed(layout.packing_size());
@@ -111,7 +111,7 @@ fn gen_struct_with_name(writer: &Writer, def: metadata::TypeDef, struct_name: &s
     tokens
 }
 
-fn gen_windows_traits(writer: &Writer, def: metadata::TypeDef, name: &TokenStream, cfg: &cfg::Cfg) -> TokenStream {
+fn gen_windows_traits(writer: &Writer, def: metadata::TypeDef, name: &TokenStream, cfg: &Cfg) -> TokenStream {
     if writer.sys {
         quote! {}
     } else {
@@ -146,7 +146,7 @@ fn gen_windows_traits(writer: &Writer, def: metadata::TypeDef, name: &TokenStrea
     }
 }
 
-fn gen_compare_traits(writer: &Writer, def: metadata::TypeDef, name: &TokenStream, cfg: &cfg::Cfg) -> TokenStream {
+fn gen_compare_traits(writer: &Writer, def: metadata::TypeDef, name: &TokenStream, cfg: &Cfg) -> TokenStream {
     let features = writer.cfg_features(cfg);
 
     if writer.sys || metadata::type_def_has_explicit_layout(def) || metadata::type_def_has_packing(def) || metadata::type_def_has_callback(def) {
@@ -174,7 +174,7 @@ fn gen_compare_traits(writer: &Writer, def: metadata::TypeDef, name: &TokenStrea
     }
 }
 
-fn gen_debug(writer: &Writer, def: metadata::TypeDef, ident: &TokenStream, cfg: &cfg::Cfg) -> TokenStream {
+fn gen_debug(writer: &Writer, def: metadata::TypeDef, ident: &TokenStream, cfg: &Cfg) -> TokenStream {
     if writer.sys || metadata::type_def_has_explicit_layout(def) || metadata::type_def_has_packing(def) {
         quote! {}
     } else {
@@ -207,7 +207,7 @@ fn gen_debug(writer: &Writer, def: metadata::TypeDef, ident: &TokenStream, cfg: 
     }
 }
 
-fn gen_copy_clone(writer: &Writer, def: metadata::TypeDef, name: &TokenStream, cfg: &cfg::Cfg) -> TokenStream {
+fn gen_copy_clone(writer: &Writer, def: metadata::TypeDef, name: &TokenStream, cfg: &Cfg) -> TokenStream {
     let features = writer.cfg_features(cfg);
 
     if writer.sys || metadata::type_def_is_copyable(def) {
@@ -256,7 +256,7 @@ fn gen_copy_clone(writer: &Writer, def: metadata::TypeDef, name: &TokenStream, c
     }
 }
 
-fn gen_struct_constants(writer: &Writer, def: metadata::TypeDef, struct_name: &TokenStream, cfg: &cfg::Cfg) -> TokenStream {
+fn gen_struct_constants(writer: &Writer, def: metadata::TypeDef, struct_name: &TokenStream, cfg: &Cfg) -> TokenStream {
     let features = writer.cfg_features(cfg);
 
     let constants = def.fields().filter_map(|f| {

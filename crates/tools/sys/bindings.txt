@@ -1,6 +1,8 @@
 --in crates/libs/bindgen/default
 --out crates/libs/sys/src/lib.rs
 --config package sys
+--config single-namespace
+--config default-namespaces=Windows.Win32.Foundation
 
 --filter
     Windows.Wdk
