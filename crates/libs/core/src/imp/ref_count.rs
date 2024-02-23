@@ -8,12 +8,13 @@ pub struct RefCount(pub(crate) AtomicI32);
 impl RefCount {
     /// Creates a new `RefCount` with an initial value of `1`.
     pub fn new(count: u32) -> Self {
-        Self(AtomicI32::new(count as i32))
+        Self(AtomicI32::new(count.try_into().expect("count must be positive")))
     }
 
     /// Increments the reference count, returning the new value.
     pub fn add_ref(&self) -> u32 {
-        (self.0.fetch_add(1, Ordering::Relaxed) + 1) as u32
+        let new_count = self.0.fetch_add(1, Ordering::Relaxed) + 1;
+        new_count.try_into().unwrap_or_else(|_| std::process::abort())
     }
 
     /// Decrements the reference count, returning the new value.
@@ -23,10 +24,11 @@ impl RefCount {
     pub fn release(&self) -> u32 {
         let remaining = self.0.fetch_sub(1, Ordering::Release) - 1;
 
-        match remaining.cmp(&0) {
-            std::cmp::Ordering::Equal => fence(Ordering::Acquire),
-            std::cmp::Ordering::Less => panic!("Object has been over-released."),
-            std::cmp::Ordering::Greater => {}
+        if remaining == 0 {
+            fence(Ordering::Acquire);
+        }
+        if remaining < 0 {
+            panic!("Object has been over-released")
         }
 
         remaining as u32
