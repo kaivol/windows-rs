@@ -35,7 +35,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumOfflineFile
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumOfflineFilesSettings_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, rgelt: *mut ::core::option::Option<IOfflineFilesSetting>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -74,7 +73,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumOfflineFile
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -206,7 +204,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesCac
             IsPathCacheable: IsPathCacheable::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -225,7 +222,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesCac
         }
         IOfflineFilesCache2_Vtbl { base__: <IOfflineFilesCache as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, RenameItemEx: RenameItemEx::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -302,7 +298,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesCha
             IsLocallyModifiedTime: IsLocallyModifiedTime::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -345,7 +340,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesCon
             TransitionOffline: TransitionOffline::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -357,7 +351,6 @@ impl ::windows_core::Iids for IOfflineFilesDirectoryItem {
 #[cfg(feature = "Win32_Foundation")]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesDirectoryItem_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IOfflineFilesDirectoryItem {
     const VTABLE: Self::Vtable = { IOfflineFilesDirectoryItem_Vtbl { base__: <IOfflineFilesItem as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IOfflineFilesDirtyInfo_Impl: ::windows_core::BaseImpl {
     fn LocalDirtyByteCount(this: &Self::This) -> ::windows_core::Result<i64>;
@@ -392,7 +385,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesDir
             RemoteDirtyByteCount: RemoteDirtyByteCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -431,7 +423,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesErr
             GetDescription: GetDescription::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -573,7 +564,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesEve
             Ping: Ping::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -635,7 +625,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesEve
             SettingsChangesApplied: SettingsChangesApplied::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -667,7 +656,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesEve
             PrefetchFileEnd: PrefetchFileEnd::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -694,7 +682,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesEve
             PrefetchCloseHandleEnd: PrefetchCloseHandleEnd::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IOfflineFilesEventsFilter_Impl: ::windows_core::BaseImpl {
     fn GetPathFilter(this: &Self::This, ppszfilter: *mut ::windows_core::PWSTR, pmatch: *mut OFFLINEFILES_PATHFILTER_MATCH) -> ::windows_core::Result<()>;
@@ -722,7 +709,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesEve
             GetExcludedEvents: GetExcludedEvents::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -761,7 +747,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesFil
             IsEncrypted: IsEncrypted::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -805,7 +790,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesFil
             GetFileSize: GetFileSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -830,7 +814,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesGho
         }
         IOfflineFilesGhostInfo_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, IsGhosted: IsGhosted::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -896,7 +879,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesIte
             IsMarkedForDeletion: IsMarkedForDeletion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IOfflineFilesItemContainer_Impl: ::windows_core::BaseImpl {
     fn EnumItems(this: &Self::This, dwqueryflags: u32) -> ::windows_core::Result<IEnumOfflineFilesItems>;
@@ -931,7 +913,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesIte
             EnumItemsEx: EnumItemsEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -963,7 +944,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesIte
             GetPatternFilter: GetPatternFilter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1011,7 +991,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesPin
             IsPinnedForFolderRedirection: IsPinnedForFolderRedirection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1036,7 +1015,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesPin
         }
         IOfflineFilesPinInfo2_Vtbl { base__: <IOfflineFilesPinInfo as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, IsPartlyPinned: IsPartlyPinned::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1080,7 +1058,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesPro
             End: End::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1092,7 +1069,6 @@ impl ::windows_core::Iids for IOfflineFilesServerItem {
 #[cfg(feature = "Win32_Foundation")]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesServerItem_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IOfflineFilesServerItem {
     const VTABLE: Self::Vtable = { IOfflineFilesServerItem_Vtbl { base__: <IOfflineFilesItem as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1178,7 +1154,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesSet
             GetValue: GetValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1228,7 +1203,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesSha
             IsShareDfsJunction: IsShareDfsJunction::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1240,7 +1214,6 @@ impl ::windows_core::Iids for IOfflineFilesShareItem {
 #[cfg(feature = "Win32_Foundation")]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesShareItem_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IOfflineFilesShareItem {
     const VTABLE: Self::Vtable = { IOfflineFilesShareItem_Vtbl { base__: <IOfflineFilesItem as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1279,7 +1252,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesSim
             ItemResult: ItemResult::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1298,7 +1270,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesSus
         }
         IOfflineFilesSuspend_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SuspendRoot: SuspendRoot::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1317,7 +1288,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesSus
         }
         IOfflineFilesSuspendInfo_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, IsSuspended: IsSuspended::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IOfflineFilesSyncConflictHandler_Impl: ::windows_core::BaseImpl {
     fn ResolveConflict(this: &Self::This, pszpath: &::windows_core::PCWSTR, fstateknown: u32, state: OFFLINEFILES_SYNC_STATE, fchangedetails: u32, pconflictresolution: *mut OFFLINEFILES_SYNC_CONFLICT_RESOLVE, ppsznewname: *mut ::windows_core::PWSTR) -> ::windows_core::Result<()>;
@@ -1335,7 +1305,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesSyn
             ResolveConflict: ResolveConflict::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -1417,7 +1386,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesSyn
             GetOriginalInfo: GetOriginalInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1461,7 +1429,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesSyn
             GetFileSize: GetFileSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1500,7 +1467,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesSyn
             SyncItemResult: SyncItemResult::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1528,5 +1494,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOfflineFilesTra
             IsTransparentlyCached: IsTransparentlyCached::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

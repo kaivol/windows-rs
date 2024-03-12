@@ -36,7 +36,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBuffer_Impl, co
             SetLength: SetLength::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IContentTypeProvider_Impl: ::windows_core::BaseImpl {
     fn ContentType(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -58,7 +57,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContentTypeProv
         }
         IContentTypeProvider_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ContentType: ContentType::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -342,7 +340,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataReader_Impl
             DetachStream: DetachStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -552,7 +549,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataWriter_Impl
             DetachStream: DetachStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -579,7 +575,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInputStream_Imp
         }
         IInputStream_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ReadAsync: ReadAsync::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -608,7 +603,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInputStreamRefe
             OpenSequentialReadAsync: OpenSequentialReadAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -650,7 +644,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOutputStream_Im
             FlushAsync: FlushAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -684,7 +677,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPropertySetSeri
             Deserialize: Deserialize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -792,7 +784,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRandomAccessStr
             CanWrite: CanWrite::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -821,7 +812,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRandomAccessStr
             OpenReadAsync: OpenReadAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -834,5 +824,4 @@ impl ::windows_core::Iids for IRandomAccessStreamWithContentType {
 #[cfg(feature = "Foundation")]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRandomAccessStreamWithContentType_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IRandomAccessStreamWithContentType {
     const VTABLE: Self::Vtable = { IRandomAccessStreamWithContentType_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

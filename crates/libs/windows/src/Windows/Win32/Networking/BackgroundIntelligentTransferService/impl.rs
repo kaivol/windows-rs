@@ -39,7 +39,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: AsyncIBackground
             Finish_JobModification: Finish_JobModification::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -88,7 +87,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBITSExtensionSe
             GetCleanupTask: GetCleanupTask::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -116,7 +114,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBITSExtensionSe
             GetObject: GetObject::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBackgroundCopyCallback_Impl: ::windows_core::BaseImpl {
     fn JobTransferred(this: &Self::This, pjob: ::core::option::Option<&IBackgroundCopyJob>) -> ::windows_core::Result<()>;
@@ -144,7 +141,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyC
             JobModification: JobModification::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBackgroundCopyCallback1_Impl: ::windows_core::BaseImpl {
     fn OnStatus(this: &Self::This, pgroup: ::core::option::Option<&IBackgroundCopyGroup>, pjob: ::core::option::Option<&IBackgroundCopyJob1>, dwfileindex: u32, dwstatus: u32, dwnumofretries: u32, dwwin32result: u32, dwtransportresult: u32) -> ::windows_core::Result<()>;
@@ -172,7 +168,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyC
             OnProgressEx: OnProgressEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBackgroundCopyCallback2_Impl: ::windows_core::BaseImpl + IBackgroundCopyCallback_Impl {
     fn FileTransferred(this: &Self::This, pjob: ::core::option::Option<&IBackgroundCopyJob>, pfile: ::core::option::Option<&IBackgroundCopyFile>) -> ::windows_core::Result<()>;
@@ -190,7 +185,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyC
             FileTransferred: FileTransferred::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBackgroundCopyCallback3_Impl: ::windows_core::BaseImpl + IBackgroundCopyCallback2_Impl {
     fn FileRangesTransferred(this: &Self::This, job: ::core::option::Option<&IBackgroundCopyJob>, file: ::core::option::Option<&IBackgroundCopyFile>, rangecount: u32, ranges: *const BG_FILE_RANGE) -> ::windows_core::Result<()>;
@@ -208,7 +202,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyC
             FileRangesTransferred: FileRangesTransferred::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBackgroundCopyError_Impl: ::windows_core::BaseImpl {
     fn GetError(this: &Self::This, pcontext: *mut BG_ERROR_CONTEXT, pcode: *mut ::windows_core::HRESULT) -> ::windows_core::Result<()>;
@@ -270,7 +263,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyE
             GetProtocol: GetProtocol::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -314,7 +306,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyF
             GetProgress: GetProgress::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -341,7 +332,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyF
             SetRemoteName: SetRemoteName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -396,7 +386,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyF
             IsDownloadedFromPeer: IsDownloadedFromPeer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -418,7 +407,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyF
             GetPeerDownloadStats: GetPeerDownloadStats::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -451,7 +439,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyF
             GetProperty: GetProperty::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -483,7 +470,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyF
             GetFilledFileRanges: GetFilledFileRanges::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -623,7 +609,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyG
             SetNotificationPointer: SetNotificationPointer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -884,7 +869,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyJ
             TakeOwnership: TakeOwnership::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBackgroundCopyJob1_Impl: ::windows_core::BaseImpl {
     fn CancelJob(this: &Self::This) -> ::windows_core::Result<()>;
@@ -961,7 +945,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyJ
             JobID: JobID::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1024,7 +1007,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyJ
             RemoveCredentials: RemoveCredentials::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1067,7 +1049,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyJ
             GetFileACLFlags: GetFileACLFlags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1138,7 +1119,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyJ
             GetMaximumDownloadTime: GetMaximumDownloadTime::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1171,7 +1151,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyJ
             GetProperty: GetProperty::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBackgroundCopyJobHttpOptions_Impl: ::windows_core::BaseImpl {
     fn SetClientCertificateByID(this: &Self::This, storelocation: BG_CERT_STORE_LOCATION, storename: &::windows_core::PCWSTR, pcerthashblob: *const u8) -> ::windows_core::Result<()>;
@@ -1236,7 +1215,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyJ
             GetSecurityFlags: GetSecurityFlags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBackgroundCopyJobHttpOptions2_Impl: ::windows_core::BaseImpl + IBackgroundCopyJobHttpOptions_Impl {
     fn SetHttpMethod(this: &Self::This, method: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -1265,7 +1243,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyJ
             GetHttpMethod: GetHttpMethod::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBackgroundCopyJobHttpOptions3_Impl: ::windows_core::BaseImpl + IBackgroundCopyJobHttpOptions2_Impl {
     fn SetServerCertificateValidationInterface(this: &Self::This, certvalidationcallback: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -1288,7 +1265,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyJ
             MakeCustomHeadersWriteOnly: MakeCustomHeadersWriteOnly::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBackgroundCopyManager_Impl: ::windows_core::BaseImpl {
     fn CreateJob(this: &Self::This, displayname: &::windows_core::PCWSTR, r#type: BG_JOB_TYPE, pjobid: *mut ::windows_core::GUID, ppjob: *mut ::core::option::Option<IBackgroundCopyJob>) -> ::windows_core::Result<()>;
@@ -1339,7 +1315,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyM
             GetErrorDescription: GetErrorDescription::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBackgroundCopyQMgr_Impl: ::windows_core::BaseImpl {
     fn CreateGroup(this: &Self::This, guidgroupid: &::windows_core::GUID) -> ::windows_core::Result<IBackgroundCopyGroup>;
@@ -1385,7 +1360,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyQ
             EnumGroups: EnumGroups::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBackgroundCopyServerCertificateValidationCallback_Impl: ::windows_core::BaseImpl {
     fn ValidateServerCertificate(this: &Self::This, job: ::core::option::Option<&IBackgroundCopyJob>, file: ::core::option::Option<&IBackgroundCopyFile>, certlength: u32, certdata: *const u8, certencodingtype: u32, certstorelength: u32, certstoredata: *const u8) -> ::windows_core::Result<()>;
@@ -1403,7 +1377,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCopyS
             ValidateServerCertificate: ValidateServerCertificate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1453,7 +1426,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBitsPeer_Impl, 
             IsAvailable: IsAvailable::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBitsPeerCacheAdministration_Impl: ::windows_core::BaseImpl {
     fn GetMaximumCacheSize(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1572,7 +1544,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBitsPeerCacheAd
             DiscoverPeers: DiscoverPeers::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1654,7 +1625,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBitsPeerCacheRe
             GetFileRanges: GetFileRanges::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBitsTokenOptions_Impl: ::windows_core::BaseImpl {
     fn SetHelperTokenFlags(this: &Self::This, usageflags: BG_TOKEN) -> ::windows_core::Result<()>;
@@ -1704,7 +1674,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBitsTokenOption
             GetHelperTokenSid: GetHelperTokenSid::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumBackgroundCopyFiles_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, rgelt: *mut ::core::option::Option<IBackgroundCopyFile>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -1754,7 +1723,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumBackgroundC
             GetCount: GetCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumBackgroundCopyGroups_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, rgelt: *mut ::windows_core::GUID, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -1804,7 +1772,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumBackgroundC
             GetCount: GetCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumBackgroundCopyJobs_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, rgelt: *mut ::core::option::Option<IBackgroundCopyJob>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -1854,7 +1821,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumBackgroundC
             GetCount: GetCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumBackgroundCopyJobs1_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, rgelt: *mut ::windows_core::GUID, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -1904,7 +1870,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumBackgroundC
             GetCount: GetCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumBitsPeerCacheRecords_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, rgelt: *mut ::core::option::Option<IBitsPeerCacheRecord>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -1954,7 +1919,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumBitsPeerCac
             GetCount: GetCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumBitsPeers_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, rgelt: *mut ::core::option::Option<IBitsPeer>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -2004,5 +1968,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumBitsPeers_I
             GetCount: GetCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

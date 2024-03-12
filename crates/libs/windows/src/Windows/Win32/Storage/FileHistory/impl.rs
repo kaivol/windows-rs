@@ -113,7 +113,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFhConfigMgr_Imp
             QueryProtectionStatus: QueryProtectionStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -161,7 +160,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFhReassociation
             PerformReassociation: PerformReassociation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IFhScopeIterator_Impl: ::windows_core::BaseImpl {
     fn MoveToNextItem(this: &Self::This) -> ::windows_core::Result<()>;
@@ -190,7 +188,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFhScopeIterator
             GetItem: GetItem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IFhTarget_Impl: ::windows_core::BaseImpl {
     fn GetStringProperty(this: &Self::This, propertytype: FH_TARGET_PROPERTY_TYPE) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -225,5 +222,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFhTarget_Impl, 
             GetNumericalProperty: GetNumericalProperty::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

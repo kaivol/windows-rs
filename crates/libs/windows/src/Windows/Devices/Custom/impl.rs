@@ -64,5 +64,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IIOControlCode_I
             ControlCode: ControlCode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

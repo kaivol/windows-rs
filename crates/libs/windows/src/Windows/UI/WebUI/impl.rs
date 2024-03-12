@@ -21,7 +21,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActivatedEventA
             ActivatedOperation: ActivatedOperation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWebUIBackgroundTaskInstance_Impl: ::windows_core::BaseImpl {
     fn Succeeded(this: &Self::This) -> ::windows_core::Result<bool>;
@@ -50,7 +49,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebUIBackground
             SetSucceeded: SetSucceeded::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWebUINavigatedEventArgs_Impl: ::windows_core::BaseImpl {
     fn NavigatedOperation(this: &Self::This) -> ::windows_core::Result<WebUINavigatedOperation>;
@@ -75,5 +73,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebUINavigatedE
             NavigatedOperation: NavigatedOperation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

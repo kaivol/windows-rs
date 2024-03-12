@@ -40,7 +40,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumWbemClassOb
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMofCompiler_Impl: ::windows_core::BaseImpl {
     fn CompileFile(this: &Self::This, filename: &::windows_core::PCWSTR, serverandnamespace: &::windows_core::PCWSTR, user: &::windows_core::PCWSTR, authority: &::windows_core::PCWSTR, password: &::windows_core::PCWSTR, loptionflags: i32, lclassflags: i32, linstanceflags: i32, pinfo: *mut WBEM_COMPILE_STATUS_INFO) -> ::windows_core::Result<()>;
@@ -68,7 +67,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMofCompiler_Imp
             CreateBMOF: CreateBMOF::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -405,7 +403,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemDateTime_I
             SetFileTime: SetFileTime::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -444,7 +441,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemEventSourc
             Security_: Security_::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -456,7 +452,6 @@ impl ::windows_core::Iids for ISWbemLastError {
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemLastError_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ISWbemLastError {
     const VTABLE: Self::Vtable = { ISWbemLastError_Vtbl { base__: <ISWbemObject as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -495,7 +490,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemLocator_Im
             Security_: Security_::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -567,7 +561,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemMethod_Imp
             Qualifiers_: Qualifiers_::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -617,7 +610,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemMethodSet_
             Count: Count::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -661,7 +653,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemNamedValue
             Name: Name::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -743,7 +734,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemNamedValue
             DeleteAll: DeleteAll::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1033,7 +1023,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemObject_Imp
             Security_: Security_::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1082,7 +1071,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemObjectEx_I
             SetFromText_: SetFromText_::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1292,7 +1280,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemObjectPath
             SetAuthority: SetAuthority::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1364,7 +1351,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemObjectSet_
             ItemIndex: ItemIndex::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1430,7 +1416,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemPrivilege_
             Identifier: Identifier::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1512,7 +1497,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemPrivilegeS
             AddAsString: AddAsString::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1611,7 +1595,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemProperty_I
             IsArray: IsArray::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1677,7 +1660,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemPropertySe
             Remove: Remove::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1791,7 +1773,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemQualifier_
             IsAmended: IsAmended::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1857,7 +1838,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemQualifierS
             Remove: Remove::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1934,7 +1914,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemRefreshabl
             Remove: Remove::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2037,7 +2016,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemRefresher_
             DeleteAll: DeleteAll::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2097,7 +2075,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemSecurity_I
             Privileges: Privileges::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2327,7 +2304,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemServices_I
             Security_: Security_::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2360,7 +2336,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemServicesEx
             PutAsync: PutAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2379,7 +2354,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemSink_Impl,
         }
         ISWbemSink_Vtbl { base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Cancel: Cancel::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2391,7 +2365,6 @@ impl ::windows_core::Iids for ISWbemSinkEvents {
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISWbemSinkEvents_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ISWbemSinkEvents {
     const VTABLE: Self::Vtable = { ISWbemSinkEvents_Vtbl { base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUnsecuredApartment_Impl: ::windows_core::BaseImpl {
     fn CreateObjectStub(this: &Self::This, pobject: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -2415,7 +2388,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUnsecuredApartm
             CreateObjectStub: CreateObjectStub::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2465,7 +2437,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMIExtension_Im
             GetWMIServices: GetWMIServices::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemAddressResolution_Impl: ::windows_core::BaseImpl {
     fn Resolve(this: &Self::This, wsznamespacepath: &::windows_core::PCWSTR, wszaddresstype: ::windows_core::PWSTR, pdwaddresslength: *mut u32, pabbinaryaddress: *mut *mut u8) -> ::windows_core::Result<()>;
@@ -2480,7 +2451,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemAddressReso
         }
         IWbemAddressResolution_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Resolve: Resolve::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemBackupRestore_Impl: ::windows_core::BaseImpl {
     fn Backup(this: &Self::This, strbackuptofile: &::windows_core::PCWSTR, lflags: i32) -> ::windows_core::Result<()>;
@@ -2503,7 +2473,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemBackupResto
             Restore: Restore::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemBackupRestoreEx_Impl: ::windows_core::BaseImpl + IWbemBackupRestore_Impl {
     fn Pause(this: &Self::This) -> ::windows_core::Result<()>;
@@ -2526,7 +2495,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemBackupResto
             Resume: Resume::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemCallResult_Impl: ::windows_core::BaseImpl {
     fn GetResultObject(this: &Self::This, ltimeout: i32) -> ::windows_core::Result<IWbemClassObject>;
@@ -2583,7 +2551,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemCallResult_
             GetCallStatus: GetCallStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2780,7 +2747,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemClassObject
             GetMethodOrigin: GetMethodOrigin::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemClientConnectionTransport_Impl: ::windows_core::BaseImpl {
     fn Open(this: &Self::This, straddresstype: &::windows_core::BSTR, dwbinaryaddresslength: u32, abbinaryaddress: *const u8, strobject: &::windows_core::BSTR, struser: &::windows_core::BSTR, strpassword: &::windows_core::BSTR, strlocale: &::windows_core::BSTR, lflags: i32, pctx: ::core::option::Option<&IWbemContext>, riid: *const ::windows_core::GUID, pinterface: *mut *mut ::core::ffi::c_void, pcallres: *mut ::core::option::Option<IWbemCallResult>) -> ::windows_core::Result<()>;
@@ -2827,7 +2793,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemClientConne
             Cancel: Cancel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemClientTransport_Impl: ::windows_core::BaseImpl {
     fn ConnectServer(this: &Self::This, straddresstype: &::windows_core::BSTR, dwbinaryaddresslength: u32, abbinaryaddress: *const u8, strnetworkresource: &::windows_core::BSTR, struser: &::windows_core::BSTR, strpassword: &::windows_core::BSTR, strlocale: &::windows_core::BSTR, lsecurityflags: i32, strauthority: &::windows_core::BSTR, pctx: ::core::option::Option<&IWbemContext>) -> ::windows_core::Result<IWbemServices>;
@@ -2848,7 +2813,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemClientTrans
         }
         IWbemClientTransport_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ConnectServer: ConnectServer::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemConfigureRefresher_Impl: ::windows_core::BaseImpl {
     fn AddObjectByPath(this: &Self::This, pnamespace: ::core::option::Option<&IWbemServices>, wszpath: &::windows_core::PCWSTR, lflags: i32, pcontext: ::core::option::Option<&IWbemContext>, pprefreshable: *mut ::core::option::Option<IWbemClassObject>, plid: *mut i32) -> ::windows_core::Result<()>;
@@ -2886,7 +2850,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemConfigureRe
             AddEnum: AddEnum::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemConnectorLogin_Impl: ::windows_core::BaseImpl {
     fn ConnectorLogin(this: &Self::This, wsznetworkresource: &::windows_core::PCWSTR, wszpreferredlocale: &::windows_core::PCWSTR, lflags: i32, pctx: ::core::option::Option<&IWbemContext>, riid: *const ::windows_core::GUID, pinterface: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -2901,7 +2864,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemConnectorLo
         }
         IWbemConnectorLogin_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ConnectorLogin: ConnectorLogin::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemConstructClassObject_Impl: ::windows_core::BaseImpl {
     fn SetInheritanceChain(this: &Self::This, lnumantecedents: i32, awszantecedents: *const ::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -2934,7 +2896,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemConstructCl
             SetServerNamespace: SetServerNamespace::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3014,7 +2975,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemContext_Imp
             DeleteAll: DeleteAll::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemDecoupledBasicEventProvider_Impl: ::windows_core::BaseImpl + IWbemDecoupledRegistrar_Impl {
     fn GetSink(this: &Self::This, a_flags: i32, a_context: ::core::option::Option<&IWbemContext>) -> ::windows_core::Result<IWbemObjectSink>;
@@ -3049,7 +3009,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemDecoupledBa
             GetService: GetService::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemDecoupledRegistrar_Impl: ::windows_core::BaseImpl {
     fn Register(this: &Self::This, a_flags: i32, a_context: ::core::option::Option<&IWbemContext>, a_user: &::windows_core::PCWSTR, a_locale: &::windows_core::PCWSTR, a_scope: &::windows_core::PCWSTR, a_registration: &::windows_core::PCWSTR, piunknown: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -3072,7 +3031,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemDecoupledRe
             UnRegister: UnRegister::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemEventConsumerProvider_Impl: ::windows_core::BaseImpl {
     fn FindConsumer(this: &Self::This, plogicalconsumer: ::core::option::Option<&IWbemClassObject>) -> ::windows_core::Result<IWbemUnboundObjectSink>;
@@ -3093,7 +3051,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemEventConsum
         }
         IWbemEventConsumerProvider_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, FindConsumer: FindConsumer::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemEventProvider_Impl: ::windows_core::BaseImpl {
     fn ProvideEvents(this: &Self::This, psink: ::core::option::Option<&IWbemObjectSink>, lflags: i32) -> ::windows_core::Result<()>;
@@ -3108,7 +3065,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemEventProvid
         }
         IWbemEventProvider_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ProvideEvents: ProvideEvents::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemEventProviderQuerySink_Impl: ::windows_core::BaseImpl {
     fn NewQuery(this: &Self::This, dwid: u32, wszquerylanguage: *const u16, wszquery: *const u16) -> ::windows_core::Result<()>;
@@ -3131,7 +3087,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemEventProvid
             CancelQuery: CancelQuery::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemEventProviderSecurity_Impl: ::windows_core::BaseImpl {
     fn AccessCheck(this: &Self::This, wszquerylanguage: *const u16, wszquery: *const u16, lsidlength: i32, psid: *const u8) -> ::windows_core::Result<()>;
@@ -3146,7 +3101,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemEventProvid
         }
         IWbemEventProviderSecurity_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, AccessCheck: AccessCheck::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemEventSink_Impl: ::windows_core::BaseImpl + IWbemObjectSink_Impl {
     fn SetSinkSecurity(this: &Self::This, lsdlength: i32, psd: *const u8) -> ::windows_core::Result<()>;
@@ -3185,7 +3139,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemEventSink_I
             SetBatchingParameters: SetBatchingParameters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemHiPerfEnum_Impl: ::windows_core::BaseImpl {
     fn AddObjects(this: &Self::This, lflags: i32, unumobjects: u32, apids: *const i32, apobj: *const ::core::option::Option<IWbemObjectAccess>) -> ::windows_core::Result<()>;
@@ -3218,7 +3171,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemHiPerfEnum_
             RemoveAll: RemoveAll::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemHiPerfProvider_Impl: ::windows_core::BaseImpl {
     fn QueryInstances(this: &Self::This, pnamespace: ::core::option::Option<&IWbemServices>, wszclass: &::windows_core::PCWSTR, lflags: i32, pctx: ::core::option::Option<&IWbemContext>, psink: ::core::option::Option<&IWbemObjectSink>) -> ::windows_core::Result<()>;
@@ -3273,7 +3225,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemHiPerfProvi
             GetObjects: GetObjects::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemLevel1Login_Impl: ::windows_core::BaseImpl {
     fn EstablishPosition(this: &Self::This, wszlocalelist: &::windows_core::PCWSTR, dwnumlocales: u32) -> ::windows_core::Result<u32>;
@@ -3330,7 +3281,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemLevel1Login
             NTLMLogin: NTLMLogin::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemLocator_Impl: ::windows_core::BaseImpl {
     fn ConnectServer(this: &Self::This, strnetworkresource: &::windows_core::BSTR, struser: &::windows_core::BSTR, strpassword: &::windows_core::BSTR, strlocale: &::windows_core::BSTR, lsecurityflags: i32, strauthority: &::windows_core::BSTR, pctx: ::core::option::Option<&IWbemContext>) -> ::windows_core::Result<IWbemServices>;
@@ -3351,7 +3301,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemLocator_Imp
         }
         IWbemLocator_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ConnectServer: ConnectServer::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3430,7 +3379,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemObjectAcces
             Unlock: Unlock::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemObjectSink_Impl: ::windows_core::BaseImpl {
     fn Indicate(this: &Self::This, lobjectcount: i32, apobjarray: *const ::core::option::Option<IWbemClassObject>) -> ::windows_core::Result<()>;
@@ -3453,7 +3401,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemObjectSink_
             SetStatus: SetStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3507,7 +3454,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemObjectSinkE
             WriteStreamParameter: WriteStreamParameter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemObjectTextSrc_Impl: ::windows_core::BaseImpl {
     fn GetText(this: &Self::This, lflags: i32, pobj: ::core::option::Option<&IWbemClassObject>, uobjtextformat: u32, pctx: ::core::option::Option<&IWbemContext>) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -3542,7 +3488,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemObjectTextS
             CreateFromText: CreateFromText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3713,7 +3658,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemPath_Impl, 
             IsSameClassName: IsSameClassName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3792,7 +3736,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemPathKeyList
             GetText: GetText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3825,7 +3768,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemPropertyPro
             PutProperty: PutProperty::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemProviderIdentity_Impl: ::windows_core::BaseImpl {
     fn SetRegistrationObject(this: &Self::This, lflags: i32, pprovreg: ::core::option::Option<&IWbemClassObject>) -> ::windows_core::Result<()>;
@@ -3843,7 +3785,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemProviderIde
             SetRegistrationObject: SetRegistrationObject::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemProviderInit_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, wszuser: &::windows_core::PCWSTR, lflags: i32, wsznamespace: &::windows_core::PCWSTR, wszlocale: &::windows_core::PCWSTR, pnamespace: ::core::option::Option<&IWbemServices>, pctx: ::core::option::Option<&IWbemContext>, pinitsink: ::core::option::Option<&IWbemProviderInitSink>) -> ::windows_core::Result<()>;
@@ -3858,7 +3799,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemProviderIni
         }
         IWbemProviderInit_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Initialize: Initialize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemProviderInitSink_Impl: ::windows_core::BaseImpl {
     fn SetStatus(this: &Self::This, lstatus: i32, lflags: i32) -> ::windows_core::Result<()>;
@@ -3873,7 +3813,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemProviderIni
         }
         IWbemProviderInitSink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetStatus: SetStatus::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3931,7 +3870,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemQualifierSe
             EndEnumeration: EndEnumeration::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemQuery_Impl: ::windows_core::BaseImpl {
     fn Empty(this: &Self::This) -> ::windows_core::Result<()>;
@@ -3979,7 +3917,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemQuery_Impl,
             GetQueryInfo: GetQueryInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemRefresher_Impl: ::windows_core::BaseImpl {
     fn Refresh(this: &Self::This, lflags: i32) -> ::windows_core::Result<()>;
@@ -3994,7 +3931,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemRefresher_I
         }
         IWbemRefresher_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Refresh: Refresh::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemServices_Impl: ::windows_core::BaseImpl {
     fn OpenNamespace(this: &Self::This, strnamespace: &::windows_core::BSTR, lflags: WBEM_GENERIC_FLAG_TYPE, pctx: ::core::option::Option<&IWbemContext>, ppworkingnamespace: *mut ::core::option::Option<IWbemServices>, ppresult: *mut ::core::option::Option<IWbemCallResult>) -> ::windows_core::Result<()>;
@@ -4152,7 +4088,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemServices_Im
             ExecMethodAsync: ExecMethodAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemShutdown_Impl: ::windows_core::BaseImpl {
     fn Shutdown(this: &Self::This, ureason: i32, umaxmilliseconds: u32, pctx: ::core::option::Option<&IWbemContext>) -> ::windows_core::Result<()>;
@@ -4167,7 +4102,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemShutdown_Im
         }
         IWbemShutdown_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Shutdown: Shutdown::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemStatusCodeText_Impl: ::windows_core::BaseImpl {
     fn GetErrorCodeText(this: &Self::This, hres: ::windows_core::HRESULT, localeid: u32, lflags: i32) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -4202,7 +4136,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemStatusCodeT
             GetFacilityCodeText: GetFacilityCodeText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemTransport_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This) -> ::windows_core::Result<()>;
@@ -4217,7 +4150,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemTransport_I
         }
         IWbemTransport_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Initialize: Initialize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemUnboundObjectSink_Impl: ::windows_core::BaseImpl {
     fn IndicateToConsumer(this: &Self::This, plogicalconsumer: ::core::option::Option<&IWbemClassObject>, lnumobjects: i32, apobjects: *const ::core::option::Option<IWbemClassObject>) -> ::windows_core::Result<()>;
@@ -4235,7 +4167,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemUnboundObje
             IndicateToConsumer: IndicateToConsumer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWbemUnsecuredApartment_Impl: ::windows_core::BaseImpl + IUnsecuredApartment_Impl {
     fn CreateSinkStub(this: &Self::This, psink: ::core::option::Option<&IWbemObjectSink>, dwflags: u32, wszreserved: &::windows_core::PCWSTR) -> ::windows_core::Result<IWbemObjectSink>;
@@ -4256,5 +4187,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWbemUnsecuredAp
         }
         IWbemUnsecuredApartment_Vtbl { base__: <IUnsecuredApartment as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateSinkStub: CreateSinkStub::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

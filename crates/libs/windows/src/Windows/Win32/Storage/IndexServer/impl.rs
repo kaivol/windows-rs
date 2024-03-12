@@ -38,7 +38,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFilter_Impl, co
             BindRegion: BindRegion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPhraseSink_Impl: ::windows_core::BaseImpl {
     fn PutSmallPhrase(this: &Self::This, pwcnoun: &::windows_core::PCWSTR, cwcnoun: u32, pwcmodifier: &::windows_core::PCWSTR, cwcmodifier: u32, ulattachmenttype: u32) -> ::windows_core::Result<()>;
@@ -61,5 +60,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPhraseSink_Impl
             PutPhrase: PutPhrase::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

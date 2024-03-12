@@ -28,7 +28,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAccountsSetting
             ShowAddAccountForWindowAsync: ShowAddAccountForWindowAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActivationFactory_Impl: ::windows_core::BaseImpl {
     fn ActivateInstance(this: &Self::This) -> ::windows_core::Result<::windows_core::IInspectable>;
@@ -52,7 +51,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActivationFacto
             ActivateInstance: ActivateInstance::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAgileReference_Impl: ::windows_core::BaseImpl {
     fn Resolve(this: &Self::This, riid: *const ::windows_core::GUID, ppvobjectreference: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -67,7 +65,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAgileReference_
         }
         IAgileReference_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Resolve: Resolve::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IApartmentShutdown_Impl: ::windows_core::BaseImpl {
     fn OnUninitialize(this: &Self::This, ui64apartmentidentifier: u64);
@@ -82,7 +79,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IApartmentShutdo
         }
         IApartmentShutdown_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnUninitialize: OnUninitialize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppServiceConnectionExtendedExecution_Impl: ::windows_core::BaseImpl {
     fn OpenForExtendedExecutionAsync(this: &Self::This, riid: *const ::windows_core::GUID, operation: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -100,7 +96,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppServiceConne
             OpenForExtendedExecutionAsync: OpenForExtendedExecutionAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBufferByteAccess_Impl: ::windows_core::BaseImpl {
     fn Buffer(this: &Self::This) -> ::windows_core::Result<*mut u8>;
@@ -121,7 +116,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBufferByteAcces
         }
         IBufferByteAccess_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Buffer: Buffer::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICastingController_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, castingengine: ::core::option::Option<&::windows_core::IUnknown>, castingsource: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -165,7 +159,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICastingControll
             UnAdvise: UnAdvise::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICastingEventHandler_Impl: ::windows_core::BaseImpl {
     fn OnStateChanged(this: &Self::This, newstate: CASTING_CONNECTION_STATE) -> ::windows_core::Result<()>;
@@ -188,7 +181,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICastingEventHan
             OnError: OnError::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -227,7 +219,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICastingSourceIn
             GetProperties: GetProperties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICoreInputInterop_Impl: ::windows_core::BaseImpl {
     fn SetInputSource(this: &Self::This, value: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -250,7 +241,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreInputIntero
             SetMessageHandled: SetMessageHandled::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICoreWindowAdapterInterop_Impl: ::windows_core::BaseImpl {
     fn AppActivationClientAdapter(this: &Self::This) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -345,7 +335,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreWindowAdapt
             SetWindowClientAdapter: SetWindowClientAdapter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -378,7 +367,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreWindowCompo
             GetViewInstanceId: GetViewInstanceId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -411,7 +399,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreWindowInter
             SetMessageHandled: SetMessageHandled::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICorrelationVectorInformation_Impl: ::windows_core::BaseImpl {
     fn LastCorrelationVectorForThread(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -451,7 +438,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorrelationVect
             SetNextCorrelationVectorForThread: SetNextCorrelationVectorForThread::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICorrelationVectorSource_Impl: ::windows_core::BaseImpl {
     fn CorrelationVector(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -475,7 +461,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorrelationVect
             CorrelationVector: CorrelationVector::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -494,7 +479,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDragDropManager
         }
         IDragDropManagerInterop_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetForWindow: GetForWindow::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -516,7 +500,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHolographicSpac
             CreateForWindow: CreateForWindow::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -535,7 +518,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInputPaneIntero
         }
         IInputPaneInterop_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetForWindow: GetForWindow::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ILanguageExceptionErrorInfo_Impl: ::windows_core::BaseImpl {
     fn GetLanguageException(this: &Self::This) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -559,7 +541,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILanguageExcepti
             GetLanguageException: GetLanguageException::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ILanguageExceptionErrorInfo2_Impl: ::windows_core::BaseImpl + ILanguageExceptionErrorInfo_Impl {
     fn GetPreviousLanguageExceptionErrorInfo(this: &Self::This) -> ::windows_core::Result<ILanguageExceptionErrorInfo2>;
@@ -599,7 +580,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILanguageExcepti
             GetPropagationContextHead: GetPropagationContextHead::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ILanguageExceptionStackBackTrace_Impl: ::windows_core::BaseImpl {
     fn GetStackBackTrace(this: &Self::This, maxframestocapture: u32, stackbacktrace: *mut usize, framescaptured: *mut u32) -> ::windows_core::Result<()>;
@@ -617,7 +597,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILanguageExcepti
             GetStackBackTrace: GetStackBackTrace::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ILanguageExceptionTransform_Impl: ::windows_core::BaseImpl {
     fn GetTransformedRestrictedErrorInfo(this: &Self::This) -> ::windows_core::Result<IRestrictedErrorInfo>;
@@ -641,7 +620,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILanguageExcepti
             GetTransformedRestrictedErrorInfo: GetTransformedRestrictedErrorInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMemoryBufferByteAccess_Impl: ::windows_core::BaseImpl {
     fn GetBuffer(this: &Self::This, value: *mut *mut u8, capacity: *mut u32) -> ::windows_core::Result<()>;
@@ -656,7 +634,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMemoryBufferByt
         }
         IMemoryBufferByteAccess_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetBuffer: GetBuffer::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMessageDispatcher_Impl: ::windows_core::BaseImpl {
     fn PumpMessages(this: &Self::This) -> ::windows_core::Result<()>;
@@ -671,7 +648,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMessageDispatch
         }
         IMessageDispatcher_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, PumpMessages: PumpMessages::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -698,7 +674,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPlayToManagerIn
             ShowPlayToUIForWindow: ShowPlayToUIForWindow::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRestrictedErrorInfo_Impl: ::windows_core::BaseImpl {
     fn GetErrorDetails(this: &Self::This, description: *mut ::windows_core::BSTR, error: *mut ::windows_core::HRESULT, restricteddescription: *mut ::windows_core::BSTR, capabilitysid: *mut ::windows_core::BSTR) -> ::windows_core::Result<()>;
@@ -727,7 +702,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRestrictedError
             GetReference: GetReference::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -752,7 +726,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IShareWindowComm
         }
         IShareWindowCommandEventArgsInterop_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetWindow: GetWindow::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -771,7 +744,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IShareWindowComm
         }
         IShareWindowCommandSourceInterop_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetForWindow: GetForWindow::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -790,7 +762,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialInteract
         }
         ISpatialInteractionManagerInterop_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetForWindow: GetForWindow::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -809,7 +780,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISystemMediaTran
         }
         ISystemMediaTransportControlsInterop_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetForWindow: GetForWindow::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -828,7 +798,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIViewSettingsI
         }
         IUIViewSettingsInterop_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetForWindow: GetForWindow::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -850,7 +819,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUserActivityInt
             CreateSessionForWindow: CreateSessionForWindow::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -869,7 +837,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUserActivityReq
         }
         IUserActivityRequestManagerInterop_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetForWindow: GetForWindow::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUserActivitySourceHostInterop_Impl: ::windows_core::BaseImpl {
     fn SetActivitySourceHost(this: &Self::This, activitysourcehost: &::windows_core::HSTRING) -> ::windows_core::Result<()>;
@@ -887,7 +854,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUserActivitySou
             SetActivitySourceHost: SetActivitySourceHost::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -909,7 +875,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUserConsentVeri
             RequestVerificationForWindowAsync: RequestVerificationForWindowAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWeakReference_Impl: ::windows_core::BaseImpl {
     fn Resolve(this: &Self::This, riid: *const ::windows_core::GUID, objectreference: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -924,7 +889,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWeakReference_I
         }
         IWeakReference_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Resolve: Resolve::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWeakReferenceSource_Impl: ::windows_core::BaseImpl {
     fn GetWeakReference(this: &Self::This) -> ::windows_core::Result<IWeakReference>;
@@ -948,7 +912,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWeakReferenceSo
             GetWeakReference: GetWeakReference::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -975,5 +938,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebAuthenticati
             RequestTokenWithWebAccountForWindowAsync: RequestTokenWithWebAccountForWindowAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

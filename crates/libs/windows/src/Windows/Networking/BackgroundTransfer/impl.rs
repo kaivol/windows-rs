@@ -102,7 +102,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundTrans
             SetCostPolicy: SetCostPolicy::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBackgroundTransferContentPartFactory_Impl: ::windows_core::BaseImpl {
     fn CreateWithName(this: &Self::This, name: &::windows_core::HSTRING) -> ::windows_core::Result<BackgroundTransferContentPart>;
@@ -139,7 +138,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundTrans
             CreateWithNameAndFileName: CreateWithNameAndFileName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
 #[cfg(all(feature = "Foundation", feature = "Storage_Streams"))]
@@ -243,7 +241,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundTrans
             GetResponseInformation: GetResponseInformation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBackgroundTransferOperationPriority_Impl: ::windows_core::BaseImpl {
     fn Priority(this: &Self::This) -> ::windows_core::Result<BackgroundTransferPriority>;
@@ -272,5 +269,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundTrans
             SetPriority: SetPriority::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

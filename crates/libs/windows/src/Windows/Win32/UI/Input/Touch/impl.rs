@@ -402,7 +402,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInertiaProcesso
             CompleteTime: CompleteTime::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IManipulationProcessor_Impl: ::windows_core::BaseImpl {
     fn SupportedManipulations(this: &Self::This) -> ::windows_core::Result<MANIPULATION_PROCESSOR_MANIPULATIONS>;
@@ -574,7 +573,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IManipulationPro
             SetMinimumScaleRotateRadius: SetMinimumScaleRotateRadius::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait _IManipulationEvents_Impl: ::windows_core::BaseImpl {
     fn ManipulationStarted(this: &Self::This, x: f32, y: f32) -> ::windows_core::Result<()>;
@@ -619,5 +617,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: _IManipulationEv
             ManipulationCompleted: ManipulationCompleted::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

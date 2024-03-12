@@ -117,5 +117,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageItemInfo
             RemovePropertiesUpdated: RemovePropertiesUpdated::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

@@ -20,7 +20,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IComprehensiveSp
             ComprehensiveCheck: ComprehensiveCheck::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumCodePage_Impl: ::windows_core::BaseImpl {
     fn Clone(this: &Self::This, ppenum: *const ::core::option::Option<IEnumCodePage>) -> ::windows_core::Result<()>;
@@ -53,7 +52,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumCodePage_Im
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumRfc1766_Impl: ::windows_core::BaseImpl {
     fn Clone(this: &Self::This, ppenum: *const ::core::option::Option<IEnumRfc1766>) -> ::windows_core::Result<()>;
@@ -86,7 +84,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumRfc1766_Imp
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumScript_Impl: ::windows_core::BaseImpl {
     fn Clone(this: &Self::This, ppenum: *const ::core::option::Option<IEnumScript>) -> ::windows_core::Result<()>;
@@ -119,7 +116,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumScript_Impl
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumSpellingError_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, value: *mut ::core::option::Option<ISpellingError>) -> ::windows_core::HRESULT;
@@ -134,7 +130,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumSpellingErr
         }
         IEnumSpellingError_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Next: Next::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMLangCodePages_Impl: ::windows_core::BaseImpl {
     fn GetCharCodePages(this: &Self::This, chsrc: u16) -> ::windows_core::Result<u32>;
@@ -185,7 +180,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLangCodePages_
             CodePagesToCodePage: CodePagesToCodePage::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMLangConvertCharset_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, uisrccodepage: u32, uidstcodepage: u32, dwproperty: u32) -> ::windows_core::Result<()>;
@@ -251,7 +245,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLangConvertCha
             DoConversionFromUnicode: DoConversionFromUnicode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
 #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -288,7 +281,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLangFontLink_I
             ResetFontMapping: ResetFontMapping::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
 #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -346,7 +338,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLangFontLink2_
             CodePageToScriptID: CodePageToScriptID::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMLangLineBreakConsole_Impl: ::windows_core::BaseImpl {
     fn BreakLineML(this: &Self::This, psrcmlstr: ::core::option::Option<&IMLangString>, lsrcpos: i32, lsrclen: i32, cmincolumns: i32, cmaxcolumns: i32, pllinelen: *mut i32, plskiplen: *mut i32) -> ::windows_core::Result<()>;
@@ -374,7 +365,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLangLineBreakC
             BreakLineA: BreakLineA::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -411,7 +401,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLangString_Imp
             GetMLStr: GetMLStr::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -468,7 +457,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLangStringAStr
             GetLocale: GetLocale::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMLangStringBufA_Impl: ::windows_core::BaseImpl {
     fn GetStatus(this: &Self::This, plflags: *mut i32, pcchbuf: *mut i32) -> ::windows_core::Result<()>;
@@ -506,7 +494,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLangStringBufA
             Delete: Delete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMLangStringBufW_Impl: ::windows_core::BaseImpl {
     fn GetStatus(this: &Self::This, plflags: *mut i32, pcchbuf: *mut i32) -> ::windows_core::Result<()>;
@@ -544,7 +531,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLangStringBufW
             Delete: Delete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -601,7 +587,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLangStringWStr
             GetLocale: GetLocale::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMultiLanguage_Impl: ::windows_core::BaseImpl {
     fn GetNumberOfCodePageInfo(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -725,7 +710,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMultiLanguage_I
             CreateConvertCharset: CreateConvertCharset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -925,7 +909,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMultiLanguage2_
             ValidateCodePageEx: ValidateCodePageEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -952,7 +935,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMultiLanguage3_
             DetectOutboundCodePageInIStream: DetectOutboundCodePageInIStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1013,7 +995,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOptionDescripti
             Labels: Labels::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1128,7 +1109,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpellCheckProvi
             InitializeWordlist: InitializeWordlist::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -1178,7 +1158,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpellCheckProvi
             CreateSpellCheckProvider: CreateSpellCheckProvider::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1325,7 +1304,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpellChecker_Im
             ComprehensiveCheck: ComprehensiveCheck::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1344,7 +1322,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpellChecker2_I
         }
         ISpellChecker2_Vtbl { base__: <ISpellChecker as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Remove: Remove::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpellCheckerChangedEventHandler_Impl: ::windows_core::BaseImpl {
     fn Invoke(this: &Self::This, sender: ::core::option::Option<&ISpellChecker>) -> ::windows_core::Result<()>;
@@ -1359,7 +1336,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpellCheckerCha
         }
         ISpellCheckerChangedEventHandler_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Invoke: Invoke::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -1409,7 +1385,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpellCheckerFac
             CreateSpellChecker: CreateSpellChecker::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpellingError_Impl: ::windows_core::BaseImpl {
     fn StartIndex(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1466,7 +1441,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpellingError_I
             Replacement: Replacement::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUserDictionariesRegistrar_Impl: ::windows_core::BaseImpl {
     fn RegisterUserDictionary(this: &Self::This, dictionarypath: &::windows_core::PCWSTR, languagetag: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -1489,5 +1463,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUserDictionarie
             UnregisterUserDictionary: UnregisterUserDictionary::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

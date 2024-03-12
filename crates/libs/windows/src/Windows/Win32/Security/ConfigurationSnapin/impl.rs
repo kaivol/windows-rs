@@ -29,7 +29,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISceSvcAttachmen
             CloseHandle: CloseHandle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -61,5 +60,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISceSvcAttachmen
             FreeBuffer: FreeBuffer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

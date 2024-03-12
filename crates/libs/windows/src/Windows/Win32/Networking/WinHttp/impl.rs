@@ -162,7 +162,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWinHttpRequest_
             SetAutoLogonPolicy: SetAutoLogonPolicy::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -199,5 +198,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWinHttpRequestE
             OnError: OnError::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

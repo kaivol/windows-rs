@@ -25,7 +25,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFindSimilarResu
             GetNextFileId: GetNextFileId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -44,7 +43,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRdcComparator_I
         }
         IRdcComparator_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Process: Process::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -88,7 +86,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRdcFileReader_I
             GetFilePosition: GetFilePosition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -126,7 +123,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRdcFileWriter_I
             DeleteOnClose: DeleteOnClose::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -159,7 +155,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRdcGenerator_Im
             Process: Process::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRdcGeneratorFilterMaxParameters_Impl: ::windows_core::BaseImpl {
     fn GetHorizonSize(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -204,7 +199,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRdcGeneratorFil
             SetHashWindowSize: SetHashWindowSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRdcGeneratorParameters_Impl: ::windows_core::BaseImpl {
     fn GetGeneratorParametersType(this: &Self::This) -> ::windows_core::Result<GeneratorParametersType>;
@@ -249,7 +243,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRdcGeneratorPar
             Serialize: Serialize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRdcLibrary_Impl: ::windows_core::BaseImpl {
     fn ComputeDefaultRecursionDepth(this: &Self::This, filesize: u64) -> ::windows_core::Result<u32>;
@@ -333,7 +326,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRdcLibrary_Impl
             GetRDCVersion: GetRDCVersion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -366,7 +358,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRdcSignatureRea
             ReadSignatures: ReadSignatures::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRdcSimilarityGenerator_Impl: ::windows_core::BaseImpl {
     fn EnableSimilarity(this: &Self::This) -> ::windows_core::Result<()>;
@@ -395,7 +386,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRdcSimilarityGe
             Results: Results::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -471,7 +461,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISimilarity_Impl
             GetRecordCount: GetRecordCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -547,7 +536,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISimilarityFileI
             GetRecordCount: GetRecordCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISimilarityReportProgress_Impl: ::windows_core::BaseImpl {
     fn ReportProgress(this: &Self::This, percentcompleted: u32) -> ::windows_core::Result<()>;
@@ -562,7 +550,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISimilarityRepor
         }
         ISimilarityReportProgress_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ReportProgress: ReportProgress::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -581,7 +568,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISimilarityTable
         }
         ISimilarityTableDumpState_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetNextData: GetNextData::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -624,7 +610,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISimilarityTrait
             GetView: GetView::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISimilarityTraitsMapping_Impl: ::windows_core::BaseImpl {
     fn CloseMapping(this: &Self::This);
@@ -696,7 +681,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISimilarityTrait
             CreateView: CreateView::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -772,5 +756,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISimilarityTrait
             GetLastIndex: GetLastIndex::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

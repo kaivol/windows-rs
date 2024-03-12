@@ -22,7 +22,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnteredBackgrou
         }
         IEnteredBackgroundEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDeferral: GetDeferral::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -48,7 +47,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILeavingBackgrou
         }
         ILeavingBackgroundEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDeferral: GetDeferral::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPackageCatalogStatics2_Impl: ::windows_core::BaseImpl {
     fn OpenForPackage(this: &Self::This, package: ::core::option::Option<&Package>) -> ::windows_core::Result<PackageCatalog>;
@@ -73,7 +71,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPackageCatalogS
             OpenForPackage: OpenForPackage::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISuspendingDeferral_Impl: ::windows_core::BaseImpl {
     fn Complete(this: &Self::This) -> ::windows_core::Result<()>;
@@ -88,7 +85,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISuspendingDefer
         }
         ISuspendingDeferral_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Complete: Complete::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISuspendingEventArgs_Impl: ::windows_core::BaseImpl {
     fn SuspendingOperation(this: &Self::This) -> ::windows_core::Result<SuspendingOperation>;
@@ -113,7 +109,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISuspendingEvent
             SuspendingOperation: SuspendingOperation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -153,5 +148,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISuspendingOpera
             Deadline: Deadline::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

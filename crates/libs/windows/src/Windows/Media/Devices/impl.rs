@@ -32,7 +32,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDefaultAudioDev
             Role: Role::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Media_Capture\"`, `\"Media_MediaProperties\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Media_Capture", feature = "Media_MediaProperties"))]
@@ -85,5 +84,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMediaDeviceCont
             SetMediaStreamPropertiesAsync: SetMediaStreamPropertiesAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

@@ -43,7 +43,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActivatedEventA
             SplashScreen: SplashScreen::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"System\"`"]
 #[cfg(feature = "System")]
@@ -70,7 +69,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActivatedEventA
         }
         IActivatedEventArgsWithUser_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, User: User::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IApplicationViewActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
     fn CurrentlyShownApplicationViewId(this: &Self::This) -> ::windows_core::Result<i32>;
@@ -95,7 +93,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IApplicationView
             CurrentlyShownApplicationViewId: CurrentlyShownApplicationViewId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppointmentsProviderActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
     fn Verb(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -118,7 +115,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsPro
         }
         IAppointmentsProviderActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Verb: Verb::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Appointments_AppointmentsProvider\"`"]
 #[cfg(feature = "ApplicationModel_Appointments_AppointmentsProvider")]
@@ -148,7 +144,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsPro
             AddAppointmentOperation: AddAppointmentOperation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Appointments_AppointmentsProvider\"`"]
 #[cfg(feature = "ApplicationModel_Appointments_AppointmentsProvider")]
@@ -178,7 +173,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsPro
             RemoveAppointmentOperation: RemoveAppointmentOperation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Appointments_AppointmentsProvider\"`"]
 #[cfg(feature = "ApplicationModel_Appointments_AppointmentsProvider")]
@@ -208,7 +202,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsPro
             ReplaceAppointmentOperation: ReplaceAppointmentOperation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -262,7 +255,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsPro
             RoamingId: RoamingId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -302,7 +294,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppointmentsPro
             Duration: Duration::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Background\"`"]
 #[cfg(feature = "ApplicationModel_Background")]
@@ -328,7 +319,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundActiv
         }
         IBackgroundActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, TaskInstance: TaskInstance::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBarcodeScannerPreviewActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
     fn ConnectionId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -351,7 +341,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBarcodeScannerP
         }
         IBarcodeScannerPreviewActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ConnectionId: ConnectionId::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Storage_Provider\"`"]
 #[cfg(feature = "Storage_Provider")]
@@ -381,7 +370,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICachedFileUpdat
             CachedFileUpdaterUI: CachedFileUpdaterUI::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICameraSettingsActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
     fn VideoDeviceController(this: &Self::This) -> ::windows_core::Result<::windows_core::IInspectable>;
@@ -419,7 +407,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICameraSettingsA
             VideoDeviceExtension: VideoDeviceExtension::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICommandLineActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
     fn Operation(this: &Self::This) -> ::windows_core::Result<CommandLineActivationOperation>;
@@ -442,7 +429,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICommandLineActi
         }
         ICommandLineActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Operation: Operation::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IContactActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
     fn Verb(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -465,7 +451,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactActivate
         }
         IContactActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Verb: Verb::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Contacts\"`"]
 #[cfg(feature = "ApplicationModel_Contacts")]
@@ -519,7 +504,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactCallActi
             Contact: Contact::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Contacts\"`"]
 #[cfg(feature = "ApplicationModel_Contacts")]
@@ -561,7 +545,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactMapActiv
             Contact: Contact::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Contacts\"`"]
 #[cfg(feature = "ApplicationModel_Contacts")]
@@ -615,7 +598,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactMessageA
             Contact: Contact::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Contacts\"`"]
 #[cfg(feature = "ApplicationModel_Contacts")]
@@ -656,7 +638,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactPanelAct
             Contact: Contact::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Contacts_Provider\"`"]
 #[cfg(feature = "ApplicationModel_Contacts_Provider")]
@@ -686,7 +667,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactPickerAc
             ContactPickerUI: ContactPickerUI::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Contacts\"`"]
 #[cfg(feature = "ApplicationModel_Contacts")]
@@ -740,7 +720,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactPostActi
             Contact: Contact::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Contacts\"`"]
 #[cfg(feature = "ApplicationModel_Contacts")]
@@ -794,7 +773,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactVideoCal
             Contact: Contact::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IContactsProviderActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
     fn Verb(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -817,7 +795,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactsProvide
         }
         IContactsProviderActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Verb: Verb::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -847,7 +824,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContinuationAct
             ContinuationData: ContinuationData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDeviceActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
     fn DeviceInformationId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -885,7 +861,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDeviceActivated
             Verb: Verb::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Devices_Enumeration\"`"]
 #[cfg(feature = "Devices_Enumeration")]
@@ -915,7 +890,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDevicePairingAc
             DeviceInformation: DeviceInformation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDialReceiverActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + ILaunchActivatedEventArgs_Impl {
     fn AppName(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -938,7 +912,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDialReceiverAct
         }
         IDialReceiverActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, AppName: AppName::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Storage\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage"))]
@@ -980,7 +953,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileActivatedEv
             Verb: Verb::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IFileActivatedEventArgsWithCallerPackageFamilyName_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
     fn CallerPackageFamilyName(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -1006,7 +978,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileActivatedEv
             CallerPackageFamilyName: CallerPackageFamilyName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Storage_Search\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage_Search"))]
@@ -1036,7 +1007,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileActivatedEv
             NeighboringFilesQuery: NeighboringFilesQuery::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Storage_Pickers_Provider\"`"]
 #[cfg(feature = "Storage_Pickers_Provider")]
@@ -1066,7 +1036,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileOpenPickerA
             FileOpenPickerUI: FileOpenPickerUI::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IFileOpenPickerActivatedEventArgs2_Impl: ::windows_core::BaseImpl {
     fn CallerPackageFamilyName(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -1091,7 +1060,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileOpenPickerA
             CallerPackageFamilyName: CallerPackageFamilyName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Storage\"`, `\"deprecated\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage", feature = "deprecated"))]
@@ -1118,7 +1086,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileOpenPickerC
         }
         IFileOpenPickerContinuationEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Files: Files::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Storage_Pickers_Provider\"`"]
 #[cfg(feature = "Storage_Pickers_Provider")]
@@ -1148,7 +1115,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileSavePickerA
             FileSavePickerUI: FileSavePickerUI::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IFileSavePickerActivatedEventArgs2_Impl: ::windows_core::BaseImpl {
     fn CallerPackageFamilyName(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -1185,7 +1151,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileSavePickerA
             EnterpriseId: EnterpriseId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Storage\"`, `\"deprecated\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage", feature = "deprecated"))]
@@ -1212,7 +1177,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileSavePickerC
         }
         IFileSavePickerContinuationEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, File: File::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Storage\"`, `\"deprecated\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage", feature = "deprecated"))]
@@ -1239,7 +1203,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFolderPickerCon
         }
         IFolderPickerContinuationEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Folder: Folder::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ILaunchActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
     fn Arguments(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -1277,7 +1240,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILaunchActivated
             TileId: TileId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ILaunchActivatedEventArgs2_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl + ILaunchActivatedEventArgs_Impl {
     fn TileActivatedInfo(this: &Self::This) -> ::windows_core::Result<TileActivatedInfo>;
@@ -1303,7 +1265,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILaunchActivated
             TileActivatedInfo: TileActivatedInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ILockScreenActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
     fn Info(this: &Self::This) -> ::windows_core::Result<::windows_core::IInspectable>;
@@ -1326,7 +1287,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILockScreenActiv
         }
         ILockScreenActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Info: Info::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Calls\"`"]
 #[cfg(feature = "ApplicationModel_Calls")]
@@ -1353,7 +1313,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILockScreenCallA
         }
         ILockScreenCallActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CallUI: CallUI::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPhoneCallActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
     fn LineId(this: &Self::This) -> ::windows_core::Result<::windows_core::GUID>;
@@ -1375,7 +1334,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPhoneCallActiva
         }
         IPhoneCallActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, LineId: LineId::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPickerReturnedActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
     fn PickerOperationId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -1401,7 +1359,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPickerReturnedA
             PickerOperationId: PickerOperationId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPrelaunchActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
     fn PrelaunchActivated(this: &Self::This) -> ::windows_core::Result<bool>;
@@ -1426,7 +1383,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrelaunchActiva
             PrelaunchActivated: PrelaunchActivated::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Devices_Printers_Extensions\"`"]
 #[cfg(feature = "Devices_Printers_Extensions")]
@@ -1453,7 +1409,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrint3DWorkflow
         }
         IPrint3DWorkflowActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Workflow: Workflow::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Devices_Printers_Extensions\"`"]
 #[cfg(feature = "Devices_Printers_Extensions")]
@@ -1483,7 +1438,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintTaskSettin
             Configuration: Configuration::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -1510,7 +1464,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProtocolActivat
         }
         IProtocolActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Uri: Uri::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -1552,7 +1505,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProtocolActivat
             Data: Data::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"System\"`"]
 #[cfg(feature = "System")]
@@ -1582,7 +1534,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProtocolForResu
             ProtocolForResultsOperation: ProtocolForResultsOperation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRestrictedLaunchActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
     fn SharedContext(this: &Self::This) -> ::windows_core::Result<::windows_core::IInspectable>;
@@ -1608,7 +1559,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRestrictedLaunc
             SharedContext: SharedContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISearchActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
     fn QueryText(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -1646,7 +1596,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchActivated
             Language: Language::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Search\"`"]
 #[cfg(feature = "ApplicationModel_Search")]
@@ -1675,7 +1624,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchActivated
             LinguisticDetails: LinguisticDetails::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_DataTransfer_ShareTarget\"`"]
 #[cfg(feature = "ApplicationModel_DataTransfer_ShareTarget")]
@@ -1705,7 +1653,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IShareTargetActi
             ShareOperation: ShareOperation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IStartupTaskActivatedEventArgs_Impl: ::windows_core::BaseImpl + IActivatedEventArgs_Impl {
     fn TaskId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -1728,7 +1675,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStartupTaskActi
         }
         IStartupTaskActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, TaskId: TaskId::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -1770,7 +1716,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IToastNotificati
             UserInput: UserInput::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_UserDataAccounts_Provider\"`"]
 #[cfg(feature = "ApplicationModel_UserDataAccounts_Provider")]
@@ -1797,7 +1742,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUserDataAccount
         }
         IUserDataAccountProviderActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Operation: Operation::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"UI_ViewManagement\"`"]
 #[cfg(feature = "UI_ViewManagement")]
@@ -1824,7 +1768,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IViewSwitcherPro
         }
         IViewSwitcherProvider_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ViewSwitcher: ViewSwitcher::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Media_SpeechRecognition\"`"]
 #[cfg(feature = "Media_SpeechRecognition")]
@@ -1851,7 +1794,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVoiceCommandAct
         }
         IVoiceCommandActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Result: Result::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"ApplicationModel_Wallet\"`, `\"deprecated\"`"]
 #[cfg(all(feature = "ApplicationModel_Wallet", feature = "deprecated"))]
@@ -1904,7 +1846,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWalletActionAct
             ActionId: ActionId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Security_Authentication_Web_Provider\"`"]
 #[cfg(feature = "Security_Authentication_Web_Provider")]
@@ -1931,7 +1872,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebAccountProvi
         }
         IWebAccountProviderActivatedEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Operation: Operation::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Security_Authentication_Web\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Security_Authentication_Web"))]
@@ -1961,5 +1901,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebAuthenticati
             WebAuthenticationResult: WebAuthenticationResult::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

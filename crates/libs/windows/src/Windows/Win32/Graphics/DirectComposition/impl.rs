@@ -48,7 +48,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionAff
             SetSharpness2: SetSharpness2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionAnimation_Impl: ::windows_core::BaseImpl {
     fn Reset(this: &Self::This) -> ::windows_core::Result<()>;
@@ -91,7 +90,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionAni
             End: End::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -158,7 +156,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionAri
             SetCoefficient42: SetCoefficient42::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Direct2D_Common")]
@@ -177,7 +174,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionBle
         }
         IDCompositionBlendEffect_Vtbl { base__: <IDCompositionFilterEffect as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetMode: SetMode::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Direct2D_Common")]
@@ -244,7 +240,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionBri
             SetBlackPointY2: SetBlackPointY2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionClip_Impl: ::windows_core::BaseImpl {}
 impl ::windows_core::Iids for IDCompositionClip {
@@ -252,7 +247,6 @@ impl ::windows_core::Iids for IDCompositionClip {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionClip_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDCompositionClip {
     const VTABLE: Self::Vtable = { IDCompositionClip_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -294,7 +288,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionCol
             SetClampOutput: SetClampOutput::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Direct2D_Common")]
@@ -313,7 +306,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionCom
         }
         IDCompositionCompositeEffect_Vtbl { base__: <IDCompositionFilterEffect as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetMode: SetMode::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Direct2D_Common")]
@@ -362,7 +354,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionDel
             StartNewTrail: StartNewTrail::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -412,7 +403,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionDes
             CreateSurfaceFromHwnd: CreateSurfaceFromHwnd::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -675,7 +665,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionDev
             CheckDeviceState: CheckDeviceState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Dxgi_Common")]
@@ -905,7 +894,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionDev
             CreateAnimation: CreateAnimation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Dxgi_Common")]
@@ -1065,7 +1053,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionDev
             CreateAffineTransform2DEffect: CreateAffineTransform2DEffect::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionDeviceDebug_Impl: ::windows_core::BaseImpl {
     fn EnableDebugCounters(this: &Self::This) -> ::windows_core::Result<()>;
@@ -1088,7 +1075,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionDev
             DisableDebugCounters: DisableDebugCounters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionEffect_Impl: ::windows_core::BaseImpl {}
 impl ::windows_core::Iids for IDCompositionEffect {
@@ -1096,7 +1082,6 @@ impl ::windows_core::Iids for IDCompositionEffect {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionEffect_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDCompositionEffect {
     const VTABLE: Self::Vtable = { IDCompositionEffect_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionEffectGroup_Impl: ::windows_core::BaseImpl + IDCompositionEffect_Impl {
     fn SetOpacity(this: &Self::This, animation: ::core::option::Option<&IDCompositionAnimation>) -> ::windows_core::Result<()>;
@@ -1124,7 +1109,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionEff
             SetTransform3D: SetTransform3D::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionFilterEffect_Impl: ::windows_core::BaseImpl + IDCompositionEffect_Impl {
     fn SetInput(this: &Self::This, index: u32, input: ::core::option::Option<&::windows_core::IUnknown>, flags: u32) -> ::windows_core::Result<()>;
@@ -1139,7 +1123,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionFil
         }
         IDCompositionFilterEffect_Vtbl { base__: <IDCompositionEffect as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetInput: SetInput::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Direct2D_Common")]
@@ -1171,7 +1154,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionGau
             SetBorderMode: SetBorderMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionHueRotationEffect_Impl: ::windows_core::BaseImpl + IDCompositionFilterEffect_Impl {
     fn SetAngle(this: &Self::This, animation: ::core::option::Option<&IDCompositionAnimation>) -> ::windows_core::Result<()>;
@@ -1194,7 +1176,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionHue
             SetAngle2: SetAngle2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionInkTrailDevice_Impl: ::windows_core::BaseImpl {
     fn CreateDelegatedInkTrail(this: &Self::This) -> ::windows_core::Result<IDCompositionDelegatedInkTrail>;
@@ -1229,7 +1210,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionInk
             CreateDelegatedInkTrailForSwapChain: CreateDelegatedInkTrailForSwapChain::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1351,7 +1331,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionLin
             SetClampOutput: SetClampOutput::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`"]
 #[cfg(feature = "Foundation_Numerics")]
@@ -1383,7 +1362,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionMat
             SetMatrixElement2: SetMatrixElement2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`"]
 #[cfg(feature = "Foundation_Numerics")]
@@ -1415,7 +1393,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionMat
             SetMatrixElement2: SetMatrixElement2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionRectangleClip_Impl: ::windows_core::BaseImpl + IDCompositionClip_Impl {
     fn SetLeft(this: &Self::This, animation: ::core::option::Option<&IDCompositionAnimation>) -> ::windows_core::Result<()>;
@@ -1548,7 +1525,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionRec
             SetBottomRightRadiusY2: SetBottomRightRadiusY2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionRotateTransform_Impl: ::windows_core::BaseImpl + IDCompositionTransform_Impl {
     fn SetAngle(this: &Self::This, animation: ::core::option::Option<&IDCompositionAnimation>) -> ::windows_core::Result<()>;
@@ -1591,7 +1567,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionRot
             SetCenterY2: SetCenterY2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionRotateTransform3D_Impl: ::windows_core::BaseImpl + IDCompositionTransform3D_Impl {
     fn SetAngle(this: &Self::This, animation: ::core::option::Option<&IDCompositionAnimation>) -> ::windows_core::Result<()>;
@@ -1674,7 +1649,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionRot
             SetCenterZ2: SetCenterZ2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionSaturationEffect_Impl: ::windows_core::BaseImpl + IDCompositionFilterEffect_Impl {
     fn SetSaturation(this: &Self::This, animation: ::core::option::Option<&IDCompositionAnimation>) -> ::windows_core::Result<()>;
@@ -1697,7 +1671,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionSat
             SetSaturation2: SetSaturation2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionScaleTransform_Impl: ::windows_core::BaseImpl + IDCompositionTransform_Impl {
     fn SetScaleX(this: &Self::This, animation: ::core::option::Option<&IDCompositionAnimation>) -> ::windows_core::Result<()>;
@@ -1750,7 +1723,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionSca
             SetCenterY2: SetCenterY2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionScaleTransform3D_Impl: ::windows_core::BaseImpl + IDCompositionTransform3D_Impl {
     fn SetScaleX(this: &Self::This, animation: ::core::option::Option<&IDCompositionAnimation>) -> ::windows_core::Result<()>;
@@ -1823,7 +1795,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionSca
             SetCenterZ2: SetCenterZ2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Direct2D_Common")]
@@ -1895,7 +1866,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionSha
             SetAlpha2: SetAlpha2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionSkewTransform_Impl: ::windows_core::BaseImpl + IDCompositionTransform_Impl {
     fn SetAngleX(this: &Self::This, animation: ::core::option::Option<&IDCompositionAnimation>) -> ::windows_core::Result<()>;
@@ -1948,7 +1918,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionSke
             SetCenterY2: SetCenterY2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1990,7 +1959,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionSur
             Scroll: Scroll::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Dxgi_Common")]
@@ -2029,7 +1997,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionSur
             CreateVirtualSurface: CreateVirtualSurface::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2131,7 +2098,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionTab
             SetAlphaTableValue2: SetAlphaTableValue2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionTarget_Impl: ::windows_core::BaseImpl {
     fn SetRoot(this: &Self::This, visual: ::core::option::Option<&IDCompositionVisual>) -> ::windows_core::Result<()>;
@@ -2146,7 +2112,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionTar
         }
         IDCompositionTarget_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetRoot: SetRoot::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionTransform_Impl: ::windows_core::BaseImpl + IDCompositionTransform3D_Impl {}
 impl ::windows_core::Iids for IDCompositionTransform {
@@ -2154,7 +2119,6 @@ impl ::windows_core::Iids for IDCompositionTransform {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionTransform_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDCompositionTransform {
     const VTABLE: Self::Vtable = { IDCompositionTransform_Vtbl { base__: <IDCompositionTransform3D as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionTransform3D_Impl: ::windows_core::BaseImpl + IDCompositionEffect_Impl {}
 impl ::windows_core::Iids for IDCompositionTransform3D {
@@ -2162,7 +2126,6 @@ impl ::windows_core::Iids for IDCompositionTransform3D {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionTransform3D_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDCompositionTransform3D {
     const VTABLE: Self::Vtable = { IDCompositionTransform3D_Vtbl { base__: <IDCompositionEffect as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionTranslateTransform_Impl: ::windows_core::BaseImpl + IDCompositionTransform_Impl {
     fn SetOffsetX(this: &Self::This, animation: ::core::option::Option<&IDCompositionAnimation>) -> ::windows_core::Result<()>;
@@ -2195,7 +2158,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionTra
             SetOffsetY2: SetOffsetY2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDCompositionTranslateTransform3D_Impl: ::windows_core::BaseImpl + IDCompositionTransform3D_Impl {
     fn SetOffsetX(this: &Self::This, animation: ::core::option::Option<&IDCompositionAnimation>) -> ::windows_core::Result<()>;
@@ -2238,7 +2200,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionTra
             SetOffsetZ2: SetOffsetZ2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -2290,7 +2251,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionTur
             SetStitchable: SetStitchable::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2317,7 +2277,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionVir
             Trim: Trim::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -2419,7 +2378,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionVis
             SetCompositeMode: SetCompositeMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -2446,7 +2404,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionVis
             SetBackFaceVisibility: SetBackFaceVisibility::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -2503,7 +2460,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionVis
             SetVisible: SetVisible::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -2540,5 +2496,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCompositionVis
             DisableRedrawRegions: DisableRedrawRegions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

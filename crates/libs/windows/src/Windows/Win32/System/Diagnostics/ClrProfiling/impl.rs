@@ -18,7 +18,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerAsse
             AddAssemblyReference: AddAssemblyReference::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -392,7 +391,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerCall
             ExceptionCLRCatcherExecute: ExceptionCLRCatcherExecute::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -436,7 +434,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerCall
             EventPipeProviderCreated: EventPipeProviderCreated::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -458,7 +455,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerCall
             LoadAsNotificationOnly: LoadAsNotificationOnly::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -515,7 +511,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerCall
             HandleDestroyed: HandleDestroyed::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -547,7 +542,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerCall
             ProfilerDetachSucceeded: ProfilerDetachSucceeded::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -594,7 +588,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerCall
             SurvivingReferences2: SurvivingReferences2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -616,7 +609,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerCall
             ConditionalWeakTableElementReferences: ConditionalWeakTableElementReferences::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -638,7 +630,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerCall
             GetAssemblyReferences: GetAssemblyReferences::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -660,7 +651,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerCall
             ModuleInMemorySymbolsUpdated: ModuleInMemorySymbolsUpdated::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -687,7 +677,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerCall
             DynamicMethodJITCompilationFinished: DynamicMethodJITCompilationFinished::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -709,7 +698,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerCall
             DynamicMethodUnloaded: DynamicMethodUnloaded::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -741,7 +729,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerFunc
             SetILInstrumentedCodeMap: SetILInstrumentedCodeMap::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICorProfilerFunctionEnum_Impl: ::windows_core::BaseImpl {
     fn Skip(this: &Self::This, celt: u32) -> ::windows_core::Result<()>;
@@ -791,7 +778,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerFunc
             Next: Next::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_WinRT_Metadata\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_WinRT_Metadata"))]
@@ -1063,7 +1049,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerInfo
             GetILToNativeMapping: GetILToNativeMapping::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_WinRT_Metadata\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_WinRT_Metadata"))]
@@ -1110,7 +1095,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerInfo
             ResumeRuntime: ResumeRuntime::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_WinRT_Metadata\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_WinRT_Metadata"))]
@@ -1137,7 +1121,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerInfo
             SetEnvironmentVariable: SetEnvironmentVariable::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_WinRT_Metadata\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_WinRT_Metadata"))]
@@ -1207,7 +1190,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerInfo
             EventPipeWriteEvent: EventPipeWriteEvent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_WinRT_Metadata\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_WinRT_Metadata"))]
@@ -1245,7 +1227,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerInfo
             GetObjectIDFromHandle: GetObjectIDFromHandle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_WinRT_Metadata\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_WinRT_Metadata"))]
@@ -1289,7 +1270,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerInfo
             EventPipeCreateProvider2: EventPipeCreateProvider2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_WinRT_Metadata\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_WinRT_Metadata"))]
@@ -1459,7 +1439,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerInfo
             GetNotifiedExceptionClauseInfo: GetNotifiedExceptionClauseInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_WinRT_Metadata\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_WinRT_Metadata"))]
@@ -1564,7 +1543,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerInfo
             GetModuleInfo2: GetModuleInfo2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_WinRT_Metadata\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_WinRT_Metadata"))]
@@ -1649,7 +1627,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerInfo
             GetObjectSize2: GetObjectSize2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_WinRT_Metadata\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_WinRT_Metadata"))]
@@ -1676,7 +1653,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerInfo
             SetEventMask2: SetEventMask2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_WinRT_Metadata\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_WinRT_Metadata"))]
@@ -1698,7 +1674,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerInfo
             EnumNgenModuleMethodsInliningThisMethod: EnumNgenModuleMethodsInliningThisMethod::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_WinRT_Metadata\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_WinRT_Metadata"))]
@@ -1736,7 +1711,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerInfo
             ReadInMemorySymbols: ReadInMemorySymbols::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_WinRT_Metadata\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_WinRT_Metadata"))]
@@ -1774,7 +1748,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerInfo
             GetDynamicFunctionInfo: GetDynamicFunctionInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_WinRT_Metadata\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_WinRT_Metadata"))]
@@ -1806,7 +1779,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerInfo
             GetCodeInfo4: GetCodeInfo4::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICorProfilerMethodEnum_Impl: ::windows_core::BaseImpl {
     fn Skip(this: &Self::This, celt: u32) -> ::windows_core::Result<()>;
@@ -1856,7 +1828,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerMeth
             Next: Next::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICorProfilerModuleEnum_Impl: ::windows_core::BaseImpl {
     fn Skip(this: &Self::This, celt: u32) -> ::windows_core::Result<()>;
@@ -1906,7 +1877,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerModu
             Next: Next::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICorProfilerObjectEnum_Impl: ::windows_core::BaseImpl {
     fn Skip(this: &Self::This, celt: u32) -> ::windows_core::Result<()>;
@@ -1956,7 +1926,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerObje
             Next: Next::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICorProfilerThreadEnum_Impl: ::windows_core::BaseImpl {
     fn Skip(this: &Self::This, celt: u32) -> ::windows_core::Result<()>;
@@ -2006,7 +1975,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorProfilerThre
             Next: Next::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMethodMalloc_Impl: ::windows_core::BaseImpl {
     fn Alloc(this: &Self::This, cb: u32) -> *mut ::core::ffi::c_void;
@@ -2021,5 +1989,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMethodMalloc_Im
         }
         IMethodMalloc_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Alloc: Alloc::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

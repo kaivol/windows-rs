@@ -30,7 +30,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMediaEnginePlay
             SetPlaybackSource: SetPlaybackSource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMediaPlaybackSource_Impl: ::windows_core::BaseImpl {}
 impl ::windows_core::Iids for IMediaPlaybackSource {
@@ -38,5 +37,4 @@ impl ::windows_core::Iids for IMediaPlaybackSource {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMediaPlaybackSource_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IMediaPlaybackSource {
     const VTABLE: Self::Vtable = { IMediaPlaybackSource_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

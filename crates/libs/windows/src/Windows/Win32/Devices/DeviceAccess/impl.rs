@@ -29,7 +29,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICreateDeviceAcc
             GetResult: GetResult::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDeviceIoControl_Impl: ::windows_core::BaseImpl {
     fn DeviceIoControlSync(this: &Self::This, iocontrolcode: u32, inputbuffer: *const u8, inputbuffersize: u32, outputbuffer: *mut u8, outputbuffersize: u32, bytesreturned: *mut u32) -> ::windows_core::Result<()>;
@@ -57,7 +56,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDeviceIoControl
             CancelOperation: CancelOperation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDeviceRequestCompletionCallback_Impl: ::windows_core::BaseImpl {
     fn Invoke(this: &Self::This, requestresult: ::windows_core::HRESULT, bytesreturned: u32) -> ::windows_core::Result<()>;
@@ -72,5 +70,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDeviceRequestCo
         }
         IDeviceRequestCompletionCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Invoke: Invoke::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

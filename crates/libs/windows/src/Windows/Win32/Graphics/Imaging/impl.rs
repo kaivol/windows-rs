@@ -30,7 +30,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICBitmap_Impl,
             SetResolution: SetResolution::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWICBitmapClipper_Impl: ::windows_core::BaseImpl + IWICBitmapSource_Impl {
     fn Initialize(this: &Self::This, pisource: ::core::option::Option<&IWICBitmapSource>, prc: *const WICRect) -> ::windows_core::Result<()>;
@@ -45,7 +44,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICBitmapClippe
         }
         IWICBitmapClipper_Vtbl { base__: <IWICBitmapSource as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Initialize: Initialize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -158,7 +156,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICBitmapCodecI
             MatchesMimeType: MatchesMimeType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWICBitmapCodecProgressNotification_Impl: ::windows_core::BaseImpl {
     fn RegisterProgressNotification(this: &Self::This, pfnprogressnotification: PFNProgressNotification, pvdata: *const ::core::ffi::c_void, dwprogressflags: u32) -> ::windows_core::Result<()>;
@@ -176,7 +173,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICBitmapCodecP
             RegisterProgressNotification: RegisterProgressNotification::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -296,7 +292,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICBitmapDecode
             GetFrame: GetFrame::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -340,7 +335,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICBitmapDecode
             CreateInstance: CreateInstance::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com_StructuredStorage\"`"]
 #[cfg(feature = "Win32_System_Com_StructuredStorage")]
@@ -425,7 +419,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICBitmapEncode
             GetMetadataQueryWriter: GetMetadataQueryWriter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -450,7 +443,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICBitmapEncode
         }
         IWICBitmapEncoderInfo_Vtbl { base__: <IWICBitmapCodecInfo as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateInstance: CreateInstance::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWICBitmapFlipRotator_Impl: ::windows_core::BaseImpl + IWICBitmapSource_Impl {
     fn Initialize(this: &Self::This, pisource: ::core::option::Option<&IWICBitmapSource>, options: WICBitmapTransformOptions) -> ::windows_core::Result<()>;
@@ -465,7 +457,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICBitmapFlipRo
         }
         IWICBitmapFlipRotator_Vtbl { base__: <IWICBitmapSource as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Initialize: Initialize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWICBitmapFrameDecode_Impl: ::windows_core::BaseImpl + IWICBitmapSource_Impl {
     fn GetMetadataQueryReader(this: &Self::This) -> ::windows_core::Result<IWICMetadataQueryReader>;
@@ -505,7 +496,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICBitmapFrameD
             GetThumbnail: GetThumbnail::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com_StructuredStorage\"`"]
 #[cfg(feature = "Win32_System_Com_StructuredStorage")]
@@ -583,7 +573,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICBitmapFrameE
             GetMetadataQueryWriter: GetMetadataQueryWriter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWICBitmapLock_Impl: ::windows_core::BaseImpl {
     fn GetSize(this: &Self::This, puiwidth: *mut u32, puiheight: *mut u32) -> ::windows_core::Result<()>;
@@ -628,7 +617,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICBitmapLock_I
             GetPixelFormat: GetPixelFormat::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWICBitmapScaler_Impl: ::windows_core::BaseImpl + IWICBitmapSource_Impl {
     fn Initialize(this: &Self::This, pisource: ::core::option::Option<&IWICBitmapSource>, uiwidth: u32, uiheight: u32, mode: WICBitmapInterpolationMode) -> ::windows_core::Result<()>;
@@ -643,7 +631,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICBitmapScaler
         }
         IWICBitmapScaler_Vtbl { base__: <IWICBitmapSource as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Initialize: Initialize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWICBitmapSource_Impl: ::windows_core::BaseImpl {
     fn GetSize(this: &Self::This, puiwidth: *mut u32, puiheight: *mut u32) -> ::windows_core::Result<()>;
@@ -687,7 +674,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICBitmapSource
             CopyPixels: CopyPixels::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -730,7 +716,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICBitmapSource
             DoesSupportTransform: DoesSupportTransform::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWICColorContext_Impl: ::windows_core::BaseImpl {
     fn InitializeFromFilename(this: &Self::This, wzfilename: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -785,7 +770,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICColorContext
             GetExifColorSpace: GetExifColorSpace::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWICColorTransform_Impl: ::windows_core::BaseImpl + IWICBitmapSource_Impl {
     fn Initialize(this: &Self::This, pibitmapsource: ::core::option::Option<&IWICBitmapSource>, picontextsource: ::core::option::Option<&IWICColorContext>, picontextdest: ::core::option::Option<&IWICColorContext>, pixelfmtdest: *const ::windows_core::GUID) -> ::windows_core::Result<()>;
@@ -800,7 +784,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICColorTransfo
         }
         IWICColorTransform_Vtbl { base__: <IWICBitmapSource as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Initialize: Initialize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_WindowsAndMessaging"))]
@@ -894,7 +877,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICComponentFac
             CreateEncoderPropertyBag: CreateEncoderPropertyBag::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWICComponentInfo_Impl: ::windows_core::BaseImpl {
     fn GetComponentType(this: &Self::This) -> ::windows_core::Result<WICComponentType>;
@@ -971,7 +953,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICComponentInf
             GetFriendlyName: GetFriendlyName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Dxgi_Common")]
@@ -1004,7 +985,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICDdsDecoder_I
             GetFrame: GetFrame::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Dxgi_Common")]
@@ -1036,7 +1016,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICDdsEncoder_I
             CreateNewFrame: CreateNewFrame::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Dxgi_Common")]
@@ -1074,7 +1053,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICDdsFrameDeco
             CopyBlocks: CopyBlocks::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com_StructuredStorage\"`"]
 #[cfg(feature = "Win32_System_Com_StructuredStorage")]
@@ -1323,7 +1301,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICDevelopRaw_I
             SetNotificationCallback: SetNotificationCallback::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWICDevelopRawNotificationCallback_Impl: ::windows_core::BaseImpl {
     fn Notify(this: &Self::This, notificationmask: u32) -> ::windows_core::Result<()>;
@@ -1338,7 +1315,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICDevelopRawNo
         }
         IWICDevelopRawNotificationCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Notify: Notify::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -1381,7 +1357,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICEnumMetadata
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWICFastMetadataEncoder_Impl: ::windows_core::BaseImpl {
     fn Commit(this: &Self::This) -> ::windows_core::Result<()>;
@@ -1410,7 +1385,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICFastMetadata
             GetMetadataQueryWriter: GetMetadataQueryWriter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1443,7 +1417,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICFormatConver
             CanConvert: CanConvert::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWICFormatConverterInfo_Impl: ::windows_core::BaseImpl + IWICComponentInfo_Impl {
     fn GetPixelFormats(this: &Self::This, cformats: u32, ppixelformatguids: *mut ::windows_core::GUID, pcactual: *mut u32) -> ::windows_core::Result<()>;
@@ -1472,7 +1445,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICFormatConver
             CreateInstance: CreateInstance::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com", feature = "Win32_UI_WindowsAndMessaging"))]
@@ -1764,7 +1736,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICImagingFacto
             CreateQueryWriterFromReader: CreateQueryWriterFromReader::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -1837,7 +1808,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICJpegFrameDec
             CopyMinimalStream: CopyMinimalStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Dxgi_Common")]
@@ -1874,7 +1844,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICJpegFrameEnc
             WriteScan: WriteScan::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1935,7 +1904,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICMetadataBloc
             GetEnumerator: GetEnumerator::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1983,7 +1951,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICMetadataBloc
             RemoveWriterByIndex: RemoveWriterByIndex::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2059,7 +2026,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICMetadataHand
             DoesRequireFixedSize: DoesRequireFixedSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -2108,7 +2074,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICMetadataQuer
             GetEnumerator: GetEnumerator::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -2135,7 +2100,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICMetadataQuer
             RemoveMetadataByName: RemoveMetadataByName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -2206,7 +2170,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICMetadataRead
             GetEnumerator: GetEnumerator::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -2250,7 +2213,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICMetadataRead
             CreateInstance: CreateInstance::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -2287,7 +2249,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICMetadataWrit
             RemoveValueByIndex: RemoveValueByIndex::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2320,7 +2281,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICMetadataWrit
             CreateInstance: CreateInstance::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2417,7 +2377,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICPalette_Impl
             HasAlpha: HasAlpha::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -2444,7 +2403,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICPersistStrea
             SaveEx: SaveEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWICPixelFormatInfo_Impl: ::windows_core::BaseImpl + IWICComponentInfo_Impl {
     fn GetFormatGUID(this: &Self::This) -> ::windows_core::Result<::windows_core::GUID>;
@@ -2506,7 +2464,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICPixelFormatI
             GetChannelMask: GetChannelMask::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2545,7 +2502,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICPixelFormatI
             GetNumericRepresentation: GetNumericRepresentation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWICPlanarBitmapFrameEncode_Impl: ::windows_core::BaseImpl {
     fn WritePixels(this: &Self::This, linecount: u32, pplanes: *const WICBitmapPlane, cplanes: u32) -> ::windows_core::Result<()>;
@@ -2568,7 +2524,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICPlanarBitmap
             WriteSource: WriteSource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2595,7 +2550,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICPlanarBitmap
             CopyPixels: CopyPixels::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2628,7 +2582,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICPlanarFormat
             CanConvert: CanConvert::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWICProgressCallback_Impl: ::windows_core::BaseImpl {
     fn Notify(this: &Self::This, uframenum: u32, operation: WICProgressOperation, dblprogress: f64) -> ::windows_core::Result<()>;
@@ -2643,7 +2596,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICProgressCall
         }
         IWICProgressCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Notify: Notify::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWICProgressiveLevelControl_Impl: ::windows_core::BaseImpl {
     fn GetLevelCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -2683,7 +2635,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICProgressiveL
             SetCurrentLevel: SetCurrentLevel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -2720,7 +2671,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICStream_Impl,
             InitializeFromIStreamRegion: InitializeFromIStreamRegion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -2775,5 +2725,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWICStreamProvid
             RefreshStream: RefreshStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

@@ -35,7 +35,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGeometrySource2
             TryGetGeometryUsingFactory: TryGetGeometryUsingFactory::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"Graphics_Effects\"`"]
 #[cfg(all(feature = "Foundation", feature = "Graphics_Effects"))]
@@ -112,5 +111,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGraphicsEffectD
             GetSourceCount: GetSourceCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

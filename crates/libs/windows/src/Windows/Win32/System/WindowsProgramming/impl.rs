@@ -71,7 +71,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICameraUIControl
             RemoveCapturedItem: RemoveCapturedItem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICameraUIControlEventCallback_Impl: ::windows_core::BaseImpl {
     fn OnStartupComplete(this: &Self::This);
@@ -109,7 +108,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICameraUIControl
             OnClosed: OnClosed::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IClipServiceNotificationHelper_Impl: ::windows_core::BaseImpl {
     fn ShowToast(this: &Self::This, titletext: &::windows_core::BSTR, bodytext: &::windows_core::BSTR, packagename: &::windows_core::BSTR, appid: &::windows_core::BSTR, launchcommand: &::windows_core::BSTR) -> ::windows_core::Result<()>;
@@ -124,7 +122,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IClipServiceNoti
         }
         IClipServiceNotificationHelper_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ShowToast: ShowToast::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -152,7 +149,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContainerActiva
             CanActivateClientVM: CanActivateClientVM::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -171,7 +167,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDefaultBrowserS
         }
         IDefaultBrowserSyncSettings_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, IsEnabled: IsEnabled::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDeleteBrowsingHistory_Impl: ::windows_core::BaseImpl {
     fn DeleteBrowsingHistory(this: &Self::This, dwflags: u32) -> ::windows_core::Result<()>;
@@ -189,7 +184,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDeleteBrowsingH
             DeleteBrowsingHistory: DeleteBrowsingHistory::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Ole\"`"]
 #[cfg(feature = "Win32_System_Ole")]
@@ -226,7 +220,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEditionUpgradeB
             CanUpgrade: CanUpgrade::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -286,7 +279,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEditionUpgradeH
             GetGenuineLocalStatus: GetGenuineLocalStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IFClipNotificationHelper_Impl: ::windows_core::BaseImpl {
     fn ShowSystemDialog(this: &Self::This, titletext: &::windows_core::BSTR, bodytext: &::windows_core::BSTR) -> ::windows_core::Result<()>;
@@ -304,7 +296,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFClipNotificati
             ShowSystemDialog: ShowSystemDialog::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -329,5 +320,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsLockMode
         }
         IWindowsLockModeHelper_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetSMode: GetSMode::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

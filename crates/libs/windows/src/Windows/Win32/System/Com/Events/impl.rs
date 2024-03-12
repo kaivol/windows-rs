@@ -4,7 +4,6 @@ impl ::windows_core::Iids for IDontSupportEventSubscription {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDontSupportEventSubscription_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDontSupportEventSubscription {
     const VTABLE: Self::Vtable = { IDontSupportEventSubscription_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumEventObject_Impl: ::windows_core::BaseImpl {
     fn Clone(this: &Self::This) -> ::windows_core::Result<IEnumEventObject>;
@@ -43,7 +42,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumEventObject
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -172,7 +170,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEventClass_Impl
             SetTypeLib: SetTypeLib::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -253,7 +250,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEventClass2_Imp
             SetFireInParallel: SetFireInParallel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -313,7 +309,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEventControl_Im
             SetDefaultQuery: SetDefaultQuery::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEventObjectChange_Impl: ::windows_core::BaseImpl {
     fn ChangedSubscription(this: &Self::This, changetype: EOC_ChangeType, bstrsubscriptionid: &::windows_core::BSTR) -> ::windows_core::Result<()>;
@@ -341,7 +336,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEventObjectChan
             ChangedPublisher: ChangedPublisher::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEventObjectChange2_Impl: ::windows_core::BaseImpl {
     fn ChangedSubscription(this: &Self::This, pinfo: *const COMEVENTSYSCHANGEINFO) -> ::windows_core::Result<()>;
@@ -364,7 +358,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEventObjectChan
             ChangedEventClass: ChangedEventClass::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -435,7 +428,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEventObjectColl
             Remove: Remove::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -484,7 +476,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEventProperty_I
             SetValue: SetValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -613,7 +604,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEventPublisher_
             GetDefaultPropertyCollection: GetDefaultPropertyCollection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -902,7 +892,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEventSubscripti
             SetInterfaceID: SetInterfaceID::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -967,7 +956,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEventSystem_Imp
             RemoveS: RemoveS::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -986,7 +974,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFiringControl_I
         }
         IFiringControl_Vtbl { base__: <super::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, FireSubscription: FireSubscription::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1062,7 +1049,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMultiInterfaceE
             SetFireInParallel: SetFireInParallel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMultiInterfacePublisherFilter_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, peic: ::core::option::Option<&IMultiInterfaceEventControl>) -> ::windows_core::Result<()>;
@@ -1085,7 +1071,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMultiInterfaceP
             PrepareToFire: PrepareToFire::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPublisherFilter_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, methodname: &::windows_core::BSTR, dispuserdefined: ::core::option::Option<&super::IDispatch>) -> ::windows_core::Result<()>;
@@ -1108,5 +1093,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPublisherFilter
             PrepareToFire: PrepareToFire::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

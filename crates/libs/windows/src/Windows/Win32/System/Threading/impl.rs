@@ -19,7 +19,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRtwqAsyncCallba
             Invoke: Invoke::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRtwqAsyncResult_Impl: ::windows_core::BaseImpl {
     fn GetState(this: &Self::This) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -69,7 +68,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRtwqAsyncResult
             GetStateNoAddRef: GetStateNoAddRef::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRtwqPlatformEvents_Impl: ::windows_core::BaseImpl {
     fn InitializationComplete(this: &Self::This) -> ::windows_core::Result<()>;
@@ -97,7 +95,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRtwqPlatformEve
             ShutdownComplete: ShutdownComplete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait RTWQASYNCRESULT_Impl: ::windows_core::BaseImpl + IRtwqAsyncResult_Impl {}
 impl ::windows_core::Iids for RTWQASYNCRESULT {
@@ -105,5 +102,4 @@ impl ::windows_core::Iids for RTWQASYNCRESULT {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: RTWQASYNCRESULT_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for RTWQASYNCRESULT {
     const VTABLE: Self::Vtable = { RTWQASYNCRESULT_Vtbl { base__: <IRtwqAsyncResult as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

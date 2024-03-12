@@ -4,5 +4,4 @@ impl ::windows_core::Iids for IGeometrySource2D {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGeometrySource2D_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IGeometrySource2D {
     const VTABLE: Self::Vtable = { IGeometrySource2D_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

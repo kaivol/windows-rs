@@ -14,7 +14,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectManipulat
             SetConfiguration: SetConfiguration::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectManipulationCompositor_Impl: ::windows_core::BaseImpl {
     fn AddContent(this: &Self::This, content: ::core::option::Option<&IDirectManipulationContent>, device: ::core::option::Option<&::windows_core::IUnknown>, parentvisual: ::core::option::Option<&::windows_core::IUnknown>, childvisual: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -47,7 +46,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectManipulat
             Flush: Flush::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectManipulationCompositor2_Impl: ::windows_core::BaseImpl + IDirectManipulationCompositor_Impl {
     fn AddContentWithCrossProcessChaining(this: &Self::This, content: ::core::option::Option<&IDirectManipulationPrimaryContent>, device: ::core::option::Option<&::windows_core::IUnknown>, parentvisual: ::core::option::Option<&::windows_core::IUnknown>, childvisual: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -65,7 +63,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectManipulat
             AddContentWithCrossProcessChaining: AddContentWithCrossProcessChaining::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -128,7 +125,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectManipulat
             SyncContentTransform: SyncContentTransform::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectManipulationDeferContactService_Impl: ::windows_core::BaseImpl {
     fn DeferContact(this: &Self::This, pointerid: u32, timeout: u32) -> ::windows_core::Result<()>;
@@ -156,7 +152,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectManipulat
             CancelDeferral: CancelDeferral::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectManipulationDragDropBehavior_Impl: ::windows_core::BaseImpl {
     fn SetConfiguration(this: &Self::This, configuration: DIRECTMANIPULATION_DRAG_DROP_CONFIGURATION) -> ::windows_core::Result<()>;
@@ -185,7 +180,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectManipulat
             GetStatus: GetStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectManipulationDragDropEventHandler_Impl: ::windows_core::BaseImpl {
     fn OnDragDropStatusChange(this: &Self::This, viewport: ::core::option::Option<&IDirectManipulationViewport2>, current: DIRECTMANIPULATION_DRAG_DROP_STATUS, previous: DIRECTMANIPULATION_DRAG_DROP_STATUS) -> ::windows_core::Result<()>;
@@ -203,7 +197,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectManipulat
             OnDragDropStatusChange: OnDragDropStatusChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectManipulationFrameInfoProvider_Impl: ::windows_core::BaseImpl {
     fn GetNextFrameInfo(this: &Self::This, time: *mut u64, processtime: *mut u64, compositiontime: *mut u64) -> ::windows_core::Result<()>;
@@ -221,7 +214,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectManipulat
             GetNextFrameInfo: GetNextFrameInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectManipulationInteractionEventHandler_Impl: ::windows_core::BaseImpl {
     fn OnInteraction(this: &Self::This, viewport: ::core::option::Option<&IDirectManipulationViewport2>, interaction: DIRECTMANIPULATION_INTERACTION_TYPE) -> ::windows_core::Result<()>;
@@ -236,7 +228,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectManipulat
         }
         IDirectManipulationInteractionEventHandler_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnInteraction: OnInteraction::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
@@ -294,7 +285,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectManipulat
             CreateContent: CreateContent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
@@ -316,7 +306,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectManipulat
             CreateBehavior: CreateBehavior::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
@@ -335,7 +324,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectManipulat
         }
         IDirectManipulationManager3_Vtbl { base__: <IDirectManipulationManager2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetService: GetService::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectManipulationPrimaryContent_Impl: ::windows_core::BaseImpl {
     fn SetSnapInterval(this: &Self::This, motion: DIRECTMANIPULATION_MOTION_TYPES, interval: f32, offset: f32) -> ::windows_core::Result<()>;
@@ -393,7 +381,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectManipulat
             GetCenterPoint: GetCenterPoint::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectManipulationUpdateHandler_Impl: ::windows_core::BaseImpl {
     fn Update(this: &Self::This) -> ::windows_core::Result<()>;
@@ -408,7 +395,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectManipulat
         }
         IDirectManipulationUpdateHandler_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Update: Update::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -446,7 +432,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectManipulat
             Update: Update::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -621,7 +606,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectManipulat
             Abandon: Abandon::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -659,7 +643,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectManipulat
             RemoveAllBehaviors: RemoveAllBehaviors::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectManipulationViewportEventHandler_Impl: ::windows_core::BaseImpl {
     fn OnViewportStatusChanged(this: &Self::This, viewport: ::core::option::Option<&IDirectManipulationViewport>, current: DIRECTMANIPULATION_STATUS, previous: DIRECTMANIPULATION_STATUS) -> ::windows_core::Result<()>;
@@ -687,5 +670,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectManipulat
             OnContentUpdated: OnContentUpdated::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

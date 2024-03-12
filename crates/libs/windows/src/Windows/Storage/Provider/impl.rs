@@ -25,7 +25,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageProvider
             GetItemProperties: GetItemProperties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IStorageProviderPropertyCapabilities_Impl: ::windows_core::BaseImpl {
     fn IsPropertySupported(this: &Self::This, propertycanonicalname: &::windows_core::HSTRING) -> ::windows_core::Result<bool>;
@@ -49,7 +48,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageProvider
             IsPropertySupported: IsPropertySupported::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -94,7 +92,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageProvider
             RemoveStatusUIChanged: RemoveStatusUIChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IStorageProviderStatusUISourceFactory_Impl: ::windows_core::BaseImpl {
     fn GetStatusUISource(this: &Self::This, syncrootid: &::windows_core::HSTRING) -> ::windows_core::Result<IStorageProviderStatusUISource>;
@@ -119,7 +116,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageProvider
             GetStatusUISource: GetStatusUISource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -188,7 +184,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageProvider
             Invoke: Invoke::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IStorageProviderUriSource_Impl: ::windows_core::BaseImpl {
     fn GetPathForContentUri(this: &Self::This, contenturi: &::windows_core::HSTRING, result: ::core::option::Option<&StorageProviderGetPathForContentUriResult>) -> ::windows_core::Result<()>;
@@ -211,5 +206,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageProvider
             GetContentInfoForPath: GetContentInfoForPath::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

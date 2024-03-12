@@ -29,7 +29,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreApplication
             RemoveUnhandledErrorDetected: RemoveUnhandledErrorDetected::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"UI_Core\"`"]
 #[cfg(feature = "UI_Core")]
@@ -71,7 +70,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFrameworkView_I
             Uninitialize: Uninitialize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IFrameworkViewSource_Impl: ::windows_core::BaseImpl {
     fn CreateView(this: &Self::This) -> ::windows_core::Result<IFrameworkView>;
@@ -93,5 +91,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFrameworkViewSo
         }
         IFrameworkViewSource_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateView: CreateView::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

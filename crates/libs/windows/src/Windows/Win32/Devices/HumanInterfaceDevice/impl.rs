@@ -15,7 +15,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInput2A_I
         }
         IDirectInput2A_Vtbl { base__: <IDirectInputA as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, FindDevice: FindDevice::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -34,7 +33,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInput2W_I
         }
         IDirectInput2W_Vtbl { base__: <IDirectInputW as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, FindDevice: FindDevice::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -53,7 +51,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInput7A_I
         }
         IDirectInput7A_Vtbl { base__: <IDirectInput2A as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateDeviceEx: CreateDeviceEx::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -72,7 +69,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInput7W_I
         }
         IDirectInput7W_Vtbl { base__: <IDirectInput2W as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateDeviceEx: CreateDeviceEx::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -129,7 +125,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInput8A_I
             ConfigureDevices: ConfigureDevices::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -186,7 +181,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInput8W_I
             ConfigureDevices: ConfigureDevices::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -228,7 +222,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInputA_Im
             Initialize: Initialize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -290,7 +283,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInputDevi
             SendDeviceData: SendDeviceData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -352,7 +344,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInputDevi
             SendDeviceData: SendDeviceData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -379,7 +370,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInputDevi
             WriteEffectToFile: WriteEffectToFile::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -406,7 +396,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInputDevi
             WriteEffectToFile: WriteEffectToFile::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -568,7 +557,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInputDevi
             GetImageInfo: GetImageInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -730,7 +718,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInputDevi
             GetImageInfo: GetImageInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -822,7 +809,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInputDevi
             Initialize: Initialize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -914,7 +900,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInputDevi
             Initialize: Initialize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -981,7 +966,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInputEffe
             Escape: Escape::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectInputEffectDriver_Impl: ::windows_core::BaseImpl {
     fn DeviceID(this: &Self::This, param0: u32, param1: u32, param2: u32, param3: u32, param4: *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -1049,7 +1033,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInputEffe
             GetEffectStatus: GetEffectStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Registry\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Registry"))]
@@ -1146,7 +1129,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInputJoyC
             OpenConfigKey: OpenConfigKey::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Registry\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Registry"))]
@@ -1243,7 +1225,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInputJoyC
             OpenAppStatusKey: OpenAppStatusKey::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1285,5 +1266,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectInputW_Im
             Initialize: Initialize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

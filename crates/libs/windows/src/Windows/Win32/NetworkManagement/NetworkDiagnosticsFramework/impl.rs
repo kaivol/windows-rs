@@ -18,7 +18,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INetDiagExtensib
             ResolveAttributes: ResolveAttributes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -143,7 +142,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INetDiagHelper_I
             Cleanup: Cleanup::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -175,7 +173,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INetDiagHelperEx
             ReproduceFailure: ReproduceFailure::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait INetDiagHelperInfo_Impl: ::windows_core::BaseImpl {
     fn GetAttributeInfo(this: &Self::This, pcelt: *mut u32, pprgattributeinfos: *mut *mut HelperAttributeInfo) -> ::windows_core::Result<()>;
@@ -193,7 +190,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INetDiagHelperIn
             GetAttributeInfo: GetAttributeInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait INetDiagHelperUtilFactory_Impl: ::windows_core::BaseImpl {
     fn CreateUtilityInstance(this: &Self::This, riid: *const ::windows_core::GUID, ppvobject: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -211,5 +207,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INetDiagHelperUt
             CreateUtilityInstance: CreateUtilityInstance::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

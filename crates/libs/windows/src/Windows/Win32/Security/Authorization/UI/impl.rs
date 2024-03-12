@@ -18,7 +18,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEffectivePermis
             GetEffectivePermission: GetEffectivePermission::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -91,7 +90,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEffectivePermis
             ComputeEffectivePermissionWithSecondarySecurity: ComputeEffectivePermissionWithSecondarySecurity::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_Controls\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_Controls"))]
@@ -143,7 +141,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISecurityInforma
             PropertySheetPageCallback: PropertySheetPageCallback::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -176,7 +173,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISecurityInforma
             LookupSids: LookupSids::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -209,7 +205,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISecurityInforma
             OpenElevatedEditor: OpenElevatedEditor::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -231,7 +226,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISecurityInforma
             GetSecondarySecurity: GetSecondarySecurity::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISecurityObjectTypeInfo_Impl: ::windows_core::BaseImpl {
     fn GetInheritSource(this: &Self::This, si: u32, pacl: *mut super::super::ACL, ppinheritarray: *mut *mut super::INHERITED_FROMA) -> ::windows_core::Result<()>;
@@ -249,5 +243,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISecurityObjectT
             GetInheritSource: GetInheritSource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

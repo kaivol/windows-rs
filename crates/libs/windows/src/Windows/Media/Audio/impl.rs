@@ -41,7 +41,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioInputNode_
             RemoveOutgoingConnection: RemoveOutgoingConnection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Media_Effects\"`, `\"Media_MediaProperties\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Media_Effects", feature = "Media_MediaProperties"))]
@@ -68,7 +67,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioInputNode2
         }
         IAudioInputNode2_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Emitter: Emitter::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Media_Effects\"`, `\"Media_MediaProperties\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Media_Effects", feature = "Media_MediaProperties"))]
@@ -167,7 +165,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioNode_Impl,
             EnableEffectsByDefinition: EnableEffectsByDefinition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Media_Effects\"`, `\"Media_MediaProperties\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Media_Effects", feature = "Media_MediaProperties"))]
@@ -202,5 +199,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioNodeWithLi
             Listener: Listener::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

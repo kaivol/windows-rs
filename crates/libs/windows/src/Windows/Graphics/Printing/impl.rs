@@ -4,7 +4,6 @@ impl ::windows_core::Iids for IPrintDocumentSource {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintDocumentSource_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IPrintDocumentSource {
     const VTABLE: Self::Vtable = { IPrintDocumentSource_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -32,7 +31,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintTaskOption
             GetPageDescription: GetPageDescription::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPrintTaskOptionsCoreProperties_Impl: ::windows_core::BaseImpl {
     fn SetMediaSize(this: &Self::This, value: PrintMediaSize) -> ::windows_core::Result<()>;
@@ -243,7 +241,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintTaskOption
             NumberOfCopies: NumberOfCopies::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -272,5 +269,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintTaskOption
             DisplayedOptions: DisplayedOptions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

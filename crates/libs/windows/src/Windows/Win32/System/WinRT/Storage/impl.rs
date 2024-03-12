@@ -11,7 +11,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOplockBreakingH
         }
         IOplockBreakingHandler_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OplockBreaking: OplockBreaking::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRandomAccessStreamFileAccessMode_Impl: ::windows_core::BaseImpl {
     fn GetMode(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -32,7 +31,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRandomAccessStr
         }
         IRandomAccessStreamFileAccessMode_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetMode: GetMode::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -57,7 +55,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageFolderHa
         }
         IStorageFolderHandleAccess_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Create: Create::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -82,7 +79,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageItemHand
         }
         IStorageItemHandleAccess_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Create: Create::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUnbufferedFileHandleOplockCallback_Impl: ::windows_core::BaseImpl {
     fn OnBrokenCallback(this: &Self::This) -> ::windows_core::Result<()>;
@@ -100,7 +96,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUnbufferedFileH
             OnBrokenCallback: OnBrokenCallback::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUnbufferedFileHandleProvider_Impl: ::windows_core::BaseImpl {
     fn OpenUnbufferedFileHandle(this: &Self::This, oplockbreakcallback: ::core::option::Option<&IUnbufferedFileHandleOplockCallback>) -> ::windows_core::Result<usize>;
@@ -129,5 +124,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUnbufferedFileH
             CloseUnbufferedFileHandle: CloseUnbufferedFileHandle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

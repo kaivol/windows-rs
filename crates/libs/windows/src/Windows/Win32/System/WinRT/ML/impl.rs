@@ -24,7 +24,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILearningModelDe
             CreateFromD3D12CommandQueue: CreateFromD3D12CommandQueue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_AI_MachineLearning_WinML\"`"]
 #[cfg(feature = "Win32_AI_MachineLearning_WinML")]
@@ -49,7 +48,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILearningModelOp
         }
         ILearningModelOperatorProviderNative_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetRegistry: GetRegistry::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ILearningModelSessionOptionsNative_Impl: ::windows_core::BaseImpl {
     fn SetIntraOpNumThreadsOverride(this: &Self::This, intraopnumthreads: u32) -> ::windows_core::Result<()>;
@@ -67,7 +65,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILearningModelSe
             SetIntraOpNumThreadsOverride: SetIntraOpNumThreadsOverride::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ILearningModelSessionOptionsNative1_Impl: ::windows_core::BaseImpl {
     fn SetIntraOpThreadSpinning(this: &Self::This, allowspinning: u8) -> ::windows_core::Result<()>;
@@ -85,7 +82,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILearningModelSe
             SetIntraOpThreadSpinning: SetIntraOpThreadSpinning::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D12")]
@@ -118,7 +114,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITensorNative_Im
             GetD3D12Resource: GetD3D12Resource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D12")]
@@ -140,5 +135,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITensorStaticsNa
             CreateFromD3D12Resource: CreateFromD3D12Resource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

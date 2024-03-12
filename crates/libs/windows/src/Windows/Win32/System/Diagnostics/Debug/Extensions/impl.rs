@@ -8,7 +8,6 @@ impl ::windows_core::Iids for DebugBaseEventCallbacks {
 #[cfg(feature = "Win32_Foundation")]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: DebugBaseEventCallbacks_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for DebugBaseEventCallbacks {
     const VTABLE: Self::Vtable = { DebugBaseEventCallbacks_Vtbl { base__: <IDebugEventCallbacks as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -20,7 +19,6 @@ impl ::windows_core::Iids for DebugBaseEventCallbacksWide {
 #[cfg(feature = "Win32_Foundation")]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: DebugBaseEventCallbacksWide_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for DebugBaseEventCallbacksWide {
     const VTABLE: Self::Vtable = { DebugBaseEventCallbacksWide_Vtbl { base__: <IDebugEventCallbacksWide as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICodeAddressConcept_Impl: ::windows_core::BaseImpl {
     fn GetContainingSymbol(this: &Self::This, pcontextobject: ::core::option::Option<&IModelObject>) -> ::windows_core::Result<IDebugHostSymbol>;
@@ -44,7 +42,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICodeAddressConc
             GetContainingSymbol: GetContainingSymbol::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IComparableConcept_Impl: ::windows_core::BaseImpl {
     fn CompareObjects(this: &Self::This, contextobject: ::core::option::Option<&IModelObject>, otherobject: ::core::option::Option<&IModelObject>) -> ::windows_core::Result<i32>;
@@ -65,7 +62,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IComparableConce
         }
         IComparableConcept_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CompareObjects: CompareObjects::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDataModelConcept_Impl: ::windows_core::BaseImpl {
     fn InitializeObject(this: &Self::This, modelobject: ::core::option::Option<&IModelObject>, matchingtypesignature: ::core::option::Option<&IDebugHostTypeSignature>, wildcardmatches: ::core::option::Option<&IDebugHostSymbolEnumerator>) -> ::windows_core::Result<()>;
@@ -94,7 +90,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelConcep
             GetName: GetName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -283,7 +278,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelManage
             AcquireNamedModel: AcquireNamedModel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -322,7 +316,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelManage
             CreateTypedIntrinsicObjectEx: CreateTypedIntrinsicObjectEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDataModelNameBinder_Impl: ::windows_core::BaseImpl {
     fn BindValue(this: &Self::This, contextobject: ::core::option::Option<&IModelObject>, name: &::windows_core::PCWSTR, value: *mut ::core::option::Option<IModelObject>, metadata: *mut ::core::option::Option<IKeyStore>) -> ::windows_core::Result<()>;
@@ -367,7 +360,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelNameBi
             EnumerateReferences: EnumerateReferences::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -431,7 +423,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelScript
             InvokeMain: InvokeMain::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDataModelScriptClient_Impl: ::windows_core::BaseImpl {
     fn ReportError(this: &Self::This, errclass: ErrorClass, hrfail: ::windows_core::HRESULT, message: &::windows_core::PCWSTR, line: u32, position: u32) -> ::windows_core::Result<()>;
@@ -446,7 +437,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelScript
         }
         IDataModelScriptClient_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ReportError: ReportError::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDataModelScriptDebug_Impl: ::windows_core::BaseImpl {
     fn GetDebugState(this: &Self::This) -> ScriptDebugState;
@@ -539,7 +529,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelScript
             StopDebugging: StopDebugging::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDataModelScriptDebug2_Impl: ::windows_core::BaseImpl + IDataModelScriptDebug_Impl {
     fn SetBreakpointAtFunction(this: &Self::This, functionname: &::windows_core::PCWSTR) -> ::windows_core::Result<IDataModelScriptDebugBreakpoint>;
@@ -563,7 +552,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelScript
             SetBreakpointAtFunction: SetBreakpointAtFunction::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDataModelScriptDebugBreakpoint_Impl: ::windows_core::BaseImpl {
     fn GetId(this: &Self::This) -> u64;
@@ -606,7 +594,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelScript
             GetPosition: GetPosition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDataModelScriptDebugBreakpointEnumerator_Impl: ::windows_core::BaseImpl {
     fn Reset(this: &Self::This) -> ::windows_core::Result<()>;
@@ -635,7 +622,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelScript
             GetNext: GetNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDataModelScriptDebugClient_Impl: ::windows_core::BaseImpl {
     fn NotifyDebugEvent(this: &Self::This, peventinfo: *const ScriptDebugEventInformation, pscript: ::core::option::Option<&IDataModelScript>, peventdataobject: ::core::option::Option<&IModelObject>, resumeeventkind: *mut ScriptExecutionKind) -> ::windows_core::Result<()>;
@@ -653,7 +639,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelScript
             NotifyDebugEvent: NotifyDebugEvent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDataModelScriptDebugStack_Impl: ::windows_core::BaseImpl {
     fn GetFrameCount(this: &Self::This) -> u64;
@@ -682,7 +667,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelScript
             GetStackFrame: GetStackFrame::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDataModelScriptDebugStackFrame_Impl: ::windows_core::BaseImpl {
     fn GetName(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -760,7 +744,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelScript
             EnumerateArguments: EnumerateArguments::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDataModelScriptDebugVariableSetEnumerator_Impl: ::windows_core::BaseImpl {
     fn Reset(this: &Self::This) -> ::windows_core::Result<()>;
@@ -783,7 +766,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelScript
             GetNext: GetNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDataModelScriptHostContext_Impl: ::windows_core::BaseImpl {
     fn NotifyScriptChange(this: &Self::This, script: ::core::option::Option<&IDataModelScript>, changekind: ScriptChangeKind) -> ::windows_core::Result<()>;
@@ -812,7 +794,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelScript
             GetNamespaceObject: GetNamespaceObject::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDataModelScriptManager_Impl: ::windows_core::BaseImpl {
     fn GetDefaultNameBinder(this: &Self::This) -> ::windows_core::Result<IDataModelNameBinder>;
@@ -879,7 +860,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelScript
             EnumerateScriptProviders: EnumerateScriptProviders::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDataModelScriptProvider_Impl: ::windows_core::BaseImpl {
     fn GetName(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -947,7 +927,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelScript
             EnumerateTemplates: EnumerateTemplates::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDataModelScriptProviderEnumerator_Impl: ::windows_core::BaseImpl {
     fn Reset(this: &Self::This) -> ::windows_core::Result<()>;
@@ -976,7 +955,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelScript
             GetNext: GetNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1026,7 +1004,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelScript
             GetContent: GetContent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDataModelScriptTemplateEnumerator_Impl: ::windows_core::BaseImpl {
     fn Reset(this: &Self::This) -> ::windows_core::Result<()>;
@@ -1055,7 +1032,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataModelScript
             GetNext: GetNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugAdvanced_Impl: ::windows_core::BaseImpl {
     fn GetThreadContext(this: &Self::This, context: *mut ::core::ffi::c_void, contextsize: u32) -> ::windows_core::Result<()>;
@@ -1078,7 +1054,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugAdvanced_I
             SetThreadContext: SetThreadContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugAdvanced2_Impl: ::windows_core::BaseImpl {
     fn GetThreadContext(this: &Self::This, context: *mut ::core::ffi::c_void, contextsize: u32) -> ::windows_core::Result<()>;
@@ -1126,7 +1101,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugAdvanced2_
             GetSystemObjectInformation: GetSystemObjectInformation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugAdvanced3_Impl: ::windows_core::BaseImpl {
     fn GetThreadContext(this: &Self::This, context: *mut ::core::ffi::c_void, contextsize: u32) -> ::windows_core::Result<()>;
@@ -1189,7 +1163,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugAdvanced3_
             GetSymbolInformationWide: GetSymbolInformationWide::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugAdvanced4_Impl: ::windows_core::BaseImpl {
     fn GetThreadContext(this: &Self::This, context: *mut ::core::ffi::c_void, contextsize: u32) -> ::windows_core::Result<()>;
@@ -1257,7 +1230,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugAdvanced4_
             GetSymbolInformationWideEx: GetSymbolInformationWideEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugBreakpoint_Impl: ::windows_core::BaseImpl {
     fn GetId(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1417,7 +1389,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugBreakpoint
             GetParameters: GetParameters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugBreakpoint2_Impl: ::windows_core::BaseImpl {
     fn GetId(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1597,7 +1568,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugBreakpoint
             SetOffsetExpressionWide: SetOffsetExpressionWide::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugBreakpoint3_Impl: ::windows_core::BaseImpl {
     fn GetId(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1788,7 +1758,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugBreakpoint
             GetGuid: GetGuid::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugClient_Impl: ::windows_core::BaseImpl {
     fn AttachKernel(this: &Self::This, flags: u32, connectoptions: &::windows_core::PCSTR) -> ::windows_core::Result<()>;
@@ -2092,7 +2061,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugClient_Imp
             FlushCallbacks: FlushCallbacks::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugClient2_Impl: ::windows_core::BaseImpl {
     fn AttachKernel(this: &Self::This, flags: u32, connectoptions: &::windows_core::PCSTR) -> ::windows_core::Result<()>;
@@ -2436,7 +2404,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugClient2_Im
             AbandonCurrentProcess: AbandonCurrentProcess::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugClient3_Impl: ::windows_core::BaseImpl {
     fn AttachKernel(this: &Self::This, flags: u32, connectoptions: &::windows_core::PCSTR) -> ::windows_core::Result<()>;
@@ -2806,7 +2773,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugClient3_Im
             CreateProcessAndAttachWide: CreateProcessAndAttachWide::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugClient4_Impl: ::windows_core::BaseImpl {
     fn AttachKernel(this: &Self::This, flags: u32, connectoptions: &::windows_core::PCSTR) -> ::windows_core::Result<()>;
@@ -3212,7 +3178,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugClient4_Im
             GetDumpFileWide: GetDumpFileWide::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugClient5_Impl: ::windows_core::BaseImpl {
     fn AttachKernel(this: &Self::This, flags: u32, connectoptions: &::windows_core::PCSTR) -> ::windows_core::Result<()>;
@@ -3811,7 +3776,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugClient5_Im
             SetQuitLockStringWide: SetQuitLockStringWide::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugClient6_Impl: ::windows_core::BaseImpl {
     fn AttachKernel(this: &Self::This, flags: u32, connectoptions: &::windows_core::PCSTR) -> ::windows_core::Result<()>;
@@ -4415,7 +4379,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugClient6_Im
             SetEventContextCallbacks: SetEventContextCallbacks::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugClient7_Impl: ::windows_core::BaseImpl {
     fn AttachKernel(this: &Self::This, flags: u32, connectoptions: &::windows_core::PCSTR) -> ::windows_core::Result<()>;
@@ -5024,7 +4987,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugClient7_Im
             SetClientContext: SetClientContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugClient8_Impl: ::windows_core::BaseImpl {
     fn AttachKernel(this: &Self::This, flags: u32, connectoptions: &::windows_core::PCSTR) -> ::windows_core::Result<()>;
@@ -5638,7 +5600,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugClient8_Im
             OpenDumpFileWide2: OpenDumpFileWide2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Kernel\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Kernel"))]
@@ -6267,7 +6228,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugControl_Im
             GetLastEventInformation: GetLastEventInformation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Kernel\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Kernel"))]
@@ -6960,7 +6920,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugControl2_I
             OutputTextReplacements: OutputTextReplacements::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Kernel\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Kernel"))]
@@ -7754,7 +7713,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugControl3_I
             SetNextEventIndex: SetNextEventIndex::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Kernel\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Kernel"))]
@@ -8849,7 +8807,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugControl4_I
             ResetManagedStatus: ResetManagedStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Kernel\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Kernel"))]
@@ -9975,7 +9932,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugControl5_I
             GetBreakpointByGuid: GetBreakpointByGuid::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Kernel\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Kernel"))]
@@ -11117,7 +11073,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugControl6_I
             GetSynchronizationStatus: GetSynchronizationStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Kernel\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Kernel"))]
@@ -12264,7 +12219,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugControl7_I
             GetDebuggeeType2: GetDebuggeeType2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugDataSpaces_Impl: ::windows_core::BaseImpl {
     fn ReadVirtual(this: &Self::This, offset: u64, buffer: *mut ::core::ffi::c_void, buffersize: u32, bytesread: *mut u32) -> ::windows_core::Result<()>;
@@ -12389,7 +12343,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugDataSpaces
             ReadProcessorSystemData: ReadProcessorSystemData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Memory\"`"]
 #[cfg(feature = "Win32_System_Memory")]
@@ -12554,7 +12507,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugDataSpaces
             QueryVirtual: QueryVirtual::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Memory\"`, `\"Win32_System_SystemInformation\"`"]
 #[cfg(all(feature = "Win32_System_Memory", feature = "Win32_System_SystemInformation"))]
@@ -12750,7 +12702,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugDataSpaces
             EndEnumTagged: EndEnumTagged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Memory\"`, `\"Win32_System_SystemInformation\"`"]
 #[cfg(all(feature = "Win32_System_Memory", feature = "Win32_System_SystemInformation"))]
@@ -13008,7 +12959,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugDataSpaces
             WritePhysical2: WritePhysical2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -13103,7 +13053,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugEventCallb
             ChangeSymbolState: ChangeSymbolState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -13198,7 +13147,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugEventCallb
             ChangeSymbolState: ChangeSymbolState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -13309,7 +13257,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugEventConte
             ChangeSymbolState: ChangeSymbolState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -13446,7 +13393,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugFailureAna
             NextEntry: NextEntry::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Data_Xml_MsXml\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Data_Xml_MsXml", feature = "Win32_System_Com"))]
@@ -13590,7 +13536,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugFailureAna
             AddStructuredAnalysisData: AddStructuredAnalysisData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Data_Xml_MsXml\"`, `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Data_Xml_MsXml", feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -13843,7 +13788,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugFailureAna
             DeleteAdditionalXML: DeleteAdditionalXML::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHost_Impl: ::windows_core::BaseImpl {
     fn GetHostDefinedInterface(this: &Self::This) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -13889,7 +13833,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHost_Impl,
             GetDefaultMetadata: GetDefaultMetadata::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostBaseClass_Impl: ::windows_core::BaseImpl + IDebugHostSymbol_Impl {
     fn GetOffset(this: &Self::This) -> ::windows_core::Result<u64>;
@@ -13910,7 +13853,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostBaseCl
         }
         IDebugHostBaseClass_Vtbl { base__: <IDebugHostSymbol as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetOffset: GetOffset::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -13935,7 +13877,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostConsta
         }
         IDebugHostConstant_Vtbl { base__: <IDebugHostSymbol as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetValue: GetValue::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostContext_Impl: ::windows_core::BaseImpl {
     fn IsEqualTo(this: &Self::This, pcontext: ::core::option::Option<&IDebugHostContext>) -> ::windows_core::Result<bool>;
@@ -13956,7 +13897,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostContex
         }
         IDebugHostContext_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, IsEqualTo: IsEqualTo::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -14006,7 +13946,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostData_I
             GetValue: GetValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostErrorSink_Impl: ::windows_core::BaseImpl {
     fn ReportError(this: &Self::This, errclass: ErrorClass, hrerror: ::windows_core::HRESULT, message: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -14021,7 +13960,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostErrorS
         }
         IDebugHostErrorSink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ReportError: ReportError::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostEvaluator_Impl: ::windows_core::BaseImpl {
     fn EvaluateExpression(this: &Self::This, context: ::core::option::Option<&IDebugHostContext>, expression: &::windows_core::PCWSTR, bindingcontext: ::core::option::Option<&IModelObject>, result: *mut ::core::option::Option<IModelObject>, metadata: *mut ::core::option::Option<IKeyStore>) -> ::windows_core::Result<()>;
@@ -14044,7 +13982,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostEvalua
             EvaluateExtendedExpression: EvaluateExtendedExpression::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostEvaluator2_Impl: ::windows_core::BaseImpl + IDebugHostEvaluator_Impl {
     fn AssignTo(this: &Self::This, assignmentreference: ::core::option::Option<&IModelObject>, assignmentvalue: ::core::option::Option<&IModelObject>, assignmentresult: *mut ::core::option::Option<IModelObject>, assignmentmetadata: *mut ::core::option::Option<IKeyStore>) -> ::windows_core::Result<()>;
@@ -14059,7 +13996,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostEvalua
         }
         IDebugHostEvaluator2_Vtbl { base__: <IDebugHostEvaluator as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, AssignTo: AssignTo::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostExtensibility_Impl: ::windows_core::BaseImpl {
     fn CreateFunctionAlias(this: &Self::This, aliasname: &::windows_core::PCWSTR, functionobject: ::core::option::Option<&IModelObject>) -> ::windows_core::Result<()>;
@@ -14082,7 +14018,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostExtens
             DestroyFunctionAlias: DestroyFunctionAlias::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -14143,7 +14078,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostField_
             GetValue: GetValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostMemory_Impl: ::windows_core::BaseImpl {
     fn ReadBytes(this: &Self::This, context: ::core::option::Option<&IDebugHostContext>, location: &Location, buffer: *mut ::core::ffi::c_void, buffersize: u64, bytesread: *mut u64) -> ::windows_core::Result<()>;
@@ -14187,7 +14121,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostMemory
             GetDisplayStringForLocation: GetDisplayStringForLocation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostMemory2_Impl: ::windows_core::BaseImpl + IDebugHostMemory_Impl {
     fn LinearizeLocation(this: &Self::This, context: ::core::option::Option<&IDebugHostContext>, location: &Location) -> ::windows_core::Result<Location>;
@@ -14208,7 +14141,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostMemory
         }
         IDebugHostMemory2_Vtbl { base__: <IDebugHostMemory as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, LinearizeLocation: LinearizeLocation::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostModule_Impl: ::windows_core::BaseImpl + IDebugHostSymbol_Impl {
     fn GetImageName(this: &Self::This, allowpath: u8) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -14281,7 +14213,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostModule
             FindSymbolByName: FindSymbolByName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostModule2_Impl: ::windows_core::BaseImpl + IDebugHostModule_Impl {
     fn FindContainingSymbolByRVA(this: &Self::This, rva: u64, symbol: *mut ::core::option::Option<IDebugHostSymbol>, offset: *mut u64) -> ::windows_core::Result<()>;
@@ -14299,7 +14230,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostModule
             FindContainingSymbolByRVA: FindContainingSymbolByRVA::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostModuleSignature_Impl: ::windows_core::BaseImpl {
     fn IsMatch(this: &Self::This, pmodule: ::core::option::Option<&IDebugHostModule>) -> ::windows_core::Result<bool>;
@@ -14320,7 +14250,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostModule
         }
         IDebugHostModuleSignature_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, IsMatch: IsMatch::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostPublic_Impl: ::windows_core::BaseImpl + IDebugHostSymbol_Impl {
     fn GetLocationKind(this: &Self::This) -> ::windows_core::Result<LocationKind>;
@@ -14355,7 +14284,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostPublic
             GetLocation: GetLocation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostScriptHost_Impl: ::windows_core::BaseImpl {
     fn CreateContext(this: &Self::This, script: ::core::option::Option<&IDataModelScript>) -> ::windows_core::Result<IDataModelScriptHostContext>;
@@ -14376,7 +14304,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostScript
         }
         IDebugHostScriptHost_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateContext: CreateContext::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostStatus_Impl: ::windows_core::BaseImpl {
     fn PollUserInterrupt(this: &Self::This) -> ::windows_core::Result<bool>;
@@ -14400,7 +14327,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostStatus
             PollUserInterrupt: PollUserInterrupt::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostSymbol_Impl: ::windows_core::BaseImpl {
     fn GetContext(this: &Self::This) -> ::windows_core::Result<IDebugHostContext>;
@@ -14490,7 +14416,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostSymbol
             CompareAgainst: CompareAgainst::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostSymbol2_Impl: ::windows_core::BaseImpl + IDebugHostSymbol_Impl {
     fn GetLanguage(this: &Self::This) -> ::windows_core::Result<LanguageKind>;
@@ -14511,7 +14436,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostSymbol
         }
         IDebugHostSymbol2_Vtbl { base__: <IDebugHostSymbol as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetLanguage: GetLanguage::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostSymbolEnumerator_Impl: ::windows_core::BaseImpl {
     fn Reset(this: &Self::This) -> ::windows_core::Result<()>;
@@ -14540,7 +14464,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostSymbol
             GetNext: GetNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostSymbols_Impl: ::windows_core::BaseImpl {
     fn CreateModuleSignature(this: &Self::This, pwszmodulename: &::windows_core::PCWSTR, pwszminversion: &::windows_core::PCWSTR, pwszmaxversion: &::windows_core::PCWSTR) -> ::windows_core::Result<IDebugHostModuleSignature>;
@@ -14624,7 +14547,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostSymbol
             GetMostDerivedObject: GetMostDerivedObject::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostType_Impl: ::windows_core::BaseImpl + IDebugHostSymbol_Impl {
     fn GetTypeKind(this: &Self::This) -> ::windows_core::Result<TypeKind>;
@@ -14828,7 +14750,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostType_I
             GetGenericArgumentAt: GetGenericArgumentAt::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostType2_Impl: ::windows_core::BaseImpl + IDebugHostType_Impl {
     fn IsTypedef(this: &Self::This) -> ::windows_core::Result<bool>;
@@ -14896,7 +14817,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostType2_
             GetFunctionInstancePointerType: GetFunctionInstancePointerType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugHostTypeSignature_Impl: ::windows_core::BaseImpl {
     fn GetHashCode(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -14936,7 +14856,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHostTypeSi
             CompareAgainst: CompareAgainst::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugInputCallbacks_Impl: ::windows_core::BaseImpl {
     fn StartInput(this: &Self::This, buffersize: u32) -> ::windows_core::Result<()>;
@@ -14959,7 +14878,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugInputCallb
             EndInput: EndInput::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugOutputCallbacks_Impl: ::windows_core::BaseImpl {
     fn Output(this: &Self::This, mask: u32, text: &::windows_core::PCSTR) -> ::windows_core::Result<()>;
@@ -14974,7 +14892,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugOutputCall
         }
         IDebugOutputCallbacks_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Output: Output::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugOutputCallbacks2_Impl: ::windows_core::BaseImpl {
     fn Output(this: &Self::This, mask: u32, text: &::windows_core::PCSTR) -> ::windows_core::Result<()>;
@@ -15008,7 +14925,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugOutputCall
             Output2: Output2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugOutputCallbacksWide_Impl: ::windows_core::BaseImpl {
     fn Output(this: &Self::This, mask: u32, text: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -15023,7 +14939,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugOutputCall
         }
         IDebugOutputCallbacksWide_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Output: Output::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugOutputStream_Impl: ::windows_core::BaseImpl {
     fn Write(this: &Self::This, psz: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -15038,7 +14953,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugOutputStre
         }
         IDebugOutputStream_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Write: Write::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugPlmClient_Impl: ::windows_core::BaseImpl {
     fn LaunchPlmPackageForDebugWide(this: &Self::This, server: u64, timeout: u32, packagefullname: &::windows_core::PCWSTR, appname: &::windows_core::PCWSTR, arguments: &::windows_core::PCWSTR, processid: *mut u32, threadid: *mut u32) -> ::windows_core::Result<()>;
@@ -15056,7 +14970,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugPlmClient_
             LaunchPlmPackageForDebugWide: LaunchPlmPackageForDebugWide::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugPlmClient2_Impl: ::windows_core::BaseImpl {
     fn LaunchPlmPackageForDebugWide(this: &Self::This, server: u64, timeout: u32, packagefullname: &::windows_core::PCWSTR, appname: &::windows_core::PCWSTR, arguments: &::windows_core::PCWSTR, processid: *mut u32, threadid: *mut u32) -> ::windows_core::Result<()>;
@@ -15079,7 +14992,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugPlmClient2
             LaunchPlmBgTaskForDebugWide: LaunchPlmBgTaskForDebugWide::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugPlmClient3_Impl: ::windows_core::BaseImpl {
     fn LaunchPlmPackageForDebugWide(this: &Self::This, server: u64, timeout: u32, packagefullname: &::windows_core::PCWSTR, appname: &::windows_core::PCWSTR, arguments: &::windows_core::PCWSTR, processid: *mut u32, threadid: *mut u32) -> ::windows_core::Result<()>;
@@ -15147,7 +15059,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugPlmClient3
             ActivateAndDebugPlmBgTaskWide: ActivateAndDebugPlmBgTaskWide::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -15249,7 +15160,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugRegisters_
             GetFrameOffset: GetFrameOffset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -15468,7 +15378,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugRegisters2
             GetFrameOffset2: GetFrameOffset2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -15541,7 +15450,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugSymbolGrou
             OutputAsType: OutputAsType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -15697,7 +15605,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugSymbolGrou
             GetSymbolEntryInformation: GetSymbolEntryInformation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -16041,7 +15948,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugSymbols_Im
             GetSourceFileLineOffsets: GetSourceFileLineOffsets::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -16431,7 +16337,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugSymbols2_I
             SetTypeOptions: SetTypeOptions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -17217,7 +17122,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugSymbols3_I
             GetSourceEntryBySourceEntry: GetSourceEntryBySourceEntry::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -18038,7 +17942,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugSymbols4_I
             OutputSymbolByInlineContext: OutputSymbolByInlineContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -18875,7 +18778,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugSymbols5_I
             SetScopeFrameByIndexEx: SetScopeFrameByIndexEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugSystemObjects_Impl: ::windows_core::BaseImpl {
     fn GetEventThread(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -19171,7 +19073,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugSystemObje
             GetCurrentProcessExecutableName: GetCurrentProcessExecutableName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugSystemObjects2_Impl: ::windows_core::BaseImpl {
     fn GetEventThread(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -19510,7 +19411,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugSystemObje
             SetImplicitProcessDataOffset: SetImplicitProcessDataOffset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugSystemObjects3_Impl: ::windows_core::BaseImpl {
     fn GetEventThread(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -19924,7 +19824,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugSystemObje
             GetCurrentSystemServerName: GetCurrentSystemServerName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugSystemObjects4_Impl: ::windows_core::BaseImpl {
     fn GetEventThread(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -20348,7 +20247,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugSystemObje
             GetCurrentSystemServerNameWide: GetCurrentSystemServerNameWide::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDynamicConceptProviderConcept_Impl: ::windows_core::BaseImpl {
     fn GetConcept(this: &Self::This, contextobject: ::core::option::Option<&IModelObject>, conceptid: *const ::windows_core::GUID, conceptinterface: *mut ::core::option::Option<::windows_core::IUnknown>, conceptmetadata: *mut ::core::option::Option<IKeyStore>, hasconcept: *mut bool) -> ::windows_core::Result<()>;
@@ -20386,7 +20284,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDynamicConceptP
             NotifyDestruct: NotifyDestruct::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDynamicKeyProviderConcept_Impl: ::windows_core::BaseImpl {
     fn GetKey(this: &Self::This, contextobject: ::core::option::Option<&IModelObject>, key: &::windows_core::PCWSTR, keyvalue: *mut ::core::option::Option<IModelObject>, metadata: *mut ::core::option::Option<IKeyStore>, haskey: *mut bool) -> ::windows_core::Result<()>;
@@ -20420,7 +20317,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDynamicKeyProvi
             EnumerateKeys: EnumerateKeys::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEquatableConcept_Impl: ::windows_core::BaseImpl {
     fn AreObjectsEqual(this: &Self::This, contextobject: ::core::option::Option<&IModelObject>, otherobject: ::core::option::Option<&IModelObject>) -> ::windows_core::Result<bool>;
@@ -20444,7 +20340,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEquatableConcep
             AreObjectsEqual: AreObjectsEqual::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IHostDataModelAccess_Impl: ::windows_core::BaseImpl {
     fn GetDataModel(this: &Self::This, manager: *mut ::core::option::Option<IDataModelManager>, host: *mut ::core::option::Option<IDebugHost>) -> ::windows_core::Result<()>;
@@ -20459,7 +20354,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostDataModelAc
         }
         IHostDataModelAccess_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDataModel: GetDataModel::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IIndexableConcept_Impl: ::windows_core::BaseImpl {
     fn GetDimensionality(this: &Self::This, contextobject: ::core::option::Option<&IModelObject>) -> ::windows_core::Result<u64>;
@@ -20493,7 +20387,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IIndexableConcep
             SetAt: SetAt::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IIterableConcept_Impl: ::windows_core::BaseImpl {
     fn GetDefaultIndexDimensionality(this: &Self::This, contextobject: ::core::option::Option<&IModelObject>) -> ::windows_core::Result<u64>;
@@ -20528,7 +20421,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IIterableConcept
             GetIterator: GetIterator::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IKeyEnumerator_Impl: ::windows_core::BaseImpl {
     fn Reset(this: &Self::This) -> ::windows_core::Result<()>;
@@ -20551,7 +20443,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKeyEnumerator_I
             GetNext: GetNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IKeyStore_Impl: ::windows_core::BaseImpl {
     fn GetKey(this: &Self::This, key: &::windows_core::PCWSTR, object: *mut ::core::option::Option<IModelObject>, metadata: *mut ::core::option::Option<IKeyStore>) -> ::windows_core::Result<()>;
@@ -20589,7 +20480,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKeyStore_Impl, 
             ClearKeys: ClearKeys::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IModelIterator_Impl: ::windows_core::BaseImpl {
     fn Reset(this: &Self::This) -> ::windows_core::Result<()>;
@@ -20612,7 +20502,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IModelIterator_I
             GetNext: GetNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IModelKeyReference_Impl: ::windows_core::BaseImpl {
     fn GetKeyName(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -20678,7 +20567,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IModelKeyReferen
             SetKeyValue: SetKeyValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IModelKeyReference2_Impl: ::windows_core::BaseImpl + IModelKeyReference_Impl {
     fn OverrideContextObject(this: &Self::This, newcontextobject: ::core::option::Option<&IModelObject>) -> ::windows_core::Result<()>;
@@ -20696,7 +20584,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IModelKeyReferen
             OverrideContextObject: OverrideContextObject::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IModelMethod_Impl: ::windows_core::BaseImpl {
     fn Call(this: &Self::This, pcontextobject: ::core::option::Option<&IModelObject>, argcount: u64, pparguments: *const ::core::option::Option<IModelObject>, ppresult: *mut ::core::option::Option<IModelObject>, ppmetadata: *mut ::core::option::Option<IKeyStore>) -> ::windows_core::Result<()>;
@@ -20711,7 +20598,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IModelMethod_Imp
         }
         IModelMethod_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Call: Call::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -21001,7 +20887,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IModelObject_Imp
             IsEqualTo: IsEqualTo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IModelPropertyAccessor_Impl: ::windows_core::BaseImpl {
     fn GetValue(this: &Self::This, key: &::windows_core::PCWSTR, contextobject: ::core::option::Option<&IModelObject>) -> ::windows_core::Result<IModelObject>;
@@ -21030,7 +20915,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IModelPropertyAc
             SetValue: SetValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPreferredRuntimeTypeConcept_Impl: ::windows_core::BaseImpl {
     fn CastToPreferredRuntimeType(this: &Self::This, contextobject: ::core::option::Option<&IModelObject>) -> ::windows_core::Result<IModelObject>;
@@ -21054,7 +20938,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPreferredRuntim
             CastToPreferredRuntimeType: CastToPreferredRuntimeType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRawEnumerator_Impl: ::windows_core::BaseImpl {
     fn Reset(this: &Self::This) -> ::windows_core::Result<()>;
@@ -21077,7 +20960,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRawEnumerator_I
             GetNext: GetNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IStringDisplayableConcept_Impl: ::windows_core::BaseImpl {
     fn ToDisplayString(this: &Self::This, contextobject: ::core::option::Option<&IModelObject>, metadata: ::core::option::Option<&IKeyStore>) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -21101,5 +20983,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStringDisplayab
             ToDisplayString: ToDisplayString::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

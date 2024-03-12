@@ -158,7 +158,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageFile_Imp
             MoveAndReplaceAsync: MoveAndReplaceAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
 #[cfg(all(feature = "Foundation", feature = "Storage_Streams"))]
@@ -199,7 +198,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageFile2_Im
             OpenTransactedWriteWithOptionsAsync: OpenTransactedWriteWithOptionsAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IStorageFilePropertiesWithAvailability_Impl: ::windows_core::BaseImpl {
     fn IsAvailable(this: &Self::This) -> ::windows_core::Result<bool>;
@@ -220,7 +218,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageFileProp
         }
         IStorageFilePropertiesWithAvailability_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, IsAvailable: IsAvailable::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Storage_FileProperties\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage_FileProperties"))]
@@ -358,7 +355,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageFolder_I
             GetItemsAsyncOverloadDefaultStartAndCount: GetItemsAsyncOverloadDefaultStartAndCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -387,7 +383,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageFolder2_
             TryGetItemAsync: TryGetItemAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"Storage_FileProperties\"`"]
 #[cfg(all(feature = "Foundation", feature = "Storage_FileProperties"))]
@@ -521,7 +516,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageItem_Imp
             IsOfType: IsOfType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"Storage_FileProperties\"`"]
 #[cfg(all(feature = "Foundation", feature = "Storage_FileProperties"))]
@@ -562,7 +556,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageItem2_Im
             IsEqual: IsEqual::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"Storage_FileProperties\"`, `\"Storage_Streams\"`"]
 #[cfg(all(feature = "Foundation", feature = "Storage_FileProperties", feature = "Storage_Streams"))]
@@ -663,7 +656,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageItemProp
             Properties: Properties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"Storage_FileProperties\"`, `\"Storage_Streams\"`"]
 #[cfg(all(feature = "Foundation", feature = "Storage_FileProperties", feature = "Storage_Streams"))]
@@ -717,7 +709,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageItemProp
             GetScaledImageAsThumbnailAsync: GetScaledImageAsThumbnailAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"Storage_FileProperties\"`, `\"Storage_Streams\"`"]
 #[cfg(all(feature = "Foundation", feature = "Storage_FileProperties", feature = "Storage_Streams"))]
@@ -744,7 +735,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStorageItemProp
         }
         IStorageItemPropertiesWithProvider_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Provider: Provider::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IStreamedFileDataRequest_Impl: ::windows_core::BaseImpl {
     fn FailAndClose(this: &Self::This, failuremode: StreamedFileFailureMode) -> ::windows_core::Result<()>;
@@ -759,5 +749,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStreamedFileDat
         }
         IStreamedFileDataRequest_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, FailAndClose: FailAndClose::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

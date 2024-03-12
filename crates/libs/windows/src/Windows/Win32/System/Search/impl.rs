@@ -52,7 +52,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: DataSource_Impl,
             removeDataSourceListener: removeDataSourceListener::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait DataSourceListener_Impl: ::windows_core::BaseImpl {
     fn dataMemberChanged(this: &Self::This, bstrdm: *const u16) -> ::windows_core::Result<()>;
@@ -80,7 +79,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: DataSourceListen
             dataMemberRemoved: dataMemberRemoved::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -92,7 +90,6 @@ impl ::windows_core::Iids for DataSourceObject {
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: DataSourceObject_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for DataSourceObject {
     const VTABLE: Self::Vtable = { DataSourceObject_Vtbl { base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -129,7 +126,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAccessor_Impl, 
             ReleaseAccessor: ReleaseAccessor::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -148,7 +144,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAlterIndex_Impl
         }
         IAlterIndex_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, AlterIndex: AlterIndex::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -175,7 +170,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAlterTable_Impl
             AlterTable: AlterTable::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -194,7 +188,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBindResource_Im
         }
         IBindResource_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Bind: Bind::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IChapteredRowset_Impl: ::windows_core::BaseImpl {
     fn AddRefChapter(this: &Self::This, hchapter: usize, pcrefcount: *mut u32) -> ::windows_core::Result<()>;
@@ -217,7 +210,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IChapteredRowset
             ReleaseChapter: ReleaseChapter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_IndexServer\"`"]
 #[cfg(feature = "Win32_Storage_IndexServer")]
@@ -254,7 +246,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IColumnMapper_Im
             IsMapUpToDate: IsMapUpToDate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IColumnMapperCreator_Impl: ::windows_core::BaseImpl {
     fn GetColumnMapper(this: &Self::This, wcsmachinename: &::windows_core::PCWSTR, wcscatalogname: &::windows_core::PCWSTR) -> ::windows_core::Result<IColumnMapper>;
@@ -278,7 +269,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IColumnMapperCre
             GetColumnMapper: GetColumnMapper::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com"))]
@@ -305,7 +295,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IColumnsInfo_Imp
             MapColumnIDs: MapColumnIDs::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com"))]
@@ -327,7 +316,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IColumnsInfo2_Im
             GetRestrictedColumnInfo: GetRestrictedColumnInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -354,7 +342,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IColumnsRowset_I
             GetColumnsRowset: GetColumnsRowset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICommand_Impl: ::windows_core::BaseImpl {
     fn Cancel(this: &Self::This) -> ::windows_core::Result<()>;
@@ -388,7 +375,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICommand_Impl, c
             GetDBSession: GetDBSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICommandCost_Impl: ::windows_core::BaseImpl {
     fn GetAccumulatedCost(this: &Self::This, pwszrowsetname: &::windows_core::PCWSTR, pccostlimits: *mut u32, prgcostlimits: *mut *mut DBCOST) -> ::windows_core::Result<()>;
@@ -431,7 +417,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICommandCost_Imp
             SetCostLimits: SetCostLimits::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_IndexServer\"`"]
 #[cfg(feature = "Win32_Storage_IndexServer")]
@@ -474,7 +459,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICommandPersist_
             SaveCommand: SaveCommand::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICommandPrepare_Impl: ::windows_core::BaseImpl {
     fn Prepare(this: &Self::This, cexpectedruns: u32) -> ::windows_core::Result<()>;
@@ -497,7 +481,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICommandPrepare_
             Unprepare: Unprepare::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -524,7 +507,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICommandProperti
             SetProperties: SetProperties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICommandStream_Impl: ::windows_core::BaseImpl {
     fn GetCommandStream(this: &Self::This, piid: *mut ::windows_core::GUID, pguiddialect: *mut ::windows_core::GUID, ppcommandstream: *mut ::core::option::Option<::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -547,7 +529,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICommandStream_I
             SetCommandStream: SetCommandStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICommandText_Impl: ::windows_core::BaseImpl + ICommand_Impl {
     fn GetCommandText(this: &Self::This, pguiddialect: *mut ::windows_core::GUID, ppwszcommand: *mut ::windows_core::PWSTR) -> ::windows_core::Result<()>;
@@ -570,7 +551,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICommandText_Imp
             SetCommandText: SetCommandText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICommandValidate_Impl: ::windows_core::BaseImpl {
     fn ValidateCompletely(this: &Self::This) -> ::windows_core::Result<()>;
@@ -593,7 +573,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICommandValidate
             ValidateSyntax: ValidateSyntax::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -625,7 +604,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICommandWithPara
             SetParameterInfo: SetParameterInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Search_Common\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Search_Common", feature = "Win32_System_Variant"))]
@@ -701,7 +679,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICondition_Impl,
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Search_Common\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Search_Common", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -734,7 +711,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICondition2_Impl
             GetLeafConditionInfo: GetLeafConditionInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Search_Common\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Search_Common", feature = "Win32_System_Variant"))]
@@ -795,7 +771,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IConditionFactor
             Resolve: Resolve::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Search_Common\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_Common\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Search_Common", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_Common", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -859,7 +834,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IConditionFactor
             ResolveCondition: ResolveCondition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Search_Common\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Search_Common", feature = "Win32_System_Variant"))]
@@ -913,7 +887,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IConditionGenera
             DefaultPhrase: DefaultPhrase::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IConvertType_Impl: ::windows_core::BaseImpl {
     fn CanConvert(this: &Self::This, wfromtype: u16, wtotype: u16, dwconvertflags: u32) -> ::windows_core::Result<()>;
@@ -928,7 +901,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IConvertType_Imp
         }
         IConvertType_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CanConvert: CanConvert::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -947,7 +919,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICreateRow_Impl,
         }
         ICreateRow_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateRow: CreateRow::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDBAsynchNotify_Impl: ::windows_core::BaseImpl {
     fn OnLowResource(this: &Self::This, dwreserved: usize) -> ::windows_core::Result<()>;
@@ -975,7 +946,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDBAsynchNotify_
             OnStop: OnStop::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDBAsynchStatus_Impl: ::windows_core::BaseImpl {
     fn Abort(this: &Self::This, hchapter: usize, eoperation: u32) -> ::windows_core::Result<()>;
@@ -998,7 +968,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDBAsynchStatus_
             GetStatus: GetStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1017,7 +986,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDBBinderPropert
         }
         IDBBinderProperties_Vtbl { base__: <IDBProperties as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Reset: Reset::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDBCreateCommand_Impl: ::windows_core::BaseImpl {
     fn CreateCommand(this: &Self::This, punkouter: ::core::option::Option<&::windows_core::IUnknown>, riid: *const ::windows_core::GUID) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -1038,7 +1006,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDBCreateCommand
         }
         IDBCreateCommand_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateCommand: CreateCommand::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDBCreateSession_Impl: ::windows_core::BaseImpl {
     fn CreateSession(this: &Self::This, punkouter: ::core::option::Option<&::windows_core::IUnknown>, riid: *const ::windows_core::GUID) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -1059,7 +1026,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDBCreateSession
         }
         IDBCreateSession_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateSession: CreateSession::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1096,7 +1062,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDBDataSourceAdm
             ModifyDataSource: ModifyDataSource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1129,7 +1094,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDBInfo_Impl, co
             GetLiteralInfo: GetLiteralInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDBInitialize_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This) -> ::windows_core::Result<()>;
@@ -1152,7 +1116,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDBInitialize_Im
             Uninitialize: Uninitialize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1185,7 +1148,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDBPromptInitial
             PromptFileName: PromptFileName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1217,7 +1179,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDBProperties_Im
             SetProperties: SetProperties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDBSchemaCommand_Impl: ::windows_core::BaseImpl {
     fn GetCommand(this: &Self::This, punkouter: ::core::option::Option<&::windows_core::IUnknown>, rguidschema: *const ::windows_core::GUID) -> ::windows_core::Result<ICommand>;
@@ -1246,7 +1207,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDBSchemaCommand
             GetSchemas: GetSchemas::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1273,7 +1233,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDBSchemaRowset_
             GetSchemas: GetSchemas::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1300,7 +1259,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDCInfo_Impl, co
             SetInfo: SetInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDataConvert_Impl: ::windows_core::BaseImpl {
     fn DataConvert(this: &Self::This, wsrctype: u16, wdsttype: u16, cbsrclength: usize, pcbdstlength: *mut usize, psrc: *const ::core::ffi::c_void, pdst: *mut ::core::ffi::c_void, cbdstmaxlength: usize, dbssrcstatus: u32, pdbsstatus: *mut u32, bprecision: u8, bscale: u8, dwflags: u32) -> ::windows_core::Result<()>;
@@ -1345,7 +1303,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataConvert_Imp
             GetConversionSize: GetConversionSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1410,7 +1367,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataInitialize_
             WriteStringToStorage: WriteStringToStorage::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1459,7 +1415,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataSourceLocat
             PromptEdit: PromptEdit::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEntity_Impl: ::windows_core::BaseImpl {
     fn Name(this: &Self::This, ppszname: *mut ::windows_core::PWSTR) -> ::windows_core::Result<()>;
@@ -1530,7 +1485,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEntity_Impl, co
             DefaultPhrase: DefaultPhrase::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1584,7 +1538,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumItemPropert
             GetCount: GetCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumSearchRoots_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, rgelt: *mut ::core::option::Option<ISearchRoot>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -1623,7 +1576,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumSearchRoots
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumSearchScopeRules_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, pprgelt: *mut ::core::option::Option<ISearchScopeRule>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -1662,7 +1614,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumSearchScope
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumSubscription_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, rgelt: *mut ::windows_core::GUID, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -1712,7 +1663,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumSubscriptio
             GetCount: GetCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1744,7 +1694,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IErrorLookup_Imp
             ReleaseErrors: ReleaseErrors::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1815,7 +1764,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IErrorRecords_Im
             GetRecordCount: GetRecordCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGetDataSource_Impl: ::windows_core::BaseImpl {
     fn GetDataSource(this: &Self::This, riid: *const ::windows_core::GUID) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -1836,7 +1784,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGetDataSource_I
         }
         IGetDataSource_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDataSource: GetDataSource::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGetRow_Impl: ::windows_core::BaseImpl {
     fn GetRowFromHROW(this: &Self::This, punkouter: ::core::option::Option<&::windows_core::IUnknown>, hrow: usize, riid: *const ::windows_core::GUID) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -1871,7 +1818,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGetRow_Impl, co
             GetURLFromHROW: GetURLFromHROW::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGetSession_Impl: ::windows_core::BaseImpl {
     fn GetSession(this: &Self::This, riid: *const ::windows_core::GUID) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -1892,7 +1838,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGetSession_Impl
         }
         IGetSession_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetSession: GetSession::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGetSourceRow_Impl: ::windows_core::BaseImpl {
     fn GetSourceRow(this: &Self::This, riid: *const ::windows_core::GUID) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -1913,7 +1858,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGetSourceRow_Im
         }
         IGetSourceRow_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetSourceRow: GetSourceRow::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1940,7 +1884,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IIndexDefinition
             DropIndex: DropIndex::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -1959,7 +1902,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInterval_Impl, 
         }
         IInterval_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetLimits: GetLimits::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com_StructuredStorage\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com_StructuredStorage"))]
@@ -1991,7 +1933,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILoadFilter_Impl
             LoadIFilterFromStream: LoadIFilterFromStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com_StructuredStorage\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com_StructuredStorage"))]
@@ -2013,7 +1954,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILoadFilterWithP
             LoadIFilterWithPrivateComActivation: LoadIFilterWithPrivateComActivation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2061,7 +2001,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMDDataset_Impl,
             GetSpecification: GetSpecification::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMDFind_Impl: ::windows_core::BaseImpl {
     fn FindCell(this: &Self::This, ulstartingordinal: usize, cmembers: usize, rgpwszmember: *const ::windows_core::PCWSTR) -> ::windows_core::Result<usize>;
@@ -2096,7 +2035,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMDFind_Impl, co
             FindTuple: FindTuple::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2115,7 +2053,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMDRangeRowset_I
         }
         IMDRangeRowset_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetRangeRowset: GetRangeRowset::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMetaData_Impl: ::windows_core::BaseImpl {
     fn GetData(this: &Self::This, ppszkey: *mut ::windows_core::PWSTR, ppszvalue: *mut ::windows_core::PWSTR) -> ::windows_core::Result<()>;
@@ -2130,7 +2067,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMetaData_Impl, 
         }
         IMetaData_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetData: GetData::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMultipleResults_Impl: ::windows_core::BaseImpl {
     fn GetResult(this: &Self::This, punkouter: ::core::option::Option<&::windows_core::IUnknown>, lresultflag: isize, riid: *const ::windows_core::GUID, pcrowsaffected: *mut isize, pprowset: *mut ::core::option::Option<::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -2145,7 +2081,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMultipleResults
         }
         IMultipleResults_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetResult: GetResult::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait INamedEntity_Impl: ::windows_core::BaseImpl {
     fn GetValue(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -2174,7 +2109,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INamedEntity_Imp
             DefaultPhrase: DefaultPhrase::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait INamedEntityCollector_Impl: ::windows_core::BaseImpl {
     fn Add(this: &Self::This, beginspan: u32, endspan: u32, beginactual: u32, endactual: u32, ptype: ::core::option::Option<&IEntity>, pszvalue: &::windows_core::PCWSTR, certainty: NAMED_ENTITY_CERTAINTY) -> ::windows_core::Result<()>;
@@ -2189,7 +2123,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INamedEntityColl
         }
         INamedEntityCollector_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Add: Add::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Security_Authorization\"`, `\"Win32_Storage_IndexServer\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Security_Authorization", feature = "Win32_Storage_IndexServer"))]
@@ -2243,7 +2176,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IObjectAccessCon
             SetObjectOwner: SetObjectOwner::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2293,7 +2225,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpLockStatus_Im
             GetOplockEventHandle: GetOplockEventHandle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2312,7 +2243,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpenRowset_Impl
         }
         IOpenRowset_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OpenRowset: OpenRowset::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IParentRowset_Impl: ::windows_core::BaseImpl {
     fn GetChildRowset(this: &Self::This, punkouter: ::core::option::Option<&::windows_core::IUnknown>, iordinal: usize, riid: *const ::windows_core::GUID) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -2333,7 +2263,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IParentRowset_Im
         }
         IParentRowset_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetChildRowset: GetChildRowset::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_IndexServer\"`"]
 #[cfg(feature = "Win32_Storage_IndexServer")]
@@ -2358,7 +2287,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProtocolHandler
         }
         IProtocolHandlerSite_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetFilter: GetFilter::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -2383,7 +2311,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProvideMoniker_
         }
         IProvideMoniker_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetMoniker: GetMoniker::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -2470,7 +2397,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IQueryParser_Imp
             RestatePropertyValueToString: RestatePropertyValueToString::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -2502,7 +2428,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IQueryParserMana
             SetOption: SetOption::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Search_Common\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Search_Common", feature = "Win32_System_Variant"))]
@@ -2534,7 +2459,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IQuerySolution_I
             GetLexicalData: GetLexicalData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IReadData_Impl: ::windows_core::BaseImpl {
     fn ReadData(this: &Self::This, hchapter: usize, cbbookmark: usize, pbookmark: *const u8, lrowsoffset: isize, haccessor: HACCESSOR, crows: isize, pcrowsobtained: *mut usize, ppfixeddata: *mut *mut u8, pcbvariabletotal: *mut usize, ppvariabledata: *mut *mut u8) -> ::windows_core::Result<()>;
@@ -2557,7 +2481,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IReadData_Impl, 
             ReleaseChapter: ReleaseChapter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRegisterProvider_Impl: ::windows_core::BaseImpl {
     fn GetURLMapping(this: &Self::This, pwszurl: &::windows_core::PCWSTR, dwreserved: usize) -> ::windows_core::Result<::windows_core::GUID>;
@@ -2591,7 +2514,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRegisterProvide
             UnregisterProvider: UnregisterProvider::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2645,7 +2567,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRelationship_Im
             DefaultPhrase: DefaultPhrase::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -2664,7 +2585,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRichChunk_Impl,
         }
         IRichChunk_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetData: GetData::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_IndexServer\"`"]
 #[cfg(feature = "Win32_Storage_IndexServer")]
@@ -2696,7 +2616,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRow_Impl, const
             Open: Open::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_IndexServer\"`"]
 #[cfg(feature = "Win32_Storage_IndexServer")]
@@ -2715,7 +2634,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowChange_Impl,
         }
         IRowChange_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetColumns: SetColumns::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowPosition_Impl: ::windows_core::BaseImpl {
     fn ClearRowPosition(this: &Self::This) -> ::windows_core::Result<()>;
@@ -2759,7 +2677,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowPosition_Imp
             SetRowPosition: SetRowPosition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2781,7 +2698,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowPositionChan
             OnRowPositionChange: OnRowPositionChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com"))]
@@ -2808,7 +2724,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowSchemaChange
             AddColumns: AddColumns::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowset_Impl: ::windows_core::BaseImpl {
     fn AddRefRows(this: &Self::This, crows: usize, rghrows: *const usize, rgrefcounts: *mut u32, rgrowstatus: *mut u32) -> ::windows_core::Result<()>;
@@ -2846,7 +2761,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowset_Impl, co
             RestartPosition: RestartPosition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2873,7 +2787,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetAsynch_Im
             Stop: Stop::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetBookmark_Impl: ::windows_core::BaseImpl {
     fn PositionOnBookmark(this: &Self::This, hchapter: usize, cbbookmark: usize, pbookmark: *const u8) -> ::windows_core::Result<()>;
@@ -2891,7 +2804,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetBookmark_
             PositionOnBookmark: PositionOnBookmark::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetChange_Impl: ::windows_core::BaseImpl {
     fn DeleteRows(this: &Self::This, hreserved: usize, crows: usize, rghrows: *const usize, rgrowstatus: *mut u32) -> ::windows_core::Result<()>;
@@ -2925,7 +2837,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetChange_Im
             InsertRow: InsertRow::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetChangeExtInfo_Impl: ::windows_core::BaseImpl {
     fn GetOriginalRow(this: &Self::This, hreserved: usize, hrow: usize, phroworiginal: *mut usize) -> ::windows_core::Result<()>;
@@ -2948,7 +2859,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetChangeExt
             GetPendingColumns: GetPendingColumns::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetChapterMember_Impl: ::windows_core::BaseImpl {
     fn IsRowInChapter(this: &Self::This, hchapter: usize, hrow: usize) -> ::windows_core::Result<()>;
@@ -2963,7 +2873,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetChapterMe
         }
         IRowsetChapterMember_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, IsRowInChapter: IsRowInChapter::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetCopyRows_Impl: ::windows_core::BaseImpl {
     fn CloseSource(this: &Self::This, hsourceid: u16) -> ::windows_core::Result<()>;
@@ -3008,7 +2917,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetCopyRows_
             DefineSource: DefineSource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3041,7 +2949,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetCurrentIn
             SetIndex: SetIndex::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -3078,7 +2985,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetEvents_Im
             OnRowsetEvent: OnRowsetEvent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetExactScroll_Impl: ::windows_core::BaseImpl + IRowsetScroll_Impl {
     fn GetExactPosition(this: &Self::This, hchapter: usize, cbbookmark: usize, pbookmark: *const u8, pulposition: *mut usize, pcrows: *mut usize) -> ::windows_core::Result<()>;
@@ -3093,7 +2999,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetExactScro
         }
         IRowsetExactScroll_Vtbl { base__: <IRowsetScroll as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetExactPosition: GetExactPosition::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3120,7 +3025,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetFastLoad_
             Commit: Commit::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetFind_Impl: ::windows_core::BaseImpl {
     fn FindNextRow(this: &Self::This, hchapter: usize, haccessor: HACCESSOR, pfindvalue: *const ::core::ffi::c_void, compareop: u32, cbbookmark: usize, pbookmark: *const u8, lrowsoffset: isize, crows: isize, pcrowsobtained: *mut usize, prghrows: *mut *mut usize) -> ::windows_core::Result<()>;
@@ -3135,7 +3039,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetFind_Impl
         }
         IRowsetFind_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, FindNextRow: FindNextRow::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetIdentity_Impl: ::windows_core::BaseImpl {
     fn IsSameRow(this: &Self::This, hthisrow: usize, hthatrow: usize) -> ::windows_core::Result<()>;
@@ -3150,7 +3053,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetIdentity_
         }
         IRowsetIdentity_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, IsSameRow: IsSameRow::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3182,7 +3084,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetIndex_Imp
             SetRange: SetRange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3226,7 +3127,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetInfo_Impl
             GetSpecification: GetSpecification::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetKeys_Impl: ::windows_core::BaseImpl {
     fn ListKeys(this: &Self::This, pccolumns: *mut usize, prgcolumns: *mut *mut usize) -> ::windows_core::Result<()>;
@@ -3241,7 +3141,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetKeys_Impl
         }
         IRowsetKeys_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ListKeys: ListKeys::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetLocate_Impl: ::windows_core::BaseImpl + IRowset_Impl {
     fn Compare(this: &Self::This, hreserved: usize, cbbookmark1: usize, pbookmark1: *const u8, cbbookmark2: usize, pbookmark2: *const u8) -> ::windows_core::Result<u32>;
@@ -3280,7 +3179,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetLocate_Im
             Hash: Hash::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetNewRowAfter_Impl: ::windows_core::BaseImpl {
     fn SetNewDataAfter(this: &Self::This, hchapter: usize, cbbmprevious: u32, pbmprevious: *const u8, haccessor: HACCESSOR, pdata: *const u8) -> ::windows_core::Result<usize>;
@@ -3304,7 +3202,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetNewRowAft
             SetNewDataAfter: SetNewDataAfter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetNextRowset_Impl: ::windows_core::BaseImpl {
     fn GetNextRowset(this: &Self::This, punkouter: ::core::option::Option<&::windows_core::IUnknown>, riid: *const ::windows_core::GUID) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -3325,7 +3222,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetNextRowse
         }
         IRowsetNextRowset_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetNextRowset: GetNextRowset::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3357,7 +3253,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetNotify_Im
             OnRowsetChange: OnRowsetChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetPrioritization_Impl: ::windows_core::BaseImpl {
     fn SetScopePriority(this: &Self::This, priority: PRIORITY_LEVEL, scopestatisticseventfrequency: u32) -> ::windows_core::Result<()>;
@@ -3385,7 +3280,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetPrioritiz
             GetScopeStatistics: GetScopeStatistics::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetQueryStatus_Impl: ::windows_core::BaseImpl {
     fn GetStatus(this: &Self::This, pdwstatus: *mut u32) -> ::windows_core::Result<()>;
@@ -3408,7 +3302,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetQueryStat
             GetStatusEx: GetStatusEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3435,7 +3328,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetRefresh_I
             GetLastVisibleData: GetLastVisibleData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetResynch_Impl: ::windows_core::BaseImpl {
     fn GetVisibleData(this: &Self::This, hrow: usize, haccessor: HACCESSOR, pdata: *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -3458,7 +3350,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetResynch_I
             ResynchRows: ResynchRows::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetScroll_Impl: ::windows_core::BaseImpl + IRowsetLocate_Impl {
     fn GetApproximatePosition(this: &Self::This, hreserved: usize, cbbookmark: usize, pbookmark: *const u8, pulposition: *mut usize, pcrows: *mut usize) -> ::windows_core::Result<()>;
@@ -3481,7 +3372,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetScroll_Im
             GetRowsAtRatio: GetRowsAtRatio::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetUpdate_Impl: ::windows_core::BaseImpl + IRowsetChange_Impl {
     fn GetOriginalData(this: &Self::This, hrow: usize, haccessor: HACCESSOR, pdata: *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -3519,7 +3409,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetUpdate_Im
             Update: Update::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetView_Impl: ::windows_core::BaseImpl {
     fn CreateView(this: &Self::This, punkouter: ::core::option::Option<&::windows_core::IUnknown>, riid: *const ::windows_core::GUID) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -3548,7 +3437,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetView_Impl
             GetView: GetView::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetWatchAll_Impl: ::windows_core::BaseImpl {
     fn Acknowledge(this: &Self::This) -> ::windows_core::Result<()>;
@@ -3576,7 +3464,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetWatchAll_
             StopWatching: StopWatching::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetWatchNotify_Impl: ::windows_core::BaseImpl {
     fn OnChange(this: &Self::This, prowset: ::core::option::Option<&IRowset>, echangereason: u32) -> ::windows_core::Result<()>;
@@ -3591,7 +3478,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetWatchNoti
         }
         IRowsetWatchNotify_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnChange: OnChange::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRowsetWatchRegion_Impl: ::windows_core::BaseImpl + IRowsetWatchAll_Impl {
     fn CreateWatchRegion(this: &Self::This, dwwatchmode: u32) -> ::windows_core::Result<usize>;
@@ -3640,7 +3526,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetWatchRegi
             ShrinkWatchRegion: ShrinkWatchRegion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -3667,7 +3552,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRowsetWithParam
             Requery: Requery::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISQLErrorInfo_Impl: ::windows_core::BaseImpl {
     fn GetSQLInfo(this: &Self::This, pbstrsqlstate: *mut ::windows_core::BSTR, plnativeerror: *mut i32) -> ::windows_core::Result<()>;
@@ -3682,7 +3566,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISQLErrorInfo_Im
         }
         ISQLErrorInfo_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetSQLInfo: GetSQLInfo::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3701,7 +3584,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISQLGetDiagField
         }
         ISQLGetDiagField_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDiagField: GetDiagField::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Variant\"`"]
 #[cfg(feature = "Win32_System_Variant")]
@@ -3723,7 +3605,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISQLRequestDiagF
             RequestDiagFields: RequestDiagFields::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISQLServerErrorInfo_Impl: ::windows_core::BaseImpl {
     fn GetErrorInfo(this: &Self::This, pperrorinfo: *mut *mut SSERRORINFO, ppstringsbuffer: *mut *mut u16) -> ::windows_core::Result<()>;
@@ -3738,7 +3619,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISQLServerErrorI
         }
         ISQLServerErrorInfo_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetErrorInfo: GetErrorInfo::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISchemaLocalizerSupport_Impl: ::windows_core::BaseImpl {
     fn Localize(this: &Self::This, pszglobalstring: &::windows_core::PCWSTR) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -3759,7 +3639,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISchemaLocalizer
         }
         ISchemaLocalizerSupport_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Localize: Localize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer"))]
@@ -3786,7 +3665,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISchemaLock_Impl
             ReleaseSchemaLock: ReleaseSchemaLock::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISchemaProvider_Impl: ::windows_core::BaseImpl {
     fn Entities(this: &Self::This, riid: *const ::windows_core::GUID, pentities: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -3846,7 +3724,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISchemaProvider_
             LookupAuthoredNamedEntity: LookupAuthoredNamedEntity::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3883,7 +3760,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IScopedOperation
             OpenRowset: OpenRowset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -4108,7 +3984,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchCatalogMa
             GetCrawlScopeManager: GetCrawlScopeManager::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -4130,7 +4005,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchCatalogMa
             PrioritizeMatchingURLs: PrioritizeMatchingURLs::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4263,7 +4137,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchCrawlScop
             RemoveDefaultScopeRule: RemoveDefaultScopeRule::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4282,7 +4155,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchCrawlScop
         }
         ISearchCrawlScopeManager2_Vtbl { base__: <ISearchCrawlScopeManager as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetVersion: GetVersion::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -4314,7 +4186,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchItemsChan
             OnItemsChanged: OnItemsChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4368,7 +4239,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchLanguageS
             IsPrefixNormalized: IsPrefixNormalized::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -4504,7 +4374,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchManager_I
             PortNumber: PortNumber::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -4537,7 +4406,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchManager2_
             DeleteCatalog: DeleteCatalog::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISearchNotifyInlineSite_Impl: ::windows_core::BaseImpl {
     fn OnItemIndexedStatusChange(this: &Self::This, sipstatus: SEARCH_INDEXING_PHASE, dwnumentries: u32, rgitemstatusentries: *const SEARCH_ITEM_INDEXING_STATUS) -> ::windows_core::Result<()>;
@@ -4560,7 +4428,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchNotifyInl
             OnCatalogStatusChange: OnCatalogStatusChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISearchPersistentItemsChangedSink_Impl: ::windows_core::BaseImpl {
     fn StartedMonitoringScope(this: &Self::This, pszurl: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -4588,7 +4455,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchPersisten
             OnItemsChanged: OnItemsChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4631,7 +4497,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchProtocol_
             ShutDown: ShutDown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -4656,7 +4521,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchProtocol2
         }
         ISearchProtocol2_Vtbl { base__: <ISearchProtocol as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateAccessorEx: CreateAccessorEx::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISearchProtocolThreadContext_Impl: ::windows_core::BaseImpl {
     fn ThreadInit(this: &Self::This) -> ::windows_core::Result<()>;
@@ -4684,7 +4548,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchProtocolT
             ThreadIdle: ThreadIdle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -4872,7 +4735,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchQueryHelp
             QueryMaxResults: QueryMaxResults::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com"))]
@@ -4904,7 +4766,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchQueryHits
             NextHitOffset: NextHitOffset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5097,7 +4958,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchRoot_Impl
             Password: Password::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5158,7 +5018,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchScopeRule
             FollowFlags: FollowFlags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -5177,7 +5036,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISearchViewChang
         }
         ISearchViewChangedSink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnChange: OnChange::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Security_Authorization\"`"]
 #[cfg(feature = "Win32_Security_Authorization")]
@@ -5221,7 +5079,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISecurityInfo_Im
             GetPermissions: GetPermissions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IService_Impl: ::windows_core::BaseImpl {
     fn InvokeService(this: &Self::This, punkinner: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -5236,7 +5093,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IService_Impl, c
         }
         IService_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, InvokeService: InvokeService::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5263,7 +5119,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISessionProperti
             SetProperties: SetProperties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISimpleCommandCreator_Impl: ::windows_core::BaseImpl {
     fn CreateICommand(this: &Self::This, ppiunknown: *mut ::core::option::Option<::windows_core::IUnknown>, pouterunk: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -5291,7 +5146,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISimpleCommandCr
             GetDefaultCatalog: GetDefaultCatalog::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5313,7 +5167,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISourcesRowset_I
             GetSourcesRowset: GetSourcesRowset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5345,7 +5198,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStemmer_Impl, c
             GetLicenseToUse: GetLicenseToUse::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5409,7 +5261,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISubscriptionIte
             NotifyChanged: NotifyChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5472,7 +5323,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISubscriptionMgr
             CreateSubscription: CreateSubscription::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5542,7 +5392,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISubscriptionMgr
             AbortAll: AbortAll::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5561,7 +5410,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITableCreation_I
         }
         ITableCreation_Vtbl { base__: <ITableDefinition as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetTableDefinition: GetTableDefinition::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5598,7 +5446,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITableDefinition
             DropColumn: DropColumn::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5646,7 +5493,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITableDefinition
             DropConstraint: DropConstraint::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_IndexServer\"`"]
 #[cfg(feature = "Win32_Storage_IndexServer")]
@@ -5673,7 +5519,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITableRename_Imp
             RenameTable: RenameTable::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITokenCollection_Impl: ::windows_core::BaseImpl {
     fn NumberOfTokens(this: &Self::This, pcount: *const u32) -> ::windows_core::Result<()>;
@@ -5696,7 +5541,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITokenCollection
             GetToken: GetToken::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_DistributedTransactionCoordinator\"`"]
 #[cfg(feature = "Win32_System_DistributedTransactionCoordinator")]
@@ -5729,7 +5573,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionJoin
             JoinTransaction: JoinTransaction::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_DistributedTransactionCoordinator\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_DistributedTransactionCoordinator"))]
@@ -5762,7 +5605,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionLoca
             StartTransaction: StartTransaction::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_DistributedTransactionCoordinator\"`"]
 #[cfg(feature = "Win32_System_DistributedTransactionCoordinator")]
@@ -5790,7 +5632,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionObje
             GetTransactionObject: GetTransactionObject::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Security_Authorization\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Security_Authorization", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5832,7 +5673,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITrusteeAdmin_Im
             GetTrusteeProperties: GetTrusteeProperties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Security_Authorization\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Security_Authorization"))]
@@ -5880,7 +5720,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITrusteeGroupAdm
             GetMemberships: GetMemberships::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5956,7 +5795,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUMSInitialize_I
         }
         IUMSInitialize_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Initialize: Initialize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -6074,7 +5912,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUrlAccessor_Imp
             BindToFilter: BindToFilter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -6106,7 +5943,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUrlAccessor2_Im
             GetCodePage: GetCodePage::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -6128,7 +5964,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUrlAccessor3_Im
             GetImpersonationSidBlobs: GetImpersonationSidBlobs::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -6167,7 +6002,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUrlAccessor4_Im
             ShouldIndexProperty: ShouldIndexProperty::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IViewChapter_Impl: ::windows_core::BaseImpl {
     fn GetSpecification(this: &Self::This, riid: *const ::windows_core::GUID) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -6196,7 +6030,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IViewChapter_Imp
             OpenViewChapter: OpenViewChapter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -6228,7 +6061,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IViewFilter_Impl
             SetFilter: SetFilter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IViewRowset_Impl: ::windows_core::BaseImpl {
     fn GetSpecification(this: &Self::This, riid: *const ::windows_core::GUID) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -6263,7 +6095,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IViewRowset_Impl
             OpenViewRowset: OpenViewRowset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IViewSort_Impl: ::windows_core::BaseImpl {
     fn GetSortOrder(this: &Self::This, pcvalues: *mut usize, prgcolumns: *mut *mut usize, prgorders: *mut *mut u32) -> ::windows_core::Result<()>;
@@ -6286,7 +6117,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IViewSort_Impl, 
             SetSortOrder: SetSortOrder::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_IndexServer\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_IndexServer"))]
@@ -6323,7 +6153,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWordBreaker_Imp
             GetLicenseToUse: GetLicenseToUse::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWordFormSink_Impl: ::windows_core::BaseImpl {
     fn PutAltWord(this: &Self::This, pwcinbuf: &::windows_core::PCWSTR, cwc: u32) -> ::windows_core::Result<()>;
@@ -6346,7 +6175,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWordFormSink_Im
             PutWord: PutWord::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_IndexServer\"`"]
 #[cfg(feature = "Win32_Storage_IndexServer")]
@@ -6388,7 +6216,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWordSink_Impl, 
             PutBreak: PutBreak::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -6535,7 +6362,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: OLEDBSimpleProvi
             stopTransfer: stopTransfer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait OLEDBSimpleProviderListener_Impl: ::windows_core::BaseImpl {
     fn aboutToChangeCell(this: &Self::This, irow: isize, icolumn: isize) -> ::windows_core::Result<()>;
@@ -6588,5 +6414,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: OLEDBSimpleProvi
             transferComplete: transferComplete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

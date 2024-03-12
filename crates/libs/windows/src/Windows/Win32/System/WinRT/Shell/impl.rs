@@ -15,5 +15,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDDEInitializer_
         }
         IDDEInitializer_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Initialize: Initialize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

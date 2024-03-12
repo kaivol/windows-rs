@@ -11,7 +11,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActionOnCLREven
         }
         IActionOnCLREvent_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnEvent: OnEvent::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IApartmentCallback_Impl: ::windows_core::BaseImpl {
     fn DoCallback(this: &Self::This, pfunc: usize, pdata: usize) -> ::windows_core::Result<()>;
@@ -26,7 +25,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IApartmentCallba
         }
         IApartmentCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, DoCallback: DoCallback::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppDomainBinding_Impl: ::windows_core::BaseImpl {
     fn OnAppDomain(this: &Self::This, pappdomain: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -41,7 +39,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppDomainBindin
         }
         IAppDomainBinding_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnAppDomain: OnAppDomain::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICLRAppDomainResourceMonitor_Impl: ::windows_core::BaseImpl {
     fn GetCurrentAllocated(this: &Self::This, dwappdomainid: u32, pbytesallocated: *mut u64) -> ::windows_core::Result<()>;
@@ -69,7 +66,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRAppDomainRes
             GetCurrentCpuTime: GetCurrentCpuTime::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -151,7 +147,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRAssemblyIden
             IsStronglyNamed: IsStronglyNamed::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICLRAssemblyReferenceList_Impl: ::windows_core::BaseImpl {
     fn IsStringAssemblyReferenceInList(this: &Self::This, pwzassemblyname: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -174,7 +169,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRAssemblyRefe
             IsAssemblyReferenceInList: IsAssemblyReferenceInList::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICLRControl_Impl: ::windows_core::BaseImpl {
     fn GetCLRManager(this: &Self::This, riid: *const ::windows_core::GUID, ppobject: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -197,7 +191,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRControl_Impl
             SetAppDomainManagerType: SetAppDomainManagerType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Security\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Security"))]
@@ -261,7 +254,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRDebugManager
             SetSymbolReadingPolicy: SetSymbolReadingPolicy::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -288,7 +280,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRDebugging_Im
             CanUnloadNow: CanUnloadNow::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -313,7 +304,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRDebuggingLib
         }
         ICLRDebuggingLibraryProvider_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ProvideLibrary: ProvideLibrary::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICLRDomainManager_Impl: ::windows_core::BaseImpl {
     fn SetAppDomainManagerType(this: &Self::This, wszappdomainmanagerassembly: &::windows_core::PCWSTR, wszappdomainmanagertype: &::windows_core::PCWSTR, dwinitializedomainflags: EInitializeNewDomainFlags) -> ::windows_core::Result<()>;
@@ -336,7 +326,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRDomainManage
             SetPropertiesForDefaultAppDomain: SetPropertiesForDefaultAppDomain::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -368,7 +357,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRErrorReporti
             EndCustomDump: EndCustomDump::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICLRGCManager_Impl: ::windows_core::BaseImpl {
     fn Collect(this: &Self::This, generation: i32) -> ::windows_core::Result<()>;
@@ -396,7 +384,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRGCManager_Im
             SetGCStartupLimits: SetGCStartupLimits::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICLRGCManager2_Impl: ::windows_core::BaseImpl + ICLRGCManager_Impl {
     fn SetGCStartupLimitsEx(this: &Self::This, segmentsize: usize, maxgen0size: usize) -> ::windows_core::Result<()>;
@@ -414,7 +401,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRGCManager2_I
             SetGCStartupLimitsEx: SetGCStartupLimitsEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICLRHostBindingPolicyManager_Impl: ::windows_core::BaseImpl {
     fn ModifyApplicationPolicy(this: &Self::This, pwzsourceassemblyidentity: &::windows_core::PCWSTR, pwztargetassemblyidentity: &::windows_core::PCWSTR, pbapplicationpolicy: *const u8, cbapppolicysize: u32, dwpolicymodifyflags: u32, pbnewapplicationpolicy: *mut u8, pcbnewapppolicysize: *mut u32) -> ::windows_core::Result<()>;
@@ -437,7 +423,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRHostBindingP
             EvaluatePolicy: EvaluatePolicy::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICLRHostProtectionManager_Impl: ::windows_core::BaseImpl {
     fn SetProtectedCategories(this: &Self::This, categories: EApiCategories) -> ::windows_core::Result<()>;
@@ -460,7 +445,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRHostProtecti
             SetEagerSerializeGrantSets: SetEagerSerializeGrantSets::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICLRIoCompletionManager_Impl: ::windows_core::BaseImpl {
     fn OnComplete(this: &Self::This, dwerrorcode: u32, numberofbytestransferred: u32, pvoverlapped: *const ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -475,7 +459,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRIoCompletion
         }
         ICLRIoCompletionManager_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnComplete: OnComplete::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICLRMemoryNotificationCallback_Impl: ::windows_core::BaseImpl {
     fn OnMemoryNotification(this: &Self::This, ememoryavailable: EMemoryAvailable) -> ::windows_core::Result<()>;
@@ -493,7 +476,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRMemoryNotifi
             OnMemoryNotification: OnMemoryNotification::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -557,7 +539,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRMetaHost_Imp
             ExitProcess: ExitProcess::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -579,7 +560,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRMetaHostPoli
             GetRequestedRuntime: GetRequestedRuntime::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICLROnEventManager_Impl: ::windows_core::BaseImpl {
     fn RegisterActionOnEvent(this: &Self::This, event: EClrEvent, paction: ::core::option::Option<&IActionOnCLREvent>) -> ::windows_core::Result<()>;
@@ -602,7 +582,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLROnEventManag
             UnregisterActionOnEvent: UnregisterActionOnEvent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICLRPolicyManager_Impl: ::windows_core::BaseImpl {
     fn SetDefaultAction(this: &Self::This, operation: EClrOperation, action: EPolicyAction) -> ::windows_core::Result<()>;
@@ -645,7 +624,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRPolicyManage
             SetUnhandledExceptionPolicy: SetUnhandledExceptionPolicy::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICLRProbingAssemblyEnum_Impl: ::windows_core::BaseImpl {
     fn Get(this: &Self::This, dwindex: u32, pwzbuffer: ::windows_core::PWSTR, pcchbuffersize: *mut u32) -> ::windows_core::Result<()>;
@@ -660,7 +638,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRProbingAssem
         }
         ICLRProbingAssemblyEnum_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Get: Get::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICLRProfiling_Impl: ::windows_core::BaseImpl {
     fn AttachProfiler(this: &Self::This, dwprofileeprocessid: u32, dwmillisecondsmax: u32, pclsidprofiler: *const ::windows_core::GUID, wszprofilerpath: &::windows_core::PCWSTR, pvclientdata: *const ::core::ffi::c_void, cbclientdata: u32) -> ::windows_core::Result<()>;
@@ -675,7 +652,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRProfiling_Im
         }
         ICLRProfiling_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, AttachProfiler: AttachProfiler::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICLRReferenceAssemblyEnum_Impl: ::windows_core::BaseImpl {
     fn Get(this: &Self::This, dwindex: u32, pwzbuffer: ::windows_core::PWSTR, pcchbuffersize: *mut u32) -> ::windows_core::Result<()>;
@@ -690,7 +666,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRReferenceAss
         }
         ICLRReferenceAssemblyEnum_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Get: Get::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -776,7 +751,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRRuntimeHost_
             ExecuteInDefaultAppDomain: ExecuteInDefaultAppDomain::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -877,7 +851,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRRuntimeInfo_
             IsStarted: IsStarted::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1049,7 +1022,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRStrongName_I
             StrongNameTokenFromPublicKey: StrongNameTokenFromPublicKey::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1082,7 +1054,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRStrongName2_
             StrongNameSignatureVerificationEx2: StrongNameSignatureVerificationEx2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICLRStrongName3_Impl: ::windows_core::BaseImpl {
     fn StrongNameDigestGenerate(this: &Self::This, wszfilepath: &::windows_core::PCWSTR, ppbdigestblob: *mut *mut u8, pcbdigestblob: *mut u32, dwflags: u32) -> ::windows_core::Result<()>;
@@ -1110,7 +1081,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRStrongName3_
             StrongNameDigestEmbed: StrongNameDigestEmbed::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICLRSyncManager_Impl: ::windows_core::BaseImpl {
     fn GetMonitorOwner(this: &Self::This, cookie: usize) -> ::windows_core::Result<IHostTask>;
@@ -1161,7 +1131,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRSyncManager_
             DeleteRWLockOwnerIterator: DeleteRWLockOwnerIterator::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1251,7 +1220,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRTask_Impl, c
             SetTaskIdentifier: SetTaskIdentifier::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1278,7 +1246,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRTask2_Impl, 
             EndPreventAsyncAbort: EndPreventAsyncAbort::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICLRTaskManager_Impl: ::windows_core::BaseImpl {
     fn CreateTask(this: &Self::This) -> ::windows_core::Result<ICLRTask>;
@@ -1334,7 +1301,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICLRTaskManager_
             GetCurrentTaskType: GetCurrentTaskType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICatalogServices_Impl: ::windows_core::BaseImpl {
     fn Autodone(this: &Self::This) -> ::windows_core::Result<()>;
@@ -1357,7 +1323,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICatalogServices
             NotAutodone: NotAutodone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICorConfiguration_Impl: ::windows_core::BaseImpl {
     fn SetGCThreadControl(this: &Self::This, pgcthreadcontrol: ::core::option::Option<&IGCThreadControl>) -> ::windows_core::Result<()>;
@@ -1390,7 +1355,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorConfiguratio
             AddDebuggerSpecialThread: AddDebuggerSpecialThread::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1568,7 +1532,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorRuntimeHost_
             CurrentDomain: CurrentDomain::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_IO\"`, `\"Win32_System_Threading\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_IO", feature = "Win32_System_Threading"))]
@@ -1682,7 +1645,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorThreadpool_I
             CorGetAvailableThreads: CorGetAvailableThreads::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1710,7 +1672,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebuggerInfo_Im
             IsDebuggerAttached: IsDebuggerAttached::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebuggerThreadControl_Impl: ::windows_core::BaseImpl {
     fn ThreadIsBlockingForDebugger(this: &Self::This) -> ::windows_core::Result<()>;
@@ -1738,7 +1699,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebuggerThreadC
             StartBlockingForDebugger: StartBlockingForDebugger::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGCHost_Impl: ::windows_core::BaseImpl {
     fn SetGCStartupLimits(this: &Self::This, segmentsize: u32, maxgen0size: u32) -> ::windows_core::Result<()>;
@@ -1776,7 +1736,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGCHost_Impl, co
             SetVirtualMemLimit: SetVirtualMemLimit::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGCHost2_Impl: ::windows_core::BaseImpl + IGCHost_Impl {
     fn SetGCStartupLimitsEx(this: &Self::This, segmentsize: usize, maxgen0size: usize) -> ::windows_core::Result<()>;
@@ -1791,7 +1750,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGCHost2_Impl, c
         }
         IGCHost2_Vtbl { base__: <IGCHost as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetGCStartupLimitsEx: SetGCStartupLimitsEx::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGCHostControl_Impl: ::windows_core::BaseImpl {
     fn RequestVirtualMemLimit(this: &Self::This, sztmaxvirtualmemmb: usize, psztnewmaxvirtualmemmb: *mut usize) -> ::windows_core::Result<()>;
@@ -1809,7 +1767,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGCHostControl_I
             RequestVirtualMemLimit: RequestVirtualMemLimit::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGCThreadControl_Impl: ::windows_core::BaseImpl {
     fn ThreadIsBlockingForSuspension(this: &Self::This) -> ::windows_core::Result<()>;
@@ -1837,7 +1794,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGCThreadControl
             SuspensionEnding: SuspensionEnding::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IHostAssemblyManager_Impl: ::windows_core::BaseImpl {
     fn GetNonHostStoreAssemblies(this: &Self::This) -> ::windows_core::Result<ICLRAssemblyReferenceList>;
@@ -1872,7 +1828,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostAssemblyMan
             GetAssemblyStore: GetAssemblyStore::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1899,7 +1854,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostAssemblySto
             ProvideModule: ProvideModule::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IHostAutoEvent_Impl: ::windows_core::BaseImpl {
     fn Wait(this: &Self::This, dwmilliseconds: u32, option: u32) -> ::windows_core::Result<()>;
@@ -1922,7 +1876,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostAutoEvent_I
             Set: Set::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IHostControl_Impl: ::windows_core::BaseImpl {
     fn GetHostManager(this: &Self::This, riid: *const ::windows_core::GUID, ppobject: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -1945,7 +1898,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostControl_Imp
             SetAppDomainManager: SetAppDomainManager::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1988,7 +1940,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostCrst_Impl, 
             SetSpinCount: SetSpinCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IHostGCManager_Impl: ::windows_core::BaseImpl {
     fn ThreadIsBlockingForSuspension(this: &Self::This) -> ::windows_core::Result<()>;
@@ -2016,7 +1967,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostGCManager_I
             SuspensionEnding: SuspensionEnding::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2118,7 +2068,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostIoCompletio
             GetMinThreads: GetMinThreads::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IHostMalloc_Impl: ::windows_core::BaseImpl {
     fn Alloc(this: &Self::This, cbsize: usize, ecriticallevel: EMemoryCriticalLevel, ppmem: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -2146,7 +2095,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostMalloc_Impl
             Free: Free::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IHostManualEvent_Impl: ::windows_core::BaseImpl {
     fn Wait(this: &Self::This, dwmilliseconds: u32, option: u32) -> ::windows_core::Result<()>;
@@ -2174,7 +2122,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostManualEvent
             Set: Set::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IHostMemoryManager_Impl: ::windows_core::BaseImpl {
     fn CreateMalloc(this: &Self::This, dwmalloctype: u32) -> ::windows_core::Result<IHostMalloc>;
@@ -2249,7 +2196,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostMemoryManag
             ReleasedVirtualAddressSpace: ReleasedVirtualAddressSpace::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IHostPolicyManager_Impl: ::windows_core::BaseImpl {
     fn OnDefaultAction(this: &Self::This, operation: EClrOperation, action: EPolicyAction) -> ::windows_core::Result<()>;
@@ -2277,7 +2223,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostPolicyManag
             OnFailure: OnFailure::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IHostSecurityContext_Impl: ::windows_core::BaseImpl {
     fn Capture(this: &Self::This) -> ::windows_core::Result<IHostSecurityContext>;
@@ -2298,7 +2243,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostSecurityCon
         }
         IHostSecurityContext_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Capture: Capture::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2357,7 +2301,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostSecurityMan
             SetSecurityContext: SetSecurityContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IHostSemaphore_Impl: ::windows_core::BaseImpl {
     fn Wait(this: &Self::This, dwmilliseconds: u32, option: u32) -> ::windows_core::Result<()>;
@@ -2386,7 +2329,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostSemaphore_I
             ReleaseSemaphore: ReleaseSemaphore::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2496,7 +2438,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostSyncManager
             CreateSemaphoreA: CreateSemaphoreA::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IHostTask_Impl: ::windows_core::BaseImpl {
     fn Start(this: &Self::This) -> ::windows_core::Result<()>;
@@ -2545,7 +2486,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostTask_Impl, 
             SetCLRTask: SetCLRTask::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Threading\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Threading"))]
@@ -2676,7 +2616,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostTaskManager
             SetCLRTaskManager: SetCLRTaskManager::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Threading\"`"]
 #[cfg(feature = "Win32_System_Threading")]
@@ -2741,7 +2680,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostThreadpoolM
             GetMinThreads: GetMinThreads::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IManagedObject_Impl: ::windows_core::BaseImpl {
     fn GetSerializedBuffer(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -2770,7 +2708,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IManagedObject_I
             GetObjectIdentity: GetObjectIdentity::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2795,7 +2732,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IObjectHandle_Im
         }
         IObjectHandle_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Unwrap: Unwrap::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITypeName_Impl: ::windows_core::BaseImpl {
     fn GetNameCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -2867,7 +2803,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITypeName_Impl, 
             GetAssemblyName: GetAssemblyName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITypeNameBuilder_Impl: ::windows_core::BaseImpl {
     fn OpenGenericArguments(this: &Self::This) -> ::windows_core::Result<()>;
@@ -2946,7 +2881,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITypeNameBuilder
             Clear: Clear::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITypeNameFactory_Impl: ::windows_core::BaseImpl {
     fn ParseTypeName(this: &Self::This, szname: &::windows_core::PCWSTR, perror: *mut u32, pptypename: *mut ::core::option::Option<ITypeName>) -> ::windows_core::Result<()>;
@@ -2975,5 +2909,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITypeNameFactory
             GetTypeNameBuilder: GetTypeNameBuilder::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

@@ -19,7 +19,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsAggregateCont
             KsRemoveAggregate: KsRemoveAggregate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -56,7 +55,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsAllocator_Imp
             KsSetAllocatorMode: KsSetAllocatorMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -93,7 +91,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsAllocatorEx_I
             KsCreateAllocatorAndGetHandle: KsCreateAllocatorAndGetHandle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IKsClockPropertySet_Impl: ::windows_core::BaseImpl {
     fn KsGetTime(this: &Self::This) -> ::windows_core::Result<i64>;
@@ -192,7 +189,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsClockProperty
             KsGetState: KsGetState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IKsControl_Impl: ::windows_core::BaseImpl {
     fn KsProperty(this: &Self::This, property: *const KSIDENTIFIER, propertylength: u32, propertydata: *mut ::core::ffi::c_void, datalength: u32, bytesreturned: *mut u32) -> ::windows_core::Result<()>;
@@ -220,7 +216,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsControl_Impl,
             KsEvent: KsEvent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_MediaFoundation\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_MediaFoundation"))]
@@ -242,7 +237,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsDataTypeCompl
             KsCompleteMediaType: KsCompleteMediaType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_DirectShow\"`, `\"Win32_Media_MediaFoundation\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_DirectShow", feature = "Win32_Media_MediaFoundation"))]
@@ -290,7 +284,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsDataTypeHandl
             KsSetMediaType: KsSetMediaType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -323,7 +316,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsFormatSupport
             GetDevicePreferredFormat: GetDevicePreferredFormat::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_DirectShow\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_DirectShow"))]
@@ -355,7 +347,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsInterfaceHand
             KsCompleteIo: KsCompleteIo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IKsJackContainerId_Impl: ::windows_core::BaseImpl {
     fn GetJackContainerId(this: &Self::This) -> ::windows_core::Result<::windows_core::GUID>;
@@ -379,7 +370,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsJackContainer
             GetJackContainerId: GetJackContainerId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -412,7 +402,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsJackDescripti
             GetJackDescription: GetJackDescription::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IKsJackDescription2_Impl: ::windows_core::BaseImpl {
     fn GetJackCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -447,7 +436,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsJackDescripti
             GetJackDescription2: GetJackDescription2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IKsJackDescription3_Impl: ::windows_core::BaseImpl {
     fn GetJackCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -482,7 +470,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsJackDescripti
             GetJackDescription3: GetJackDescription3::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -504,7 +491,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsJackSinkInfor
             GetJackSinkInformation: GetJackSinkInformation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IKsNodeControl_Impl: ::windows_core::BaseImpl {
     fn SetNodeId(this: &Self::This, dwnodeid: u32) -> ::windows_core::Result<()>;
@@ -527,7 +513,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsNodeControl_I
             SetKsControl: SetKsControl::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IKsNotifyEvent_Impl: ::windows_core::BaseImpl {
     fn KsNotifyEvent(this: &Self::This, event: u32, lparam1: usize, lparam2: usize) -> ::windows_core::Result<()>;
@@ -542,7 +527,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsNotifyEvent_I
         }
         IKsNotifyEvent_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, KsNotifyEvent: KsNotifyEvent::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -564,7 +548,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsObject_Impl, 
             KsGetObjectHandle: KsGetObjectHandle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_DirectShow\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_DirectShow"))]
@@ -658,7 +641,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsPin_Impl, con
             KsQualityNotify: KsQualityNotify::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_DirectShow\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_DirectShow"))]
@@ -677,7 +659,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsPinEx_Impl, c
         }
         IKsPinEx_Vtbl { base__: <IKsPin as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, KsNotifyError: KsNotifyError::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IKsPinFactory_Impl: ::windows_core::BaseImpl {
     fn KsPinFactory(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -698,7 +679,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsPinFactory_Im
         }
         IKsPinFactory_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, KsPinFactory: KsPinFactory::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Media_DirectShow\"`"]
 #[cfg(feature = "Win32_Media_DirectShow")]
@@ -770,7 +750,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsPinPipe_Impl,
             KsGetFilterName: KsGetFilterName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IKsPropertySet_Impl: ::windows_core::BaseImpl {
     fn Set(this: &Self::This, guidpropset: *const ::windows_core::GUID, dwpropid: u32, pinstancedata: *const ::core::ffi::c_void, cbinstancedata: u32, ppropdata: *const ::core::ffi::c_void, cbpropdata: u32) -> ::windows_core::Result<()>;
@@ -804,7 +783,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsPropertySet_I
             QuerySupported: QuerySupported::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -823,7 +801,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsQualityForwar
         }
         IKsQualityForwarder_Vtbl { base__: <IKsObject as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, KsFlushClient: KsFlushClient::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IKsTopology_Impl: ::windows_core::BaseImpl {
     fn CreateNodeInstance(this: &Self::This, nodeid: u32, flags: u32, desiredaccess: u32, unkouter: ::core::option::Option<&::windows_core::IUnknown>, interfaceid: *const ::windows_core::GUID, interface: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -841,7 +818,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsTopology_Impl
             CreateNodeInstance: CreateNodeInstance::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IKsTopologyInfo_Impl: ::windows_core::BaseImpl {
     fn NumCategories(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -930,5 +906,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKsTopologyInfo_
             CreateNodeInstance: CreateNodeInstance::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

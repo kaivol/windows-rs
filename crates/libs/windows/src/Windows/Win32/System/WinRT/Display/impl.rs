@@ -35,7 +35,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDisplayDeviceIn
             OpenSharedHandle: OpenSharedHandle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -74,5 +73,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDisplayPathInte
             GetSourceId: GetSourceId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

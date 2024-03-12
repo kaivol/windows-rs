@@ -15,5 +15,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreFrameworkIn
         }
         ICoreFrameworkInputViewInterop_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetForWindow: GetForWindow::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

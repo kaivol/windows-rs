@@ -14,7 +14,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInkCommitReques
             OnCommitRequested: OnCommitRequested::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -33,7 +32,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInkD2DRenderer_
         }
         IInkD2DRenderer_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Draw: Draw::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IInkD2DRenderer2_Impl: ::windows_core::BaseImpl {
     fn Draw(this: &Self::This, pd2d1devicecontext: ::core::option::Option<&::windows_core::IUnknown>, pinkstrokeiterable: ::core::option::Option<&::windows_core::IUnknown>, highcontrastadjustment: INK_HIGH_CONTRAST_ADJUSTMENT) -> ::windows_core::Result<()>;
@@ -48,7 +46,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInkD2DRenderer2
         }
         IInkD2DRenderer2_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Draw: Draw::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IInkDesktopHost_Impl: ::windows_core::BaseImpl {
     fn QueueWorkItem(this: &Self::This, workitem: ::core::option::Option<&IInkHostWorkItem>) -> ::windows_core::Result<()>;
@@ -76,7 +73,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInkDesktopHost_
             CreateAndInitializeInkPresenter: CreateAndInitializeInkPresenter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IInkHostWorkItem_Impl: ::windows_core::BaseImpl {
     fn Invoke(this: &Self::This) -> ::windows_core::Result<()>;
@@ -91,7 +87,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInkHostWorkItem
         }
         IInkHostWorkItem_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Invoke: Invoke::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IInkPresenterDesktop_Impl: ::windows_core::BaseImpl {
     fn SetRootVisual(this: &Self::This, rootvisual: ::core::option::Option<&::windows_core::IUnknown>, device: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -129,5 +124,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInkPresenterDes
             OnHighContrastChanged: OnHighContrastChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

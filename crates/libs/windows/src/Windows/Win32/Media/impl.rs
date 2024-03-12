@@ -51,7 +51,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IReferenceClock_
             Unadvise: Unadvise::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -63,7 +62,6 @@ impl ::windows_core::Iids for IReferenceClock2 {
 #[cfg(feature = "Win32_Foundation")]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IReferenceClock2_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IReferenceClock2 {
     const VTABLE: Self::Vtable = { IReferenceClock2_Vtbl { base__: <IReferenceClock as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IReferenceClockTimerControl_Impl: ::windows_core::BaseImpl {
     fn SetDefaultTimerResolution(this: &Self::This, timerresolution: i64) -> ::windows_core::Result<()>;
@@ -92,5 +90,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IReferenceClockT
             GetDefaultTimerResolution: GetDefaultTimerResolution::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

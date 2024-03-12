@@ -14,7 +14,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAnimationObject
             PopulatePropertyInfo: PopulatePropertyInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICompositionAnimationBase_Impl: ::windows_core::BaseImpl {}
 impl ::windows_core::Iids for ICompositionAnimationBase {
@@ -22,7 +21,6 @@ impl ::windows_core::Iids for ICompositionAnimationBase {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICompositionAnimationBase_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ICompositionAnimationBase {
     const VTABLE: Self::Vtable = { ICompositionAnimationBase_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICompositionSupportsSystemBackdrop_Impl: ::windows_core::BaseImpl {
     fn SystemBackdrop(this: &Self::This) -> ::windows_core::Result<CompositionBrush>;
@@ -52,7 +50,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICompositionSupp
             SetSystemBackdrop: SetSystemBackdrop::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICompositionSurface_Impl: ::windows_core::BaseImpl {}
 impl ::windows_core::Iids for ICompositionSurface {
@@ -60,7 +57,6 @@ impl ::windows_core::Iids for ICompositionSurface {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICompositionSurface_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ICompositionSurface {
     const VTABLE: Self::Vtable = { ICompositionSurface_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICompositionSurfaceFacade_Impl: ::windows_core::BaseImpl {
     fn GetRealSurface(this: &Self::This) -> ::windows_core::Result<ICompositionSurface>;
@@ -85,7 +81,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICompositionSurf
             GetRealSurface: GetRealSurface::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVisualElement_Impl: ::windows_core::BaseImpl {}
 impl ::windows_core::Iids for IVisualElement {
@@ -93,7 +88,6 @@ impl ::windows_core::Iids for IVisualElement {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVisualElement_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IVisualElement {
     const VTABLE: Self::Vtable = { IVisualElement_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVisualElement2_Impl: ::windows_core::BaseImpl {
     fn GetVisualInternal(this: &Self::This) -> ::windows_core::Result<Visual>;
@@ -118,5 +112,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVisualElement2_
             GetVisualInternal: GetVisualInternal::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

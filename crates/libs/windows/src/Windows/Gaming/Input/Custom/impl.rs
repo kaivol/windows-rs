@@ -31,7 +31,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICustomGameContr
             OnGameControllerRemoved: OnGameControllerRemoved::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGameControllerInputSink_Impl: ::windows_core::BaseImpl {
     fn OnInputResumed(this: &Self::This, timestamp: u64) -> ::windows_core::Result<()>;
@@ -54,7 +53,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGameControllerI
             OnInputSuspended: OnInputSuspended::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGameControllerProvider_Impl: ::windows_core::BaseImpl {
     fn FirmwareVersionInfo(this: &Self::This) -> ::windows_core::Result<GameControllerVersionInfo>;
@@ -122,7 +120,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGameControllerP
             IsConnected: IsConnected::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGipGameControllerInputSink_Impl: ::windows_core::BaseImpl + IGameControllerInputSink_Impl {
     fn OnKeyReceived(this: &Self::This, timestamp: u64, keycode: u8, ispressed: bool) -> ::windows_core::Result<()>;
@@ -146,7 +143,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGipGameControll
             OnMessageReceived: OnMessageReceived::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IHidGameControllerInputSink_Impl: ::windows_core::BaseImpl + IGameControllerInputSink_Impl {
     fn OnInputReportReceived(this: &Self::This, timestamp: u64, reportid: u8, reportbuffer: &[u8]) -> ::windows_core::Result<()>;
@@ -165,7 +161,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHidGameControll
             OnInputReportReceived: OnInputReportReceived::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXusbGameControllerInputSink_Impl: ::windows_core::BaseImpl + IGameControllerInputSink_Impl {
     fn OnInputReceived(this: &Self::This, timestamp: u64, reportid: u8, inputbuffer: &[u8]) -> ::windows_core::Result<()>;
@@ -184,5 +179,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXusbGameControl
             OnInputReceived: OnInputReceived::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

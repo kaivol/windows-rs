@@ -23,7 +23,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INetworkTranspor
             QuerySetting: QuerySetting::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait INotificationTransportSync_Impl: ::windows_core::BaseImpl {
     fn CompleteDelivery(this: &Self::This) -> ::windows_core::Result<()>;
@@ -46,7 +45,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INotificationTra
             Flush: Flush::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -85,7 +83,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCBuddy_Impl, 
             Notes: Notes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -184,7 +181,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCBuddy2_Impl,
             SubscriptionType: SubscriptionType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -209,7 +205,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCBuddyEvent_I
         }
         IRTCBuddyEvent_Vtbl { base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Buddy: Buddy::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -259,7 +254,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCBuddyEvent2_
             StatusText: StatusText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -351,7 +345,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCBuddyGroup_I
             Profile: Profile::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -412,7 +405,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCBuddyGroupEv
             StatusCode: StatusCode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_DirectShow\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_DirectShow", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -765,7 +757,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCClient_Impl,
             IsTuned: IsTuned::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_DirectShow\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_DirectShow", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -877,7 +868,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCClient2_Impl
             get_AllowedPorts: get_AllowedPorts::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -916,7 +906,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCClientEvent_
             Client: Client::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRTCClientPortManagement_Impl: ::windows_core::BaseImpl {
     fn StartListenAddressAndPort(this: &Self::This, bstrinternallocaladdress: &::windows_core::BSTR, linternallocalport: i32) -> ::windows_core::Result<()>;
@@ -944,7 +933,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCClientPortMa
             GetPortRange: GetPortRange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1111,7 +1099,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCClientPresen
             SetPrivacyMode: SetPrivacyMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1251,7 +1238,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCClientPresen
             AddBuddyEx: AddBuddyEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1327,7 +1313,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCClientProvis
             SessionCapabilities: SessionCapabilities::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1346,7 +1331,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCClientProvis
         }
         IRTCClientProvisioning2_Vtbl { base__: <IRTCClientProvisioning as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, EnableProfileEx: EnableProfileEx::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1396,7 +1380,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCCollection_I
             _NewEnum: _NewEnum::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1408,7 +1391,6 @@ impl ::windows_core::Iids for IRTCDispatchEventNotification {
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCDispatchEventNotification_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IRTCDispatchEventNotification {
     const VTABLE: Self::Vtable = { IRTCDispatchEventNotification_Vtbl { base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRTCEnumBuddies_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, ppelements: *mut ::core::option::Option<IRTCBuddy>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -1447,7 +1429,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCEnumBuddies_
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRTCEnumGroups_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, ppelements: *mut ::core::option::Option<IRTCBuddyGroup>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -1486,7 +1467,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCEnumGroups_I
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRTCEnumParticipants_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, ppelements: *mut ::core::option::Option<IRTCParticipant>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -1525,7 +1505,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCEnumParticip
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRTCEnumPresenceDevices_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, ppelements: *mut ::core::option::Option<IRTCPresenceDevice>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -1564,7 +1543,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCEnumPresence
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRTCEnumProfiles_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, ppelements: *mut ::core::option::Option<IRTCProfile>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -1603,7 +1581,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCEnumProfiles
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRTCEnumUserSearchResults_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, ppelements: *mut ::core::option::Option<IRTCUserSearchResult>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -1642,7 +1619,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCEnumUserSear
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRTCEnumWatchers_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, ppelements: *mut ::core::option::Option<IRTCWatcher>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -1681,7 +1657,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCEnumWatchers
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1700,7 +1675,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCEventNotific
         }
         IRTCEventNotification_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Event: Event::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1761,7 +1735,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCInfoEvent_Im
             InfoHeader: InfoHeader::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1822,7 +1795,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCIntensityEve
             Direction: Direction::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1872,7 +1844,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCMediaEvent_I
             EventReason: EventReason::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1954,7 +1925,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCMediaRequest
             State: State::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2037,7 +2007,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCMessagingEve
             UserStatus: UserStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2109,7 +2078,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCParticipant_
             Session: Session::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2159,7 +2127,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCParticipantS
             StatusCode: StatusCode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRTCPortManager_Impl: ::windows_core::BaseImpl {
     fn GetMapping(this: &Self::This, bstrremoteaddress: &::windows_core::BSTR, enporttype: RTC_PORT_TYPE, pbstrinternallocaladdress: *mut ::windows_core::BSTR, plinternallocalport: *mut i32, pbstrexternallocaladdress: *mut ::windows_core::BSTR, plexternallocalport: *mut i32) -> ::windows_core::Result<()>;
@@ -2187,7 +2154,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCPortManager_
             ReleaseMapping: ReleaseMapping::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2268,7 +2234,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCPresenceCont
             SetPersistent: SetPersistent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2312,7 +2277,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCPresenceData
             GetPresenceData: GetPresenceData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRTCPresenceDevice_Impl: ::windows_core::BaseImpl {
     fn Status(this: &Self::This) -> ::windows_core::Result<RTC_PRESENCE_STATUS>;
@@ -2363,7 +2327,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCPresenceDevi
             GetPresenceData: GetPresenceData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2424,7 +2387,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCPresenceProp
             Value: Value::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2468,7 +2430,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCPresenceStat
             GetLocalPresenceInfo: GetLocalPresenceInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2677,7 +2638,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCProfile_Impl
             State: State::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2726,7 +2686,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCProfile2_Imp
             SetAllowedAuth: SetAllowedAuth::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2776,7 +2735,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCProfileEvent
             StatusCode: StatusCode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2801,7 +2759,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCProfileEvent
         }
         IRTCProfileEvent2_Vtbl { base__: <IRTCProfileEvent as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, EventType: EventType::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2855,7 +2812,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCReInviteEven
             GetRemoteSessionDescription: GetRemoteSessionDescription::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2916,7 +2872,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCRegistration
             StatusText: StatusText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2977,7 +2932,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCRoamingEvent
             StatusText: StatusText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -3154,7 +3108,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCSession_Impl
             put_EncryptionKey: put_EncryptionKey::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -3213,7 +3166,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCSession2_Imp
             ReInviteWithSessionDescription: ReInviteWithSessionDescription::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3293,7 +3245,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCSessionCallC
             IsReferred: IsReferred::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3315,7 +3266,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCSessionDescr
             EvaluateSessionDescription: EvaluateSessionDescription::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3376,7 +3326,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCSessionOpera
             StatusText: StatusText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3409,7 +3358,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCSessionOpera
             GetRemoteSessionDescription: GetRemoteSessionDescription::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRTCSessionPortManagement_Impl: ::windows_core::BaseImpl {
     fn SetPortManager(this: &Self::This, pportmanager: ::core::option::Option<&IRTCPortManager>) -> ::windows_core::Result<()>;
@@ -3424,7 +3372,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCSessionPortM
         }
         IRTCSessionPortManagement_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetPortManager: SetPortManager::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3485,7 +3432,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCSessionRefer
             StatusText: StatusText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3561,7 +3507,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCSessionRefer
             SetReferredSessionState: SetReferredSessionState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3622,7 +3567,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCSessionState
             StatusText: StatusText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3677,7 +3621,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCSessionState
             GetRemoteSessionDescription: GetRemoteSessionDescription::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRTCUserSearch_Impl: ::windows_core::BaseImpl {
     fn CreateQuery(this: &Self::This) -> ::windows_core::Result<IRTCUserSearchQuery>;
@@ -3706,7 +3649,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCUserSearch_I
             ExecuteSearch: ExecuteSearch::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRTCUserSearchQuery_Impl: ::windows_core::BaseImpl {
     fn put_SearchTerm(this: &Self::This, bstrname: &::windows_core::BSTR, bstrvalue: &::windows_core::BSTR) -> ::windows_core::Result<()>;
@@ -3778,7 +3720,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCUserSearchQu
             SearchDomain: SearchDomain::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRTCUserSearchResult_Impl: ::windows_core::BaseImpl {
     fn get_Value(this: &Self::This, encolumn: RTC_USER_SEARCH_COLUMN) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -3799,7 +3740,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCUserSearchRe
         }
         IRTCUserSearchResult_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, get_Value: get_Value::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3893,7 +3833,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCUserSearchRe
             MoreAvailable: MoreAvailable::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3926,7 +3865,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCWatcher_Impl
             SetState: SetState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3965,7 +3903,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCWatcher2_Imp
             Scope: Scope::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3990,7 +3927,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCWatcherEvent
         }
         IRTCWatcherEvent_Vtbl { base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Watcher: Watcher::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -4029,7 +3965,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRTCWatcherEvent
             StatusCode: StatusCode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Networking_WinSock\"`"]
 #[cfg(feature = "Win32_Networking_WinSock")]
@@ -4056,5 +3991,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransportSettin
             QuerySetting: QuerySetting::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

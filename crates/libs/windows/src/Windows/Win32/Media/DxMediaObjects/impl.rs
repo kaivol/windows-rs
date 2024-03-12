@@ -30,7 +30,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDMOQualityContr
             GetStatus: GetStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDMOVideoOutputOptimizations_Impl: ::windows_core::BaseImpl {
     fn QueryOperationModePreferences(this: &Self::This, uloutputstreamindex: u32) -> ::windows_core::Result<u32>;
@@ -81,7 +80,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDMOVideoOutputO
             GetCurrentSampleRequirements: GetCurrentSampleRequirements::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumDMO_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, citemstofetch: u32, pclsid: *mut ::windows_core::GUID, names: *mut ::windows_core::PWSTR, pcitemsfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -120,7 +118,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumDMO_Impl, c
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMediaBuffer_Impl: ::windows_core::BaseImpl {
     fn SetLength(this: &Self::This, cblength: u32) -> ::windows_core::Result<()>;
@@ -154,7 +151,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMediaBuffer_Imp
             GetBufferAndLength: GetBufferAndLength::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -300,7 +296,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMediaObject_Imp
             Lock: Lock::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMediaObjectInPlace_Impl: ::windows_core::BaseImpl {
     fn Process(this: &Self::This, ulsize: u32, pdata: *mut u8, reftimestart: i64, dwflags: u32) -> ::windows_core::Result<()>;
@@ -340,5 +335,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMediaObjectInPl
             GetLatency: GetLatency::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

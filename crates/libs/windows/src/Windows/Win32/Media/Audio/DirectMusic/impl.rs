@@ -58,7 +58,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectMusic_Imp
             SetDirectSound: SetDirectSound::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_Audio_DirectSound\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_Audio_DirectSound"))]
@@ -80,7 +79,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectMusic8_Im
             SetExternalMasterClock: SetExternalMasterClock::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectMusicBuffer_Impl: ::windows_core::BaseImpl {
     fn Flush(this: &Self::This) -> ::windows_core::Result<()>;
@@ -158,7 +156,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectMusicBuff
             SetUsedBytes: SetUsedBytes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectMusicCollection_Impl: ::windows_core::BaseImpl {
     fn GetInstrument(this: &Self::This, dwpatch: u32) -> ::windows_core::Result<IDirectMusicInstrument>;
@@ -187,7 +184,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectMusicColl
             EnumInstrument: EnumInstrument::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectMusicDownload_Impl: ::windows_core::BaseImpl {
     fn GetBuffer(this: &Self::This, ppvbuffer: *mut *mut ::core::ffi::c_void, pdwsize: *mut u32) -> ::windows_core::Result<()>;
@@ -202,7 +198,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectMusicDown
         }
         IDirectMusicDownload_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetBuffer: GetBuffer::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectMusicDownloadedInstrument_Impl: ::windows_core::BaseImpl {}
 impl ::windows_core::Iids for IDirectMusicDownloadedInstrument {
@@ -210,7 +205,6 @@ impl ::windows_core::Iids for IDirectMusicDownloadedInstrument {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectMusicDownloadedInstrument_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDirectMusicDownloadedInstrument {
     const VTABLE: Self::Vtable = { IDirectMusicDownloadedInstrument_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectMusicInstrument_Impl: ::windows_core::BaseImpl {
     fn GetPatch(this: &Self::This, pdwpatch: *mut u32) -> ::windows_core::Result<()>;
@@ -233,7 +227,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectMusicInst
             SetPatch: SetPatch::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_Audio_DirectSound\"`, `\"Win32_System_IO\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_Audio_DirectSound", feature = "Win32_System_IO"))]
@@ -341,7 +334,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectMusicPort
             GetFormat: GetFormat::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectMusicPortDownload_Impl: ::windows_core::BaseImpl {
     fn GetBuffer(this: &Self::This, dwdlid: u32) -> ::windows_core::Result<IDirectMusicDownload>;
@@ -396,7 +388,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectMusicPort
             Unload: Unload::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -504,7 +495,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectMusicSynt
             GetAppend: GetAppend::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -546,7 +536,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectMusicSynt
             AssignChannelToBuses: AssignChannelToBuses::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_Audio_DirectSound\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_Audio_DirectSound"))]
@@ -609,7 +598,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectMusicSynt
             GetDesiredBufferSize: GetDesiredBufferSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectMusicThru_Impl: ::windows_core::BaseImpl {
     fn ThruChannel(this: &Self::This, dwsourcechannelgroup: u32, dwsourcechannel: u32, dwdestinationchannelgroup: u32, dwdestinationchannel: u32, pdestinationport: ::core::option::Option<&IDirectMusicPort>) -> ::windows_core::Result<()>;
@@ -624,5 +612,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectMusicThru
         }
         IDirectMusicThru_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ThruChannel: ThruChannel::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

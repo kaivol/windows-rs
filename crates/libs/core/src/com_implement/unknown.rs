@@ -39,5 +39,4 @@ impl<Identity: ImplProvider, const OFFSET: usize> Vtable<Identity, OFFSET> for I
             Release: Release::<Identity, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as Vtable<Identity, OFFSET>>::VTABLE;
 }

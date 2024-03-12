@@ -45,7 +45,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INumberFormatter
             FormatDouble: FormatDouble::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait INumberFormatter2_Impl: ::windows_core::BaseImpl {
     fn FormatInt(this: &Self::This, value: i64) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -94,7 +93,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INumberFormatter
             FormatDouble: FormatDouble::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -240,7 +238,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INumberFormatter
             ResolvedGeographicRegion: ResolvedGeographicRegion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -293,7 +290,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INumberParser_Im
             ParseDouble: ParseDouble::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait INumberRounder_Impl: ::windows_core::BaseImpl {
     fn RoundInt32(this: &Self::This, value: i32) -> ::windows_core::Result<i32>;
@@ -372,7 +368,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INumberRounder_I
             RoundDouble: RoundDouble::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait INumberRounderOption_Impl: ::windows_core::BaseImpl {
     fn NumberRounder(this: &Self::This) -> ::windows_core::Result<INumberRounder>;
@@ -402,7 +397,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INumberRounderOp
             SetNumberRounder: SetNumberRounder::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISignedZeroOption_Impl: ::windows_core::BaseImpl {
     fn IsZeroSigned(this: &Self::This) -> ::windows_core::Result<bool>;
@@ -431,7 +425,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISignedZeroOptio
             SetIsZeroSigned: SetIsZeroSigned::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISignificantDigitsOption_Impl: ::windows_core::BaseImpl {
     fn SignificantDigits(this: &Self::This) -> ::windows_core::Result<i32>;
@@ -460,5 +453,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISignificantDigi
             SetSignificantDigits: SetSignificantDigits::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

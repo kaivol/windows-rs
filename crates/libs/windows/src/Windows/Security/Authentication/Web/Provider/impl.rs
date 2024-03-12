@@ -23,7 +23,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebAccountProvi
             ReportError: ReportError::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWebAccountProviderOperation_Impl: ::windows_core::BaseImpl {
     fn Kind(this: &Self::This) -> ::windows_core::Result<WebAccountProviderOperationKind>;
@@ -44,7 +43,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebAccountProvi
         }
         IWebAccountProviderOperation_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Kind: Kind::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Security_Authentication_Web_Core\"`"]
 #[cfg(feature = "Security_Authentication_Web_Core")]
@@ -72,7 +70,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebAccountProvi
             ReportUserInteractionRequiredWithError: ReportUserInteractionRequiredWithError::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWebAccountProviderTokenObjects_Impl: ::windows_core::BaseImpl {
     fn Operation(this: &Self::This) -> ::windows_core::Result<IWebAccountProviderOperation>;
@@ -94,7 +91,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebAccountProvi
         }
         IWebAccountProviderTokenObjects_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Operation: Operation::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"System\"`"]
 #[cfg(feature = "System")]
@@ -121,7 +117,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebAccountProvi
         }
         IWebAccountProviderTokenObjects2_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, User: User::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -179,7 +174,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebAccountProvi
             CacheExpirationTime: CacheExpirationTime::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Security_Authentication_Web_Core\"`"]
 #[cfg(feature = "Security_Authentication_Web_Core")]
@@ -202,5 +196,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebAccountProvi
             ReportUserCanceled: ReportUserCanceled::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

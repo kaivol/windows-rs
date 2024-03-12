@@ -45,7 +45,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IABContainer_Imp
             ResolveNames: ResolveNames::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -152,7 +151,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAddrBook_Impl, 
             PrepareRecips: PrepareRecips::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -164,7 +162,6 @@ impl ::windows_core::Iids for IAttach {
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAttach_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IAttach {
     const VTABLE: Self::Vtable = { IAttach_Vtbl { base__: <IMAPIProp as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -213,7 +210,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDistList_Impl, 
             ResolveNames: ResolveNames::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -232,7 +228,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMAPIAdviseSink_
         }
         IMAPIAdviseSink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnNotify: OnNotify::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -286,7 +281,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMAPIContainer_I
             GetSearchCriteria: GetSearchCriteria::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMAPIControl_Impl: ::windows_core::BaseImpl {
     fn GetLastError(this: &Self::This, hresult: ::windows_core::HRESULT, ulflags: u32) -> ::windows_core::Result<*mut MAPIERROR>;
@@ -320,7 +314,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMAPIControl_Imp
             GetState: GetState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -410,7 +403,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMAPIFolder_Impl
             EmptyFolder: EmptyFolder::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMAPIProgress_Impl: ::windows_core::BaseImpl {
     fn Progress(this: &Self::This, ulvalue: u32, ulcount: u32, ultotal: u32) -> ::windows_core::Result<()>;
@@ -448,7 +440,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMAPIProgress_Im
             SetLimits: SetLimits::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -520,7 +511,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMAPIProp_Impl, 
             GetIDsFromNames: GetIDsFromNames::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -557,7 +547,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMAPIStatus_Impl
             FlushQueues: FlushQueues::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -689,7 +678,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMAPITable_Impl,
             SetCollapseState: SetCollapseState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -701,7 +689,6 @@ impl ::windows_core::Iids for IMailUser {
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMailUser_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IMailUser {
     const VTABLE: Self::Vtable = { IMailUser_Vtbl { base__: <IMAPIProp as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -776,7 +763,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMessage_Impl, c
             SetReadFlag: SetReadFlag::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -882,7 +868,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMsgStore_Impl, 
             NotifyNewMail: NotifyNewMail::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -894,7 +879,6 @@ impl ::windows_core::Iids for IProfSect {
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProfSect_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IProfSect {
     const VTABLE: Self::Vtable = { IProfSect_Vtbl { base__: <IMAPIProp as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -931,7 +915,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPropData_Impl, 
             HrAddObjProps: HrAddObjProps::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -997,7 +980,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProviderAdmin_I
             OpenProfileSection: OpenProfileSection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -1059,7 +1041,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITableData_Impl,
             HrDeleteRows: HrDeleteRows::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1078,7 +1059,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWABExtInit_Impl
         }
         IWABExtInit_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Initialize: Initialize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1172,5 +1152,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWABObject_Impl,
             SetMe: SetMe::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

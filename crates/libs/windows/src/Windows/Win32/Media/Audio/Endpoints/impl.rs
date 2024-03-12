@@ -11,7 +11,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioEndpointFo
         }
         IAudioEndpointFormatControl_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ResetToDefault: ResetToDefault::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_Audio_Apo\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_Audio_Apo"))]
@@ -38,7 +37,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioEndpointLa
             ReleaseOutputDataPointerForLastBuffer: ReleaseOutputDataPointerForLastBuffer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioEndpointOffloadStreamMeter_Impl: ::windows_core::BaseImpl {
     fn GetMeterChannelCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -73,7 +71,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioEndpointOf
             GetMeteringData: GetMeteringData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioEndpointOffloadStreamMute_Impl: ::windows_core::BaseImpl {
     fn SetMute(this: &Self::This, bmuted: u8) -> ::windows_core::Result<()>;
@@ -102,7 +99,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioEndpointOf
             GetMute: GetMute::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Media_KernelStreaming\"`"]
 #[cfg(feature = "Win32_Media_KernelStreaming")]
@@ -146,7 +142,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioEndpointOf
             GetChannelVolumes: GetChannelVolumes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -295,7 +290,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioEndpointVo
             GetVolumeRange: GetVolumeRange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -314,7 +308,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioEndpointVo
         }
         IAudioEndpointVolumeCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnNotify: OnNotify::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -336,7 +329,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioEndpointVo
             GetVolumeRangeChannel: GetVolumeRangeChannel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -369,7 +361,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioLfxControl
             GetLocalEffectsState: GetLocalEffectsState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioMeterInformation_Impl: ::windows_core::BaseImpl {
     fn GetPeakValue(this: &Self::This) -> ::windows_core::Result<f32>;
@@ -420,7 +411,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioMeterInfor
             QueryHardwareSupport: QueryHardwareSupport::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -474,5 +464,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHardwareAudioEn
             GetGfxState: GetGfxState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

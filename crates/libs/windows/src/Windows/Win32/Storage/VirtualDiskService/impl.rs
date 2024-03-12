@@ -35,7 +35,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumVdsObject_I
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsAdmin_Impl: ::windows_core::BaseImpl {
     fn RegisterProvider(this: &Self::This, providerid: &::windows_core::GUID, providerclsid: &::windows_core::GUID, pwszname: &::windows_core::PCWSTR, r#type: VDS_PROVIDER_TYPE, pwszmachinename: &::windows_core::PCWSTR, pwszversion: &::windows_core::PCWSTR, guidversionid: &::windows_core::GUID) -> ::windows_core::Result<()>;
@@ -58,7 +57,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsAdmin_Impl, 
             UnregisterProvider: UnregisterProvider::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -143,7 +141,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsAdvancedDisk
             Clean: Clean::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -165,7 +162,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsAdvancedDisk
             ChangePartitionType: ChangePartitionType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsAdvancedDisk3_Impl: ::windows_core::BaseImpl {
     fn GetProperties(this: &Self::This, padvdiskprop: *mut VDS_ADVANCEDDISK_PROP) -> ::windows_core::Result<()>;
@@ -194,7 +190,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsAdvancedDisk
             GetUniqueId: GetUniqueId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsAdviseSink_Impl: ::windows_core::BaseImpl {
     fn OnNotify(this: &Self::This, lnumberofnotifications: i32, pnotificationarray: *const VDS_NOTIFICATION) -> ::windows_core::Result<()>;
@@ -209,7 +204,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsAdviseSink_I
         }
         IVdsAdviseSink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnNotify: OnNotify::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsAsync_Impl: ::windows_core::BaseImpl {
     fn Cancel(this: &Self::This) -> ::windows_core::Result<()>;
@@ -237,7 +231,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsAsync_Impl, 
             QueryStatus: QueryStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsController_Impl: ::windows_core::BaseImpl {
     fn GetProperties(this: &Self::This, pcontrollerprop: *mut VDS_CONTROLLER_PROP) -> ::windows_core::Result<()>;
@@ -302,7 +295,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsController_I
             SetStatus: SetStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsControllerControllerPort_Impl: ::windows_core::BaseImpl {
     fn QueryControllerPorts(this: &Self::This) -> ::windows_core::Result<IEnumVdsObject>;
@@ -326,7 +318,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsControllerCo
             QueryControllerPorts: QueryControllerPorts::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsControllerPort_Impl: ::windows_core::BaseImpl {
     fn GetProperties(this: &Self::This, pportprop: *mut VDS_PORT_PROP) -> ::windows_core::Result<()>;
@@ -376,7 +367,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsControllerPo
             SetStatus: SetStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -404,7 +394,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsCreatePartit
             CreatePartitionEx: CreatePartitionEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -462,7 +451,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsDisk_Impl, c
             ClearFlags: ClearFlags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -481,7 +469,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsDisk2_Impl, 
         }
         IVdsDisk2_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetSANMode: SetSANMode::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsDisk3_Impl: ::windows_core::BaseImpl {
     fn GetProperties2(this: &Self::This, pdiskproperties: *mut VDS_DISK_PROP2) -> ::windows_core::Result<()>;
@@ -504,7 +491,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsDisk3_Impl, 
             QueryFreeExtents: QueryFreeExtents::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsDiskOnline_Impl: ::windows_core::BaseImpl {
     fn Online(this: &Self::This) -> ::windows_core::Result<()>;
@@ -527,7 +513,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsDiskOnline_I
             Offline: Offline::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -576,7 +561,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsDiskPartitio
             FormatPartitionEx: FormatPartitionEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsDiskPartitionMF2_Impl: ::windows_core::BaseImpl {
     fn FormatPartitionEx2(this: &Self::This, ulloffset: u64, pwszfilesystemtypename: &::windows_core::PCWSTR, usfilesystemrevision: u16, uldesiredunitallocationsize: u32, pwszlabel: &::windows_core::PCWSTR, options: u32) -> ::windows_core::Result<IVdsAsync>;
@@ -600,7 +584,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsDiskPartitio
             FormatPartitionEx2: FormatPartitionEx2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -653,7 +636,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsDrive_Impl, 
             SetStatus: SetStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsDrive2_Impl: ::windows_core::BaseImpl {
     fn GetProperties2(this: &Self::This, pdriveprop2: *mut VDS_DRIVE_PROP2) -> ::windows_core::Result<()>;
@@ -668,7 +650,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsDrive2_Impl,
         }
         IVdsDrive2_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetProperties2: GetProperties2::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsHbaPort_Impl: ::windows_core::BaseImpl {
     fn GetProperties(this: &Self::This, phbaportprop: *mut VDS_HBAPORT_PROP) -> ::windows_core::Result<()>;
@@ -691,7 +672,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsHbaPort_Impl
             SetAllPathStatuses: SetAllPathStatuses::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsHwProvider_Impl: ::windows_core::BaseImpl {
     fn QuerySubSystems(this: &Self::This) -> ::windows_core::Result<IEnumVdsObject>;
@@ -725,7 +705,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsHwProvider_I
             Refresh: Refresh::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -753,7 +732,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsHwProviderPr
             QueryIfCreatedLun: QueryIfCreatedLun::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsHwProviderPrivateMpio_Impl: ::windows_core::BaseImpl {
     fn SetAllPathStatusesFromHbaPort(this: &Self::This, hbaportprop: &VDS_HBAPORT_PROP, status: VDS_PATH_STATUS) -> ::windows_core::Result<()>;
@@ -771,7 +749,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsHwProviderPr
             SetAllPathStatusesFromHbaPort: SetAllPathStatusesFromHbaPort::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -821,7 +798,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsHwProviderSt
             QueryMaxLunCreateSizeInStoragePool: QueryMaxLunCreateSizeInStoragePool::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsHwProviderType_Impl: ::windows_core::BaseImpl {
     fn GetProviderType(this: &Self::This) -> ::windows_core::Result<VDS_HWPROVIDER_TYPE>;
@@ -845,7 +821,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsHwProviderTy
             GetProviderType: GetProviderType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsHwProviderType2_Impl: ::windows_core::BaseImpl {
     fn GetProviderType2(this: &Self::This) -> ::windows_core::Result<VDS_HWPROVIDER_TYPE>;
@@ -869,7 +844,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsHwProviderTy
             GetProviderType2: GetProviderType2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -924,7 +898,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsIscsiInitiat
             LogoutFromTarget: LogoutFromTarget::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsIscsiInitiatorPortal_Impl: ::windows_core::BaseImpl {
     fn GetProperties(this: &Self::This, pinitiatorportalprop: *mut VDS_ISCSI_INITIATOR_PORTAL_PROP) -> ::windows_core::Result<()>;
@@ -974,7 +947,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsIscsiInitiat
             SetIpsecSecurity: SetIpsecSecurity::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsIscsiPortal_Impl: ::windows_core::BaseImpl {
     fn GetProperties(this: &Self::This, pportalprop: *mut VDS_ISCSI_PORTAL_PROP) -> ::windows_core::Result<()>;
@@ -1040,7 +1012,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsIscsiPortal_
             SetIpsecSecurity: SetIpsecSecurity::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsIscsiPortalGroup_Impl: ::windows_core::BaseImpl {
     fn GetProperties(this: &Self::This, pportalgroupprop: *mut VDS_ISCSI_PORTALGROUP_PROP) -> ::windows_core::Result<()>;
@@ -1113,7 +1084,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsIscsiPortalG
             Delete: Delete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsIscsiPortalLocal_Impl: ::windows_core::BaseImpl {
     fn SetIpsecSecurityLocal(this: &Self::This, ullsecurityflags: u64, pipseckey: *const VDS_ISCSI_IPSEC_KEY) -> ::windows_core::Result<()>;
@@ -1131,7 +1101,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsIscsiPortalL
             SetIpsecSecurityLocal: SetIpsecSecurityLocal::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1228,7 +1197,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsIscsiTarget_
             GetConnectedInitiators: GetConnectedInitiators::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1384,7 +1352,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsLun_Impl, co
             QueryMaxLunExtendSize: QueryMaxLunExtendSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1411,7 +1378,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsLun2_Impl, c
             ApplyHints2: ApplyHints2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsLunControllerPorts_Impl: ::windows_core::BaseImpl {
     fn AssociateControllerPorts(this: &Self::This, pactivecontrollerportidarray: *const ::windows_core::GUID, lnumberofactivecontrollerports: i32, pinactivecontrollerportidarray: *const ::windows_core::GUID, lnumberofinactivecontrollerports: i32) -> ::windows_core::Result<()>;
@@ -1440,7 +1406,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsLunControlle
             QueryActiveControllerPorts: QueryActiveControllerPorts::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsLunIscsi_Impl: ::windows_core::BaseImpl {
     fn AssociateTargets(this: &Self::This, ptargetidarray: *const ::windows_core::GUID, lnumberoftargets: i32) -> ::windows_core::Result<()>;
@@ -1469,7 +1434,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsLunIscsi_Imp
             QueryAssociatedTargets: QueryAssociatedTargets::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1512,7 +1476,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsLunMpio_Impl
             GetSupportedLbPolicies: GetSupportedLbPolicies::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsLunNaming_Impl: ::windows_core::BaseImpl {
     fn SetFriendlyName(this: &Self::This, pwszfriendlyname: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -1530,7 +1493,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsLunNaming_Im
             SetFriendlyName: SetFriendlyName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsLunNumber_Impl: ::windows_core::BaseImpl {
     fn GetLunNumber(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1551,7 +1513,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsLunNumber_Im
         }
         IVdsLunNumber_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetLunNumber: GetLunNumber::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1599,7 +1560,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsLunPlex_Impl
             ApplyHints: ApplyHints::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsMaintenance_Impl: ::windows_core::BaseImpl {
     fn StartMaintenance(this: &Self::This, operation: VDS_MAINTENANCE_OPERATION) -> ::windows_core::Result<()>;
@@ -1627,7 +1587,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsMaintenance_
             PulseMaintenance: PulseMaintenance::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Vhd\"`"]
 #[cfg(feature = "Win32_Storage_Vhd")]
@@ -1698,7 +1657,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsOpenVDisk_Im
             Expand: Expand::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1801,7 +1759,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsPack_Impl, c
             Recover: Recover::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsPack2_Impl: ::windows_core::BaseImpl {
     fn CreateVolume2(this: &Self::This, r#type: VDS_VOLUME_TYPE, pinputdiskarray: *const VDS_INPUT_DISK, lnumberofdisks: i32, ulstripesize: u32, ulalign: u32) -> ::windows_core::Result<IVdsAsync>;
@@ -1822,7 +1779,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsPack2_Impl, 
         }
         IVdsPack2_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateVolume2: CreateVolume2::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsProvider_Impl: ::windows_core::BaseImpl {
     fn GetProperties(this: &Self::This, pproviderprop: *mut VDS_PROVIDER_PROP) -> ::windows_core::Result<()>;
@@ -1837,7 +1793,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsProvider_Imp
         }
         IVdsProvider_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetProperties: GetProperties::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1875,7 +1830,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsProviderPriv
             OnUnload: OnUnload::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsProviderSupport_Impl: ::windows_core::BaseImpl {
     fn GetVersionSupport(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1899,7 +1853,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsProviderSupp
             GetVersionSupport: GetVersionSupport::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsRemovable_Impl: ::windows_core::BaseImpl {
     fn QueryMedia(this: &Self::This) -> ::windows_core::Result<()>;
@@ -1922,7 +1875,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsRemovable_Im
             Eject: Eject::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2060,7 +2012,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsService_Impl
             ClearFlags: ClearFlags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsServiceHba_Impl: ::windows_core::BaseImpl {
     fn QueryHbaPorts(this: &Self::This) -> ::windows_core::Result<IEnumVdsObject>;
@@ -2081,7 +2032,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsServiceHba_I
         }
         IVdsServiceHba_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, QueryHbaPorts: QueryHbaPorts::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsServiceInitialization_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, pwszmachinename: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -2096,7 +2046,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsServiceIniti
         }
         IVdsServiceInitialization_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Initialize: Initialize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsServiceIscsi_Impl: ::windows_core::BaseImpl {
     fn GetInitiatorName(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -2156,7 +2105,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsServiceIscsi
             RememberTargetSharedSecret: RememberTargetSharedSecret::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsServiceLoader_Impl: ::windows_core::BaseImpl {
     fn LoadService(this: &Self::This, pwszmachinename: &::windows_core::PCWSTR) -> ::windows_core::Result<IVdsService>;
@@ -2177,7 +2125,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsServiceLoade
         }
         IVdsServiceLoader_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, LoadService: LoadService::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsServiceSAN_Impl: ::windows_core::BaseImpl {
     fn GetSANPolicy(this: &Self::This) -> ::windows_core::Result<VDS_SAN_POLICY>;
@@ -2206,7 +2153,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsServiceSAN_I
             SetSANPolicy: SetSANPolicy::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsServiceSw_Impl: ::windows_core::BaseImpl {
     fn GetDiskObject(this: &Self::This, pwszdeviceid: &::windows_core::PCWSTR) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -2227,7 +2173,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsServiceSw_Im
         }
         IVdsServiceSw_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDiskObject: GetDiskObject::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2260,7 +2205,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsServiceUnins
             UninstallDisks: UninstallDisks::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2325,7 +2269,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsStoragePool_
             QueryAllocatedStoragePools: QueryAllocatedStoragePools::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2444,7 +2387,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsSubSystem_Im
             QueryMaxLunCreateSize: QueryMaxLunCreateSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2499,7 +2441,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsSubSystem2_I
             QueryMaxLunCreateSize2: QueryMaxLunCreateSize2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsSubSystemImportTarget_Impl: ::windows_core::BaseImpl {
     fn GetImportTarget(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -2528,7 +2469,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsSubSystemImp
             SetImportTarget: SetImportTarget::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsSubSystemInterconnect_Impl: ::windows_core::BaseImpl {
     fn GetSupportedInterconnects(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -2552,7 +2492,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsSubSystemInt
             GetSupportedInterconnects: GetSupportedInterconnects::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsSubSystemIscsi_Impl: ::windows_core::BaseImpl {
     fn QueryTargets(this: &Self::This) -> ::windows_core::Result<IEnumVdsObject>;
@@ -2603,7 +2542,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsSubSystemIsc
             SetIpsecGroupPresharedKey: SetIpsecGroupPresharedKey::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsSubSystemNaming_Impl: ::windows_core::BaseImpl {
     fn SetFriendlyName(this: &Self::This, pwszfriendlyname: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -2621,7 +2559,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsSubSystemNam
             SetFriendlyName: SetFriendlyName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsSwProvider_Impl: ::windows_core::BaseImpl {
     fn QueryPacks(this: &Self::This) -> ::windows_core::Result<IEnumVdsObject>;
@@ -2656,7 +2593,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsSwProvider_I
             CreatePack: CreatePack::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_Vhd\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_Vhd"))]
@@ -2711,7 +2647,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsVDisk_Impl, 
             GetDeviceName: GetDeviceName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Vhd\"`"]
 #[cfg(feature = "Win32_Storage_Vhd")]
@@ -2771,7 +2706,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsVdProvider_I
             GetVDiskFromDisk: GetVDiskFromDisk::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2885,7 +2819,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsVolume_Impl,
             ClearFlags: ClearFlags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsVolume2_Impl: ::windows_core::BaseImpl {
     fn GetProperties2(this: &Self::This, pvolumeproperties: *mut VDS_VOLUME_PROP2) -> ::windows_core::Result<()>;
@@ -2900,7 +2833,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsVolume2_Impl
         }
         IVdsVolume2_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetProperties2: GetProperties2::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2973,7 +2905,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsVolumeMF_Imp
             ClearFileSystemFlags: ClearFileSystemFlags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3017,7 +2948,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsVolumeMF2_Im
             FormatEx: FormatEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsVolumeMF3_Impl: ::windows_core::BaseImpl {
     fn QueryVolumeGuidPathnames(this: &Self::This, pwszpatharray: *mut *mut ::windows_core::PWSTR, pulnumberofpaths: *mut u32) -> ::windows_core::Result<()>;
@@ -3051,7 +2981,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsVolumeMF3_Im
             OfflineVolume: OfflineVolume::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsVolumeOnline_Impl: ::windows_core::BaseImpl {
     fn Online(this: &Self::This) -> ::windows_core::Result<()>;
@@ -3066,7 +2995,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsVolumeOnline
         }
         IVdsVolumeOnline_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Online: Online::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsVolumePlex_Impl: ::windows_core::BaseImpl {
     fn GetProperties(this: &Self::This, pplexproperties: *mut VDS_VOLUME_PLEX_PROP) -> ::windows_core::Result<()>;
@@ -3111,7 +3039,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsVolumePlex_I
             Repair: Repair::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVdsVolumeShrink_Impl: ::windows_core::BaseImpl {
     fn QueryMaxReclaimableBytes(this: &Self::This) -> ::windows_core::Result<u64>;
@@ -3146,5 +3073,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVdsVolumeShrink
             Shrink: Shrink::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

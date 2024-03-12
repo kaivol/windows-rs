@@ -37,7 +37,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioEffectDefi
             Properties: Properties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Media_MediaProperties\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Media_MediaProperties"))]
@@ -98,7 +97,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBasicAudioEffec
             DiscardQueuedFrames: DiscardQueuedFrames::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Graphics_DirectX_Direct3D11\"`, `\"Media_MediaProperties\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Graphics_DirectX_Direct3D11", feature = "Media_MediaProperties"))]
@@ -181,7 +179,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBasicVideoEffec
             DiscardQueuedFrames: DiscardQueuedFrames::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Graphics_DirectX_Direct3D11\"`, `\"Media_MediaProperties\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Graphics_DirectX_Direct3D11", feature = "Media_MediaProperties"))]
@@ -230,7 +227,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVideoCompositor
             DiscardQueuedFrames: DiscardQueuedFrames::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -271,7 +267,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVideoCompositor
             Properties: Properties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -312,5 +307,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVideoEffectDefi
             Properties: Properties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

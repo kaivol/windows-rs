@@ -8,7 +8,6 @@ impl ::windows_core::Iids for IDummyMBNUCMExt {
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDummyMBNUCMExt_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDummyMBNUCMExt {
     const VTABLE: Self::Vtable = { IDummyMBNUCMExt_Vtbl { base__: <super::super::System::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnConnection_Impl: ::windows_core::BaseImpl {
     fn ConnectionID(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -92,7 +91,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnConnection_I
             GetActivationNetworkError: GetActivationNetworkError::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -131,7 +129,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnConnectionCo
             SetProvisionedContext: SetProvisionedContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnConnectionContextEvents_Impl: ::windows_core::BaseImpl {
     fn OnProvisionedContextListChange(this: &Self::This, newinterface: ::core::option::Option<&IMbnConnectionContext>) -> ::windows_core::Result<()>;
@@ -154,7 +151,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnConnectionCo
             OnSetProvisionedContextComplete: OnSetProvisionedContextComplete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnConnectionEvents_Impl: ::windows_core::BaseImpl {
     fn OnConnectComplete(this: &Self::This, newconnection: ::core::option::Option<&IMbnConnection>, requestid: u32, status: ::windows_core::HRESULT) -> ::windows_core::Result<()>;
@@ -187,7 +183,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnConnectionEv
             OnVoiceCallStateChange: OnVoiceCallStateChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -226,7 +221,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnConnectionMa
             GetConnections: GetConnections::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnConnectionManagerEvents_Impl: ::windows_core::BaseImpl {
     fn OnConnectionArrival(this: &Self::This, newconnection: ::core::option::Option<&IMbnConnection>) -> ::windows_core::Result<()>;
@@ -249,7 +243,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnConnectionMa
             OnConnectionRemoval: OnConnectionRemoval::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnConnectionProfile_Impl: ::windows_core::BaseImpl {
     fn GetProfileXmlData(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -283,7 +276,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnConnectionPr
             Delete: Delete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnConnectionProfileEvents_Impl: ::windows_core::BaseImpl {
     fn OnProfileUpdate(this: &Self::This, newprofile: ::core::option::Option<&IMbnConnectionProfile>) -> ::windows_core::Result<()>;
@@ -301,7 +293,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnConnectionPr
             OnProfileUpdate: OnProfileUpdate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -345,7 +336,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnConnectionPr
             CreateConnectionProfile: CreateConnectionProfile::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnConnectionProfileManagerEvents_Impl: ::windows_core::BaseImpl {
     fn OnConnectionProfileArrival(this: &Self::This, newconnectionprofile: ::core::option::Option<&IMbnConnectionProfile>) -> ::windows_core::Result<()>;
@@ -368,7 +358,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnConnectionPr
             OnConnectionProfileRemoval: OnConnectionProfileRemoval::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -517,7 +506,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnDeviceServic
             IsDataSessionOpen: IsDataSessionOpen::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnDeviceServiceStateEvents_Impl: ::windows_core::BaseImpl {
     fn OnSessionsStateChange(this: &Self::This, interfaceid: &::windows_core::BSTR, statechange: MBN_DEVICE_SERVICE_SESSIONS_STATE) -> ::windows_core::Result<()>;
@@ -535,7 +523,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnDeviceServic
             OnSessionsStateChange: OnSessionsStateChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -596,7 +583,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnDeviceServic
             MaxDataSize: MaxDataSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -668,7 +654,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnDeviceServic
             OnInterfaceStateChange: OnInterfaceStateChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnDeviceServicesManager_Impl: ::windows_core::BaseImpl {
     fn GetDeviceServicesContext(this: &Self::This, networkinterfaceid: &::windows_core::BSTR) -> ::windows_core::Result<IMbnDeviceServicesContext>;
@@ -692,7 +677,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnDeviceServic
             GetDeviceServicesContext: GetDeviceServicesContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -818,7 +802,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnInterface_Im
             GetConnection: GetConnection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnInterfaceEvents_Impl: ::windows_core::BaseImpl {
     fn OnInterfaceCapabilityAvailable(this: &Self::This, newinterface: ::core::option::Option<&IMbnInterface>) -> ::windows_core::Result<()>;
@@ -871,7 +854,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnInterfaceEve
             OnScanNetworkComplete: OnScanNetworkComplete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -910,7 +892,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnInterfaceMan
             GetInterfaces: GetInterfaces::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnInterfaceManagerEvents_Impl: ::windows_core::BaseImpl {
     fn OnInterfaceArrival(this: &Self::This, newinterface: ::core::option::Option<&IMbnInterface>) -> ::windows_core::Result<()>;
@@ -933,7 +914,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnInterfaceMan
             OnInterfaceRemoval: OnInterfaceRemoval::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1010,7 +990,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnMultiCarrier
             ScanNetwork: ScanNetwork::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnMultiCarrierEvents_Impl: ::windows_core::BaseImpl {
     fn OnSetHomeProviderComplete(this: &Self::This, mbninterface: ::core::option::Option<&IMbnMultiCarrier>, requestid: u32, status: ::windows_core::HRESULT) -> ::windows_core::Result<()>;
@@ -1048,7 +1027,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnMultiCarrier
             OnInterfaceCapabilityChange: OnInterfaceCapabilityChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnPin_Impl: ::windows_core::BaseImpl {
     fn PinType(this: &Self::This) -> ::windows_core::Result<MBN_PIN_TYPE>;
@@ -1182,7 +1160,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnPin_Impl, co
             GetPinManager: GetPinManager::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnPinEvents_Impl: ::windows_core::BaseImpl {
     fn OnEnableComplete(this: &Self::This, pin: ::core::option::Option<&IMbnPin>, pininfo: *const MBN_PIN_INFO, requestid: u32, status: ::windows_core::HRESULT) -> ::windows_core::Result<()>;
@@ -1220,7 +1197,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnPinEvents_Im
             OnUnblockComplete: OnUnblockComplete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1270,7 +1246,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnPinManager_I
             GetPinState: GetPinState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnPinManagerEvents_Impl: ::windows_core::BaseImpl {
     fn OnPinListAvailable(this: &Self::This, pinmanager: ::core::option::Option<&IMbnPinManager>) -> ::windows_core::Result<()>;
@@ -1293,7 +1268,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnPinManagerEv
             OnGetPinStateComplete: OnGetPinStateComplete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnRadio_Impl: ::windows_core::BaseImpl {
     fn SoftwareRadioState(this: &Self::This) -> ::windows_core::Result<MBN_RADIO>;
@@ -1339,7 +1313,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnRadio_Impl, 
             SetSoftwareRadioState: SetSoftwareRadioState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnRadioEvents_Impl: ::windows_core::BaseImpl {
     fn OnRadioStateChange(this: &Self::This, newinterface: ::core::option::Option<&IMbnRadio>) -> ::windows_core::Result<()>;
@@ -1362,7 +1335,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnRadioEvents_
             OnSetSoftwareRadioStateComplete: OnSetSoftwareRadioStateComplete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnRegistration_Impl: ::windows_core::BaseImpl {
     fn GetRegisterState(this: &Self::This) -> ::windows_core::Result<MBN_REGISTER_STATE>;
@@ -1485,7 +1457,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnRegistration
             SetRegisterMode: SetRegisterMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnRegistrationEvents_Impl: ::windows_core::BaseImpl {
     fn OnRegisterModeAvailable(this: &Self::This, newinterface: ::core::option::Option<&IMbnRegistration>) -> ::windows_core::Result<()>;
@@ -1518,7 +1489,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnRegistration
             OnSetRegisterModeComplete: OnSetRegisterModeComplete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1543,7 +1513,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnServiceActiv
         }
         IMbnServiceActivation_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Activate: Activate::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1565,7 +1534,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnServiceActiv
             OnActivationComplete: OnActivationComplete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnSignal_Impl: ::windows_core::BaseImpl {
     fn GetSignalStrength(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1600,7 +1568,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnSignal_Impl,
             GetSignalError: GetSignalError::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnSignalEvents_Impl: ::windows_core::BaseImpl {
     fn OnSignalStateChange(this: &Self::This, newinterface: ::core::option::Option<&IMbnSignal>) -> ::windows_core::Result<()>;
@@ -1618,7 +1585,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnSignalEvents
             OnSignalStateChange: OnSignalStateChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1723,7 +1689,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnSms_Impl, co
             GetSmsStatus: GetSmsStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMbnSmsConfiguration_Impl: ::windows_core::BaseImpl {
     fn ServiceCenterAddress(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -1790,7 +1755,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnSmsConfigura
             SetSmsFormat: SetSmsFormat::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -1842,7 +1806,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnSmsEvents_Im
             OnSmsStatusChange: OnSmsStatusChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1903,7 +1866,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnSmsReadMsgPd
             Message: Message::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -2008,7 +1970,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnSmsReadMsgTe
             Message: Message::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -2058,7 +2019,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnSubscriberIn
             TelephoneNumbers: TelephoneNumbers::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -2085,7 +2045,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnVendorSpecif
             OnSetVendorSpecificComplete: OnSetVendorSpecificComplete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -2113,5 +2072,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMbnVendorSpecif
             SetVendorSpecific: SetVendorSpecific::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

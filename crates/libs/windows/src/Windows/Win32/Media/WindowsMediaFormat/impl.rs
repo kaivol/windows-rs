@@ -77,7 +77,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INSNetSourceCrea
             Shutdown: Shutdown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait INSSBuffer_Impl: ::windows_core::BaseImpl {
     fn GetLength(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -133,7 +132,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INSSBuffer_Impl,
             GetBufferAndLength: GetBufferAndLength::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait INSSBuffer2_Impl: ::windows_core::BaseImpl + INSSBuffer_Impl {
     fn GetSampleProperties(this: &Self::This, cbproperties: u32) -> ::windows_core::Result<u8>;
@@ -162,7 +160,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INSSBuffer2_Impl
             SetSampleProperties: SetSampleProperties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait INSSBuffer3_Impl: ::windows_core::BaseImpl + INSSBuffer2_Impl {
     fn SetProperty(this: &Self::This, guidbufferproperty: &::windows_core::GUID, pvbufferproperty: *const ::core::ffi::c_void, dwbufferpropertysize: u32) -> ::windows_core::Result<()>;
@@ -185,7 +182,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INSSBuffer3_Impl
             GetProperty: GetProperty::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait INSSBuffer4_Impl: ::windows_core::BaseImpl + INSSBuffer3_Impl {
     fn GetPropertyCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -214,7 +210,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INSSBuffer4_Impl
             GetPropertyByIndex: GetPropertyByIndex::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMAddressAccess_Impl: ::windows_core::BaseImpl {
     fn GetAccessEntryCount(this: &Self::This, aetype: WM_AETYPE) -> ::windows_core::Result<u32>;
@@ -259,7 +254,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMAddressAccess
             RemoveAccessEntry: RemoveAccessEntry::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMAddressAccess2_Impl: ::windows_core::BaseImpl + IWMAddressAccess_Impl {
     fn GetAccessEntryEx(this: &Self::This, aetype: WM_AETYPE, dwentrynum: u32, pbstraddress: *mut ::windows_core::BSTR, pbstrmask: *mut ::windows_core::BSTR) -> ::windows_core::Result<()>;
@@ -282,7 +276,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMAddressAccess
             AddAccessEntryEx: AddAccessEntryEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMAuthorizer_Impl: ::windows_core::BaseImpl {
     fn GetCertCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -328,7 +321,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMAuthorizer_Im
             GetSharedData: GetSharedData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMBackupRestoreProps_Impl: ::windows_core::BaseImpl {
     fn GetPropCount(this: &Self::This) -> ::windows_core::Result<u16>;
@@ -377,7 +369,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMBackupRestore
             RemoveAllProps: RemoveAllProps::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMBandwidthSharing_Impl: ::windows_core::BaseImpl + IWMStreamList_Impl {
     fn GetType(this: &Self::This) -> ::windows_core::Result<::windows_core::GUID>;
@@ -416,7 +407,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMBandwidthShar
             SetBandwidth: SetBandwidth::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMClientConnections_Impl: ::windows_core::BaseImpl {
     fn GetClientCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -451,7 +441,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMClientConnect
             GetClientProperties: GetClientProperties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMClientConnections2_Impl: ::windows_core::BaseImpl + IWMClientConnections_Impl {
     fn GetClientInfo(this: &Self::This, dwclientnum: u32, pwsznetworkaddress: ::windows_core::PWSTR, pcchnetworkaddress: *mut u32, pwszport: ::windows_core::PWSTR, pcchport: *mut u32, pwszdnsname: ::windows_core::PWSTR, pcchdnsname: *mut u32) -> ::windows_core::Result<()>;
@@ -466,7 +455,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMClientConnect
         }
         IWMClientConnections2_Vtbl { base__: <IWMClientConnections as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetClientInfo: GetClientInfo::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMCodecInfo_Impl: ::windows_core::BaseImpl {
     fn GetCodecInfoCount(this: &Self::This, guidtype: *const ::windows_core::GUID) -> ::windows_core::Result<u32>;
@@ -512,7 +500,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMCodecInfo_Imp
             GetCodecFormat: GetCodecFormat::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMCodecInfo2_Impl: ::windows_core::BaseImpl + IWMCodecInfo_Impl {
     fn GetCodecName(this: &Self::This, guidtype: *const ::windows_core::GUID, dwcodecindex: u32, wszname: ::windows_core::PWSTR, pcchname: *mut u32) -> ::windows_core::Result<()>;
@@ -535,7 +522,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMCodecInfo2_Im
             GetCodecFormatDesc: GetCodecFormatDesc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMCodecInfo3_Impl: ::windows_core::BaseImpl + IWMCodecInfo2_Impl {
     fn GetCodecFormatProp(this: &Self::This, guidtype: *const ::windows_core::GUID, dwcodecindex: u32, dwformatindex: u32, pszname: &::windows_core::PCWSTR, ptype: *mut WMT_ATTR_DATATYPE, pvalue: *mut u8, pdwsize: *mut u32) -> ::windows_core::Result<()>;
@@ -568,7 +554,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMCodecInfo3_Im
             GetCodecEnumerationSetting: GetCodecEnumerationSetting::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMCredentialCallback_Impl: ::windows_core::BaseImpl {
     fn AcquireCredentials(this: &Self::This, pwszrealm: &::windows_core::PCWSTR, pwszsite: &::windows_core::PCWSTR, pwszuser: ::windows_core::PWSTR, cchuser: u32, pwszpassword: ::windows_core::PWSTR, cchpassword: u32, hrstatus: ::windows_core::HRESULT, pdwflags: *mut u32) -> ::windows_core::Result<()>;
@@ -586,7 +571,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMCredentialCal
             AcquireCredentials: AcquireCredentials::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMDRMEditor_Impl: ::windows_core::BaseImpl {
     fn GetDRMProperty(this: &Self::This, pwstrname: &::windows_core::PCWSTR, pdwtype: *mut WMT_ATTR_DATATYPE, pvalue: *mut u8, pcblength: *mut u16) -> ::windows_core::Result<()>;
@@ -601,7 +585,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMDRMEditor_Imp
         }
         IWMDRMEditor_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDRMProperty: GetDRMProperty::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMDRMMessageParser_Impl: ::windows_core::BaseImpl {
     fn ParseRegistrationReqMsg(this: &Self::This, pbregistrationreqmsg: *const u8, cbregistrationreqmsg: u32, ppdevicecert: *mut ::core::option::Option<INSSBuffer>, pdeviceserialnumber: *mut DRM_VAL16) -> ::windows_core::Result<()>;
@@ -624,7 +607,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMDRMMessagePar
             ParseLicenseRequestMsg: ParseLicenseRequestMsg::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMDRMReader_Impl: ::windows_core::BaseImpl {
     fn AcquireLicense(this: &Self::This, dwflags: u32) -> ::windows_core::Result<()>;
@@ -677,7 +659,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMDRMReader_Imp
             GetDRMProperty: GetDRMProperty::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -714,7 +695,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMDRMReader2_Im
             TryNextLicense: TryNextLicense::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -733,7 +713,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMDRMReader3_Im
         }
         IWMDRMReader3_Vtbl { base__: <IWMDRMReader2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetInclusionList: GetInclusionList::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMDRMTranscryptionManager_Impl: ::windows_core::BaseImpl {
     fn CreateTranscryptor(this: &Self::This) -> ::windows_core::Result<IWMDRMTranscryptor>;
@@ -757,7 +736,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMDRMTranscrypt
             CreateTranscryptor: CreateTranscryptor::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMDRMTranscryptor_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, bstrfilename: &::windows_core::BSTR, pblicenserequestmsg: *mut u8, cblicenserequestmsg: u32, pplicenseresponsemsg: *mut ::core::option::Option<INSSBuffer>, pcallback: ::core::option::Option<&IWMStatusCallback>, pvcontext: *const ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -790,7 +768,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMDRMTranscrypt
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -839,7 +816,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMDRMTranscrypt
             GetDuration: GetDuration::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMDRMWriter_Impl: ::windows_core::BaseImpl {
     fn GenerateKeySeed(this: &Self::This, pwszkeyseed: ::windows_core::PWSTR, pcwchlength: *mut u32) -> ::windows_core::Result<()>;
@@ -872,7 +848,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMDRMWriter_Imp
             SetDRMAttribute: SetDRMAttribute::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -894,7 +869,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMDRMWriter2_Im
             SetWMDRMNetEncryption: SetWMDRMNetEncryption::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -916,7 +890,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMDRMWriter3_Im
             SetProtectStreamSamples: SetProtectStreamSamples::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMDeviceRegistration_Impl: ::windows_core::BaseImpl {
     fn RegisterDevice(this: &Self::This, dwregistertype: u32, pbcertificate: *const u8, cbcertificate: u32, serialnumber: &DRM_VAL16) -> ::windows_core::Result<IWMRegisteredDevice>;
@@ -989,7 +962,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMDeviceRegistr
             GetRegisteredDeviceByID: GetRegisteredDeviceByID::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMGetSecureChannel_Impl: ::windows_core::BaseImpl {
     fn GetPeerSecureChannelInterface(this: &Self::This) -> ::windows_core::Result<IWMSecureChannel>;
@@ -1013,7 +985,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMGetSecureChan
             GetPeerSecureChannelInterface: GetPeerSecureChannelInterface::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMHeaderInfo_Impl: ::windows_core::BaseImpl {
     fn GetAttributeCount(this: &Self::This, wstreamnum: u16) -> ::windows_core::Result<u16>;
@@ -1104,7 +1075,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMHeaderInfo_Im
             RemoveScript: RemoveScript::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMHeaderInfo2_Impl: ::windows_core::BaseImpl + IWMHeaderInfo_Impl {
     fn GetCodecInfoCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1133,7 +1103,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMHeaderInfo2_I
             GetCodecInfo: GetCodecInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMHeaderInfo3_Impl: ::windows_core::BaseImpl + IWMHeaderInfo2_Impl {
     fn GetAttributeCountEx(this: &Self::This, wstreamnum: u16) -> ::windows_core::Result<u16>;
@@ -1187,7 +1156,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMHeaderInfo3_I
             AddCodecInfo: AddCodecInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMIStreamProps_Impl: ::windows_core::BaseImpl {
     fn GetProperty(this: &Self::This, pszname: &::windows_core::PCWSTR, ptype: *mut WMT_ATTR_DATATYPE, pvalue: *mut u8, pdwsize: *mut u32) -> ::windows_core::Result<()>;
@@ -1202,7 +1170,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMIStreamProps_
         }
         IWMIStreamProps_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetProperty: GetProperty::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMImageInfo_Impl: ::windows_core::BaseImpl {
     fn GetImageCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1231,7 +1198,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMImageInfo_Imp
             GetImage: GetImage::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMIndexer_Impl: ::windows_core::BaseImpl {
     fn StartIndexing(this: &Self::This, pwszurl: &::windows_core::PCWSTR, pcallback: ::core::option::Option<&IWMStatusCallback>, pvcontext: *const ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -1254,7 +1220,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMIndexer_Impl,
             Cancel: Cancel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMIndexer2_Impl: ::windows_core::BaseImpl + IWMIndexer_Impl {
     fn Configure(this: &Self::This, wstreamnum: u16, nindexertype: WMT_INDEXER_TYPE, pvinterval: *const ::core::ffi::c_void, pvindextype: *const ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -1269,7 +1234,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMIndexer2_Impl
         }
         IWMIndexer2_Vtbl { base__: <IWMIndexer as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Configure: Configure::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1296,7 +1260,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMInputMediaPro
             GetGroupName: GetGroupName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMLanguageList_Impl: ::windows_core::BaseImpl {
     fn GetLanguageCount(this: &Self::This) -> ::windows_core::Result<u16>;
@@ -1336,7 +1299,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMLanguageList_
             AddLanguageByRFC1766String: AddLanguageByRFC1766String::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMLicenseBackup_Impl: ::windows_core::BaseImpl {
     fn BackupLicenses(this: &Self::This, dwflags: u32, pcallback: ::core::option::Option<&IWMStatusCallback>) -> ::windows_core::Result<()>;
@@ -1359,7 +1321,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMLicenseBackup
             CancelLicenseBackup: CancelLicenseBackup::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMLicenseRestore_Impl: ::windows_core::BaseImpl {
     fn RestoreLicenses(this: &Self::This, dwflags: u32, pcallback: ::core::option::Option<&IWMStatusCallback>) -> ::windows_core::Result<()>;
@@ -1382,7 +1343,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMLicenseRestor
             CancelLicenseRestore: CancelLicenseRestore::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMLicenseRevocationAgent_Impl: ::windows_core::BaseImpl {
     fn GetLRBChallenge(this: &Self::This, pmachineid: *const u8, dwmachineidlength: u32, pchallenge: *const u8, dwchallengelength: u32, pchallengeoutput: *mut u8, pdwchallengeoutputlength: *mut u32) -> ::windows_core::Result<()>;
@@ -1405,7 +1365,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMLicenseRevoca
             ProcessLRB: ProcessLRB::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1443,7 +1402,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMMediaProps_Im
             SetMediaType: SetMediaType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMMetadataEditor_Impl: ::windows_core::BaseImpl {
     fn Open(this: &Self::This, pwszfilename: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -1471,7 +1429,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMMetadataEdito
             Flush: Flush::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMMetadataEditor2_Impl: ::windows_core::BaseImpl + IWMMetadataEditor_Impl {
     fn OpenEx(this: &Self::This, pwszfilename: &::windows_core::PCWSTR, dwdesiredaccess: u32, dwsharemode: u32) -> ::windows_core::Result<()>;
@@ -1486,7 +1443,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMMetadataEdito
         }
         IWMMetadataEditor2_Vtbl { base__: <IWMMetadataEditor as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OpenEx: OpenEx::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMMutualExclusion_Impl: ::windows_core::BaseImpl + IWMStreamList_Impl {
     fn GetType(this: &Self::This) -> ::windows_core::Result<::windows_core::GUID>;
@@ -1515,7 +1471,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMMutualExclusi
             SetType: SetType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMMutualExclusion2_Impl: ::windows_core::BaseImpl + IWMMutualExclusion_Impl {
     fn GetName(this: &Self::This, pwszname: ::windows_core::PWSTR, pcchname: *mut u16) -> ::windows_core::Result<()>;
@@ -1584,7 +1539,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMMutualExclusi
             RemoveStreamForRecord: RemoveStreamForRecord::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1611,7 +1565,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMOutputMediaPr
             GetConnectionName: GetConnectionName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMPacketSize_Impl: ::windows_core::BaseImpl {
     fn GetMaxPacketSize(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1640,7 +1593,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMPacketSize_Im
             SetMaxPacketSize: SetMaxPacketSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMPacketSize2_Impl: ::windows_core::BaseImpl + IWMPacketSize_Impl {
     fn GetMinPacketSize(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1669,7 +1621,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMPacketSize2_I
             SetMinPacketSize: SetMinPacketSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMPlayerHook_Impl: ::windows_core::BaseImpl {
     fn PreDecode(this: &Self::This) -> ::windows_core::Result<()>;
@@ -1684,7 +1635,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMPlayerHook_Im
         }
         IWMPlayerHook_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, PreDecode: PreDecode::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMPlayerTimestampHook_Impl: ::windows_core::BaseImpl {
     fn MapTimestamp(this: &Self::This, rtin: i64) -> ::windows_core::Result<i64>;
@@ -1705,7 +1655,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMPlayerTimesta
         }
         IWMPlayerTimestampHook_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, MapTimestamp: MapTimestamp::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMProfile_Impl: ::windows_core::BaseImpl {
     fn GetVersion(this: &Self::This) -> ::windows_core::Result<WMT_VERSION>;
@@ -1856,7 +1805,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMProfile_Impl,
             CreateNewMutualExclusion: CreateNewMutualExclusion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMProfile2_Impl: ::windows_core::BaseImpl + IWMProfile_Impl {
     fn GetProfileID(this: &Self::This) -> ::windows_core::Result<::windows_core::GUID>;
@@ -1877,7 +1825,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMProfile2_Impl
         }
         IWMProfile2_Vtbl { base__: <IWMProfile as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetProfileID: GetProfileID::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMProfile3_Impl: ::windows_core::BaseImpl + IWMProfile2_Impl {
     fn GetStorageFormat(this: &Self::This) -> ::windows_core::Result<WMT_STORAGE_FORMAT>;
@@ -1992,7 +1939,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMProfile3_Impl
             GetExpectedPacketCount: GetExpectedPacketCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMProfileManager_Impl: ::windows_core::BaseImpl {
     fn CreateEmptyProfile(this: &Self::This, dwversion: WMT_VERSION) -> ::windows_core::Result<IWMProfile>;
@@ -2065,7 +2011,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMProfileManage
             LoadSystemProfile: LoadSystemProfile::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMProfileManager2_Impl: ::windows_core::BaseImpl + IWMProfileManager_Impl {
     fn GetSystemProfileVersion(this: &Self::This, pdwversion: *mut WMT_VERSION) -> ::windows_core::Result<()>;
@@ -2088,7 +2033,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMProfileManage
             SetSystemProfileVersion: SetSystemProfileVersion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMProfileManagerLanguage_Impl: ::windows_core::BaseImpl {
     fn GetUserLanguageID(this: &Self::This, wlangid: *mut u16) -> ::windows_core::Result<()>;
@@ -2111,7 +2055,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMProfileManage
             SetUserLanguageID: SetUserLanguageID::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMPropertyVault_Impl: ::windows_core::BaseImpl {
     fn GetPropertyCount(this: &Self::This, pdwcount: *const u32) -> ::windows_core::Result<()>;
@@ -2154,7 +2097,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMPropertyVault
             Clear: Clear::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMProximityDetection_Impl: ::windows_core::BaseImpl {
     fn StartDetection(this: &Self::This, pbregistrationmsg: *const u8, cbregistrationmsg: u32, pblocaladdress: *const u8, cblocaladdress: u32, dwextraportsallowed: u32, ppregistrationresponsemsg: *mut ::core::option::Option<INSSBuffer>, pcallback: ::core::option::Option<&IWMStatusCallback>, pvcontext: *const ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -2169,7 +2111,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMProximityDete
         }
         IWMProximityDetection_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, StartDetection: StartDetection::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMReader_Impl: ::windows_core::BaseImpl {
     fn Open(this: &Self::This, pwszurl: &::windows_core::PCWSTR, pcallback: ::core::option::Option<&IWMReaderCallback>, pvcontext: *const ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -2261,7 +2202,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMReader_Impl, 
             Resume: Resume::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2288,7 +2228,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMReaderAcceler
             Notify: Notify::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2459,7 +2398,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMReaderAdvance
             NotifyLateDelivery: NotifyLateDelivery::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -2569,7 +2507,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMReaderAdvance
             OpenStream: OpenStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -2596,7 +2533,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMReaderAdvance
             StartAtPosition: StartAtPosition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -2682,7 +2618,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMReaderAdvance
             GetURL: GetURL::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -2701,7 +2636,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMReaderAdvance
         }
         IWMReaderAdvanced5_Vtbl { base__: <IWMReaderAdvanced4 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetPlayerHook: SetPlayerHook::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -2723,7 +2657,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMReaderAdvance
             SetProtectStreamSamples: SetProtectStreamSamples::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMReaderAllocatorEx_Impl: ::windows_core::BaseImpl {
     fn AllocateForStreamEx(this: &Self::This, wstreamnum: u16, cbbuffer: u32, ppbuffer: *mut ::core::option::Option<INSSBuffer>, dwflags: u32, cnssampletime: u64, cnssampleduration: u64, pvcontext: *const ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -2746,7 +2679,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMReaderAllocat
             AllocateForOutputEx: AllocateForOutputEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMReaderCallback_Impl: ::windows_core::BaseImpl + IWMStatusCallback_Impl {
     fn OnSample(this: &Self::This, dwoutputnum: u32, cnssampletime: u64, cnssampleduration: u64, dwflags: u32, psample: ::core::option::Option<&INSSBuffer>, pvcontext: *const ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -2761,7 +2693,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMReaderCallbac
         }
         IWMReaderCallback_Vtbl { base__: <IWMStatusCallback as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnSample: OnSample::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2808,7 +2739,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMReaderCallbac
             AllocateForOutput: AllocateForOutput::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3062,7 +2992,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMReaderNetwork
             ResetLoggingUrlList: ResetLoggingUrlList::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3186,7 +3115,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMReaderNetwork
             GetMaxNetPacketSize: GetMaxNetPacketSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMReaderPlaylistBurn_Impl: ::windows_core::BaseImpl {
     fn InitPlaylistBurn(this: &Self::This, cfiles: u32, ppwszfilenames: *const ::windows_core::PCWSTR, pcallback: ::core::option::Option<&IWMStatusCallback>, pvcontext: *const ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -3225,7 +3153,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMReaderPlaylis
             EndPlaylistBurn: EndPlaylistBurn::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMReaderStreamClock_Impl: ::windows_core::BaseImpl {
     fn GetTime(this: &Self::This, pcnsnow: *const u64) -> ::windows_core::Result<()>;
@@ -3259,7 +3186,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMReaderStreamC
             KillTimer: KillTimer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMReaderTimecode_Impl: ::windows_core::BaseImpl {
     fn GetTimecodeRangeCount(this: &Self::This, wstreamnum: u16) -> ::windows_core::Result<u16>;
@@ -3288,7 +3214,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMReaderTimecod
             GetTimecodeRangeBounds: GetTimecodeRangeBounds::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMReaderTypeNegotiation_Impl: ::windows_core::BaseImpl {
     fn TryOutputProps(this: &Self::This, dwoutputnum: u32, poutput: ::core::option::Option<&IWMOutputMediaProps>) -> ::windows_core::Result<()>;
@@ -3303,7 +3228,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMReaderTypeNeg
         }
         IWMReaderTypeNegotiation_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, TryOutputProps: TryOutputProps::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMRegisterCallback_Impl: ::windows_core::BaseImpl {
     fn Advise(this: &Self::This, pcallback: ::core::option::Option<&IWMStatusCallback>, pvcontext: *const ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -3326,7 +3250,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMRegisterCallb
             Unadvise: Unadvise::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3467,7 +3390,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMRegisteredDev
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMSBufferAllocator_Impl: ::windows_core::BaseImpl {
     fn AllocateBuffer(this: &Self::This, dwmaxbuffersize: u32) -> ::windows_core::Result<INSSBuffer>;
@@ -3502,7 +3424,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMSBufferAlloca
             AllocatePageSizeBuffer: AllocatePageSizeBuffer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3592,7 +3513,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMSInternalAdmi
             IsUsingIE: IsUsingIE::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3629,7 +3549,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMSInternalAdmi
             FindProxyForURLEx: FindProxyForURLEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3693,7 +3612,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMSInternalAdmi
             GetCredentialsEx2: GetCredentialsEx2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3771,7 +3689,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMSecureChannel
             WMSC_SetSharedData: WMSC_SetSharedData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMStatusCallback_Impl: ::windows_core::BaseImpl {
     fn OnStatus(this: &Self::This, status: WMT_STATUS, hr: ::windows_core::HRESULT, dwtype: WMT_ATTR_DATATYPE, pvalue: *const u8, pvcontext: *const ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -3786,7 +3703,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMStatusCallbac
         }
         IWMStatusCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnStatus: OnStatus::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMStreamConfig_Impl: ::windows_core::BaseImpl {
     fn GetStreamType(this: &Self::This) -> ::windows_core::Result<::windows_core::GUID>;
@@ -3878,7 +3794,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMStreamConfig_
             SetBufferWindow: SetBufferWindow::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMStreamConfig2_Impl: ::windows_core::BaseImpl + IWMStreamConfig_Impl {
     fn GetTransportType(this: &Self::This) -> ::windows_core::Result<WMT_TRANSPORT_TYPE>;
@@ -3933,7 +3848,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMStreamConfig2
             RemoveAllDataUnitExtensions: RemoveAllDataUnitExtensions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMStreamConfig3_Impl: ::windows_core::BaseImpl + IWMStreamConfig2_Impl {
     fn GetLanguage(this: &Self::This, pwszlanguagestring: ::windows_core::PWSTR, pcchlanguagestringlength: *mut u16) -> ::windows_core::Result<()>;
@@ -3956,7 +3870,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMStreamConfig3
             SetLanguage: SetLanguage::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMStreamList_Impl: ::windows_core::BaseImpl {
     fn GetStreams(this: &Self::This, pwstreamnumarray: *mut u16, pcstreams: *mut u16) -> ::windows_core::Result<()>;
@@ -3984,7 +3897,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMStreamList_Im
             RemoveStream: RemoveStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4011,7 +3923,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMStreamPriorit
             SetPriorityRecords: SetPriorityRecords::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -4193,7 +4104,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMSyncReader_Im
             OpenStream: OpenStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -4258,7 +4168,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMSyncReader2_I
             GetAllocateForStream: GetAllocateForStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4307,7 +4216,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMVideoMediaPro
             SetQuality: SetQuality::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMWatermarkInfo_Impl: ::windows_core::BaseImpl {
     fn GetWatermarkEntryCount(this: &Self::This, wmettype: WMT_WATERMARK_ENTRY_TYPE) -> ::windows_core::Result<u32>;
@@ -4336,7 +4244,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMWatermarkInfo
             GetWatermarkEntry: GetWatermarkEntry::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMWriter_Impl: ::windows_core::BaseImpl {
     fn SetProfileByID(this: &Self::This, guidprofile: *const ::windows_core::GUID) -> ::windows_core::Result<()>;
@@ -4444,7 +4351,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMWriter_Impl, 
             Flush: Flush::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4546,7 +4452,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMWriterAdvance
             GetSyncTolerance: GetSyncTolerance::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4573,7 +4478,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMWriterAdvance
             SetInputSetting: SetInputSetting::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4600,7 +4504,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMWriterAdvance
             SetNonBlocking: SetNonBlocking::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4619,7 +4522,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMWriterFileSin
         }
         IWMWriterFileSink_Vtbl { base__: <IWMWriterSink as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Open: Open::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4695,7 +4597,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMWriterFileSin
             IsClosed: IsClosed::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4770,7 +4671,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMWriterFileSin
             CompleteOperations: CompleteOperations::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4839,7 +4739,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMWriterNetwork
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4931,7 +4830,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMWriterPostVie
             GetAllocateForPostView: GetAllocateForPostView::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMWriterPostViewCallback_Impl: ::windows_core::BaseImpl + IWMStatusCallback_Impl {
     fn OnPostViewSample(this: &Self::This, wstreamnumber: u16, cnssampletime: u64, cnssampleduration: u64, dwflags: u32, psample: ::core::option::Option<&INSSBuffer>, pvcontext: *const ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -4954,7 +4852,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMWriterPostVie
             AllocateForPostView: AllocateForPostView::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMWriterPreprocess_Impl: ::windows_core::BaseImpl {
     fn GetMaxPreprocessingPasses(this: &Self::This, dwinputnum: u32, dwflags: u32) -> ::windows_core::Result<u32>;
@@ -4998,7 +4895,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMWriterPreproc
             EndPreprocessingPass: EndPreprocessingPass::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5030,7 +4926,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMWriterPushSin
             EndSession: EndSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5084,5 +4979,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMWriterSink_Im
             OnEndWriting: OnEndWriting::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

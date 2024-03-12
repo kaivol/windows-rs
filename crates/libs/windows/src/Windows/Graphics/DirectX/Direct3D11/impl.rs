@@ -16,7 +16,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DDevice_
         }
         IDirect3DDevice_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Trim: Trim::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -42,5 +41,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DSurface
         }
         IDirect3DSurface_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Description: Description::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

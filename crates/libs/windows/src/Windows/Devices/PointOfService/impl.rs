@@ -18,7 +18,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICashDrawerEvent
         }
         ICashDrawerEventSourceEventArgs_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CashDrawer: CashDrawer::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICommonClaimedPosPrinterStation_Impl: ::windows_core::BaseImpl {
     fn SetCharactersPerLine(this: &Self::This, value: u32) -> ::windows_core::Result<()>;
@@ -210,7 +209,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICommonClaimedPo
             ValidateData: ValidateData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -371,7 +369,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICommonPosPrintS
             SupportedCharactersPerLine: SupportedCharactersPerLine::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -490,7 +487,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICommonReceiptSl
             SupportedBitmapRotations: SupportedBitmapRotations::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -534,7 +530,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPosPrinterJob_I
             ExecuteAsync: ExecuteAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"Graphics_Imaging\"`"]
 #[cfg(all(feature = "Foundation", feature = "Graphics_Imaging"))]
@@ -627,5 +622,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IReceiptOrSlipJo
             PrintBitmapCustomWidthCustomAlign: PrintBitmapCustomWidthCustomAlign::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

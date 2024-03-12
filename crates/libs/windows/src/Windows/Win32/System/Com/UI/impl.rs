@@ -15,7 +15,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDummyHICONInclu
         }
         IDummyHICONIncluder_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Dummy: Dummy::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com_StructuredStorage\"`"]
 #[cfg(all(feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com_StructuredStorage"))]
@@ -42,5 +41,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IThumbnailExtrac
             OnFileUpdated: OnFileUpdated::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

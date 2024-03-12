@@ -14,7 +14,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1AnalysisTra
             ProcessAnalysisResults: ProcessAnalysisResults::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -66,7 +65,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Bitmap_Impl
             CopyFromMemory: CopyFromMemory::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -120,7 +118,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Bitmap1_Imp
             Unmap: Unmap::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`"]
 #[cfg(feature = "Foundation_Numerics")]
@@ -177,7 +174,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1BitmapBrush
             GetBitmap: GetBitmap::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`"]
 #[cfg(feature = "Foundation_Numerics")]
@@ -204,7 +200,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1BitmapBrush
             GetInterpolationMode1: GetInterpolationMode1::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging"))]
@@ -229,7 +224,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1BitmapRende
         }
         ID2D1BitmapRenderTarget_Vtbl { base__: <ID2D1RenderTarget as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetBitmap: GetBitmap::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -256,7 +250,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1BlendTransf
             GetDescription: GetDescription::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -293,7 +286,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1BorderTrans
             GetExtendModeY: GetExtendModeY::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -320,7 +312,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1BoundsAdjus
             GetOutputBounds: GetOutputBounds::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`"]
 #[cfg(feature = "Foundation_Numerics")]
@@ -357,7 +348,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Brush_Impl,
             GetTransform: GetTransform::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1ColorContext_Impl: ::windows_core::BaseImpl + ID2D1Resource_Impl {
     fn GetColorSpace(this: &Self::This) -> D2D1_COLOR_SPACE;
@@ -385,7 +375,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1ColorContex
             GetProfile: GetProfile::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -417,7 +406,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1ColorContex
             GetSimpleColorProfile: GetSimpleColorProfile::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1CommandList_Impl: ::windows_core::BaseImpl + ID2D1Image_Impl {
     fn Stream(this: &Self::This, sink: ::core::option::Option<&ID2D1CommandSink>) -> ::windows_core::Result<()>;
@@ -440,7 +428,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1CommandList
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite"))]
@@ -582,7 +569,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1CommandSink
             PopLayer: PopLayer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite"))]
@@ -601,7 +587,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1CommandSink
         }
         ID2D1CommandSink1_Vtbl { base__: <ID2D1CommandSink as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetPrimitiveBlend1: SetPrimitiveBlend1::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite"))]
@@ -633,7 +618,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1CommandSink
             DrawGdiMetafile2: DrawGdiMetafile2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite"))]
@@ -652,7 +636,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1CommandSink
         }
         ID2D1CommandSink3_Vtbl { base__: <ID2D1CommandSink2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, DrawSpriteBatch: DrawSpriteBatch::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite"))]
@@ -674,7 +657,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1CommandSink
             SetPrimitiveBlend2: SetPrimitiveBlend2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite"))]
@@ -693,7 +675,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1CommandSink
         }
         ID2D1CommandSink5_Vtbl { base__: <ID2D1CommandSink4 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, BlendImage: BlendImage::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -725,7 +706,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1ComputeInfo
             SetResourceTexture: SetResourceTexture::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -752,7 +732,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1ComputeTran
             CalculateThreadgroups: CalculateThreadgroups::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -779,7 +758,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1ConcreteTra
             SetCached: SetCached::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_Graphics_Imaging\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Gdi", feature = "Win32_Graphics_Imaging"))]
@@ -798,7 +776,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1DCRenderTar
         }
         ID2D1DCRenderTarget_Vtbl { base__: <ID2D1RenderTarget as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, BindDC: BindDC::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Imaging\"`, `\"Win32_Storage_Xps_Printing\"`"]
 #[cfg(all(feature = "Win32_Graphics_Imaging", feature = "Win32_Storage_Xps_Printing"))]
@@ -852,7 +829,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Device_Impl
             ClearResources: ClearResources::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Imaging\"`, `\"Win32_Storage_Xps_Printing\"`"]
 #[cfg(all(feature = "Win32_Graphics_Imaging", feature = "Win32_Storage_Xps_Printing"))]
@@ -890,7 +866,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Device1_Imp
             CreateDeviceContext2: CreateDeviceContext2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi\"`, `\"Win32_Graphics_Imaging\"`, `\"Win32_Storage_Xps_Printing\"`"]
 #[cfg(all(feature = "Win32_Graphics_Dxgi", feature = "Win32_Graphics_Imaging", feature = "Win32_Storage_Xps_Printing"))]
@@ -934,7 +909,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Device2_Imp
             GetDxgiDevice: GetDxgiDevice::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi\"`, `\"Win32_Graphics_Imaging\"`, `\"Win32_Storage_Xps_Printing\"`"]
 #[cfg(all(feature = "Win32_Graphics_Dxgi", feature = "Win32_Graphics_Imaging", feature = "Win32_Storage_Xps_Printing"))]
@@ -959,7 +933,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Device3_Imp
         }
         ID2D1Device3_Vtbl { base__: <ID2D1Device2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateDeviceContext4: CreateDeviceContext4::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi\"`, `\"Win32_Graphics_Imaging\"`, `\"Win32_Storage_Xps_Printing\"`"]
 #[cfg(all(feature = "Win32_Graphics_Dxgi", feature = "Win32_Graphics_Imaging", feature = "Win32_Storage_Xps_Printing"))]
@@ -997,7 +970,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Device4_Imp
             GetMaximumColorGlyphCacheMemory: GetMaximumColorGlyphCacheMemory::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi\"`, `\"Win32_Graphics_Imaging\"`, `\"Win32_Storage_Xps_Printing\"`"]
 #[cfg(all(feature = "Win32_Graphics_Dxgi", feature = "Win32_Graphics_Imaging", feature = "Win32_Storage_Xps_Printing"))]
@@ -1022,7 +994,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Device5_Imp
         }
         ID2D1Device5_Vtbl { base__: <ID2D1Device4 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateDeviceContext6: CreateDeviceContext6::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi\"`, `\"Win32_Graphics_Imaging\"`, `\"Win32_Storage_Xps_Printing\"`"]
 #[cfg(all(feature = "Win32_Graphics_Dxgi", feature = "Win32_Graphics_Imaging", feature = "Win32_Storage_Xps_Printing"))]
@@ -1047,7 +1018,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Device6_Imp
         }
         ID2D1Device6_Vtbl { base__: <ID2D1Device5 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateDeviceContext7: CreateDeviceContext7::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging"))]
@@ -1329,7 +1299,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1DeviceConte
             FillOpacityMask2: FillOpacityMask2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging"))]
@@ -1373,7 +1342,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1DeviceConte
             DrawGeometryRealization: DrawGeometryRealization::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging"))]
@@ -1493,7 +1461,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1DeviceConte
             CreateTransformedImageSource: CreateTransformedImageSource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging"))]
@@ -1526,7 +1493,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1DeviceConte
             DrawSpriteBatch: DrawSpriteBatch::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging"))]
@@ -1602,7 +1568,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1DeviceConte
             GetSvgGlyphImage: GetSvgGlyphImage::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging", feature = "Win32_System_Com"))]
@@ -1657,7 +1622,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1DeviceConte
             CreateColorContextFromSimpleColorProfile: CreateColorContextFromSimpleColorProfile::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging", feature = "Win32_System_Com"))]
@@ -1676,7 +1640,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1DeviceConte
         }
         ID2D1DeviceContext6_Vtbl { base__: <ID2D1DeviceContext5 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, BlendImage: BlendImage::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1718,7 +1681,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1DrawInfo_Im
             SetVertexProcessing: SetVertexProcessing::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1737,7 +1699,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1DrawTransfo
         }
         ID2D1DrawTransform_Vtbl { base__: <ID2D1Transform as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetDrawInfo: SetDrawInfo::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Graphics_DirectWrite\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Graphics_DirectWrite"))]
@@ -1774,7 +1735,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1DrawingStat
             GetTextRenderingParams: GetTextRenderingParams::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Graphics_DirectWrite\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Graphics_DirectWrite"))]
@@ -1801,7 +1761,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1DrawingStat
             SetDescription2: SetDescription2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1843,7 +1802,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Effect_Impl
             GetOutput: GetOutput::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging"))]
@@ -2049,7 +2007,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1EffectConte
             IsBufferPrecisionSupported: IsBufferPrecisionSupported::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging"))]
@@ -2077,7 +2034,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1EffectConte
             CreateLookupTable3D: CreateLookupTable3D::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_Direct3D\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_Direct3D", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging"))]
@@ -2116,7 +2072,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1EffectConte
             CreateColorContextFromSimpleColorProfile: CreateColorContextFromSimpleColorProfile::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1EffectImpl_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, effectcontext: ::core::option::Option<&ID2D1EffectContext>, transformgraph: ::core::option::Option<&ID2D1TransformGraph>) -> ::windows_core::Result<()>;
@@ -2144,7 +2099,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1EffectImpl_
             SetGraph: SetGraph::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -2163,7 +2117,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1EllipseGeom
         }
         ID2D1EllipseGeometry_Vtbl { base__: <ID2D1Geometry as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetEllipse: GetEllipse::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging"))]
@@ -2322,7 +2275,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Factory_Imp
             CreateDCRenderTarget: CreateDCRenderTarget::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging", feature = "Win32_System_Com"))]
@@ -2425,7 +2377,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Factory1_Im
             GetEffectProperties: GetEffectProperties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging", feature = "Win32_System_Com"))]
@@ -2450,7 +2401,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Factory2_Im
         }
         ID2D1Factory2_Vtbl { base__: <ID2D1Factory1 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateDevice2: CreateDevice2::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging", feature = "Win32_System_Com"))]
@@ -2475,7 +2425,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Factory3_Im
         }
         ID2D1Factory3_Vtbl { base__: <ID2D1Factory2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateDevice3: CreateDevice3::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging", feature = "Win32_System_Com"))]
@@ -2500,7 +2449,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Factory4_Im
         }
         ID2D1Factory4_Vtbl { base__: <ID2D1Factory3 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateDevice4: CreateDevice4::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging", feature = "Win32_System_Com"))]
@@ -2525,7 +2473,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Factory5_Im
         }
         ID2D1Factory5_Vtbl { base__: <ID2D1Factory4 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateDevice5: CreateDevice5::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging", feature = "Win32_System_Com"))]
@@ -2550,7 +2497,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Factory6_Im
         }
         ID2D1Factory6_Vtbl { base__: <ID2D1Factory5 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateDevice6: CreateDevice6::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging", feature = "Win32_System_Com"))]
@@ -2575,7 +2521,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Factory7_Im
         }
         ID2D1Factory7_Vtbl { base__: <ID2D1Factory6 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateDevice7: CreateDevice7::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -2608,7 +2553,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1GdiInteropR
             ReleaseDC: ReleaseDC::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Direct2D_Common")]
@@ -2641,7 +2585,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1GdiMetafile
             GetBounds: GetBounds::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Direct2D_Common")]
@@ -2674,7 +2617,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1GdiMetafile
             GetSourceBounds: GetSourceBounds::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1GdiMetafileSink_Impl: ::windows_core::BaseImpl {
     fn ProcessRecord(this: &Self::This, recordtype: u32, recorddata: *const ::core::ffi::c_void, recorddatasize: u32) -> ::windows_core::Result<()>;
@@ -2689,7 +2631,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1GdiMetafile
         }
         ID2D1GdiMetafileSink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ProcessRecord: ProcessRecord::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1GdiMetafileSink1_Impl: ::windows_core::BaseImpl + ID2D1GdiMetafileSink_Impl {
     fn ProcessRecord2(this: &Self::This, recordtype: u32, recorddata: *const ::core::ffi::c_void, recorddatasize: u32, flags: u32) -> ::windows_core::Result<()>;
@@ -2704,7 +2645,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1GdiMetafile
         }
         ID2D1GdiMetafileSink1_Vtbl { base__: <ID2D1GdiMetafileSink as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ProcessRecord2: ProcessRecord2::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -2828,7 +2768,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Geometry_Im
             Widen: Widen::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -2860,7 +2799,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1GeometryGro
             GetSourceGeometries: GetSourceGeometries::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1GeometryRealization_Impl: ::windows_core::BaseImpl + ID2D1Resource_Impl {}
 impl ::windows_core::Iids for ID2D1GeometryRealization {
@@ -2868,7 +2806,6 @@ impl ::windows_core::Iids for ID2D1GeometryRealization {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1GeometryRealization_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ID2D1GeometryRealization {
     const VTABLE: Self::Vtable = { ID2D1GeometryRealization_Vtbl { base__: <ID2D1Resource as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Direct2D_Common")]
@@ -2910,7 +2847,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1GeometrySin
             AddArc: AddArc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Direct2D_Common")]
@@ -2937,7 +2873,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1GradientMes
             GetPatches: GetPatches::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Direct2D_Common")]
@@ -2974,7 +2909,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1GradientSto
             GetExtendMode: GetExtendMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Direct2D_Common")]
@@ -3016,7 +2950,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1GradientSto
             GetColorInterpolationMode: GetColorInterpolationMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging"))]
@@ -3048,7 +2981,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1HwndRenderT
             GetHwnd: GetHwnd::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1Image_Impl: ::windows_core::BaseImpl + ID2D1Resource_Impl {}
 impl ::windows_core::Iids for ID2D1Image {
@@ -3056,7 +2988,6 @@ impl ::windows_core::Iids for ID2D1Image {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Image_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ID2D1Image {
     const VTABLE: Self::Vtable = { ID2D1Image_Vtbl { base__: <ID2D1Resource as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -3123,7 +3054,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1ImageBrush_
             GetSourceRectangle: GetSourceRectangle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3156,7 +3086,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1ImageSource
             TryReclaimResources: TryReclaimResources::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_Imaging\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_Imaging"))]
@@ -3188,7 +3117,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1ImageSource
             GetSource: GetSource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -3261,7 +3189,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Ink_Impl, c
             GetBounds: GetBounds::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`"]
 #[cfg(feature = "Foundation_Numerics")]
@@ -3298,7 +3225,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1InkStyle_Im
             GetNibShape: GetNibShape::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Direct2D_Common")]
@@ -3317,7 +3243,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Layer_Impl,
         }
         ID2D1Layer_Vtbl { base__: <ID2D1Resource as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetSize: GetSize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -3359,7 +3284,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1LinearGradi
             GetGradientStopCollection: GetGradientStopCollection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1LookupTable3D_Impl: ::windows_core::BaseImpl + ID2D1Resource_Impl {}
 impl ::windows_core::Iids for ID2D1LookupTable3D {
@@ -3367,7 +3291,6 @@ impl ::windows_core::Iids for ID2D1LookupTable3D {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1LookupTable3D_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ID2D1LookupTable3D {
     const VTABLE: Self::Vtable = { ID2D1LookupTable3D_Vtbl { base__: <ID2D1Resource as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1Mesh_Impl: ::windows_core::BaseImpl + ID2D1Resource_Impl {
     fn Open(this: &Self::This) -> ::windows_core::Result<ID2D1TessellationSink>;
@@ -3388,7 +3311,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Mesh_Impl, 
         }
         ID2D1Mesh_Vtbl { base__: <ID2D1Resource as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Open: Open::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3420,7 +3342,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Multithread
             Leave: Leave::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3447,7 +3368,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1OffsetTrans
             GetOffset: GetOffset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -3502,7 +3422,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1PathGeometr
             GetFigureCount: GetFigureCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -3524,7 +3443,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1PathGeometr
             ComputePointAndSegmentAtLength: ComputePointAndSegmentAtLength::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_System_Com"))]
@@ -3551,7 +3469,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1PrintContro
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1Properties_Impl: ::windows_core::BaseImpl {
     fn GetPropertyCount(this: &Self::This) -> u32;
@@ -3625,7 +3542,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Properties_
             GetSubProperties: GetSubProperties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -3687,7 +3603,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1RadialGradi
             GetGradientStopCollection: GetGradientStopCollection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -3706,7 +3621,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1RectangleGe
         }
         ID2D1RectangleGeometry_Vtbl { base__: <ID2D1Geometry as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetRect: GetRect::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3743,7 +3657,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1RenderInfo_
             SetInstructionCountHint: SetInstructionCountHint::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_DirectWrite\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Imaging\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_DirectWrite", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Imaging"))]
@@ -4085,7 +3998,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1RenderTarge
             IsSupported: IsSupported::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1Resource_Impl: ::windows_core::BaseImpl {
     fn GetFactory(this: &Self::This, factory: *mut ::core::option::Option<ID2D1Factory>);
@@ -4100,7 +4012,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Resource_Im
         }
         ID2D1Resource_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetFactory: GetFactory::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1ResourceTexture_Impl: ::windows_core::BaseImpl {
     fn Update(this: &Self::This, minimumextents: *const u32, maximimumextents: *const u32, strides: *const u32, dimensions: u32, data: *const u8, datacount: u32) -> ::windows_core::Result<()>;
@@ -4115,7 +4026,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1ResourceTex
         }
         ID2D1ResourceTexture_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Update: Update::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -4134,7 +4044,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1RoundedRect
         }
         ID2D1RoundedRectangleGeometry_Vtbl { base__: <ID2D1Geometry as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetRoundedRect: GetRoundedRect::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -4161,7 +4070,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1SolidColorB
             GetColor: GetColor::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -4188,7 +4096,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1SourceTrans
             Draw: Draw::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -4232,7 +4139,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1SpriteBatch
             Clear: Clear::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1StrokeStyle_Impl: ::windows_core::BaseImpl + ID2D1Resource_Impl {
     fn GetStartCap(this: &Self::This) -> D2D1_CAP_STYLE;
@@ -4290,7 +4196,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1StrokeStyle
             GetDashes: GetDashes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1StrokeStyle1_Impl: ::windows_core::BaseImpl + ID2D1StrokeStyle_Impl {
     fn GetStrokeTransformType(this: &Self::This) -> D2D1_STROKE_TRANSFORM_TYPE;
@@ -4308,7 +4213,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1StrokeStyle
             GetStrokeTransformType: GetStrokeTransformType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1SvgAttribute_Impl: ::windows_core::BaseImpl + ID2D1Resource_Impl {
     fn GetElement(this: &Self::This, element: *mut ::core::option::Option<ID2D1SvgElement>);
@@ -4337,7 +4241,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1SvgAttribut
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_System_Com"))]
@@ -4445,7 +4348,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1SvgDocument
             CreatePathData: CreatePathData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4636,7 +4538,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1SvgElement_
             GetAttributeValueLength: GetAttributeValueLength::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1SvgGlyphStyle_Impl: ::windows_core::BaseImpl + ID2D1Resource_Impl {
     fn SetFill(this: &Self::This, brush: ::core::option::Option<&ID2D1Brush>) -> ::windows_core::Result<()>;
@@ -4674,7 +4575,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1SvgGlyphSty
             GetStroke: GetStroke::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Direct2D_Common")]
@@ -4726,7 +4626,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1SvgPaint_Im
             GetIdLength: GetIdLength::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Direct2D_Common")]
@@ -4794,7 +4693,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1SvgPathData
             CreatePathGeometry: CreatePathGeometry::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Direct2D_Common")]
@@ -4831,7 +4729,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1SvgPointCol
             GetPointsCount: GetPointsCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1SvgStrokeDashArray_Impl: ::windows_core::BaseImpl + ID2D1SvgAttribute_Impl {
     fn RemoveDashesAtEnd(this: &Self::This, dashescount: u32) -> ::windows_core::Result<()>;
@@ -4874,7 +4771,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1SvgStrokeDa
             GetDashesCount: GetDashesCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Direct2D_Common")]
@@ -4901,7 +4797,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Tessellatio
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4939,7 +4834,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Transform_I
             MapInvalidRect: MapInvalidRect::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1TransformGraph_Impl: ::windows_core::BaseImpl {
     fn GetInputCount(this: &Self::This) -> u32;
@@ -4997,7 +4891,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1TransformGr
             SetPassthroughGraph: SetPassthroughGraph::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1TransformNode_Impl: ::windows_core::BaseImpl {
     fn GetInputCount(this: &Self::This) -> u32;
@@ -5012,7 +4905,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1TransformNo
         }
         ID2D1TransformNode_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetInputCount: GetInputCount::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -5039,7 +4931,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Transformed
             GetTransform: GetTransform::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1TransformedImageSource_Impl: ::windows_core::BaseImpl + ID2D1Image_Impl {
     fn GetSource(this: &Self::This, imagesource: *mut ::core::option::Option<ID2D1ImageSource>);
@@ -5062,7 +4953,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1Transformed
             GetProperties: GetProperties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID2D1VertexBuffer_Impl: ::windows_core::BaseImpl {
     fn Map(this: &Self::This, data: *mut *mut u8, buffersize: u32) -> ::windows_core::Result<()>;
@@ -5085,5 +4975,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID2D1VertexBuffe
             Unmap: Unmap::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

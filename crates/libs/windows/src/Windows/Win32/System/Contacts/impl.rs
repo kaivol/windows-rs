@@ -24,7 +24,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContact_Impl, c
             CommitChanges: CommitChanges::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IContactAggregationAggregate_Impl: ::windows_core::BaseImpl {
     fn Save(this: &Self::This) -> ::windows_core::Result<()>;
@@ -112,7 +111,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactAggregat
             Id: Id::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IContactAggregationAggregateCollection_Impl: ::windows_core::BaseImpl {
     fn FindFirst(this: &Self::This) -> ::windows_core::Result<IContactAggregationAggregate>;
@@ -169,7 +167,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactAggregat
             Count: Count::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -330,7 +327,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactAggregat
             SetSyncIdentityHash: SetSyncIdentityHash::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IContactAggregationContactCollection_Impl: ::windows_core::BaseImpl {
     fn FindFirst(this: &Self::This) -> ::windows_core::Result<IContactAggregationContact>;
@@ -398,7 +394,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactAggregat
             FindFirstByRemoteId: FindFirstByRemoteId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IContactAggregationGroup_Impl: ::windows_core::BaseImpl {
     fn Delete(this: &Self::This) -> ::windows_core::Result<()>;
@@ -485,7 +480,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactAggregat
             SetName: SetName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IContactAggregationGroupCollection_Impl: ::windows_core::BaseImpl {
     fn FindFirst(this: &Self::This) -> ::windows_core::Result<IContactAggregationGroup>;
@@ -542,7 +536,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactAggregat
             Count: Count::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -692,7 +685,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactAggregat
             SetSyncIdentityHash: SetSyncIdentityHash::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IContactAggregationLinkCollection_Impl: ::windows_core::BaseImpl {
     fn FindFirst(this: &Self::This) -> ::windows_core::Result<IContactAggregationLink>;
@@ -749,7 +741,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactAggregat
             Count: Count::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -913,7 +904,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactAggregat
             get_ServerContactLinks: get_ServerContactLinks::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1111,7 +1101,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactAggregat
             SetObjectId: SetObjectId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IContactAggregationServerPersonCollection_Impl: ::windows_core::BaseImpl {
     fn FindFirst(this: &Self::This) -> ::windows_core::Result<IContactAggregationServerPerson>;
@@ -1190,7 +1179,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactAggregat
             Count: Count::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IContactCollection_Impl: ::windows_core::BaseImpl {
     fn Reset(this: &Self::This) -> ::windows_core::Result<()>;
@@ -1224,7 +1212,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactCollecti
             GetCurrent: GetCurrent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IContactManager_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, pszappname: &::windows_core::PCWSTR, pszappversion: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -1285,7 +1272,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactManager_
             GetContactCollection: GetContactCollection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -1367,7 +1353,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactProperti
             GetPropertyCollection: GetPropertyCollection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1419,5 +1404,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactProperty
             GetPropertyArrayElementID: GetPropertyArrayElementID::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

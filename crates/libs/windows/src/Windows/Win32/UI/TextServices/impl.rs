@@ -57,7 +57,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAccClientDocMgr
             GetFocused: GetFocused::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -117,7 +116,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAccDictionary_I
             ConvertValueToString: ConvertValueToString::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAccServerDocMgr_Impl: ::windows_core::BaseImpl {
     fn NewDocument(this: &Self::This, riid: *const ::windows_core::GUID, punk: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -145,7 +143,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAccServerDocMgr
             OnDocumentFocus: OnDocumentFocus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -221,7 +218,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAccStore_Impl, 
             GetFocused: GetFocused::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -329,7 +325,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAnchor_Impl, co
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IClonableWrapper_Impl: ::windows_core::BaseImpl {
     fn CloneNewWrapper(this: &Self::This, riid: *const ::windows_core::GUID, ppv: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -347,7 +342,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IClonableWrapper
             CloneNewWrapper: CloneNewWrapper::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -369,7 +363,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoCreateLocally
             CoCreateLocally: CoCreateLocally::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -388,7 +381,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoCreatedLocall
         }
         ICoCreatedLocally_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, LocalInit: LocalInit::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDocWrap_Impl: ::windows_core::BaseImpl {
     fn SetDoc(this: &Self::This, riid: *const ::windows_core::GUID, punk: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -417,7 +409,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDocWrap_Impl, c
             GetWrappedDoc: GetWrappedDoc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumITfCompositionView_Impl: ::windows_core::BaseImpl {
     fn Clone(this: &Self::This) -> ::windows_core::Result<IEnumITfCompositionView>;
@@ -456,7 +447,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumITfComposit
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumSpeechCommands_Impl: ::windows_core::BaseImpl {
     fn Clone(this: &Self::This) -> ::windows_core::Result<IEnumSpeechCommands>;
@@ -495,7 +485,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumSpeechComma
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumTfCandidates_Impl: ::windows_core::BaseImpl {
     fn Clone(this: &Self::This) -> ::windows_core::Result<IEnumTfCandidates>;
@@ -534,7 +523,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumTfCandidate
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumTfContextViews_Impl: ::windows_core::BaseImpl {
     fn Clone(this: &Self::This) -> ::windows_core::Result<IEnumTfContextViews>;
@@ -573,7 +561,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumTfContextVi
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumTfContexts_Impl: ::windows_core::BaseImpl {
     fn Clone(this: &Self::This) -> ::windows_core::Result<IEnumTfContexts>;
@@ -612,7 +599,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumTfContexts_
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumTfDisplayAttributeInfo_Impl: ::windows_core::BaseImpl {
     fn Clone(this: &Self::This) -> ::windows_core::Result<IEnumTfDisplayAttributeInfo>;
@@ -651,7 +637,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumTfDisplayAt
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumTfDocumentMgrs_Impl: ::windows_core::BaseImpl {
     fn Clone(this: &Self::This) -> ::windows_core::Result<IEnumTfDocumentMgrs>;
@@ -690,7 +675,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumTfDocumentM
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumTfFunctionProviders_Impl: ::windows_core::BaseImpl {
     fn Clone(this: &Self::This) -> ::windows_core::Result<IEnumTfFunctionProviders>;
@@ -729,7 +713,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumTfFunctionP
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumTfInputProcessorProfiles_Impl: ::windows_core::BaseImpl {
     fn Clone(this: &Self::This) -> ::windows_core::Result<IEnumTfInputProcessorProfiles>;
@@ -768,7 +751,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumTfInputProc
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumTfLangBarItems_Impl: ::windows_core::BaseImpl {
     fn Clone(this: &Self::This) -> ::windows_core::Result<IEnumTfLangBarItems>;
@@ -807,7 +789,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumTfLangBarIt
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -850,7 +831,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumTfLanguageP
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumTfLatticeElements_Impl: ::windows_core::BaseImpl {
     fn Clone(this: &Self::This) -> ::windows_core::Result<IEnumTfLatticeElements>;
@@ -889,7 +869,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumTfLatticeEl
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumTfProperties_Impl: ::windows_core::BaseImpl {
     fn Clone(this: &Self::This) -> ::windows_core::Result<IEnumTfProperties>;
@@ -928,7 +907,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumTfPropertie
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -971,7 +949,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumTfPropertyV
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumTfRanges_Impl: ::windows_core::BaseImpl {
     fn Clone(this: &Self::This) -> ::windows_core::Result<IEnumTfRanges>;
@@ -1010,7 +987,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumTfRanges_Im
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumTfUIElements_Impl: ::windows_core::BaseImpl {
     fn Clone(this: &Self::This) -> ::windows_core::Result<IEnumTfUIElements>;
@@ -1049,7 +1025,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumTfUIElement
             Skip: Skip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IInternalDocWrap_Impl: ::windows_core::BaseImpl {
     fn NotifyRevoke(this: &Self::This) -> ::windows_core::Result<()>;
@@ -1064,7 +1039,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInternalDocWrap
         }
         IInternalDocWrap_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, NotifyRevoke: NotifyRevoke::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpeechCommandProvider_Impl: ::windows_core::BaseImpl {
     fn EnumSpeechCommands(this: &Self::This, langid: u16) -> ::windows_core::Result<IEnumSpeechCommands>;
@@ -1093,7 +1067,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechCommandPr
             ProcessCommand: ProcessCommand::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1312,7 +1285,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITextStoreACP_Im
             GetWnd: GetWnd::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1520,7 +1492,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITextStoreACP2_I
             GetScreenExt: GetScreenExt::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1539,7 +1510,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITextStoreACPEx_
         }
         ITextStoreACPEx_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ScrollToRect: ScrollToRect::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1582,7 +1552,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITextStoreACPSer
             CreateRange: CreateRange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITextStoreACPSink_Impl: ::windows_core::BaseImpl {
     fn OnTextChange(this: &Self::This, dwflags: TEXT_STORE_TEXT_CHANGE_FLAGS, pchange: *const TS_TEXTCHANGE) -> ::windows_core::Result<()>;
@@ -1635,7 +1604,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITextStoreACPSin
             OnEndEditTransaction: OnEndEditTransaction::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITextStoreACPSinkEx_Impl: ::windows_core::BaseImpl + ITextStoreACPSink_Impl {
     fn OnDisconnect(this: &Self::This) -> ::windows_core::Result<()>;
@@ -1650,7 +1618,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITextStoreACPSin
         }
         ITextStoreACPSinkEx_Vtbl { base__: <ITextStoreACPSink as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnDisconnect: OnDisconnect::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1868,7 +1835,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITextStoreAnchor
             InsertEmbeddedAtSelection: InsertEmbeddedAtSelection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1887,7 +1853,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITextStoreAnchor
         }
         ITextStoreAnchorEx_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ScrollToRect: ScrollToRect::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITextStoreAnchorSink_Impl: ::windows_core::BaseImpl {
     fn OnTextChange(this: &Self::This, dwflags: TEXT_STORE_CHANGE_FLAGS, pastart: ::core::option::Option<&IAnchor>, paend: ::core::option::Option<&IAnchor>) -> ::windows_core::Result<()>;
@@ -1940,7 +1905,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITextStoreAnchor
             OnEndEditTransaction: OnEndEditTransaction::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITextStoreSinkAnchorEx_Impl: ::windows_core::BaseImpl + ITextStoreAnchorSink_Impl {
     fn OnDisconnect(this: &Self::This) -> ::windows_core::Result<()>;
@@ -1955,7 +1919,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITextStoreSinkAn
         }
         ITextStoreSinkAnchorEx_Vtbl { base__: <ITextStoreAnchorSink as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnDisconnect: OnDisconnect::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1974,7 +1937,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfActiveLanguag
         }
         ITfActiveLanguageProfileNotifySink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnActivated: OnActivated::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfCandidateList_Impl: ::windows_core::BaseImpl {
     fn EnumCandidates(this: &Self::This) -> ::windows_core::Result<IEnumTfCandidates>;
@@ -2025,7 +1987,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfCandidateList
             SetResult: SetResult::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2118,7 +2079,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfCandidateList
             GetCurrentPage: GetCurrentPage::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2150,7 +2110,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfCandidateList
             Abort: Abort::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfCandidateString_Impl: ::windows_core::BaseImpl {
     fn GetString(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -2185,7 +2144,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfCandidateStri
             GetIndex: GetIndex::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -2314,7 +2272,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfCategoryMgr_I
             IsEqualTfGuidAtom: IsEqualTfGuidAtom::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfCleanupContextDurationSink_Impl: ::windows_core::BaseImpl {
     fn OnStartCleanupContext(this: &Self::This) -> ::windows_core::Result<()>;
@@ -2337,7 +2294,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfCleanupContex
             OnEndCleanupContext: OnEndCleanupContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfCleanupContextSink_Impl: ::windows_core::BaseImpl {
     fn OnCleanupContext(this: &Self::This, ecwrite: u32, pic: ::core::option::Option<&ITfContext>) -> ::windows_core::Result<()>;
@@ -2355,7 +2311,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfCleanupContex
             OnCleanupContext: OnCleanupContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfClientId_Impl: ::windows_core::BaseImpl {
     fn GetClientId(this: &Self::This, rclsid: *const ::windows_core::GUID) -> ::windows_core::Result<u32>;
@@ -2376,7 +2331,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfClientId_Impl
         }
         ITfClientId_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetClientId: GetClientId::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2409,7 +2363,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfCompartment_I
             GetValue: GetValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfCompartmentEventSink_Impl: ::windows_core::BaseImpl {
     fn OnChange(this: &Self::This, rguid: *const ::windows_core::GUID) -> ::windows_core::Result<()>;
@@ -2424,7 +2377,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfCompartmentEv
         }
         ITfCompartmentEventSink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnChange: OnChange::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -2468,7 +2420,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfCompartmentMg
             EnumCompartments: EnumCompartments::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfComposition_Impl: ::windows_core::BaseImpl {
     fn GetRange(this: &Self::This) -> ::windows_core::Result<ITfRange>;
@@ -2507,7 +2458,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfComposition_I
             EndComposition: EndComposition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfCompositionSink_Impl: ::windows_core::BaseImpl {
     fn OnCompositionTerminated(this: &Self::This, ecwrite: u32, pcomposition: ::core::option::Option<&ITfComposition>) -> ::windows_core::Result<()>;
@@ -2525,7 +2475,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfCompositionSi
             OnCompositionTerminated: OnCompositionTerminated::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfCompositionView_Impl: ::windows_core::BaseImpl {
     fn GetOwnerClsid(this: &Self::This) -> ::windows_core::Result<::windows_core::GUID>;
@@ -2560,7 +2509,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfCompositionVi
             GetRange: GetRange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfConfigureSystemKeystrokeFeed_Impl: ::windows_core::BaseImpl {
     fn DisableSystemKeystrokeFeed(this: &Self::This) -> ::windows_core::Result<()>;
@@ -2583,7 +2531,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfConfigureSyst
             EnableSystemKeystrokeFeed: EnableSystemKeystrokeFeed::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2753,7 +2700,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfContext_Impl,
             CreateRangeBackup: CreateRangeBackup::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfContextComposition_Impl: ::windows_core::BaseImpl {
     fn StartComposition(this: &Self::This, ecwrite: u32, pcompositionrange: ::core::option::Option<&ITfRange>, psink: ::core::option::Option<&ITfCompositionSink>) -> ::windows_core::Result<ITfComposition>;
@@ -2810,7 +2756,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfContextCompos
             TakeOwnership: TakeOwnership::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2871,7 +2816,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfContextKeyEve
             OnTestKeyUp: OnTestKeyUp::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2948,7 +2892,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfContextOwner_
             GetAttribute: GetAttribute::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfContextOwnerCompositionServices_Impl: ::windows_core::BaseImpl + ITfContextComposition_Impl {
     fn TerminateComposition(this: &Self::This, pcomposition: ::core::option::Option<&ITfCompositionView>) -> ::windows_core::Result<()>;
@@ -2966,7 +2909,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfContextOwnerC
             TerminateComposition: TerminateComposition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3004,7 +2946,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfContextOwnerC
             OnEndComposition: OnEndComposition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -3062,7 +3003,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfContextOwnerS
             CreateRange: CreateRange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3117,7 +3057,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfContextView_I
             GetWnd: GetWnd::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -3156,7 +3095,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfCreatePropert
             CreatePropertyStore: CreatePropertyStore::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3210,7 +3148,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfDisplayAttrib
             Reset: Reset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfDisplayAttributeMgr_Impl: ::windows_core::BaseImpl {
     fn OnUpdateInfo(this: &Self::This) -> ::windows_core::Result<()>;
@@ -3244,7 +3181,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfDisplayAttrib
             GetDisplayAttributeInfo: GetDisplayAttributeInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfDisplayAttributeNotifySink_Impl: ::windows_core::BaseImpl {
     fn OnUpdateInfo(this: &Self::This) -> ::windows_core::Result<()>;
@@ -3259,7 +3195,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfDisplayAttrib
         }
         ITfDisplayAttributeNotifySink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnUpdateInfo: OnUpdateInfo::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfDisplayAttributeProvider_Impl: ::windows_core::BaseImpl {
     fn EnumDisplayAttributeInfo(this: &Self::This) -> ::windows_core::Result<IEnumTfDisplayAttributeInfo>;
@@ -3294,7 +3229,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfDisplayAttrib
             GetDisplayAttributeInfo: GetDisplayAttributeInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfDocumentMgr_Impl: ::windows_core::BaseImpl {
     fn CreateContext(this: &Self::This, tidowner: u32, dwflags: u32, punk: ::core::option::Option<&::windows_core::IUnknown>, ppic: *mut ::core::option::Option<ITfContext>, pectextstore: *mut u32) -> ::windows_core::Result<()>;
@@ -3355,7 +3289,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfDocumentMgr_I
             EnumContexts: EnumContexts::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3394,7 +3327,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfEditRecord_Im
             GetTextAndPropertyUpdates: GetTextAndPropertyUpdates::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfEditSession_Impl: ::windows_core::BaseImpl {
     fn DoEditSession(this: &Self::This, ec: u32) -> ::windows_core::Result<()>;
@@ -3409,7 +3341,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfEditSession_I
         }
         ITfEditSession_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, DoEditSession: DoEditSession::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfEditTransactionSink_Impl: ::windows_core::BaseImpl {
     fn OnStartEditTransaction(this: &Self::This, pic: ::core::option::Option<&ITfContext>) -> ::windows_core::Result<()>;
@@ -3432,7 +3363,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfEditTransacti
             OnEndEditTransaction: OnEndEditTransaction::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfFnAdviseText_Impl: ::windows_core::BaseImpl + ITfFunction_Impl {
     fn OnTextUpdate(this: &Self::This, prange: ::core::option::Option<&ITfRange>, pchtext: &::windows_core::PCWSTR, cch: i32) -> ::windows_core::Result<()>;
@@ -3455,7 +3385,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFnAdviseText_
             OnLatticeUpdate: OnLatticeUpdate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfFnBalloon_Impl: ::windows_core::BaseImpl {
     fn UpdateBalloon(this: &Self::This, style: TfLBBalloonStyle, pch: &::windows_core::PCWSTR, cch: u32) -> ::windows_core::Result<()>;
@@ -3470,7 +3399,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFnBalloon_Imp
         }
         ITfFnBalloon_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, UpdateBalloon: UpdateBalloon::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3489,7 +3417,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFnConfigure_I
         }
         ITfFnConfigure_Vtbl { base__: <ITfFunction as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Show: Show::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3508,7 +3435,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFnConfigureRe
         }
         ITfFnConfigureRegisterEudc_Vtbl { base__: <ITfFunction as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Show: Show::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3527,7 +3453,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFnConfigureRe
         }
         ITfFnConfigureRegisterWord_Vtbl { base__: <ITfFunction as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Show: Show::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfFnCustomSpeechCommand_Impl: ::windows_core::BaseImpl + ITfFunction_Impl {
     fn SetSpeechCommandProvider(this: &Self::This, pspcmdprovider: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -3545,7 +3470,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFnCustomSpeec
             SetSpeechCommandProvider: SetSpeechCommandProvider::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfFnGetLinguisticAlternates_Impl: ::windows_core::BaseImpl + ITfFunction_Impl {
     fn GetAlternates(this: &Self::This, prange: ::core::option::Option<&ITfRange>) -> ::windows_core::Result<ITfCandidateList>;
@@ -3566,7 +3490,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFnGetLinguist
         }
         ITfFnGetLinguisticAlternates_Vtbl { base__: <ITfFunction as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetAlternates: GetAlternates::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfFnGetPreferredTouchKeyboardLayout_Impl: ::windows_core::BaseImpl + ITfFunction_Impl {
     fn GetLayout(this: &Self::This, ptkblayouttype: *mut TKBLayoutType, pwpreferredlayoutid: *const u16) -> ::windows_core::Result<()>;
@@ -3581,7 +3504,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFnGetPreferre
         }
         ITfFnGetPreferredTouchKeyboardLayout_Vtbl { base__: <ITfFunction as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetLayout: GetLayout::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfFnGetSAPIObject_Impl: ::windows_core::BaseImpl + ITfFunction_Impl {
     fn Get(this: &Self::This, sobj: TfSapiObject) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -3602,7 +3524,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFnGetSAPIObje
         }
         ITfFnGetSAPIObject_Vtbl { base__: <ITfFunction as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Get: Get::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3621,7 +3542,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFnLMInternal_
         }
         ITfFnLMInternal_Vtbl { base__: <ITfFnLMProcessor as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ProcessLattice: ProcessLattice::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3691,7 +3611,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFnLMProcessor
             InvokeFunc: InvokeFunc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3724,7 +3643,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFnLangProfile
             IsProfileAvailableForLang: IsProfileAvailableForLang::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3751,7 +3669,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFnPlayBack_Im
             Play: Play::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfFnPropertyUIStatus_Impl: ::windows_core::BaseImpl + ITfFunction_Impl {
     fn GetStatus(this: &Self::This, refguidprop: *const ::windows_core::GUID) -> ::windows_core::Result<u32>;
@@ -3780,7 +3697,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFnPropertyUIS
             SetStatus: SetStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3818,7 +3734,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFnReconversio
             Reconvert: Reconvert::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfFnSearchCandidateProvider_Impl: ::windows_core::BaseImpl + ITfFunction_Impl {
     fn GetSearchCandidates(this: &Self::This, bstrquery: &::windows_core::BSTR, bstrapplicationid: &::windows_core::BSTR) -> ::windows_core::Result<ITfCandidateList>;
@@ -3847,7 +3762,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFnSearchCandi
             SetResult: SetResult::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3866,7 +3780,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFnShowHelp_Im
         }
         ITfFnShowHelp_Vtbl { base__: <ITfFunction as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Show: Show::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfFunction_Impl: ::windows_core::BaseImpl {
     fn GetDisplayName(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -3887,7 +3800,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFunction_Impl
         }
         ITfFunction_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDisplayName: GetDisplayName::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfFunctionProvider_Impl: ::windows_core::BaseImpl {
     fn GetType(this: &Self::This) -> ::windows_core::Result<::windows_core::GUID>;
@@ -3933,7 +3845,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfFunctionProvi
             GetFunction: GetFunction::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfInputProcessorProfileActivationSink_Impl: ::windows_core::BaseImpl {
     fn OnActivated(this: &Self::This, dwprofiletype: u32, langid: u16, clsid: *const ::windows_core::GUID, catid: *const ::windows_core::GUID, guidprofile: *const ::windows_core::GUID, hkl: HKL, dwflags: u32) -> ::windows_core::Result<()>;
@@ -3948,7 +3859,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfInputProcesso
         }
         ITfInputProcessorProfileActivationSink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnActivated: OnActivated::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4028,7 +3938,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfInputProcesso
             GetActiveProfile: GetActiveProfile::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfInputProcessorProfileSubstituteLayout_Impl: ::windows_core::BaseImpl {
     fn GetSubstituteKeyboardLayout(this: &Self::This, rclsid: *const ::windows_core::GUID, langid: u16, guidprofile: *const ::windows_core::GUID) -> ::windows_core::Result<HKL>;
@@ -4052,7 +3961,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfInputProcesso
             GetSubstituteKeyboardLayout: GetSubstituteKeyboardLayout::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -4189,7 +4097,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfInputProcesso
             SubstituteKeyboardLayout: SubstituteKeyboardLayout::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -4211,7 +4118,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfInputProcesso
             SetLanguageProfileDisplayName: SetLanguageProfileDisplayName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfInputScope_Impl: ::windows_core::BaseImpl {
     fn GetInputScopes(this: &Self::This, pprginputscopes: *mut *mut InputScope, pccount: *mut u32) -> ::windows_core::Result<()>;
@@ -4267,7 +4173,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfInputScope_Im
             GetXML: GetXML::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -4292,7 +4197,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfInputScope2_I
         }
         ITfInputScope2_Vtbl { base__: <ITfInputScope as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, EnumWordList: EnumWordList::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -4331,7 +4235,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfInsertAtSelec
             InsertEmbeddedAtSelection: InsertEmbeddedAtSelection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4391,7 +4294,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfIntegratableC
             FinalizeExactCompositionString: FinalizeExactCompositionString::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4468,7 +4370,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfKeyEventSink_
             OnPreservedKey: OnPreservedKey::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4495,7 +4396,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfKeyTraceEvent
             OnKeyTraceUp: OnKeyTraceUp::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4636,7 +4536,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfKeystrokeMgr_
             SimulatePreservedKey: SimulatePreservedKey::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4675,7 +4574,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfLMLattice_Imp
             EnumLatticeElements: EnumLatticeElements::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4728,7 +4626,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfLangBarEventS
             GetItemFloatingRect: GetItemFloatingRect::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4777,7 +4674,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfLangBarItem_I
             GetTooltipString: GetTooltipString::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4821,7 +4717,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfLangBarItemBa
             GetBalloonInfo: GetBalloonInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -4859,7 +4754,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfLangBarItemBi
             DrawBitmap: DrawBitmap::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -4918,7 +4812,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfLangBarItemBi
             GetText: GetText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
@@ -4972,7 +4865,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfLangBarItemBu
             GetText: GetText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5073,7 +4965,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfLangBarItemMg
             UnadviseItemsSink: UnadviseItemsSink::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfLangBarItemSink_Impl: ::windows_core::BaseImpl {
     fn OnUpdate(this: &Self::This, dwflags: u32) -> ::windows_core::Result<()>;
@@ -5088,7 +4979,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfLangBarItemSi
         }
         ITfLangBarItemSink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnUpdate: OnUpdate::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5162,7 +5052,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfLangBarMgr_Im
             GetShowFloatingStatus: GetShowFloatingStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5195,7 +5084,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfLanguageProfi
             OnLanguageChanged: OnLanguageChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfMSAAControl_Impl: ::windows_core::BaseImpl {
     fn SystemEnableMSAA(this: &Self::This) -> ::windows_core::Result<()>;
@@ -5218,7 +5106,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfMSAAControl_I
             SystemDisableMSAA: SystemDisableMSAA::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
 #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -5237,7 +5124,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfMenu_Impl, co
         }
         ITfMenu_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, AddMenuItem: AddMenuItem::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
@@ -5274,7 +5160,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfMessagePump_I
             GetMessageW: GetMessageW::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5299,7 +5184,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfMouseSink_Imp
         }
         ITfMouseSink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnMouseEvent: OnMouseEvent::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfMouseTracker_Impl: ::windows_core::BaseImpl {
     fn AdviseMouseSink(this: &Self::This, range: ::core::option::Option<&ITfRange>, psink: ::core::option::Option<&ITfMouseSink>) -> ::windows_core::Result<u32>;
@@ -5328,7 +5212,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfMouseTracker_
             UnadviseMouseSink: UnadviseMouseSink::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfMouseTrackerACP_Impl: ::windows_core::BaseImpl {
     fn AdviseMouseSink(this: &Self::This, range: ::core::option::Option<&ITfRangeACP>, psink: ::core::option::Option<&ITfMouseSink>) -> ::windows_core::Result<u32>;
@@ -5357,7 +5240,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfMouseTrackerA
             UnadviseMouseSink: UnadviseMouseSink::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -5382,7 +5264,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfPersistentPro
         }
         ITfPersistentPropertyLoaderACP_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, LoadProperty: LoadProperty::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfPreservedKeyNotifySink_Impl: ::windows_core::BaseImpl {
     fn OnUpdated(this: &Self::This, pprekey: *const TF_PRESERVEDKEY) -> ::windows_core::Result<()>;
@@ -5397,7 +5278,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfPreservedKeyN
         }
         ITfPreservedKeyNotifySink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnUpdated: OnUpdated::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5434,7 +5314,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfProperty_Impl
             Clear: Clear::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5550,7 +5429,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfPropertyStore
             Serialize: Serialize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -5578,7 +5456,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfQueryEmbedded
             QueryInsertEmbedded: QueryInsertEmbedded::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -5777,7 +5654,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfRange_Impl, c
             GetContext: GetContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -5804,7 +5680,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfRangeACP_Impl
             SetExtent: SetExtent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfRangeBackup_Impl: ::windows_core::BaseImpl {
     fn Restore(this: &Self::This, ec: u32, prange: ::core::option::Option<&ITfRange>) -> ::windows_core::Result<()>;
@@ -5819,7 +5694,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfRangeBackup_I
         }
         ITfRangeBackup_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Restore: Restore::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5874,7 +5748,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfReadOnlyPrope
             GetContext: GetContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5957,7 +5830,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfReadingInform
             IsVerticalOrderPreferred: IsVerticalOrderPreferred::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfReverseConversion_Impl: ::windows_core::BaseImpl {
     fn DoReverseConversion(this: &Self::This, lpstr: &::windows_core::PCWSTR) -> ::windows_core::Result<ITfReverseConversionList>;
@@ -5981,7 +5853,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfReverseConver
             DoReverseConversion: DoReverseConversion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfReverseConversionList_Impl: ::windows_core::BaseImpl {
     fn GetLength(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -6016,7 +5887,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfReverseConver
             GetString: GetString::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfReverseConversionMgr_Impl: ::windows_core::BaseImpl {
     fn GetReverseConversion(this: &Self::This, langid: u16, guidprofile: *const ::windows_core::GUID, dwflag: u32) -> ::windows_core::Result<ITfReverseConversion>;
@@ -6040,7 +5910,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfReverseConver
             GetReverseConversion: GetReverseConversion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfSource_Impl: ::windows_core::BaseImpl {
     fn AdviseSink(this: &Self::This, riid: *const ::windows_core::GUID, punk: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<u32>;
@@ -6069,7 +5938,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfSource_Impl, 
             UnadviseSink: UnadviseSink::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfSourceSingle_Impl: ::windows_core::BaseImpl {
     fn AdviseSingleSink(this: &Self::This, tid: u32, riid: *const ::windows_core::GUID, punk: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -6092,7 +5960,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfSourceSingle_
             UnadviseSingleSink: UnadviseSingleSink::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -6124,7 +5991,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfSpeechUIServe
             UpdateBalloon: UpdateBalloon::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfStatusSink_Impl: ::windows_core::BaseImpl {
     fn OnStatusChange(this: &Self::This, pic: ::core::option::Option<&ITfContext>, dwflags: u32) -> ::windows_core::Result<()>;
@@ -6139,7 +6005,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfStatusSink_Im
         }
         ITfStatusSink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnStatusChange: OnStatusChange::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfSystemDeviceTypeLangBarItem_Impl: ::windows_core::BaseImpl {
     fn SetIconMode(this: &Self::This, dwflags: LANG_BAR_ITEM_ICON_MODE_FLAGS) -> ::windows_core::Result<()>;
@@ -6168,7 +6033,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfSystemDeviceT
             GetIconMode: GetIconMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_WindowsAndMessaging\"`"]
 #[cfg(feature = "Win32_UI_WindowsAndMessaging")]
@@ -6195,7 +6059,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfSystemLangBar
             SetTooltipString: SetTooltipString::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfSystemLangBarItemSink_Impl: ::windows_core::BaseImpl {
     fn InitMenu(this: &Self::This, pmenu: ::core::option::Option<&ITfMenu>) -> ::windows_core::Result<()>;
@@ -6218,7 +6081,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfSystemLangBar
             OnMenuSelect: OnMenuSelect::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfSystemLangBarItemText_Impl: ::windows_core::BaseImpl {
     fn SetItemText(this: &Self::This, pch: &::windows_core::PCWSTR, cch: u32) -> ::windows_core::Result<()>;
@@ -6247,7 +6109,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfSystemLangBar
             GetItemText: GetItemText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfTextEditSink_Impl: ::windows_core::BaseImpl {
     fn OnEndEdit(this: &Self::This, pic: ::core::option::Option<&ITfContext>, ecreadonly: u32, peditrecord: ::core::option::Option<&ITfEditRecord>) -> ::windows_core::Result<()>;
@@ -6262,7 +6123,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfTextEditSink_
         }
         ITfTextEditSink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnEndEdit: OnEndEdit::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfTextInputProcessor_Impl: ::windows_core::BaseImpl {
     fn Activate(this: &Self::This, ptim: ::core::option::Option<&ITfThreadMgr>, tid: u32) -> ::windows_core::Result<()>;
@@ -6285,7 +6145,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfTextInputProc
             Deactivate: Deactivate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfTextInputProcessorEx_Impl: ::windows_core::BaseImpl + ITfTextInputProcessor_Impl {
     fn ActivateEx(this: &Self::This, ptim: ::core::option::Option<&ITfThreadMgr>, tid: u32, dwflags: u32) -> ::windows_core::Result<()>;
@@ -6300,7 +6159,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfTextInputProc
         }
         ITfTextInputProcessorEx_Vtbl { base__: <ITfTextInputProcessor as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ActivateEx: ActivateEx::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfTextLayoutSink_Impl: ::windows_core::BaseImpl {
     fn OnLayoutChange(this: &Self::This, pic: ::core::option::Option<&ITfContext>, lcode: TfLayoutCode, pview: ::core::option::Option<&ITfContextView>) -> ::windows_core::Result<()>;
@@ -6315,7 +6173,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfTextLayoutSin
         }
         ITfTextLayoutSink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnLayoutChange: OnLayoutChange::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfThreadFocusSink_Impl: ::windows_core::BaseImpl {
     fn OnSetThreadFocus(this: &Self::This) -> ::windows_core::Result<()>;
@@ -6338,7 +6195,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfThreadFocusSi
             OnKillThreadFocus: OnKillThreadFocus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -6464,7 +6320,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfThreadMgr_Imp
             GetGlobalCompartment: GetGlobalCompartment::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -6605,7 +6460,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfThreadMgr2_Im
             ResumeKeystrokeHandling: ResumeKeystrokeHandling::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITfThreadMgrEventSink_Impl: ::windows_core::BaseImpl {
     fn OnInitDocumentMgr(this: &Self::This, pdim: ::core::option::Option<&ITfDocumentMgr>) -> ::windows_core::Result<()>;
@@ -6643,7 +6497,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfThreadMgrEven
             OnPopContext: OnPopContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -6676,7 +6529,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfThreadMgrEx_I
             GetActiveFlags: GetActiveFlags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -6701,7 +6553,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfToolTipUIElem
         }
         ITfToolTipUIElement_Vtbl { base__: <ITfUIElement as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetString: GetString::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -6729,7 +6580,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfTransitoryExt
             OnTransitoryExtensionUpdated: OnTransitoryExtensionUpdated::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -6754,7 +6604,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfTransitoryExt
         }
         ITfTransitoryExtensionUIElement_Vtbl { base__: <ITfUIElement as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDocumentMgr: GetDocumentMgr::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -6809,7 +6658,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfUIElement_Imp
             IsShown: IsShown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -6863,7 +6711,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfUIElementMgr_
             EnumUIElements: EnumUIElements::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -6895,7 +6742,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITfUIElementSink
             EndUIElement: EndUIElement::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -6942,7 +6788,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIManagerEventS
             OnWindowClosed: OnWindowClosed::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVersionInfo_Impl: ::windows_core::BaseImpl {
     fn GetSubcomponentCount(this: &Self::This, ulsub: u32) -> ::windows_core::Result<u32>;
@@ -7004,5 +6849,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVersionInfo_Imp
             GetInstanceDescription: GetInstanceDescription::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

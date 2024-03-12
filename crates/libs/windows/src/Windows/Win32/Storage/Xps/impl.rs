@@ -46,7 +46,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsDocumentPack
             GetXpsType: GetXpsType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -85,7 +84,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsDocumentPack
             GetXpsOMFactory: GetXpsOMFactory::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMBrush_Impl: ::windows_core::BaseImpl + IXpsOMShareable_Impl {
     fn GetOpacity(this: &Self::This) -> ::windows_core::Result<f32>;
@@ -114,7 +112,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMBrush_Impl
             SetOpacity: SetOpacity::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -244,7 +241,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMCanvas_Imp
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -277,7 +273,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMColorProfi
             SetContent: SetContent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -347,7 +342,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMColorProfi
             GetByPartName: GetByPartName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -642,7 +636,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMCoreProper
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMDashCollection_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -697,7 +690,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMDashCollec
             Append: Append::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMDictionary_Impl: ::windows_core::BaseImpl {
     fn GetOwner(this: &Self::This) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -790,7 +782,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMDictionary
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -883,7 +874,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMDocument_I
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMDocumentCollection_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -938,7 +928,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMDocumentCo
             Append: Append::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -993,7 +982,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMDocumentSe
             SetPrintTicketResource: SetPrintTicketResource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -1037,7 +1025,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMDocumentSt
             SetContent: SetContent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -1081,7 +1068,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMFontResour
             GetEmbeddingOption: GetEmbeddingOption::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -1151,7 +1137,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMFontResour
             GetByPartName: GetByPartName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMGeometry_Impl: ::windows_core::BaseImpl + IXpsOMShareable_Impl {
     fn GetFigures(this: &Self::This) -> ::windows_core::Result<IXpsOMGeometryFigureCollection>;
@@ -1245,7 +1230,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMGeometry_I
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1385,7 +1369,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMGeometryFi
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMGeometryFigureCollection_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1440,7 +1423,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMGeometryFi
             Append: Append::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -1694,7 +1676,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMGlyphs_Imp
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1843,7 +1824,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMGlyphsEdit
             SetDeviceFontName: SetDeviceFontName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMGradientBrush_Impl: ::windows_core::BaseImpl + IXpsOMBrush_Impl {
     fn GetGradientStops(this: &Self::This) -> ::windows_core::Result<IXpsOMGradientStopCollection>;
@@ -1942,7 +1922,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMGradientBr
             SetColorInterpolationMode: SetColorInterpolationMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMGradientStop_Impl: ::windows_core::BaseImpl {
     fn GetOwner(this: &Self::This) -> ::windows_core::Result<IXpsOMGradientBrush>;
@@ -2003,7 +1982,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMGradientSt
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMGradientStopCollection_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -2058,7 +2036,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMGradientSt
             Append: Append::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMImageBrush_Impl: ::windows_core::BaseImpl + IXpsOMTileBrush_Impl {
     fn GetImageResource(this: &Self::This) -> ::windows_core::Result<IXpsOMImageResource>;
@@ -2114,7 +2091,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMImageBrush
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -2158,7 +2134,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMImageResou
             GetImageType: GetImageType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -2228,7 +2203,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMImageResou
             GetByPartName: GetByPartName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMLinearGradientBrush_Impl: ::windows_core::BaseImpl + IXpsOMGradientBrush_Impl {
     fn GetStartPoint(this: &Self::This) -> ::windows_core::Result<XPS_POINT>;
@@ -2284,7 +2258,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMLinearGrad
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMMatrixTransform_Impl: ::windows_core::BaseImpl + IXpsOMShareable_Impl {
     fn GetMatrix(this: &Self::This) -> ::windows_core::Result<XPS_MATRIX>;
@@ -2324,7 +2297,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMMatrixTran
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMNameCollection_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -2359,7 +2331,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMNameCollec
             GetAt: GetAt::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Security\"`, `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Security", feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -2799,7 +2770,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMObjectFact
             CreateReadOnlyStreamOnFile: CreateReadOnlyStreamOnFile::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Security\"`, `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Security", feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -2964,7 +2934,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMObjectFact
             CreateRemoteDictionaryResourceFromStream1: CreateRemoteDictionaryResourceFromStream1::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Security\"`, `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Security", feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -3055,7 +3024,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMPackage_Im
             WriteToStream: WriteToStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Security\"`, `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Security", feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -3093,7 +3061,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMPackage1_I
             WriteToStream1: WriteToStream1::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -3121,7 +3088,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMPackageTar
             CreateXpsOMPackageWriter: CreateXpsOMPackageWriter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -3169,7 +3135,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMPackageWri
             IsClosed: IsClosed::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -3196,7 +3161,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMPackageWri
             SetModelPrintTicket: SetModelPrintTicket::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -3401,7 +3365,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMPage_Impl,
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -3434,7 +3397,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMPage1_Impl
             Write1: Write1::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3602,7 +3564,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMPageRefere
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMPageReferenceCollection_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -3657,7 +3618,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMPageRefere
             Append: Append::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -3690,7 +3650,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMPart_Impl,
             SetPartName: SetPartName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMPartResources_Impl: ::windows_core::BaseImpl {
     fn GetFontResources(this: &Self::This) -> ::windows_core::Result<IXpsOMFontResourceCollection>;
@@ -3747,7 +3706,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMPartResour
             GetRemoteDictionaryResources: GetRemoteDictionaryResources::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -3806,7 +3764,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMPartUriCol
             Append: Append::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -4134,7 +4091,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMPath_Impl,
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -4167,7 +4123,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMPrintTicke
             SetContent: SetContent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMRadialGradientBrush_Impl: ::windows_core::BaseImpl + IXpsOMGradientBrush_Impl {
     fn GetCenter(this: &Self::This) -> ::windows_core::Result<XPS_POINT>;
@@ -4239,7 +4194,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMRadialGrad
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -4272,7 +4226,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMRemoteDict
             SetDictionary: SetDictionary::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -4305,7 +4258,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMRemoteDict
             Write1: Write1::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -4375,7 +4327,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMRemoteDict
             GetByPartName: GetByPartName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -4387,7 +4338,6 @@ impl ::windows_core::Iids for IXpsOMResource {
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMResource_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IXpsOMResource {
     const VTABLE: Self::Vtable = { IXpsOMResource_Vtbl { base__: <IXpsOMPart as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMShareable_Impl: ::windows_core::BaseImpl {
     fn GetOwner(this: &Self::This) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -4422,7 +4372,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMShareable_
             GetType: GetType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -4466,7 +4415,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMSignatureB
             SetContent: SetContent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -4536,7 +4484,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMSignatureB
             GetByPartName: GetByPartName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMSolidColorBrush_Impl: ::windows_core::BaseImpl + IXpsOMBrush_Impl {
     fn GetColor(this: &Self::This, color: *mut XPS_COLOR, colorprofile: *mut ::core::option::Option<IXpsOMColorProfileResource>) -> ::windows_core::Result<()>;
@@ -4570,7 +4517,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMSolidColor
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -4614,7 +4560,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMStoryFragm
             SetContent: SetContent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -4642,7 +4587,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMThumbnailG
             GenerateThumbnail: GenerateThumbnail::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMTileBrush_Impl: ::windows_core::BaseImpl + IXpsOMBrush_Impl {
     fn GetTransform(this: &Self::This) -> ::windows_core::Result<IXpsOMMatrixTransform>;
@@ -4746,7 +4690,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMTileBrush_
             SetTileMode: SetTileMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -4972,7 +4915,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMVisual_Imp
             SetLanguage: SetLanguage::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMVisualBrush_Impl: ::windows_core::BaseImpl + IXpsOMTileBrush_Impl {
     fn GetVisual(this: &Self::This) -> ::windows_core::Result<IXpsOMVisual>;
@@ -5039,7 +4981,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMVisualBrus
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsOMVisualCollection_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -5094,7 +5035,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsOMVisualColl
             Append: Append::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Security_Cryptography\"`, `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Security_Cryptography", feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -5225,7 +5165,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsSignature_Im
             SetSignatureXml: SetSignatureXml::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -5297,7 +5236,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsSignatureBlo
             CreateRequest: CreateRequest::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsSignatureBlockCollection_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -5337,7 +5275,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsSignatureBlo
             RemoveAt: RemoveAt::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsSignatureCollection_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -5377,7 +5314,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsSignatureCol
             RemoveAt: RemoveAt::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Security_Cryptography\"`, `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Security_Cryptography", feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -5485,7 +5421,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsSignatureMan
             SavePackageToStream: SavePackageToStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -5598,7 +5533,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsSignatureReq
             GetSignature: GetSignature::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXpsSignatureRequestCollection_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -5638,7 +5572,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsSignatureReq
             RemoveAt: RemoveAt::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Packaging_Opc\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Packaging_Opc", feature = "Win32_System_Com"))]
@@ -5800,5 +5733,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXpsSigningOptio
             SetFlags: SetFlags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

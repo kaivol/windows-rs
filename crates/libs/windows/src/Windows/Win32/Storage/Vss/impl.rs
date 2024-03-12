@@ -35,7 +35,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssAdmin_Impl, 
             AbortAllSnapshotsInProgress: AbortAllSnapshotsInProgress::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVssAdminEx_Impl: ::windows_core::BaseImpl + IVssAdmin_Impl {
     fn GetProviderCapability(this: &Self::This, pproviderid: &::windows_core::GUID) -> ::windows_core::Result<u64>;
@@ -75,7 +74,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssAdminEx_Impl
             SetProviderContext: SetProviderContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVssAsync_Impl: ::windows_core::BaseImpl {
     fn Cancel(this: &Self::This) -> ::windows_core::Result<()>;
@@ -103,7 +101,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssAsync_Impl, 
             QueryStatus: QueryStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -322,7 +319,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssComponent_Im
             GetDifferencedFile: GetDifferencedFile::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -398,7 +394,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssComponentEx_
             GetRestoreName: GetRestoreName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -425,7 +420,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssComponentEx2
             GetFailure: GetFailure::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVssCreateExpressWriterMetadata_Impl: ::windows_core::BaseImpl {
     fn AddExcludeFiles(this: &Self::This, wszpath: &::windows_core::PCWSTR, wszfilespec: &::windows_core::PCWSTR, brecursive: u8) -> ::windows_core::Result<()>;
@@ -495,7 +489,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssCreateExpres
             SaveAsXML: SaveAsXML::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Data_Xml_MsXml\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Data_Xml_MsXml", feature = "Win32_System_Com"))]
@@ -692,7 +685,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssDifferential
             QueryDiffAreasForSnapshot: QueryDiffAreasForSnapshot::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -735,7 +727,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssDifferential
             SetSnapshotPriority: SetSnapshotPriority::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -777,7 +768,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssDifferential
             QuerySnapshotDeltaBitmap: QuerySnapshotDeltaBitmap::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVssEnumMgmtObject_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, rgelt: *mut VSS_MGMT_OBJECT_PROP, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -810,7 +800,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssEnumMgmtObje
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVssEnumObject_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, rgelt: *mut VSS_OBJECT_PROP, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -843,7 +832,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssEnumObject_I
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVssExpressWriter_Impl: ::windows_core::BaseImpl {
     fn CreateMetadata(this: &Self::This, writerid: &::windows_core::GUID, writername: &::windows_core::PCWSTR, usagetype: VSS_USAGE_TYPE, versionmajor: u32, versionminor: u32, reserved: u32) -> ::windows_core::Result<IVssCreateExpressWriterMetadata>;
@@ -882,7 +870,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssExpressWrite
             Unregister: Unregister::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -951,7 +938,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssFileShareSna
             SetSnapshotProperty: SetSnapshotProperty::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_VirtualDiskService\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_VirtualDiskService"))]
@@ -998,7 +984,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssHardwareSnap
             OnLunEmpty: OnLunEmpty::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Storage_VirtualDiskService\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Storage_VirtualDiskService"))]
@@ -1047,7 +1032,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssHardwareSnap
             OnReuseLuns: OnReuseLuns::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVssProviderCreateSnapshotSet_Impl: ::windows_core::BaseImpl {
     fn EndPrepareSnapshots(this: &Self::This, snapshotsetid: &::windows_core::GUID) -> ::windows_core::Result<()>;
@@ -1095,7 +1079,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssProviderCrea
             AbortSnapshots: AbortSnapshots::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1122,7 +1105,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssProviderNoti
             OnUnload: OnUnload::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVssSnapshotMgmt_Impl: ::windows_core::BaseImpl {
     fn GetProviderMgmtInterface(this: &Self::This, providerid: &::windows_core::GUID, interfaceid: *const ::windows_core::GUID) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -1168,7 +1150,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssSnapshotMgmt
             QuerySnapshotsByVolume: QuerySnapshotsByVolume::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVssSnapshotMgmt2_Impl: ::windows_core::BaseImpl {
     fn GetMinDiffAreaSize(this: &Self::This) -> ::windows_core::Result<i64>;
@@ -1192,7 +1173,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssSnapshotMgmt
             GetMinDiffAreaSize: GetMinDiffAreaSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1277,7 +1257,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssSoftwareSnap
             QueryRevertStatus: QueryRevertStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVssWMDependency_Impl: ::windows_core::BaseImpl {
     fn GetWriterId(this: &Self::This, pwriterid: *mut ::windows_core::GUID) -> ::windows_core::Result<()>;
@@ -1305,7 +1284,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssWMDependency
             GetComponentName: GetComponentName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVssWMFiledesc_Impl: ::windows_core::BaseImpl {
     fn GetPath(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -1373,7 +1351,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVssWMFiledesc_I
             GetBackupTypeMask: GetBackupTypeMask::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVssWriterComponents_Impl: Sized {
     fn GetComponentCount(&self, pccomponents: *mut u32) -> ::windows_core::Result<()>;

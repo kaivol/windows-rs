@@ -50,7 +50,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHolographicCame
             UnacquireDirect3D12BufferResource: UnacquireDirect3D12BufferResource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D12")]
@@ -77,7 +76,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHolographicCame
             CommitDirect3D12ResourceWithDepthData: CommitDirect3D12ResourceWithDepthData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -131,7 +129,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHolographicQuad
             UnacquireDirect3D12BufferResource: UnacquireDirect3D12BufferResource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D12")]
@@ -153,5 +150,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHolographicQuad
             CommitDirect3D12Resource: CommitDirect3D12Resource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

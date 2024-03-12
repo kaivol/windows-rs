@@ -61,7 +61,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFunctionDiscove
             RemoveInstance: RemoveInstance::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -93,7 +92,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFunctionDiscove
             OnEvent: OnEvent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_System_Com", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -174,7 +172,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFunctionDiscove
             InstanceReleased: InstanceReleased::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_System_Com", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -224,7 +221,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFunctionDiscove
             CreateFunctionInstanceCollection: CreateFunctionInstanceCollection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -273,7 +269,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFunctionDiscove
             GetPropertyConstraints: GetPropertyConstraints::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -292,7 +287,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFunctionDiscove
         }
         IFunctionDiscoveryServiceProvider_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Initialize: Initialize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_System_Com", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -347,7 +341,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFunctionInstanc
             GetCategory: GetCategory::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -417,7 +410,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFunctionInstanc
             DeleteAll: DeleteAll::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -455,7 +447,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFunctionInstanc
             Execute: Execute::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -480,7 +471,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFunctionInstanc
         }
         IFunctionInstanceQuery_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Execute: Execute::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPNPXAssociation_Impl: ::windows_core::BaseImpl {
     fn Associate(this: &Self::This, pszsubcategory: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -508,7 +498,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPNPXAssociation
             Delete: Delete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPNPXDeviceAssociation_Impl: ::windows_core::BaseImpl {
     fn Associate(this: &Self::This, pszsubcategory: &::windows_core::PCWSTR, pifunctiondiscoverynotification: ::core::option::Option<&IFunctionDiscoveryNotification>) -> ::windows_core::Result<()>;
@@ -536,7 +525,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPNPXDeviceAssoc
             Delete: Delete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -606,7 +594,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPropertyStoreCo
             DeleteAll: DeleteAll::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -655,7 +642,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProviderPropert
             SetValue: SetValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -708,7 +694,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProviderPropert
             Reset: Reset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -741,7 +726,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProviderPublish
             RemoveInstance: RemoveInstance::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IProviderQueryConstraintCollection_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -796,5 +780,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProviderQueryCo
             Reset: Reset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

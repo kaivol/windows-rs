@@ -18,7 +18,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAdaptiveCard_Im
         }
         IAdaptiveCard_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ToJson: ToJson::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAdaptiveCardBuilderStatics_Impl: ::windows_core::BaseImpl {
     fn CreateAdaptiveCardFromJson(this: &Self::This, value: &::windows_core::HSTRING) -> ::windows_core::Result<IAdaptiveCard>;
@@ -43,5 +42,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAdaptiveCardBui
             CreateAdaptiveCardFromJson: CreateAdaptiveCardFromJson::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

@@ -4,7 +4,6 @@ impl ::windows_core::Iids for IBackgroundCondition {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundCondition_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IBackgroundCondition {
     const VTABLE: Self::Vtable = { IBackgroundCondition_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBackgroundTask_Impl: ::windows_core::BaseImpl {
     fn Run(this: &Self::This, taskinstance: ::core::option::Option<&IBackgroundTaskInstance>) -> ::windows_core::Result<()>;
@@ -19,7 +18,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundTask_
         }
         IBackgroundTask_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Run: Run::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -126,7 +124,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundTaskI
             GetDeferral: GetDeferral::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -155,7 +152,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundTaskI
             GetThrottleCount: GetThrottleCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"System\"`"]
 #[cfg(all(feature = "Foundation", feature = "System"))]
@@ -182,7 +178,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundTaskI
         }
         IBackgroundTaskInstance4_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, User: User::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -259,7 +254,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundTaskR
             Unregister: Unregister::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -286,7 +280,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundTaskR
         }
         IBackgroundTaskRegistration2_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Trigger: Trigger::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -313,7 +306,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundTaskR
         }
         IBackgroundTaskRegistration3_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, TaskGroup: TaskGroup::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IBackgroundTrigger_Impl: ::windows_core::BaseImpl {}
 impl ::windows_core::Iids for IBackgroundTrigger {
@@ -321,5 +313,4 @@ impl ::windows_core::Iids for IBackgroundTrigger {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBackgroundTrigger_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IBackgroundTrigger {
     const VTABLE: Self::Vtable = { IBackgroundTrigger_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

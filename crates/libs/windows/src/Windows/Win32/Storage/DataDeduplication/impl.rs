@@ -11,7 +11,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDedupBackupSupp
         }
         IDedupBackupSupport_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, RestoreFiles: RestoreFiles::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -54,7 +53,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDedupChunkLibra
             StartChunking: StartChunking::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -179,7 +177,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDedupDataPort_I
             GetRequestResults: GetRequestResults::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDedupDataPortManager_Impl: ::windows_core::BaseImpl {
     fn GetConfiguration(this: &Self::This, pminchunksize: *mut u32, pmaxchunksize: *mut u32, pchunkingalgorithm: *mut DedupChunkingAlgorithm, phashingalgorithm: *mut DedupHashingAlgorithm, pcompressionalgorithm: *mut DedupCompressionAlgorithm) -> ::windows_core::Result<()>;
@@ -219,7 +216,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDedupDataPortMa
             GetVolumeDataPort: GetVolumeDataPort::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDedupIterateChunksHash32_Impl: ::windows_core::BaseImpl {
     fn PushBuffer(this: &Self::This, pbuffer: *const u8, ulbufferlength: u32) -> ::windows_core::Result<()>;
@@ -252,7 +248,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDedupIterateChu
             Reset: Reset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDedupReadFileCallback_Impl: ::windows_core::BaseImpl {
     fn ReadBackupFile(this: &Self::This, filefullpath: &::windows_core::BSTR, fileoffset: i64, sizetoread: u32, filebuffer: *mut u8, returnedsize: *mut u32, flags: u32) -> ::windows_core::Result<()>;
@@ -280,5 +275,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDedupReadFileCa
             PreviewContainerRead: PreviewContainerRead::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

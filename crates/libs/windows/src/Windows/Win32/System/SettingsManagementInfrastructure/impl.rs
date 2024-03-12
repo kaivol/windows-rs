@@ -40,7 +40,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IItemEnumerator_
             Reset: Reset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -104,7 +103,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISettingsContext
             RevertSetting: RevertSetting::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -261,7 +259,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISettingsEngine_
             GetSettingsContext: GetSettingsContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISettingsIdentity_Impl: ::windows_core::BaseImpl {
     fn GetAttribute(this: &Self::This, reserved: *const ::core::ffi::c_void, name: &::windows_core::PCWSTR) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -306,7 +303,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISettingsIdentit
             SetFlags: SetFlags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -529,7 +525,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISettingsItem_Im
             GetKeyValue: GetKeyValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -617,7 +612,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISettingsNamespa
             GetAttribute: GetAttribute::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISettingsResult_Impl: ::windows_core::BaseImpl {
     fn GetDescription(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -696,7 +690,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISettingsResult_
             GetSource: GetSource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -890,5 +883,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITargetInfo_Impl
             GetSchemaHiveMountName: GetSchemaHiveMountName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

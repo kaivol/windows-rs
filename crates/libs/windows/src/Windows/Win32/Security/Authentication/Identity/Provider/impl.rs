@@ -49,7 +49,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: AsyncIAssociated
             Finish_ChangeCredential: Finish_ChangeCredential::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -128,7 +127,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: AsyncIConnectedI
             Finish_GetAccountState: Finish_GetAccountState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait AsyncIIdentityAdvise_Impl: ::windows_core::BaseImpl {
     fn Begin_IdentityUpdated(this: &Self::This, dwidentityupdateevents: u32, lpszuniqueid: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -151,7 +149,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: AsyncIIdentityAd
             Finish_IdentityUpdated: Finish_IdentityUpdated::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -188,7 +185,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: AsyncIIdentityAu
             Finish_ValidateIdentityCredential: Finish_ValidateIdentityCredential::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -315,7 +311,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: AsyncIIdentityPr
             Finish_UnAdvise: Finish_UnAdvise::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -404,7 +399,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: AsyncIIdentitySt
             Finish_Reset: Finish_Reset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait AsyncIIdentityStoreEx_Impl: ::windows_core::BaseImpl {
     fn Begin_CreateConnectedIdentity(this: &Self::This, localname: &::windows_core::PCWSTR, connectedname: &::windows_core::PCWSTR, providerguid: *const ::windows_core::GUID) -> ::windows_core::Result<()>;
@@ -437,7 +431,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: AsyncIIdentitySt
             Finish_DeleteConnectedIdentity: Finish_DeleteConnectedIdentity::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -475,7 +468,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAssociatedIdent
             ChangeCredential: ChangeCredential::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -529,7 +521,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IConnectedIdenti
             GetAccountState: GetAccountState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IIdentityAdvise_Impl: ::windows_core::BaseImpl {
     fn IdentityUpdated(this: &Self::This, dwidentityupdateevents: &IdentityUpdateEvent, lpszuniqueid: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -547,7 +538,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IIdentityAdvise_
             IdentityUpdated: IdentityUpdated::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -574,7 +564,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IIdentityAuthent
             ValidateIdentityCredential: ValidateIdentityCredential::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -655,7 +644,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IIdentityProvide
             UnAdvise: UnAdvise::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -714,7 +702,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IIdentityStore_I
             Reset: Reset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IIdentityStoreEx_Impl: ::windows_core::BaseImpl {
     fn CreateConnectedIdentity(this: &Self::This, localname: &::windows_core::PCWSTR, connectedname: &::windows_core::PCWSTR, providerguid: *const ::windows_core::GUID) -> ::windows_core::Result<()>;
@@ -737,5 +724,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IIdentityStoreEx
             DeleteConnectedIdentity: DeleteConnectedIdentity::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

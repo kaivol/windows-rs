@@ -28,7 +28,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintDialogCall
             HandleMessage: HandleMessage::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -60,5 +59,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintDialogServ
             GetCurrentPortName: GetCurrentPortName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

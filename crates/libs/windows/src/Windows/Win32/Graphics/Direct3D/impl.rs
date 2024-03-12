@@ -19,7 +19,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3DBlob_Impl, c
             GetBufferSize: GetBufferSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3DDestructionNotifier_Impl: ::windows_core::BaseImpl {
     fn RegisterDestructionCallback(this: &Self::This, callbackfn: PFN_DESTRUCTION_CALLBACK, pdata: *const ::core::ffi::c_void) -> ::windows_core::Result<u32>;
@@ -48,7 +47,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3DDestructionN
             UnregisterDestructionCallback: UnregisterDestructionCallback::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3DInclude_Impl: Sized {
     fn Open(&self, includetype: D3D_INCLUDE_TYPE, pfilename: &::windows_core::PCSTR, pparentdata: *const ::core::ffi::c_void, ppdata: *mut *mut ::core::ffi::c_void, pbytes: *mut u32) -> ::windows_core::Result<()>;

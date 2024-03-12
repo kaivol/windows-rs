@@ -14,7 +14,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAcousticEchoCan
             SetEchoCancellationRenderEndpoint: SetEchoCancellationRenderEndpoint::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActivateAudioInterfaceAsyncOperation_Impl: ::windows_core::BaseImpl {
     fn GetActivateResult(this: &Self::This, activateresult: *mut ::windows_core::HRESULT, activatedinterface: *mut ::core::option::Option<::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -32,7 +31,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActivateAudioIn
             GetActivateResult: GetActivateResult::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActivateAudioInterfaceCompletionHandler_Impl: ::windows_core::BaseImpl {
     fn ActivateCompleted(this: &Self::This, activateoperation: ::core::option::Option<&IActivateAudioInterfaceAsyncOperation>) -> ::windows_core::Result<()>;
@@ -50,7 +48,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActivateAudioIn
             ActivateCompleted: ActivateCompleted::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -93,7 +90,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioAmbisonics
             SetRotation: SetRotation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -126,7 +122,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioAutoGainCo
             SetEnabled: SetEnabled::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioBass_Impl: ::windows_core::BaseImpl + IPerChannelDbLevel_Impl {}
 impl ::windows_core::Iids for IAudioBass {
@@ -134,7 +129,6 @@ impl ::windows_core::Iids for IAudioBass {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioBass_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IAudioBass {
     const VTABLE: Self::Vtable = { IAudioBass_Vtbl { base__: <IPerChannelDbLevel as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioCaptureClient_Impl: ::windows_core::BaseImpl {
     fn GetBuffer(this: &Self::This, ppdata: *mut *mut u8, pnumframestoread: *mut u32, pdwflags: *mut u32, pu64deviceposition: *mut u64, pu64qpcposition: *mut u64) -> ::windows_core::Result<()>;
@@ -168,7 +162,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioCaptureCli
             GetNextPacketSize: GetNextPacketSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioChannelConfig_Impl: ::windows_core::BaseImpl {
     fn SetChannelConfig(this: &Self::This, dwconfig: u32, pguideventcontext: *const ::windows_core::GUID) -> ::windows_core::Result<()>;
@@ -197,7 +190,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioChannelCon
             GetChannelConfig: GetChannelConfig::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -298,7 +290,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioClient_Imp
             GetService: GetService::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -336,7 +327,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioClient2_Im
             GetBufferSizeLimits: GetBufferSizeLimits::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -368,7 +358,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioClient3_Im
             InitializeSharedAudioStream: InitializeSharedAudioStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioClientDuckingControl_Impl: ::windows_core::BaseImpl {
     fn SetDuckingOptionsForCurrentStream(this: &Self::This, options: AUDIO_DUCKING_OPTIONS) -> ::windows_core::Result<()>;
@@ -386,7 +375,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioClientDuck
             SetDuckingOptionsForCurrentStream: SetDuckingOptionsForCurrentStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioClock_Impl: ::windows_core::BaseImpl {
     fn GetFrequency(this: &Self::This) -> ::windows_core::Result<u64>;
@@ -426,7 +414,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioClock_Impl
             GetCharacteristics: GetCharacteristics::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioClock2_Impl: ::windows_core::BaseImpl {
     fn GetDevicePosition(this: &Self::This, deviceposition: *mut u64, qpcposition: *mut u64) -> ::windows_core::Result<()>;
@@ -444,7 +431,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioClock2_Imp
             GetDevicePosition: GetDevicePosition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioClockAdjustment_Impl: ::windows_core::BaseImpl {
     fn SetSampleRate(this: &Self::This, flsamplerate: f32) -> ::windows_core::Result<()>;
@@ -459,7 +445,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioClockAdjus
         }
         IAudioClockAdjustment_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetSampleRate: SetSampleRate::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioEffectsChangedNotificationClient_Impl: ::windows_core::BaseImpl {
     fn OnAudioEffectsChanged(this: &Self::This) -> ::windows_core::Result<()>;
@@ -477,7 +462,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioEffectsCha
             OnAudioEffectsChanged: OnAudioEffectsChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -514,7 +498,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioEffectsMan
             SetAudioEffectState: SetAudioEffectState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioFormatEnumerator_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -549,7 +532,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioFormatEnum
             GetFormat: GetFormat::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioInputSelector_Impl: ::windows_core::BaseImpl {
     fn GetSelection(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -578,7 +560,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioInputSelec
             SetSelection: SetSelection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -611,7 +592,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioLoudness_I
             SetEnabled: SetEnabled::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioMidrange_Impl: ::windows_core::BaseImpl + IPerChannelDbLevel_Impl {}
 impl ::windows_core::Iids for IAudioMidrange {
@@ -619,7 +599,6 @@ impl ::windows_core::Iids for IAudioMidrange {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioMidrange_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IAudioMidrange {
     const VTABLE: Self::Vtable = { IAudioMidrange_Vtbl { base__: <IPerChannelDbLevel as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -652,7 +631,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioMute_Impl,
             GetMute: GetMute::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioOutputSelector_Impl: ::windows_core::BaseImpl {
     fn GetSelection(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -681,7 +659,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioOutputSele
             SetSelection: SetSelection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioPeakMeter_Impl: ::windows_core::BaseImpl {
     fn GetChannelCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -716,7 +693,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioPeakMeter_
             GetLevel: GetLevel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioRenderClient_Impl: ::windows_core::BaseImpl {
     fn GetBuffer(this: &Self::This, numframesrequested: u32) -> ::windows_core::Result<*mut u8>;
@@ -745,7 +721,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioRenderClie
             ReleaseBuffer: ReleaseBuffer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioSessionControl_Impl: ::windows_core::BaseImpl {
     fn GetState(this: &Self::This) -> ::windows_core::Result<AudioSessionState>;
@@ -827,7 +802,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioSessionCon
             UnregisterAudioSessionNotification: UnregisterAudioSessionNotification::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -887,7 +861,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioSessionCon
             SetDuckingPreference: SetDuckingPreference::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioSessionEnumerator_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<i32>;
@@ -922,7 +895,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioSessionEnu
             GetSession: GetSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -974,7 +946,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioSessionEve
             OnSessionDisconnected: OnSessionDisconnected::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioSessionManager_Impl: ::windows_core::BaseImpl {
     fn GetAudioSessionControl(this: &Self::This, audiosessionguid: *const ::windows_core::GUID, streamflags: u32) -> ::windows_core::Result<IAudioSessionControl>;
@@ -1009,7 +980,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioSessionMan
             GetSimpleAudioVolume: GetSimpleAudioVolume::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioSessionManager2_Impl: ::windows_core::BaseImpl + IAudioSessionManager_Impl {
     fn GetSessionEnumerator(this: &Self::This) -> ::windows_core::Result<IAudioSessionEnumerator>;
@@ -1053,7 +1023,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioSessionMan
             UnregisterDuckNotification: UnregisterDuckNotification::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioSessionNotification_Impl: ::windows_core::BaseImpl {
     fn OnSessionCreated(this: &Self::This, newsession: ::core::option::Option<&IAudioSessionControl>) -> ::windows_core::Result<()>;
@@ -1071,7 +1040,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioSessionNot
             OnSessionCreated: OnSessionCreated::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioStateMonitor_Impl: ::windows_core::BaseImpl {
     fn RegisterCallback(this: &Self::This, callback: PAudioStateMonitorCallback, context: *const ::core::ffi::c_void) -> ::windows_core::Result<i64>;
@@ -1105,7 +1073,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioStateMonit
             GetSoundLevel: GetSoundLevel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioStreamVolume_Impl: ::windows_core::BaseImpl {
     fn GetChannelCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1155,7 +1122,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioStreamVolu
             GetAllVolumes: GetAllVolumes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -1177,7 +1143,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioSystemEffe
             OnPropertyChanged: OnPropertyChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -1247,7 +1212,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioSystemEffe
             UnregisterPropertyChangeNotification: UnregisterPropertyChangeNotification::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioTreble_Impl: ::windows_core::BaseImpl + IPerChannelDbLevel_Impl {}
 impl ::windows_core::Iids for IAudioTreble {
@@ -1255,7 +1219,6 @@ impl ::windows_core::Iids for IAudioTreble {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioTreble_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IAudioTreble {
     const VTABLE: Self::Vtable = { IAudioTreble_Vtbl { base__: <IPerChannelDbLevel as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1277,7 +1240,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioViewManage
             SetAudioStreamWindow: SetAudioStreamWindow::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioVolumeDuckNotification_Impl: ::windows_core::BaseImpl {
     fn OnVolumeDuckNotification(this: &Self::This, sessionid: &::windows_core::PCWSTR, countcommunicationsessions: u32) -> ::windows_core::Result<()>;
@@ -1300,7 +1262,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioVolumeDuck
             OnVolumeUnduckNotification: OnVolumeUnduckNotification::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioVolumeLevel_Impl: ::windows_core::BaseImpl + IPerChannelDbLevel_Impl {}
 impl ::windows_core::Iids for IAudioVolumeLevel {
@@ -1308,7 +1269,6 @@ impl ::windows_core::Iids for IAudioVolumeLevel {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioVolumeLevel_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IAudioVolumeLevel {
     const VTABLE: Self::Vtable = { IAudioVolumeLevel_Vtbl { base__: <IPerChannelDbLevel as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IChannelAudioVolume_Impl: ::windows_core::BaseImpl {
     fn GetChannelCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1358,7 +1318,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IChannelAudioVol
             GetAllVolumes: GetAllVolumes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1451,7 +1410,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IConnector_Impl,
             GetDeviceIdConnectedTo: GetDeviceIdConnectedTo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IControlChangeNotify_Impl: ::windows_core::BaseImpl {
     fn OnNotify(this: &Self::This, dwsenderprocessid: u32, pguideventcontext: *const ::windows_core::GUID) -> ::windows_core::Result<()>;
@@ -1466,7 +1424,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IControlChangeNo
         }
         IControlChangeNotify_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnNotify: OnNotify::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IControlInterface_Impl: ::windows_core::BaseImpl {
     fn GetName(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -1501,7 +1458,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IControlInterfac
             GetIID: GetIID::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDeviceSpecificProperty_Impl: ::windows_core::BaseImpl {
     fn GetType(this: &Self::This) -> ::windows_core::Result<u16>;
@@ -1540,7 +1496,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDeviceSpecificP
             Get4BRange: Get4BRange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1634,7 +1589,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDeviceTopology_
             GetSignalPath: GetSignalPath::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -1689,7 +1643,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMMDevice_Impl, 
             GetState: GetState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -1708,7 +1661,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMMDeviceActivat
         }
         IMMDeviceActivator_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Activate: Activate::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMMDeviceCollection_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1743,7 +1695,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMMDeviceCollect
             Item: Item::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMMDeviceEnumerator_Impl: ::windows_core::BaseImpl {
     fn EnumAudioEndpoints(this: &Self::This, dataflow: EDataFlow, dwstatemask: u32) -> ::windows_core::Result<IMMDeviceCollection>;
@@ -1799,7 +1750,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMMDeviceEnumera
             UnregisterEndpointNotificationCallback: UnregisterEndpointNotificationCallback::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMMEndpoint_Impl: ::windows_core::BaseImpl {
     fn GetDataFlow(this: &Self::This) -> ::windows_core::Result<EDataFlow>;
@@ -1820,7 +1770,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMMEndpoint_Impl
         }
         IMMEndpoint_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDataFlow: GetDataFlow::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -1862,7 +1811,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMMNotificationC
             OnPropertyValueChanged: OnPropertyValueChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1894,7 +1842,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMessageFilter_I
             MessagePending: MessagePending::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPart_Impl: ::windows_core::BaseImpl {
     fn GetName(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -2032,7 +1979,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPart_Impl, cons
             UnregisterControlChangeCallback: UnregisterControlChangeCallback::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPartsList_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -2067,7 +2013,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPartsList_Impl,
             GetPart: GetPart::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPerChannelDbLevel_Impl: ::windows_core::BaseImpl {
     fn GetChannelCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -2122,7 +2067,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPerChannelDbLev
             SetLevelAllChannels: SetLevelAllChannels::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2171,7 +2115,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISimpleAudioVolu
             GetMute: GetMute::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -2252,7 +2195,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialAudioCli
             ActivateSpatialAudioStream: ActivateSpatialAudioStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -2291,7 +2233,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialAudioCli
             GetMaxFrameCountForCategory: GetMaxFrameCountForCategory::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpatialAudioMetadataClient_Impl: ::windows_core::BaseImpl {
     fn ActivateSpatialAudioMetadataItems(this: &Self::This, maxitemcount: u16, framecount: u16, metadataitemsbuffer: *mut ::core::option::Option<ISpatialAudioMetadataItemsBuffer>, metadataitems: *mut ::core::option::Option<ISpatialAudioMetadataItems>) -> ::windows_core::Result<()>;
@@ -2353,7 +2294,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialAudioMet
             ActivateSpatialAudioMetadataReader: ActivateSpatialAudioMetadataReader::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpatialAudioMetadataCopier_Impl: ::windows_core::BaseImpl {
     fn Open(this: &Self::This, metadataitems: ::core::option::Option<&ISpatialAudioMetadataItems>) -> ::windows_core::Result<()>;
@@ -2387,7 +2327,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialAudioMet
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpatialAudioMetadataItems_Impl: ::windows_core::BaseImpl {
     fn GetFrameCount(this: &Self::This) -> ::windows_core::Result<u16>;
@@ -2455,7 +2394,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialAudioMet
             GetInfo: GetInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpatialAudioMetadataItemsBuffer_Impl: ::windows_core::BaseImpl {
     fn AttachToBuffer(this: &Self::This, buffer: *mut u8, bufferlength: u32) -> ::windows_core::Result<()>;
@@ -2483,7 +2421,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialAudioMet
             DetachBuffer: DetachBuffer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpatialAudioMetadataReader_Impl: ::windows_core::BaseImpl {
     fn Open(this: &Self::This, metadataitems: ::core::option::Option<&ISpatialAudioMetadataItems>) -> ::windows_core::Result<()>;
@@ -2516,7 +2453,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialAudioMet
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpatialAudioMetadataWriter_Impl: ::windows_core::BaseImpl {
     fn Open(this: &Self::This, metadataitems: ::core::option::Option<&ISpatialAudioMetadataItems>) -> ::windows_core::Result<()>;
@@ -2549,7 +2485,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialAudioMet
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2576,7 +2511,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialAudioObj
             SetVolume: SetVolume::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2625,7 +2559,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialAudioObj
             GetAudioObjectType: GetAudioObjectType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2672,7 +2605,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialAudioObj
             SetDirectivity: SetDirectivity::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2694,7 +2626,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialAudioObj
             WriteNextMetadataCommand: WriteNextMetadataCommand::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2722,7 +2653,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialAudioObj
             GetSpatialAudioMetadataItems: GetSpatialAudioMetadataItems::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpatialAudioObjectRenderStream_Impl: ::windows_core::BaseImpl + ISpatialAudioObjectRenderStreamBase_Impl {
     fn ActivateSpatialAudioObject(this: &Self::This, r#type: AudioObjectType) -> ::windows_core::Result<ISpatialAudioObject>;
@@ -2746,7 +2676,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialAudioObj
             ActivateSpatialAudioObject: ActivateSpatialAudioObject::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpatialAudioObjectRenderStreamBase_Impl: ::windows_core::BaseImpl {
     fn GetAvailableDynamicObjectCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -2800,7 +2729,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialAudioObj
             EndUpdatingAudioObjects: EndUpdatingAudioObjects::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpatialAudioObjectRenderStreamForHrtf_Impl: ::windows_core::BaseImpl + ISpatialAudioObjectRenderStreamBase_Impl {
     fn ActivateSpatialAudioObjectForHrtf(this: &Self::This, r#type: AudioObjectType) -> ::windows_core::Result<ISpatialAudioObjectForHrtf>;
@@ -2824,7 +2752,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialAudioObj
             ActivateSpatialAudioObjectForHrtf: ActivateSpatialAudioObjectForHrtf::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpatialAudioObjectRenderStreamForMetadata_Impl: ::windows_core::BaseImpl + ISpatialAudioObjectRenderStreamBase_Impl {
     fn ActivateSpatialAudioObjectForMetadataCommands(this: &Self::This, r#type: AudioObjectType) -> ::windows_core::Result<ISpatialAudioObjectForMetadataCommands>;
@@ -2859,7 +2786,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialAudioObj
             ActivateSpatialAudioObjectForMetadataItems: ActivateSpatialAudioObjectForMetadataItems::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpatialAudioObjectRenderStreamNotify_Impl: ::windows_core::BaseImpl {
     fn OnAvailableDynamicObjectCountChange(this: &Self::This, sender: ::core::option::Option<&ISpatialAudioObjectRenderStreamBase>, hnscompliancedeadlinetime: i64, availabledynamicobjectcountchange: u32) -> ::windows_core::Result<()>;
@@ -2877,7 +2803,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpatialAudioObj
             OnAvailableDynamicObjectCountChange: OnAvailableDynamicObjectCountChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISubunit_Impl: ::windows_core::BaseImpl {}
 impl ::windows_core::Iids for ISubunit {
@@ -2885,5 +2810,4 @@ impl ::windows_core::Iids for ISubunit {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISubunit_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ISubunit {
     const VTABLE: Self::Vtable = { ISubunit_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

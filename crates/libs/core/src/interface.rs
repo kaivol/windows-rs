@@ -5,7 +5,7 @@
 ///
 /// # Safety
 pub unsafe trait Interface: Sized {
-    type Vtable: 'static;
+    type Vtable: 'static + core::marker::Freeze;
 
     /// A reference to the interface's vtable
     #[doc(hidden)]

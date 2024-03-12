@@ -170,7 +170,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactInformat
             ToVcardWithOptionsAsync: ToVcardWithOptionsAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -203,5 +202,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactInformat
             SetDisplayPictureDate: SetDisplayPictureDate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

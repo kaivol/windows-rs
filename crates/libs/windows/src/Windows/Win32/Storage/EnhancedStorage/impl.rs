@@ -57,7 +57,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnhancedStorage
             GetSilos: GetSilos::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -96,7 +95,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnhancedStorage
             IsDeviceRemovable: IsDeviceRemovable::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -140,7 +138,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnhancedStorage
             GetShellExtSupport: GetShellExtSupport::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Devices_PortableDevices\"`"]
 #[cfg(feature = "Win32_Devices_PortableDevices")]
@@ -200,7 +197,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnhancedStorage
             GetDevicePath: GetDevicePath::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnhancedStorageSiloAction_Impl: ::windows_core::BaseImpl {
     fn GetName(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -240,7 +236,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnhancedStorage
             Invoke: Invoke::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumEnhancedStorageACT_Impl: ::windows_core::BaseImpl {
     fn GetACTs(this: &Self::This, pppienhancedstorageacts: *mut *mut ::core::option::Option<IEnhancedStorageACT>, pcenhancedstorageacts: *mut u32) -> ::windows_core::Result<()>;
@@ -269,5 +264,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumEnhancedSto
             GetMatchingACT: GetMatchingACT::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

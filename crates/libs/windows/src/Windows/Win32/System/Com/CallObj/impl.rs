@@ -138,7 +138,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICallFrame_Impl,
             Invoke: Invoke::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICallFrameEvents_Impl: ::windows_core::BaseImpl {
     fn OnCall(this: &Self::This, pframe: ::core::option::Option<&ICallFrame>) -> ::windows_core::Result<()>;
@@ -153,7 +152,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICallFrameEvents
         }
         ICallFrameEvents_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnCall: OnCall::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -175,7 +173,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICallFrameWalker
             OnWalkInterface: OnWalkInterface::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -218,7 +215,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICallIndirect_Im
             GetIID: GetIID::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -251,7 +247,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICallInterceptor
             GetRegisteredSink: GetRegisteredSink::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -278,7 +273,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICallUnmarshal_I
             ReleaseMarshalData: ReleaseMarshalData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IInterfaceRelated_Impl: ::windows_core::BaseImpl {
     fn SetIID(this: &Self::This, iid: *const ::windows_core::GUID) -> ::windows_core::Result<()>;
@@ -307,5 +301,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInterfaceRelate
             GetIID: GetIID::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

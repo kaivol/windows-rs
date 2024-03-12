@@ -83,7 +83,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3D9_Impl,
             CreateDevice: CreateDevice::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -125,7 +124,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3D9Ex_Imp
             GetAdapterLUID: GetAdapterLUID::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirect3DBaseTexture9_Impl: ::windows_core::BaseImpl + IDirect3DResource9_Impl {
     fn SetLOD(this: &Self::This, lodnew: u32) -> u32;
@@ -168,7 +166,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DBaseTex
             GenerateMipSubLevels: GenerateMipSubLevels::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -216,7 +213,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DCubeTex
             AddDirtyRect: AddDirtyRect::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D", feature = "Win32_Graphics_Gdi"))]
@@ -909,7 +905,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DDevice9
             CreateQuery: CreateQuery::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Foundation_Numerics", feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D", feature = "Win32_Graphics_Gdi"))]
@@ -1001,7 +996,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DDevice9
             GetDisplayModeEx: GetDisplayModeEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirect3DIndexBuffer9_Impl: ::windows_core::BaseImpl + IDirect3DResource9_Impl {
     fn Lock(this: &Self::This, offsettolock: u32, sizetolock: u32, ppbdata: *mut *mut ::core::ffi::c_void, flags: u32) -> ::windows_core::Result<()>;
@@ -1029,7 +1023,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DIndexBu
             GetDesc: GetDesc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirect3DPixelShader9_Impl: ::windows_core::BaseImpl {
     fn GetDevice(this: &Self::This) -> ::windows_core::Result<IDirect3DDevice9>;
@@ -1058,7 +1051,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DPixelSh
             GetFunction: GetFunction::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirect3DQuery9_Impl: ::windows_core::BaseImpl {
     fn GetDevice(this: &Self::This) -> ::windows_core::Result<IDirect3DDevice9>;
@@ -1102,7 +1094,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DQuery9_
             GetData: GetData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirect3DResource9_Impl: ::windows_core::BaseImpl {
     fn GetDevice(this: &Self::This) -> ::windows_core::Result<IDirect3DDevice9>;
@@ -1161,7 +1152,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DResourc
             GetType: GetType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirect3DStateBlock9_Impl: ::windows_core::BaseImpl {
     fn GetDevice(this: &Self::This) -> ::windows_core::Result<IDirect3DDevice9>;
@@ -1195,7 +1185,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DStateBl
             Apply: Apply::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -1242,7 +1231,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DSurface
             ReleaseDC: ReleaseDC::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -1306,7 +1294,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DSwapCha
             GetPresentParameters: GetPresentParameters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -1338,7 +1325,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DSwapCha
             GetDisplayModeEx: GetDisplayModeEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1386,7 +1372,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DTexture
             AddDirtyRect: AddDirtyRect::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirect3DVertexBuffer9_Impl: ::windows_core::BaseImpl + IDirect3DResource9_Impl {
     fn Lock(this: &Self::This, offsettolock: u32, sizetolock: u32, ppbdata: *mut *mut ::core::ffi::c_void, flags: u32) -> ::windows_core::Result<()>;
@@ -1414,7 +1399,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DVertexB
             GetDesc: GetDesc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirect3DVertexDeclaration9_Impl: ::windows_core::BaseImpl {
     fn GetDevice(this: &Self::This) -> ::windows_core::Result<IDirect3DDevice9>;
@@ -1443,7 +1427,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DVertexD
             GetDeclaration: GetDeclaration::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirect3DVertexShader9_Impl: ::windows_core::BaseImpl {
     fn GetDevice(this: &Self::This) -> ::windows_core::Result<IDirect3DDevice9>;
@@ -1472,7 +1455,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DVertexS
             GetFunction: GetFunction::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirect3DVolume9_Impl: ::windows_core::BaseImpl {
     fn GetDevice(this: &Self::This) -> ::windows_core::Result<IDirect3DDevice9>;
@@ -1531,7 +1513,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DVolume9
             UnlockBox: UnlockBox::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirect3DVolumeTexture9_Impl: ::windows_core::BaseImpl + IDirect3DBaseTexture9_Impl {
     fn GetLevelDesc(this: &Self::This, level: u32, pdesc: *mut D3DVOLUME_DESC) -> ::windows_core::Result<()>;
@@ -1575,5 +1556,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DVolumeT
             AddDirtyBox: AddDirtyBox::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

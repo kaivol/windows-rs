@@ -11,7 +11,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioFrameNativ
         }
         IAudioFrameNative_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetData: GetData::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_MediaFoundation\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_MediaFoundation"))]
@@ -33,7 +32,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioFrameNativ
             CreateFromMFSample: CreateFromMFSample::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVideoFrameNative_Impl: ::windows_core::BaseImpl {
     fn GetData(this: &Self::This, riid: *const ::windows_core::GUID, ppv: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -56,7 +54,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVideoFrameNativ
             GetDevice: GetDevice::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_MediaFoundation\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_MediaFoundation"))]
@@ -78,5 +75,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVideoFrameNativ
             CreateFromMFSample: CreateFromMFSample::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

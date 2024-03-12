@@ -65,7 +65,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSound_Imp
             Initialize: Initialize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D")]
@@ -214,7 +213,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSound3DBu
             SetVelocity: SetVelocity::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D")]
@@ -336,7 +334,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSound3DLi
             CommitDeferredSettings: CommitDeferredSettings::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -361,7 +358,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSound8_Im
         }
         IDirectSound8_Vtbl { base__: <IDirectSound as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, VerifyCertification: VerifyCertification::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectSoundBuffer_Impl: ::windows_core::BaseImpl {
     fn GetCaps(this: &Self::This, pdsbuffercaps: *mut DSBCAPS) -> ::windows_core::Result<()>;
@@ -488,7 +484,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSoundBuff
             Restore: Restore::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectSoundBuffer8_Impl: ::windows_core::BaseImpl + IDirectSoundBuffer_Impl {
     fn SetFX(this: &Self::This, dweffectscount: u32, pdsfxdesc: *const DSEFFECTDESC, pdwresultcodes: *mut u32) -> ::windows_core::Result<()>;
@@ -516,7 +511,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSoundBuff
             GetObjectInPath: GetObjectInPath::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectSoundCapture_Impl: ::windows_core::BaseImpl {
     fn CreateCaptureBuffer(this: &Self::This, pcdscbufferdesc: *const DSCBUFFERDESC, ppdscbuffer: *mut ::core::option::Option<IDirectSoundCaptureBuffer>, punkouter: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -550,7 +544,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSoundCapt
             Initialize: Initialize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectSoundCaptureBuffer_Impl: ::windows_core::BaseImpl {
     fn GetCaps(this: &Self::This) -> ::windows_core::Result<DSCBCAPS>;
@@ -620,7 +613,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSoundCapt
             Unlock: Unlock::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectSoundCaptureBuffer8_Impl: ::windows_core::BaseImpl + IDirectSoundCaptureBuffer_Impl {
     fn GetObjectInPath(this: &Self::This, rguidobject: *const ::windows_core::GUID, dwindex: u32, rguidinterface: *const ::windows_core::GUID, ppobject: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -643,7 +635,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSoundCapt
             GetFXStatus: GetFXStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -692,7 +683,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSoundCapt
             Reset: Reset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -730,7 +720,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSoundCapt
             Reset: Reset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectSoundFXChorus_Impl: ::windows_core::BaseImpl {
     fn SetAllParameters(this: &Self::This, pcdsfxchorus: *const DSFXChorus) -> ::windows_core::Result<()>;
@@ -753,7 +742,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSoundFXCh
             GetAllParameters: GetAllParameters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectSoundFXCompressor_Impl: ::windows_core::BaseImpl {
     fn SetAllParameters(this: &Self::This, pcdsfxcompressor: *const DSFXCompressor) -> ::windows_core::Result<()>;
@@ -776,7 +764,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSoundFXCo
             GetAllParameters: GetAllParameters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectSoundFXDistortion_Impl: ::windows_core::BaseImpl {
     fn SetAllParameters(this: &Self::This, pcdsfxdistortion: *const DSFXDistortion) -> ::windows_core::Result<()>;
@@ -799,7 +786,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSoundFXDi
             GetAllParameters: GetAllParameters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectSoundFXEcho_Impl: ::windows_core::BaseImpl {
     fn SetAllParameters(this: &Self::This, pcdsfxecho: *const DSFXEcho) -> ::windows_core::Result<()>;
@@ -822,7 +808,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSoundFXEc
             GetAllParameters: GetAllParameters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectSoundFXFlanger_Impl: ::windows_core::BaseImpl {
     fn SetAllParameters(this: &Self::This, pcdsfxflanger: *const DSFXFlanger) -> ::windows_core::Result<()>;
@@ -845,7 +830,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSoundFXFl
             GetAllParameters: GetAllParameters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectSoundFXGargle_Impl: ::windows_core::BaseImpl {
     fn SetAllParameters(this: &Self::This, pcdsfxgargle: *const DSFXGargle) -> ::windows_core::Result<()>;
@@ -874,7 +858,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSoundFXGa
             GetAllParameters: GetAllParameters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectSoundFXI3DL2Reverb_Impl: ::windows_core::BaseImpl {
     fn SetAllParameters(this: &Self::This, pcdsfxi3dl2reverb: *const DSFXI3DL2Reverb) -> ::windows_core::Result<()>;
@@ -929,7 +912,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSoundFXI3
             GetQuality: GetQuality::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectSoundFXParamEq_Impl: ::windows_core::BaseImpl {
     fn SetAllParameters(this: &Self::This, pcdsfxparameq: *const DSFXParamEq) -> ::windows_core::Result<()>;
@@ -958,7 +940,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSoundFXPa
             GetAllParameters: GetAllParameters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectSoundFXWavesReverb_Impl: ::windows_core::BaseImpl {
     fn SetAllParameters(this: &Self::This, pcdsfxwavesreverb: *const DSFXWavesReverb) -> ::windows_core::Result<()>;
@@ -987,7 +968,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSoundFXWa
             GetAllParameters: GetAllParameters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1006,7 +986,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSoundFull
         }
         IDirectSoundFullDuplex_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Initialize: Initialize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1028,5 +1007,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectSoundNoti
             SetNotificationPositions: SetNotificationPositions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

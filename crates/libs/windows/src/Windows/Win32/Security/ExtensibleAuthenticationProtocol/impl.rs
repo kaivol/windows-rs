@@ -44,7 +44,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAccountingProvi
             Deactivate: Deactivate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -92,7 +91,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAuthenticationP
             Deactivate: Deactivate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -142,7 +140,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEAPProviderConf
             RouterInvokeCredentialsUI: RouterInvokeCredentialsUI::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -169,7 +166,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEAPProviderConf
             GetGlobalConfig: GetGlobalConfig::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -191,7 +187,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEAPProviderConf
             ServerInvokeCertificateConfigUI: ServerInvokeCertificateConfigUI::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -218,5 +213,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRouterProtocolC
             RemoveProtocol: RemoveProtocol::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

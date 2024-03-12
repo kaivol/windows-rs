@@ -41,7 +41,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLOperatorAttri
             GetStringAttributeElement: GetStringAttributeElement::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMLOperatorKernel_Impl: ::windows_core::BaseImpl {
     fn Compute(this: &Self::This, context: ::core::option::Option<&IMLOperatorKernelContext>) -> ::windows_core::Result<()>;
@@ -56,7 +55,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLOperatorKerne
         }
         IMLOperatorKernel_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Compute: Compute::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMLOperatorKernelContext_Impl: ::windows_core::BaseImpl {
     fn GetInputTensor(this: &Self::This, inputindex: u32) -> ::windows_core::Result<IMLOperatorTensor>;
@@ -118,7 +116,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLOperatorKerne
             GetExecutionInterface: GetExecutionInterface::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMLOperatorKernelCreationContext_Impl: ::windows_core::BaseImpl + IMLOperatorAttributes_Impl {
     fn GetInputCount(this: &Self::This) -> u32;
@@ -194,7 +191,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLOperatorKerne
             GetExecutionInterface: GetExecutionInterface::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMLOperatorKernelFactory_Impl: ::windows_core::BaseImpl {
     fn CreateKernel(this: &Self::This, context: ::core::option::Option<&IMLOperatorKernelCreationContext>) -> ::windows_core::Result<IMLOperatorKernel>;
@@ -215,7 +211,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLOperatorKerne
         }
         IMLOperatorKernelFactory_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateKernel: CreateKernel::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMLOperatorRegistry_Impl: ::windows_core::BaseImpl {
     fn RegisterOperatorSetSchema(this: &Self::This, operatorsetid: *const MLOperatorSetId, baselineversion: i32, schema: *const *const MLOperatorSchemaDescription, schemacount: u32, typeinferrer: ::core::option::Option<&IMLOperatorTypeInferrer>, shapeinferrer: ::core::option::Option<&IMLOperatorShapeInferrer>) -> ::windows_core::Result<()>;
@@ -238,7 +233,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLOperatorRegis
             RegisterOperatorKernel: RegisterOperatorKernel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMLOperatorShapeInferenceContext_Impl: ::windows_core::BaseImpl + IMLOperatorAttributes_Impl {
     fn GetInputCount(this: &Self::This) -> u32;
@@ -303,7 +297,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLOperatorShape
             SetOutputTensorShape: SetOutputTensorShape::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMLOperatorShapeInferrer_Impl: ::windows_core::BaseImpl {
     fn InferOutputShapes(this: &Self::This, context: ::core::option::Option<&IMLOperatorShapeInferenceContext>) -> ::windows_core::Result<()>;
@@ -321,7 +314,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLOperatorShape
             InferOutputShapes: InferOutputShapes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMLOperatorTensor_Impl: ::windows_core::BaseImpl {
     fn GetDimensionCount(this: &Self::This) -> u32;
@@ -369,7 +361,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLOperatorTenso
             GetDataInterface: GetDataInterface::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMLOperatorTensorShapeDescription_Impl: ::windows_core::BaseImpl {
     fn GetInputTensorDimensionCount(this: &Self::This, inputindex: u32) -> ::windows_core::Result<u32>;
@@ -419,7 +410,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLOperatorTenso
             GetOutputTensorShape: GetOutputTensorShape::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMLOperatorTypeInferenceContext_Impl: ::windows_core::BaseImpl + IMLOperatorAttributes_Impl {
     fn GetInputCount(this: &Self::This) -> u32;
@@ -468,7 +458,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLOperatorTypeI
             SetOutputEdgeDescription: SetOutputEdgeDescription::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMLOperatorTypeInferrer_Impl: ::windows_core::BaseImpl {
     fn InferOutputTypes(this: &Self::This, context: ::core::option::Option<&IMLOperatorTypeInferenceContext>) -> ::windows_core::Result<()>;
@@ -486,7 +475,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMLOperatorTypeI
             InferOutputTypes: InferOutputTypes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D12")]
@@ -524,7 +512,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWinMLEvaluation
             Clear: Clear::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -579,7 +566,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWinMLModel_Impl
             EnumerateModelOutputs: EnumerateModelOutputs::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D12")]
@@ -623,7 +609,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWinMLRuntime_Im
             EvaluateModel: EvaluateModel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWinMLRuntimeFactory_Impl: ::windows_core::BaseImpl {
     fn CreateRuntime(this: &Self::This, runtimetype: WINML_RUNTIME_TYPE) -> ::windows_core::Result<IWinMLRuntime>;
@@ -644,5 +629,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWinMLRuntimeFac
         }
         IWinMLRuntimeFactory_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateRuntime: CreateRuntime::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

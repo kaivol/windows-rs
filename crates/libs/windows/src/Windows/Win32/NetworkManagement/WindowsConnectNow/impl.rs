@@ -19,7 +19,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWCNConnectNotif
             ConnectFailed: ConnectFailed::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWCNDevice_Impl: ::windows_core::BaseImpl {
     fn SetPassword(this: &Self::This, r#type: WCN_PASSWORD_TYPE, dwpasswordlength: u32, pbpassword: *const u8) -> ::windows_core::Result<()>;
@@ -93,5 +92,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWCNDevice_Impl,
             SetNFCPasswordParams: SetNFCPasswordParams::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

@@ -78,7 +78,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDot11AdHocInter
             GetStatus: GetStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDot11AdHocInterfaceNotificationSink_Impl: ::windows_core::BaseImpl {
     fn OnConnectionStatusChange(this: &Self::This, estatus: DOT11_ADHOC_NETWORK_CONNECTION_STATUS) -> ::windows_core::Result<()>;
@@ -96,7 +95,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDot11AdHocInter
             OnConnectionStatusChange: OnConnectionStatusChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -162,7 +160,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDot11AdHocManag
             GetNetwork: GetNetwork::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDot11AdHocManagerNotificationSink_Impl: ::windows_core::BaseImpl {
     fn OnNetworkAdd(this: &Self::This, piadhocnetwork: ::core::option::Option<&IDot11AdHocNetwork>) -> ::windows_core::Result<()>;
@@ -195,7 +192,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDot11AdHocManag
             OnInterfaceRemove: OnInterfaceRemove::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -296,7 +292,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDot11AdHocNetwo
             Disconnect: Disconnect::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDot11AdHocNetworkNotificationSink_Impl: ::windows_core::BaseImpl {
     fn OnStatusChange(this: &Self::This, estatus: DOT11_ADHOC_NETWORK_CONNECTION_STATUS) -> ::windows_core::Result<()>;
@@ -319,7 +314,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDot11AdHocNetwo
             OnConnectFail: OnConnectFail::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDot11AdHocSecuritySettings_Impl: ::windows_core::BaseImpl {
     fn GetDot11AuthAlgorithm(this: &Self::This, pauth: *mut DOT11_ADHOC_AUTH_ALGORITHM) -> ::windows_core::Result<()>;
@@ -342,7 +336,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDot11AdHocSecur
             GetDot11CipherAlgorithm: GetDot11CipherAlgorithm::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumDot11AdHocInterfaces_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, rgelt: *mut ::core::option::Option<IDot11AdHocInterface>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -381,7 +374,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumDot11AdHocI
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumDot11AdHocNetworks_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, rgelt: *mut ::core::option::Option<IDot11AdHocNetwork>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -420,7 +412,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumDot11AdHocN
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumDot11AdHocSecuritySettings_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, rgelt: *mut ::core::option::Option<IDot11AdHocSecuritySettings>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -459,5 +450,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumDot11AdHocS
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

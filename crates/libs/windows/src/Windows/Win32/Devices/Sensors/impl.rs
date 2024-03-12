@@ -29,7 +29,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILocationPermiss
             CheckLocationCapability: CheckLocationCapability::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Devices_PortableDevices\"`, `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Devices_PortableDevices", feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -193,7 +192,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISensor_Impl, co
             SetEventSink: SetEventSink::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISensorCollection_Impl: ::windows_core::BaseImpl {
     fn GetAt(this: &Self::This, ulindex: u32) -> ::windows_core::Result<ISensor>;
@@ -248,7 +246,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISensorCollectio
             Clear: Clear::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Devices_PortableDevices\"`, `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Devices_PortableDevices", feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -298,7 +295,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISensorDataRepor
             GetSensorValues: GetSensorValues::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Devices_PortableDevices\"`"]
 #[cfg(feature = "Win32_Devices_PortableDevices")]
@@ -335,7 +331,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISensorEvents_Im
             OnLeave: OnLeave::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -395,7 +390,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISensorManager_I
             RequestPermissions: RequestPermissions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISensorManagerEvents_Impl: ::windows_core::BaseImpl {
     fn OnSensorEnter(this: &Self::This, psensor: ::core::option::Option<&ISensor>, state: SensorState) -> ::windows_core::Result<()>;
@@ -410,5 +404,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISensorManagerEv
         }
         ISensorManagerEvents_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnSensorEnter: OnSensorEnter::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

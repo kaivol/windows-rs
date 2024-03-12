@@ -418,7 +418,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITextCharacterFo
             IsEqual: IsEqual::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
 #[cfg(all(feature = "Foundation", feature = "Storage_Streams"))]
@@ -659,7 +658,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITextDocument_Im
             Undo: Undo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITextParagraphFormat_Impl: ::windows_core::BaseImpl {
     fn Alignment(this: &Self::This) -> ::windows_core::Result<ParagraphAlignment>;
@@ -1057,7 +1055,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITextParagraphFo
             SetLineSpacing: SetLineSpacing::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
 #[cfg(all(feature = "Foundation", feature = "Storage_Streams"))]
@@ -1490,7 +1487,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITextRange_Impl,
             StartOf: StartOf::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
 #[cfg(all(feature = "Foundation", feature = "Storage_Streams"))]
@@ -1606,5 +1602,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITextSelection_I
             TypeText: TypeText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

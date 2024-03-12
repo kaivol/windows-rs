@@ -65,7 +65,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXCoreAdapter_I
             GetFactory: GetFactory::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -113,7 +112,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXCoreAdapterFa
             UnregisterEventNotification: UnregisterEventNotification::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDXCoreAdapterList_Impl: ::windows_core::BaseImpl {
     fn GetAdapter(this: &Self::This, index: u32, riid: *const ::windows_core::GUID, ppvadapter: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -156,5 +154,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXCoreAdapterLi
             IsAdapterPreferenceSupported: IsAdapterPreferenceSupported::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

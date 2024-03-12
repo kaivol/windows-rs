@@ -112,7 +112,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyndicationClie
             RetrieveFeedAsync: RetrieveFeedAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Data_Xml_Dom\"`, `\"Foundation_Collections\"`"]
 #[cfg(all(feature = "Data_Xml_Dom", feature = "Foundation_Collections"))]
@@ -250,7 +249,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyndicationNode
             GetXmlDocument: GetXmlDocument::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Data_Xml_Dom\"`, `\"Foundation_Collections\"`"]
 #[cfg(all(feature = "Data_Xml_Dom", feature = "Foundation_Collections"))]
@@ -319,5 +317,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyndicationText
             SetXml: SetXml::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

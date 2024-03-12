@@ -50,7 +50,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumNetworkConn
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -104,7 +103,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumNetworks_Im
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -240,7 +238,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INetwork_Impl, c
             SetCategory: SetCategory::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -268,7 +265,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INetwork2_Impl, 
             IsDomainAuthenticatedBy: IsDomainAuthenticatedBy::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -362,7 +358,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INetworkConnecti
             GetDomainType: GetDomainType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -390,7 +385,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INetworkConnecti
             IsDomainAuthenticatedBy: IsDomainAuthenticatedBy::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -423,7 +417,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INetworkConnecti
             GetDataPlanStatus: GetDataPlanStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait INetworkConnectionCostEvents_Impl: ::windows_core::BaseImpl {
     fn ConnectionCostChanged(this: &Self::This, connectionid: &::windows_core::GUID, newcost: u32) -> ::windows_core::Result<()>;
@@ -446,7 +439,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INetworkConnecti
             ConnectionDataPlanStatusChanged: ConnectionDataPlanStatusChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait INetworkConnectionEvents_Impl: ::windows_core::BaseImpl {
     fn NetworkConnectionConnectivityChanged(this: &Self::This, connectionid: &::windows_core::GUID, newconnectivity: NLM_CONNECTIVITY) -> ::windows_core::Result<()>;
@@ -469,7 +461,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INetworkConnecti
             NetworkConnectionPropertyChanged: NetworkConnectionPropertyChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -501,7 +492,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INetworkCostMana
             SetDestinationAddresses: SetDestinationAddresses::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait INetworkCostManagerEvents_Impl: ::windows_core::BaseImpl {
     fn CostChanged(this: &Self::This, newcost: u32, pdestaddr: *const NLM_SOCKADDR) -> ::windows_core::Result<()>;
@@ -524,7 +514,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INetworkCostMana
             DataPlanStatusChanged: DataPlanStatusChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait INetworkEvents_Impl: ::windows_core::BaseImpl {
     fn NetworkAdded(this: &Self::This, networkid: &::windows_core::GUID) -> ::windows_core::Result<()>;
@@ -557,7 +546,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INetworkEvents_I
             NetworkPropertyChanged: NetworkPropertyChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -661,7 +649,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INetworkListMana
             ClearSimulatedProfileInfo: ClearSimulatedProfileInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait INetworkListManagerEvents_Impl: ::windows_core::BaseImpl {
     fn ConnectivityChanged(this: &Self::This, newconnectivity: NLM_CONNECTIVITY) -> ::windows_core::Result<()>;
@@ -679,5 +666,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INetworkListMana
             ConnectivityChanged: ConnectivityChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

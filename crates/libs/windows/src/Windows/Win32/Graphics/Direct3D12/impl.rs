@@ -11,7 +11,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12CommandAll
         }
         ID3D12CommandAllocator_Vtbl { base__: <ID3D12Pageable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Reset: Reset::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12CommandList_Impl: ::windows_core::BaseImpl + ID3D12DeviceChild_Impl {
     fn GetType(this: &Self::This) -> D3D12_COMMAND_LIST_TYPE;
@@ -26,7 +25,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12CommandLis
         }
         ID3D12CommandList_Vtbl { base__: <ID3D12DeviceChild as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetType: GetType::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -118,7 +116,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12CommandQue
             GetDesc: GetDesc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12CommandSignature_Impl: ::windows_core::BaseImpl + ID3D12Pageable_Impl {}
 impl ::windows_core::Iids for ID3D12CommandSignature {
@@ -126,7 +123,6 @@ impl ::windows_core::Iids for ID3D12CommandSignature {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12CommandSignature_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ID3D12CommandSignature {
     const VTABLE: Self::Vtable = { ID3D12CommandSignature_Vtbl { base__: <ID3D12Pageable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12DSRDeviceFactory_Impl: ::windows_core::BaseImpl {
     fn CreateDSRDevice(this: &Self::This, pd3d12device: ::core::option::Option<&ID3D12Device>, nodemask: u32, riid: *const ::windows_core::GUID, ppvdsrdevice: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -144,7 +140,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DSRDeviceF
             CreateDSRDevice: CreateDSRDevice::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12Debug_Impl: ::windows_core::BaseImpl {
     fn EnableDebugLayer(this: &Self::This);
@@ -162,7 +157,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Debug_Impl
             EnableDebugLayer: EnableDebugLayer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -194,7 +188,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Debug1_Imp
             SetEnableSynchronizedCommandQueueValidation: SetEnableSynchronizedCommandQueueValidation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12Debug2_Impl: ::windows_core::BaseImpl {
     fn SetGPUBasedValidationFlags(this: &Self::This, flags: D3D12_GPU_BASED_VALIDATION_FLAGS);
@@ -212,7 +205,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Debug2_Imp
             SetGPUBasedValidationFlags: SetGPUBasedValidationFlags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -244,7 +236,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Debug3_Imp
             SetGPUBasedValidationFlags: SetGPUBasedValidationFlags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -263,7 +254,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Debug4_Imp
         }
         ID3D12Debug4_Vtbl { base__: <ID3D12Debug3 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, DisableDebugLayer: DisableDebugLayer::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -282,7 +272,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Debug5_Imp
         }
         ID3D12Debug5_Vtbl { base__: <ID3D12Debug4 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetEnableAutoName: SetEnableAutoName::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -304,7 +293,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Debug6_Imp
             SetForceLegacyBarrierValidation: SetForceLegacyBarrierValidation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -336,7 +324,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DebugComma
             GetFeatureMask: GetFeatureMask::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -368,7 +355,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DebugComma
             GetDebugParameter: GetDebugParameter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -395,7 +381,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DebugComma
             GetDebugParameter: GetDebugParameter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -422,7 +407,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DebugComma
             AssertTextureLayout: AssertTextureLayout::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -444,7 +428,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DebugComma
             AssertResourceState: AssertResourceState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -471,7 +454,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DebugComma
             AssertTextureLayout: AssertTextureLayout::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12DebugDevice_Impl: ::windows_core::BaseImpl {
     fn SetFeatureMask(this: &Self::This, mask: D3D12_DEBUG_FEATURE) -> ::windows_core::Result<()>;
@@ -499,7 +481,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DebugDevic
             ReportLiveDeviceObjects: ReportLiveDeviceObjects::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12DebugDevice1_Impl: ::windows_core::BaseImpl {
     fn SetDebugParameter(this: &Self::This, r#type: D3D12_DEBUG_DEVICE_PARAMETER_TYPE, pdata: *const ::core::ffi::c_void, datasize: u32) -> ::windows_core::Result<()>;
@@ -527,7 +508,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DebugDevic
             ReportLiveDeviceObjects: ReportLiveDeviceObjects::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12DebugDevice2_Impl: ::windows_core::BaseImpl + ID3D12DebugDevice_Impl {
     fn SetDebugParameter(this: &Self::This, r#type: D3D12_DEBUG_DEVICE_PARAMETER_TYPE, pdata: *const ::core::ffi::c_void, datasize: u32) -> ::windows_core::Result<()>;
@@ -550,7 +530,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DebugDevic
             GetDebugParameter: GetDebugParameter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12DescriptorHeap_Impl: ::windows_core::BaseImpl + ID3D12Pageable_Impl {
     fn GetDesc(this: &Self::This) -> D3D12_DESCRIPTOR_HEAP_DESC;
@@ -578,7 +557,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Descriptor
             GetGPUDescriptorHandleForHeapStart: GetGPUDescriptorHandleForHeapStart::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Security\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Security"))]
@@ -792,7 +770,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Device_Imp
             GetAdapterLuid: GetAdapterLuid::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Security\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Security"))]
@@ -824,7 +801,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Device1_Im
             SetResidencyPriority: SetResidencyPriority::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Security\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Security"))]
@@ -858,7 +834,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Device10_I
             CreateReservedResource2: CreateReservedResource2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Security\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Security"))]
@@ -877,7 +852,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Device11_I
         }
         ID3D12Device11_Vtbl { base__: <ID3D12Device10 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateSampler2: CreateSampler2::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Security\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Security"))]
@@ -899,7 +873,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Device12_I
             GetResourceAllocationInfo3: GetResourceAllocationInfo3::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Security\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Security"))]
@@ -918,7 +891,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Device2_Im
         }
         ID3D12Device2_Vtbl { base__: <ID3D12Device1 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreatePipelineState: CreatePipelineState::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Security\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Security"))]
@@ -950,7 +922,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Device3_Im
             EnqueueMakeResident: EnqueueMakeResident::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Security\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Security"))]
@@ -997,7 +968,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Device4_Im
             GetResourceAllocationInfo1: GetResourceAllocationInfo1::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Security\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Security"))]
@@ -1054,7 +1024,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Device5_Im
             CheckDriverMatchingIdentifier: CheckDriverMatchingIdentifier::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Security\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Security"))]
@@ -1076,7 +1045,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Device6_Im
             SetBackgroundProcessingMode: SetBackgroundProcessingMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Security\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Security"))]
@@ -1103,7 +1071,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Device7_Im
             CreateProtectedResourceSession1: CreateProtectedResourceSession1::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Security\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Security"))]
@@ -1145,7 +1112,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Device8_Im
             GetCopyableFootprints1: GetCopyableFootprints1::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Security\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Security"))]
@@ -1177,7 +1143,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Device9_Im
             CreateCommandQueue1: CreateCommandQueue1::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12DeviceChild_Impl: ::windows_core::BaseImpl + ID3D12Object_Impl {
     fn GetDevice(this: &Self::This, riid: *const ::windows_core::GUID, ppvdevice: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -1192,7 +1157,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DeviceChil
         }
         ID3D12DeviceChild_Vtbl { base__: <ID3D12Object as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDevice: GetDevice::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D")]
@@ -1229,7 +1193,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DeviceConf
             CreateVersionedRootSignatureDeserializer: CreateVersionedRootSignatureDeserializer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D")]
@@ -1281,7 +1244,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DeviceFact
             CreateDevice: CreateDevice::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12DeviceRemovedExtendedData_Impl: ::windows_core::BaseImpl {
     fn GetAutoBreadcrumbsOutput(this: &Self::This) -> ::windows_core::Result<D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT>;
@@ -1316,7 +1278,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DeviceRemo
             GetPageFaultAllocationOutput: GetPageFaultAllocationOutput::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12DeviceRemovedExtendedData1_Impl: ::windows_core::BaseImpl + ID3D12DeviceRemovedExtendedData_Impl {
     fn GetAutoBreadcrumbsOutput1(this: &Self::This) -> ::windows_core::Result<D3D12_DRED_AUTO_BREADCRUMBS_OUTPUT1>;
@@ -1351,7 +1312,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DeviceRemo
             GetPageFaultAllocationOutput1: GetPageFaultAllocationOutput1::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12DeviceRemovedExtendedData2_Impl: ::windows_core::BaseImpl + ID3D12DeviceRemovedExtendedData1_Impl {
     fn GetPageFaultAllocationOutput2(this: &Self::This, poutput: *mut D3D12_DRED_PAGE_FAULT_OUTPUT2) -> ::windows_core::Result<()>;
@@ -1374,7 +1334,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DeviceRemo
             GetDeviceState: GetDeviceState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12DeviceRemovedExtendedDataSettings_Impl: ::windows_core::BaseImpl {
     fn SetAutoBreadcrumbsEnablement(this: &Self::This, enablement: D3D12_DRED_ENABLEMENT);
@@ -1402,7 +1361,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DeviceRemo
             SetWatsonDumpEnablement: SetWatsonDumpEnablement::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12DeviceRemovedExtendedDataSettings1_Impl: ::windows_core::BaseImpl + ID3D12DeviceRemovedExtendedDataSettings_Impl {
     fn SetBreadcrumbContextEnablement(this: &Self::This, enablement: D3D12_DRED_ENABLEMENT);
@@ -1420,7 +1378,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DeviceRemo
             SetBreadcrumbContextEnablement: SetBreadcrumbContextEnablement::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1442,7 +1399,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12DeviceRemo
             UseMarkersOnlyAutoBreadcrumbs: UseMarkersOnlyAutoBreadcrumbs::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1474,7 +1430,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Fence_Impl
             Signal: Signal::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1493,7 +1448,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Fence1_Imp
         }
         ID3D12Fence1_Vtbl { base__: <ID3D12Fence as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetCreationFlags: GetCreationFlags::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D")]
@@ -1871,7 +1825,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12GraphicsCo
             ExecuteIndirect: ExecuteIndirect::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -1918,7 +1871,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12GraphicsCo
             SetViewInstanceMask: SetViewInstanceMask::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -1940,7 +1892,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12GraphicsCo
             WriteBufferImmediate: WriteBufferImmediate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -1962,7 +1913,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12GraphicsCo
             SetProtectedResourceSession: SetProtectedResourceSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -2024,7 +1974,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12GraphicsCo
             DispatchRays: DispatchRays::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -2051,7 +2000,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12GraphicsCo
             RSSetShadingRateImage: RSSetShadingRateImage::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -2070,7 +2018,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12GraphicsCo
         }
         ID3D12GraphicsCommandList6_Vtbl { base__: <ID3D12GraphicsCommandList5 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, DispatchMesh: DispatchMesh::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -2089,7 +2036,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12GraphicsCo
         }
         ID3D12GraphicsCommandList7_Vtbl { base__: <ID3D12GraphicsCommandList6 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Barrier: Barrier::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -2111,7 +2057,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12GraphicsCo
             OMSetFrontAndBackStencilRef: OMSetFrontAndBackStencilRef::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -2138,7 +2083,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12GraphicsCo
             IASetIndexBufferStripCutValue: IASetIndexBufferStripCutValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12Heap_Impl: ::windows_core::BaseImpl + ID3D12Pageable_Impl {
     fn GetDesc(this: &Self::This) -> D3D12_HEAP_DESC;
@@ -2153,7 +2097,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Heap_Impl,
         }
         ID3D12Heap_Vtbl { base__: <ID3D12Pageable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDesc: GetDesc::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12Heap1_Impl: ::windows_core::BaseImpl + ID3D12Heap_Impl {
     fn GetProtectedResourceSession(this: &Self::This, riid: *const ::windows_core::GUID, ppprotectedsession: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -2171,7 +2114,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Heap1_Impl
             GetProtectedResourceSession: GetProtectedResourceSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2363,7 +2305,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12InfoQueue_
             GetMuteDebugOutput: GetMuteDebugOutput::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2390,7 +2331,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12InfoQueue1
             UnregisterMessageCallback: UnregisterMessageCallback::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12LibraryReflection_Impl: ::windows_core::BaseImpl {
     fn GetDesc(this: &Self::This) -> ::windows_core::Result<D3D12_LIBRARY_DESC>;
@@ -2419,7 +2359,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12LibraryRef
             GetFunctionByIndex: GetFunctionByIndex::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12LifetimeOwner_Impl: ::windows_core::BaseImpl {
     fn LifetimeStateUpdated(this: &Self::This, newstate: D3D12_LIFETIME_STATE);
@@ -2437,7 +2376,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12LifetimeOw
             LifetimeStateUpdated: LifetimeStateUpdated::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12LifetimeTracker_Impl: ::windows_core::BaseImpl + ID3D12DeviceChild_Impl {
     fn DestroyOwnedObject(this: &Self::This, pobject: ::core::option::Option<&ID3D12DeviceChild>) -> ::windows_core::Result<()>;
@@ -2455,7 +2393,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12LifetimeTr
             DestroyOwnedObject: DestroyOwnedObject::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12ManualWriteTrackingResource_Impl: ::windows_core::BaseImpl {
     fn TrackWrite(this: &Self::This, subresource: u32, pwrittenrange: *const D3D12_RANGE);
@@ -2470,7 +2407,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12ManualWrit
         }
         ID3D12ManualWriteTrackingResource_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, TrackWrite: TrackWrite::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12MetaCommand_Impl: ::windows_core::BaseImpl + ID3D12Pageable_Impl {
     fn GetRequiredParameterResourceSize(this: &Self::This, stage: D3D12_META_COMMAND_PARAMETER_STAGE, parameterindex: u32) -> u64;
@@ -2488,7 +2424,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12MetaComman
             GetRequiredParameterResourceSize: GetRequiredParameterResourceSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12Object_Impl: ::windows_core::BaseImpl {
     fn GetPrivateData(this: &Self::This, guid: *const ::windows_core::GUID, pdatasize: *mut u32, pdata: *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -2521,7 +2456,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Object_Imp
             SetName: SetName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12Pageable_Impl: ::windows_core::BaseImpl + ID3D12DeviceChild_Impl {}
 impl ::windows_core::Iids for ID3D12Pageable {
@@ -2529,7 +2463,6 @@ impl ::windows_core::Iids for ID3D12Pageable {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Pageable_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ID3D12Pageable {
     const VTABLE: Self::Vtable = { ID3D12Pageable_Vtbl { base__: <ID3D12DeviceChild as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -2571,7 +2504,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12PipelineLi
             Serialize: Serialize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -2590,7 +2522,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12PipelineLi
         }
         ID3D12PipelineLibrary1_Vtbl { base__: <ID3D12PipelineLibrary as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, LoadPipeline: LoadPipeline::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D")]
@@ -2615,7 +2546,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12PipelineSt
         }
         ID3D12PipelineState_Vtbl { base__: <ID3D12Pageable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetCachedBlob: GetCachedBlob::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12ProtectedResourceSession_Impl: ::windows_core::BaseImpl + ID3D12ProtectedSession_Impl {
     fn GetDesc(this: &Self::This) -> D3D12_PROTECTED_RESOURCE_SESSION_DESC;
@@ -2630,7 +2560,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12ProtectedR
         }
         ID3D12ProtectedResourceSession_Vtbl { base__: <ID3D12ProtectedSession as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDesc: GetDesc::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12ProtectedResourceSession1_Impl: ::windows_core::BaseImpl + ID3D12ProtectedResourceSession_Impl {
     fn GetDesc1(this: &Self::This) -> D3D12_PROTECTED_RESOURCE_SESSION_DESC1;
@@ -2645,7 +2574,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12ProtectedR
         }
         ID3D12ProtectedResourceSession1_Vtbl { base__: <ID3D12ProtectedResourceSession as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDesc1: GetDesc1::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12ProtectedSession_Impl: ::windows_core::BaseImpl + ID3D12DeviceChild_Impl {
     fn GetStatusFence(this: &Self::This, riid: *const ::windows_core::GUID, ppfence: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -2668,7 +2596,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12ProtectedS
             GetSessionStatus: GetSessionStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12QueryHeap_Impl: ::windows_core::BaseImpl + ID3D12Pageable_Impl {}
 impl ::windows_core::Iids for ID3D12QueryHeap {
@@ -2676,7 +2603,6 @@ impl ::windows_core::Iids for ID3D12QueryHeap {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12QueryHeap_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ID3D12QueryHeap {
     const VTABLE: Self::Vtable = { ID3D12QueryHeap_Vtbl { base__: <ID3D12Pageable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Dxgi_Common")]
@@ -2728,7 +2654,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Resource_I
             GetHeapProperties: GetHeapProperties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Dxgi_Common")]
@@ -2750,7 +2675,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Resource1_
             GetProtectedResourceSession: GetProtectedResourceSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Dxgi_Common")]
@@ -2769,7 +2693,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Resource2_
         }
         ID3D12Resource2_Vtbl { base__: <ID3D12Resource1 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDesc1: GetDesc1::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12RootSignature_Impl: ::windows_core::BaseImpl + ID3D12DeviceChild_Impl {}
 impl ::windows_core::Iids for ID3D12RootSignature {
@@ -2777,7 +2700,6 @@ impl ::windows_core::Iids for ID3D12RootSignature {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12RootSignature_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ID3D12RootSignature {
     const VTABLE: Self::Vtable = { ID3D12RootSignature_Vtbl { base__: <ID3D12DeviceChild as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12RootSignatureDeserializer_Impl: ::windows_core::BaseImpl {
     fn GetRootSignatureDesc(this: &Self::This) -> *mut D3D12_ROOT_SIGNATURE_DESC;
@@ -2795,7 +2717,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12RootSignat
             GetRootSignatureDesc: GetRootSignatureDesc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12SDKConfiguration_Impl: ::windows_core::BaseImpl {
     fn SetSDKVersion(this: &Self::This, sdkversion: u32, sdkpath: &::windows_core::PCSTR) -> ::windows_core::Result<()>;
@@ -2810,7 +2731,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12SDKConfigu
         }
         ID3D12SDKConfiguration_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetSDKVersion: SetSDKVersion::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12SDKConfiguration1_Impl: ::windows_core::BaseImpl + ID3D12SDKConfiguration_Impl {
     fn CreateDeviceFactory(this: &Self::This, sdkversion: u32, sdkpath: &::windows_core::PCSTR, riid: *const ::windows_core::GUID, ppvfactory: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -2833,7 +2753,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12SDKConfigu
             FreeUnusedSDKs: FreeUnusedSDKs::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12ShaderCacheSession_Impl: ::windows_core::BaseImpl + ID3D12DeviceChild_Impl {
     fn FindValue(this: &Self::This, pkey: *const ::core::ffi::c_void, keysize: u32, pvalue: *mut ::core::ffi::c_void, pvaluesize: *mut u32) -> ::windows_core::Result<()>;
@@ -2866,7 +2785,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12ShaderCach
             GetDesc: GetDesc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D"))]
@@ -2984,7 +2902,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12ShaderRefl
             GetRequiresFlags: GetRequiresFlags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D")]
@@ -3210,7 +3127,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12SharingCon
             EndCapturableWork: EndCapturableWork::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12StateObject_Impl: ::windows_core::BaseImpl + ID3D12Pageable_Impl {}
 impl ::windows_core::Iids for ID3D12StateObject {
@@ -3218,7 +3134,6 @@ impl ::windows_core::Iids for ID3D12StateObject {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12StateObject_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ID3D12StateObject {
     const VTABLE: Self::Vtable = { ID3D12StateObject_Vtbl { base__: <ID3D12Pageable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12StateObjectProperties_Impl: ::windows_core::BaseImpl {
     fn GetShaderIdentifier(this: &Self::This, pexportname: &::windows_core::PCWSTR) -> *mut ::core::ffi::c_void;
@@ -3251,7 +3166,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12StateObjec
             SetPipelineStackSize: SetPipelineStackSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3288,7 +3202,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12SwapChainA
             InsertImplicitSync: InsertImplicitSync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3315,7 +3228,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Tools_Impl
             ShaderInstrumentationEnabled: ShaderInstrumentationEnabled::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D12VersionedRootSignatureDeserializer_Impl: ::windows_core::BaseImpl {
     fn GetRootSignatureDescAtVersion(this: &Self::This, converttoversion: D3D_ROOT_SIGNATURE_VERSION) -> ::windows_core::Result<*mut D3D12_VERSIONED_ROOT_SIGNATURE_DESC>;
@@ -3344,7 +3256,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VersionedR
             GetUnconvertedRootSignatureDesc: GetUnconvertedRootSignatureDesc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3383,5 +3294,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12Virtualiza
             CreateFenceFd: CreateFenceFd::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

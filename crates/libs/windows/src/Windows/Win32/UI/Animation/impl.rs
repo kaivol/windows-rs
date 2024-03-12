@@ -68,7 +68,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationInte
             GetDependencies: GetDependencies::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationInterpolator2_Impl: ::windows_core::BaseImpl {
     fn GetDimension(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -138,7 +137,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationInte
             GetDependencies: GetDependencies::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationLoopIterationChangeHandler2_Impl: ::windows_core::BaseImpl {
     fn OnLoopIterationChanged(this: &Self::This, storyboard: ::core::option::Option<&IUIAnimationStoryboard2>, id: usize, newiterationcount: u32, olditerationcount: u32) -> ::windows_core::Result<()>;
@@ -156,7 +154,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationLoop
             OnLoopIterationChanged: OnLoopIterationChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationManager_Impl: ::windows_core::BaseImpl {
     fn CreateAnimationVariable(this: &Self::This, initialvalue: f64) -> ::windows_core::Result<IUIAnimationVariable>;
@@ -294,7 +291,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationMana
             Shutdown: Shutdown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -458,7 +454,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationMana
             Shutdown: Shutdown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationManagerEventHandler_Impl: ::windows_core::BaseImpl {
     fn OnManagerStatusChanged(this: &Self::This, newstatus: UI_ANIMATION_MANAGER_STATUS, previousstatus: UI_ANIMATION_MANAGER_STATUS) -> ::windows_core::Result<()>;
@@ -476,7 +471,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationMana
             OnManagerStatusChanged: OnManagerStatusChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationManagerEventHandler2_Impl: ::windows_core::BaseImpl {
     fn OnManagerStatusChanged(this: &Self::This, newstatus: UI_ANIMATION_MANAGER_STATUS, previousstatus: UI_ANIMATION_MANAGER_STATUS) -> ::windows_core::Result<()>;
@@ -494,7 +488,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationMana
             OnManagerStatusChanged: OnManagerStatusChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationPrimitiveInterpolation_Impl: ::windows_core::BaseImpl {
     fn AddCubic(this: &Self::This, dimension: u32, beginoffset: f64, constantcoefficient: f32, linearcoefficient: f32, quadraticcoefficient: f32, cubiccoefficient: f32) -> ::windows_core::Result<()>;
@@ -517,7 +510,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationPrim
             AddSinusoidal: AddSinusoidal::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationPriorityComparison_Impl: ::windows_core::BaseImpl {
     fn HasPriority(this: &Self::This, scheduledstoryboard: ::core::option::Option<&IUIAnimationStoryboard>, newstoryboard: ::core::option::Option<&IUIAnimationStoryboard>, priorityeffect: UI_ANIMATION_PRIORITY_EFFECT) -> ::windows_core::Result<()>;
@@ -532,7 +524,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationPrio
         }
         IUIAnimationPriorityComparison_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, HasPriority: HasPriority::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationPriorityComparison2_Impl: ::windows_core::BaseImpl {
     fn HasPriority(this: &Self::This, scheduledstoryboard: ::core::option::Option<&IUIAnimationStoryboard2>, newstoryboard: ::core::option::Option<&IUIAnimationStoryboard2>, priorityeffect: UI_ANIMATION_PRIORITY_EFFECT) -> ::windows_core::Result<()>;
@@ -547,7 +538,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationPrio
         }
         IUIAnimationPriorityComparison2_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, HasPriority: HasPriority::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationStoryboard_Impl: ::windows_core::BaseImpl {
     fn AddTransition(this: &Self::This, variable: ::core::option::Option<&IUIAnimationVariable>, transition: ::core::option::Option<&IUIAnimationTransition>) -> ::windows_core::Result<()>;
@@ -669,7 +659,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationStor
             SetStoryboardEventHandler: SetStoryboardEventHandler::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -800,7 +789,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationStor
             SetStoryboardEventHandler: SetStoryboardEventHandler::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationStoryboardEventHandler_Impl: ::windows_core::BaseImpl {
     fn OnStoryboardStatusChanged(this: &Self::This, storyboard: ::core::option::Option<&IUIAnimationStoryboard>, newstatus: UI_ANIMATION_STORYBOARD_STATUS, previousstatus: UI_ANIMATION_STORYBOARD_STATUS) -> ::windows_core::Result<()>;
@@ -823,7 +811,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationStor
             OnStoryboardUpdated: OnStoryboardUpdated::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationStoryboardEventHandler2_Impl: ::windows_core::BaseImpl {
     fn OnStoryboardStatusChanged(this: &Self::This, storyboard: ::core::option::Option<&IUIAnimationStoryboard2>, newstatus: UI_ANIMATION_STORYBOARD_STATUS, previousstatus: UI_ANIMATION_STORYBOARD_STATUS) -> ::windows_core::Result<()>;
@@ -846,7 +833,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationStor
             OnStoryboardUpdated: OnStoryboardUpdated::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationTimer_Impl: ::windows_core::BaseImpl {
     fn SetTimerUpdateHandler(this: &Self::This, updatehandler: ::core::option::Option<&IUIAnimationTimerUpdateHandler>, idlebehavior: UI_ANIMATION_IDLE_BEHAVIOR) -> ::windows_core::Result<()>;
@@ -900,7 +886,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationTime
             SetFrameRateThreshold: SetFrameRateThreshold::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationTimerClientEventHandler_Impl: ::windows_core::BaseImpl {
     fn OnTimerClientStatusChanged(this: &Self::This, newstatus: UI_ANIMATION_TIMER_CLIENT_STATUS, previousstatus: UI_ANIMATION_TIMER_CLIENT_STATUS) -> ::windows_core::Result<()>;
@@ -918,7 +903,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationTime
             OnTimerClientStatusChanged: OnTimerClientStatusChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationTimerEventHandler_Impl: ::windows_core::BaseImpl {
     fn OnPreUpdate(this: &Self::This) -> ::windows_core::Result<()>;
@@ -946,7 +930,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationTime
             OnRenderingTooSlow: OnRenderingTooSlow::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationTimerUpdateHandler_Impl: ::windows_core::BaseImpl {
     fn OnUpdate(this: &Self::This, timenow: f64) -> ::windows_core::Result<UI_ANIMATION_UPDATE_RESULT>;
@@ -980,7 +963,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationTime
             ClearTimerClientEventHandler: ClearTimerClientEventHandler::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationTransition_Impl: ::windows_core::BaseImpl {
     fn SetInitialValue(this: &Self::This, value: f64) -> ::windows_core::Result<()>;
@@ -1019,7 +1001,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationTran
             GetDuration: GetDuration::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationTransition2_Impl: ::windows_core::BaseImpl {
     fn GetDimension(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1079,7 +1060,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationTran
             GetDuration: GetDuration::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationTransitionFactory_Impl: ::windows_core::BaseImpl {
     fn CreateTransition(this: &Self::This, interpolator: ::core::option::Option<&IUIAnimationInterpolator>) -> ::windows_core::Result<IUIAnimationTransition>;
@@ -1103,7 +1083,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationTran
             CreateTransition: CreateTransition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationTransitionFactory2_Impl: ::windows_core::BaseImpl {
     fn CreateTransition(this: &Self::This, interpolator: ::core::option::Option<&IUIAnimationInterpolator2>) -> ::windows_core::Result<IUIAnimationTransition2>;
@@ -1127,7 +1106,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationTran
             CreateTransition: CreateTransition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationTransitionLibrary_Impl: ::windows_core::BaseImpl {
     fn CreateInstantaneousTransition(this: &Self::This, finalvalue: f64) -> ::windows_core::Result<IUIAnimationTransition>;
@@ -1272,7 +1250,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationTran
             CreateParabolicTransitionFromAcceleration: CreateParabolicTransitionFromAcceleration::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationTransitionLibrary2_Impl: ::windows_core::BaseImpl {
     fn CreateInstantaneousTransition(this: &Self::This, finalvalue: f64) -> ::windows_core::Result<IUIAnimationTransition2>;
@@ -1494,7 +1471,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationTran
             CreateCubicBezierLinearVectorTransition: CreateCubicBezierLinearVectorTransition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationVariable_Impl: ::windows_core::BaseImpl {
     fn GetValue(this: &Self::This) -> ::windows_core::Result<f64>;
@@ -1619,7 +1595,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationVari
             SetVariableIntegerChangeHandler: SetVariableIntegerChangeHandler::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_DirectComposition\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_DirectComposition"))]
@@ -1814,7 +1789,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationVari
             SetVariableCurveChangeHandler: SetVariableCurveChangeHandler::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationVariableChangeHandler_Impl: ::windows_core::BaseImpl {
     fn OnValueChanged(this: &Self::This, storyboard: ::core::option::Option<&IUIAnimationStoryboard>, variable: ::core::option::Option<&IUIAnimationVariable>, newvalue: f64, previousvalue: f64) -> ::windows_core::Result<()>;
@@ -1829,7 +1803,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationVari
         }
         IUIAnimationVariableChangeHandler_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnValueChanged: OnValueChanged::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationVariableChangeHandler2_Impl: ::windows_core::BaseImpl {
     fn OnValueChanged(this: &Self::This, storyboard: ::core::option::Option<&IUIAnimationStoryboard2>, variable: ::core::option::Option<&IUIAnimationVariable2>, newvalue: *const f64, previousvalue: *const f64, cdimension: u32) -> ::windows_core::Result<()>;
@@ -1844,7 +1817,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationVari
         }
         IUIAnimationVariableChangeHandler2_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnValueChanged: OnValueChanged::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationVariableCurveChangeHandler2_Impl: ::windows_core::BaseImpl {
     fn OnCurveChanged(this: &Self::This, variable: ::core::option::Option<&IUIAnimationVariable2>) -> ::windows_core::Result<()>;
@@ -1859,7 +1831,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationVari
         }
         IUIAnimationVariableCurveChangeHandler2_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnCurveChanged: OnCurveChanged::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationVariableIntegerChangeHandler_Impl: ::windows_core::BaseImpl {
     fn OnIntegerValueChanged(this: &Self::This, storyboard: ::core::option::Option<&IUIAnimationStoryboard>, variable: ::core::option::Option<&IUIAnimationVariable>, newvalue: i32, previousvalue: i32) -> ::windows_core::Result<()>;
@@ -1877,7 +1848,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationVari
             OnIntegerValueChanged: OnIntegerValueChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIAnimationVariableIntegerChangeHandler2_Impl: ::windows_core::BaseImpl {
     fn OnIntegerValueChanged(this: &Self::This, storyboard: ::core::option::Option<&IUIAnimationStoryboard2>, variable: ::core::option::Option<&IUIAnimationVariable2>, newvalue: *const i32, previousvalue: *const i32, cdimension: u32) -> ::windows_core::Result<()>;
@@ -1895,5 +1865,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIAnimationVari
             OnIntegerValueChanged: OnIntegerValueChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

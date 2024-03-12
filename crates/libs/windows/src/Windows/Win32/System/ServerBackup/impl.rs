@@ -25,7 +25,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWsbApplicationA
             Abort: Abort::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWsbApplicationBackupSupport_Impl: ::windows_core::BaseImpl {
     fn CheckConsistency(this: &Self::This, wszwritermetadata: &::windows_core::PCWSTR, wszcomponentname: &::windows_core::PCWSTR, wszcomponentlogicalpath: &::windows_core::PCWSTR, cvolumes: u32, rgwszsourcevolumepath: *const ::windows_core::PCWSTR, rgwszsnapshotvolumepath: *const ::windows_core::PCWSTR) -> ::windows_core::Result<IWsbApplicationAsync>;
@@ -49,7 +48,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWsbApplicationB
             CheckConsistency: CheckConsistency::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -92,5 +90,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWsbApplicationR
             IsRollForwardSupported: IsRollForwardSupported::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

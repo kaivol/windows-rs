@@ -33,7 +33,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAsynchronousDat
             LoadChangeData: LoadChangeData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IChangeConflict_Impl: ::windows_core::BaseImpl {
     fn GetDestinationProviderConflictingChange(this: &Self::This) -> ::windows_core::Result<ISyncChange>;
@@ -110,7 +109,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IChangeConflict_
             SetResolveActionForChangeUnit: SetResolveActionForChangeUnit::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IChangeUnitException_Impl: ::windows_core::BaseImpl {
     fn GetItemId(this: &Self::This, pbitemid: *mut u8, pcbidsize: *mut u32) -> ::windows_core::Result<()>;
@@ -138,7 +136,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IChangeUnitExcep
             GetClockVector: GetClockVector::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IChangeUnitListFilterInfo_Impl: ::windows_core::BaseImpl + ISyncFilterInfo_Impl {
     fn Initialize(this: &Self::This, ppbchangeunitids: *const *const u8, dwchangeunitcount: u32) -> ::windows_core::Result<()>;
@@ -166,7 +163,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IChangeUnitListF
             GetChangeUnitId: GetChangeUnitId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IClockVector_Impl: ::windows_core::BaseImpl {
     fn GetClockVectorElements(this: &Self::This, riid: *const ::windows_core::GUID, ppienumclockvector: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -189,7 +185,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IClockVector_Imp
             GetClockVectorElementCount: GetClockVectorElementCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IClockVectorElement_Impl: ::windows_core::BaseImpl {
     fn GetReplicaKey(this: &Self::This, pdwreplicakey: *mut u32) -> ::windows_core::Result<()>;
@@ -212,7 +207,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IClockVectorElem
             GetTickCount: GetTickCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICombinedFilterInfo_Impl: ::windows_core::BaseImpl + ISyncFilterInfo_Impl {
     fn GetFilterCount(this: &Self::This, pdwfiltercount: *mut u32) -> ::windows_core::Result<()>;
@@ -246,7 +240,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICombinedFilterI
             GetFilterCombinationType: GetFilterCombinationType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IConstraintConflict_Impl: ::windows_core::BaseImpl {
     fn GetDestinationProviderConflictingChange(this: &Self::This) -> ::windows_core::Result<ISyncChange>;
@@ -355,7 +348,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IConstraintConfl
             IsTemporary: IsTemporary::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IConstructReplicaKeyMap_Impl: ::windows_core::BaseImpl {
     fn FindOrAddReplica(this: &Self::This, pbreplicaid: *const u8, pdwreplicakey: *mut u32) -> ::windows_core::Result<()>;
@@ -373,7 +365,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IConstructReplic
             FindOrAddReplica: FindOrAddReplica::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICoreFragment_Impl: ::windows_core::BaseImpl {
     fn NextColumn(this: &Self::This, pchangeunitid: *mut u8, pchangeunitidsize: *mut u32) -> ::windows_core::Result<()>;
@@ -411,7 +402,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreFragment_Im
             GetRangeCount: GetRangeCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICoreFragmentInspector_Impl: ::windows_core::BaseImpl {
     fn NextCoreFragments(this: &Self::This, requestedcount: u32, ppicorefragments: *mut ::core::option::Option<ICoreFragment>, pfetchedcount: *mut u32) -> ::windows_core::Result<()>;
@@ -434,7 +424,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreFragmentIns
             Reset: Reset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICustomFilterInfo_Impl: ::windows_core::BaseImpl + ISyncFilterInfo_Impl {
     fn GetSyncFilter(this: &Self::This) -> ::windows_core::Result<ISyncFilter>;
@@ -455,7 +444,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICustomFilterInf
         }
         ICustomFilterInfo_Vtbl { base__: <ISyncFilterInfo as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetSyncFilter: GetSyncFilter::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDataRetrieverCallback_Impl: ::windows_core::BaseImpl {
     fn LoadChangeDataComplete(this: &Self::This, punkdata: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -478,7 +466,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDataRetrieverCa
             LoadChangeDataError: LoadChangeDataError::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumChangeUnitExceptions_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, cexceptions: u32, ppchangeunitexception: *mut ::core::option::Option<IChangeUnitException>, pcfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -517,7 +504,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumChangeUnitE
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumClockVector_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, cclockvectorelements: u32, ppiclockvectorelements: *mut ::core::option::Option<IClockVectorElement>, pcfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -556,7 +542,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumClockVector
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumFeedClockVector_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, cclockvectorelements: u32, ppiclockvectorelements: *mut ::core::option::Option<IFeedClockVectorElement>, pcfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -595,7 +580,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumFeedClockVe
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumItemIds_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, pbitemid: *mut u8, pcbitemidsize: *mut u32) -> ::windows_core::Result<()>;
@@ -610,7 +594,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumItemIds_Imp
         }
         IEnumItemIds_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Next: Next::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumRangeExceptions_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, cexceptions: u32, pprangeexception: *mut ::core::option::Option<IRangeException>, pcfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -649,7 +632,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumRangeExcept
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumSingleItemExceptions_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, cexceptions: u32, ppsingleitemexception: *mut ::core::option::Option<ISingleItemException>, pcfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -688,7 +670,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumSingleItemE
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumSyncChangeUnits_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, cchanges: u32, ppchangeunit: *mut ::core::option::Option<ISyncChangeUnit>, pcfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -727,7 +708,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumSyncChangeU
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumSyncChanges_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, cchanges: u32, ppchange: *mut ::core::option::Option<ISyncChange>, pcfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -766,7 +746,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumSyncChanges
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -809,7 +788,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumSyncProvide
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -852,7 +830,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumSyncProvide
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -879,7 +856,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFeedClockVector
             IsNoConflictsSpecified: IsNoConflictsSpecified::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IFeedClockVectorElement_Impl: ::windows_core::BaseImpl + IClockVectorElement_Impl {
     fn GetSyncTime(this: &Self::This, psynctime: *mut SYNC_TIME) -> ::windows_core::Result<()>;
@@ -902,7 +878,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFeedClockVector
             GetFlags: GetFlags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IFilterKeyMap_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This, pdwcount: *mut u32) -> ::windows_core::Result<()>;
@@ -941,7 +916,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFilterKeyMap_Im
             Serialize: Serialize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IFilterRequestCallback_Impl: ::windows_core::BaseImpl {
     fn RequestFilter(this: &Self::This, pfilter: ::core::option::Option<&::windows_core::IUnknown>, filteringtype: FILTERING_TYPE) -> ::windows_core::Result<()>;
@@ -956,7 +930,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFilterRequestCa
         }
         IFilterRequestCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, RequestFilter: RequestFilter::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IFilterTrackingProvider_Impl: ::windows_core::BaseImpl {
     fn SpecifyTrackedFilters(this: &Self::This, pcallback: ::core::option::Option<&IFilterTrackingRequestCallback>) -> ::windows_core::Result<()>;
@@ -979,7 +952,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFilterTrackingP
             AddTrackedFilter: AddTrackedFilter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IFilterTrackingRequestCallback_Impl: ::windows_core::BaseImpl {
     fn RequestTrackedFilter(this: &Self::This, pfilter: ::core::option::Option<&ISyncFilter>) -> ::windows_core::Result<()>;
@@ -997,7 +969,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFilterTrackingR
             RequestTrackedFilter: RequestTrackedFilter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1024,7 +995,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFilterTrackingS
             SetAllChangeUnitsPresentFlag: SetAllChangeUnitsPresentFlag::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1043,7 +1013,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IForgottenKnowle
         }
         IForgottenKnowledge_Vtbl { base__: <ISyncKnowledge as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ForgetToVersion: ForgetToVersion::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1095,7 +1064,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKnowledgeSyncPr
             EndSession: EndSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ILoadChangeContext_Impl: ::windows_core::BaseImpl {
     fn GetSyncChange(this: &Self::This) -> ::windows_core::Result<ISyncChange>;
@@ -1129,7 +1097,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILoadChangeConte
             SetRecoverableErrorOnChangeUnit: SetRecoverableErrorOnChangeUnit::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IProviderConverter_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, pisyncprovider: ::core::option::Option<&ISyncProvider>) -> ::windows_core::Result<()>;
@@ -1144,7 +1111,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProviderConvert
         }
         IProviderConverter_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Initialize: Initialize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRangeException_Impl: ::windows_core::BaseImpl {
     fn GetClosedRangeStart(this: &Self::This, pbclosedrangestart: *mut u8, pcbidsize: *mut u32) -> ::windows_core::Result<()>;
@@ -1172,7 +1138,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRangeException_
             GetClockVector: GetClockVector::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRecoverableError_Impl: ::windows_core::BaseImpl {
     fn GetStage(this: &Self::This, pstage: *mut SYNC_PROGRESS_STAGE) -> ::windows_core::Result<()>;
@@ -1216,7 +1181,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRecoverableErro
             GetRecoverableErrorDataForChangeUnit: GetRecoverableErrorDataForChangeUnit::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRecoverableErrorData_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, pcszitemdisplayname: &::windows_core::PCWSTR, pcszerrordescription: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -1244,7 +1208,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRecoverableErro
             GetErrorDescription: GetErrorDescription::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -1282,7 +1245,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRegisteredSyncP
             Reset: Reset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IReplicaKeyMap_Impl: ::windows_core::BaseImpl {
     fn LookupReplicaKey(this: &Self::This, pbreplicaid: *const u8, pdwreplicakey: *mut u32) -> ::windows_core::Result<()>;
@@ -1310,7 +1272,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IReplicaKeyMap_I
             Serialize: Serialize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRequestFilteredSync_Impl: ::windows_core::BaseImpl {
     fn SpecifyFilter(this: &Self::This, pcallback: ::core::option::Option<&IFilterRequestCallback>) -> ::windows_core::Result<()>;
@@ -1325,7 +1286,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRequestFiltered
         }
         IRequestFilteredSync_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SpecifyFilter: SpecifyFilter::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISingleItemException_Impl: ::windows_core::BaseImpl {
     fn GetItemId(this: &Self::This, pbitemid: *mut u8, pcbidsize: *mut u32) -> ::windows_core::Result<()>;
@@ -1348,7 +1308,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISingleItemExcep
             GetClockVector: GetClockVector::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISupportFilteredSync_Impl: ::windows_core::BaseImpl {
     fn AddFilter(this: &Self::This, pfilter: ::core::option::Option<&::windows_core::IUnknown>, filteringtype: FILTERING_TYPE) -> ::windows_core::Result<()>;
@@ -1363,7 +1322,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISupportFiltered
         }
         ISupportFilteredSync_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, AddFilter: AddFilter::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISupportLastWriteTime_Impl: ::windows_core::BaseImpl {
     fn GetItemChangeTime(this: &Self::This, pbitemid: *const u8, pulltimestamp: *mut u64) -> ::windows_core::Result<()>;
@@ -1386,7 +1344,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISupportLastWrit
             GetChangeUnitChangeTime: GetChangeUnitChangeTime::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISyncCallback_Impl: ::windows_core::BaseImpl {
     fn OnProgress(this: &Self::This, provider: SYNC_PROVIDER_ROLE, syncstage: SYNC_PROGRESS_STAGE, dwcompletedwork: u32, dwtotalwork: u32) -> ::windows_core::Result<()>;
@@ -1424,7 +1381,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncCallback_Im
             OnRecoverableError: OnRecoverableError::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISyncCallback2_Impl: ::windows_core::BaseImpl + ISyncCallback_Impl {
     fn OnChangeApplied(this: &Self::This, dwchangesapplied: u32, dwchangesfailed: u32) -> ::windows_core::Result<()>;
@@ -1447,7 +1403,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncCallback2_I
             OnChangeFailed: OnChangeFailed::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISyncChange_Impl: ::windows_core::BaseImpl {
     fn GetOwnerReplicaId(this: &Self::This, pbreplicaid: *mut u8, pcbidsize: *mut u32) -> ::windows_core::Result<()>;
@@ -1528,7 +1483,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncChange_Impl
             SetWorkEstimate: SetWorkEstimate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1566,7 +1520,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncChangeBatch
             AddLoggedConflict: AddLoggedConflict::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1605,7 +1558,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncChangeBatch
             AddMergeTombstoneLoggedConflict: AddMergeTombstoneLoggedConflict::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1654,7 +1606,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncChangeBatch
             GetBatchLevelKnowledgeShouldBeApplied: GetBatchLevelKnowledgeShouldBeApplied::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1771,7 +1722,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncChangeBatch
             Serialize: Serialize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1793,7 +1743,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncChangeBatch
             SerializeWithOptions: SerializeWithOptions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISyncChangeBatchWithFilterKeyMap_Impl: ::windows_core::BaseImpl {
     fn GetFilterKeyMap(this: &Self::This) -> ::windows_core::Result<IFilterKeyMap>;
@@ -1882,7 +1831,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncChangeBatch
             GetLearnedFilterForgottenKnowledgeAfterRecoveryComplete: GetLearnedFilterForgottenKnowledgeAfterRecoveryComplete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1926,7 +1874,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncChangeBatch
             GetLearnedForgottenKnowledge: GetLearnedForgottenKnowledge::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISyncChangeBuilder_Impl: ::windows_core::BaseImpl {
     fn AddChangeUnitMetadata(this: &Self::This, pbchangeunitid: *const u8, pchangeunitversion: *const SYNC_VERSION) -> ::windows_core::Result<()>;
@@ -1944,7 +1891,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncChangeBuild
             AddChangeUnitMetadata: AddChangeUnitMetadata::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISyncChangeUnit_Impl: ::windows_core::BaseImpl {
     fn GetItemChange(this: &Self::This) -> ::windows_core::Result<ISyncChange>;
@@ -1978,7 +1924,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncChangeUnit_
             GetChangeUnitVersion: GetChangeUnitVersion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2076,7 +2021,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncChangeWithF
             GetLearnedFilterForgottenKnowledgeAfterRecoveryComplete: GetLearnedFilterForgottenKnowledgeAfterRecoveryComplete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISyncChangeWithPrerequisite_Impl: ::windows_core::BaseImpl {
     fn GetPrerequisiteKnowledge(this: &Self::This) -> ::windows_core::Result<ISyncKnowledge>;
@@ -2111,7 +2055,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncChangeWithP
             GetLearnedKnowledgeWithPrerequisite: GetLearnedKnowledgeWithPrerequisite::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISyncConstraintCallback_Impl: ::windows_core::BaseImpl {
     fn OnConstraintConflict(this: &Self::This, pconflict: ::core::option::Option<&IConstraintConflict>) -> ::windows_core::Result<()>;
@@ -2129,7 +2072,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncConstraintC
             OnConstraintConflict: OnConstraintConflict::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISyncDataConverter_Impl: ::windows_core::BaseImpl {
     fn ConvertDataRetrieverFromProviderFormat(this: &Self::This, punkdataretrieverin: ::core::option::Option<&::windows_core::IUnknown>, penumsyncchanges: ::core::option::Option<&IEnumSyncChanges>) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -2186,7 +2128,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncDataConvert
             ConvertDataToProviderFormat: ConvertDataToProviderFormat::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISyncFilter_Impl: ::windows_core::BaseImpl {
     fn IsIdentical(this: &Self::This, psyncfilter: ::core::option::Option<&ISyncFilter>) -> ::windows_core::Result<()>;
@@ -2209,7 +2150,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncFilter_Impl
             Serialize: Serialize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISyncFilterDeserializer_Impl: ::windows_core::BaseImpl {
     fn DeserializeSyncFilter(this: &Self::This, pbsyncfilter: *const u8, dwcbsyncfilter: u32) -> ::windows_core::Result<ISyncFilter>;
@@ -2233,7 +2173,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncFilterDeser
             DeserializeSyncFilter: DeserializeSyncFilter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISyncFilterInfo_Impl: ::windows_core::BaseImpl {
     fn Serialize(this: &Self::This, pbbuffer: *mut u8, pcbbuffer: *mut u32) -> ::windows_core::Result<()>;
@@ -2248,7 +2187,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncFilterInfo_
         }
         ISyncFilterInfo_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Serialize: Serialize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISyncFilterInfo2_Impl: ::windows_core::BaseImpl + ISyncFilterInfo_Impl {
     fn GetFlags(this: &Self::This, pdwflags: *mut u32) -> ::windows_core::Result<()>;
@@ -2263,7 +2201,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncFilterInfo2
         }
         ISyncFilterInfo2_Vtbl { base__: <ISyncFilterInfo as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetFlags: GetFlags::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISyncFullEnumerationChange_Impl: ::windows_core::BaseImpl {
     fn GetLearnedKnowledgeAfterRecoveryComplete(this: &Self::This) -> ::windows_core::Result<ISyncKnowledge>;
@@ -2298,7 +2235,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncFullEnumera
             GetLearnedForgottenKnowledge: GetLearnedForgottenKnowledge::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2336,7 +2272,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncFullEnumera
             GetClosedUpperBoundItemId: GetClosedUpperBoundItemId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2364,7 +2299,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncFullEnumera
             AddMergeTombstoneMetadataToGroup: AddMergeTombstoneMetadataToGroup::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2537,7 +2471,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncKnowledge_I
             GetVersion: GetVersion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2648,7 +2581,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncKnowledge2_
             CompareToKnowledgeCookie: CompareToKnowledgeCookie::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISyncMergeTombstoneChange_Impl: ::windows_core::BaseImpl {
     fn GetWinnerItemId(this: &Self::This, pbwinneritemid: *mut u8, pcbidsize: *mut u32) -> ::windows_core::Result<()>;
@@ -2666,7 +2598,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncMergeTombst
             GetWinnerItemId: GetWinnerItemId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2688,7 +2619,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncProvider_Im
             GetIdParameters: GetIdParameters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -2737,7 +2667,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncProviderCon
             ModifySyncProvider: ModifySyncProvider::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -2765,7 +2694,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncProviderCon
             GetSyncProviderConfigUI: GetSyncProviderConfigUI::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -2793,7 +2721,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncProviderInf
             GetSyncProvider: GetSyncProvider::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -2956,7 +2883,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncProviderReg
             GetChange: GetChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISyncRegistrationChange_Impl: ::windows_core::BaseImpl {
     fn GetEvent(this: &Self::This) -> ::windows_core::Result<SYNC_REGISTRATION_EVENT>;
@@ -2991,7 +2917,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncRegistratio
             GetInstanceId: GetInstanceId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISyncSessionExtendedErrorInfo_Impl: ::windows_core::BaseImpl {
     fn GetSyncProviderWithError(this: &Self::This) -> ::windows_core::Result<ISyncProvider>;
@@ -3015,7 +2940,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncSessionExte
             GetSyncProviderWithError: GetSyncProviderWithError::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3067,7 +2991,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncSessionStat
             OnProgress: OnProgress::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3094,7 +3017,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISyncSessionStat
             GetSessionErrorStatus: GetSessionErrorStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3127,5 +3049,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISynchronousData
             LoadChangeData: LoadChangeData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

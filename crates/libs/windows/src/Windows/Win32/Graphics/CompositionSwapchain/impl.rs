@@ -28,7 +28,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICompositionFram
             GetDisplayInstanceArray: GetDisplayInstanceArray::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -70,7 +69,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IIndependentFlip
             GetPresentDuration: GetPresentDuration::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPresentStatistics_Impl: ::windows_core::BaseImpl {
     fn GetPresentId(this: &Self::This) -> u64;
@@ -93,7 +91,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPresentStatisti
             GetKind: GetKind::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPresentStatusPresentStatistics_Impl: ::windows_core::BaseImpl + IPresentStatistics_Impl {
     fn GetCompositionFrameId(this: &Self::This) -> u64;
@@ -116,7 +113,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPresentStatusPr
             GetPresentStatus: GetPresentStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -155,7 +151,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPresentationBuf
             IsAvailable: IsAvailable::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPresentationContent_Impl: ::windows_core::BaseImpl {
     fn SetTag(this: &Self::This, tag: usize);
@@ -170,7 +165,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPresentationCon
         }
         IPresentationContent_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetTag: SetTag::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPresentationFactory_Impl: ::windows_core::BaseImpl {
     fn IsPresentationSupported(this: &Self::This) -> u8;
@@ -204,7 +198,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPresentationFac
             CreatePresentationManager: CreatePresentationManager::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -322,7 +315,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPresentationMan
             GetNextPresentStatistics: GetNextPresentStatistics::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -379,5 +371,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPresentationSur
             SetLetterboxingMargins: SetLetterboxingMargins::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

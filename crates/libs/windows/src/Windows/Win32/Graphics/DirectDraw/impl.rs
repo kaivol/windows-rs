@@ -33,7 +33,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDDVideoPortCont
             QueryVideoPortStatus: QueryVideoPortStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -162,7 +161,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectDraw_Impl
             WaitForVerticalBlank: WaitForVerticalBlank::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -296,7 +294,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectDraw2_Imp
             GetAvailableVidMem: GetAvailableVidMem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -456,7 +453,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectDraw4_Imp
             GetDeviceIdentifier: GetDeviceIdentifier::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -626,7 +622,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectDraw7_Imp
             EvaluateMode: EvaluateMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -673,7 +668,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectDrawClipp
             SetHWnd: SetHWnd::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectDrawColorControl_Impl: ::windows_core::BaseImpl {
     fn GetColorControls(this: &Self::This, param0: *mut DDCOLORCONTROL) -> ::windows_core::Result<()>;
@@ -696,7 +690,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectDrawColor
             SetColorControls: SetColorControls::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectDrawGammaControl_Impl: ::windows_core::BaseImpl {
     fn GetGammaRamp(this: &Self::This, param0: u32, param1: *mut DDGAMMARAMP) -> ::windows_core::Result<()>;
@@ -719,7 +712,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectDrawGamma
             SetGammaRamp: SetGammaRamp::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectDrawKernel_Impl: ::windows_core::BaseImpl {
     fn GetCaps(this: &Self::This, param0: *mut DDKERNELCAPS) -> ::windows_core::Result<()>;
@@ -747,7 +739,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectDrawKerne
             ReleaseKernelHandle: ReleaseKernelHandle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
 #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -784,7 +775,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectDrawPalet
             SetEntries: SetEntries::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -978,7 +968,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectDrawSurfa
             UpdateOverlayZOrder: UpdateOverlayZOrder::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -1187,7 +1176,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectDrawSurfa
             PageUnlock: PageUnlock::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -1401,7 +1389,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectDrawSurfa
             SetSurfaceDesc: SetSurfaceDesc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -1640,7 +1627,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectDrawSurfa
             ChangeUniquenessValue: ChangeUniquenessValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -1899,7 +1885,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectDrawSurfa
             GetLOD: GetLOD::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectDrawSurfaceKernel_Impl: ::windows_core::BaseImpl {
     fn GetKernelHandle(this: &Self::This, param0: *mut usize) -> ::windows_core::Result<()>;
@@ -1922,7 +1907,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectDrawSurfa
             ReleaseKernelHandle: ReleaseKernelHandle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2009,7 +1993,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectDrawVideo
             WaitForSync: WaitForSync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2036,5 +2019,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectDrawVideo
             ReleaseNotification: ReleaseNotification::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

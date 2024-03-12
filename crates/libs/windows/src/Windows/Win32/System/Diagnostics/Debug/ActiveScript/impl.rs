@@ -49,7 +49,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: AsyncIDebugAppli
             Finish_onAttach: Finish_onAttach::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -167,7 +166,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScript_Im
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -286,7 +284,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptAut
             IsCommitChar: IsCommitChar::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -308,7 +305,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptAut
             ParseProcedureText: ParseProcedureText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptDebug32_Impl: ::windows_core::BaseImpl {
     fn GetScriptTextAttributes(this: &Self::This, pstrcode: &::windows_core::PCWSTR, unumcodechars: u32, pstrdelimiter: &::windows_core::PCWSTR, dwflags: u32, pattr: *mut u16) -> ::windows_core::Result<()>;
@@ -342,7 +338,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptDeb
             EnumCodeContextsOfPosition: EnumCodeContextsOfPosition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptDebug64_Impl: ::windows_core::BaseImpl {
     fn GetScriptTextAttributes(this: &Self::This, pstrcode: &::windows_core::PCWSTR, unumcodechars: u32, pstrdelimiter: &::windows_core::PCWSTR, dwflags: u32, pattr: *mut u16) -> ::windows_core::Result<()>;
@@ -376,7 +371,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptDeb
             EnumCodeContextsOfPosition: EnumCodeContextsOfPosition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptEncode_Impl: ::windows_core::BaseImpl {
     fn EncodeSection(this: &Self::This, pchin: &::windows_core::PCWSTR, cchin: u32, pchout: &::windows_core::PWSTR, cchout: u32, pcchret: *mut u32) -> ::windows_core::Result<()>;
@@ -404,7 +398,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptEnc
             GetEncodeProgId: GetEncodeProgId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -442,7 +435,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptErr
             GetSourceLineText: GetSourceLineText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -464,7 +456,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptErr
             GetSourcePosition64: GetSourcePosition64::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -503,7 +494,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptErr
             GetStackFrame: GetStackFrame::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptErrorDebug110_Impl: ::windows_core::BaseImpl {
     fn GetExceptionThrownKind(this: &Self::This) -> ::windows_core::Result<SCRIPT_ERROR_DEBUG_EXCEPTION_THROWN_KIND>;
@@ -527,7 +517,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptErr
             GetExceptionThrownKind: GetExceptionThrownKind::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptGarbageCollector_Impl: ::windows_core::BaseImpl {
     fn CollectGarbage(this: &Self::This, scriptgctype: SCRIPTGCTYPE) -> ::windows_core::Result<()>;
@@ -542,7 +531,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptGar
         }
         IActiveScriptGarbageCollector_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CollectGarbage: CollectGarbage::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptHostEncode_Impl: ::windows_core::BaseImpl {
     fn EncodeScriptHostFile(this: &Self::This, bstrinfile: &::windows_core::BSTR, pbstroutfile: *mut ::windows_core::BSTR, cflags: u32, bstrdefaultlang: &::windows_core::BSTR) -> ::windows_core::Result<()>;
@@ -560,7 +548,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptHos
             EncodeScriptHostFile: EncodeScriptHostFile::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -594,7 +581,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptPar
             ParseScriptText: ParseScriptText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -628,7 +614,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptPar
             ParseScriptText: ParseScriptText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -640,7 +625,6 @@ impl ::windows_core::Iids for IActiveScriptParseProcedure2_32 {
 #[cfg(feature = "Win32_System_Com")]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptParseProcedure2_32_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IActiveScriptParseProcedure2_32 {
     const VTABLE: Self::Vtable = { IActiveScriptParseProcedure2_32_Vtbl { base__: <IActiveScriptParseProcedure32 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -652,7 +636,6 @@ impl ::windows_core::Iids for IActiveScriptParseProcedure2_64 {
 #[cfg(feature = "Win32_System_Com")]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptParseProcedure2_64_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IActiveScriptParseProcedure2_64 {
     const VTABLE: Self::Vtable = { IActiveScriptParseProcedure2_64_Vtbl { base__: <IActiveScriptParseProcedure64 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -680,7 +663,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptPar
             ParseProcedureText: ParseProcedureText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -708,7 +690,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptPar
             ParseProcedureText: ParseProcedureText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -736,7 +717,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptPar
             ParseProcedureText: ParseProcedureText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -764,7 +744,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptPar
             ParseProcedureText: ParseProcedureText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptProfilerCallback_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, dwcontext: u32) -> ::windows_core::Result<()>;
@@ -807,7 +786,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptPro
             OnFunctionExit: OnFunctionExit::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptProfilerCallback2_Impl: ::windows_core::BaseImpl + IActiveScriptProfilerCallback_Impl {
     fn OnFunctionEnterByName(this: &Self::This, pwszfunctionname: &::windows_core::PCWSTR, r#type: PROFILER_SCRIPT_TYPE) -> ::windows_core::Result<()>;
@@ -830,7 +808,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptPro
             OnFunctionExitByName: OnFunctionExitByName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptProfilerCallback3_Impl: ::windows_core::BaseImpl + IActiveScriptProfilerCallback2_Impl {
     fn SetWebWorkerId(this: &Self::This, webworkerid: u32) -> ::windows_core::Result<()>;
@@ -848,7 +825,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptPro
             SetWebWorkerId: SetWebWorkerId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptProfilerControl_Impl: ::windows_core::BaseImpl {
     fn StartProfiling(this: &Self::This, clsidprofilerobject: *const ::windows_core::GUID, dweventmask: u32, dwcontext: u32) -> ::windows_core::Result<()>;
@@ -876,7 +852,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptPro
             StopProfiling: StopProfiling::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptProfilerControl2_Impl: ::windows_core::BaseImpl + IActiveScriptProfilerControl_Impl {
     fn CompleteProfilerStart(this: &Self::This) -> ::windows_core::Result<()>;
@@ -899,7 +874,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptPro
             PrepareProfilerStop: PrepareProfilerStop::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptProfilerControl3_Impl: ::windows_core::BaseImpl + IActiveScriptProfilerControl2_Impl {
     fn EnumHeap(this: &Self::This) -> ::windows_core::Result<IActiveScriptProfilerHeapEnum>;
@@ -920,7 +894,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptPro
         }
         IActiveScriptProfilerControl3_Vtbl { base__: <IActiveScriptProfilerControl2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, EnumHeap: EnumHeap::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptProfilerControl4_Impl: ::windows_core::BaseImpl + IActiveScriptProfilerControl3_Impl {
     fn SummarizeHeap(this: &Self::This, heapsummary: *mut PROFILER_HEAP_SUMMARY) -> ::windows_core::Result<()>;
@@ -938,7 +911,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptPro
             SummarizeHeap: SummarizeHeap::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptProfilerControl5_Impl: ::windows_core::BaseImpl + IActiveScriptProfilerControl4_Impl {
     fn EnumHeap2(this: &Self::This, enumflags: PROFILER_HEAP_ENUM_FLAGS) -> ::windows_core::Result<IActiveScriptProfilerHeapEnum>;
@@ -959,7 +931,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptPro
         }
         IActiveScriptProfilerControl5_Vtbl { base__: <IActiveScriptProfilerControl4 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, EnumHeap2: EnumHeap2::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptProfilerHeapEnum_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, heapobjects: *mut *mut PROFILER_HEAP_OBJECT, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -992,7 +963,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptPro
             GetNameIdMap: GetNameIdMap::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1025,7 +995,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptPro
             SetProperty: SetProperty::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptSIPInfo_Impl: ::windows_core::BaseImpl {
     fn GetSIPOID(this: &Self::This) -> ::windows_core::Result<::windows_core::GUID>;
@@ -1046,7 +1015,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptSIP
         }
         IActiveScriptSIPInfo_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetSIPOID: GetSIPOID::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1115,7 +1083,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptSit
             OnLeaveScript: OnLeaveScript::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1170,7 +1137,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptSit
             OnScriptErrorDebug: OnScriptErrorDebug::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1225,7 +1191,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptSit
             OnScriptErrorDebug: OnScriptErrorDebug::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1253,7 +1218,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptSit
             OnCanNotJITScriptErrorDebug: OnCanNotJITScriptErrorDebug::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptSiteInterruptPoll_Impl: ::windows_core::BaseImpl {
     fn QueryContinue(this: &Self::This) -> ::windows_core::Result<()>;
@@ -1268,7 +1232,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptSit
         }
         IActiveScriptSiteInterruptPoll_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, QueryContinue: QueryContinue::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptSiteTraceInfo_Impl: ::windows_core::BaseImpl {
     fn SendScriptTraceInfo(this: &Self::This, stieventtype: SCRIPTTRACEINFO, guidcontextid: &::windows_core::GUID, dwscriptcontextcookie: u32, lscriptstatementstart: i32, lscriptstatementend: i32, dwreserved: u64) -> ::windows_core::Result<()>;
@@ -1286,7 +1249,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptSit
             SendScriptTraceInfo: SendScriptTraceInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptSiteUIControl_Impl: ::windows_core::BaseImpl {
     fn GetUIBehavior(this: &Self::This, uicitem: SCRIPTUICITEM) -> ::windows_core::Result<SCRIPTUICHANDLING>;
@@ -1307,7 +1269,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptSit
         }
         IActiveScriptSiteUIControl_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetUIBehavior: GetUIBehavior::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1340,7 +1301,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptSit
             EnableModeless: EnableModeless::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptStats_Impl: ::windows_core::BaseImpl {
     fn GetStat(this: &Self::This, stid: u32, pluhi: *mut u32, plulo: *mut u32) -> ::windows_core::Result<()>;
@@ -1368,7 +1328,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptSta
             ResetStats: ResetStats::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptStringCompare_Impl: ::windows_core::BaseImpl {
     fn StrComp(this: &Self::This, bszstr1: &::windows_core::BSTR, bszstr2: &::windows_core::BSTR) -> ::windows_core::Result<i32>;
@@ -1389,7 +1348,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptStr
         }
         IActiveScriptStringCompare_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, StrComp: StrComp::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveScriptTraceInfo_Impl: ::windows_core::BaseImpl {
     fn StartScriptTracing(this: &Self::This, psitetraceinfo: ::core::option::Option<&IActiveScriptSiteTraceInfo>, guidcontextid: &::windows_core::GUID) -> ::windows_core::Result<()>;
@@ -1412,7 +1370,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptTra
             StopScriptTracing: StopScriptTracing::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1462,7 +1419,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveScriptWin
             GetCapabilitySid: GetCapabilitySid::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IApplicationDebugger_Impl: ::windows_core::BaseImpl {
     fn QueryAlive(this: &Self::This) -> ::windows_core::Result<()>;
@@ -1511,7 +1467,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IApplicationDebu
             onDebuggerEvent: onDebuggerEvent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IApplicationDebuggerUI_Impl: ::windows_core::BaseImpl {
     fn BringDocumentToTop(this: &Self::This, pddt: ::core::option::Option<&IDebugDocumentText>) -> ::windows_core::Result<()>;
@@ -1534,7 +1489,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IApplicationDebu
             BringDocumentContextToTop: BringDocumentContextToTop::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1553,7 +1507,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBindEventHandle
         }
         IBindEventHandler_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, BindHandler: BindHandler::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1591,7 +1544,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugApplicatio
             CallableWaitForHandles: CallableWaitForHandles::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1629,7 +1581,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugApplicatio
             CallableWaitForHandles: CallableWaitForHandles::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1782,7 +1733,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugApplicatio
             RemoveGlobalExpressionContextProvider: RemoveGlobalExpressionContextProvider::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1935,7 +1885,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugApplicatio
             RemoveGlobalExpressionContextProvider: RemoveGlobalExpressionContextProvider::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugApplicationNode_Impl: ::windows_core::BaseImpl + IDebugDocumentProvider_Impl {
     fn EnumChildren(this: &Self::This) -> ::windows_core::Result<IEnumDebugApplicationNodes>;
@@ -1990,7 +1939,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugApplicatio
             Detach: Detach::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugApplicationNode100_Impl: ::windows_core::BaseImpl {
     fn SetFilterForEventSink(this: &Self::This, dwcookie: u32, filter: APPLICATION_NODE_EVENT_FILTER) -> ::windows_core::Result<()>;
@@ -2024,7 +1972,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugApplicatio
             QueryIsChildNode: QueryIsChildNode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugApplicationNodeEvents_Impl: ::windows_core::BaseImpl {
     fn onAddChild(this: &Self::This, prddpchild: ::core::option::Option<&IDebugApplicationNode>) -> ::windows_core::Result<()>;
@@ -2057,7 +2004,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugApplicatio
             onAttach: onAttach::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugApplicationThread_Impl: ::windows_core::BaseImpl + IRemoteDebugApplicationThread_Impl {
     fn SynchronousCallIntoThread32(this: &Self::This, pstcb: ::core::option::Option<&IDebugThreadCall32>, dwparam1: u32, dwparam2: u32, dwparam3: u32) -> ::windows_core::Result<()>;
@@ -2095,7 +2041,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugApplicatio
             SetStateString: SetStateString::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2150,7 +2095,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugApplicatio
             AsynchronousCallIntoThread: AsynchronousCallIntoThread::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2205,7 +2149,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugApplicatio
             AsynchronousCallIntoThread: AsynchronousCallIntoThread::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugApplicationThread64_Impl: ::windows_core::BaseImpl + IDebugApplicationThread_Impl {
     fn SynchronousCallIntoThread64(this: &Self::This, pstcb: ::core::option::Option<&IDebugThreadCall64>, dwparam1: u64, dwparam2: u64, dwparam3: u64) -> ::windows_core::Result<()>;
@@ -2223,7 +2166,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugApplicatio
             SynchronousCallIntoThread64: SynchronousCallIntoThread64::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugApplicationThreadEvents110_Impl: ::windows_core::BaseImpl {
     fn OnSuspendForBreakPoint(this: &Self::This) -> ::windows_core::Result<()>;
@@ -2256,7 +2198,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugApplicatio
             OnBeginThreadRequest: OnBeginThreadRequest::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugAsyncOperation_Impl: ::windows_core::BaseImpl {
     fn GetSyncDebugOperation(this: &Self::This) -> ::windows_core::Result<IDebugSyncOperation>;
@@ -2300,7 +2241,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugAsyncOpera
             GetResult: GetResult::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugAsyncOperationCallBack_Impl: ::windows_core::BaseImpl {
     fn onComplete(this: &Self::This) -> ::windows_core::Result<()>;
@@ -2315,7 +2255,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugAsyncOpera
         }
         IDebugAsyncOperationCallBack_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, onComplete: onComplete::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugCodeContext_Impl: ::windows_core::BaseImpl {
     fn GetDocumentContext(this: &Self::This) -> ::windows_core::Result<IDebugDocumentContext>;
@@ -2344,7 +2283,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugCodeContex
             SetBreakPoint: SetBreakPoint::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugCookie_Impl: ::windows_core::BaseImpl {
     fn SetDebugCookie(this: &Self::This, dwdebugappcookie: u32) -> ::windows_core::Result<()>;
@@ -2359,7 +2297,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugCookie_Imp
         }
         IDebugCookie_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetDebugCookie: SetDebugCookie::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugDocument_Impl: ::windows_core::BaseImpl + IDebugDocumentInfo_Impl {}
 impl ::windows_core::Iids for IDebugDocument {
@@ -2367,7 +2304,6 @@ impl ::windows_core::Iids for IDebugDocument {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugDocument_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDebugDocument {
     const VTABLE: Self::Vtable = { IDebugDocument_Vtbl { base__: <IDebugDocumentInfo as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugDocumentContext_Impl: ::windows_core::BaseImpl {
     fn GetDocument(this: &Self::This) -> ::windows_core::Result<IDebugDocument>;
@@ -2402,7 +2338,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugDocumentCo
             EnumCodeContexts: EnumCodeContexts::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2527,7 +2462,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugDocumentHe
             BringDocumentContextToTop: BringDocumentContextToTop::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2652,7 +2586,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugDocumentHe
             BringDocumentContextToTop: BringDocumentContextToTop::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2711,7 +2644,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugDocumentHo
             NotifyChanged: NotifyChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugDocumentInfo_Impl: ::windows_core::BaseImpl {
     fn GetName(this: &Self::This, dnt: DOCUMENTNAMETYPE) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -2746,7 +2678,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugDocumentIn
             GetDocumentClassId: GetDocumentClassId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugDocumentProvider_Impl: ::windows_core::BaseImpl + IDebugDocumentInfo_Impl {
     fn GetDocument(this: &Self::This) -> ::windows_core::Result<IDebugDocument>;
@@ -2767,7 +2698,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugDocumentPr
         }
         IDebugDocumentProvider_Vtbl { base__: <IDebugDocumentInfo as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDocument: GetDocument::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugDocumentText_Impl: ::windows_core::BaseImpl + IDebugDocument_Impl {
     fn GetDocumentAttributes(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -2833,7 +2763,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugDocumentTe
             GetContextOfPosition: GetContextOfPosition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugDocumentTextAuthor_Impl: ::windows_core::BaseImpl + IDebugDocumentText_Impl {
     fn InsertText(this: &Self::This, ccharacterposition: u32, cnumtoinsert: u32, pchartext: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -2861,7 +2790,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugDocumentTe
             ReplaceText: ReplaceText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugDocumentTextEvents_Impl: ::windows_core::BaseImpl {
     fn onDestroy(this: &Self::This) -> ::windows_core::Result<()>;
@@ -2904,7 +2832,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugDocumentTe
             onUpdateDocumentAttributes: onUpdateDocumentAttributes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2942,7 +2869,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugDocumentTe
             NotifyChanged: NotifyChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugExpression_Impl: ::windows_core::BaseImpl {
     fn Start(this: &Self::This, pdecb: ::core::option::Option<&IDebugExpressionCallBack>) -> ::windows_core::Result<()>;
@@ -2980,7 +2906,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugExpression
             GetResultAsDebugProperty: GetResultAsDebugProperty::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugExpressionCallBack_Impl: ::windows_core::BaseImpl {
     fn onComplete(this: &Self::This) -> ::windows_core::Result<()>;
@@ -2995,7 +2920,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugExpression
         }
         IDebugExpressionCallBack_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, onComplete: onComplete::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugExpressionContext_Impl: ::windows_core::BaseImpl {
     fn ParseLanguageText(this: &Self::This, pstrcode: &::windows_core::PCWSTR, nradix: u32, pstrdelimiter: &::windows_core::PCWSTR, dwflags: u32) -> ::windows_core::Result<IDebugExpression>;
@@ -3024,7 +2948,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugExpression
             GetLanguageInfo: GetLanguageInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3074,7 +2997,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugFormatter_
             GetStringForVarType: GetStringForVarType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3124,7 +3046,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugHelper_Imp
             CreateSimpleConnectionPoint: CreateSimpleConnectionPoint::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugSessionProvider_Impl: ::windows_core::BaseImpl {
     fn StartDebugSession(this: &Self::This, pda: ::core::option::Option<&IRemoteDebugApplication>) -> ::windows_core::Result<()>;
@@ -3142,7 +3063,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugSessionPro
             StartDebugSession: StartDebugSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3214,7 +3134,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugStackFrame
             GetDebugProperty: GetDebugProperty::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3253,7 +3172,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugStackFrame
             GetScriptInvocationContext: GetScriptInvocationContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugStackFrameSniffer_Impl: ::windows_core::BaseImpl {
     fn EnumStackFrames(this: &Self::This) -> ::windows_core::Result<IEnumDebugStackFrames>;
@@ -3277,7 +3195,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugStackFrame
             EnumStackFrames: EnumStackFrames::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugStackFrameSnifferEx32_Impl: ::windows_core::BaseImpl + IDebugStackFrameSniffer_Impl {
     fn EnumStackFramesEx32(this: &Self::This, dwspmin: u32) -> ::windows_core::Result<IEnumDebugStackFrames>;
@@ -3301,7 +3218,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugStackFrame
             EnumStackFramesEx32: EnumStackFramesEx32::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugStackFrameSnifferEx64_Impl: ::windows_core::BaseImpl + IDebugStackFrameSniffer_Impl {
     fn EnumStackFramesEx64(this: &Self::This, dwspmin: u64) -> ::windows_core::Result<IEnumDebugStackFrames64>;
@@ -3325,7 +3241,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugStackFrame
             EnumStackFramesEx64: EnumStackFramesEx64::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugSyncOperation_Impl: ::windows_core::BaseImpl {
     fn GetTargetThread(this: &Self::This) -> ::windows_core::Result<IDebugApplicationThread>;
@@ -3365,7 +3280,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugSyncOperat
             InProgressAbort: InProgressAbort::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugThreadCall32_Impl: ::windows_core::BaseImpl {
     fn ThreadCallHandler(this: &Self::This, dwparam1: u32, dwparam2: u32, dwparam3: u32) -> ::windows_core::Result<()>;
@@ -3383,7 +3297,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugThreadCall
             ThreadCallHandler: ThreadCallHandler::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugThreadCall64_Impl: ::windows_core::BaseImpl {
     fn ThreadCallHandler(this: &Self::This, dwparam1: u64, dwparam2: u64, dwparam3: u64) -> ::windows_core::Result<()>;
@@ -3401,7 +3314,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugThreadCall
             ThreadCallHandler: ThreadCallHandler::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumDebugApplicationNodes_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, pprddp: *mut ::core::option::Option<IDebugApplicationNode>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -3440,7 +3352,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumDebugApplic
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumDebugCodeContexts_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, pscc: *mut ::core::option::Option<IDebugCodeContext>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -3479,7 +3390,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumDebugCodeCo
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumDebugExpressionContexts_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, ppdec: *mut ::core::option::Option<IDebugExpressionContext>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -3518,7 +3428,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumDebugExpres
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3561,7 +3470,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumDebugStackF
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3580,7 +3488,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumDebugStackF
         }
         IEnumDebugStackFrames64_Vtbl { base__: <IEnumDebugStackFrames as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Next64: Next64::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumJsStackFrames_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, cframecount: u32, pframes: *mut JS_NATIVE_FRAME, pcfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -3603,7 +3510,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumJsStackFram
             Reset: Reset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumRemoteDebugApplicationThreads_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, pprdat: *mut ::core::option::Option<IRemoteDebugApplicationThread>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -3642,7 +3548,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumRemoteDebug
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumRemoteDebugApplications_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, ppda: *mut ::core::option::Option<IRemoteDebugApplication>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -3681,7 +3586,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumRemoteDebug
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IJsDebug_Impl: ::windows_core::BaseImpl {
     fn OpenVirtualProcess(this: &Self::This, processid: u32, runtimejsbaseaddress: u64, pdatatarget: ::core::option::Option<&IJsDebugDataTarget>) -> ::windows_core::Result<IJsDebugProcess>;
@@ -3705,7 +3609,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IJsDebug_Impl, c
             OpenVirtualProcess: OpenVirtualProcess::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3753,7 +3656,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IJsDebugBreakPoi
             GetDocumentPosition: GetDocumentPosition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IJsDebugDataTarget_Impl: ::windows_core::BaseImpl {
     fn ReadMemory(this: &Self::This, address: u64, flags: JsDebugReadMemoryFlags, pbuffer: *mut u8, size: u32, pbytesread: *mut u32) -> ::windows_core::Result<()>;
@@ -3841,7 +3743,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IJsDebugDataTarg
             GetThreadContext: GetThreadContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IJsDebugFrame_Impl: ::windows_core::BaseImpl {
     fn GetStackRange(this: &Self::This, pstart: *mut u64, pend: *mut u64) -> ::windows_core::Result<()>;
@@ -3907,7 +3808,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IJsDebugFrame_Im
             Evaluate: Evaluate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3962,7 +3862,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IJsDebugProcess_
             GetExternalStepAddress: GetExternalStepAddress::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IJsDebugProperty_Impl: ::windows_core::BaseImpl {
     fn GetPropertyInfo(this: &Self::This, nradix: u32, ppropertyinfo: *mut JsDebugPropertyInfo) -> ::windows_core::Result<()>;
@@ -3991,7 +3890,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IJsDebugProperty
             GetMembers: GetMembers::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IJsDebugStackWalker_Impl: ::windows_core::BaseImpl {
     fn GetNext(this: &Self::This) -> ::windows_core::Result<IJsDebugFrame>;
@@ -4012,7 +3910,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IJsDebugStackWal
         }
         IJsDebugStackWalker_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetNext: GetNext::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IJsEnumDebugProperty_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, count: u32, ppdebugproperty: *mut ::core::option::Option<IJsDebugProperty>, pactualcount: *mut u32) -> ::windows_core::Result<()>;
@@ -4041,7 +3938,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IJsEnumDebugProp
             GetCount: GetCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMachineDebugManager_Impl: ::windows_core::BaseImpl {
     fn AddApplication(this: &Self::This, pda: ::core::option::Option<&IRemoteDebugApplication>) -> ::windows_core::Result<u32>;
@@ -4081,7 +3977,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMachineDebugMan
             EnumApplications: EnumApplications::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMachineDebugManagerCookie_Impl: ::windows_core::BaseImpl {
     fn AddApplication(this: &Self::This, pda: ::core::option::Option<&IRemoteDebugApplication>, dwdebugappcookie: u32) -> ::windows_core::Result<u32>;
@@ -4121,7 +4016,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMachineDebugMan
             EnumApplications: EnumApplications::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMachineDebugManagerEvents_Impl: ::windows_core::BaseImpl {
     fn onAddApplication(this: &Self::This, pda: ::core::option::Option<&IRemoteDebugApplication>, dwappcookie: u32) -> ::windows_core::Result<()>;
@@ -4144,7 +4038,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMachineDebugMan
             onRemoveApplication: onRemoveApplication::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IProcessDebugManager32_Impl: ::windows_core::BaseImpl {
     fn CreateApplication(this: &Self::This) -> ::windows_core::Result<IDebugApplication32>;
@@ -4206,7 +4099,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProcessDebugMan
             CreateDebugDocumentHelper: CreateDebugDocumentHelper::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IProcessDebugManager64_Impl: ::windows_core::BaseImpl {
     fn CreateApplication(this: &Self::This) -> ::windows_core::Result<IDebugApplication64>;
@@ -4268,7 +4160,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProcessDebugMan
             CreateDebugDocumentHelper: CreateDebugDocumentHelper::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IProvideExpressionContexts_Impl: ::windows_core::BaseImpl {
     fn EnumExpressionContexts(this: &Self::This) -> ::windows_core::Result<IEnumDebugExpressionContexts>;
@@ -4292,7 +4183,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProvideExpressi
             EnumExpressionContexts: EnumExpressionContexts::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRemoteDebugApplication_Impl: ::windows_core::BaseImpl {
     fn ResumeFromBreakPoint(this: &Self::This, prptfocus: ::core::option::Option<&IRemoteDebugApplicationThread>, bra: BREAKRESUMEACTION, era: ERRORRESUMEACTION) -> ::windows_core::Result<()>;
@@ -4396,7 +4286,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRemoteDebugAppl
             EnumGlobalExpressionContexts: EnumGlobalExpressionContexts::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRemoteDebugApplication110_Impl: ::windows_core::BaseImpl {
     fn SetDebuggerOptions(this: &Self::This, mask: SCRIPT_DEBUGGER_OPTIONS, value: SCRIPT_DEBUGGER_OPTIONS) -> ::windows_core::Result<()>;
@@ -4436,7 +4325,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRemoteDebugAppl
             GetMainThread: GetMainThread::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRemoteDebugApplicationEvents_Impl: ::windows_core::BaseImpl {
     fn OnConnectDebugger(this: &Self::This, pad: ::core::option::Option<&IApplicationDebugger>) -> ::windows_core::Result<()>;
@@ -4499,7 +4387,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRemoteDebugAppl
             OnBreakFlagChange: OnBreakFlagChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRemoteDebugApplicationThread_Impl: ::windows_core::BaseImpl {
     fn GetSystemThreadId(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -4599,7 +4486,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRemoteDebugAppl
             GetSuspendCount: GetSuspendCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRemoteDebugCriticalErrorEvent110_Impl: ::windows_core::BaseImpl {
     fn GetErrorInfo(this: &Self::This, pbstrsource: *mut ::windows_core::BSTR, pmessageid: *mut i32, pbstrmessage: *mut ::windows_core::BSTR, pplocation: *mut ::core::option::Option<IDebugDocumentContext>) -> ::windows_core::Result<()>;
@@ -4614,7 +4500,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRemoteDebugCrit
         }
         IRemoteDebugCriticalErrorEvent110_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetErrorInfo: GetErrorInfo::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRemoteDebugInfoEvent110_Impl: ::windows_core::BaseImpl {
     fn GetEventInfo(this: &Self::This, pmessagetype: *mut DEBUG_EVENT_INFO_TYPE, pbstrmessage: *mut ::windows_core::BSTR, pbstrurl: *mut ::windows_core::BSTR, pplocation: *mut ::core::option::Option<IDebugDocumentContext>) -> ::windows_core::Result<()>;
@@ -4629,7 +4514,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRemoteDebugInfo
         }
         IRemoteDebugInfoEvent110_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetEventInfo: GetEventInfo::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -4725,7 +4609,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IScriptEntry_Imp
             GetRange: GetRange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IScriptInvocationContext_Impl: ::windows_core::BaseImpl {
     fn GetContextType(this: &Self::This) -> ::windows_core::Result<SCRIPT_INVOCATION_CONTEXT_TYPE>;
@@ -4771,7 +4654,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IScriptInvocatio
             GetContextObject: GetContextObject::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -4886,7 +4768,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IScriptNode_Impl
             CreateChildHandler: CreateChildHandler::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -4951,7 +4832,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IScriptScriptlet
             SetSimpleEventName: SetSimpleEventName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -5000,7 +4880,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISimpleConnectio
             Unadvise: Unadvise::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5019,7 +4898,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITridentEventSin
         }
         ITridentEventSink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, FireEvent: FireEvent::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5038,7 +4916,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebAppDiagnosti
         }
         IWebAppDiagnosticsObjectInitialization_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Initialize: Initialize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5071,5 +4948,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebAppDiagnosti
             CreateObjectWithSiteAtWebApp: CreateObjectWithSiteAtWebApp::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

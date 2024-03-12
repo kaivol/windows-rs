@@ -47,5 +47,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPointerPointTra
             TransformBounds: TransformBounds::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

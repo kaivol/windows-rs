@@ -69,7 +69,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXAPO_Impl, cons
             CalcOutputFrames: CalcOutputFrames::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXAPOHrtfParameters_Impl: ::windows_core::BaseImpl {
     fn SetSourcePosition(this: &Self::This, position: *const HrtfPosition) -> ::windows_core::Result<()>;
@@ -102,7 +101,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXAPOHrtfParamet
             SetEnvironment: SetEnvironment::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXAPOParameters_Impl: ::windows_core::BaseImpl {
     fn SetParameters(this: &Self::This, pparameters: *const ::core::ffi::c_void, parameterbytesize: u32);
@@ -125,7 +123,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXAPOParameters_
             GetParameters: GetParameters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -192,7 +189,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXAudio2_Impl, c
             SetDebugConfiguration: SetDebugConfiguration::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXAudio2EngineCallback_Impl: Sized {
     fn OnProcessingPassStart(&self);
@@ -252,7 +248,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXAudio2Extensio
             GetProcessor: GetProcessor::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]

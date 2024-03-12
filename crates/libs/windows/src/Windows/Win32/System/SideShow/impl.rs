@@ -15,7 +15,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISideShowBulkCap
         }
         ISideShowBulkCapabilities_Vtbl { base__: <ISideShowCapabilities as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetCapabilities: GetCapabilities::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -34,7 +33,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISideShowCapabil
         }
         ISideShowCapabilities_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetCapability: GetCapability::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISideShowCapabilitiesCollection_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -69,7 +67,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISideShowCapabil
             GetAt: GetAt::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -113,7 +110,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISideShowContent
             DifferentiateContent: DifferentiateContent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISideShowContentManager_Impl: ::windows_core::BaseImpl {
     fn Add(this: &Self::This, in_picontent: ::core::option::Option<&ISideShowContent>) -> ::windows_core::Result<()>;
@@ -157,7 +153,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISideShowContent
             GetDeviceCapabilities: GetDeviceCapabilities::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISideShowEvents_Impl: ::windows_core::BaseImpl {
     fn ContentMissing(this: &Self::This, in_contentid: u32) -> ::windows_core::Result<ISideShowContent>;
@@ -196,7 +191,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISideShowEvents_
             DeviceRemoved: DeviceRemoved::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -238,7 +232,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISideShowKeyColl
             RemoveAt: RemoveAt::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
@@ -335,7 +328,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISideShowNotific
             SetExpirationTime: SetExpirationTime::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISideShowNotificationManager_Impl: ::windows_core::BaseImpl {
     fn Show(this: &Self::This, in_pinotification: ::core::option::Option<&ISideShowNotification>) -> ::windows_core::Result<()>;
@@ -363,7 +355,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISideShowNotific
             RevokeAll: RevokeAll::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -405,7 +396,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISideShowPropVar
             RemoveAt: RemoveAt::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISideShowSession_Impl: ::windows_core::BaseImpl {
     fn RegisterContent(this: &Self::This, in_applicationid: *const ::windows_core::GUID, in_endpointid: *const ::windows_core::GUID) -> ::windows_core::Result<ISideShowContentManager>;
@@ -440,5 +430,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISideShowSession
             RegisterNotifications: RegisterNotifications::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

@@ -48,7 +48,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INDClosedCaption
             ClosedCaptionData: ClosedCaptionData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"deprecated\"`"]
 #[cfg(feature = "deprecated")]
@@ -91,7 +90,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INDCustomData_Im
             CustomData: CustomData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"deprecated\"`"]
 #[cfg(all(feature = "Foundation", feature = "deprecated"))]
@@ -178,7 +176,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INDDownloadEngin
             Notifier: Notifier::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"deprecated\"`"]
 #[cfg(feature = "deprecated")]
@@ -225,7 +222,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INDDownloadEngin
             OnNetworkError: OnNetworkError::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"deprecated\"`"]
 #[cfg(feature = "deprecated")]
@@ -254,7 +250,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INDLicenseFetchC
             ResponseCustomData: ResponseCustomData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"deprecated\"`"]
 #[cfg(feature = "deprecated")]
@@ -312,7 +307,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INDLicenseFetchD
             SetLicenseFetchChallengeCustomData: SetLicenseFetchChallengeCustomData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"deprecated\"`"]
 #[cfg(feature = "deprecated")]
@@ -341,7 +335,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INDLicenseFetchR
             ResponseCustomData: ResponseCustomData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"deprecated\"`"]
 #[cfg(all(feature = "Foundation", feature = "deprecated"))]
@@ -406,7 +399,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INDMessenger_Imp
             SendLicenseFetchRequestAsync: SendLicenseFetchRequestAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"deprecated\"`"]
 #[cfg(feature = "deprecated")]
@@ -434,7 +426,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INDProximityDete
             ProximityDetectionRetryCount: ProximityDetectionRetryCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"deprecated\"`"]
 #[cfg(feature = "deprecated")]
@@ -491,7 +482,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INDRegistrationC
             SetTransmitterCertificateAccepted: SetTransmitterCertificateAccepted::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"deprecated\"`"]
 #[cfg(feature = "deprecated")]
@@ -518,7 +508,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INDSendResult_Im
         }
         INDSendResult_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Response: Response::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Media_Core\"`, `\"deprecated\"`"]
 #[cfg(all(feature = "Media_Core", feature = "deprecated"))]
@@ -547,7 +536,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INDStartResult_I
             MediaStreamSource: MediaStreamSource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Storage\"`, `\"deprecated\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage", feature = "deprecated"))]
@@ -573,7 +561,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INDStorageFileHe
         }
         INDStorageFileHelper_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetFileURLs: GetFileURLs::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Media_Core\"`, `\"deprecated\"`"]
 #[cfg(all(feature = "Media_Core", feature = "deprecated"))]
@@ -628,7 +615,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INDStreamParser_
             Notifier: Notifier::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Media_Core\"`, `\"deprecated\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Media_Core", feature = "deprecated"))]
@@ -665,7 +651,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INDStreamParserN
             OnBeginSetupDecryptor: OnBeginSetupDecryptor::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"deprecated\"`"]
 #[cfg(all(feature = "Foundation", feature = "deprecated"))]
@@ -812,7 +797,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INDTransmitterPr
             ModelNumber: ModelNumber::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -886,7 +870,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPlayReadyDomain
             DomainJoinUrl: DomainJoinUrl::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -981,7 +964,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPlayReadyLicens
             GetKIDAtChainDepth: GetKIDAtChainDepth::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -1032,7 +1014,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPlayReadyLicens
             SetDomainServiceId: SetDomainServiceId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPlayReadyLicenseSession_Impl: ::windows_core::BaseImpl {
     fn CreateLAServiceRequest(this: &Self::This) -> ::windows_core::Result<IPlayReadyLicenseAcquisitionServiceRequest>;
@@ -1062,7 +1043,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPlayReadyLicens
             ConfigureMediaProtectionManager: ConfigureMediaProtectionManager::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -1092,7 +1072,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPlayReadyLicens
             CreateLicenseIterable: CreateLicenseIterable::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -1167,7 +1146,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPlayReadySecure
             PublisherCertificate: PublisherCertificate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -1278,5 +1256,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPlayReadyServic
             ProcessManualEnablingResponse: ProcessManualEnablingResponse::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

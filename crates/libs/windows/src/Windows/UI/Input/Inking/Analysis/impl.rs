@@ -94,7 +94,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInkAnalysisNode
             GetStrokeIds: GetStrokeIds::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IInkAnalyzerFactory_Impl: ::windows_core::BaseImpl {
     fn CreateAnalyzer(this: &Self::This) -> ::windows_core::Result<InkAnalyzer>;
@@ -119,5 +118,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInkAnalyzerFact
             CreateAnalyzer: CreateAnalyzer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

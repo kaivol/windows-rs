@@ -51,7 +51,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumSpObjectTok
             GetCount: GetCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_Audio\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_Audio", feature = "Win32_System_Com"))]
@@ -123,7 +122,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpAudio_Impl, c
             SetBufferNotifySize: SetBufferNotifySize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpContainerLexicon_Impl: ::windows_core::BaseImpl + ISpLexicon_Impl {
     fn AddLexicon(this: &Self::This, paddlexicon: ::core::option::Option<&ISpLexicon>, dwflags: u32) -> ::windows_core::Result<()>;
@@ -138,7 +136,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpContainerLexi
         }
         ISpContainerLexicon_Vtbl { base__: <ISpLexicon as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, AddLexicon: AddLexicon::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpDataKey_Impl: ::windows_core::BaseImpl {
     fn SetData(this: &Self::This, pszvaluename: &::windows_core::PCWSTR, cbdata: u32, pdata: *const u8) -> ::windows_core::Result<()>;
@@ -241,7 +238,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpDataKey_Impl,
             EnumValues: EnumValues::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpDisplayAlternates_Impl: ::windows_core::BaseImpl {
     fn GetDisplayAlternates(this: &Self::This, pphrase: *const SPDISPLAYPHRASE, crequestcount: u32, ppcomemphrases: *mut *mut SPDISPLAYPHRASE, pcphrasesreturned: *mut u32) -> ::windows_core::Result<()>;
@@ -264,7 +260,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpDisplayAltern
             SetFullStopTrailSpace: SetFullStopTrailSpace::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpEnginePronunciation_Impl: ::windows_core::BaseImpl {
     fn Normalize(this: &Self::This, pszword: &::windows_core::PCWSTR, pszleftcontext: &::windows_core::PCWSTR, pszrightcontext: &::windows_core::PCWSTR, langid: u16, pnormalizationlist: *mut SPNORMALIZATIONLIST) -> ::windows_core::Result<()>;
@@ -287,7 +282,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpEnginePronunc
             GetPronunciations: GetPronunciations::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -314,7 +308,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpEventSink_Imp
             GetEventInterest: GetEventInterest::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -346,7 +339,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpEventSource_I
             GetInfo: GetInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -365,7 +357,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpEventSource2_
         }
         ISpEventSource2_Vtbl { base__: <ISpEventSource as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetEventsEx: GetEventsEx::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -422,7 +413,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpGrammarBuilde
             Commit: Commit::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpGrammarBuilder2_Impl: ::windows_core::BaseImpl {
     fn AddTextSubset(this: &Self::This, hfromstate: SPSTATEHANDLE, htostate: SPSTATEHANDLE, psz: &::windows_core::PCWSTR, ematchmode: SPMATCHINGMODE) -> ::windows_core::Result<()>;
@@ -445,7 +435,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpGrammarBuilde
             SetPhoneticAlphabet: SetPhoneticAlphabet::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpLexicon_Impl: ::windows_core::BaseImpl {
     fn GetPronunciations(this: &Self::This, pszword: &::windows_core::PCWSTR, langid: u16, dwflags: u32, pwordpronunciationlist: *mut SPWORDPRONUNCIATIONLIST) -> ::windows_core::Result<()>;
@@ -488,7 +477,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpLexicon_Impl,
             GetWords: GetWords::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_Audio\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_Audio", feature = "Win32_System_Com"))]
@@ -530,7 +518,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpMMSysAudio_Im
             SetLineId: SetLineId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -576,7 +563,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpNotifySink_Im
         }
         ISpNotifySink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Notify: Notify::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -628,7 +614,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpNotifySource_
             GetNotifyEventHandle: GetNotifyEventHandle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -675,7 +660,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpNotifyTransla
             GetEventHandle: GetEventHandle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -760,7 +744,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpObjectToken_I
             MatchesAttributes: MatchesAttributes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -831,7 +814,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpObjectTokenCa
             GetDefaultTokenId: GetDefaultTokenId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -850,7 +832,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpObjectTokenIn
         }
         ISpObjectTokenInit_Vtbl { base__: <ISpObjectToken as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, InitFromDataKey: InitFromDataKey::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpObjectWithToken_Impl: ::windows_core::BaseImpl {
     fn SetObjectToken(this: &Self::This, ptoken: ::core::option::Option<&ISpObjectToken>) -> ::windows_core::Result<()>;
@@ -879,7 +860,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpObjectWithTok
             GetObjectToken: GetObjectToken::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpPhoneConverter_Impl: ::windows_core::BaseImpl + ISpObjectWithToken_Impl {
     fn PhoneToId(this: &Self::This, pszphone: &::windows_core::PCWSTR) -> ::windows_core::Result<u16>;
@@ -908,7 +888,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpPhoneConverte
             IdToPhone: IdToPhone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -962,7 +941,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpPhoneticAlpha
             GetMaxConvertLength: GetMaxConvertLength::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -995,7 +973,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpPhoneticAlpha
             SetAlphabetToUPS: SetAlphabetToUPS::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1044,7 +1021,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpPhrase_Impl, 
             Discard: Discard::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1082,7 +1058,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpPhrase2_Impl,
             GetAudio: GetAudio::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1109,7 +1084,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpPhraseAlt_Imp
             Commit: Commit::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpProperties_Impl: ::windows_core::BaseImpl {
     fn SetPropertyNum(this: &Self::This, pname: &::windows_core::PCWSTR, lvalue: i32) -> ::windows_core::Result<()>;
@@ -1148,7 +1122,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpProperties_Im
             GetPropertyString: GetPropertyString::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_Audio\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_Audio"))]
@@ -1279,7 +1252,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpRecoContext_I
             GetContextState: GetContextState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpRecoContext2_Impl: ::windows_core::BaseImpl {
     fn SetGrammarOptions(this: &Self::This, egrammaroptions: u32) -> ::windows_core::Result<()>;
@@ -1307,7 +1279,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpRecoContext2_
             SetAdaptationData2: SetAdaptationData2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1420,7 +1391,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpRecoGrammar_I
             GetGrammarState: GetGrammarState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com_Urlmon\"`"]
 #[cfg(feature = "Win32_System_Com_Urlmon")]
@@ -1477,7 +1447,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpRecoGrammar2_
             SetSMLSecurityManager: SetSMLSecurityManager::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_Audio\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_Audio", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1541,7 +1510,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpRecoResult_Im
             GetRecoContext: GetRecoContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_Audio\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_Audio", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1579,7 +1547,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpRecoResult2_I
             SetTextFeedback: SetTextFeedback::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_Audio\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_Audio", feature = "Win32_System_Com"))]
@@ -1706,7 +1673,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpRecognizer_Im
             EmulateRecognition: EmulateRecognition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1738,7 +1704,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpRecognizer2_I
             ResetAcousticModelAdaptation: ResetAcousticModelAdaptation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Registry\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Registry"))]
@@ -1757,7 +1722,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpRegDataKey_Im
         }
         ISpRegDataKey_Vtbl { base__: <ISpDataKey as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetKey: SetKey::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -1784,7 +1748,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpResourceManag
             GetObject: GetObject::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpSerializeState_Impl: ::windows_core::BaseImpl {
     fn GetSerializedState(this: &Self::This, ppbdata: *mut *mut u8, pulsize: *mut u32, dwreserved: u32) -> ::windows_core::Result<()>;
@@ -1807,7 +1770,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpSerializeStat
             SetSerializedState: SetSerializedState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpShortcut_Impl: ::windows_core::BaseImpl {
     fn AddShortcut(this: &Self::This, pszdisplay: &::windows_core::PCWSTR, langid: u16, pszspoken: &::windows_core::PCWSTR, shtype: SPSHORTCUTTYPE) -> ::windows_core::Result<()>;
@@ -1866,7 +1828,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpShortcut_Impl
             GetGenerationChange: GetGenerationChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_Audio\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_Audio", feature = "Win32_System_Com"))]
@@ -1909,7 +1870,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpStream_Impl, 
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_Audio\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_Audio", feature = "Win32_System_Com"))]
@@ -1934,7 +1894,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpStreamFormat_
         }
         ISpStreamFormat_Vtbl { base__: <super::super::System::Com::IStream as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetFormat: GetFormat::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_Audio\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_Audio", feature = "Win32_System_Com"))]
@@ -1999,7 +1958,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpStreamFormatC
             ScaleBaseToConvertedOffset: ScaleBaseToConvertedOffset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISpTranscript_Impl: ::windows_core::BaseImpl {
     fn GetTranscript(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -2028,7 +1986,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpTranscript_Im
             AppendTranscript: AppendTranscript::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -2188,7 +2145,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpVoice_Impl, c
             DisplayUI: DisplayUI::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_Audio\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_Audio", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2215,7 +2171,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpXMLRecoResult
             GetXMLErrorInfo: GetXMLErrorInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2313,7 +2268,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechAudio_Imp
             SetState: SetState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2378,7 +2332,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechAudioBuff
             SetEventBias: SetEventBias::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2443,7 +2396,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechAudioForm
             SetWaveFormatEx: SetWaveFormatEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2515,7 +2467,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechAudioStat
             CurrentDevicePosition: CurrentDevicePosition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2575,7 +2526,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechBaseStrea
             Seek: Seek::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2608,7 +2558,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechCustomStr
             putref_BaseStream: putref_BaseStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2727,7 +2676,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechDataKey_I
             EnumValues: EnumValues::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2754,7 +2702,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechFileStrea
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2836,7 +2783,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechGrammarRu
             AddState: AddState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2890,7 +2836,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechGrammarRu
             AddSpecialTransition: AddSpecialTransition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2995,7 +2940,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechGrammarRu
             NextState: NextState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3045,7 +2989,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechGrammarRu
             _NewEnum: _NewEnum::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3138,7 +3081,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechGrammarRu
             CommitAndSave: CommitAndSave::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3207,7 +3149,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechLexicon_I
             GetGenerationChange: GetGenerationChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3279,7 +3220,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechLexiconPr
             Symbolic: Symbolic::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3329,7 +3269,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechLexiconPr
             _NewEnum: _NewEnum::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3390,7 +3329,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechLexiconWo
             Pronunciations: Pronunciations::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3440,7 +3378,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechLexiconWo
             _NewEnum: _NewEnum::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3500,7 +3437,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechMMSysAudi
             MMHandle: MMHandle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3533,7 +3469,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechMemoryStr
             GetData: GetData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3669,7 +3604,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechObjectTok
             MatchesAttributes: MatchesAttributes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3740,7 +3674,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechObjectTok
             EnumerateTokens: EnumerateTokens::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3790,7 +3723,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechObjectTok
             _NewEnum: _NewEnum::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3845,7 +3777,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechPhoneConv
             IdToPhone: IdToPhone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3911,7 +3842,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechPhraseAlt
             Commit: Commit::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3961,7 +3891,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechPhraseAlt
             _NewEnum: _NewEnum::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -4121,7 +4050,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechPhraseEle
             EngineConfidence: EngineConfidence::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -4171,7 +4099,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechPhraseEle
             _NewEnum: _NewEnum::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -4364,7 +4291,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechPhraseInf
             GetDisplayAttributes: GetDisplayAttributes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -4392,7 +4318,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechPhraseInf
             RestorePhraseFromMemory: RestorePhraseFromMemory::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -4442,7 +4367,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechPhrasePro
             _NewEnum: _NewEnum::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -4558,7 +4482,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechPhrasePro
             Children: Children::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -4619,7 +4542,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechPhraseRep
             NumberOfElements: NumberOfElements::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -4669,7 +4591,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechPhraseRep
             _NewEnum: _NewEnum::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -4774,7 +4695,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechPhraseRul
             EngineConfidence: EngineConfidence::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -4824,7 +4744,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechPhraseRul
             _NewEnum: _NewEnum::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5044,7 +4963,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechRecoConte
             SetAdaptationData: SetAdaptationData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5186,7 +5104,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechRecoGramm
             IsPronounceable: IsPronounceable::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5301,7 +5218,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechRecoResul
             DiscardResultInfo: DiscardResultInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5320,7 +5236,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechRecoResul
         }
         ISpeechRecoResult2_Vtbl { base__: <ISpeechRecoResult as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetTextFeedback: SetTextFeedback::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5456,7 +5371,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechRecoResul
             SetTextFeedback: SetTextFeedback::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5517,7 +5431,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechRecoResul
             OffsetFromStart: OffsetFromStart::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5760,7 +5673,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechRecognize
             GetProfiles: GetProfiles::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5843,7 +5755,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechRecognize
             SupportedLanguages: SupportedLanguages::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5875,7 +5786,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechResourceL
             ReleaseLocalCopy: ReleaseLocalCopy::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -5956,7 +5866,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechTextSelec
             SelectionLength: SelectionLength::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -6247,7 +6156,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechVoice_Imp
             DisplayUI: DisplayUI::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -6396,7 +6304,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechVoiceStat
             VisemeId: VisemeId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -6525,7 +6432,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechWaveForma
             SetExtraData: SetExtraData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -6558,7 +6464,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISpeechXMLRecoRe
             GetXMLErrorInfo: GetXMLErrorInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -6570,7 +6475,6 @@ impl ::windows_core::Iids for _ISpeechRecoContextEvents {
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: _ISpeechRecoContextEvents_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for _ISpeechRecoContextEvents {
     const VTABLE: Self::Vtable = { _ISpeechRecoContextEvents_Vtbl { base__: <super::super::System::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -6582,5 +6486,4 @@ impl ::windows_core::Iids for _ISpeechVoiceEvents {
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: _ISpeechVoiceEvents_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for _ISpeechVoiceEvents {
     const VTABLE: Self::Vtable = { _ISpeechVoiceEvents_Vtbl { base__: <super::super::System::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

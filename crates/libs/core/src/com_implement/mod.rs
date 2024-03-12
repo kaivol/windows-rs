@@ -15,7 +15,6 @@ use std::ptr::NonNull;
 #[doc(hidden)]
 pub trait Vtable<Identity, const OFFSET: usize>: ComInterface {
     const VTABLE: Self::Vtable;
-    const VTABLE_REF: &'static Self::Vtable;
 }
 
 #[doc(hidden)]

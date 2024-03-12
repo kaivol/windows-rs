@@ -35,7 +35,7 @@ mod private {
 
                 const VTABLES: Self::Vtables = {
                     let _ = Self::VTABLES_VALID;
-                    ($($name::VTABLE_REF,)+)
+                    ($(&$name::VTABLE,)+)
                 };
             }
         };

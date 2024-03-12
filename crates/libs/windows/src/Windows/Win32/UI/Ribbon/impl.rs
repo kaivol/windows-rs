@@ -30,7 +30,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIApplication_I
             OnDestroyUICommand: OnDestroyUICommand::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUICollection_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -90,7 +89,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUICollection_Im
             Clear: Clear::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUICollectionChangedEvent_Impl: ::windows_core::BaseImpl {
     fn OnChanged(this: &Self::This, action: UI_COLLECTIONCHANGE, oldindex: u32, olditem: ::core::option::Option<&::windows_core::IUnknown>, newindex: u32, newitem: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -105,7 +103,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUICollectionCha
         }
         IUICollectionChangedEvent_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnChanged: OnChanged::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -138,7 +135,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUICommandHandle
             UpdateProperty: UpdateProperty::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIContextualUI_Impl: ::windows_core::BaseImpl {
     fn ShowAtLocation(this: &Self::This, x: i32, y: i32) -> ::windows_core::Result<()>;
@@ -153,7 +149,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIContextualUI_
         }
         IUIContextualUI_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ShowAtLocation: ShowAtLocation::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIEventLogger_Impl: ::windows_core::BaseImpl {
     fn OnUIEvent(this: &Self::This, peventparams: *const UI_EVENTPARAMS);
@@ -168,7 +163,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIEventLogger_I
         }
         IUIEventLogger_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnUIEvent: OnUIEvent::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUIEventingManager_Impl: ::windows_core::BaseImpl {
     fn SetEventLogger(this: &Self::This, eventlogger: ::core::option::Option<&IUIEventLogger>) -> ::windows_core::Result<()>;
@@ -183,7 +177,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIEventingManag
         }
         IUIEventingManager_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetEventLogger: SetEventLogger::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -251,7 +244,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIFramework_Imp
             SetModes: SetModes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
 #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -276,7 +268,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIImage_Impl, c
         }
         IUIImage_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetBitmap: GetBitmap::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
 #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -301,7 +292,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIImageFromBitm
         }
         IUIImageFromBitmap_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateImage: CreateImage::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -339,7 +329,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUIRibbon_Impl, 
             SaveSettingsToStream: SaveSettingsToStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -364,5 +353,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUISimplePropert
         }
         IUISimplePropertySet_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetValue: GetValue::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

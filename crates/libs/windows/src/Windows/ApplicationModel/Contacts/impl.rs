@@ -55,7 +55,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactField_Im
             Value: Value::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IContactFieldFactory_Impl: ::windows_core::BaseImpl {
     fn CreateField_Default(this: &Self::This, value: &::windows_core::HSTRING, r#type: ContactFieldType) -> ::windows_core::Result<ContactField>;
@@ -104,7 +103,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactFieldFac
             CreateField_Custom: CreateField_Custom::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -157,7 +155,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactInstantM
             CreateInstantMessage_All: CreateInstantMessage_All::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IContactLocationFieldFactory_Impl: ::windows_core::BaseImpl {
     fn CreateLocation_Default(this: &Self::This, unstructuredaddress: &::windows_core::HSTRING) -> ::windows_core::Result<ContactLocationField>;
@@ -206,5 +203,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IContactLocation
             CreateLocation_All: CreateLocation_All::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

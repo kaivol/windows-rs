@@ -39,7 +39,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGameExplorer_Im
             VerifyAccess: VerifyAccess::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -77,7 +76,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGameExplorer2_I
             CheckAccess: CheckAccess::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -196,7 +194,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGameStatistics_
             GetLastPlayedCategory: GetLastPlayedCategory::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGameStatisticsMgr_Impl: ::windows_core::BaseImpl {
     fn GetGameStatistics(this: &Self::This, gdfbinarypath: &::windows_core::PCWSTR, opentype: GAMESTATS_OPEN_TYPE, popenresult: *mut GAMESTATS_OPEN_RESULT, ppistats: *mut ::core::option::Option<IGameStatistics>) -> ::windows_core::Result<()>;
@@ -219,7 +216,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGameStatisticsM
             RemoveGameStatistics: RemoveGameStatistics::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -284,7 +280,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXblIdpAuthManag
             GetTokenAndSignatureWithTokenResult: GetTokenAndSignatureWithTokenResult::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -312,7 +307,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXblIdpAuthManag
             GetUserlessTokenAndSignatureWithTokenResult: GetUserlessTokenAndSignatureWithTokenResult::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXblIdpAuthTokenResult_Impl: ::windows_core::BaseImpl {
     fn GetStatus(this: &Self::This) -> ::windows_core::Result<XBL_IDP_AUTH_TOKEN_STATUS>;
@@ -545,7 +539,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXblIdpAuthToken
             GetTitleRestrictions: GetTitleRestrictions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXblIdpAuthTokenResult2_Impl: ::windows_core::BaseImpl {
     fn GetModernGamertag(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -591,5 +584,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXblIdpAuthToken
             GetUniqueModernGamertag: GetUniqueModernGamertag::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

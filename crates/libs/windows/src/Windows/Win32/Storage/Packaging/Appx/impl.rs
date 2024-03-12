@@ -21,7 +21,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxAppInstalle
         }
         IAppxAppInstallerReader_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetXmlDom: GetXmlDom::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxBlockMapBlock_Impl: ::windows_core::BaseImpl {
     fn GetHash(this: &Self::This, buffersize: *mut u32, buffer: *mut *mut u8) -> ::windows_core::Result<()>;
@@ -50,7 +49,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBlockMapBlo
             GetCompressedSize: GetCompressedSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -100,7 +98,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBlockMapBlo
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -172,7 +169,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBlockMapFil
             ValidateFileHash: ValidateFileHash::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -222,7 +218,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBlockMapFil
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -283,7 +278,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBlockMapRea
             GetStream: GetStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -333,7 +327,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBundleFacto
             CreateBundleManifestReader: CreateBundleManifestReader::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -361,7 +354,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBundleFacto
             CreateBundleReader2: CreateBundleReader2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxBundleManifestOptionalBundleInfo_Impl: ::windows_core::BaseImpl {
     fn GetPackageId(this: &Self::This) -> ::windows_core::Result<IAppxManifestPackageId>;
@@ -407,7 +399,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBundleManif
             GetPackageInfoItems: GetPackageInfoItems::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -457,7 +448,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBundleManif
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxBundleManifestPackageInfo_Impl: ::windows_core::BaseImpl {
     fn GetPackageType(this: &Self::This) -> ::windows_core::Result<APPX_BUNDLE_PAYLOAD_PACKAGE_TYPE>;
@@ -536,7 +526,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBundleManif
             GetResources: GetResources::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -586,7 +575,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBundleManif
             GetIsDefaultApplicablePackage: GetIsDefaultApplicablePackage::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxBundleManifestPackageInfo3_Impl: ::windows_core::BaseImpl {
     fn GetTargetDeviceFamilies(this: &Self::This) -> ::windows_core::Result<IAppxManifestTargetDeviceFamiliesEnumerator>;
@@ -610,7 +598,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBundleManif
             GetTargetDeviceFamilies: GetTargetDeviceFamilies::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -635,7 +622,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBundleManif
         }
         IAppxBundleManifestPackageInfo4_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetIsStub: GetIsStub::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -685,7 +671,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBundleManif
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -735,7 +720,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBundleManif
             GetStream: GetStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxBundleManifestReader2_Impl: ::windows_core::BaseImpl {
     fn GetOptionalBundles(this: &Self::This) -> ::windows_core::Result<IAppxBundleManifestOptionalBundleInfoEnumerator>;
@@ -759,7 +743,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBundleManif
             GetOptionalBundles: GetOptionalBundles::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxBundleReader_Impl: ::windows_core::BaseImpl {
     fn GetFootprintFile(this: &Self::This, filetype: APPX_BUNDLE_FOOTPRINT_FILE_TYPE) -> ::windows_core::Result<IAppxFile>;
@@ -827,7 +810,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBundleReade
             GetPayloadPackage: GetPayloadPackage::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -854,7 +836,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBundleWrite
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -876,7 +857,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBundleWrite
             AddExternalPackageReference: AddExternalPackageReference::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -903,7 +883,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBundleWrite
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -935,7 +914,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxBundleWrite
             AddExternalPackageReference: AddExternalPackageReference::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxContentGroup_Impl: ::windows_core::BaseImpl {
     fn GetName(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -970,7 +948,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxContentGrou
             GetFiles: GetFiles::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1020,7 +997,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxContentGrou
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxContentGroupMapReader_Impl: ::windows_core::BaseImpl {
     fn GetRequiredGroup(this: &Self::This) -> ::windows_core::Result<IAppxContentGroup>;
@@ -1055,7 +1031,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxContentGrou
             GetAutomaticGroups: GetAutomaticGroups::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxContentGroupMapWriter_Impl: ::windows_core::BaseImpl {
     fn AddAutomaticGroup(this: &Self::This, groupname: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -1083,7 +1058,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxContentGrou
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1133,7 +1107,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxContentGrou
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxDigestProvider_Impl: ::windows_core::BaseImpl {
     fn GetDigest(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -1154,7 +1127,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxDigestProvi
         }
         IAppxDigestProvider_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDigest: GetDigest::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1181,7 +1153,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxEncryptedBu
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1203,7 +1174,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxEncryptedBu
             AddExternalPackageReference: AddExternalPackageReference::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -1230,7 +1200,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxEncryptedBu
             AddExternalPackageReference: AddExternalPackageReference::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1257,7 +1226,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxEncryptedPa
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1279,7 +1247,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxEncryptedPa
             AddPayloadFilesEncrypted: AddPayloadFilesEncrypted::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -1360,7 +1327,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxEncryptionF
             CreateEncryptedBundleReader: CreateEncryptedBundleReader::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -1388,7 +1354,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxEncryptionF
             CreateEncryptedPackageWriter: CreateEncryptedPackageWriter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1437,7 +1402,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxEncryptionF
             CreateEncryptedBundleWriter: CreateEncryptedBundleWriter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1456,7 +1420,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxEncryptionF
         }
         IAppxEncryptionFactory4_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, EncryptPackage: EncryptPackage::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1495,7 +1458,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxEncryptionF
             CreateEncryptedBundleReader2: CreateEncryptedBundleReader2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -1567,7 +1529,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxFactory_Imp
             CreateValidatedBlockMapReader: CreateValidatedBlockMapReader::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1617,7 +1578,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxFactory2_Im
             CreateContentGroupMapWriter: CreateContentGroupMapWriter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1667,7 +1627,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxFactory3_Im
             CreateAppInstallerReader: CreateAppInstallerReader::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1739,7 +1698,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxFile_Impl, 
             GetStream: GetStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1789,7 +1747,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxFilesEnumer
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxManifestApplication_Impl: ::windows_core::BaseImpl {
     fn GetStringValue(this: &Self::This, name: &::windows_core::PCWSTR) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -1824,7 +1781,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestApp
             GetAppUserModelId: GetAppUserModelId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1874,7 +1830,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestApp
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1924,7 +1879,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestCap
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1974,7 +1928,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestDev
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxManifestDriverConstraint_Impl: ::windows_core::BaseImpl {
     fn GetName(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -2020,7 +1973,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestDri
             GetMinDate: GetMinDate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2070,7 +2022,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestDri
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2120,7 +2071,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestDri
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxManifestDriverDependency_Impl: ::windows_core::BaseImpl {
     fn GetDriverConstraints(this: &Self::This) -> ::windows_core::Result<IAppxManifestDriverConstraintsEnumerator>;
@@ -2144,7 +2094,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestDri
             GetDriverConstraints: GetDriverConstraints::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2194,7 +2143,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestHos
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxManifestHostRuntimeDependency_Impl: ::windows_core::BaseImpl {
     fn GetName(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -2240,7 +2188,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestHos
             GetMinVersion: GetMinVersion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxManifestHostRuntimeDependency2_Impl: ::windows_core::BaseImpl {
     fn GetPackageFamilyName(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -2264,7 +2211,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestHos
             GetPackageFamilyName: GetPackageFamilyName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2314,7 +2260,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestMai
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxManifestMainPackageDependency_Impl: ::windows_core::BaseImpl {
     fn GetName(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -2360,7 +2305,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestMai
             GetPackageFamilyName: GetPackageFamilyName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2410,7 +2354,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestOSP
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxManifestOSPackageDependency_Impl: ::windows_core::BaseImpl {
     fn GetName(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -2445,7 +2388,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestOSP
             GetVersion: GetVersion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2484,7 +2426,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestOpt
             GetMainPackageName: GetMainPackageName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2534,7 +2475,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestPac
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxManifestPackageDependency_Impl: ::windows_core::BaseImpl {
     fn GetName(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -2580,7 +2520,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestPac
             GetMinVersion: GetMinVersion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxManifestPackageDependency2_Impl: ::windows_core::BaseImpl + IAppxManifestPackageDependency_Impl {
     fn GetMaxMajorVersionTested(this: &Self::This) -> ::windows_core::Result<u16>;
@@ -2604,7 +2543,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestPac
             GetMaxMajorVersionTested: GetMaxMajorVersionTested::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2629,7 +2567,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestPac
         }
         IAppxManifestPackageDependency3_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetIsOptional: GetIsOptional::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2734,7 +2671,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestPac
             GetPackageFamilyName: GetPackageFamilyName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2762,7 +2698,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestPac
             GetArchitecture2: GetArchitecture2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2801,7 +2736,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestPro
             GetStringValue: GetStringValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxManifestQualifiedResource_Impl: ::windows_core::BaseImpl {
     fn GetLanguage(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -2847,7 +2781,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestQua
             GetDXFeatureLevel: GetDXFeatureLevel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2897,7 +2830,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestQua
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -3013,7 +2945,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestRea
             GetStream: GetStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -3041,7 +2972,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestRea
             GetQualifiedResources: GetQualifiedResources::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -3080,7 +3010,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestRea
             GetTargetDeviceFamilies: GetTargetDeviceFamilies::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -3108,7 +3037,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestRea
             GetOptionalPackageInfo: GetOptionalPackageInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxManifestReader5_Impl: ::windows_core::BaseImpl {
     fn GetMainPackageDependencies(this: &Self::This) -> ::windows_core::Result<IAppxManifestMainPackageDependenciesEnumerator>;
@@ -3132,7 +3060,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestRea
             GetMainPackageDependencies: GetMainPackageDependencies::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3160,7 +3087,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestRea
             GetIsNonQualifiedResourcePackage: GetIsNonQualifiedResourcePackage::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxManifestReader7_Impl: ::windows_core::BaseImpl {
     fn GetDriverDependencies(this: &Self::This) -> ::windows_core::Result<IAppxManifestDriverDependenciesEnumerator>;
@@ -3206,7 +3132,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestRea
             GetHostRuntimeDependencies: GetHostRuntimeDependencies::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3256,7 +3181,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestRes
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3306,7 +3230,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestTar
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxManifestTargetDeviceFamily_Impl: ::windows_core::BaseImpl {
     fn GetName(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -3352,7 +3275,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxManifestTar
             GetMaxVersionTested: GetMaxVersionTested::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -3399,7 +3321,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxPackageEdit
             UpdatePackageManifest: UpdatePackageManifest::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxPackageReader_Impl: ::windows_core::BaseImpl {
     fn GetBlockMap(this: &Self::This) -> ::windows_core::Result<IAppxBlockMapReader>;
@@ -3467,7 +3388,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxPackageRead
             GetManifest: GetManifest::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -3494,7 +3414,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxPackageWrit
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -3513,7 +3432,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxPackageWrit
         }
         IAppxPackageWriter2_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Close: Close::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -3535,7 +3453,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxPackageWrit
             AddPayloadFiles: AddPayloadFiles::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxPackagingDiagnosticEventSink_Impl: ::windows_core::BaseImpl {
     fn ReportContextChange(this: &Self::This, changetype: APPX_PACKAGING_CONTEXT_CHANGE_TYPE, contextid: i32, contextname: &::windows_core::PCSTR, contextmessage: &::windows_core::PCWSTR, detailsmessage: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -3558,7 +3475,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxPackagingDi
             ReportError: ReportError::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxPackagingDiagnosticEventSinkManager_Impl: ::windows_core::BaseImpl {
     fn SetSinkForProcess(this: &Self::This, sink: ::core::option::Option<&IAppxPackagingDiagnosticEventSink>) -> ::windows_core::Result<()>;
@@ -3576,7 +3492,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxPackagingDi
             SetSinkForProcess: SetSinkForProcess::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAppxSourceContentGroupMapReader_Impl: ::windows_core::BaseImpl {
     fn GetRequiredGroup(this: &Self::This) -> ::windows_core::Result<IAppxContentGroup>;
@@ -3611,5 +3526,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAppxSourceConte
             GetAutomaticGroups: GetAutomaticGroups::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

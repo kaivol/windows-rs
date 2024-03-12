@@ -51,7 +51,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMarshal_Impl, c
             DisconnectObject: DisconnectObject::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMarshal2_Impl: ::windows_core::BaseImpl + IMarshal_Impl {}
 impl ::windows_core::Iids for IMarshal2 {
@@ -59,7 +58,6 @@ impl ::windows_core::Iids for IMarshal2 {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMarshal2_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IMarshal2 {
     const VTABLE: Self::Vtable = { IMarshal2_Vtbl { base__: <IMarshal as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -87,5 +85,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMarshalingStrea
             GetMarshalingContextAttribute: GetMarshalingContextAttribute::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

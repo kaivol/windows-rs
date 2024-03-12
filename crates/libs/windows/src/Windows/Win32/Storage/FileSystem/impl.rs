@@ -148,7 +148,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDiskQuotaContro
             ShutdownNameResolution: ShutdownNameResolution::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDiskQuotaEvents_Impl: ::windows_core::BaseImpl {
     fn OnUserNameChanged(this: &Self::This, puser: ::core::option::Option<&IDiskQuotaUser>) -> ::windows_core::Result<()>;
@@ -166,7 +165,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDiskQuotaEvents
             OnUserNameChanged: OnUserNameChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -258,7 +256,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDiskQuotaUser_I
             GetAccountStatus: GetAccountStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDiskQuotaUserBatch_Impl: ::windows_core::BaseImpl {
     fn Add(this: &Self::This, puser: ::core::option::Option<&IDiskQuotaUser>) -> ::windows_core::Result<()>;
@@ -291,7 +288,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDiskQuotaUserBa
             FlushToDisk: FlushToDisk::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumDiskQuotaUsers_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, cusers: u32, rgusers: *mut ::core::option::Option<IDiskQuotaUser>, pcusersfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -330,5 +326,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumDiskQuotaUs
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

@@ -8,7 +8,6 @@ impl ::windows_core::Iids for DRendezvousSessionEvents {
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: DRendezvousSessionEvents_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for DRendezvousSessionEvents {
     const VTABLE: Self::Vtable = { DRendezvousSessionEvents_Vtbl { base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRendezvousApplication_Impl: ::windows_core::BaseImpl {
     fn SetRendezvousSession(this: &Self::This, prendezvoussession: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -26,7 +25,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRendezvousAppli
             SetRendezvousSession: SetRendezvousSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRendezvousSession_Impl: ::windows_core::BaseImpl {
     fn State(this: &Self::This) -> ::windows_core::Result<RENDEZVOUS_SESSION_STATE>;
@@ -82,5 +80,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRendezvousSessi
             Terminate: Terminate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

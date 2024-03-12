@@ -23,7 +23,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintManagerInt
             ShowPrintUIForWindowAsync: ShowPrintUIForWindowAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Printing\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Graphics_Printing", feature = "Win32_System_Com"))]
@@ -73,7 +72,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintWorkflowCo
             UserProperties: UserProperties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Xps\"`"]
 #[cfg(feature = "Win32_Storage_Xps")]
@@ -106,7 +104,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintWorkflowOb
             ObjectFactory: ObjectFactory::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Xps\"`"]
 #[cfg(feature = "Win32_Storage_Xps")]
@@ -134,7 +131,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintWorkflowXp
             DocumentPackageTarget: DocumentPackageTarget::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Xps\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Xps", feature = "Win32_System_Com"))]
@@ -176,7 +172,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintWorkflowXp
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Storage_Xps\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Storage_Xps", feature = "Win32_System_Com"))]
@@ -195,7 +190,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintWorkflowXp
         }
         IPrintWorkflowXpsReceiver2_Vtbl { base__: <IPrintWorkflowXpsReceiver as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Failed: Failed::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -222,5 +216,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrinting3DManag
             ShowPrintUIForWindowAsync: ShowPrintUIForWindowAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

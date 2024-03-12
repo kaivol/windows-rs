@@ -87,7 +87,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITraceEvent_Impl
             SetProviderId: SetProviderId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITraceEventCallback_Impl: ::windows_core::BaseImpl {
     fn OnBeginProcessTrace(this: &Self::This, headerevent: ::core::option::Option<&ITraceEvent>, relogger: ::core::option::Option<&ITraceRelogger>) -> ::windows_core::Result<()>;
@@ -115,7 +114,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITraceEventCallb
             OnEvent: OnEvent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -195,5 +193,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITraceRelogger_I
             Cancel: Cancel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

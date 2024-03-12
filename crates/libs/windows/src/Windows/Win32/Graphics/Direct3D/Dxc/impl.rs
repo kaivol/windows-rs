@@ -20,7 +20,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcAssembler_Im
             AssembleToContainer: AssembleToContainer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDxcBlob_Impl: ::windows_core::BaseImpl {
     fn GetBufferPointer(this: &Self::This) -> *mut ::core::ffi::c_void;
@@ -43,7 +42,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcBlob_Impl, c
             GetBufferSize: GetBufferSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -62,7 +60,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcBlobEncoding
         }
         IDxcBlobEncoding_Vtbl { base__: <IDxcBlob as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetEncoding: GetEncoding::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -89,7 +86,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcBlobUtf16_Im
             GetStringLength: GetStringLength::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -116,7 +112,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcBlobUtf8_Imp
             GetStringLength: GetStringLength::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDxcCompiler_Impl: ::windows_core::BaseImpl {
     fn Compile(this: &Self::This, psource: ::core::option::Option<&IDxcBlob>, psourcename: &::windows_core::PCWSTR, pentrypoint: &::windows_core::PCWSTR, ptargetprofile: &::windows_core::PCWSTR, parguments: *const ::windows_core::PCWSTR, argcount: u32, pdefines: *const DxcDefine, definecount: u32, pincludehandler: ::core::option::Option<&IDxcIncludeHandler>) -> ::windows_core::Result<IDxcOperationResult>;
@@ -162,7 +157,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcCompiler_Imp
             Disassemble: Disassemble::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDxcCompiler2_Impl: ::windows_core::BaseImpl + IDxcCompiler_Impl {
     fn CompileWithDebug(this: &Self::This, psource: ::core::option::Option<&IDxcBlob>, psourcename: &::windows_core::PCWSTR, pentrypoint: &::windows_core::PCWSTR, ptargetprofile: &::windows_core::PCWSTR, parguments: *const ::windows_core::PCWSTR, argcount: u32, pdefines: *const DxcDefine, definecount: u32, pincludehandler: ::core::option::Option<&IDxcIncludeHandler>, ppresult: *mut ::core::option::Option<IDxcOperationResult>, ppdebugblobname: *mut ::windows_core::PWSTR, ppdebugblob: *mut ::core::option::Option<IDxcBlob>) -> ::windows_core::Result<()>;
@@ -194,7 +188,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcCompiler2_Im
         }
         IDxcCompiler2_Vtbl { base__: <IDxcCompiler as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CompileWithDebug: CompileWithDebug::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDxcCompiler3_Impl: ::windows_core::BaseImpl {
     fn Compile(this: &Self::This, psource: *const DxcBuffer, parguments: *const ::windows_core::PCWSTR, argcount: u32, pincludehandler: ::core::option::Option<&IDxcIncludeHandler>, riid: *const ::windows_core::GUID, ppresult: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -217,7 +210,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcCompiler3_Im
             Disassemble: Disassemble::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDxcCompilerArgs_Impl: ::windows_core::BaseImpl {
     fn GetArguments(this: &Self::This) -> *mut ::windows_core::PCWSTR;
@@ -255,7 +247,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcCompilerArgs
             AddDefines: AddDefines::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDxcContainerBuilder_Impl: ::windows_core::BaseImpl {
     fn Load(this: &Self::This, pdxilcontainerheader: ::core::option::Option<&IDxcBlob>) -> ::windows_core::Result<()>;
@@ -294,7 +285,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcContainerBui
             SerializeContainer: SerializeContainer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDxcContainerReflection_Impl: ::windows_core::BaseImpl {
     fn Load(this: &Self::This, pcontainer: ::core::option::Option<&IDxcBlob>) -> ::windows_core::Result<()>;
@@ -361,7 +351,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcContainerRef
             GetPartReflection: GetPartReflection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDxcExtraOutputs_Impl: ::windows_core::BaseImpl {
     fn GetOutputCount(this: &Self::This) -> u32;
@@ -384,7 +373,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcExtraOutputs
             GetOutput: GetOutput::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDxcIncludeHandler_Impl: ::windows_core::BaseImpl {
     fn LoadSource(this: &Self::This, pfilename: &::windows_core::PCWSTR) -> ::windows_core::Result<IDxcBlob>;
@@ -405,7 +393,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcIncludeHandl
         }
         IDxcIncludeHandler_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, LoadSource: LoadSource::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -526,7 +513,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcLibrary_Impl
             GetBlobAsUtf16: GetBlobAsUtf16::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDxcLinker_Impl: ::windows_core::BaseImpl {
     fn RegisterLibrary(this: &Self::This, plibname: &::windows_core::PCWSTR, plib: ::core::option::Option<&IDxcBlob>) -> ::windows_core::Result<()>;
@@ -555,7 +541,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcLinker_Impl,
             Link: Link::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDxcOperationResult_Impl: ::windows_core::BaseImpl {
     fn GetStatus(this: &Self::This) -> ::windows_core::Result<::windows_core::HRESULT>;
@@ -601,7 +586,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcOperationRes
             GetErrorBuffer: GetErrorBuffer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDxcOptimizer_Impl: ::windows_core::BaseImpl {
     fn GetAvailablePassCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -641,7 +625,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcOptimizer_Im
             RunOptimizer: RunOptimizer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDxcOptimizerPass_Impl: ::windows_core::BaseImpl {
     fn GetOptionName(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -709,7 +692,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcOptimizerPas
             GetOptionArgDescription: GetOptionArgDescription::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -954,7 +936,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcPdbUtils_Imp
             OverrideRootSignature: OverrideRootSignature::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -996,7 +977,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcResult_Impl,
             PrimaryOutput: PrimaryOutput::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1138,7 +1118,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcUtils_Impl, 
             GetPDBContents: GetPDBContents::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDxcValidator_Impl: ::windows_core::BaseImpl {
     fn Validate(this: &Self::This, pshader: ::core::option::Option<&IDxcBlob>, flags: u32) -> ::windows_core::Result<IDxcOperationResult>;
@@ -1159,7 +1138,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcValidator_Im
         }
         IDxcValidator_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Validate: Validate::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDxcValidator2_Impl: ::windows_core::BaseImpl + IDxcValidator_Impl {
     fn ValidateWithDebug(this: &Self::This, pshader: ::core::option::Option<&IDxcBlob>, flags: u32, poptdebugbitcode: *const DxcBuffer) -> ::windows_core::Result<IDxcOperationResult>;
@@ -1180,7 +1158,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcValidator2_I
         }
         IDxcValidator2_Vtbl { base__: <IDxcValidator as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ValidateWithDebug: ValidateWithDebug::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDxcVersionInfo_Impl: ::windows_core::BaseImpl {
     fn GetVersion(this: &Self::This, pmajor: *mut u32, pminor: *mut u32) -> ::windows_core::Result<()>;
@@ -1209,7 +1186,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcVersionInfo_
             GetFlags: GetFlags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDxcVersionInfo2_Impl: ::windows_core::BaseImpl + IDxcVersionInfo_Impl {
     fn GetCommitInfo(this: &Self::This, pcommitcount: *mut u32, pcommithash: *mut *mut i8) -> ::windows_core::Result<()>;
@@ -1224,7 +1200,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcVersionInfo2
         }
         IDxcVersionInfo2_Vtbl { base__: <IDxcVersionInfo as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetCommitInfo: GetCommitInfo::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDxcVersionInfo3_Impl: ::windows_core::BaseImpl {
     fn GetCustomVersionString(this: &Self::This) -> ::windows_core::Result<*mut i8>;
@@ -1248,5 +1223,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDxcVersionInfo3
             GetCustomVersionString: GetCustomVersionString::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

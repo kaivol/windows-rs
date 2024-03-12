@@ -40,7 +40,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             SetInputSource: SetInputSource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMILBitmapEffectConnections_Impl: ::windows_core::BaseImpl {
     fn GetInputConnector(this: &Self::This, uiindex: u32) -> ::windows_core::Result<IMILBitmapEffectInputConnector>;
@@ -75,7 +74,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             GetOutputConnector: GetOutputConnector::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMILBitmapEffectConnectionsInfo_Impl: ::windows_core::BaseImpl {
     fn GetNumberInputs(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -132,7 +130,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             GetOutputConnectorInfo: GetOutputConnectorInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -171,7 +168,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             GetBitmapEffect: GetBitmapEffect::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMILBitmapEffectConnectorInfo_Impl: ::windows_core::BaseImpl {
     fn GetIndex(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -228,7 +224,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             GetFormat: GetFormat::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMILBitmapEffectEvents_Impl: ::windows_core::BaseImpl {
     fn PropertyChange(this: &Self::This, peffect: ::core::option::Option<&IMILBitmapEffect>, bstrpropertyname: &::windows_core::BSTR) -> ::windows_core::Result<()>;
@@ -251,7 +246,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             DirtyRegion: DirtyRegion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMILBitmapEffectFactory_Impl: ::windows_core::BaseImpl {
     fn CreateEffect(this: &Self::This, pguideffect: *const ::windows_core::GUID) -> ::windows_core::Result<IMILBitmapEffect>;
@@ -297,7 +291,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             CreateEffectOuter: CreateEffectOuter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMILBitmapEffectGroup_Impl: ::windows_core::BaseImpl {
     fn GetInteriorInputConnector(this: &Self::This, uiindex: u32) -> ::windows_core::Result<IMILBitmapEffectOutputConnector>;
@@ -337,7 +330,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             Add: Add::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMILBitmapEffectGroupImpl_Impl: ::windows_core::BaseImpl {
     fn Preprocess(this: &Self::This, pcontext: ::core::option::Option<&IMILBitmapEffectRenderContext>) -> ::windows_core::Result<()>;
@@ -377,7 +369,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             GetChildren: GetChildren::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Imaging\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Imaging"))]
@@ -441,7 +432,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             Initialize: Initialize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -474,7 +464,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             GetConnection: GetConnection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMILBitmapEffectInteriorInputConnector_Impl: ::windows_core::BaseImpl {
     fn GetInputConnector(this: &Self::This) -> ::windows_core::Result<IMILBitmapEffectInputConnector>;
@@ -498,7 +487,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             GetInputConnector: GetInputConnector::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMILBitmapEffectInteriorOutputConnector_Impl: ::windows_core::BaseImpl {
     fn GetOutputConnector(this: &Self::This) -> ::windows_core::Result<IMILBitmapEffectOutputConnector>;
@@ -522,7 +510,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             GetOutputConnector: GetOutputConnector::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -561,7 +548,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             GetConnection: GetConnection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMILBitmapEffectOutputConnectorImpl_Impl: ::windows_core::BaseImpl {
     fn AddBackLink(this: &Self::This, pconnection: ::core::option::Option<&IMILBitmapEffectInputConnector>) -> ::windows_core::Result<()>;
@@ -584,7 +570,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             RemoveBackLink: RemoveBackLink::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dwm\"`, `\"Win32_Graphics_Imaging\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dwm", feature = "Win32_Graphics_Imaging"))]
@@ -643,7 +628,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             GetAffineMatrix: GetAffineMatrix::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -676,7 +660,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             IsVolatile: IsVolatile::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -739,7 +722,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             SetRegionOfInterest: SetRegionOfInterest::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -787,7 +769,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             UpdateOutputBounds: UpdateOutputBounds::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMILBitmapEffects_Impl: ::windows_core::BaseImpl {
     fn _NewEnum(this: &Self::This) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -844,5 +825,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMILBitmapEffect
             Count: Count::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

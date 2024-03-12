@@ -18,7 +18,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAccessibleWinSA
             SetAccessiblityData: SetAccessiblityData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -50,7 +49,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInitiateWinSATA
             CancelAssessment: CancelAssessment::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -100,7 +98,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProvideWinSATAs
             Description: Description::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -172,7 +169,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProvideWinSATRe
             RatingStateDesc: RatingStateDesc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
 #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -197,7 +193,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProvideWinSATVi
         }
         IProvideWinSATVisuals_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, get_Bitmap: get_Bitmap::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Data_Xml_MsXml\"`, `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Data_Xml_MsXml", feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -222,7 +217,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IQueryAllWinSATA
         }
         IQueryAllWinSATAssessments_Vtbl { base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, get_AllXML: get_AllXML::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IQueryOEMWinSATCustomization_Impl: ::windows_core::BaseImpl {
     fn GetOEMPrePopulationInfo(this: &Self::This) -> ::windows_core::Result<WINSAT_OEM_CUSTOMIZATION_STATE>;
@@ -246,7 +240,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IQueryOEMWinSATC
             GetOEMPrePopulationInfo: GetOEMPrePopulationInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Data_Xml_MsXml\"`, `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Data_Xml_MsXml", feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -285,7 +278,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IQueryRecentWinS
             Info: Info::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWinSATInitiateEvents_Impl: ::windows_core::BaseImpl {
     fn WinSATComplete(this: &Self::This, hresult: ::windows_core::HRESULT, strdescription: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -308,5 +300,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWinSATInitiateE
             WinSATUpdate: WinSATUpdate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

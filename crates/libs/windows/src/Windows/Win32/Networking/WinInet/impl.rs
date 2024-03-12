@@ -29,7 +29,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDialBranding_Im
             GetBitmap: GetBitmap::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDialEngine_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, pwzconnectoid: &::windows_core::PCWSTR, pides: ::core::option::Option<&IDialEventSink>) -> ::windows_core::Result<()>;
@@ -89,7 +88,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDialEngine_Impl
             GetConnectHandle: GetConnectHandle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDialEventSink_Impl: ::windows_core::BaseImpl {
     fn OnEvent(this: &Self::This, dwevent: u32, dwstatus: u32) -> ::windows_core::Result<()>;
@@ -104,7 +102,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDialEventSink_I
         }
         IDialEventSink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnEvent: OnEvent::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IProofOfPossessionCookieInfoManager_Impl: ::windows_core::BaseImpl {
     fn GetCookieInfoForUri(this: &Self::This, uri: &::windows_core::PCWSTR, cookieinfocount: *mut u32, cookieinfo: *mut *mut ProofOfPossessionCookieInfo) -> ::windows_core::Result<()>;
@@ -122,7 +119,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProofOfPossessi
             GetCookieInfoForUri: GetCookieInfoForUri::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IProofOfPossessionCookieInfoManager2_Impl: ::windows_core::BaseImpl {
     fn GetCookieInfoWithUriForAccount(this: &Self::This, webaccount: ::core::option::Option<&::windows_core::IInspectable>, uri: &::windows_core::PCWSTR, cookieinfocount: *mut u32, cookieinfo: *mut *mut ProofOfPossessionCookieInfo) -> ::windows_core::Result<()>;
@@ -140,5 +136,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IProofOfPossessi
             GetCookieInfoWithUriForAccount: GetCookieInfoWithUriForAccount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

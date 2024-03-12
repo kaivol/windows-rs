@@ -19,7 +19,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcLuConfigure_
             Delete: Delete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDtcLuRecovery_Impl: ::windows_core::BaseImpl {}
 impl ::windows_core::Iids for IDtcLuRecovery {
@@ -27,7 +26,6 @@ impl ::windows_core::Iids for IDtcLuRecovery {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcLuRecovery_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDtcLuRecovery {
     const VTABLE: Self::Vtable = { IDtcLuRecovery_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDtcLuRecoveryFactory_Impl: ::windows_core::BaseImpl {
     fn Create(this: &Self::This, puclupair: *const u8, cblupair: u32) -> ::windows_core::Result<IDtcLuRecovery>;
@@ -48,7 +46,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcLuRecoveryFa
         }
         IDtcLuRecoveryFactory_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Create: Create::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDtcLuRecoveryInitiatedByDtc_Impl: ::windows_core::BaseImpl {
     fn GetWork(this: &Self::This, pwork: *mut DTCINITIATEDRECOVERYWORK, ppv: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -63,7 +60,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcLuRecoveryIn
         }
         IDtcLuRecoveryInitiatedByDtc_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetWork: GetWork::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDtcLuRecoveryInitiatedByDtcStatusWork_Impl: ::windows_core::BaseImpl {
     fn HandleCheckLuStatus(this: &Self::This, lrecoveryseqnum: i32) -> ::windows_core::Result<()>;
@@ -81,7 +77,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcLuRecoveryIn
             HandleCheckLuStatus: HandleCheckLuStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -163,7 +158,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcLuRecoveryIn
             ObsoleteRecoverySeqNum: ObsoleteRecoverySeqNum::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDtcLuRecoveryInitiatedByLu_Impl: ::windows_core::BaseImpl {
     fn GetObjectToHandleWorkFromLu(this: &Self::This) -> ::windows_core::Result<IDtcLuRecoveryInitiatedByLuWork>;
@@ -187,7 +181,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcLuRecoveryIn
             GetObjectToHandleWorkFromLu: GetObjectToHandleWorkFromLu::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDtcLuRecoveryInitiatedByLuWork_Impl: ::windows_core::BaseImpl {
     fn HandleTheirXln(this: &Self::This, lrecoveryseqnum: i32, xln: DTCLUXLN, premotelogname: *mut u8, cbremotelogname: u32, pourlogname: *mut u8, cbourlogname: u32, dwprotocol: u32, presponse: *mut DTCLUXLNRESPONSE) -> ::windows_core::Result<()>;
@@ -240,7 +233,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcLuRecoveryIn
             ConversationLost: ConversationLost::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -287,7 +279,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcLuRmEnlistme
             RequestCommit: RequestCommit::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDtcLuRmEnlistmentFactory_Impl: ::windows_core::BaseImpl {
     fn Create(this: &Self::This, puclupair: *mut u8, cblupair: u32, pitransaction: ::core::option::Option<&ITransaction>, ptransid: *mut u8, cbtransid: u32, prmenlistmentsink: ::core::option::Option<&IDtcLuRmEnlistmentSink>, pprmenlistment: *mut ::core::option::Option<IDtcLuRmEnlistment>) -> ::windows_core::Result<()>;
@@ -302,7 +293,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcLuRmEnlistme
         }
         IDtcLuRmEnlistmentFactory_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Create: Create::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDtcLuRmEnlistmentSink_Impl: ::windows_core::BaseImpl {
     fn AckUnplug(this: &Self::This) -> ::windows_core::Result<()>;
@@ -360,7 +350,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcLuRmEnlistme
             RequestCommit: RequestCommit::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -412,7 +401,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcLuSubordinat
             RequestCommit: RequestCommit::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDtcLuSubordinateDtcFactory_Impl: ::windows_core::BaseImpl {
     fn Create(this: &Self::This, puclupair: *mut u8, cblupair: u32, punktransactionouter: ::core::option::Option<&::windows_core::IUnknown>, isolevel: i32, isoflags: u32, poptions: ::core::option::Option<&ITransactionOptions>, pptransaction: *mut ::core::option::Option<ITransaction>, ptransid: *mut u8, cbtransid: u32, psubordinatedtcsink: ::core::option::Option<&IDtcLuSubordinateDtcSink>, ppsubordinatedtc: *mut ::core::option::Option<IDtcLuSubordinateDtc>) -> ::windows_core::Result<()>;
@@ -443,7 +431,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcLuSubordinat
         }
         IDtcLuSubordinateDtcFactory_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Create: Create::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDtcLuSubordinateDtcSink_Impl: ::windows_core::BaseImpl {
     fn AckUnplug(this: &Self::This) -> ::windows_core::Result<()>;
@@ -496,7 +483,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcLuSubordinat
             RequestCommit: RequestCommit::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -614,7 +600,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcNetworkAcces
             RestartDtcService: RestartDtcService::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -679,7 +664,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcNetworkAcces
             SetAuthenticationLevel: SetAuthenticationLevel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -712,7 +696,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcNetworkAcces
             SetLUAccess: SetLUAccess::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -739,7 +722,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcToXaHelper_I
             TranslateTridToXid: TranslateTridToXid::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDtcToXaHelperFactory_Impl: ::windows_core::BaseImpl {
     fn Create(this: &Self::This, pszdsn: &::windows_core::PCSTR, pszclientdllname: &::windows_core::PCSTR, pguidrm: *mut ::windows_core::GUID, ppxahelper: *mut ::core::option::Option<IDtcToXaHelper>) -> ::windows_core::Result<()>;
@@ -754,7 +736,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcToXaHelperFa
         }
         IDtcToXaHelperFactory_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Create: Create::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -797,7 +778,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcToXaHelperSi
             ReleaseRMCookie: ReleaseRMCookie::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDtcToXaMapper_Impl: ::windows_core::BaseImpl {
     fn RequestNewResourceManager(this: &Self::This, pszdsn: &::windows_core::PCSTR, pszclientdllname: &::windows_core::PCSTR, pdwrmcookie: *mut u32) -> ::windows_core::Result<()>;
@@ -830,7 +810,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDtcToXaMapper_I
             ReleaseResourceManager: ReleaseResourceManager::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGetDispenser_Impl: ::windows_core::BaseImpl {
     fn GetDispenser(this: &Self::This, iid: *const ::windows_core::GUID, ppvobject: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -845,7 +824,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGetDispenser_Im
         }
         IGetDispenser_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDispenser: GetDispenser::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -870,7 +848,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKernelTransacti
         }
         IKernelTransaction_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetHandle: GetHandle::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ILastResourceManager_Impl: ::windows_core::BaseImpl {
     fn TransactionCommitted(this: &Self::This, pprepinfo: *const u8, cbprepinfo: u32) -> ::windows_core::Result<()>;
@@ -893,7 +870,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILastResourceMan
             RecoveryDone: RecoveryDone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPrepareInfo_Impl: ::windows_core::BaseImpl {
     fn GetPrepareInfoSize(this: &Self::This, pcbprepinfo: *mut u32) -> ::windows_core::Result<()>;
@@ -916,7 +892,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrepareInfo_Imp
             GetPrepareInfo: GetPrepareInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPrepareInfo2_Impl: ::windows_core::BaseImpl {
     fn GetPrepareInfoSize(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -945,7 +920,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrepareInfo2_Im
             GetPrepareInfo: GetPrepareInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -972,7 +946,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRMHelper_Impl, 
             RMInfo: RMInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IResourceManager_Impl: ::windows_core::BaseImpl {
     fn Enlist(this: &Self::This, ptransaction: ::core::option::Option<&ITransaction>, pres: ::core::option::Option<&ITransactionResourceAsync>, puow: *mut BOID, pisolevel: *mut i32, ppenlist: *mut ::core::option::Option<ITransactionEnlistmentAsync>) -> ::windows_core::Result<()>;
@@ -1011,7 +984,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IResourceManager
             GetDistributedTransactionManager: GetDistributedTransactionManager::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IResourceManager2_Impl: ::windows_core::BaseImpl + IResourceManager_Impl {
     fn Enlist2(this: &Self::This, ptransaction: ::core::option::Option<&ITransaction>, presasync: ::core::option::Option<&ITransactionResourceAsync>, puow: *mut BOID, pisolevel: *mut i32, pxid: *mut XID, ppenlist: *mut ::core::option::Option<ITransactionEnlistmentAsync>) -> ::windows_core::Result<()>;
@@ -1040,7 +1012,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IResourceManager
             Reenlist2: Reenlist2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IResourceManagerFactory_Impl: ::windows_core::BaseImpl {
     fn Create(this: &Self::This, pguidrm: *const ::windows_core::GUID, pszrmname: &::windows_core::PCSTR, piresmgrsink: ::core::option::Option<&IResourceManagerSink>) -> ::windows_core::Result<IResourceManager>;
@@ -1061,7 +1032,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IResourceManager
         }
         IResourceManagerFactory_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Create: Create::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IResourceManagerFactory2_Impl: ::windows_core::BaseImpl + IResourceManagerFactory_Impl {
     fn CreateEx(this: &Self::This, pguidrm: *const ::windows_core::GUID, pszrmname: &::windows_core::PCSTR, piresmgrsink: ::core::option::Option<&IResourceManagerSink>, riidrequested: *const ::windows_core::GUID, ppvresmgr: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -1076,7 +1046,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IResourceManager
         }
         IResourceManagerFactory2_Vtbl { base__: <IResourceManagerFactory as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateEx: CreateEx::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IResourceManagerRejoinable_Impl: ::windows_core::BaseImpl + IResourceManager2_Impl {
     fn Rejoin(this: &Self::This, pprepinfo: *const u8, cbprepinfo: u32, ltimeout: u32) -> ::windows_core::Result<XACTSTAT>;
@@ -1097,7 +1066,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IResourceManager
         }
         IResourceManagerRejoinable_Vtbl { base__: <IResourceManager2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Rejoin: Rejoin::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IResourceManagerSink_Impl: ::windows_core::BaseImpl {
     fn TMDown(this: &Self::This) -> ::windows_core::Result<()>;
@@ -1112,7 +1080,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IResourceManager
         }
         IResourceManagerSink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, TMDown: TMDown::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITipHelper_Impl: ::windows_core::BaseImpl {
     fn Pull(this: &Self::This, i_psztxurl: *const u8) -> ::windows_core::Result<ITransaction>;
@@ -1158,7 +1125,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITipHelper_Impl,
             GetLocalTmUrl: GetLocalTmUrl::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITipPullSink_Impl: ::windows_core::BaseImpl {
     fn PullComplete(this: &Self::This, i_hrpull: ::windows_core::HRESULT) -> ::windows_core::Result<()>;
@@ -1173,7 +1139,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITipPullSink_Imp
         }
         ITipPullSink_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, PullComplete: PullComplete::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITipTransaction_Impl: ::windows_core::BaseImpl {
     fn Push(this: &Self::This, i_pszremotetmurl: *const u8) -> ::windows_core::Result<::windows_core::PSTR>;
@@ -1208,7 +1173,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITipTransaction_
             GetTransactionUrl: GetTransactionUrl::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITmNodeName_Impl: ::windows_core::BaseImpl {
     fn GetNodeNameSize(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1237,7 +1201,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITmNodeName_Impl
             GetNodeName: GetNodeName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1269,7 +1232,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransaction_Imp
             GetTransactionInfo: GetTransactionInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1291,7 +1253,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransaction2_Im
             GetTransactionInfo2: GetTransactionInfo2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1319,7 +1280,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionClon
             CloneWithCommitDisabled: CloneWithCommitDisabled::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITransactionDispenser_Impl: ::windows_core::BaseImpl {
     fn GetOptionsObject(this: &Self::This) -> ::windows_core::Result<ITransactionOptions>;
@@ -1354,7 +1314,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionDisp
             BeginTransaction: BeginTransaction::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1386,7 +1345,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionEnli
             AbortRequestDone: AbortRequestDone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITransactionExport_Impl: ::windows_core::BaseImpl {
     fn Export(this: &Self::This, punktransaction: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<u32>;
@@ -1415,7 +1373,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionExpo
             GetTransactionCookie: GetTransactionCookie::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITransactionExportFactory_Impl: ::windows_core::BaseImpl {
     fn GetRemoteClassId(this: &Self::This) -> ::windows_core::Result<::windows_core::GUID>;
@@ -1450,7 +1407,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionExpo
             Create: Create::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITransactionImport_Impl: ::windows_core::BaseImpl {
     fn Import(this: &Self::This, cbtransactioncookie: u32, rgbtransactioncookie: *const u8, piid: *const ::windows_core::GUID, ppvtransaction: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -1465,7 +1421,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionImpo
         }
         ITransactionImport_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Import: Import::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITransactionImportWhereabouts_Impl: ::windows_core::BaseImpl {
     fn GetWhereaboutsSize(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1494,7 +1449,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionImpo
             GetWhereabouts: GetWhereabouts::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITransactionLastEnlistmentAsync_Impl: ::windows_core::BaseImpl {
     fn TransactionOutcome(this: &Self::This, xactstat: XACTSTAT, pboidreason: *const BOID) -> ::windows_core::Result<()>;
@@ -1512,7 +1466,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionLast
             TransactionOutcome: TransactionOutcome::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITransactionLastResourceAsync_Impl: ::windows_core::BaseImpl {
     fn DelegateCommit(this: &Self::This, grfrm: u32) -> ::windows_core::Result<()>;
@@ -1535,7 +1488,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionLast
             ForgetRequest: ForgetRequest::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITransactionOptions_Impl: ::windows_core::BaseImpl {
     fn SetOptions(this: &Self::This, poptions: *const XACTOPT) -> ::windows_core::Result<()>;
@@ -1558,7 +1510,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionOpti
             GetOptions: GetOptions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1595,7 +1546,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionOutc
             Indoubt: Indoubt::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITransactionPhase0EnlistmentAsync_Impl: ::windows_core::BaseImpl {
     fn Enable(this: &Self::This) -> ::windows_core::Result<()>;
@@ -1639,7 +1589,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionPhas
             GetTransaction: GetTransaction::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITransactionPhase0Factory_Impl: ::windows_core::BaseImpl {
     fn Create(this: &Self::This, pphase0notify: ::core::option::Option<&ITransactionPhase0NotifyAsync>) -> ::windows_core::Result<ITransactionPhase0EnlistmentAsync>;
@@ -1660,7 +1609,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionPhas
         }
         ITransactionPhase0Factory_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Create: Create::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1687,7 +1635,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionPhas
             EnlistCompleted: EnlistCompleted::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITransactionReceiver_Impl: ::windows_core::BaseImpl {
     fn UnmarshalPropagationToken(this: &Self::This, cbtoken: u32, rgbtoken: *const u8) -> ::windows_core::Result<ITransaction>;
@@ -1732,7 +1679,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionRece
             Reset: Reset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITransactionReceiverFactory_Impl: ::windows_core::BaseImpl {
     fn Create(this: &Self::This) -> ::windows_core::Result<ITransactionReceiver>;
@@ -1753,7 +1699,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionRece
         }
         ITransactionReceiverFactory_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Create: Create::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1790,7 +1735,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionReso
             TMDown: TMDown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1827,7 +1771,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionReso
             TMDown: TMDown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITransactionTransmitter_Impl: ::windows_core::BaseImpl {
     fn Set(this: &Self::This, ptransaction: ::core::option::Option<&ITransaction>) -> ::windows_core::Result<()>;
@@ -1871,7 +1814,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionTran
             Reset: Reset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITransactionTransmitterFactory_Impl: ::windows_core::BaseImpl {
     fn Create(this: &Self::This) -> ::windows_core::Result<ITransactionTransmitter>;
@@ -1892,7 +1834,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionTran
         }
         ITransactionTransmitterFactory_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Create: Create::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITransactionVoterBallotAsync2_Impl: ::windows_core::BaseImpl {
     fn VoteRequestDone(this: &Self::This, hr: ::windows_core::HRESULT, pboidreason: *const BOID) -> ::windows_core::Result<()>;
@@ -1910,7 +1851,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionVote
             VoteRequestDone: VoteRequestDone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITransactionVoterFactory2_Impl: ::windows_core::BaseImpl {
     fn Create(this: &Self::This, ptransaction: ::core::option::Option<&ITransaction>, pvoternotify: ::core::option::Option<&ITransactionVoterNotifyAsync2>) -> ::windows_core::Result<ITransactionVoterBallotAsync2>;
@@ -1931,7 +1871,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionVote
         }
         ITransactionVoterFactory2_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Create: Create::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1950,7 +1889,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITransactionVote
         }
         ITransactionVoterNotifyAsync2_Vtbl { base__: <ITransactionOutcomeEvents as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, VoteRequest: VoteRequest::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXAConfig_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, clsidhelperdll: &::windows_core::GUID) -> ::windows_core::Result<()>;
@@ -1973,7 +1911,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXAConfig_Impl, 
             Terminate: Terminate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXAObtainRMInfo_Impl: ::windows_core::BaseImpl {
     fn ObtainRMInfo(this: &Self::This, pirmhelper: ::core::option::Option<&IRMHelper>) -> ::windows_core::Result<()>;
@@ -1988,7 +1925,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXAObtainRMInfo_
         }
         IXAObtainRMInfo_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ObtainRMInfo: ObtainRMInfo::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXATransLookup_Impl: ::windows_core::BaseImpl {
     fn Lookup(this: &Self::This) -> ::windows_core::Result<ITransaction>;
@@ -2009,7 +1945,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXATransLookup_I
         }
         IXATransLookup_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Lookup: Lookup::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXATransLookup2_Impl: ::windows_core::BaseImpl {
     fn Lookup(this: &Self::This, pxid: *const XID) -> ::windows_core::Result<ITransaction>;
@@ -2030,5 +1965,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXATransLookup2_
         }
         IXATransLookup2_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Lookup: Lookup::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

@@ -25,7 +25,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IErrorReportingS
             GetErrorOptions: GetErrorOptions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Storage\"`"]
 #[cfg(feature = "Storage")]
@@ -98,7 +97,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileLoggingSess
             RemoveLogFileGenerated: RemoveLogFileGenerated::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ILoggingChannel_Impl: ::windows_core::BaseImpl + super::IClosable_Impl {
     fn Name(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -182,7 +180,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILoggingChannel_
             RemoveLoggingEnabled: RemoveLoggingEnabled::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Storage\"`"]
 #[cfg(feature = "Storage")]
@@ -239,7 +236,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILoggingSession_
             RemoveLoggingChannel: RemoveLoggingChannel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ILoggingTarget_Impl: ::windows_core::BaseImpl {
     fn IsEnabled(this: &Self::This) -> ::windows_core::Result<bool>;
@@ -353,5 +349,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILoggingTarget_I
             StartActivityWithFieldsAndOptions: StartActivityWithFieldsAndOptions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

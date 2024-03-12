@@ -23,7 +23,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDAddress_Impl
             Deserialize: Deserialize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDAsyncCallback_Impl: ::windows_core::BaseImpl {
     fn AsyncOperationComplete(this: &Self::This, pasyncresult: ::core::option::Option<&IWSDAsyncResult>, pasyncstate: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -41,7 +40,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDAsyncCallbac
             AsyncOperationComplete: AsyncOperationComplete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -105,7 +103,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDAsyncResult_
             GetEndpointProxy: GetEndpointProxy::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDAttachment_Impl: ::windows_core::BaseImpl {}
 impl ::windows_core::Iids for IWSDAttachment {
@@ -113,7 +110,6 @@ impl ::windows_core::Iids for IWSDAttachment {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDAttachment_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IWSDAttachment {
     const VTABLE: Self::Vtable = { IWSDAttachment_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -190,7 +186,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDDeviceHost_I
             SignalEvent: SignalEvent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDDeviceHostNotify_Impl: ::windows_core::BaseImpl {
     fn GetService(this: &Self::This, pszserviceid: &::windows_core::PCWSTR) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -211,7 +206,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDDeviceHostNo
         }
         IWSDDeviceHostNotify_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetService: GetService::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDDeviceProxy_Impl: ::windows_core::BaseImpl {
     fn Init(this: &Self::This, pszdeviceid: &::windows_core::PCWSTR, pdeviceaddress: ::core::option::Option<&IWSDAddress>, pszlocalid: &::windows_core::PCWSTR, pcontext: ::core::option::Option<&IWSDXMLContext>, psponsor: ::core::option::Option<&IWSDDeviceProxy>) -> ::windows_core::Result<()>;
@@ -322,7 +316,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDDeviceProxy_
             GetEndpointProxy: GetEndpointProxy::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -392,7 +385,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDEndpointProx
             GetFaultInfo: GetFaultInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDEventingStatus_Impl: ::windows_core::BaseImpl {
     fn SubscriptionRenewed(this: &Self::This, pszsubscriptionaction: &::windows_core::PCWSTR);
@@ -420,7 +412,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDEventingStat
             SubscriptionEnded: SubscriptionEnded::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -463,7 +454,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDHttpAddress_
             SetPath: SetPath::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -502,7 +492,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDHttpAuthPara
             GetAuthType: GetAuthType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDHttpMessageParameters_Impl: ::windows_core::BaseImpl + IWSDMessageParameters_Impl {
     fn SetInboundHttpHeaders(this: &Self::This, pszheaders: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -584,7 +573,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDHttpMessageP
             Clear: Clear::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDInboundAttachment_Impl: ::windows_core::BaseImpl + IWSDAttachment_Impl {
     fn Read(this: &Self::This, pbuffer: *mut u8, dwbytestoread: u32, pdwnumberofbytesread: *mut u32) -> ::windows_core::Result<()>;
@@ -607,7 +595,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDInboundAttac
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDMessageParameters_Impl: ::windows_core::BaseImpl {
     fn GetLocalAddress(this: &Self::This) -> ::windows_core::Result<IWSDAddress>;
@@ -663,7 +650,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDMessageParam
             GetLowerParameters: GetLowerParameters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDMetadataExchange_Impl: ::windows_core::BaseImpl {
     fn GetMetadata(this: &Self::This) -> ::windows_core::Result<*mut WSD_METADATA_SECTION_LIST>;
@@ -684,7 +670,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDMetadataExch
         }
         IWSDMetadataExchange_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetMetadata: GetMetadata::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDOutboundAttachment_Impl: ::windows_core::BaseImpl + IWSDAttachment_Impl {
     fn Write(this: &Self::This, pbuffer: *const u8, dwbytestowrite: u32) -> ::windows_core::Result<u32>;
@@ -718,7 +703,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDOutboundAtta
             Abort: Abort::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Security_Cryptography\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Security_Cryptography"))]
@@ -757,7 +741,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDSSLClientCer
             GetMappedAccessToken: GetMappedAccessToken::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -796,7 +779,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDScopeMatchin
             MatchScopes: MatchScopes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDServiceMessaging_Impl: ::windows_core::BaseImpl {
     fn SendResponse(this: &Self::This, pbody: *const ::core::ffi::c_void, poperation: *const WSD_OPERATION, pmessageparameters: ::core::option::Option<&IWSDMessageParameters>) -> ::windows_core::Result<()>;
@@ -819,7 +801,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDServiceMessa
             FaultRequest: FaultRequest::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDServiceProxy_Impl: ::windows_core::BaseImpl + IWSDMetadataExchange_Impl {
     fn BeginGetMetadata(this: &Self::This) -> ::windows_core::Result<IWSDAsyncResult>;
@@ -891,7 +872,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDServiceProxy
             GetEndpointProxy: GetEndpointProxy::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -992,7 +972,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDServiceProxy
             EndGetStatusForMultipleOperations: EndGetStatusForMultipleOperations::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1046,7 +1025,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDSignaturePro
             GetSignedInfoHash: GetSignedInfoHash::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1106,7 +1084,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDTransportAdd
             SetTransportAddress: SetTransportAddress::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Networking_WinSock\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Networking_WinSock"))]
@@ -1191,7 +1168,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDUdpAddress_I
             GetAlias: GetAlias::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDUdpMessageParameters_Impl: ::windows_core::BaseImpl + IWSDMessageParameters_Impl {
     fn SetRetransmitParams(this: &Self::This, pparams: *const WSDUdpRetransmitParams) -> ::windows_core::Result<()>;
@@ -1214,7 +1190,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDUdpMessagePa
             GetRetransmitParams: GetRetransmitParams::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDXMLContext_Impl: ::windows_core::BaseImpl {
     fn AddNamespace(this: &Self::This, pszuri: &::windows_core::PCWSTR, pszsuggestedprefix: &::windows_core::PCWSTR, ppnamespace: *mut *mut WSDXML_NAMESPACE) -> ::windows_core::Result<()>;
@@ -1247,7 +1222,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDXMLContext_I
             SetTypes: SetTypes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDiscoveredService_Impl: ::windows_core::BaseImpl {
     fn GetEndpointReference(this: &Self::This) -> ::windows_core::Result<*mut WSD_ENDPOINT_REFERENCE>;
@@ -1375,7 +1349,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDiscoveredSer
             GetInstanceId: GetInstanceId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDiscoveryProvider_Impl: ::windows_core::BaseImpl {
     fn SetAddressFamily(this: &Self::This, dwaddressfamily: u32) -> ::windows_core::Result<()>;
@@ -1429,7 +1402,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDiscoveryProv
             GetXMLContext: GetXMLContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDiscoveryProviderNotify_Impl: ::windows_core::BaseImpl {
     fn Add(this: &Self::This, pservice: ::core::option::Option<&IWSDiscoveredService>) -> ::windows_core::Result<()>;
@@ -1462,7 +1434,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDiscoveryProv
             SearchComplete: SearchComplete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDiscoveryPublisher_Impl: ::windows_core::BaseImpl {
     fn SetAddressFamily(this: &Self::This, dwaddressfamily: u32) -> ::windows_core::Result<()>;
@@ -1608,7 +1579,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDiscoveryPubl
             GetXMLContext: GetXMLContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWSDiscoveryPublisherNotify_Impl: ::windows_core::BaseImpl {
     fn ProbeHandler(this: &Self::This, psoap: *const WSD_SOAP_MESSAGE, pmessageparameters: ::core::option::Option<&IWSDMessageParameters>) -> ::windows_core::Result<()>;
@@ -1631,5 +1601,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWSDiscoveryPubl
             ResolveHandler: ResolveHandler::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

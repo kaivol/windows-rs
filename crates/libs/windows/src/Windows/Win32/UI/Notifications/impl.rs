@@ -11,5 +11,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: INotificationAct
         }
         INotificationActivationCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Activate: Activate::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

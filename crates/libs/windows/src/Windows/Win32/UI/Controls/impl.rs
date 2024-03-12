@@ -218,7 +218,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IImageList_Impl,
             GetOverlayImage: GetOverlayImage::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi", feature = "Win32_UI_WindowsAndMessaging"))]
@@ -295,5 +294,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IImageList2_Impl
             ReplaceFromImageList: ReplaceFromImageList::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

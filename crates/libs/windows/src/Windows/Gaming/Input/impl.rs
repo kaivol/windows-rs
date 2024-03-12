@@ -96,7 +96,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGameController_
             User: User::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Devices_Power\"`"]
 #[cfg(feature = "Devices_Power")]
@@ -125,5 +124,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGameControllerB
             TryGetBatteryReport: TryGetBatteryReport::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

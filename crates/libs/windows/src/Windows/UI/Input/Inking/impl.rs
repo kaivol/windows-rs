@@ -25,7 +25,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInkPointFactory
             CreateInkPoint: CreateInkPoint::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IInkPresenterRulerFactory_Impl: ::windows_core::BaseImpl {
     fn Create(this: &Self::This, inkpresenter: ::core::option::Option<&InkPresenter>) -> ::windows_core::Result<InkPresenterRuler>;
@@ -47,7 +46,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInkPresenterRul
         }
         IInkPresenterRulerFactory_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Create: Create::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Numerics\"`"]
 #[cfg(feature = "Foundation_Numerics")]
@@ -139,7 +137,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInkPresenterSte
             SetTransform: SetTransform::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -185,7 +182,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInkRecognizerCo
             GetRecognizers: GetRecognizers::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Storage_Streams\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Storage_Streams"))]
@@ -342,5 +338,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInkStrokeContai
             GetRecognitionResults: GetRecognitionResults::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

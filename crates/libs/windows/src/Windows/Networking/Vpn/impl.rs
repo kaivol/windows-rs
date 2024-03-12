@@ -14,7 +14,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVpnChannelStati
             ProcessEventAsync: ProcessEventAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Security_Credentials\"`, `\"Security_Cryptography_Certificates\"`"]
 #[cfg(all(feature = "Security_Credentials", feature = "Security_Cryptography_Certificates"))]
@@ -79,7 +78,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVpnCredential_I
             OldPasswordCredential: OldPasswordCredential::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVpnCustomPrompt_Impl: ::windows_core::BaseImpl {
     fn SetLabel(this: &Self::This, value: &::windows_core::HSTRING) -> ::windows_core::Result<()>;
@@ -141,7 +139,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVpnCustomPrompt
             Bordered: Bordered::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVpnCustomPromptElement_Impl: ::windows_core::BaseImpl {
     fn SetDisplayName(this: &Self::This, value: &::windows_core::HSTRING) -> ::windows_core::Result<()>;
@@ -203,7 +200,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVpnCustomPrompt
             Emphasized: Emphasized::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -232,7 +228,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVpnDomainNameIn
             CreateVpnDomainNameInfo: CreateVpnDomainNameInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVpnInterfaceIdFactory_Impl: ::windows_core::BaseImpl {
     fn CreateVpnInterfaceId(this: &Self::This, address: &[u8]) -> ::windows_core::Result<VpnInterfaceId>;
@@ -257,7 +252,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVpnInterfaceIdF
             CreateVpnInterfaceId: CreateVpnInterfaceId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -286,7 +280,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVpnNamespaceInf
             CreateVpnNamespaceInfo: CreateVpnNamespaceInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVpnPacketBufferFactory_Impl: ::windows_core::BaseImpl {
     fn CreateVpnPacketBuffer(this: &Self::This, parentbuffer: ::core::option::Option<&VpnPacketBuffer>, offset: u32, length: u32) -> ::windows_core::Result<VpnPacketBuffer>;
@@ -311,7 +304,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVpnPacketBuffer
             CreateVpnPacketBuffer: CreateVpnPacketBuffer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVpnPlugIn_Impl: ::windows_core::BaseImpl {
     fn Connect(this: &Self::This, channel: ::core::option::Option<&VpnChannel>) -> ::windows_core::Result<()>;
@@ -349,7 +341,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVpnPlugIn_Impl,
             Decapsulate: Decapsulate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -463,7 +454,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVpnProfile_Impl
             SetAlwaysOn: SetAlwaysOn::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVpnRouteFactory_Impl: ::windows_core::BaseImpl {
     fn CreateVpnRoute(this: &Self::This, address: ::core::option::Option<&super::HostName>, prefixsize: u8) -> ::windows_core::Result<VpnRoute>;
@@ -488,5 +478,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVpnRouteFactory
             CreateVpnRoute: CreateVpnRoute::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

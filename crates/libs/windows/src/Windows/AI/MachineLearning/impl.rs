@@ -55,7 +55,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILearningModelFe
             IsRequired: IsRequired::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ILearningModelFeatureValue_Impl: ::windows_core::BaseImpl {
     fn Kind(this: &Self::This) -> ::windows_core::Result<LearningModelFeatureKind>;
@@ -76,7 +75,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILearningModelFe
         }
         ILearningModelFeatureValue_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Kind: Kind::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ILearningModelOperatorProvider_Impl: ::windows_core::BaseImpl {}
 impl ::windows_core::Iids for ILearningModelOperatorProvider {
@@ -84,7 +82,6 @@ impl ::windows_core::Iids for ILearningModelOperatorProvider {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILearningModelOperatorProvider_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ILearningModelOperatorProvider {
     const VTABLE: Self::Vtable = { ILearningModelOperatorProvider_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -125,5 +122,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITensor_Impl, co
             Shape: Shape::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

@@ -28,7 +28,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D11On12Device
             AcquireWrappedResources: AcquireWrappedResources::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D11\"`, `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(all(feature = "Win32_Graphics_Direct3D11", feature = "Win32_Graphics_Direct3D12"))]
@@ -47,7 +46,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D11On12Device
         }
         ID3D11On12Device1_Vtbl { base__: <ID3D11On12Device as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetD3D12Device: GetD3D12Device::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D11\"`, `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(all(feature = "Win32_Graphics_Direct3D11", feature = "Win32_Graphics_Direct3D12"))]
@@ -74,5 +72,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D11On12Device
             ReturnUnderlyingResource: ReturnUnderlyingResource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

@@ -14,7 +14,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDevicesA
             CreateFromWin32Handle: CreateFromWin32Handle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWindowsDevicesAllJoynBusAttachmentInterop_Impl: ::windows_core::BaseImpl {
     fn Win32Handle(this: &Self::This) -> ::windows_core::Result<u64>;
@@ -35,7 +34,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDevicesA
         }
         IWindowsDevicesAllJoynBusAttachmentInterop_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Win32Handle: Win32Handle::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWindowsDevicesAllJoynBusObjectFactoryInterop_Impl: ::windows_core::BaseImpl {
     fn CreateFromWin32Handle(this: &Self::This, win32handle: u64, riid: *const ::windows_core::GUID, ppv: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -53,7 +51,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDevicesA
             CreateFromWin32Handle: CreateFromWin32Handle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWindowsDevicesAllJoynBusObjectInterop_Impl: ::windows_core::BaseImpl {
     fn AddPropertyGetHandler(this: &Self::This, context: *const ::core::ffi::c_void, interfacename: &::windows_core::HSTRING, callback: isize) -> ::windows_core::Result<()>;
@@ -87,5 +84,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsDevicesA
             Win32Handle: Win32Handle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

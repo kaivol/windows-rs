@@ -29,7 +29,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugExtendedPr
             EnumExtendedMembers: EnumExtendedMembers::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -83,7 +82,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugProperty_I
             GetParent: GetParent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugPropertyEnumType_All_Impl: ::windows_core::BaseImpl {
     fn GetName(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -104,7 +102,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugPropertyEn
         }
         IDebugPropertyEnumType_All_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetName: GetName::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugPropertyEnumType_Arguments_Impl: ::windows_core::BaseImpl + IDebugPropertyEnumType_All_Impl {}
 impl ::windows_core::Iids for IDebugPropertyEnumType_Arguments {
@@ -112,7 +109,6 @@ impl ::windows_core::Iids for IDebugPropertyEnumType_Arguments {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugPropertyEnumType_Arguments_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDebugPropertyEnumType_Arguments {
     const VTABLE: Self::Vtable = { IDebugPropertyEnumType_Arguments_Vtbl { base__: <IDebugPropertyEnumType_All as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugPropertyEnumType_Locals_Impl: ::windows_core::BaseImpl + IDebugPropertyEnumType_All_Impl {}
 impl ::windows_core::Iids for IDebugPropertyEnumType_Locals {
@@ -120,7 +116,6 @@ impl ::windows_core::Iids for IDebugPropertyEnumType_Locals {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugPropertyEnumType_Locals_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDebugPropertyEnumType_Locals {
     const VTABLE: Self::Vtable = { IDebugPropertyEnumType_Locals_Vtbl { base__: <IDebugPropertyEnumType_All as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugPropertyEnumType_LocalsPlusArgs_Impl: ::windows_core::BaseImpl + IDebugPropertyEnumType_All_Impl {}
 impl ::windows_core::Iids for IDebugPropertyEnumType_LocalsPlusArgs {
@@ -128,7 +123,6 @@ impl ::windows_core::Iids for IDebugPropertyEnumType_LocalsPlusArgs {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugPropertyEnumType_LocalsPlusArgs_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDebugPropertyEnumType_LocalsPlusArgs {
     const VTABLE: Self::Vtable = { IDebugPropertyEnumType_LocalsPlusArgs_Vtbl { base__: <IDebugPropertyEnumType_All as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDebugPropertyEnumType_Registers_Impl: ::windows_core::BaseImpl + IDebugPropertyEnumType_All_Impl {}
 impl ::windows_core::Iids for IDebugPropertyEnumType_Registers {
@@ -136,7 +130,6 @@ impl ::windows_core::Iids for IDebugPropertyEnumType_Registers {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDebugPropertyEnumType_Registers_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDebugPropertyEnumType_Registers {
     const VTABLE: Self::Vtable = { IDebugPropertyEnumType_Registers_Vtbl { base__: <IDebugPropertyEnumType_All as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -190,7 +183,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumDebugExtend
             GetCount: GetCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumDebugPropertyInfo_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, pi: *mut DebugPropertyInfo, pceltsfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -240,7 +232,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumDebugProper
             GetCount: GetCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IObjectSafety_Impl: ::windows_core::BaseImpl {
     fn GetInterfaceSafetyOptions(this: &Self::This, riid: *const ::windows_core::GUID, pdwsupportedoptions: *mut u32, pdwenabledoptions: *mut u32) -> ::windows_core::Result<()>;
@@ -263,7 +254,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IObjectSafety_Im
             SetInterfaceSafetyOptions: SetInterfaceSafetyOptions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Ole\"`"]
 #[cfg(feature = "Win32_System_Ole")]
@@ -312,5 +302,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPerPropertyBrow
             SetPredefinedValue: SetPredefinedValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

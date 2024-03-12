@@ -75,5 +75,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAccessoryNotifi
             SetStartedProcessing: SetStartedProcessing::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

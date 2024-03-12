@@ -90,7 +90,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICivicAddressRep
             GetDetailLevel: GetDetailLevel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -118,7 +117,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICivicAddressRep
             CivicAddressReport: CivicAddressReport::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDefaultLocation_Impl: ::windows_core::BaseImpl {
     fn SetReport(this: &Self::This, reporttype: *const ::windows_core::GUID, plocationreport: ::core::option::Option<&ILocationReport>) -> ::windows_core::Result<()>;
@@ -147,7 +145,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDefaultLocation
             GetReport: GetReport::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -252,7 +249,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDispCivicAddres
             Timestamp: Timestamp::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -335,7 +331,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDispLatLongRepo
             Timestamp: Timestamp::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -407,7 +402,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILatLongReport_I
             GetAltitudeError: GetAltitudeError::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -432,7 +426,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILatLongReportFa
         }
         ILatLongReportFactory_Vtbl { base__: <ILocationReportFactory as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, LatLongReport: LatLongReport::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Devices_Sensors\"`, `\"Win32_Foundation\"`"]
 #[cfg(all(feature = "Win32_Devices_Sensors", feature = "Win32_Foundation"))]
@@ -518,7 +511,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILocation_Impl, 
             RequestPermissions: RequestPermissions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ILocationEvents_Impl: ::windows_core::BaseImpl {
     fn OnLocationChanged(this: &Self::This, reporttype: *const ::windows_core::GUID, plocationreport: ::core::option::Option<&ILocationReport>) -> ::windows_core::Result<()>;
@@ -541,7 +533,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILocationEvents_
             OnStatusChanged: OnStatusChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ILocationPower_Impl: ::windows_core::BaseImpl {
     fn Connect(this: &Self::This) -> ::windows_core::Result<()>;
@@ -564,7 +555,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILocationPower_I
             Disconnect: Disconnect::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -614,7 +604,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILocationReport_
             GetValue: GetValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -689,7 +678,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ILocationReportF
             RequestPermissions: RequestPermissions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -701,7 +689,6 @@ impl ::windows_core::Iids for _ICivicAddressReportFactoryEvents {
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: _ICivicAddressReportFactoryEvents_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for _ICivicAddressReportFactoryEvents {
     const VTABLE: Self::Vtable = { _ICivicAddressReportFactoryEvents_Vtbl { base__: <super::super::System::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -713,5 +700,4 @@ impl ::windows_core::Iids for _ILatLongReportFactoryEvents {
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: _ILatLongReportFactoryEvents_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for _ILatLongReportFactoryEvents {
     const VTABLE: Self::Vtable = { _ILatLongReportFactoryEvents_Vtbl { base__: <super::super::System::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

@@ -68,5 +68,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPropertyAnimati
             Control2: Control2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

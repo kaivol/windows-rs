@@ -46,7 +46,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumWIA_DEV_CAP
             GetCount: GetCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumWIA_DEV_INFO_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, rgelt: *mut ::core::option::Option<IWiaPropertyStorage>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -96,7 +95,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumWIA_DEV_INF
             GetCount: GetCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumWIA_FORMAT_INFO_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, rgelt: *mut WIA_FORMAT_INFO, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -146,7 +144,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumWIA_FORMAT_
             GetCount: GetCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumWiaItem_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, ppiwiaitem: *mut ::core::option::Option<IWiaItem>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -196,7 +193,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumWiaItem_Imp
             GetCount: GetCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumWiaItem2_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, celt: u32, ppiwiaitem2: *mut ::core::option::Option<IWiaItem2>, pceltfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -246,7 +242,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumWiaItem2_Im
             GetCount: GetCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -279,7 +274,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaAppErrorHand
             ReportStatus: ReportStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWiaDataCallback_Impl: ::windows_core::BaseImpl {
     fn BandedDataCallback(this: &Self::This, lmessage: i32, lstatus: i32, lpercentcomplete: i32, loffset: i32, llength: i32, lreserved: i32, lreslength: i32, pbbuffer: *mut u8) -> ::windows_core::Result<()>;
@@ -297,7 +291,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaDataCallback
             BandedDataCallback: BandedDataCallback::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com_StructuredStorage\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com_StructuredStorage"))]
@@ -345,7 +338,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaDataTransfer
             idtGetExtendedTransferInfo: idtGetExtendedTransferInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -425,7 +417,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaDevMgr_Impl,
             AddDeviceDlg: AddDeviceDlg::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -500,7 +491,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaDevMgr2_Impl
             GetImageDlg: GetImageDlg::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWiaDrvItem_Impl: ::windows_core::BaseImpl {
     fn GetItemFlags(this: &Self::This) -> ::windows_core::Result<i32>;
@@ -638,7 +628,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaDrvItem_Impl
             DumpItemData: DumpItemData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -671,7 +660,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaErrorHandler
             GetStatusDescription: GetStatusDescription::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWiaEventCallback_Impl: ::windows_core::BaseImpl {
     fn ImageEventCallback(this: &Self::This, peventguid: *const ::windows_core::GUID, bstreventdescription: &::windows_core::BSTR, bstrdeviceid: &::windows_core::BSTR, bstrdevicedescription: &::windows_core::BSTR, dwdevicetype: u32, bstrfullitemname: &::windows_core::BSTR, puleventtype: *mut u32, ulreserved: u32) -> ::windows_core::Result<()>;
@@ -689,7 +677,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaEventCallbac
             ImageEventCallback: ImageEventCallback::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -726,7 +713,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaImageFilter_
             ApplyProperties: ApplyProperties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -878,7 +864,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaItem_Impl, c
             Diagnostic: Diagnostic::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1035,7 +1020,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaItem2_Impl, 
             Diagnostic: Diagnostic::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWiaItemExtras_Impl: ::windows_core::BaseImpl {
     fn GetExtendedErrorInfo(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -1069,7 +1053,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaItemExtras_I
             CancelPendingIO: CancelPendingIO::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWiaLog_Impl: ::windows_core::BaseImpl {
     fn InitializeLog(this: &Self::This, hinstance: i32) -> ::windows_core::Result<()>;
@@ -1097,7 +1080,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaLog_Impl, co
             Log: Log::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWiaLogEx_Impl: ::windows_core::BaseImpl {
     fn InitializeLogEx(this: &Self::This, hinstance: *const u8) -> ::windows_core::Result<()>;
@@ -1135,7 +1117,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaLogEx_Impl, 
             LogEx: LogEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage"))]
@@ -1299,7 +1280,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaMiniDrv_Impl
             drvUnInitializeWia: drvUnInitializeWia::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1321,7 +1301,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaMiniDrvCallB
             MiniDrvCallback: MiniDrvCallback::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1354,7 +1333,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaMiniDrvTrans
             SendMessage: SendMessage::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWiaNotifyDevMgr_Impl: ::windows_core::BaseImpl {
     fn NewDeviceArrival(this: &Self::This) -> ::windows_core::Result<()>;
@@ -1372,7 +1350,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaNotifyDevMgr
             NewDeviceArrival: NewDeviceArrival::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWiaPreview_Impl: ::windows_core::BaseImpl {
     fn GetNewPreview(this: &Self::This, lflags: i32, pwiaitem2: ::core::option::Option<&IWiaItem2>, pwiatransfercallback: ::core::option::Option<&IWiaTransferCallback>) -> ::windows_core::Result<()>;
@@ -1405,7 +1382,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaPreview_Impl
             Clear: Clear::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -1514,7 +1490,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaPropertyStor
             SetPropertyStream: SetPropertyStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1533,7 +1508,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaSegmentation
         }
         IWiaSegmentationFilter_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, DetectRegions: DetectRegions::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1576,7 +1550,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaTransfer_Imp
             EnumWIA_FORMAT_INFO: EnumWIA_FORMAT_INFO::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1609,7 +1582,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaTransferCall
             GetNextStream: GetNextStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi", feature = "Win32_UI_WindowsAndMessaging"))]
@@ -1641,7 +1613,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaUIExtension_
             GetDeviceBitmapLogo: GetDeviceBitmapLogo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
@@ -1668,7 +1639,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaUIExtension2
             GetDeviceIcon: GetDeviceIcon::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1774,5 +1744,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWiaVideo_Impl, 
             GetCurrentState: GetCurrentState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

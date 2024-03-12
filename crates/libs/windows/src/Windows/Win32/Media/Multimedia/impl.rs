@@ -44,7 +44,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAVIEditStream_I
             SetInfo: SetInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -96,7 +95,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAVIFile_Impl, c
             DeleteStream: DeleteStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -118,7 +116,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAVIPersistFile_
             Reserved1: Reserved1::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -190,7 +187,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAVIStream_Impl,
             SetInfo: SetInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAVIStreaming_Impl: ::windows_core::BaseImpl {
     fn Begin(this: &Self::This, lstart: i32, lend: i32, lrate: i32) -> ::windows_core::Result<()>;
@@ -213,7 +209,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAVIStreaming_Im
             End: End::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
 #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -250,5 +245,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGetFrame_Impl, 
             SetFormat: SetFormat::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

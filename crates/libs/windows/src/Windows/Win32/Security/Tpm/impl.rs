@@ -48,7 +48,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITpmVirtualSmart
             DestroyVirtualSmartCard: DestroyVirtualSmartCard::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -91,7 +90,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITpmVirtualSmart
             CreateVirtualSmartCardWithPinPolicy: CreateVirtualSmartCardWithPinPolicy::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -138,7 +136,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITpmVirtualSmart
             CreateVirtualSmartCardWithAttestation: CreateVirtualSmartCardWithAttestation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITpmVirtualSmartCardManagerStatusCallback_Impl: ::windows_core::BaseImpl {
     fn ReportProgress(this: &Self::This, status: TPMVSCMGR_STATUS) -> ::windows_core::Result<()>;
@@ -161,5 +158,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITpmVirtualSmart
             ReportError: ReportError::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

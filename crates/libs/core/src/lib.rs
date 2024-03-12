@@ -2,6 +2,7 @@
 Learn more about Rust for Windows here: <https://github.com/microsoft/windows-rs>
 */
 
+#![feature(freeze)]
 #![doc(html_no_source)]
 #![allow(non_snake_case)]
 #![cfg_attr(

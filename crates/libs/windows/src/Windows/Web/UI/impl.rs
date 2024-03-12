@@ -480,7 +480,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebViewControl_
             RemoveWebResourceRequested: RemoveWebResourceRequested::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWebViewControl2_Impl: ::windows_core::BaseImpl {
     fn AddInitializeScript(this: &Self::This, script: &::windows_core::HSTRING) -> ::windows_core::Result<()>;
@@ -498,5 +497,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebViewControl2
             AddInitializeScript: AddInitializeScript::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

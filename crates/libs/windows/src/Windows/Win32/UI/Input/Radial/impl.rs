@@ -15,7 +15,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRadialControlle
         }
         IRadialControllerConfigurationInterop_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetForWindow: GetForWindow::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -37,7 +36,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRadialControlle
             CreateForWindow: CreateForWindow::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -59,5 +57,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRadialControlle
             CreateForWindow: CreateForWindow::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

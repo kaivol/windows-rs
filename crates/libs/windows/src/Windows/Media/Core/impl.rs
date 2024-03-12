@@ -62,7 +62,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMediaCue_Impl, 
             Id: Id::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMediaSource_Impl: ::windows_core::BaseImpl {}
 impl ::windows_core::Iids for IMediaSource {
@@ -70,7 +69,6 @@ impl ::windows_core::Iids for IMediaSource {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMediaSource_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IMediaSource {
     const VTABLE: Self::Vtable = { IMediaSource_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMediaStreamDescriptor_Impl: ::windows_core::BaseImpl {
     fn IsSelected(this: &Self::This) -> ::windows_core::Result<bool>;
@@ -128,7 +126,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMediaStreamDesc
             Language: Language::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMediaStreamDescriptor2_Impl: ::windows_core::BaseImpl + IMediaStreamDescriptor_Impl {
     fn SetLabel(this: &Self::This, value: &::windows_core::HSTRING) -> ::windows_core::Result<()>;
@@ -159,7 +156,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMediaStreamDesc
             Label: Label::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMediaTrack_Impl: ::windows_core::BaseImpl {
     fn Id(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -224,7 +220,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMediaTrack_Impl
             Label: Label::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -273,7 +268,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISingleSelectMed
             SelectedIndex: SelectedIndex::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -302,5 +296,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITimedMetadataTr
             TimedMetadataTracks: TimedMetadataTracks::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

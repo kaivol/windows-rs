@@ -20,7 +20,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreAutomationC
             IsComThreadingRequired: IsComThreadingRequired::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICoreAutomationRemoteOperationExtensionProvider_Impl: ::windows_core::BaseImpl {
     fn CallExtension(this: &Self::This, extensionid: &::windows_core::GUID, context: ::core::option::Option<&CoreAutomationRemoteOperationContext>, operandids: &[AutomationRemoteOperationOperandId]) -> ::windows_core::Result<()>;
@@ -49,5 +48,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreAutomationR
             IsExtensionSupported: IsExtensionSupported::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

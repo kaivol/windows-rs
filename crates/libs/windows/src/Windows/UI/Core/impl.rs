@@ -29,7 +29,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreAccelerator
             RemoveAcceleratorKeyActivated: RemoveAcceleratorKeyActivated::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -90,7 +89,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreInputSource
             RemoveInputEnabled: RemoveInputEnabled::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -268,7 +266,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorePointerInpu
             RemovePointerWheelChanged: RemovePointerWheelChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"System\"`"]
 #[cfg(all(feature = "Foundation", feature = "System"))]
@@ -298,7 +295,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorePointerInpu
             DispatcherQueue: DispatcherQueue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -363,7 +359,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICorePointerRedi
             RemovePointerRoutedReleased: RemovePointerRoutedReleased::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"System\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "System"))]
@@ -812,7 +807,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreWindow_Impl
             RemoveVisibilityChanged: RemoveVisibilityChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICoreWindowEventArgs_Impl: ::windows_core::BaseImpl {
     fn Handled(this: &Self::This) -> ::windows_core::Result<bool>;
@@ -841,7 +835,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICoreWindowEvent
             SetHandled: SetHandled::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IInitializeWithCoreWindow_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, window: ::core::option::Option<&CoreWindow>) -> ::windows_core::Result<()>;
@@ -856,5 +849,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInitializeWithC
         }
         IInitializeWithCoreWindow_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Initialize: Initialize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

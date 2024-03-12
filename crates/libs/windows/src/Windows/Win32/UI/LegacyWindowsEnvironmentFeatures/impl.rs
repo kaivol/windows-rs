@@ -33,7 +33,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IADesktopP2_Impl
             MakeDynamicChanges: MakeDynamicChanges::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IActiveDesktopP_Impl: ::windows_core::BaseImpl {
     fn SetSafeMode(this: &Self::This, dwflags: u32) -> ::windows_core::Result<()>;
@@ -66,7 +65,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IActiveDesktopP_
             GetScheme: GetScheme::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -88,7 +86,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBriefcaseInitia
             IsMonikerInBriefcase: IsMonikerInBriefcase::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Registry\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Registry"))]
@@ -136,7 +133,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEmptyVolumeCach
             Deactivate: Deactivate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Registry\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Registry"))]
@@ -155,7 +151,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEmptyVolumeCach
         }
         IEmptyVolumeCache2_Vtbl { base__: <IEmptyVolumeCache as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, InitializeEx: InitializeEx::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEmptyVolumeCacheCallBack_Impl: ::windows_core::BaseImpl {
     fn ScanProgress(this: &Self::This, dwlspaceused: u64, dwflags: u32, pcwszstatus: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -178,7 +173,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEmptyVolumeCach
             PurgeProgress: PurgeProgress::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage"))]
@@ -211,7 +205,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IReconcilableObj
             GetProgressFeedbackMaxEstimate: GetProgressFeedbackMaxEstimate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IReconcileInitiator_Impl: ::windows_core::BaseImpl {
     fn SetAbortCallback(this: &Self::This, punkforabort: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -234,5 +227,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IReconcileInitia
             SetProgressFeedback: SetProgressFeedback::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

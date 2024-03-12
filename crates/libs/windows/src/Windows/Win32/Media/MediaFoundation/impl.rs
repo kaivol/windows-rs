@@ -20,7 +20,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAdvancedMediaCa
             GetAdvancedMediaCaptureSettings: GetAdvancedMediaCaptureSettings::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAdvancedMediaCaptureInitializationSettings_Impl: ::windows_core::BaseImpl {
     fn SetDirectxDeviceManager(this: &Self::This, value: ::core::option::Option<&IMFDXGIDeviceManager>) -> ::windows_core::Result<()>;
@@ -38,7 +37,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAdvancedMediaCa
             SetDirectxDeviceManager: SetDirectxDeviceManager::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAdvancedMediaCaptureSettings_Impl: ::windows_core::BaseImpl {
     fn GetDirectxDeviceManager(this: &Self::This) -> ::windows_core::Result<IMFDXGIDeviceManager>;
@@ -62,7 +60,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAdvancedMediaCa
             GetDirectxDeviceManager: GetDirectxDeviceManager::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioSourceProvider_Impl: ::windows_core::BaseImpl {
     fn ProvideInput(this: &Self::This, dwsamplecount: u32, pdwchannelcount: *mut u32, pinterleavedaudiodata: *mut f32) -> ::windows_core::Result<()>;
@@ -77,7 +74,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioSourceProv
         }
         IAudioSourceProvider_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ProvideInput: ProvideInput::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IClusterDetector_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, wbaseentrylevel: u16, wclusterentrylevel: u16) -> ::windows_core::Result<()>;
@@ -106,7 +102,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IClusterDetector
             Detect: Detect::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -210,7 +205,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICodecAPI_Impl, 
             SetAllSettingsWithNotify: SetAllSettingsWithNotify::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -297,7 +291,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoDecod
             WriteBufferImmediate: WriteBufferImmediate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -316,7 +309,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoDecod
         }
         ID3D12VideoDecodeCommandList1_Vtbl { base__: <ID3D12VideoDecodeCommandList as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, DecodeFrame1: DecodeFrame1::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -348,7 +340,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoDecod
             ExecuteExtensionCommand: ExecuteExtensionCommand::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -367,7 +358,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoDecod
         }
         ID3D12VideoDecodeCommandList3_Vtbl { base__: <ID3D12VideoDecodeCommandList2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Barrier: Barrier::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D12")]
@@ -389,7 +379,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoDecod
             GetDesc: GetDesc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D12")]
@@ -411,7 +400,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoDecod
             GetProtectedResourceSession: GetProtectedResourceSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -433,7 +421,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoDecod
             GetDesc: GetDesc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -455,7 +442,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoDecod
             GetProtectedResourceSession: GetProtectedResourceSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -492,7 +478,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoDevic
             CreateVideoProcessor: CreateVideoProcessor::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -519,7 +504,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoDevic
             CreateVideoMotionVectorHeap: CreateVideoMotionVectorHeap::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -561,7 +545,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoDevic
             ExecuteExtensionCommand: ExecuteExtensionCommand::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -588,7 +571,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoDevic
             CreateVideoEncoderHeap: CreateVideoEncoderHeap::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D12"))]
@@ -685,7 +667,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoEncod
             SetProtectedResourceSession: SetProtectedResourceSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D12"))]
@@ -712,7 +693,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoEncod
             ExecuteExtensionCommand: ExecuteExtensionCommand::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -739,7 +719,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoEncod
             ResolveEncoderOutputMetadata: ResolveEncoderOutputMetadata::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -758,7 +737,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoEncod
         }
         ID3D12VideoEncodeCommandList3_Vtbl { base__: <ID3D12VideoEncodeCommandList2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Barrier: Barrier::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -810,7 +788,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoEncod
             GetMaxMotionEstimationPrecision: GetMaxMotionEstimationPrecision::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D12")]
@@ -862,7 +839,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoEncod
             GetResolutionList: GetResolutionList::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D12")]
@@ -889,7 +865,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoExten
             GetProtectedResourceSession: GetProtectedResourceSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -916,7 +891,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoMotio
             GetProtectedResourceSession: GetProtectedResourceSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -943,7 +917,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoMotio
             GetProtectedResourceSession: GetProtectedResourceSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D12"))]
@@ -1030,7 +1003,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoProce
             WriteBufferImmediate: WriteBufferImmediate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D12"))]
@@ -1052,7 +1024,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoProce
             ProcessFrames1: ProcessFrames1::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D12"))]
@@ -1084,7 +1055,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoProce
             ExecuteExtensionCommand: ExecuteExtensionCommand::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D12"))]
@@ -1103,7 +1073,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoProce
         }
         ID3D12VideoProcessCommandList3_Vtbl { base__: <ID3D12VideoProcessCommandList2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Barrier: Barrier::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -1140,7 +1109,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoProce
             GetOutputStreamDesc: GetOutputStreamDesc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -1162,7 +1130,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D12VideoProce
             GetProtectedResourceSession: GetProtectedResourceSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D9\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D9"))]
@@ -1231,7 +1198,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXVAHD_Device_I
             CreateVideoProcessor: CreateVideoProcessor::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D9\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D9"))]
@@ -1273,7 +1239,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXVAHD_VideoPro
             VideoProcessBltHD: VideoProcessBltHD::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D9\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D9")]
@@ -1295,7 +1260,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3D9ExOver
             CheckDeviceOverlayType: CheckDeviceOverlayType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D9\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D9"))]
@@ -1337,7 +1301,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DAuthent
             Configure: Configure::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D9\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D9")]
@@ -1399,7 +1362,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DCryptoS
             GetEncryptionBltKey: GetEncryptionBltKey::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D9\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D9"))]
@@ -1431,7 +1393,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DDevice9
             CreateCryptoSession: CreateCryptoSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D9\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D9"))]
@@ -1489,7 +1450,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirect3DDeviceM
             GetVideoService: GetVideoService::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D9\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D9"))]
@@ -1508,7 +1468,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectXVideoAcc
         }
         IDirectXVideoAccelerationService_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateSurface: CreateSurface::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D9\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D9"))]
@@ -1566,7 +1525,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectXVideoDec
             Execute: Execute::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D9\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D9"))]
@@ -1609,7 +1567,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectXVideoDec
             CreateVideoDecoder: CreateVideoDecoder::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDirectXVideoMemoryConfiguration_Impl: ::windows_core::BaseImpl {
     fn GetAvailableSurfaceTypeByIndex(this: &Self::This, dwtypeindex: u32) -> ::windows_core::Result<DXVA2_SurfaceType>;
@@ -1638,7 +1595,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectXVideoMem
             SetSurfaceType: SetSurfaceType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D9\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D9"))]
@@ -1703,7 +1659,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectXVideoPro
             VideoProcessBlt: VideoProcessBlt::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D9\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D9"))]
@@ -1778,7 +1733,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDirectXVideoPro
             CreateVideoProcessor: CreateVideoProcessor::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEVRFilterConfig_Impl: ::windows_core::BaseImpl {
     fn SetNumberOfStreams(this: &Self::This, dwmaxstreams: u32) -> ::windows_core::Result<()>;
@@ -1807,7 +1761,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEVRFilterConfig
             GetNumberOfStreams: GetNumberOfStreams::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEVRFilterConfigEx_Impl: ::windows_core::BaseImpl + IEVRFilterConfig_Impl {
     fn SetConfigPrefs(this: &Self::This, dwconfigflags: u32) -> ::windows_core::Result<()>;
@@ -1836,7 +1789,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEVRFilterConfig
             GetConfigPrefs: GetConfigPrefs::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1885,7 +1837,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEVRTrustedVideo
             DisableImageExport: DisableImageExport::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1918,7 +1869,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEVRVideoStreamC
             GetStreamActiveState: GetStreamActiveState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IFileClient_Impl: ::windows_core::BaseImpl {
     fn GetObjectDiskSize(this: &Self::This, pqwsize: *mut u64) -> ::windows_core::Result<()>;
@@ -1946,7 +1896,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileClient_Impl
             Read: Read::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2013,7 +1962,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFileIo_Impl, co
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2077,7 +2025,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMF2DBuffer_Impl
             ContiguousCopyFrom: ContiguousCopyFrom::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2104,7 +2051,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMF2DBuffer2_Imp
             Copy2DTo: Copy2DTo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -2186,7 +2132,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFASFContentInf
             GetEncodingConfigurationPropertyStore: GetEncodingConfigurationPropertyStore::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -2292,7 +2237,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFASFIndexer_Im
             GetCompletedIndex: GetCompletedIndex::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFASFMultiplexer_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, picontentinfo: ::core::option::Option<&IMFASFContentInfo>) -> ::windows_core::Result<()>;
@@ -2362,7 +2306,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFASFMultiplexe
             SetSyncTolerance: SetSyncTolerance::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFASFMutualExclusion_Impl: ::windows_core::BaseImpl {
     fn GetType(this: &Self::This) -> ::windows_core::Result<::windows_core::GUID>;
@@ -2444,7 +2387,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFASFMutualExcl
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -2595,7 +2537,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFASFProfile_Im
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFASFSplitter_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, picontentinfo: ::core::option::Option<&IMFASFContentInfo>) -> ::windows_core::Result<()>;
@@ -2665,7 +2606,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFASFSplitter_I
             GetLastSendTime: GetLastSendTime::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -2756,7 +2696,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFASFStreamConf
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFASFStreamPrioritization_Impl: ::windows_core::BaseImpl {
     fn GetStreamCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -2806,7 +2745,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFASFStreamPrio
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFASFStreamSelector_Impl: ::windows_core::BaseImpl {
     fn GetStreamCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -2949,7 +2887,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFASFStreamSele
             SetStreamSelectorFlags: SetStreamSelectorFlags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -2981,7 +2918,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFActivate_Impl
             DetachObject: DetachObject::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFAsyncCallback_Impl: ::windows_core::BaseImpl {
     fn GetParameters(this: &Self::This, pdwflags: *mut u32, pdwqueue: *mut u32) -> ::windows_core::Result<()>;
@@ -3004,7 +2940,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFAsyncCallback
             Invoke: Invoke::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFAsyncCallbackLogging_Impl: ::windows_core::BaseImpl + IMFAsyncCallback_Impl {
     fn GetObjectPointer(this: &Self::This) -> *mut ::core::ffi::c_void;
@@ -3027,7 +2962,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFAsyncCallback
             GetObjectTag: GetObjectTag::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFAsyncResult_Impl: ::windows_core::BaseImpl {
     fn GetState(this: &Self::This) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -3077,7 +3011,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFAsyncResult_I
             GetStateNoAddRef: GetStateNoAddRef::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -3304,7 +3237,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFAttributes_Im
             CopyAllItems: CopyAllItems::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_Audio\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_Audio", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -3323,7 +3255,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFAudioMediaTyp
         }
         IMFAudioMediaType_Vtbl { base__: <IMFMediaType as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetAudioFormat: GetAudioFormat::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFAudioPolicy_Impl: ::windows_core::BaseImpl {
     fn SetGroupingParam(this: &Self::This, rguidclass: *const ::windows_core::GUID) -> ::windows_core::Result<()>;
@@ -3384,7 +3315,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFAudioPolicy_I
             GetIconPath: GetIconPath::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFAudioStreamVolume_Impl: ::windows_core::BaseImpl {
     fn GetChannelCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -3434,7 +3364,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFAudioStreamVo
             GetAllVolumes: GetAllVolumes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFBufferListNotify_Impl: ::windows_core::BaseImpl {
     fn OnAddSourceBuffer(this: &Self::This);
@@ -3457,7 +3386,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFBufferListNot
             OnRemoveSourceBuffer: OnRemoveSourceBuffer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3597,7 +3525,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFByteStream_Im
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3629,7 +3556,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFByteStreamBuf
             StopBuffering: StopBuffering::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFByteStreamCacheControl_Impl: ::windows_core::BaseImpl {
     fn StopBackgroundTransfer(this: &Self::This) -> ::windows_core::Result<()>;
@@ -3647,7 +3573,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFByteStreamCac
             StopBackgroundTransfer: StopBackgroundTransfer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3685,7 +3610,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFByteStreamCac
             IsBackgroundTransferActive: IsBackgroundTransferActive::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -3728,7 +3652,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFByteStreamHan
             GetMaxNumberOfBytesRequiredForResolution: GetMaxNumberOfBytesRequiredForResolution::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFByteStreamProxyClassFactory_Impl: ::windows_core::BaseImpl {
     fn CreateByteStreamProxy(this: &Self::This, pbytestream: ::core::option::Option<&IMFByteStream>, pattributes: ::core::option::Option<&IMFAttributes>, riid: *const ::windows_core::GUID, ppvobject: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -3746,7 +3669,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFByteStreamPro
             CreateByteStreamProxy: CreateByteStreamProxy::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3784,7 +3706,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFByteStreamTim
             GetTimeSeekResult: GetTimeSeekResult::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCameraConfigurationManager_Impl: ::windows_core::BaseImpl {
     fn LoadDefaults(this: &Self::This, cameraattributes: ::core::option::Option<&IMFAttributes>) -> ::windows_core::Result<IMFCameraControlDefaultsCollection>;
@@ -3818,7 +3739,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCameraConfigu
             Shutdown: Shutdown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCameraControlDefaults_Impl: ::windows_core::BaseImpl {
     fn GetType(this: &Self::This) -> MF_CAMERA_CONTROL_CONFIGURATION_TYPE;
@@ -3857,7 +3777,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCameraControl
             UnlockControlData: UnlockControlData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -3922,7 +3841,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCameraControl
             RemoveAllControls: RemoveAllControls::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCameraControlMonitor_Impl: ::windows_core::BaseImpl {
     fn Start(this: &Self::This) -> ::windows_core::Result<()>;
@@ -3960,7 +3878,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCameraControl
             Shutdown: Shutdown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCameraControlNotify_Impl: ::windows_core::BaseImpl {
     fn OnChange(this: &Self::This, controlset: *const ::windows_core::GUID, id: u32);
@@ -3983,7 +3900,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCameraControl
             OnError: OnError::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCameraOcclusionStateMonitor_Impl: ::windows_core::BaseImpl {
     fn Start(this: &Self::This) -> ::windows_core::Result<()>;
@@ -4011,7 +3927,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCameraOcclusi
             GetSupportedStates: GetSupportedStates::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCameraOcclusionStateReport_Impl: ::windows_core::BaseImpl {
     fn GetOcclusionState(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -4035,7 +3950,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCameraOcclusi
             GetOcclusionState: GetOcclusionState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCameraOcclusionStateReportCallback_Impl: ::windows_core::BaseImpl {
     fn OnOcclusionStateReport(this: &Self::This, occlusionstatereport: ::core::option::Option<&IMFCameraOcclusionStateReport>) -> ::windows_core::Result<()>;
@@ -4053,7 +3967,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCameraOcclusi
             OnOcclusionStateReport: OnOcclusionStateReport::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCameraSyncObject_Impl: ::windows_core::BaseImpl {
     fn WaitOnSignal(this: &Self::This, timeoutinms: u32) -> ::windows_core::Result<()>;
@@ -4076,7 +3989,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCameraSyncObj
             Shutdown: Shutdown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4145,7 +4057,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCaptureEngine
             GetSource: GetSource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCaptureEngineClassFactory_Impl: ::windows_core::BaseImpl {
     fn CreateInstance(this: &Self::This, clsid: *const ::windows_core::GUID, riid: *const ::windows_core::GUID, ppvobject: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -4160,7 +4071,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCaptureEngine
         }
         IMFCaptureEngineClassFactory_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateInstance: CreateInstance::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCaptureEngineOnEventCallback_Impl: ::windows_core::BaseImpl {
     fn OnEvent(this: &Self::This, pevent: ::core::option::Option<&IMFMediaEvent>) -> ::windows_core::Result<()>;
@@ -4175,7 +4085,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCaptureEngine
         }
         IMFCaptureEngineOnEventCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnEvent: OnEvent::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCaptureEngineOnSampleCallback_Impl: ::windows_core::BaseImpl {
     fn OnSample(this: &Self::This, psample: ::core::option::Option<&IMFSample>) -> ::windows_core::Result<()>;
@@ -4190,7 +4099,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCaptureEngine
         }
         IMFCaptureEngineOnSampleCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnSample: OnSample::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCaptureEngineOnSampleCallback2_Impl: ::windows_core::BaseImpl + IMFCaptureEngineOnSampleCallback_Impl {
     fn OnSynchronizedEvent(this: &Self::This, pevent: ::core::option::Option<&IMFMediaEvent>) -> ::windows_core::Result<()>;
@@ -4208,7 +4116,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCaptureEngine
             OnSynchronizedEvent: OnSynchronizedEvent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCapturePhotoConfirmation_Impl: ::windows_core::BaseImpl {
     fn SetPhotoConfirmationCallback(this: &Self::This, pnotificationcallback: ::core::option::Option<&IMFAsyncCallback>) -> ::windows_core::Result<()>;
@@ -4242,7 +4149,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCapturePhotoC
             GetPixelFormat: GetPixelFormat::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCapturePhotoSink_Impl: ::windows_core::BaseImpl + IMFCaptureSink_Impl {
     fn SetOutputFileName(this: &Self::This, filename: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -4270,7 +4176,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCapturePhotoS
             SetOutputByteStream: SetOutputByteStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4344,7 +4249,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCapturePrevie
             SetCustomSink: SetCustomSink::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCaptureRecordSink_Impl: ::windows_core::BaseImpl + IMFCaptureSink_Impl {
     fn SetOutputByteStream(this: &Self::This, pbytestream: ::core::option::Option<&IMFByteStream>, guidcontainertype: *const ::windows_core::GUID) -> ::windows_core::Result<()>;
@@ -4393,7 +4297,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCaptureRecord
             SetRotation: SetRotation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCaptureSink_Impl: ::windows_core::BaseImpl {
     fn GetOutputMediaType(this: &Self::This, dwsinkstreamindex: u32, ppmediatype: *mut ::core::option::Option<IMFMediaType>) -> ::windows_core::Result<()>;
@@ -4431,7 +4334,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCaptureSink_I
             RemoveAllStreams: RemoveAllStreams::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCaptureSink2_Impl: ::windows_core::BaseImpl + IMFCaptureSink_Impl {
     fn SetOutputMediaType(this: &Self::This, dwstreamindex: u32, pmediatype: ::core::option::Option<&IMFMediaType>, pencodingattributes: ::core::option::Option<&IMFAttributes>) -> ::windows_core::Result<()>;
@@ -4446,7 +4348,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCaptureSink2_
         }
         IMFCaptureSink2_Vtbl { base__: <IMFCaptureSink as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetOutputMediaType: SetOutputMediaType::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4563,7 +4464,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCaptureSource
             GetStreamIndexFromFriendlyName: GetStreamIndexFromFriendlyName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCdmSuspendNotify_Impl: ::windows_core::BaseImpl {
     fn Begin(this: &Self::This) -> ::windows_core::Result<()>;
@@ -4586,7 +4486,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCdmSuspendNot
             End: End::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFClock_Impl: ::windows_core::BaseImpl {
     fn GetClockCharacteristics(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -4642,7 +4541,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFClock_Impl, c
             GetProperties: GetProperties::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFClockConsumer_Impl: ::windows_core::BaseImpl {
     fn SetPresentationClock(this: &Self::This, ppresentationclock: ::core::option::Option<&IMFPresentationClock>) -> ::windows_core::Result<()>;
@@ -4671,7 +4569,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFClockConsumer
             GetPresentationClock: GetPresentationClock::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFClockStateSink_Impl: ::windows_core::BaseImpl {
     fn OnClockStart(this: &Self::This, hnssystemtime: i64, llclockstartoffset: i64) -> ::windows_core::Result<()>;
@@ -4709,7 +4606,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFClockStateSin
             OnClockSetRate: OnClockSetRate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFCollection_Impl: ::windows_core::BaseImpl {
     fn GetElementCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -4770,7 +4666,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFCollection_Im
             RemoveAllElements: RemoveAllElements::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFContentDecryptionModule_Impl: ::windows_core::BaseImpl {
     fn SetContentEnabler(this: &Self::This, contentenabler: ::core::option::Option<&IMFContentEnabler>, result: ::core::option::Option<&IMFAsyncResult>) -> ::windows_core::Result<()>;
@@ -4836,7 +4731,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFContentDecryp
             GetProtectionSystemIds: GetProtectionSystemIds::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -4886,7 +4780,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFContentDecryp
             GetKeySystem: GetKeySystem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -4919,7 +4812,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFContentDecryp
             CreateContentDecryptionModuleAccess: CreateContentDecryptionModuleAccess::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4994,7 +4886,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFContentDecryp
             Remove: Remove::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFContentDecryptionModuleSessionCallbacks_Impl: ::windows_core::BaseImpl {
     fn KeyMessage(this: &Self::This, messagetype: MF_MEDIAKEYSESSION_MESSAGETYPE, message: *const u8, messagesize: u32, destinationurl: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -5017,7 +4908,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFContentDecryp
             KeyStatusChanged: KeyStatusChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFContentDecryptorContext_Impl: ::windows_core::BaseImpl {
     fn InitializeHardwareKey(this: &Self::This, inputprivatedatabytecount: u32, inputprivatedata: *const ::core::ffi::c_void) -> ::windows_core::Result<u64>;
@@ -5041,7 +4931,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFContentDecryp
             InitializeHardwareKey: InitializeHardwareKey::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5105,7 +4994,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFContentEnable
             Cancel: Cancel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFContentProtectionDevice_Impl: ::windows_core::BaseImpl {
     fn InvokeFunction(this: &Self::This, functionid: u32, inputbufferbytecount: u32, inputbuffer: *const u8, outputbufferbytecount: *mut u32, outputbuffer: *mut u8) -> ::windows_core::Result<()>;
@@ -5128,7 +5016,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFContentProtec
             GetPrivateDataByteCount: GetPrivateDataByteCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFContentProtectionManager_Impl: ::windows_core::BaseImpl {
     fn BeginEnableContent(this: &Self::This, penableractivate: ::core::option::Option<&IMFActivate>, ptopo: ::core::option::Option<&IMFTopology>, pcallback: ::core::option::Option<&IMFAsyncCallback>, punkstate: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -5151,7 +5038,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFContentProtec
             EndEnableContent: EndEnableContent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5178,7 +5064,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFD3D12Synchron
             Reset: Reset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D12"))]
@@ -5215,7 +5100,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFD3D12Synchron
             EnqueueResourceRelease: EnqueueResourceRelease::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5234,7 +5118,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFDLNASinkInit_
         }
         IMFDLNASinkInit_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Initialize: Initialize::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFDRMNetHelper_Impl: ::windows_core::BaseImpl {
     fn ProcessLicenseRequest(this: &Self::This, plicenserequest: *const u8, cblicenserequest: u32, pplicenseresponse: *mut *mut u8, pcblicenseresponse: *mut u32, pbstrkid: *mut ::windows_core::BSTR) -> ::windows_core::Result<()>;
@@ -5257,7 +5140,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFDRMNetHelper_
             GetChainedLicenseResponse: GetChainedLicenseResponse::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFDXGIBuffer_Impl: ::windows_core::BaseImpl {
     fn GetResource(this: &Self::This, riid: *const ::windows_core::GUID, ppvobject: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -5296,7 +5178,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFDXGIBuffer_Im
             SetUnknown: SetUnknown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5354,7 +5235,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFDXGIDeviceMan
             UnlockDevice: UnlockDevice::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFDXGIDeviceManagerSource_Impl: ::windows_core::BaseImpl {
     fn GetManager(this: &Self::This) -> ::windows_core::Result<IMFDXGIDeviceManager>;
@@ -5375,7 +5255,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFDXGIDeviceMan
         }
         IMFDXGIDeviceManagerSource_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetManager: GetManager::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFDesiredSample_Impl: ::windows_core::BaseImpl {
     fn GetDesiredSampleTimeAndDuration(this: &Self::This, phnssampletime: *mut i64, phnssampleduration: *mut i64) -> ::windows_core::Result<()>;
@@ -5403,7 +5282,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFDesiredSample
             Clear: Clear::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFDeviceTransform_Impl: ::windows_core::BaseImpl {
     fn InitializeTransform(this: &Self::This, pattributes: ::core::option::Option<&IMFAttributes>) -> ::windows_core::Result<()>;
@@ -5564,7 +5442,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFDeviceTransfo
             FlushOutputStream: FlushOutputStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFDeviceTransformCallback_Impl: ::windows_core::BaseImpl {
     fn OnBufferSent(this: &Self::This, pcallbackattributes: ::core::option::Option<&IMFAttributes>, pinid: u32) -> ::windows_core::Result<()>;
@@ -5579,7 +5456,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFDeviceTransfo
         }
         IMFDeviceTransformCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnBufferSent: OnBufferSent::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFExtendedCameraControl_Impl: ::windows_core::BaseImpl {
     fn GetCapabilities(this: &Self::This) -> u64;
@@ -5622,7 +5498,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFExtendedCamer
             CommitSettings: CommitSettings::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFExtendedCameraController_Impl: ::windows_core::BaseImpl {
     fn GetExtendedCameraControl(this: &Self::This, dwstreamindex: u32, ulpropertyid: u32) -> ::windows_core::Result<IMFExtendedCameraControl>;
@@ -5646,7 +5521,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFExtendedCamer
             GetExtendedCameraControl: GetExtendedCameraControl::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFExtendedCameraIntrinsicModel_Impl: ::windows_core::BaseImpl {
     fn GetModel(this: &Self::This, pintrinsicmodel: *mut MFExtendedCameraIntrinsic_IntrinsicModel) -> ::windows_core::Result<()>;
@@ -5680,7 +5554,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFExtendedCamer
             GetDistortionModelType: GetDistortionModelType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFExtendedCameraIntrinsics_Impl: ::windows_core::BaseImpl {
     fn InitializeFromBuffer(this: &Self::This, pbbuffer: *const u8, dwbuffersize: u32) -> ::windows_core::Result<()>;
@@ -5741,7 +5614,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFExtendedCamer
             AddIntrinsicModel: AddIntrinsicModel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFExtendedCameraIntrinsicsDistortionModel6KT_Impl: ::windows_core::BaseImpl {
     fn GetDistortionModel(this: &Self::This, pdistortionmodel: *mut MFCameraIntrinsic_DistortionModel6KT) -> ::windows_core::Result<()>;
@@ -5764,7 +5636,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFExtendedCamer
             SetDistortionModel: SetDistortionModel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFExtendedCameraIntrinsicsDistortionModelArcTan_Impl: ::windows_core::BaseImpl {
     fn GetDistortionModel(this: &Self::This, pdistortionmodel: *mut MFCameraIntrinsic_DistortionModelArcTan) -> ::windows_core::Result<()>;
@@ -5787,7 +5658,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFExtendedCamer
             SetDistortionModel: SetDistortionModel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFExtendedDRMTypeSupport_Impl: ::windows_core::BaseImpl {
     fn IsTypeSupportedEx(this: &Self::This, r#type: &::windows_core::BSTR, keysystem: &::windows_core::BSTR) -> ::windows_core::Result<MF_MEDIA_ENGINE_CANPLAY>;
@@ -5811,7 +5681,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFExtendedDRMTy
             IsTypeSupportedEx: IsTypeSupportedEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFFieldOfUseMFTUnlock_Impl: ::windows_core::BaseImpl {
     fn Unlock(this: &Self::This, punkmft: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -5826,7 +5695,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFFieldOfUseMFT
         }
         IMFFieldOfUseMFTUnlock_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Unlock: Unlock::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFFinalizableMediaSink_Impl: ::windows_core::BaseImpl + IMFMediaSink_Impl {
     fn BeginFinalize(this: &Self::This, pcallback: ::core::option::Option<&IMFAsyncCallback>, punkstate: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -5849,7 +5717,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFFinalizableMe
             EndFinalize: EndFinalize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFGetService_Impl: ::windows_core::BaseImpl {
     fn GetService(this: &Self::This, guidservice: *const ::windows_core::GUID, riid: *const ::windows_core::GUID, ppvobject: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -5864,7 +5731,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFGetService_Im
         }
         IMFGetService_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetService: GetService::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -5891,7 +5757,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFHDCPStatus_Im
             Set: Set::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -6030,7 +5895,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFHttpDownloadR
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -6068,7 +5932,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFHttpDownloadS
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFHttpDownloadSessionProvider_Impl: ::windows_core::BaseImpl {
     fn CreateHttpDownloadSession(this: &Self::This, wszscheme: &::windows_core::PCWSTR) -> ::windows_core::Result<IMFHttpDownloadSession>;
@@ -6092,7 +5955,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFHttpDownloadS
             CreateHttpDownloadSession: CreateHttpDownloadSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFImageSharingEngine_Impl: ::windows_core::BaseImpl {
     fn SetSource(this: &Self::This, pstream: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -6120,7 +5982,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFImageSharingE
             Shutdown: Shutdown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFImageSharingEngineClassFactory_Impl: ::windows_core::BaseImpl {
     fn CreateInstanceFromUDN(this: &Self::This, puniquedevicename: &::windows_core::BSTR) -> ::windows_core::Result<IMFImageSharingEngine>;
@@ -6144,7 +6005,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFImageSharingE
             CreateInstanceFromUDN: CreateInstanceFromUDN::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFInputTrustAuthority_Impl: ::windows_core::BaseImpl {
     fn GetDecrypter(this: &Self::This, riid: *const ::windows_core::GUID, ppv: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -6199,7 +6059,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFInputTrustAut
             Reset: Reset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFLocalMFTRegistration_Impl: ::windows_core::BaseImpl {
     fn RegisterMFTs(this: &Self::This, pmfts: *const MFT_REGISTRATION_INFO, cmfts: u32) -> ::windows_core::Result<()>;
@@ -6214,7 +6073,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFLocalMFTRegis
         }
         IMFLocalMFTRegistration_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, RegisterMFTs: RegisterMFTs::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaBuffer_Impl: ::windows_core::BaseImpl {
     fn Lock(this: &Self::This, ppbbuffer: *mut *mut u8, pcbmaxlength: *mut u32, pcbcurrentlength: *mut u32) -> ::windows_core::Result<()>;
@@ -6264,7 +6122,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaBuffer_I
             GetMaxLength: GetMaxLength::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -6533,7 +6390,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngine_I
             OnVideoStreamTick: OnVideoStreamTick::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaEngineAudioEndpointId_Impl: ::windows_core::BaseImpl {
     fn SetAudioEndpointId(this: &Self::This, pszendpointid: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -6562,7 +6418,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngineAu
             GetAudioEndpointId: GetAudioEndpointId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaEngineClassFactory_Impl: ::windows_core::BaseImpl {
     fn CreateInstance(this: &Self::This, dwflags: u32, pattr: ::core::option::Option<&IMFAttributes>) -> ::windows_core::Result<IMFMediaEngine>;
@@ -6608,7 +6463,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngineCl
             CreateError: CreateError::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaEngineClassFactory2_Impl: ::windows_core::BaseImpl {
     fn CreateMediaKeys2(this: &Self::This, keysystem: &::windows_core::BSTR, defaultcdmstorepath: &::windows_core::BSTR, inprivatecdmstorepath: &::windows_core::BSTR) -> ::windows_core::Result<IMFMediaKeys>;
@@ -6632,7 +6486,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngineCl
             CreateMediaKeys2: CreateMediaKeys2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -6660,7 +6513,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngineCl
             CreateMediaKeySystemAccess: CreateMediaKeySystemAccess::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaEngineClassFactory4_Impl: ::windows_core::BaseImpl {
     fn CreateContentDecryptionModuleFactory(this: &Self::This, keysystem: &::windows_core::PCWSTR, riid: *const ::windows_core::GUID, ppvobject: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -6678,7 +6530,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngineCl
             CreateContentDecryptionModuleFactory: CreateContentDecryptionModuleFactory::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -6728,7 +6579,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngineCl
             IsTypeSupported: IsTypeSupported::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaEngineEME_Impl: ::windows_core::BaseImpl {
     fn Keys(this: &Self::This) -> ::windows_core::Result<IMFMediaKeys>;
@@ -6757,7 +6607,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngineEM
             SetMediaKeys: SetMediaKeys::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaEngineEMENotify_Impl: ::windows_core::BaseImpl {
     fn Encrypted(this: &Self::This, pbinitdata: *const u8, cb: u32, bstrinitdatatype: &::windows_core::BSTR);
@@ -6780,7 +6629,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngineEM
             WaitingForKey: WaitingForKey::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -7066,7 +6914,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngineEx
             EnableTimeUpdateTimer: EnableTimeUpdateTimer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -7115,7 +6962,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngineEx
             EndCreateObject: EndCreateObject::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaEngineNeedKeyNotify_Impl: ::windows_core::BaseImpl {
     fn NeedKey(this: &Self::This, initdata: *const u8, cb: u32);
@@ -7130,7 +6976,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngineNe
         }
         IMFMediaEngineNeedKeyNotify_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, NeedKey: NeedKey::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaEngineNotify_Impl: ::windows_core::BaseImpl {
     fn EventNotify(this: &Self::This, event: u32, param1: usize, param2: u32) -> ::windows_core::Result<()>;
@@ -7145,7 +6990,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngineNo
         }
         IMFMediaEngineNotify_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, EventNotify: EventNotify::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -7164,7 +7008,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngineOP
         }
         IMFMediaEngineOPMInfo_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetOPMInfo: GetOPMInfo::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -7223,7 +7066,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEnginePr
             SetApplicationCertificate: SetApplicationCertificate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaEngineSrcElements_Impl: ::windows_core::BaseImpl {
     fn GetLength(this: &Self::This) -> u32;
@@ -7284,7 +7126,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngineSr
             RemoveAllElements: RemoveAllElements::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaEngineSrcElementsEx_Impl: ::windows_core::BaseImpl + IMFMediaEngineSrcElements_Impl {
     fn AddElementEx(this: &Self::This, purl: &::windows_core::BSTR, ptype: &::windows_core::BSTR, pmedia: &::windows_core::BSTR, keysystem: &::windows_core::BSTR) -> ::windows_core::Result<()>;
@@ -7313,7 +7154,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngineSr
             GetKeySystem: GetKeySystem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -7351,7 +7191,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngineSu
             AttachMediaSource: AttachMediaSource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaEngineTransferSource_Impl: ::windows_core::BaseImpl {
     fn TransferSourceToMediaEngine(this: &Self::This, destination: ::core::option::Option<&IMFMediaEngine>) -> ::windows_core::Result<()>;
@@ -7369,7 +7208,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngineTr
             TransferSourceToMediaEngine: TransferSourceToMediaEngine::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -7407,7 +7245,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEngineWe
             DisconnectWebAudio: DisconnectWebAudio::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaError_Impl: ::windows_core::BaseImpl {
     fn GetErrorCode(this: &Self::This) -> u16;
@@ -7440,7 +7277,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaError_Im
             SetExtendedErrorCode: SetExtendedErrorCode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -7501,7 +7337,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEvent_Im
             GetValue: GetValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -7550,7 +7385,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEventGen
             QueueEvent: QueueEvent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -7614,7 +7448,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaEventQue
             Shutdown: Shutdown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaKeySession_Impl: ::windows_core::BaseImpl {
     fn GetError(this: &Self::This, code: *mut u16, systemcode: *mut u32) -> ::windows_core::Result<()>;
@@ -7664,7 +7497,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaKeySessi
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -7723,7 +7555,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaKeySessi
             Shutdown: Shutdown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaKeySessionNotify_Impl: ::windows_core::BaseImpl {
     fn KeyMessage(this: &Self::This, destinationurl: &::windows_core::BSTR, message: *const u8, cb: u32);
@@ -7751,7 +7582,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaKeySessi
             KeyError: KeyError::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaKeySessionNotify2_Impl: ::windows_core::BaseImpl + IMFMediaKeySessionNotify_Impl {
     fn KeyMessage2(this: &Self::This, emessagetype: MF_MEDIAKEYSESSION_MESSAGETYPE, destinationurl: &::windows_core::BSTR, pbmessage: *const u8, cbmessage: u32);
@@ -7774,7 +7604,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaKeySessi
             KeyStatusChange: KeyStatusChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -7824,7 +7653,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaKeySyste
             KeySystem: KeySystem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaKeys_Impl: ::windows_core::BaseImpl {
     fn CreateSession(this: &Self::This, mimetype: &::windows_core::BSTR, initdata: *const u8, cb: u32, customdata: *const u8, cbcustomdata: u32, notify: ::core::option::Option<&IMFMediaKeySessionNotify>) -> ::windows_core::Result<IMFMediaKeySession>;
@@ -7875,7 +7703,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaKeys_Imp
             GetSuspendNotify: GetSuspendNotify::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaKeys2_Impl: ::windows_core::BaseImpl + IMFMediaKeys_Impl {
     fn CreateSession2(this: &Self::This, esessiontype: MF_MEDIAKEYSESSION_TYPE, pmfmediakeysessionnotify2: ::core::option::Option<&IMFMediaKeySessionNotify2>) -> ::windows_core::Result<IMFMediaKeySession2>;
@@ -7915,7 +7742,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaKeys2_Im
             GetDOMException: GetDOMException::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -8000,7 +7826,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaSession_
             GetFullTopology: GetFullTopology::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -8019,7 +7844,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaSharingE
         }
         IMFMediaSharingEngine_Vtbl { base__: <IMFMediaEngine as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDevice: GetDevice::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaSharingEngineClassFactory_Impl: ::windows_core::BaseImpl {
     fn CreateInstance(this: &Self::This, dwflags: u32, pattr: ::core::option::Option<&IMFAttributes>) -> ::windows_core::Result<IMFMediaSharingEngine>;
@@ -8040,7 +7864,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaSharingE
         }
         IMFMediaSharingEngineClassFactory_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateInstance: CreateInstance::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaSink_Impl: ::windows_core::BaseImpl {
     fn GetCharacteristics(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -8134,7 +7957,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaSink_Imp
             Shutdown: Shutdown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaSinkPreroll_Impl: ::windows_core::BaseImpl {
     fn NotifyPreroll(this: &Self::This, hnsupcomingstarttime: i64) -> ::windows_core::Result<()>;
@@ -8149,7 +7971,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaSinkPrer
         }
         IMFMediaSinkPreroll_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, NotifyPreroll: NotifyPreroll::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -8208,7 +8029,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaSource_I
             Shutdown: Shutdown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -8227,7 +8047,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaSource2_
         }
         IMFMediaSource2_Vtbl { base__: <IMFMediaSourceEx as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetMediaType: SetMediaType::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -8271,7 +8090,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaSourceEx
             SetD3DManager: SetD3DManager::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -8344,7 +8162,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaSourceEx
             GetSourceBuffer: GetSourceBuffer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaSourceExtensionLiveSeekableRange_Impl: ::windows_core::BaseImpl {
     fn SetLiveSeekableRange(this: &Self::This, start: f64, end: f64) -> ::windows_core::Result<()>;
@@ -8367,7 +8184,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaSourceEx
             ClearLiveSeekableRange: ClearLiveSeekableRange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaSourceExtensionNotify_Impl: ::windows_core::BaseImpl {
     fn OnSourceOpen(this: &Self::This);
@@ -8395,7 +8211,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaSourceEx
             OnSourceClose: OnSourceClose::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaSourcePresentationProvider_Impl: ::windows_core::BaseImpl {
     fn ForceEndOfPresentation(this: &Self::This, ppresentationdescriptor: ::core::option::Option<&IMFPresentationDescriptor>) -> ::windows_core::Result<()>;
@@ -8413,7 +8228,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaSourcePr
             ForceEndOfPresentation: ForceEndOfPresentation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaSourceTopologyProvider_Impl: ::windows_core::BaseImpl {
     fn GetMediaSourceTopology(this: &Self::This, ppresentationdescriptor: ::core::option::Option<&IMFPresentationDescriptor>) -> ::windows_core::Result<IMFTopology>;
@@ -8437,7 +8251,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaSourceTo
             GetMediaSourceTopology: GetMediaSourceTopology::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -8481,7 +8294,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaStream_I
             RequestSample: RequestSample::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -8514,7 +8326,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaStream2_
             GetStreamState: GetStreamState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaStreamSourceSampleRequest_Impl: ::windows_core::BaseImpl {
     fn SetSample(this: &Self::This, value: ::core::option::Option<&IMFSample>) -> ::windows_core::Result<()>;
@@ -8529,7 +8340,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaStreamSo
         }
         IMFMediaStreamSourceSampleRequest_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetSample: SetSample::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -8588,7 +8398,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaTimeRang
             Clear: Clear::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -8648,7 +8457,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaType_Imp
             FreeRepresentation: FreeRepresentation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMediaTypeHandler_Impl: ::windows_core::BaseImpl {
     fn IsMediaTypeSupported(this: &Self::This, pmediatype: ::core::option::Option<&IMFMediaType>, ppmediatype: *mut ::core::option::Option<IMFMediaType>) -> ::windows_core::Result<()>;
@@ -8715,7 +8523,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMediaTypeHand
             GetMajorType: GetMajorType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -8791,7 +8598,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMetadata_Impl
             GetAllPropertyNames: GetAllPropertyNames::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMetadataProvider_Impl: ::windows_core::BaseImpl {
     fn GetMFMetadata(this: &Self::This, ppresentationdescriptor: ::core::option::Option<&IMFPresentationDescriptor>, dwstreamidentifier: u32, dwflags: u32) -> ::windows_core::Result<IMFMetadata>;
@@ -8812,7 +8618,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMetadataProvi
         }
         IMFMetadataProvider_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetMFMetadata: GetMFMetadata::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMuxStreamAttributesManager_Impl: ::windows_core::BaseImpl {
     fn GetStreamCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -8847,7 +8652,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMuxStreamAttr
             GetAttributes: GetAttributes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMuxStreamMediaTypeManager_Impl: ::windows_core::BaseImpl {
     fn GetStreamCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -8914,7 +8718,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMuxStreamMedi
             GetStreamConfiguration: GetStreamConfiguration::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFMuxStreamSampleManager_Impl: ::windows_core::BaseImpl {
     fn GetStreamCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -8954,7 +8757,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFMuxStreamSamp
             GetStreamConfiguration: GetStreamConfiguration::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -9002,7 +8804,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFNetCredential
             LoggedOnUser: LoggedOnUser::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -9034,7 +8835,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFNetCredential
             SetUserOptions: SetUserOptions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -9072,7 +8872,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFNetCredential
             SetGood: SetGood::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -9122,7 +8921,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFNetCrossOrigi
             IsSameOrigin: IsSameOrigin::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -9170,7 +8968,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFNetProxyLocat
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFNetProxyLocatorFactory_Impl: ::windows_core::BaseImpl {
     fn CreateProxyLocator(this: &Self::This, pszprotocol: &::windows_core::PCWSTR) -> ::windows_core::Result<IMFNetProxyLocator>;
@@ -9194,7 +8991,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFNetProxyLocat
             CreateProxyLocator: CreateProxyLocator::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -9227,7 +9023,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFNetResourceFi
             OnSendingRequest: OnSendingRequest::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFNetSchemeHandlerConfig_Impl: ::windows_core::BaseImpl {
     fn GetNumberOfSupportedProtocols(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -9267,7 +9062,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFNetSchemeHand
             ResetProtocolRolloverSettings: ResetProtocolRolloverSettings::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFObjectReferenceStream_Impl: ::windows_core::BaseImpl {
     fn SaveReference(this: &Self::This, riid: *const ::windows_core::GUID, punk: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -9290,7 +9084,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFObjectReferen
             LoadReference: LoadReference::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -9340,7 +9133,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFOutputPolicy_
             GetMinimumGRLVersion: GetMinimumGRLVersion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -9390,7 +9182,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFOutputSchema_
             GetOriginatorID: GetOriginatorID::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFOutputTrustAuthority_Impl: ::windows_core::BaseImpl {
     fn GetAction(this: &Self::This) -> ::windows_core::Result<MFPOLICYMANAGER_ACTION>;
@@ -9419,7 +9210,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFOutputTrustAu
             SetPolicy: SetPolicy::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFPMPClient_Impl: ::windows_core::BaseImpl {
     fn SetPMPHost(this: &Self::This, ppmphost: ::core::option::Option<&IMFPMPHost>) -> ::windows_core::Result<()>;
@@ -9434,7 +9224,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFPMPClient_Imp
         }
         IMFPMPClient_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetPMPHost: SetPMPHost::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFPMPClientApp_Impl: ::windows_core::BaseImpl {
     fn SetPMPHost(this: &Self::This, ppmphost: ::core::option::Option<&IMFPMPHostApp>) -> ::windows_core::Result<()>;
@@ -9449,7 +9238,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFPMPClientApp_
         }
         IMFPMPClientApp_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetPMPHost: SetPMPHost::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -9481,7 +9269,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFPMPHost_Impl,
             CreateObjectByCLSID: CreateObjectByCLSID::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -9513,7 +9300,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFPMPHostApp_Im
             ActivateClassById: ActivateClassById::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFPMPServer_Impl: ::windows_core::BaseImpl {
     fn LockProcess(this: &Self::This) -> ::windows_core::Result<()>;
@@ -9541,7 +9327,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFPMPServer_Imp
             CreateObjectByCLSID: CreateObjectByCLSID::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -9725,7 +9510,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFPMediaItem_Im
             GetMetadata: GetMetadata::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -9994,7 +9778,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFPMediaPlayer_
             Shutdown: Shutdown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -10016,7 +9799,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFPMediaPlayerC
             OnMediaPlayerEvent: OnMediaPlayerEvent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -10075,7 +9857,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFPluginControl
             SetDisabled: SetDisabled::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -10094,7 +9875,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFPluginControl
         }
         IMFPluginControl2_Vtbl { base__: <IMFPluginControl as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetPolicy: SetPolicy::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFPresentationClock_Impl: ::windows_core::BaseImpl + IMFClock_Impl {
     fn SetTimeSource(this: &Self::This, ptimesource: ::core::option::Option<&IMFPresentationTimeSource>) -> ::windows_core::Result<()>;
@@ -10159,7 +9939,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFPresentationC
             Pause: Pause::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -10213,7 +9992,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFPresentationD
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFPresentationTimeSource_Impl: ::windows_core::BaseImpl + IMFClock_Impl {
     fn GetUnderlyingClock(this: &Self::This) -> ::windows_core::Result<IMFClock>;
@@ -10234,7 +10012,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFPresentationT
         }
         IMFPresentationTimeSource_Vtbl { base__: <IMFClock as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetUnderlyingClock: GetUnderlyingClock::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFProtectedEnvironmentAccess_Impl: ::windows_core::BaseImpl {
     fn Call(this: &Self::This, inputlength: u32, input: *const u8, outputlength: u32, output: *mut u8) -> ::windows_core::Result<()>;
@@ -10257,7 +10034,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFProtectedEnvi
             ReadGRL: ReadGRL::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFQualityAdvise_Impl: ::windows_core::BaseImpl {
     fn SetDropMode(this: &Self::This, edropmode: MF_QUALITY_DROP_MODE) -> ::windows_core::Result<()>;
@@ -10307,7 +10083,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFQualityAdvise
             DropTime: DropTime::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFQualityAdvise2_Impl: ::windows_core::BaseImpl + IMFQualityAdvise_Impl {
     fn NotifyQualityEvent(this: &Self::This, pevent: ::core::option::Option<&IMFMediaEvent>) -> ::windows_core::Result<u32>;
@@ -10328,7 +10103,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFQualityAdvise
         }
         IMFQualityAdvise2_Vtbl { base__: <IMFQualityAdvise as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, NotifyQualityEvent: NotifyQualityEvent::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFQualityAdviseLimits_Impl: ::windows_core::BaseImpl {
     fn GetMaximumDropMode(this: &Self::This) -> ::windows_core::Result<MF_QUALITY_DROP_MODE>;
@@ -10363,7 +10137,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFQualityAdvise
             GetMinimumQualityLevel: GetMinimumQualityLevel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFQualityManager_Impl: ::windows_core::BaseImpl {
     fn NotifyTopology(this: &Self::This, ptopology: ::core::option::Option<&IMFTopology>) -> ::windows_core::Result<()>;
@@ -10406,7 +10179,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFQualityManage
             Shutdown: Shutdown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -10433,7 +10205,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFRateControl_I
             GetRate: GetRate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -10477,7 +10248,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFRateSupport_I
             IsRateSupported: IsRateSupported::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFReadWriteClassFactory_Impl: ::windows_core::BaseImpl {
     fn CreateInstanceFromURL(this: &Self::This, clsid: *const ::windows_core::GUID, pwszurl: &::windows_core::PCWSTR, pattributes: ::core::option::Option<&IMFAttributes>, riid: *const ::windows_core::GUID, ppvobject: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -10500,7 +10270,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFReadWriteClas
             CreateInstanceFromObject: CreateInstanceFromObject::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFRealTimeClient_Impl: ::windows_core::BaseImpl {
     fn RegisterThreads(this: &Self::This, dwtaskindex: u32, wszclass: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -10528,7 +10297,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFRealTimeClien
             SetWorkQueue: SetWorkQueue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFRealTimeClientEx_Impl: ::windows_core::BaseImpl {
     fn RegisterThreadsEx(this: &Self::This, pdwtaskindex: *mut u32, wszclassname: &::windows_core::PCWSTR, lbasepriority: i32) -> ::windows_core::Result<()>;
@@ -10556,7 +10324,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFRealTimeClien
             SetWorkQueueEx: SetWorkQueueEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFRelativePanelReport_Impl: ::windows_core::BaseImpl {
     fn GetRelativePanel(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -10580,7 +10347,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFRelativePanel
             GetRelativePanel: GetRelativePanel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFRelativePanelWatcher_Impl: ::windows_core::BaseImpl + IMFShutdown_Impl {
     fn BeginGetReport(this: &Self::This, pcallback: ::core::option::Option<&IMFAsyncCallback>, pstate: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -10620,7 +10386,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFRelativePanel
             GetReport: GetReport::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFRemoteAsyncCallback_Impl: ::windows_core::BaseImpl {
     fn Invoke(this: &Self::This, hr: ::windows_core::HRESULT, premoteresult: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -10635,7 +10400,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFRemoteAsyncCa
         }
         IMFRemoteAsyncCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Invoke: Invoke::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFRemoteDesktopPlugin_Impl: ::windows_core::BaseImpl {
     fn UpdateTopology(this: &Self::This, ptopology: ::core::option::Option<&IMFTopology>) -> ::windows_core::Result<()>;
@@ -10650,7 +10414,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFRemoteDesktop
         }
         IMFRemoteDesktopPlugin_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, UpdateTopology: UpdateTopology::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFRemoteProxy_Impl: ::windows_core::BaseImpl {
     fn GetRemoteObject(this: &Self::This, riid: *const ::windows_core::GUID, ppv: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -10673,7 +10436,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFRemoteProxy_I
             GetRemoteHost: GetRemoteHost::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -10728,7 +10490,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSAMIStyle_Imp
             GetSelectedStyle: GetSelectedStyle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -10776,7 +10537,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSSLCertificat
             OnServerCertificate: OnServerCertificate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -10905,7 +10665,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSample_Impl, 
             CopyToBuffer: CopyToBuffer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSampleAllocatorControl_Impl: ::windows_core::BaseImpl {
     fn SetDefaultAllocator(this: &Self::This, dwoutputstreamid: u32, pallocator: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -10928,7 +10687,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSampleAllocat
             GetAllocatorUsage: GetAllocatorUsage::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSampleGrabberSinkCallback_Impl: ::windows_core::BaseImpl + IMFClockStateSink_Impl {
     fn OnSetPresentationClock(this: &Self::This, ppresentationclock: ::core::option::Option<&IMFPresentationClock>) -> ::windows_core::Result<()>;
@@ -10956,7 +10714,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSampleGrabber
             OnShutdown: OnShutdown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSampleGrabberSinkCallback2_Impl: ::windows_core::BaseImpl + IMFSampleGrabberSinkCallback_Impl {
     fn OnProcessSampleEx(this: &Self::This, guidmajormediatype: *const ::windows_core::GUID, dwsampleflags: u32, llsampletime: i64, llsampleduration: i64, psamplebuffer: *const u8, dwsamplesize: u32, pattributes: ::core::option::Option<&IMFAttributes>) -> ::windows_core::Result<()>;
@@ -10974,7 +10731,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSampleGrabber
             OnProcessSampleEx: OnProcessSampleEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSampleOutputStream_Impl: ::windows_core::BaseImpl {
     fn BeginWriteSample(this: &Self::This, psample: ::core::option::Option<&IMFSample>, pcallback: ::core::option::Option<&IMFAsyncCallback>, punkstate: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -11002,7 +10758,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSampleOutputS
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSampleProtection_Impl: ::windows_core::BaseImpl {
     fn GetInputProtectionVersion(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -11052,7 +10807,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSampleProtect
             InitInputProtection: InitInputProtection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSaveJob_Impl: ::windows_core::BaseImpl {
     fn BeginSave(this: &Self::This, pstream: ::core::option::Option<&IMFByteStream>, pcallback: ::core::option::Option<&IMFAsyncCallback>, pstate: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -11091,7 +10845,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSaveJob_Impl,
             GetProgress: GetProgress::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -11123,7 +10876,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSchemeHandler
             CancelObjectCreation: CancelObjectCreation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSecureBuffer_Impl: ::windows_core::BaseImpl {
     fn GetIdentifier(this: &Self::This) -> ::windows_core::Result<::windows_core::GUID>;
@@ -11144,7 +10896,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSecureBuffer_
         }
         IMFSecureBuffer_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetIdentifier: GetIdentifier::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSecureChannel_Impl: ::windows_core::BaseImpl {
     fn GetCertificate(this: &Self::This, ppcert: *mut *mut u8, pcbcert: *mut u32) -> ::windows_core::Result<()>;
@@ -11167,7 +10918,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSecureChannel
             SetupSession: SetupSession::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -11189,7 +10939,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSeekInfo_Impl
             GetNearestKeyFrames: GetNearestKeyFrames::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSensorActivitiesReport_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -11235,7 +10984,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSensorActivit
             GetActivityReportByDeviceName: GetActivityReportByDeviceName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSensorActivitiesReportCallback_Impl: ::windows_core::BaseImpl {
     fn OnActivitiesReport(this: &Self::This, sensoractivitiesreport: ::core::option::Option<&IMFSensorActivitiesReport>) -> ::windows_core::Result<()>;
@@ -11253,7 +11001,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSensorActivit
             OnActivitiesReport: OnActivitiesReport::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSensorActivityMonitor_Impl: ::windows_core::BaseImpl {
     fn Start(this: &Self::This) -> ::windows_core::Result<()>;
@@ -11276,7 +11023,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSensorActivit
             Stop: Stop::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSensorActivityReport_Impl: ::windows_core::BaseImpl {
     fn GetFriendlyName(this: &Self::This, friendlyname: ::windows_core::PWSTR, cchfriendlyname: u32, pcchwritten: *mut u32) -> ::windows_core::Result<()>;
@@ -11321,7 +11067,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSensorActivit
             GetProcessActivity: GetProcessActivity::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSensorDevice_Impl: ::windows_core::BaseImpl {
     fn GetDeviceId(this: &Self::This) -> ::windows_core::Result<u64>;
@@ -11421,7 +11166,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSensorDevice_
             GetSensorDeviceMode: GetSensorDeviceMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSensorGroup_Impl: ::windows_core::BaseImpl {
     fn GetSymbolicLink(this: &Self::This, symboliclink: ::windows_core::PWSTR, cchsymboliclink: i32, pcchwritten: *mut i32) -> ::windows_core::Result<()>;
@@ -11510,7 +11254,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSensorGroup_I
             CreateMediaSource: CreateMediaSource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -11571,7 +11314,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSensorProcess
             GetReportTime: GetReportTime::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -11614,7 +11356,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSensorProfile
             AddBlockedControl: AddBlockedControl::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSensorProfileCollection_Impl: ::windows_core::BaseImpl {
     fn GetProfileCount(this: &Self::This) -> u32;
@@ -11669,7 +11410,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSensorProfile
             RemoveProfile: RemoveProfile::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -11719,7 +11459,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSensorStream_
             CloneSensorStream: CloneSensorStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSensorTransformFactory_Impl: ::windows_core::BaseImpl {
     fn GetFactoryAttributes(this: &Self::This) -> ::windows_core::Result<IMFAttributes>;
@@ -11775,7 +11514,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSensorTransfo
             CreateTransform: CreateTransform::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSequencerSource_Impl: ::windows_core::BaseImpl {
     fn AppendTopology(this: &Self::This, ptopology: ::core::option::Option<&IMFTopology>, dwflags: u32) -> ::windows_core::Result<u32>;
@@ -11819,7 +11557,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSequencerSour
             UpdateTopologyFlags: UpdateTopologyFlags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSharingEngineClassFactory_Impl: ::windows_core::BaseImpl {
     fn CreateInstance(this: &Self::This, dwflags: u32, pattr: ::core::option::Option<&IMFAttributes>) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -11840,7 +11577,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSharingEngine
         }
         IMFSharingEngineClassFactory_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateInstance: CreateInstance::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFShutdown_Impl: ::windows_core::BaseImpl {
     fn Shutdown(this: &Self::This) -> ::windows_core::Result<()>;
@@ -11869,7 +11605,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFShutdown_Impl
             GetShutdownStatus: GetShutdownStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSignedLibrary_Impl: ::windows_core::BaseImpl {
     fn GetProcedureAddress(this: &Self::This, name: &::windows_core::PCSTR, address: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -11887,7 +11622,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSignedLibrary
             GetProcedureAddress: GetProcedureAddress::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -11936,7 +11670,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSimpleAudioVo
             GetMute: GetMute::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSinkWriter_Impl: ::windows_core::BaseImpl {
     fn AddStream(this: &Self::This, ptargetmediatype: ::core::option::Option<&IMFMediaType>) -> ::windows_core::Result<u32>;
@@ -12010,7 +11743,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSinkWriter_Im
             GetStatistics: GetStatistics::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSinkWriterCallback_Impl: ::windows_core::BaseImpl {
     fn OnFinalize(this: &Self::This, hrstatus: ::windows_core::HRESULT) -> ::windows_core::Result<()>;
@@ -12033,7 +11765,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSinkWriterCal
             OnMarker: OnMarker::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSinkWriterCallback2_Impl: ::windows_core::BaseImpl + IMFSinkWriterCallback_Impl {
     fn OnTransformChange(this: &Self::This) -> ::windows_core::Result<()>;
@@ -12056,7 +11787,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSinkWriterCal
             OnStreamError: OnStreamError::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSinkWriterEncoderConfig_Impl: ::windows_core::BaseImpl {
     fn SetTargetMediaType(this: &Self::This, dwstreamindex: u32, ptargetmediatype: ::core::option::Option<&IMFMediaType>, pencodingparameters: ::core::option::Option<&IMFAttributes>) -> ::windows_core::Result<()>;
@@ -12079,7 +11809,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSinkWriterEnc
             PlaceEncodingParameters: PlaceEncodingParameters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSinkWriterEx_Impl: ::windows_core::BaseImpl + IMFSinkWriter_Impl {
     fn GetTransformForStream(this: &Self::This, dwstreamindex: u32, dwtransformindex: u32, pguidcategory: *mut ::windows_core::GUID, pptransform: *mut ::core::option::Option<IMFTransform>) -> ::windows_core::Result<()>;
@@ -12097,7 +11826,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSinkWriterEx_
             GetTransformForStream: GetTransformForStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -12180,7 +11908,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSourceBuffer_
             Remove: Remove::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSourceBufferAppendMode_Impl: ::windows_core::BaseImpl {
     fn GetAppendMode(this: &Self::This) -> MF_MSE_APPEND_MODE;
@@ -12203,7 +11930,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSourceBufferA
             SetAppendMode: SetAppendMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSourceBufferList_Impl: ::windows_core::BaseImpl {
     fn GetLength(this: &Self::This) -> u32;
@@ -12226,7 +11952,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSourceBufferL
             GetSourceBuffer: GetSourceBuffer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSourceBufferNotify_Impl: ::windows_core::BaseImpl {
     fn OnUpdateStart(this: &Self::This);
@@ -12264,7 +11989,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSourceBufferN
             OnUpdateEnd: OnUpdateEnd::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSourceOpenMonitor_Impl: ::windows_core::BaseImpl {
     fn OnSourceEvent(this: &Self::This, pevent: ::core::option::Option<&IMFMediaEvent>) -> ::windows_core::Result<()>;
@@ -12279,7 +12003,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSourceOpenMon
         }
         IMFSourceOpenMonitor_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnSourceEvent: OnSourceEvent::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -12370,7 +12093,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSourceReader_
             GetPresentationAttribute: GetPresentationAttribute::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSourceReaderCallback_Impl: ::windows_core::BaseImpl {
     fn OnReadSample(this: &Self::This, hrstatus: ::windows_core::HRESULT, dwstreamindex: u32, dwstreamflags: u32, lltimestamp: i64, psample: ::core::option::Option<&IMFSample>) -> ::windows_core::Result<()>;
@@ -12398,7 +12120,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSourceReaderC
             OnEvent: OnEvent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSourceReaderCallback2_Impl: ::windows_core::BaseImpl + IMFSourceReaderCallback_Impl {
     fn OnTransformChange(this: &Self::This) -> ::windows_core::Result<()>;
@@ -12421,7 +12142,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSourceReaderC
             OnStreamError: OnStreamError::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -12464,7 +12184,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSourceReaderE
             GetTransformForStream: GetTransformForStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -12516,7 +12235,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSourceResolve
             CancelObjectCreation: CancelObjectCreation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Media_Audio\"`"]
 #[cfg(feature = "Win32_Media_Audio")]
@@ -12576,7 +12294,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSpatialAudioO
             GetMetadataItems: GetMetadataItems::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -12620,7 +12337,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSpatialAudioS
             GetSpatialAudioObjectByIndex: GetSpatialAudioObjectByIndex::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -12659,7 +12375,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFStreamDescrip
             GetMediaTypeHandler: GetMediaTypeHandler::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -12724,7 +12439,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFStreamSink_Im
             Flush: Flush::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -12743,7 +12457,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFStreamingSink
         }
         IMFStreamingSinkConfig_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, StartStreaming: StartStreaming::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFSystemId_Impl: ::windows_core::BaseImpl {
     fn GetData(this: &Self::This, size: *mut u32, data: *mut *mut u8) -> ::windows_core::Result<()>;
@@ -12766,7 +12479,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFSystemId_Impl
             Setup: Setup::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -12815,7 +12527,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTimecodeTrans
             EndConvertHNSToTimecode: EndConvertHNSToTimecode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -12950,7 +12661,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTimedText_Imp
             IsInBandEnabled: IsInBandEnabled::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFTimedTextBinary_Impl: ::windows_core::BaseImpl {
     fn GetData(this: &Self::This, data: *mut *mut u8, length: *mut u32) -> ::windows_core::Result<()>;
@@ -12965,7 +12675,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTimedTextBina
         }
         IMFTimedTextBinary_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetData: GetData::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFTimedTextBouten_Impl: ::windows_core::BaseImpl {
     fn GetBoutenType(this: &Self::This) -> ::windows_core::Result<MF_TIMED_TEXT_BOUTEN_TYPE>;
@@ -13011,7 +12720,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTimedTextBout
             GetBoutenPosition: GetBoutenPosition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFTimedTextCue_Impl: ::windows_core::BaseImpl {
     fn GetId(this: &Self::This) -> u32;
@@ -13109,7 +12817,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTimedTextCue_
             GetLine: GetLine::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFTimedTextCueList_Impl: ::windows_core::BaseImpl {
     fn GetLength(this: &Self::This) -> u32;
@@ -13175,7 +12882,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTimedTextCueL
             RemoveCue: RemoveCue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFTimedTextFormattedText_Impl: ::windows_core::BaseImpl {
     fn GetText(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -13209,7 +12915,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTimedTextForm
             GetSubformatting: GetSubformatting::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -13261,7 +12966,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTimedTextNoti
             Reset: Reset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -13386,7 +13090,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTimedTextRegi
             GetScrollMode: GetScrollMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFTimedTextRuby_Impl: ::windows_core::BaseImpl {
     fn GetRubyText(this: &Self::This) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -13443,7 +13146,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTimedTextRuby
             GetRubyReserve: GetRubyReserve::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -13585,7 +13287,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTimedTextStyl
             GetTextOutline: GetTextOutline::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -13646,7 +13347,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTimedTextStyl
             GetFontAngleInDegrees: GetFontAngleInDegrees::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -13758,7 +13458,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTimedTextTrac
             GetCueList: GetCueList::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFTimedTextTrackList_Impl: ::windows_core::BaseImpl {
     fn GetLength(this: &Self::This) -> u32;
@@ -13798,7 +13497,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTimedTextTrac
             GetTrackById: GetTrackById::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFTimer_Impl: ::windows_core::BaseImpl {
     fn SetTimer(this: &Self::This, dwflags: u32, llclocktime: i64, pcallback: ::core::option::Option<&IMFAsyncCallback>, punkstate: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -13827,7 +13525,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTimer_Impl, c
             CancelTimer: CancelTimer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFTopoLoader_Impl: ::windows_core::BaseImpl {
     fn Load(this: &Self::This, pinputtopo: ::core::option::Option<&IMFTopology>, ppoutputtopo: *mut ::core::option::Option<IMFTopology>, pcurrenttopo: ::core::option::Option<&IMFTopology>) -> ::windows_core::Result<()>;
@@ -13842,7 +13539,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTopoLoader_Im
         }
         IMFTopoLoader_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Load: Load::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -13945,7 +13641,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTopology_Impl
             GetOutputNodeCollection: GetOutputNodeCollection::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -14084,7 +13779,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTopologyNode_
             CloneFrom: CloneFrom::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFTopologyNodeAttributeEditor_Impl: ::windows_core::BaseImpl {
     fn UpdateNodeAttributes(this: &Self::This, topoid: u64, cupdates: u32, pupdates: *const MFTOPONODE_ATTRIBUTE_UPDATE) -> ::windows_core::Result<()>;
@@ -14102,7 +13796,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTopologyNodeA
             UpdateNodeAttributes: UpdateNodeAttributes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFTopologyServiceLookup_Impl: ::windows_core::BaseImpl {
     fn LookupService(this: &Self::This, r#type: MF_SERVICE_LOOKUP_TYPE, dwindex: u32, guidservice: *const ::windows_core::GUID, riid: *const ::windows_core::GUID, ppvobjects: *mut *mut ::core::ffi::c_void, pnobjects: *mut u32) -> ::windows_core::Result<()>;
@@ -14117,7 +13810,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTopologyServi
         }
         IMFTopologyServiceLookup_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, LookupService: LookupService::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFTopologyServiceLookupClient_Impl: ::windows_core::BaseImpl {
     fn InitServicePointers(this: &Self::This, plookup: ::core::option::Option<&IMFTopologyServiceLookup>) -> ::windows_core::Result<()>;
@@ -14140,7 +13832,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTopologyServi
             ReleaseServicePointers: ReleaseServicePointers::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFTrackedSample_Impl: ::windows_core::BaseImpl {
     fn SetAllocator(this: &Self::This, psampleallocator: ::core::option::Option<&IMFAsyncCallback>, punkstate: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -14155,7 +13846,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTrackedSample
         }
         IMFTrackedSample_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetAllocator: SetAllocator::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFTranscodeProfile_Impl: ::windows_core::BaseImpl {
     fn SetAudioAttributes(this: &Self::This, pattrs: ::core::option::Option<&IMFAttributes>) -> ::windows_core::Result<()>;
@@ -14216,7 +13906,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTranscodeProf
             GetContainerAttributes: GetContainerAttributes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFTranscodeSinkInfoProvider_Impl: ::windows_core::BaseImpl {
     fn SetOutputFile(this: &Self::This, pwszfilename: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -14255,7 +13944,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTranscodeSink
             GetSinkInfo: GetSinkInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFTransform_Impl: ::windows_core::BaseImpl {
     fn GetStreamLimits(this: &Self::This, pdwinputminimum: *mut u32, pdwinputmaximum: *mut u32, pdwoutputminimum: *mut u32, pdwoutputmaximum: *mut u32) -> ::windows_core::Result<()>;
@@ -14443,7 +14131,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTransform_Imp
             ProcessOutput: ProcessOutput::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFTrustedInput_Impl: ::windows_core::BaseImpl {
     fn GetInputTrustAuthority(this: &Self::This, dwstreamid: u32, riid: *const ::windows_core::GUID) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -14467,7 +14154,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTrustedInput_
             GetInputTrustAuthority: GetInputTrustAuthority::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -14517,7 +14203,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFTrustedOutput
             IsFinal: IsFinal::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFVideoCaptureSampleAllocator_Impl: ::windows_core::BaseImpl + IMFVideoSampleAllocator_Impl {
     fn InitializeCaptureSampleAllocator(this: &Self::This, cbsamplesize: u32, cbcapturemetadatasize: u32, cbalignment: u32, cminimumsamples: u32, pattributes: ::core::option::Option<&IMFAttributes>, pmediatype: ::core::option::Option<&IMFMediaType>) -> ::windows_core::Result<()>;
@@ -14535,7 +14220,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoCaptureS
             InitializeCaptureSampleAllocator: InitializeCaptureSampleAllocator::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFVideoDeviceID_Impl: ::windows_core::BaseImpl {
     fn GetDeviceID(this: &Self::This) -> ::windows_core::Result<::windows_core::GUID>;
@@ -14556,7 +14240,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoDeviceID
         }
         IMFVideoDeviceID_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDeviceID: GetDeviceID::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -14683,7 +14366,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoDisplayC
             GetFullscreen: GetFullscreen::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -14710,7 +14392,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoMediaTyp
             GetVideoRepresentation: GetVideoRepresentation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D9\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D9", feature = "Win32_Graphics_Gdi"))]
@@ -14747,7 +14428,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoMixerBit
             GetAlphaBitmapParameters: GetAlphaBitmapParameters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFVideoMixerControl_Impl: ::windows_core::BaseImpl {
     fn SetStreamZOrder(this: &Self::This, dwstreamid: u32, dwz: u32) -> ::windows_core::Result<()>;
@@ -14792,7 +14472,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoMixerCon
             GetStreamOutputRect: GetStreamOutputRect::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFVideoMixerControl2_Impl: ::windows_core::BaseImpl + IMFVideoMixerControl_Impl {
     fn SetMixingPrefs(this: &Self::This, dwmixflags: u32) -> ::windows_core::Result<()>;
@@ -14821,7 +14500,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoMixerCon
             GetMixingPrefs: GetMixingPrefs::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFVideoPositionMapper_Impl: ::windows_core::BaseImpl {
     fn MapOutputCoordinateToInputStream(this: &Self::This, xout: f32, yout: f32, dwoutputstreamindex: u32, dwinputstreamindex: u32, pxin: *mut f32, pyin: *mut f32) -> ::windows_core::Result<()>;
@@ -14839,7 +14517,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoPosition
             MapOutputCoordinateToInputStream: MapOutputCoordinateToInputStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFVideoPresenter_Impl: ::windows_core::BaseImpl + IMFClockStateSink_Impl {
     fn ProcessMessage(this: &Self::This, emessage: MFVP_MESSAGE_TYPE, ulparam: usize) -> ::windows_core::Result<()>;
@@ -14868,7 +14545,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoPresente
             GetCurrentMediaType: GetCurrentMediaType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D9\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D9"))]
@@ -14981,7 +14657,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoProcesso
             SetBackgroundColor: SetBackgroundColor::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -15028,7 +14703,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoProcesso
             SetConstrictionSize: SetConstrictionSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -15066,7 +14740,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoProcesso
             GetSupportedHardwareEffects: GetSupportedHardwareEffects::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -15109,7 +14782,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoProcesso
             SetOutputDevice: SetOutputDevice::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFVideoRenderer_Impl: ::windows_core::BaseImpl {
     fn InitializeRenderer(this: &Self::This, pvideomixer: ::core::option::Option<&IMFTransform>, pvideopresenter: ::core::option::Option<&IMFVideoPresenter>) -> ::windows_core::Result<()>;
@@ -15127,7 +14799,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoRenderer
             InitializeRenderer: InitializeRenderer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFVideoRendererEffectControl_Impl: ::windows_core::BaseImpl {
     fn OnAppServiceConnectionEstablished(this: &Self::This, pappserviceconnection: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -15145,7 +14816,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoRenderer
             OnAppServiceConnectionEstablished: OnAppServiceConnectionEstablished::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFVideoSampleAllocator_Impl: ::windows_core::BaseImpl {
     fn SetDirectXManager(this: &Self::This, pmanager: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -15184,7 +14854,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoSampleAl
             AllocateSample: AllocateSample::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFVideoSampleAllocatorCallback_Impl: ::windows_core::BaseImpl {
     fn SetCallback(this: &Self::This, pnotify: ::core::option::Option<&IMFVideoSampleAllocatorNotify>) -> ::windows_core::Result<()>;
@@ -15213,7 +14882,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoSampleAl
             GetFreeSampleCount: GetFreeSampleCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFVideoSampleAllocatorEx_Impl: ::windows_core::BaseImpl + IMFVideoSampleAllocator_Impl {
     fn InitializeSampleAllocatorEx(this: &Self::This, cinitialsamples: u32, cmaximumsamples: u32, pattributes: ::core::option::Option<&IMFAttributes>, pmediatype: ::core::option::Option<&IMFMediaType>) -> ::windows_core::Result<()>;
@@ -15231,7 +14899,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoSampleAl
             InitializeSampleAllocatorEx: InitializeSampleAllocatorEx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFVideoSampleAllocatorNotify_Impl: ::windows_core::BaseImpl {
     fn NotifyRelease(this: &Self::This) -> ::windows_core::Result<()>;
@@ -15246,7 +14913,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoSampleAl
         }
         IMFVideoSampleAllocatorNotify_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, NotifyRelease: NotifyRelease::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFVideoSampleAllocatorNotifyEx_Impl: ::windows_core::BaseImpl + IMFVideoSampleAllocatorNotify_Impl {
     fn NotifyPrune(this: &Self::This, __midl__imfvideosampleallocatornotifyex0000: ::core::option::Option<&IMFSample>) -> ::windows_core::Result<()>;
@@ -15261,7 +14927,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVideoSampleAl
         }
         IMFVideoSampleAllocatorNotifyEx_Vtbl { base__: <IMFVideoSampleAllocatorNotify as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, NotifyPrune: NotifyPrune::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Devices_Properties\"`, `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Devices_Properties", feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -15351,7 +15016,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFVirtualCamera
             Shutdown: Shutdown::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFWorkQueueServices_Impl: ::windows_core::BaseImpl {
     fn BeginRegisterTopologyWorkQueuesWithMMCSS(this: &Self::This, pcallback: ::core::option::Option<&IMFAsyncCallback>, pstate: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -15442,7 +15106,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFWorkQueueServ
             GetPlatformWorkQueueMMCSSTaskId: GetPlatformWorkQueueMMCSSTaskId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMFWorkQueueServicesEx_Impl: ::windows_core::BaseImpl + IMFWorkQueueServices_Impl {
     fn GetTopologyWorkQueueMMCSSPriority(this: &Self::This, dwtopologyworkqueueid: u32) -> ::windows_core::Result<i32>;
@@ -15482,7 +15145,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMFWorkQueueServ
             GetPlatformWorkQueueMMCSSPriority: GetPlatformWorkQueueMMCSSPriority::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IOPMVideoOutput_Impl: ::windows_core::BaseImpl {
     fn StartInitialization(this: &Self::This, prnrandomnumber: *mut OPM_RANDOM_NUMBER, ppbcertificate: *mut *mut u8, pulcertificatelength: *mut u32) -> ::windows_core::Result<()>;
@@ -15520,7 +15182,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOPMVideoOutput_
             Configure: Configure::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPlayToControl_Impl: ::windows_core::BaseImpl {
     fn Connect(this: &Self::This, pfactory: ::core::option::Option<&IMFSharingEngineClassFactory>) -> ::windows_core::Result<()>;
@@ -15543,7 +15204,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPlayToControl_I
             Disconnect: Disconnect::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPlayToControlWithCapabilities_Impl: ::windows_core::BaseImpl + IPlayToControl_Impl {
     fn GetCapabilities(this: &Self::This) -> ::windows_core::Result<PLAYTO_SOURCE_CREATEFLAGS>;
@@ -15564,7 +15224,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPlayToControlWi
         }
         IPlayToControlWithCapabilities_Vtbl { base__: <IPlayToControl as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetCapabilities: GetCapabilities::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPlayToSourceClassFactory_Impl: ::windows_core::BaseImpl {
     fn CreateInstance(this: &Self::This, dwflags: u32, pcontrol: ::core::option::Option<&IPlayToControl>) -> ::windows_core::Result<::windows_core::IInspectable>;
@@ -15585,7 +15244,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPlayToSourceCla
         }
         IPlayToSourceClassFactory_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateInstance: CreateInstance::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IToc_Impl: ::windows_core::BaseImpl {
     fn SetDescriptor(this: &Self::This, pdescriptor: *mut TOC_DESCRIPTOR) -> ::windows_core::Result<()>;
@@ -15659,7 +15317,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IToc_Impl, const
             RemoveEntryListByIndex: RemoveEntryListByIndex::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITocCollection_Impl: ::windows_core::BaseImpl {
     fn GetEntryCount(this: &Self::This, pdwentrycount: *mut u32) -> ::windows_core::Result<()>;
@@ -15703,7 +15360,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITocCollection_I
             RemoveEntryByIndex: RemoveEntryByIndex::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITocEntry_Impl: ::windows_core::BaseImpl {
     fn SetTitle(this: &Self::This, pwsztitle: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -15756,7 +15412,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITocEntry_Impl, 
             GetDescriptionData: GetDescriptionData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITocEntryList_Impl: ::windows_core::BaseImpl {
     fn GetEntryCount(this: &Self::This, pdwentrycount: *mut u32) -> ::windows_core::Result<()>;
@@ -15800,7 +15455,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITocEntryList_Im
             RemoveEntryByIndex: RemoveEntryByIndex::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ITocParser_Impl: ::windows_core::BaseImpl {
     fn Init(this: &Self::This, pwszfilename: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -15865,7 +15519,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ITocParser_Impl,
             Commit: Commit::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IValidateBinding_Impl: ::windows_core::BaseImpl {
     fn GetIdentifier(this: &Self::This, guidlicensorid: &::windows_core::GUID, pbephemeron: *const u8, cbephemeron: u32, ppbblobvalidationid: *mut *mut u8, pcbblobsize: *mut u32) -> ::windows_core::Result<()>;
@@ -15880,7 +15533,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IValidateBinding
         }
         IValidateBinding_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetIdentifier: GetIdentifier::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMCodecLeakyBucket_Impl: ::windows_core::BaseImpl {
     fn SetBufferSizeBits(this: &Self::This, ulbuffersize: u32) -> ::windows_core::Result<()>;
@@ -15913,7 +15565,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMCodecLeakyBuc
             GetBufferFullnessBits: GetBufferFullnessBits::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMCodecOutputTimestamp_Impl: ::windows_core::BaseImpl {
     fn GetNextOutputTime(this: &Self::This, prttime: *mut i64) -> ::windows_core::Result<()>;
@@ -15931,7 +15582,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMCodecOutputTi
             GetNextOutputTime: GetNextOutputTime::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_DxMediaObjects\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_DxMediaObjects"))]
@@ -15958,7 +15608,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMCodecPrivateD
             GetPrivateData: GetPrivateData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_DxMediaObjects\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_DxMediaObjects"))]
@@ -15985,7 +15634,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMCodecProps_Im
             GetCodecProp: GetCodecProp::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Media_DxMediaObjects\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Media_DxMediaObjects"))]
@@ -16012,7 +15660,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMCodecStrings_
             GetDescription: GetDescription::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMColorConvProps_Impl: ::windows_core::BaseImpl {
     fn SetMode(this: &Self::This, lmode: i32) -> ::windows_core::Result<()>;
@@ -16035,7 +15682,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMColorConvProp
             SetFullCroppingParam: SetFullCroppingParam::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMColorLegalizerProps_Impl: ::windows_core::BaseImpl {
     fn SetColorLegalizerQuality(this: &Self::This, lquality: i32) -> ::windows_core::Result<()>;
@@ -16053,7 +15699,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMColorLegalize
             SetColorLegalizerQuality: SetColorLegalizerQuality::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -16090,7 +15735,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMFrameInterpPr
             SetComplexityLevel: SetComplexityLevel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMInterlaceProps_Impl: ::windows_core::BaseImpl {
     fn SetProcessType(this: &Self::This, iprocesstype: i32) -> ::windows_core::Result<()>;
@@ -16118,7 +15762,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMInterlaceProp
             SetLastFrame: SetLastFrame::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMResamplerProps_Impl: ::windows_core::BaseImpl {
     fn SetHalfFilterLength(this: &Self::This, lhalffilterlen: i32) -> ::windows_core::Result<()>;
@@ -16141,7 +15784,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMResamplerProp
             SetUserChannelMtx: SetUserChannelMtx::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMResizerProps_Impl: ::windows_core::BaseImpl {
     fn SetResizerQuality(this: &Self::This, lquality: i32) -> ::windows_core::Result<()>;
@@ -16179,7 +15821,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMResizerProps_
             GetFullCropRegion: GetFullCropRegion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -16201,7 +15842,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMSampleExtensi
             SetUseSampleExtensions: SetUseSampleExtensions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMValidate_Impl: ::windows_core::BaseImpl {
     fn SetIdentifier(this: &Self::This, guidvalidationid: &::windows_core::GUID) -> ::windows_core::Result<()>;
@@ -16216,7 +15856,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMValidate_Impl
         }
         IWMValidate_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetIdentifier: SetIdentifier::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMVideoDecoderHurryup_Impl: ::windows_core::BaseImpl {
     fn SetHurryup(this: &Self::This, lhurryup: i32) -> ::windows_core::Result<()>;
@@ -16239,7 +15878,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMVideoDecoderH
             GetHurryup: GetHurryup::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Media_DxMediaObjects\"`"]
 #[cfg(feature = "Win32_Media_DxMediaObjects")]
@@ -16271,7 +15909,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMVideoDecoderR
             SetReconstructedVideoFrame: SetReconstructedVideoFrame::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWMVideoForceKeyFrame_Impl: ::windows_core::BaseImpl {
     fn SetKeyFrame(this: &Self::This) -> ::windows_core::Result<()>;
@@ -16286,7 +15923,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWMVideoForceKey
         }
         IWMVideoForceKeyFrame_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetKeyFrame: SetKeyFrame::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait MFASYNCRESULT_Impl: ::windows_core::BaseImpl + IMFAsyncResult_Impl {}
 impl ::windows_core::Iids for MFASYNCRESULT {
@@ -16294,5 +15930,4 @@ impl ::windows_core::Iids for MFASYNCRESULT {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: MFASYNCRESULT_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for MFASYNCRESULT {
     const VTABLE: Self::Vtable = { MFASYNCRESULT_Vtbl { base__: <IMFAsyncResult as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

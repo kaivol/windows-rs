@@ -25,7 +25,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IIterable_Impl<T
             T: ::core::marker::PhantomData::<T>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IIterator_Impl<T>: ::windows_core::BaseImpl
 where
@@ -87,7 +86,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IIterator_Impl<T
             T: ::core::marker::PhantomData::<T>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IKeyValuePair_Impl<K, V>: ::windows_core::BaseImpl
 where
@@ -130,7 +128,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IKeyValuePair_Im
             V: ::core::marker::PhantomData::<V>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMap_Impl<K, V>: ::windows_core::BaseImpl + IIterable_Impl<IKeyValuePair<K, V>>
 where
@@ -217,7 +214,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMap_Impl<K, V>,
             V: ::core::marker::PhantomData::<V>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMapChangedEventArgs_Impl<K>: ::windows_core::BaseImpl
 where
@@ -257,7 +253,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMapChangedEvent
             K: ::core::marker::PhantomData::<K>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMapView_Impl<K, V>: ::windows_core::BaseImpl + IIterable_Impl<IKeyValuePair<K, V>>
 where
@@ -316,7 +311,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMapView_Impl<K,
             V: ::core::marker::PhantomData::<V>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IObservableMap_Impl<K, V>: ::windows_core::BaseImpl + IIterable_Impl<IKeyValuePair<K, V>> + IMap_Impl<K, V>
 where
@@ -352,7 +346,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IObservableMap_I
             V: ::core::marker::PhantomData::<V>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IObservableVector_Impl<T>: ::windows_core::BaseImpl + IIterable_Impl<T> + IVector_Impl<T>
 where
@@ -386,7 +379,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IObservableVecto
             T: ::core::marker::PhantomData::<T>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPropertySet_Impl: ::windows_core::BaseImpl + IIterable_Impl<IKeyValuePair<::windows_core::HSTRING, ::windows_core::IInspectable>> + IMap_Impl<::windows_core::HSTRING, ::windows_core::IInspectable> + IObservableMap_Impl<::windows_core::HSTRING, ::windows_core::IInspectable> {}
 impl ::windows_core::Iids for IPropertySet {
@@ -395,7 +387,6 @@ impl ::windows_core::Iids for IPropertySet {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPropertySet_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IPropertySet {
     const VTABLE: Self::Vtable = { IPropertySet_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVector_Impl<T>: ::windows_core::BaseImpl + IIterable_Impl<T>
 where
@@ -505,7 +496,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVector_Impl<T>,
             T: ::core::marker::PhantomData::<T>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVectorChangedEventArgs_Impl: ::windows_core::BaseImpl {
     fn CollectionChange(this: &Self::This) -> ::windows_core::Result<CollectionChange>;
@@ -540,7 +530,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVectorChangedEv
             Index: Index::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IVectorView_Impl<T>: ::windows_core::BaseImpl + IIterable_Impl<T>
 where
@@ -603,7 +592,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVectorView_Impl
             T: ::core::marker::PhantomData::<T>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[::windows_implement::implement(IIterable<T>)]
 struct StockIterable<T>

@@ -57,7 +57,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcCertificateE
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Security_Cryptography\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Security_Cryptography"))]
@@ -95,7 +94,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcCertificateS
             GetEnumerator: GetEnumerator::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -259,7 +257,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcDigitalSigna
             GetSignatureXml: GetSignatureXml::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -320,7 +317,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcDigitalSigna
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Security_Cryptography\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Security_Cryptography", feature = "Win32_System_Com"))]
@@ -413,7 +409,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcDigitalSigna
             ReplaceSignatureXml: ReplaceSignatureXml::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Security\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Security", feature = "Win32_System_Com"))]
@@ -501,7 +496,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcFactory_Impl
             CreateDigitalSignatureManager: CreateDigitalSignatureManager::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IOpcPackage_Impl: ::windows_core::BaseImpl {
     fn GetPartSet(this: &Self::This) -> ::windows_core::Result<IOpcPartSet>;
@@ -536,7 +530,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcPackage_Impl
             GetRelationshipSet: GetRelationshipSet::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -608,7 +601,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcPart_Impl, c
             GetCompressionOptions: GetCompressionOptions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -669,7 +661,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcPartEnumerat
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -735,7 +726,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcPartSet_Impl
             GetEnumerator: GetEnumerator::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -785,7 +775,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcPartUri_Impl
             IsRelationshipsPartUri: IsRelationshipsPartUri::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -857,7 +846,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcRelationship
             GetTargetMode: GetTargetMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -918,7 +906,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcRelationship
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IOpcRelationshipSelector_Impl: ::windows_core::BaseImpl {
     fn GetSelectorType(this: &Self::This) -> ::windows_core::Result<OPC_RELATIONSHIP_SELECTOR>;
@@ -953,7 +940,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcRelationship
             GetSelectionCriterion: GetSelectionCriterion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1014,7 +1000,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcRelationship
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IOpcRelationshipSelectorSet_Impl: ::windows_core::BaseImpl {
     fn Create(this: &Self::This, selector: OPC_RELATIONSHIP_SELECTOR, selectioncriterion: &::windows_core::PCWSTR) -> ::windows_core::Result<IOpcRelationshipSelector>;
@@ -1054,7 +1039,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcRelationship
             GetEnumerator: GetEnumerator::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -1142,7 +1126,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcRelationship
             GetRelationshipsContentStream: GetRelationshipsContentStream::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IOpcSignatureCustomObject_Impl: ::windows_core::BaseImpl {
     fn GetXml(this: &Self::This, xmlmarkup: *mut *mut u8, count: *mut u32) -> ::windows_core::Result<()>;
@@ -1157,7 +1140,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcSignatureCus
         }
         IOpcSignatureCustomObject_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetXml: GetXml::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1218,7 +1200,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcSignatureCus
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IOpcSignatureCustomObjectSet_Impl: ::windows_core::BaseImpl {
     fn Create(this: &Self::This, xmlmarkup: *const u8, count: u32) -> ::windows_core::Result<IOpcSignatureCustomObject>;
@@ -1258,7 +1239,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcSignatureCus
             GetEnumerator: GetEnumerator::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1324,7 +1304,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcSignaturePar
             GetTransformMethod: GetTransformMethod::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1385,7 +1364,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcSignaturePar
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1429,7 +1407,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcSignaturePar
             GetEnumerator: GetEnumerator::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1506,7 +1483,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcSignatureRef
             GetDigestValue: GetDigestValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1567,7 +1543,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcSignatureRef
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1611,7 +1586,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcSignatureRef
             GetEnumerator: GetEnumerator::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1688,7 +1662,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcSignatureRel
             GetRelationshipSelectorEnumerator: GetRelationshipSelectorEnumerator::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1749,7 +1722,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcSignatureRel
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1804,7 +1776,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcSignatureRel
             GetEnumerator: GetEnumerator::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -1972,7 +1943,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcSigningOptio
             SetSignaturePartName: SetSignaturePartName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -2022,5 +1992,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IOpcUri_Impl, co
             CombinePartUri: CombinePartUri::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

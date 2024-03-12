@@ -38,7 +38,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IITDatabase_Impl
             GetObjectPersistence: GetObjectPersistence::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -145,7 +144,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IITPropList_Impl
             SaveToMem: SaveToMem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -312,7 +310,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IITResultSet_Imp
             GetColumnStatus: GetColumnStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IStemSink_Impl: ::windows_core::BaseImpl {
     fn PutAltWord(this: &Self::This, pwcinbuf: &::windows_core::PCWSTR, cwc: u32) -> ::windows_core::Result<()>;
@@ -335,7 +332,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStemSink_Impl, 
             PutWord: PutWord::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -377,7 +373,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStemmerConfig_I
             LoadExternalStemmerData: LoadExternalStemmerData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`, `\"Win32_System_Search\"`"]
 #[cfg(all(feature = "Win32_System_Com", feature = "Win32_System_Search"))]
@@ -445,5 +440,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWordBreakerConf
             GetWordStemmer: GetWordStemmer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

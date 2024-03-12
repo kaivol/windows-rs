@@ -47,7 +47,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IImageScannerFor
             IsFormatSupported: IsFormatSupported::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`"]
 #[cfg(feature = "Foundation")]
@@ -348,5 +347,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IImageScannerSou
             SetContrast: SetContrast::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

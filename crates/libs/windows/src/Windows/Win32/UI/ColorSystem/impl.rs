@@ -92,7 +92,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDeviceModelPlug
             GetNeutralAxis: GetNeutralAxis::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGamutMapModelPlugIn_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This, bstrxml: &::windows_core::BSTR, psrcplugin: ::core::option::Option<&IDeviceModelPlugIn>, pdestplugin: ::core::option::Option<&IDeviceModelPlugIn>, psrcgbd: *const GamutBoundaryDescription, pdestgbd: *const GamutBoundaryDescription) -> ::windows_core::Result<()>;
@@ -115,5 +114,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGamutMapModelPl
             SourceToDestinationAppearanceColors: SourceToDestinationAppearanceColors::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

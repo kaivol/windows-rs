@@ -38,7 +38,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDMLBindingTable
             Reset: Reset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D12")]
@@ -57,7 +56,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDMLCommandRecor
         }
         IDMLCommandRecorder_Vtbl { base__: <IDMLDeviceChild as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, RecordDispatch: RecordDispatch::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDMLCompiledOperator_Impl: ::windows_core::BaseImpl + IDMLDispatchable_Impl {}
 impl ::windows_core::Iids for IDMLCompiledOperator {
@@ -65,7 +63,6 @@ impl ::windows_core::Iids for IDMLCompiledOperator {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDMLCompiledOperator_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDMLCompiledOperator {
     const VTABLE: Self::Vtable = { IDMLCompiledOperator_Vtbl { base__: <IDMLDispatchable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -87,7 +84,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDMLDebugDevice_
             SetMuteDebugOutput: SetMuteDebugOutput::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D12")]
@@ -154,7 +150,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDMLDevice_Impl,
             GetParentDevice: GetParentDevice::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D12")]
@@ -173,7 +168,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDMLDevice1_Impl
         }
         IDMLDevice1_Vtbl { base__: <IDMLDevice as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CompileGraph: CompileGraph::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDMLDeviceChild_Impl: ::windows_core::BaseImpl + IDMLObject_Impl {
     fn GetDevice(this: &Self::This, riid: *const ::windows_core::GUID, ppv: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -188,7 +182,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDMLDeviceChild_
         }
         IDMLDeviceChild_Vtbl { base__: <IDMLObject as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDevice: GetDevice::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDMLDispatchable_Impl: ::windows_core::BaseImpl + IDMLPageable_Impl {
     fn GetBindingProperties(this: &Self::This) -> DML_BINDING_PROPERTIES;
@@ -203,7 +196,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDMLDispatchable
         }
         IDMLDispatchable_Vtbl { base__: <IDMLPageable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetBindingProperties: GetBindingProperties::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDMLObject_Impl: ::windows_core::BaseImpl {
     fn GetPrivateData(this: &Self::This, guid: *const ::windows_core::GUID, datasize: *mut u32, data: *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -236,7 +228,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDMLObject_Impl,
             SetName: SetName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDMLOperator_Impl: ::windows_core::BaseImpl + IDMLDeviceChild_Impl {}
 impl ::windows_core::Iids for IDMLOperator {
@@ -244,7 +235,6 @@ impl ::windows_core::Iids for IDMLOperator {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDMLOperator_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDMLOperator {
     const VTABLE: Self::Vtable = { IDMLOperator_Vtbl { base__: <IDMLDeviceChild as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDMLOperatorInitializer_Impl: ::windows_core::BaseImpl + IDMLDispatchable_Impl {
     fn Reset(this: &Self::This, operatorcount: u32, operators: *const ::core::option::Option<IDMLCompiledOperator>) -> ::windows_core::Result<()>;
@@ -259,7 +249,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDMLOperatorInit
         }
         IDMLOperatorInitializer_Vtbl { base__: <IDMLDispatchable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Reset: Reset::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDMLPageable_Impl: ::windows_core::BaseImpl + IDMLDeviceChild_Impl {}
 impl ::windows_core::Iids for IDMLPageable {
@@ -267,5 +256,4 @@ impl ::windows_core::Iids for IDMLPageable {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDMLPageable_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDMLPageable {
     const VTABLE: Self::Vtable = { IDMLPageable_Vtbl { base__: <IDMLDeviceChild as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

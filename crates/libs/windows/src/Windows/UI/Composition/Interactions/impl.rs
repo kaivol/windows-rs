@@ -4,7 +4,6 @@ impl ::windows_core::Iids for ICompositionInteractionSource {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICompositionInteractionSource_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ICompositionInteractionSource {
     const VTABLE: Self::Vtable = { ICompositionInteractionSource_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IInteractionTrackerOwner_Impl: ::windows_core::BaseImpl {
     fn CustomAnimationStateEntered(this: &Self::This, sender: ::core::option::Option<&InteractionTracker>, args: ::core::option::Option<&InteractionTrackerCustomAnimationStateEnteredArgs>) -> ::windows_core::Result<()>;
@@ -47,5 +46,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IInteractionTrac
             ValuesChanged: ValuesChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

@@ -29,7 +29,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISysStorageProvi
             RemoveEventReceived: RemoveEventReceived::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISysStorageProviderHandlerFactory_Impl: ::windows_core::BaseImpl {
     fn GetHttpRequestProvider(this: &Self::This, syncrootid: &::windows_core::HSTRING) -> ::windows_core::Result<ISysStorageProviderHttpRequestProvider>;
@@ -66,7 +65,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISysStorageProvi
             GetEventSource: GetEventSource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"Web_Http\"`"]
 #[cfg(all(feature = "Foundation", feature = "Web_Http"))]
@@ -95,5 +93,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISysStorageProvi
             SendRequestAsync: SendRequestAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

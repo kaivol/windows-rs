@@ -29,7 +29,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10Asynchrono
             GetDataSize: GetDataSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -48,7 +47,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10BlendState
         }
         ID3D10BlendState_Vtbl { base__: <ID3D10DeviceChild as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDesc: GetDesc::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -67,7 +65,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10BlendState
         }
         ID3D10BlendState1_Vtbl { base__: <ID3D10BlendState as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDesc1: GetDesc1::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D10Buffer_Impl: ::windows_core::BaseImpl + ID3D10Resource_Impl {
     fn Map(this: &Self::This, maptype: D3D10_MAP, mapflags: u32, ppdata: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -95,7 +92,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10Buffer_Imp
             GetDesc: GetDesc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D10Counter_Impl: ::windows_core::BaseImpl + ID3D10Asynchronous_Impl {
     fn GetDesc(this: &Self::This, pdesc: *mut D3D10_COUNTER_DESC);
@@ -110,7 +106,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10Counter_Im
         }
         ID3D10Counter_Vtbl { base__: <ID3D10Asynchronous as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDesc: GetDesc::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi\"`"]
 #[cfg(feature = "Win32_Graphics_Dxgi")]
@@ -168,7 +163,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10Debug_Impl
             Validate: Validate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -187,7 +181,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10DepthStenc
         }
         ID3D10DepthStencilState_Vtbl { base__: <ID3D10DeviceChild as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDesc: GetDesc::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Dxgi_Common")]
@@ -206,7 +199,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10DepthStenc
         }
         ID3D10DepthStencilView_Vtbl { base__: <ID3D10View as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDesc: GetDesc::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -728,7 +720,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10Device_Imp
             GetTextFilterSize: GetTextFilterSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -760,7 +751,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10Device1_Im
             GetFeatureLevel: GetFeatureLevel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D10DeviceChild_Impl: ::windows_core::BaseImpl {
     fn GetDevice(this: &Self::This, ppdevice: *mut ::core::option::Option<ID3D10Device>);
@@ -793,7 +783,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10DeviceChil
             SetPrivateDataInterface: SetPrivateDataInterface::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -881,7 +870,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10Effect_Imp
             IsOptimized: IsOptimized::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1282,7 +1270,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10EffectPool
         }
         ID3D10EffectPool_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, AsEffect: AsEffect::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2219,7 +2206,6 @@ impl ::windows_core::Iids for ID3D10GeometryShader {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10GeometryShader_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ID3D10GeometryShader {
     const VTABLE: Self::Vtable = { ID3D10GeometryShader_Vtbl { base__: <ID3D10DeviceChild as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2411,7 +2397,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10InfoQueue_
             GetMuteDebugOutput: GetMuteDebugOutput::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D10InputLayout_Impl: ::windows_core::BaseImpl + ID3D10DeviceChild_Impl {}
 impl ::windows_core::Iids for ID3D10InputLayout {
@@ -2419,7 +2404,6 @@ impl ::windows_core::Iids for ID3D10InputLayout {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10InputLayout_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ID3D10InputLayout {
     const VTABLE: Self::Vtable = { ID3D10InputLayout_Vtbl { base__: <ID3D10DeviceChild as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2456,7 +2440,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10Multithrea
             GetMultithreadProtected: GetMultithreadProtected::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D10PixelShader_Impl: ::windows_core::BaseImpl + ID3D10DeviceChild_Impl {}
 impl ::windows_core::Iids for ID3D10PixelShader {
@@ -2464,7 +2447,6 @@ impl ::windows_core::Iids for ID3D10PixelShader {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10PixelShader_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ID3D10PixelShader {
     const VTABLE: Self::Vtable = { ID3D10PixelShader_Vtbl { base__: <ID3D10DeviceChild as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D10Predicate_Impl: ::windows_core::BaseImpl + ID3D10Query_Impl {}
 impl ::windows_core::Iids for ID3D10Predicate {
@@ -2472,7 +2454,6 @@ impl ::windows_core::Iids for ID3D10Predicate {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10Predicate_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ID3D10Predicate {
     const VTABLE: Self::Vtable = { ID3D10Predicate_Vtbl { base__: <ID3D10Query as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D10Query_Impl: ::windows_core::BaseImpl + ID3D10Asynchronous_Impl {
     fn GetDesc(this: &Self::This, pdesc: *mut D3D10_QUERY_DESC);
@@ -2487,7 +2468,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10Query_Impl
         }
         ID3D10Query_Vtbl { base__: <ID3D10Asynchronous as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDesc: GetDesc::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2506,7 +2486,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10Rasterizer
         }
         ID3D10RasterizerState_Vtbl { base__: <ID3D10DeviceChild as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDesc: GetDesc::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Dxgi_Common")]
@@ -2525,7 +2504,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10RenderTarg
         }
         ID3D10RenderTargetView_Vtbl { base__: <ID3D10View as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDesc: GetDesc::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D10Resource_Impl: ::windows_core::BaseImpl + ID3D10DeviceChild_Impl {
     fn GetType(this: &Self::This, rtype: *mut D3D10_RESOURCE_DIMENSION);
@@ -2553,7 +2531,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10Resource_I
             GetEvictionPriority: GetEvictionPriority::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D10SamplerState_Impl: ::windows_core::BaseImpl + ID3D10DeviceChild_Impl {
     fn GetDesc(this: &Self::This, pdesc: *mut D3D10_SAMPLER_DESC);
@@ -2568,7 +2545,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10SamplerSta
         }
         ID3D10SamplerState_Vtbl { base__: <ID3D10DeviceChild as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDesc: GetDesc::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D")]
@@ -2615,7 +2591,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10ShaderRefl
             GetOutputParameterDesc: GetOutputParameterDesc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct3D\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct3D"))]
@@ -2749,7 +2724,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10ShaderRefl
             IsSampleFrequencyShader: IsSampleFrequencyShader::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D\"`"]
 #[cfg(feature = "Win32_Graphics_Direct3D")]
@@ -2896,7 +2870,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10ShaderReso
         }
         ID3D10ShaderResourceView_Vtbl { base__: <ID3D10View as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDesc: GetDesc::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Direct3D\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Graphics_Direct3D", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -2915,7 +2888,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10ShaderReso
         }
         ID3D10ShaderResourceView1_Vtbl { base__: <ID3D10ShaderResourceView as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDesc1: GetDesc1::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D10StateBlock_Impl: ::windows_core::BaseImpl {
     fn Capture(this: &Self::This) -> ::windows_core::Result<()>;
@@ -2954,7 +2926,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10StateBlock
             GetDevice: GetDevice::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2981,7 +2952,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10SwitchToRe
             GetUseRef: GetUseRef::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Dxgi_Common")]
@@ -3013,7 +2983,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10Texture1D_
             GetDesc: GetDesc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Dxgi_Common")]
@@ -3051,7 +3020,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10Texture2D_
             GetDesc: GetDesc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Dxgi_Common")]
@@ -3089,7 +3057,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10Texture3D_
             GetDesc: GetDesc::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D10VertexShader_Impl: ::windows_core::BaseImpl + ID3D10DeviceChild_Impl {}
 impl ::windows_core::Iids for ID3D10VertexShader {
@@ -3097,7 +3064,6 @@ impl ::windows_core::Iids for ID3D10VertexShader {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10VertexShader_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for ID3D10VertexShader {
     const VTABLE: Self::Vtable = { ID3D10VertexShader_Vtbl { base__: <ID3D10DeviceChild as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ID3D10View_Impl: ::windows_core::BaseImpl + ID3D10DeviceChild_Impl {
     fn GetResource(this: &Self::This, ppresource: *mut ::core::option::Option<ID3D10Resource>);
@@ -3112,5 +3078,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ID3D10View_Impl,
         }
         ID3D10View_Vtbl { base__: <ID3D10DeviceChild as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetResource: GetResource::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

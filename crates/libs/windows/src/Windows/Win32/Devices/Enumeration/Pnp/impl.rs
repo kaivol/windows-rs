@@ -25,7 +25,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPAddressFami
             GetAddressFamily: GetAddressFamily::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUPnPAsyncResult_Impl: ::windows_core::BaseImpl {
     fn AsyncOperationComplete(this: &Self::This, ullrequestid: u64) -> ::windows_core::Result<()>;
@@ -43,7 +42,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPAsyncResult
             AsyncOperationComplete: AsyncOperationComplete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -119,7 +117,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPDescription
             DeviceByUDN: DeviceByUDN::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUPnPDescriptionDocumentCallback_Impl: ::windows_core::BaseImpl {
     fn LoadComplete(this: &Self::This, hrloadresult: ::windows_core::HRESULT) -> ::windows_core::Result<()>;
@@ -134,7 +131,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPDescription
         }
         IUPnPDescriptionDocumentCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, LoadComplete: LoadComplete::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -360,7 +356,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPDevice_Impl
             Services: Services::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -393,7 +388,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPDeviceContr
             GetServiceObject: GetServiceObject::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUPnPDeviceControlHttpHeaders_Impl: ::windows_core::BaseImpl {
     fn GetAdditionalResponseHeaders(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -417,7 +411,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPDeviceContr
             GetAdditionalResponseHeaders: GetAdditionalResponseHeaders::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUPnPDeviceDocumentAccess_Impl: ::windows_core::BaseImpl {
     fn GetDocumentURL(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -438,7 +431,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPDeviceDocum
         }
         IUPnPDeviceDocumentAccess_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDocumentURL: GetDocumentURL::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUPnPDeviceDocumentAccessEx_Impl: ::windows_core::BaseImpl {
     fn GetDocument(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -459,7 +451,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPDeviceDocum
         }
         IUPnPDeviceDocumentAccessEx_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDocument: GetDocument::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -519,7 +510,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPDeviceFinde
             FindByUDN: FindByUDN::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -541,7 +531,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPDeviceFinde
             DeviceAddedWithInterface: DeviceAddedWithInterface::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -573,7 +562,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPDeviceFinde
             SearchComplete: SearchComplete::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUPnPDeviceProvider_Impl: ::windows_core::BaseImpl {
     fn Start(this: &Self::This, bstrinitstring: &::windows_core::BSTR) -> ::windows_core::Result<()>;
@@ -596,7 +584,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPDeviceProvi
             Stop: Stop::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -646,7 +633,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPDevices_Imp
             get_Item: get_Item::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -673,7 +659,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPEventSink_I
             OnStateChangedSafe: OnStateChangedSafe::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUPnPEventSource_Impl: ::windows_core::BaseImpl {
     fn Advise(this: &Self::This, pessubscriber: ::core::option::Option<&IUPnPEventSink>) -> ::windows_core::Result<()>;
@@ -696,7 +681,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPEventSource
             Unadvise: Unadvise::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUPnPHttpHeaderControl_Impl: ::windows_core::BaseImpl {
     fn AddRequestHeaders(this: &Self::This, bstrhttpheaders: &::windows_core::BSTR) -> ::windows_core::Result<()>;
@@ -714,7 +698,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPHttpHeaderC
             AddRequestHeaders: AddRequestHeaders::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -779,7 +762,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPRegistrar_I
             UnregisterDeviceProvider: UnregisterDeviceProvider::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUPnPRemoteEndpointInfo_Impl: ::windows_core::BaseImpl {
     fn GetDwordValue(this: &Self::This, bstrvaluename: &::windows_core::BSTR) -> ::windows_core::Result<u32>;
@@ -825,7 +807,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPRemoteEndpo
             GetGuidValue: GetGuidValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUPnPReregistrar_Impl: ::windows_core::BaseImpl {
     fn ReregisterDevice(this: &Self::This, bstrdeviceidentifier: &::windows_core::BSTR, bstrxmldesc: &::windows_core::BSTR, bstrprogiddevicecontrolclass: &::windows_core::BSTR, bstrinitstring: &::windows_core::BSTR, bstrcontainerid: &::windows_core::BSTR, bstrresourcepath: &::windows_core::BSTR, nlifetime: i32) -> ::windows_core::Result<()>;
@@ -848,7 +829,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPReregistrar
             ReregisterRunningDevice: ReregisterRunningDevice::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -919,7 +899,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPService_Imp
             LastTransportStatus: LastTransportStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1011,7 +990,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPServiceAsyn
             CancelAsyncOperation: CancelAsyncOperation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1038,7 +1016,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPServiceCall
             ServiceInstanceDied: ServiceInstanceDied::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUPnPServiceDocumentAccess_Impl: ::windows_core::BaseImpl {
     fn GetDocumentURL(this: &Self::This) -> ::windows_core::Result<::windows_core::BSTR>;
@@ -1073,7 +1050,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPServiceDocu
             GetDocument: GetDocument::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IUPnPServiceEnumProperty_Impl: ::windows_core::BaseImpl {
     fn SetServiceEnumProperty(this: &Self::This, dwmask: u32) -> ::windows_core::Result<()>;
@@ -1091,7 +1067,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPServiceEnum
             SetServiceEnumProperty: SetServiceEnumProperty::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1141,5 +1116,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IUPnPServices_Im
             get_Item: get_Item::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

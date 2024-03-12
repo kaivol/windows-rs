@@ -164,7 +164,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXmlReader_Impl,
             IsEOF: IsEOF::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXmlResolver_Impl: ::windows_core::BaseImpl {
     fn ResolveUri(this: &Self::This, pwszbaseuri: &::windows_core::PCWSTR, pwszpublicidentifier: &::windows_core::PCWSTR, pwszsystemidentifier: &::windows_core::PCWSTR) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -185,7 +184,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXmlResolver_Imp
         }
         IXmlResolver_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ResolveUri: ResolveUri::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -353,7 +351,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXmlWriter_Impl,
             Flush: Flush::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -516,5 +513,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXmlWriterLite_I
             Flush: Flush::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

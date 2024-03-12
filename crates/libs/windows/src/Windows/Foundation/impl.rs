@@ -32,7 +32,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAsyncAction_Imp
             GetResults: GetResults::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAsyncActionWithProgress_Impl<TProgress>: ::windows_core::BaseImpl + IAsyncInfo_Impl
 where
@@ -89,7 +88,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAsyncActionWith
             TProgress: ::core::marker::PhantomData::<TProgress>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAsyncInfo_Impl: ::windows_core::BaseImpl {
     fn Id(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -145,7 +143,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAsyncInfo_Impl,
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAsyncOperation_Impl<TResult>: ::windows_core::BaseImpl + IAsyncInfo_Impl
 where
@@ -192,7 +189,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAsyncOperation_
             TResult: ::core::marker::PhantomData::<TResult>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAsyncOperationWithProgress_Impl<TResult, TProgress>: ::windows_core::BaseImpl + IAsyncInfo_Impl
 where
@@ -258,7 +254,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAsyncOperationW
             TProgress: ::core::marker::PhantomData::<TProgress>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IClosable_Impl: ::windows_core::BaseImpl {
     fn Close(this: &Self::This) -> ::windows_core::Result<()>;
@@ -273,7 +268,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IClosable_Impl, 
         }
         IClosable_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Close: Close::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGetActivationFactory_Impl: ::windows_core::BaseImpl {
     fn GetActivationFactory(this: &Self::This, activatableclassid: &::windows_core::HSTRING) -> ::windows_core::Result<::windows_core::IInspectable>;
@@ -298,7 +292,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGetActivationFa
             GetActivationFactory: GetActivationFactory::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMemoryBuffer_Impl: ::windows_core::BaseImpl + IClosable_Impl {
     fn CreateReference(this: &Self::This) -> ::windows_core::Result<IMemoryBufferReference>;
@@ -324,7 +317,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMemoryBuffer_Im
             CreateReference: CreateReference::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMemoryBufferReference_Impl: ::windows_core::BaseImpl + IClosable_Impl {
     fn Capacity(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -365,7 +357,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMemoryBufferRef
             RemoveClosed: RemoveClosed::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPropertyValue_Impl: ::windows_core::BaseImpl {
     fn Type(this: &Self::This) -> ::windows_core::Result<PropertyType>;
@@ -694,7 +685,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPropertyValue_I
             GetRectArray: GetRectArray::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IReference_Impl<T>: ::windows_core::BaseImpl + IPropertyValue_Impl
 where
@@ -724,7 +714,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IReference_Impl<
             T: ::core::marker::PhantomData::<T>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IReferenceArray_Impl<T>: ::windows_core::BaseImpl + IPropertyValue_Impl
 where
@@ -755,7 +744,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IReferenceArray_
             T: ::core::marker::PhantomData::<T>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IStringable_Impl: ::windows_core::BaseImpl {
     fn ToString(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -777,7 +765,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IStringable_Impl
         }
         IStringable_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ToString: ToString::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWwwFormUrlDecoderEntry_Impl: ::windows_core::BaseImpl {
     fn Name(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -814,5 +801,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWwwFormUrlDecod
             Value: Value::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

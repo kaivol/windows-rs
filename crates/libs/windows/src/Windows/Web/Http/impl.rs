@@ -97,5 +97,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHttpContent_Imp
             WriteToStreamAsync: WriteToStreamAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

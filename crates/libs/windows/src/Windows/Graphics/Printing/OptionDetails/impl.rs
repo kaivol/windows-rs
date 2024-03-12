@@ -27,7 +27,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintCustomOpti
             DisplayName: DisplayName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -54,7 +53,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintItemListOp
         }
         IPrintItemListOptionDetails_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Items: Items::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPrintNumberOptionDetails_Impl: ::windows_core::BaseImpl + IPrintOptionDetails_Impl {
     fn MinValue(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -90,7 +88,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintNumberOpti
             MaxValue: MaxValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPrintOptionDetails_Impl: ::windows_core::BaseImpl {
     fn OptionId(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -182,7 +179,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintOptionDeta
             TrySetValue: TrySetValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPrintTextOptionDetails_Impl: ::windows_core::BaseImpl + IPrintOptionDetails_Impl {
     fn MaxCharacters(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -207,5 +203,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPrintTextOption
             MaxCharacters: MaxCharacters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

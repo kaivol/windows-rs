@@ -23,7 +23,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: AsyncIFtpAuthent
             Finish_AuthenticateUser: Finish_AuthenticateUser::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait AsyncIFtpAuthorizationProvider_Impl: ::windows_core::BaseImpl {
     fn Begin_GetUserAccessPermission(this: &Self::This, pszsessionid: &::windows_core::PCWSTR, pszsitename: &::windows_core::PCWSTR, pszvirtualpath: &::windows_core::PCWSTR, pszusername: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -52,7 +51,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: AsyncIFtpAuthori
             Finish_GetUserAccessPermission: Finish_GetUserAccessPermission::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait AsyncIFtpHomeDirectoryProvider_Impl: ::windows_core::BaseImpl {
     fn Begin_GetUserHomeDirectoryData(this: &Self::This, pszsessionid: &::windows_core::PCWSTR, pszsitename: &::windows_core::PCWSTR, pszusername: &::windows_core::PCWSTR) -> ::windows_core::Result<()>;
@@ -81,7 +79,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: AsyncIFtpHomeDir
             Finish_GetUserHomeDirectoryData: Finish_GetUserHomeDirectoryData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait AsyncIFtpLogProvider_Impl: ::windows_core::BaseImpl {
     fn Begin_Log(this: &Self::This, ploggingparameters: *const LOGGING_PARAMETERS) -> ::windows_core::Result<()>;
@@ -104,7 +101,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: AsyncIFtpLogProv
             Finish_Log: Finish_Log::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -137,7 +133,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: AsyncIFtpPostpro
             Finish_HandlePostprocess: Finish_HandlePostprocess::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -170,7 +165,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: AsyncIFtpPreproc
             Finish_HandlePreprocess: Finish_HandlePreprocess::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -203,7 +197,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: AsyncIFtpRolePro
             Finish_IsUserInRole: Finish_IsUserInRole::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait AsyncIMSAdminBaseSinkW_Impl: ::windows_core::BaseImpl {
     fn Begin_SinkNotify(this: &Self::This, dwmdnumelements: u32, pcochangelist: *const MD_CHANGE_OBJECT_W) -> ::windows_core::Result<()>;
@@ -236,7 +229,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: AsyncIMSAdminBas
             Finish_ShutdownNotify: Finish_ShutdownNotify::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IADMEXT_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This) -> ::windows_core::Result<()>;
@@ -264,7 +256,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IADMEXT_Impl, co
             Terminate: Terminate::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -286,7 +277,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFtpAuthenticati
             AuthenticateUser: AuthenticateUser::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IFtpAuthorizationProvider_Impl: ::windows_core::BaseImpl {
     fn GetUserAccessPermission(this: &Self::This, pszsessionid: &::windows_core::PCWSTR, pszsitename: &::windows_core::PCWSTR, pszvirtualpath: &::windows_core::PCWSTR, pszusername: &::windows_core::PCWSTR) -> ::windows_core::Result<FTP_ACCESS>;
@@ -310,7 +300,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFtpAuthorizatio
             GetUserAccessPermission: GetUserAccessPermission::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IFtpHomeDirectoryProvider_Impl: ::windows_core::BaseImpl {
     fn GetUserHomeDirectoryData(this: &Self::This, pszsessionid: &::windows_core::PCWSTR, pszsitename: &::windows_core::PCWSTR, pszusername: &::windows_core::PCWSTR) -> ::windows_core::Result<::windows_core::PWSTR>;
@@ -334,7 +323,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFtpHomeDirector
             GetUserHomeDirectoryData: GetUserHomeDirectoryData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IFtpLogProvider_Impl: ::windows_core::BaseImpl {
     fn Log(this: &Self::This, ploggingparameters: *const LOGGING_PARAMETERS) -> ::windows_core::Result<()>;
@@ -349,7 +337,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFtpLogProvider_
         }
         IFtpLogProvider_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Log: Log::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -377,7 +364,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFtpPostprocessP
             HandlePostprocess: HandlePostprocess::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -405,7 +391,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFtpPreprocessPr
             HandlePreprocess: HandlePreprocess::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -424,7 +409,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFtpProviderCons
         }
         IFtpProviderConstruct_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Construct: Construct::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -449,7 +433,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IFtpRoleProvider
         }
         IFtpRoleProvider_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, IsUserInRole: IsUserInRole::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -496,7 +479,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMSAdminBase2W_I
             EnumHistory: EnumHistory::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -515,7 +497,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMSAdminBase3W_I
         }
         IMSAdminBase3W_Vtbl { base__: <IMSAdminBase2W as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetChildPaths: GetChildPaths::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMSAdminBaseSinkW_Impl: ::windows_core::BaseImpl {
     fn SinkNotify(this: &Self::This, dwmdnumelements: u32, pcochangelist: *const MD_CHANGE_OBJECT_W) -> ::windows_core::Result<()>;
@@ -538,7 +519,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMSAdminBaseSink
             ShutdownNotify: ShutdownNotify::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -742,7 +722,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMSAdminBaseW_Im
             GetServerGuid: GetServerGuid::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMSImpExpHelpW_Impl: ::windows_core::BaseImpl {
     fn EnumeratePathsInFile(this: &Self::This, pszfilename: &::windows_core::PCWSTR, pszkeytype: &::windows_core::PCWSTR, dwmdbuffersize: u32, pszbuffer: &::windows_core::PWSTR, pdwmdrequiredbuffersize: *mut u32) -> ::windows_core::Result<()>;
@@ -760,5 +739,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMSImpExpHelpW_I
             EnumeratePathsInFile: EnumeratePathsInFile::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

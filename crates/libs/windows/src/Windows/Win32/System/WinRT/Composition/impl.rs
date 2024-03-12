@@ -21,7 +21,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICompositionCapa
         }
         ICompositionCapabilitiesInteropFactory_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetForWindow: GetForWindow::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -68,7 +67,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICompositionDraw
             SuspendDraw: SuspendDraw::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -90,7 +88,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICompositionDraw
             CopySurface: CopySurface::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ICompositionGraphicsDeviceInterop_Impl: ::windows_core::BaseImpl {
     fn GetRenderingDevice(this: &Self::This) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -119,7 +116,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICompositionGrap
             SetRenderingDevice: SetRenderingDevice::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"UI_Composition_Desktop\"`, `\"Win32_Foundation\"`"]
 #[cfg(all(feature = "UI_Composition_Desktop", feature = "Win32_Foundation"))]
@@ -152,7 +148,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICompositorDeskt
             EnsureOnThread: EnsureOnThread::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"UI_Composition\"`, `\"Win32_Foundation\"`"]
 #[cfg(all(feature = "UI_Composition", feature = "Win32_Foundation"))]
@@ -202,7 +197,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICompositorInter
             CreateGraphicsDevice: CreateGraphicsDevice::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -227,7 +221,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDesktopWindowTa
         }
         IDesktopWindowTargetInterop_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Hwnd: Hwnd::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_Input_Pointer\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_Input_Pointer", feature = "Win32_UI_WindowsAndMessaging"))]
@@ -249,5 +242,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IVisualInteracti
             TryRedirectForManipulation: TryRedirectForManipulation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

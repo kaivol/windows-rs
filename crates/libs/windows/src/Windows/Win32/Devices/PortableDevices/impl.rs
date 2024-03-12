@@ -11,7 +11,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IConnectionReque
         }
         IConnectionRequestCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnComplete: OnComplete::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumPortableDeviceConnectors_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, crequested: u32, pconnectors: *mut ::core::option::Option<IPortableDeviceConnector>, pcfetched: *mut u32) -> ::windows_core::Result<()>;
@@ -50,7 +49,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumPortableDev
             Clone: Clone::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IEnumPortableDeviceObjectIDs_Impl: ::windows_core::BaseImpl {
     fn Next(this: &Self::This, cobjects: u32, pobjids: *mut ::windows_core::PWSTR, pcfetched: *mut u32) -> ::windows_core::HRESULT;
@@ -94,7 +92,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IEnumPortableDev
             Cancel: Cancel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMediaRadioManager_Impl: ::windows_core::BaseImpl {
     fn GetRadioInstances(this: &Self::This) -> ::windows_core::Result<IRadioInstanceCollection>;
@@ -123,7 +120,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMediaRadioManag
             OnSystemRadioStateChange: OnSystemRadioStateChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMediaRadioManagerNotifySink_Impl: ::windows_core::BaseImpl {
     fn OnInstanceAdd(this: &Self::This, pradioinstance: ::core::option::Option<&IRadioInstance>) -> ::windows_core::Result<()>;
@@ -151,7 +147,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMediaRadioManag
             OnInstanceRadioChange: OnInstanceRadioChange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPortableDevice_Impl: ::windows_core::BaseImpl {
     fn Open(this: &Self::This, pszpnpdeviceid: &::windows_core::PCWSTR, pclientinfo: ::core::option::Option<&IPortableDeviceValues>) -> ::windows_core::Result<()>;
@@ -239,7 +234,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDevice_
             GetPnPDeviceID: GetPnPDeviceID::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -371,7 +365,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceC
             GetEventOptions: GetEventOptions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Devices_Properties\"`"]
 #[cfg(feature = "Win32_Devices_Properties")]
@@ -424,7 +417,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceC
             GetPnPID: GetPnPID::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -515,7 +507,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceC
             Copy: Copy::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -537,7 +528,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceC
             UpdateObjectWithPropertiesAndData: UpdateObjectWithPropertiesAndData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -570,7 +560,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceD
             Cancel: Cancel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -598,7 +587,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceD
             GetDeviceDispatch: GetDeviceDispatch::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPortableDeviceEventCallback_Impl: ::windows_core::BaseImpl {
     fn OnEvent(this: &Self::This, peventparameters: ::core::option::Option<&IPortableDeviceValues>) -> ::windows_core::Result<()>;
@@ -613,7 +601,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceE
         }
         IPortableDeviceEventCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnEvent: OnEvent::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -655,7 +642,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceK
             RemoveAt: RemoveAt::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPortableDeviceManager_Impl: ::windows_core::BaseImpl {
     fn GetDevices(this: &Self::This, ppnpdeviceids: *mut ::windows_core::PWSTR, pcpnpdeviceids: *mut u32) -> ::windows_core::Result<()>;
@@ -703,7 +689,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceM
             GetPrivateDevices: GetPrivateDevices::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
@@ -761,7 +746,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceP
             RemoveAt: RemoveAt::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -832,7 +816,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceP
             Cancel: Cancel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPortableDevicePropertiesBulk_Impl: ::windows_core::BaseImpl {
     fn QueueGetValuesByObjectList(this: &Self::This, pobjectids: ::core::option::Option<&IPortableDevicePropVariantCollection>, pkeys: ::core::option::Option<&IPortableDeviceKeyCollection>, pcallback: ::core::option::Option<&IPortableDevicePropertiesBulkCallback>) -> ::windows_core::Result<::windows_core::GUID>;
@@ -888,7 +871,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceP
             Cancel: Cancel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPortableDevicePropertiesBulkCallback_Impl: ::windows_core::BaseImpl {
     fn OnStart(this: &Self::This, pcontext: *const ::windows_core::GUID) -> ::windows_core::Result<()>;
@@ -916,7 +898,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceP
             OnEnd: OnEnd::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_System_Com", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -975,7 +956,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceR
             CreateResource: CreateResource::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPortableDeviceService_Impl: ::windows_core::BaseImpl {
     fn Open(this: &Self::This, pszpnpserviceid: &::windows_core::PCWSTR, pclientinfo: ::core::option::Option<&IPortableDeviceValues>) -> ::windows_core::Result<()>;
@@ -1085,7 +1065,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceS
             SendCommand: SendCommand::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPortableDeviceServiceActivation_Impl: ::windows_core::BaseImpl {
     fn OpenAsync(this: &Self::This, pszpnpserviceid: &::windows_core::PCWSTR, pclientinfo: ::core::option::Option<&IPortableDeviceValues>, pcallback: ::core::option::Option<&IPortableDeviceServiceOpenCallback>) -> ::windows_core::Result<()>;
@@ -1108,7 +1087,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceS
             CancelOpenAsync: CancelOpenAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -1295,7 +1273,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceS
             Cancel: Cancel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPortableDeviceServiceManager_Impl: ::windows_core::BaseImpl {
     fn GetDeviceServices(this: &Self::This, pszpnpdeviceid: &::windows_core::PCWSTR, guidservicecategory: *const ::windows_core::GUID, pservices: *mut ::windows_core::PWSTR, pcservices: *mut u32) -> ::windows_core::Result<()>;
@@ -1324,7 +1301,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceS
             GetDeviceForService: GetDeviceForService::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPortableDeviceServiceMethodCallback_Impl: ::windows_core::BaseImpl {
     fn OnComplete(this: &Self::This, hrstatus: ::windows_core::HRESULT, presults: ::core::option::Option<&IPortableDeviceValues>) -> ::windows_core::Result<()>;
@@ -1339,7 +1315,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceS
         }
         IPortableDeviceServiceMethodCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnComplete: OnComplete::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPortableDeviceServiceMethods_Impl: ::windows_core::BaseImpl {
     fn Invoke(this: &Self::This, method: *const ::windows_core::GUID, pparameters: ::core::option::Option<&IPortableDeviceValues>, ppresults: *mut ::core::option::Option<IPortableDeviceValues>) -> ::windows_core::Result<()>;
@@ -1367,7 +1342,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceS
             Cancel: Cancel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPortableDeviceServiceOpenCallback_Impl: ::windows_core::BaseImpl {
     fn OnComplete(this: &Self::This, hrstatus: ::windows_core::HRESULT) -> ::windows_core::Result<()>;
@@ -1382,7 +1356,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceS
         }
         IPortableDeviceServiceOpenCallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnComplete: OnComplete::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPortableDeviceUnitsStream_Impl: ::windows_core::BaseImpl {
     fn SeekInUnits(this: &Self::This, dlibmove: i64, units: WPD_STREAM_UNITS, dworigin: u32, plibnewposition: *mut u64) -> ::windows_core::Result<()>;
@@ -1405,7 +1378,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceU
             Cancel: Cancel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -1712,7 +1684,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceV
             Clear: Clear::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IPortableDeviceValuesCollection_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This, pcelems: *const u32) -> ::windows_core::Result<()>;
@@ -1756,7 +1727,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceV
             RemoveAt: RemoveAt::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1789,7 +1759,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPortableDeviceW
             GetDeviceFromIdAsync: GetDeviceFromIdAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1865,7 +1834,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRadioInstance_I
             IsAssociatingDevice: IsAssociatingDevice::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRadioInstanceCollection_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -1900,7 +1868,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRadioInstanceCo
             GetAt: GetAt::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWpdSerializer_Impl: ::windows_core::BaseImpl {
     fn GetIPortableDeviceValuesFromBuffer(this: &Self::This, pbuffer: *const u8, dwinputbufferlength: u32) -> ::windows_core::Result<IPortableDeviceValues>;
@@ -1945,5 +1912,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWpdSerializer_I
             GetSerializedSize: GetSerializedSize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

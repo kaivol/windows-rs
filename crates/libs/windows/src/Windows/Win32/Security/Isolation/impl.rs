@@ -15,5 +15,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IIsolatedAppLaun
         }
         IIsolatedAppLauncher_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Launch: Launch::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

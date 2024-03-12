@@ -27,7 +27,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGraphicsEffect_
             SetName: SetName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGraphicsEffectSource_Impl: ::windows_core::BaseImpl {}
 impl ::windows_core::Iids for IGraphicsEffectSource {
@@ -35,5 +34,4 @@ impl ::windows_core::Iids for IGraphicsEffectSource {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGraphicsEffectSource_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IGraphicsEffectSource {
     const VTABLE: Self::Vtable = { IGraphicsEffectSource_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

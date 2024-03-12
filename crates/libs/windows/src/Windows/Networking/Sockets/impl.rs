@@ -21,7 +21,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IControlChannelT
             ControlChannelTrigger: ControlChannelTrigger::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IControlChannelTriggerResetEventDetails_Impl: ::windows_core::BaseImpl {
     fn ResetReason(this: &Self::This) -> ::windows_core::Result<ControlChannelTriggerResetReason>;
@@ -67,7 +66,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IControlChannelT
             SoftwareSlotReset: SoftwareSlotReset::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
 #[cfg(all(feature = "Foundation", feature = "Storage_Streams"))]
@@ -135,7 +133,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebSocket_Impl,
             CloseWithStatus: CloseWithStatus::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Security_Credentials\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Security_Credentials"))]
@@ -214,7 +211,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebSocketContro
             SupportedProtocols: SupportedProtocols::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Security_Credentials\"`, `\"Security_Cryptography_Certificates\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Security_Credentials", feature = "Security_Cryptography_Certificates"))]
@@ -244,7 +240,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebSocketContro
             IgnorableServerCertificateErrors: IgnorableServerCertificateErrors::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWebSocketInformation_Impl: ::windows_core::BaseImpl {
     fn LocalAddress(this: &Self::This) -> ::windows_core::Result<super::HostName>;
@@ -292,7 +287,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebSocketInform
             Protocol: Protocol::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"Security_Cryptography_Certificates\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "Security_Cryptography_Certificates"))]
@@ -357,5 +351,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWebSocketInform
             ServerIntermediateCertificates: ServerIntermediateCertificates::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

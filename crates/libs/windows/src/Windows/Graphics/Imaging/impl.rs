@@ -149,7 +149,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBitmapFrame_Imp
             GetPixelDataTransformedAsync: GetPixelDataTransformedAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
 #[cfg(all(feature = "Foundation", feature = "Storage_Streams"))]
@@ -203,7 +202,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBitmapFrameWith
             GetSoftwareBitmapTransformedAsync: GetSoftwareBitmapTransformedAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -232,5 +230,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IBitmapPropertie
             GetPropertiesAsync: GetPropertiesAsync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

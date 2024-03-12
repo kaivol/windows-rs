@@ -120,7 +120,6 @@ pub fn gen_unknown_base(writer: &Writer, def: TypeDef) -> TokenStream {
                     #(#named_phantoms)*
                 }
             };
-            const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
         }
     }
 }

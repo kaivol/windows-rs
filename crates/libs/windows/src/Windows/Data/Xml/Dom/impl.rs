@@ -70,7 +70,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXmlCharacterDat
             ReplaceData: ReplaceData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXmlNode_Impl: ::windows_core::BaseImpl + IXmlNodeSelector_Impl + IXmlNodeSerializer_Impl {
     fn NodeValue(this: &Self::This) -> ::windows_core::Result<::windows_core::IInspectable>;
@@ -337,7 +336,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXmlNode_Impl, c
             SetPrefix: SetPrefix::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXmlNodeSelector_Impl: ::windows_core::BaseImpl {
     fn SelectSingleNode(this: &Self::This, xpath: &::windows_core::HSTRING) -> ::windows_core::Result<IXmlNode>;
@@ -398,7 +396,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXmlNodeSelector
             SelectNodesNS: SelectNodesNS::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXmlNodeSerializer_Impl: ::windows_core::BaseImpl {
     fn GetXml(this: &Self::This) -> ::windows_core::Result<::windows_core::HSTRING>;
@@ -440,7 +437,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXmlNodeSerializ
             SetInnerText: SetInnerText::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IXmlText_Impl: ::windows_core::BaseImpl + IXmlCharacterData_Impl + IXmlNode_Impl + IXmlNodeSelector_Impl + IXmlNodeSerializer_Impl {
     fn SplitText(this: &Self::This, offset: u32) -> ::windows_core::Result<IXmlText>;
@@ -463,5 +459,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IXmlText_Impl, c
         }
         IXmlText_Vtbl { base__: <::windows_core::IInspectable as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SplitText: SplitText::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

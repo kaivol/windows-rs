@@ -40,7 +40,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIAdapter_Imp
             CheckInterfaceSupport: CheckInterfaceSupport::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -59,7 +58,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIAdapter1_Im
         }
         IDXGIAdapter1_Vtbl { base__: <IDXGIAdapter as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDesc1: GetDesc1::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -78,7 +76,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIAdapter2_Im
         }
         IDXGIAdapter2_Vtbl { base__: <IDXGIAdapter1 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDesc2: GetDesc2::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -137,7 +134,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIAdapter3_Im
             UnregisterVideoMemoryBudgetChangeNotification: UnregisterVideoMemoryBudgetChangeNotification::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -156,7 +152,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIAdapter4_Im
         }
         IDXGIAdapter4_Vtbl { base__: <IDXGIAdapter3 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDesc3: GetDesc3::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDXGIDebug_Impl: ::windows_core::BaseImpl {
     fn ReportLiveObjects(this: &Self::This, apiid: &::windows_core::GUID, flags: DXGI_DEBUG_RLO_FLAGS) -> ::windows_core::Result<()>;
@@ -174,7 +169,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIDebug_Impl,
             ReportLiveObjects: ReportLiveObjects::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -206,7 +200,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIDebug1_Impl
             IsLeakTrackingEnabledForThread: IsLeakTrackingEnabledForThread::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -280,7 +273,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIDecodeSwapC
             GetColorSpace: GetColorSpace::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -334,7 +326,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIDevice_Impl
             GetGPUThreadPriority: GetGPUThreadPriority::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -367,7 +358,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIDevice1_Imp
             GetMaximumFrameLatency: GetMaximumFrameLatency::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -399,7 +389,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIDevice2_Imp
             EnqueueSetEvent: EnqueueSetEvent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -418,7 +407,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIDevice3_Imp
         }
         IDXGIDevice3_Vtbl { base__: <IDXGIDevice2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Trim: Trim::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -445,7 +433,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIDevice4_Imp
             ReclaimResources1: ReclaimResources1::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDXGIDeviceSubObject_Impl: ::windows_core::BaseImpl + IDXGIObject_Impl {
     fn GetDevice(this: &Self::This, riid: *const ::windows_core::GUID, ppdevice: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -460,7 +447,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIDeviceSubOb
         }
         IDXGIDeviceSubObject_Vtbl { base__: <IDXGIObject as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetDevice: GetDevice::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -487,7 +473,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIDisplayCont
             SetStereoEnabled: SetStereoEnabled::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -547,7 +532,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIFactory_Imp
             CreateSoftwareAdapter: CreateSoftwareAdapter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -580,7 +564,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIFactory1_Im
             IsCurrent: IsCurrent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -700,7 +683,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIFactory2_Im
             CreateSwapChainForComposition: CreateSwapChainForComposition::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -719,7 +701,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIFactory3_Im
         }
         IDXGIFactory3_Vtbl { base__: <IDXGIFactory2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetCreationFlags: GetCreationFlags::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -746,7 +727,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIFactory4_Im
             EnumWarpAdapter: EnumWarpAdapter::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -765,7 +745,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIFactory5_Im
         }
         IDXGIFactory5_Vtbl { base__: <IDXGIFactory4 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CheckFeatureSupport: CheckFeatureSupport::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -787,7 +766,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIFactory6_Im
             EnumAdapterByGpuPreference: EnumAdapterByGpuPreference::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -820,7 +798,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIFactory7_Im
             UnregisterAdaptersChangedEvent: UnregisterAdaptersChangedEvent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -859,7 +836,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIFactoryMedi
             CreateDecodeSwapChainForCompositionSurfaceHandle: CreateDecodeSwapChainForCompositionSurfaceHandle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1061,7 +1037,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIInfoQueue_I
             GetMuteDebugOutput: GetMuteDebugOutput::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDXGIKeyedMutex_Impl: ::windows_core::BaseImpl + IDXGIDeviceSubObject_Impl {
     fn AcquireSync(this: &Self::This, key: u64, dwmilliseconds: u32) -> ::windows_core::Result<()>;
@@ -1084,7 +1059,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIKeyedMutex_
             ReleaseSync: ReleaseSync::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDXGIObject_Impl: ::windows_core::BaseImpl {
     fn SetPrivateData(this: &Self::This, name: *const ::windows_core::GUID, datasize: u32, pdata: *const ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -1117,7 +1091,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIObject_Impl
             GetParent: GetParent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Gdi"))]
@@ -1194,7 +1167,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIOutput_Impl
             GetFrameStatistics: GetFrameStatistics::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Gdi"))]
@@ -1237,7 +1209,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIOutput1_Imp
             DuplicateOutput: DuplicateOutput::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Gdi"))]
@@ -1256,7 +1227,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIOutput2_Imp
         }
         IDXGIOutput2_Vtbl { base__: <IDXGIOutput1 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SupportsOverlays: SupportsOverlays::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Gdi"))]
@@ -1281,7 +1251,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIOutput3_Imp
         }
         IDXGIOutput3_Vtbl { base__: <IDXGIOutput2 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CheckOverlaySupport: CheckOverlaySupport::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Gdi"))]
@@ -1309,7 +1278,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIOutput4_Imp
             CheckOverlayColorSpaceSupport: CheckOverlayColorSpaceSupport::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Gdi"))]
@@ -1334,7 +1302,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIOutput5_Imp
         }
         IDXGIOutput5_Vtbl { base__: <IDXGIOutput4 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, DuplicateOutput1: DuplicateOutput1::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Gdi"))]
@@ -1367,7 +1334,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIOutput6_Imp
             CheckHardwareCompositionSupport: CheckHardwareCompositionSupport::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -1430,7 +1396,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIOutputDupli
             ReleaseFrame: ReleaseFrame::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1485,7 +1450,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIResource_Im
             GetEvictionPriority: GetEvictionPriority::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Security\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Security"))]
@@ -1524,7 +1488,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGIResource1_I
             CreateSharedHandle: CreateSharedHandle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(feature = "Win32_Graphics_Dxgi_Common")]
@@ -1556,7 +1519,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGISurface_Imp
             Unmap: Unmap::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Gdi"))]
@@ -1589,7 +1551,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGISurface1_Im
             ReleaseDC: ReleaseDC::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common", feature = "Win32_Graphics_Gdi"))]
@@ -1608,7 +1569,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGISurface2_Im
         }
         IDXGISurface2_Vtbl { base__: <IDXGISurface1 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetResource: GetResource::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -1687,7 +1647,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGISwapChain_I
             GetLastPresentCount: GetLastPresentCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -1783,7 +1742,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGISwapChain1_
             GetRotation: GetRotation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -1841,7 +1799,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGISwapChain2_
             GetMatrixTransform: GetMatrixTransform::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -1884,7 +1841,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGISwapChain3_
             ResizeBuffers1: ResizeBuffers1::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Dxgi_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Dxgi_Common"))]
@@ -1903,7 +1859,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGISwapChain4_
         }
         IDXGISwapChain4_Vtbl { base__: <IDXGISwapChain3 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, SetHDRMetaData: SetHDRMetaData::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDXGISwapChainMedia_Impl: ::windows_core::BaseImpl {
     fn GetFrameStatisticsMedia(this: &Self::This, pstats: *mut DXGI_FRAME_STATISTICS_MEDIA) -> ::windows_core::Result<()>;
@@ -1931,7 +1886,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGISwapChainMe
             CheckPresentDurationSupport: CheckPresentDurationSupport::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDXGraphicsAnalysis_Impl: ::windows_core::BaseImpl {
     fn BeginCapture(this: &Self::This);
@@ -1954,5 +1908,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDXGraphicsAnaly
             EndCapture: EndCapture::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

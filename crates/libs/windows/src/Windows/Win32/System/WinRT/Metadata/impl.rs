@@ -90,7 +90,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ICeeGen_Impl, co
             ComputePointer: ComputePointer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IHostFilter_Impl: ::windows_core::BaseImpl {
     fn MarkToken(this: &Self::This, tk: u32) -> ::windows_core::Result<()>;
@@ -105,7 +104,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IHostFilter_Impl
         }
         IHostFilter_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, MarkToken: MarkToken::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMapToken_Impl: ::windows_core::BaseImpl {
     fn Map(this: &Self::This, tkimp: u32, tkemit: u32) -> ::windows_core::Result<()>;
@@ -120,7 +118,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMapToken_Impl, 
         }
         IMapToken_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Map: Map::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMetaDataAssemblyEmit_Impl: ::windows_core::BaseImpl {
     fn DefineAssembly(this: &Self::This, pbpublickey: *const ::core::ffi::c_void, cbpublickey: u32, ulhashalgid: u32, szname: &::windows_core::PCWSTR, pmetadata: *const ASSEMBLYMETADATA, dwassemblyflags: u32, pma: *mut u32) -> ::windows_core::Result<()>;
@@ -183,7 +180,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMetaDataAssembl
             SetManifestResourceProps: SetManifestResourceProps::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMetaDataAssemblyImport_Impl: ::windows_core::BaseImpl {
     fn GetAssemblyProps(this: &Self::This, mda: u32, ppbpublickey: *const *const ::core::ffi::c_void, pcbpublickey: *mut u32, pulhashalgid: *mut u32, szname: ::windows_core::PWSTR, cchname: u32, pchname: *mut u32, pmetadata: *mut ASSEMBLYMETADATA, pdwassemblyflags: *mut u32) -> ::windows_core::Result<()>;
@@ -268,7 +264,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMetaDataAssembl
             FindAssembliesByName: FindAssembliesByName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMetaDataDispenser_Impl: ::windows_core::BaseImpl {
     fn DefineScope(this: &Self::This, rclsid: *const ::windows_core::GUID, dwcreateflags: u32, riid: *const ::windows_core::GUID) -> ::windows_core::Result<::windows_core::IUnknown>;
@@ -314,7 +309,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMetaDataDispens
             OpenScopeOnMemory: OpenScopeOnMemory::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -367,7 +361,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMetaDataDispens
             FindAssemblyModule: FindAssemblyModule::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -662,7 +655,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMetaDataEmit_Im
             MergeEnd: MergeEnd::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_System_Com\"`"]
 #[cfg(feature = "Win32_System_Com")]
@@ -719,7 +711,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMetaDataEmit2_I
             ResetENCLog: ResetENCLog::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMetaDataError_Impl: ::windows_core::BaseImpl {
     fn OnError(this: &Self::This, hrerror: ::windows_core::HRESULT, token: u32) -> ::windows_core::Result<()>;
@@ -734,7 +725,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMetaDataError_I
         }
         IMetaDataError_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, OnError: OnError::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -766,7 +756,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMetaDataFilter_
             IsTokenMarked: IsTokenMarked::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1152,7 +1141,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMetaDataImport_
             IsGlobal: IsGlobal::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1209,7 +1197,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMetaDataImport2
             EnumMethodSpecs: EnumMethodSpecs::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMetaDataInfo_Impl: ::windows_core::BaseImpl {
     fn GetFileMapping(this: &Self::This, ppvdata: *const *const ::core::ffi::c_void, pcbdata: *mut u64, pdwmappingtype: *mut u32) -> ::windows_core::Result<()>;
@@ -1224,7 +1211,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMetaDataInfo_Im
         }
         IMetaDataInfo_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetFileMapping: GetFileMapping::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMetaDataTables_Impl: ::windows_core::BaseImpl {
     fn GetStringHeapSize(this: &Self::This, pcbstrings: *mut u32) -> ::windows_core::Result<()>;
@@ -1332,7 +1318,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMetaDataTables_
             GetNextUserString: GetNextUserString::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMetaDataTables2_Impl: ::windows_core::BaseImpl + IMetaDataTables_Impl {
     fn GetMetaDataStorage(this: &Self::This, ppvmd: *const *const ::core::ffi::c_void, pcbmd: *mut u32) -> ::windows_core::Result<()>;
@@ -1355,7 +1340,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMetaDataTables2
             GetMetaDataStreamInfo: GetMetaDataStreamInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMetaDataValidate_Impl: ::windows_core::BaseImpl {
     fn ValidatorInit(this: &Self::This, dwmoduletype: u32, punk: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -1378,7 +1362,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMetaDataValidat
             ValidateMetaData: ValidateMetaData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IMetaDataWinMDImport_Impl: ::windows_core::BaseImpl {
     fn GetUntransformedTypeRefProps(this: &Self::This, tr: u32, ptkresolutionscope: *mut u32, szname: ::windows_core::PWSTR, cchname: u32, pchname: *mut u32) -> ::windows_core::Result<()>;
@@ -1396,7 +1379,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IMetaDataWinMDIm
             GetUntransformedTypeRefProps: GetUntransformedTypeRefProps::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRoMetaDataLocator_Impl: Sized {
     fn Locate(&self, nameelement: &::windows_core::PCWSTR, metadatadestination: ::core::option::Option<&IRoSimpleMetaDataBuilder>) -> ::windows_core::Result<()>;

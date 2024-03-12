@@ -48,7 +48,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISmsBinaryMessag
             SetData: SetData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation\"`, `\"deprecated\"`"]
 #[cfg(all(feature = "Foundation", feature = "deprecated"))]
@@ -166,7 +165,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISmsDevice_Impl,
             RemoveSmsDeviceStatusChanged: RemoveSmsDeviceStatusChanged::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISmsMessage_Impl: ::windows_core::BaseImpl {
     fn Id(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -201,7 +199,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISmsMessage_Impl
             MessageClass: MessageClass::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait ISmsMessageBase_Impl: ::windows_core::BaseImpl {
     fn MessageType(this: &Self::This) -> ::windows_core::Result<SmsMessageType>;
@@ -271,7 +268,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISmsMessageBase_
             SimIccId: SimIccId::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`, `\"deprecated\"`"]
 #[cfg(all(feature = "Foundation_Collections", feature = "deprecated"))]
@@ -412,5 +408,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISmsTextMessage_
             ToBinaryMessages: ToBinaryMessages::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

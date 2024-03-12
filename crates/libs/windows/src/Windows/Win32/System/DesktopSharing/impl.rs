@@ -73,7 +73,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIApplica
             Flags: Flags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -128,7 +127,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIApplica
             SetEnabled: SetEnabled::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -167,7 +165,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIApplica
             get_Item: get_Item::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -260,7 +257,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIAttende
             ConnectivityInfo: ConnectivityInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -310,7 +306,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIAttende
             Code: Code::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -349,7 +344,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIAttende
             get_Item: get_Item::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRDPSRAPIAudioStream_Impl: ::windows_core::BaseImpl {
     fn Initialize(this: &Self::This) -> ::windows_core::Result<i64>;
@@ -393,7 +387,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIAudioSt
             FreeBuffer: FreeBuffer::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -421,7 +414,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIClipboa
             OnPasteFromClipboard: OnPasteFromClipboard::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRDPSRAPIDebug_Impl: ::windows_core::BaseImpl {
     fn SetCLXCmdLine(this: &Self::This, clxcmdline: &::windows_core::BSTR) -> ::windows_core::Result<()>;
@@ -450,7 +442,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIDebug_I
             CLXCmdLine: CLXCmdLine::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -511,7 +502,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIFrameBu
             GetFrameBufferBits: GetFrameBufferBits::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -593,7 +583,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIInvitat
             SetRevoked: SetRevoked::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -654,7 +643,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIInvitat
             CreateInvitation: CreateInvitation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRDPSRAPIPerfCounterLogger_Impl: ::windows_core::BaseImpl {
     fn LogValue(this: &Self::This, lvalue: i64) -> ::windows_core::Result<()>;
@@ -669,7 +657,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIPerfCou
         }
         IRDPSRAPIPerfCounterLogger_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, LogValue: LogValue::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRDPSRAPIPerfCounterLoggingManager_Impl: ::windows_core::BaseImpl {
     fn CreateLogger(this: &Self::This, bstrcountername: &::windows_core::BSTR) -> ::windows_core::Result<IRDPSRAPIPerfCounterLogger>;
@@ -690,7 +677,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIPerfCou
         }
         IRDPSRAPIPerfCounterLoggingManager_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, CreateLogger: CreateLogger::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -723,7 +709,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPISession
             put_Property: put_Property::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -846,7 +831,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPISharing
             GetDesktopSharedRect: GetDesktopSharedRect::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -884,7 +868,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPISharing
             SendControlLevelChangeResponse: SendControlLevelChangeResponse::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -956,7 +939,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPITcpConn
             PeerIP: PeerIP::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRDPSRAPITransportStream_Impl: ::windows_core::BaseImpl {
     fn AllocBuffer(this: &Self::This, maxpayload: i32) -> ::windows_core::Result<IRDPSRAPITransportStreamBuffer>;
@@ -1005,7 +987,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPITranspo
             Close: Close::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRDPSRAPITransportStreamBuffer_Impl: ::windows_core::BaseImpl {
     fn Storage(this: &Self::This) -> ::windows_core::Result<*mut u8>;
@@ -1104,7 +1085,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPITranspo
             SetContext: SetContext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IRDPSRAPITransportStreamEvents_Impl: ::windows_core::BaseImpl {
     fn OnWriteCompleted(this: &Self::This, pbuffer: ::core::option::Option<&IRDPSRAPITransportStreamBuffer>);
@@ -1132,7 +1112,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPITranspo
             OnStreamClosed: OnStreamClosed::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1267,7 +1246,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIViewer_
             StartReverseConnectListener: StartReverseConnectListener::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1327,7 +1305,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIVirtual
             Priority: Priority::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1377,7 +1354,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIVirtual
             CreateVirtualChannel: CreateVirtualChannel::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1459,7 +1435,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIWindow_
             Flags: Flags::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1498,7 +1473,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPSRAPIWindowL
             get_Item: get_Item::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1555,7 +1529,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IRDPViewerInputS
             EndTouchFrame: EndTouchFrame::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1567,5 +1540,4 @@ impl ::windows_core::Iids for _IRDPSessionEvents {
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: _IRDPSessionEvents_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for _IRDPSessionEvents {
     const VTABLE: Self::Vtable = { _IRDPSessionEvents_Vtbl { base__: <super::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

@@ -23,7 +23,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteAsyncResu
             GetResult: GetResult::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -86,7 +85,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteBitmapRen
             Resize: Resize::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -113,7 +111,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteBitmapRen
             SetTextAntialiasMode: SetTextAntialiasMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -152,7 +149,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteColorGlyp
             GetCurrentRun: GetCurrentRun::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -180,7 +176,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteColorGlyp
             GetCurrentRun2: GetCurrentRun2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -398,7 +393,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFactory_I
             CreateGlyphRunAnalysis: CreateGlyphRunAnalysis::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -431,7 +425,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFactory1_
             CreateCustomRenderingParams2: CreateCustomRenderingParams2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -503,7 +496,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFactory2_
             CreateGlyphRunAnalysis2: CreateGlyphRunAnalysis2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -613,7 +605,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFactory3_
             GetFontDownloadQueue: GetFontDownloadQueue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_Gdi"))]
@@ -663,7 +654,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFactory4_
             ComputeGlyphOrigins2: ComputeGlyphOrigins2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_Gdi"))]
@@ -729,7 +719,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFactory5_
             UnpackFontFile: UnpackFontFile::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_Gdi"))]
@@ -823,7 +812,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFactory6_
             CreateTextFormat2: CreateTextFormat2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common", feature = "Win32_Graphics_Gdi"))]
@@ -862,7 +850,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFactory7_
             GetSystemFontCollection4: GetSystemFontCollection4::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -958,7 +945,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFont_Impl
             CreateFontFace: CreateFontFace::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -995,7 +981,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFont1_Imp
             IsMonospacedFont: IsMonospacedFont::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1014,7 +999,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFont2_Imp
         }
         IDWriteFont2_Vtbl { base__: <IDWriteFont1 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, IsColorFont: IsColorFont::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1068,7 +1052,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFont3_Imp
             GetLocality: GetLocality::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1117,7 +1100,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontColle
             GetFontFromFontFace: GetFontFromFontFace::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1156,7 +1138,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontColle
             GetFontFamily2: GetFontFamily2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1211,7 +1192,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontColle
             GetFontSet2: GetFontSet2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1233,7 +1213,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontColle
             GetExpirationEvent: GetExpirationEvent::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteFontCollectionLoader_Impl: ::windows_core::BaseImpl {
     fn CreateEnumeratorFromKey(this: &Self::This, factory: ::core::option::Option<&IDWriteFactory>, collectionkey: *const ::core::ffi::c_void, collectionkeysize: u32) -> ::windows_core::Result<IDWriteFontFileEnumerator>;
@@ -1257,7 +1236,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontColle
             CreateEnumeratorFromKey: CreateEnumeratorFromKey::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteFontDownloadListener_Impl: ::windows_core::BaseImpl {
     fn DownloadCompleted(this: &Self::This, downloadqueue: ::core::option::Option<&IDWriteFontDownloadQueue>, context: ::core::option::Option<&::windows_core::IUnknown>, downloadresult: ::windows_core::HRESULT);
@@ -1275,7 +1253,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontDownl
             DownloadCompleted: DownloadCompleted::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1328,7 +1305,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontDownl
             GetGenerationCount: GetGenerationCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -1426,7 +1402,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFace_
             GetGdiCompatibleGlyphMetrics: GetGdiCompatibleGlyphMetrics::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -1509,7 +1484,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFace1
             HasVerticalGlyphVariants: HasVerticalGlyphVariants::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -1553,7 +1527,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFace2
             GetRecommendedRenderingMode3: GetRecommendedRenderingMode3::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -1672,7 +1645,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFace3
             AreGlyphsLocal: AreGlyphsLocal::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -1715,7 +1687,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFace4
             ReleaseGlyphImageData: ReleaseGlyphImageData::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -1763,7 +1734,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFace5
             Equals: Equals::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Direct2D_Common\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Direct2D_Common"))]
@@ -1802,7 +1772,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFace6
             GetFaceNames2: GetFaceNames2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1913,7 +1882,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFaceR
             EnqueueFileFragmentDownloadRequest: EnqueueFileFragmentDownloadRequest::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -1951,7 +1919,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFaceR
             GetFontAxisValues: GetFontAxisValues::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteFontFallback_Impl: ::windows_core::BaseImpl {
     fn MapCharacters(this: &Self::This, analysissource: ::core::option::Option<&IDWriteTextAnalysisSource>, textposition: u32, textlength: u32, basefontcollection: ::core::option::Option<&IDWriteFontCollection>, basefamilyname: &::windows_core::PCWSTR, baseweight: DWRITE_FONT_WEIGHT, basestyle: DWRITE_FONT_STYLE, basestretch: DWRITE_FONT_STRETCH, mappedlength: *mut u32, mappedfont: *mut ::core::option::Option<IDWriteFont>, scale: *mut f32) -> ::windows_core::Result<()>;
@@ -1982,7 +1949,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFallb
         }
         IDWriteFontFallback_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, MapCharacters: MapCharacters::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteFontFallback1_Impl: ::windows_core::BaseImpl + IDWriteFontFallback_Impl {
     fn MapCharacters2(this: &Self::This, analysissource: ::core::option::Option<&IDWriteTextAnalysisSource>, textposition: u32, textlength: u32, basefontcollection: ::core::option::Option<&IDWriteFontCollection>, basefamilyname: &::windows_core::PCWSTR, fontaxisvalues: *const DWRITE_FONT_AXIS_VALUE, fontaxisvaluecount: u32, mappedlength: *mut u32, scale: *mut f32, mappedfontface: *mut ::core::option::Option<IDWriteFontFace5>) -> ::windows_core::Result<()>;
@@ -1999,7 +1965,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFallb
         }
         IDWriteFontFallback1_Vtbl { base__: <IDWriteFontFallback as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, MapCharacters2: MapCharacters2::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteFontFallbackBuilder_Impl: ::windows_core::BaseImpl {
     fn AddMapping(this: &Self::This, ranges: *const DWRITE_UNICODE_RANGE, rangescount: u32, targetfamilynames: *const *const u16, targetfamilynamescount: u32, fontcollection: ::core::option::Option<&IDWriteFontCollection>, localename: &::windows_core::PCWSTR, basefamilyname: &::windows_core::PCWSTR, scale: f32) -> ::windows_core::Result<()>;
@@ -2033,7 +1998,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFallb
             CreateFontFallback: CreateFontFallback::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteFontFamily_Impl: ::windows_core::BaseImpl + IDWriteFontList_Impl {
     fn GetFamilyNames(this: &Self::This) -> ::windows_core::Result<IDWriteLocalizedStrings>;
@@ -2079,7 +2043,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFamil
             GetMatchingFonts: GetMatchingFonts::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteFontFamily1_Impl: ::windows_core::BaseImpl + IDWriteFontFamily_Impl {
     fn GetFontLocality(this: &Self::This, listindex: u32) -> DWRITE_LOCALITY;
@@ -2119,7 +2082,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFamil
             GetFontFaceReference: GetFontFaceReference::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteFontFamily2_Impl: ::windows_core::BaseImpl + IDWriteFontFamily1_Impl {
     fn GetMatchingFonts2(this: &Self::This, fontaxisvalues: *const DWRITE_FONT_AXIS_VALUE, fontaxisvaluecount: u32) -> ::windows_core::Result<IDWriteFontList2>;
@@ -2154,7 +2116,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFamil
             GetFontSet: GetFontSet::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2192,7 +2153,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFile_
             Analyze: Analyze::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2231,7 +2191,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFileE
             GetCurrentFontFile: GetCurrentFontFile::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteFontFileLoader_Impl: ::windows_core::BaseImpl {
     fn CreateStreamFromKey(this: &Self::This, fontfilereferencekey: *const ::core::ffi::c_void, fontfilereferencekeysize: u32) -> ::windows_core::Result<IDWriteFontFileStream>;
@@ -2255,7 +2214,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFileL
             CreateStreamFromKey: CreateStreamFromKey::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteFontFileStream_Impl: ::windows_core::BaseImpl {
     fn ReadFileFragment(this: &Self::This, fragmentstart: *mut *mut ::core::ffi::c_void, fileoffset: u64, fragmentsize: u64, fragmentcontext: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>;
@@ -2300,7 +2258,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontFileS
             GetLastWriteTime: GetLastWriteTime::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteFontList_Impl: ::windows_core::BaseImpl {
     fn GetFontCollection(this: &Self::This) -> ::windows_core::Result<IDWriteFontCollection>;
@@ -2340,7 +2297,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontList_
             GetFont: GetFont::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteFontList1_Impl: ::windows_core::BaseImpl + IDWriteFontList_Impl {
     fn GetFontLocality(this: &Self::This, listindex: u32) -> DWRITE_LOCALITY;
@@ -2380,7 +2336,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontList1
             GetFontFaceReference: GetFontFaceReference::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteFontList2_Impl: ::windows_core::BaseImpl + IDWriteFontList1_Impl {
     fn GetFontSet(this: &Self::This) -> ::windows_core::Result<IDWriteFontSet1>;
@@ -2401,7 +2356,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontList2
         }
         IDWriteFontList2_Vtbl { base__: <IDWriteFontList1 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetFontSet: GetFontSet::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2502,7 +2456,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontResou
             CreateFontFaceReference: CreateFontFaceReference::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2605,7 +2558,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontSet_I
             GetMatchingFonts2: GetMatchingFonts2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2735,7 +2687,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontSet1_
             GetFontLocality: GetFontLocality::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2754,7 +2705,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontSet2_
         }
         IDWriteFontSet2_Vtbl { base__: <IDWriteFontSet1 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetExpirationEvent: GetExpirationEvent::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2786,7 +2736,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontSet3_
             GetFontSourceName: GetFontSourceName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -2819,7 +2768,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontSet4_
             GetMatchingFonts4: GetMatchingFonts4::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteFontSetBuilder_Impl: ::windows_core::BaseImpl {
     fn AddFontFaceReference(this: &Self::This, fontfacereference: ::core::option::Option<&IDWriteFontFaceReference>, properties: *const DWRITE_FONT_PROPERTY, propertycount: u32) -> ::windows_core::Result<()>;
@@ -2858,7 +2806,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontSetBu
             CreateFontSet: CreateFontSet::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteFontSetBuilder1_Impl: ::windows_core::BaseImpl + IDWriteFontSetBuilder_Impl {
     fn AddFontFile(this: &Self::This, fontfile: ::core::option::Option<&IDWriteFontFile>) -> ::windows_core::Result<()>;
@@ -2873,7 +2820,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontSetBu
         }
         IDWriteFontSetBuilder1_Vtbl { base__: <IDWriteFontSetBuilder as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, AddFontFile: AddFontFile::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteFontSetBuilder2_Impl: ::windows_core::BaseImpl + IDWriteFontSetBuilder1_Impl {
     fn AddFont(this: &Self::This, fontfile: ::core::option::Option<&IDWriteFontFile>, fontfaceindex: u32, fontsimulations: DWRITE_FONT_SIMULATIONS, fontaxisvalues: *const DWRITE_FONT_AXIS_VALUE, fontaxisvaluecount: u32, fontaxisranges: *const DWRITE_FONT_AXIS_RANGE, fontaxisrangecount: u32, properties: *const DWRITE_FONT_PROPERTY, propertycount: u32) -> ::windows_core::Result<()>;
@@ -2896,7 +2842,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteFontSetBu
             AddFontFile2: AddFontFile2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -2956,7 +2901,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteGdiIntero
             CreateBitmapRenderTarget: CreateBitmapRenderTarget::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Globalization\"`, `\"Win32_Graphics_Gdi\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Globalization", feature = "Win32_Graphics_Gdi"))]
@@ -3005,7 +2949,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteGdiIntero
             GetMatchingFontsByLOGFONT: GetMatchingFontsByLOGFONT::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3043,7 +2986,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteGlyphRunA
             GetAlphaBlendParams: GetAlphaBlendParams::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteInMemoryFontFileLoader_Impl: ::windows_core::BaseImpl + IDWriteFontFileLoader_Impl {
     fn CreateInMemoryFontFileReference(this: &Self::This, factory: ::core::option::Option<&IDWriteFactory>, fontdata: *const ::core::ffi::c_void, fontdatasize: u32, ownerobject: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<IDWriteFontFile>;
@@ -3072,7 +3014,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteInMemoryF
             GetFileCount: GetFileCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3121,7 +3062,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteInlineObj
             GetBreakConditions: GetBreakConditions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3165,7 +3105,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteLocalFont
             GetLastWriteTimeFromKey: GetLastWriteTimeFromKey::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3224,7 +3163,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteLocalized
             GetString: GetString::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteNumberSubstitution_Impl: ::windows_core::BaseImpl {}
 impl ::windows_core::Iids for IDWriteNumberSubstitution {
@@ -3232,7 +3170,6 @@ impl ::windows_core::Iids for IDWriteNumberSubstitution {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteNumberSubstitution_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IDWriteNumberSubstitution {
     const VTABLE: Self::Vtable = { IDWriteNumberSubstitution_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3276,7 +3213,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWritePixelSnap
             GetPixelsPerDip: GetPixelsPerDip::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteRemoteFontFileLoader_Impl: ::windows_core::BaseImpl + IDWriteFontFileLoader_Impl {
     fn CreateRemoteStreamFromKey(this: &Self::This, fontfilereferencekey: *const ::core::ffi::c_void, fontfilereferencekeysize: u32) -> ::windows_core::Result<IDWriteRemoteFontFileStream>;
@@ -3322,7 +3258,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteRemoteFon
             CreateFontFileReferenceFromUrl: CreateFontFileReferenceFromUrl::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3371,7 +3306,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteRemoteFon
             BeginDownload: BeginDownload::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteRenderingParams_Impl: ::windows_core::BaseImpl {
     fn GetGamma(this: &Self::This) -> f32;
@@ -3409,7 +3343,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteRendering
             GetRenderingMode: GetRenderingMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteRenderingParams1_Impl: ::windows_core::BaseImpl + IDWriteRenderingParams_Impl {
     fn GetGrayscaleEnhancedContrast(this: &Self::This) -> f32;
@@ -3427,7 +3360,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteRendering
             GetGrayscaleEnhancedContrast: GetGrayscaleEnhancedContrast::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteRenderingParams2_Impl: ::windows_core::BaseImpl + IDWriteRenderingParams1_Impl {
     fn GetGridFitMode(this: &Self::This) -> DWRITE_GRID_FIT_MODE;
@@ -3442,7 +3374,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteRendering
         }
         IDWriteRenderingParams2_Vtbl { base__: <IDWriteRenderingParams1 as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetGridFitMode: GetGridFitMode::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteRenderingParams3_Impl: ::windows_core::BaseImpl + IDWriteRenderingParams2_Impl {
     fn GetRenderingMode1(this: &Self::This) -> DWRITE_RENDERING_MODE1;
@@ -3460,7 +3391,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteRendering
             GetRenderingMode1: GetRenderingMode1::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteStringList_Impl: ::windows_core::BaseImpl {
     fn GetCount(this: &Self::This) -> u32;
@@ -3510,7 +3440,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteStringLis
             GetString: GetString::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteTextAnalysisSink_Impl: ::windows_core::BaseImpl {
     fn SetScriptAnalysis(this: &Self::This, textposition: u32, textlength: u32, scriptanalysis: *const DWRITE_SCRIPT_ANALYSIS) -> ::windows_core::Result<()>;
@@ -3543,7 +3472,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTextAnaly
             SetNumberSubstitution: SetNumberSubstitution::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3565,7 +3493,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTextAnaly
             SetGlyphOrientation: SetGlyphOrientation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteTextAnalysisSource_Impl: ::windows_core::BaseImpl {
     fn GetTextAtPosition(this: &Self::This, textposition: u32, textstring: *mut *mut u16, textlength: *mut u32) -> ::windows_core::Result<()>;
@@ -3603,7 +3530,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTextAnaly
             GetNumberSubstitution: GetNumberSubstitution::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteTextAnalysisSource1_Impl: ::windows_core::BaseImpl + IDWriteTextAnalysisSource_Impl {
     fn GetVerticalGlyphOrientation(this: &Self::This, textposition: u32, textlength: *mut u32, glyphorientation: *mut DWRITE_VERTICAL_GLYPH_ORIENTATION, bidilevel: *mut u8) -> ::windows_core::Result<()>;
@@ -3621,7 +3547,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTextAnaly
             GetVerticalGlyphOrientation: GetVerticalGlyphOrientation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3829,7 +3754,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTextAnaly
             GetGdiCompatibleGlyphPlacements: GetGdiCompatibleGlyphPlacements::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3929,7 +3853,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTextAnaly
             GetJustifiedGlyphs: GetJustifiedGlyphs::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3961,7 +3884,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTextAnaly
             CheckTypographicFeature: CheckTypographicFeature::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteTextFormat_Impl: ::windows_core::BaseImpl {
     fn SetTextAlignment(this: &Self::This, textalignment: DWRITE_TEXT_ALIGNMENT) -> ::windows_core::Result<()>;
@@ -4105,7 +4027,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTextForma
             GetLocaleName: GetLocaleName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4168,7 +4089,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTextForma
             GetFontFallback: GetFontFallback::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4195,7 +4115,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTextForma
             GetLineSpacing2: GetLineSpacing2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4237,7 +4156,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTextForma
             SetAutomaticFontAxes: SetAutomaticFontAxes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4461,7 +4379,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTextLayou
             HitTestTextRange: HitTestTextRange::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4498,7 +4415,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTextLayou
             GetCharacterSpacing: GetCharacterSpacing::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4566,7 +4482,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTextLayou
             GetFontFallback: GetFontFallback::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4603,7 +4518,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTextLayou
             GetLineMetrics2: GetLineMetrics2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4645,7 +4559,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTextLayou
             SetAutomaticFontAxes: SetAutomaticFontAxes::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4682,7 +4595,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTextRende
             DrawInlineObject: DrawInlineObject::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -4719,7 +4631,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTextRende
             DrawInlineObject2: DrawInlineObject2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IDWriteTypography_Impl: ::windows_core::BaseImpl {
     fn AddFontFeature(this: &Self::This, fontfeature: &DWRITE_FONT_FEATURE) -> ::windows_core::Result<()>;
@@ -4753,5 +4664,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IDWriteTypograph
             GetFontFeature: GetFontFeature::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

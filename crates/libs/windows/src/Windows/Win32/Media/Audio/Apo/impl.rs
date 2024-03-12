@@ -4,7 +4,6 @@ impl ::windows_core::Iids for IApoAcousticEchoCancellation {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IApoAcousticEchoCancellation_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IApoAcousticEchoCancellation {
     const VTABLE: Self::Vtable = { IApoAcousticEchoCancellation_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IApoAuxiliaryInputConfiguration_Impl: ::windows_core::BaseImpl {
     fn AddAuxiliaryInput(this: &Self::This, dwinputid: u32, cbdatasize: u32, pbydata: *const u8, pinputconnection: *const APO_CONNECTION_DESCRIPTOR) -> ::windows_core::Result<()>;
@@ -38,7 +37,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IApoAuxiliaryInp
             IsInputFormatSupported: IsInputFormatSupported::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IApoAuxiliaryInputRT_Impl: ::windows_core::BaseImpl {
     fn AcceptInput(this: &Self::This, dwinputid: u32, pinputconnection: *const APO_CONNECTION_PROPERTY);
@@ -53,7 +51,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IApoAuxiliaryInp
         }
         IApoAuxiliaryInputRT_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, AcceptInput: AcceptInput::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioDeviceModulesClient_Impl: ::windows_core::BaseImpl {
     fn SetAudioDeviceModulesManager(this: &Self::This, paudiodevicemodulesmanager: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -71,7 +68,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioDeviceModu
             SetAudioDeviceModulesManager: SetAudioDeviceModulesManager::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -120,7 +116,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioMediaType_
             GetUncompressedAudioFormat: GetUncompressedAudioFormat::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioProcessingObject_Impl: ::windows_core::BaseImpl {
     fn Reset(this: &Self::This) -> ::windows_core::Result<()>;
@@ -198,7 +193,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioProcessing
             GetInputChannelCount: GetInputChannelCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioProcessingObjectConfiguration_Impl: ::windows_core::BaseImpl {
     fn LockForProcess(this: &Self::This, u32numinputconnections: u32, ppinputconnections: *const *const APO_CONNECTION_DESCRIPTOR, u32numoutputconnections: u32, ppoutputconnections: *const *const APO_CONNECTION_DESCRIPTOR) -> ::windows_core::Result<()>;
@@ -221,7 +215,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioProcessing
             UnlockForProcess: UnlockForProcess::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioProcessingObjectLoggingService_Impl: ::windows_core::BaseImpl {
     fn ApoLog(this: &Self::This, level: APO_LOG_LEVEL, format: &::windows_core::PCWSTR);
@@ -236,7 +229,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioProcessing
         }
         IAudioProcessingObjectLoggingService_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, ApoLog: ApoLog::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -263,7 +255,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioProcessing
             HandleNotification: HandleNotification::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -285,7 +276,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioProcessing
             GetApoNotificationRegistrationInfo2: GetApoNotificationRegistrationInfo2::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioProcessingObjectRT_Impl: ::windows_core::BaseImpl {
     fn APOProcess(this: &Self::This, u32numinputconnections: u32, ppinputconnections: *const *const APO_CONNECTION_PROPERTY, u32numoutputconnections: u32, ppoutputconnections: *mut *mut APO_CONNECTION_PROPERTY);
@@ -313,7 +303,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioProcessing
             CalcOutputFrames: CalcOutputFrames::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioProcessingObjectRTQueueService_Impl: ::windows_core::BaseImpl {
     fn GetRealTimeWorkQueue(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -337,7 +326,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioProcessing
             GetRealTimeWorkQueue: GetRealTimeWorkQueue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioProcessingObjectVBR_Impl: ::windows_core::BaseImpl {
     fn CalcMaxInputFrames(this: &Self::This, u32maxoutputframecount: u32) -> ::windows_core::Result<u32>;
@@ -372,7 +360,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioProcessing
             CalcMaxOutputFrames: CalcMaxOutputFrames::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioSystemEffects_Impl: ::windows_core::BaseImpl {}
 impl ::windows_core::Iids for IAudioSystemEffects {
@@ -380,7 +367,6 @@ impl ::windows_core::Iids for IAudioSystemEffects {
 }
 impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioSystemEffects_Impl, const OFFSET: usize> ::windows_core::Vtable<Identity, OFFSET> for IAudioSystemEffects {
     const VTABLE: Self::Vtable = { IAudioSystemEffects_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE } };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -399,7 +385,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioSystemEffe
         }
         IAudioSystemEffects2_Vtbl { base__: <IAudioSystemEffects as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetEffectsList: GetEffectsList::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -426,7 +411,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioSystemEffe
             SetAudioSystemEffectState: SetAudioSystemEffectState::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IAudioSystemEffectsCustomFormats_Impl: ::windows_core::BaseImpl {
     fn GetFormatCount(this: &Self::This) -> ::windows_core::Result<u32>;
@@ -472,5 +456,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IAudioSystemEffe
             GetFormatRepresentation: GetFormatRepresentation::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

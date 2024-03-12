@@ -21,7 +21,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWPCGamesSetting
         }
         IWPCGamesSettings_Vtbl { base__: <IWPCSettings as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, IsBlocked: IsBlocked::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -59,7 +58,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWPCProviderConf
             RequestOverride: RequestOverride::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWPCProviderState_Impl: ::windows_core::BaseImpl {
     fn Enable(this: &Self::This) -> ::windows_core::Result<()>;
@@ -82,7 +80,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWPCProviderStat
             Disable: Disable::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWPCProviderSupport_Impl: ::windows_core::BaseImpl {
     fn GetCurrent(this: &Self::This) -> ::windows_core::Result<::windows_core::GUID>;
@@ -103,7 +100,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWPCProviderSupp
         }
         IWPCProviderSupport_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetCurrent: GetCurrent::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -153,7 +149,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWPCSettings_Imp
             GetRestrictions: GetRestrictions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -192,7 +187,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWPCWebSettings_
             RequestURLOverride: RequestURLOverride::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWindowsParentalControls_Impl: ::windows_core::BaseImpl + IWindowsParentalControlsCore_Impl {
     fn GetGamesSettings(this: &Self::This, pcszsid: &::windows_core::PCWSTR) -> ::windows_core::Result<IWPCGamesSettings>;
@@ -216,7 +210,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsParental
             GetGamesSettings: GetGamesSettings::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWindowsParentalControlsCore_Impl: ::windows_core::BaseImpl {
     fn GetVisibility(this: &Self::This) -> ::windows_core::Result<WPCFLAG_VISIBILITY>;
@@ -267,5 +260,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWindowsParental
             GetWebFilterInfo: GetWebFilterInfo::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

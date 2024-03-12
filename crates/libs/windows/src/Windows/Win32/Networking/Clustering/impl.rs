@@ -24,7 +24,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGetClusterDataI
             GetObjectCount: GetObjectCount::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGetClusterGroupInfo_Impl: ::windows_core::BaseImpl {
     fn GetGroupHandle(this: &Self::This, lobjindex: i32) -> HGROUP;
@@ -39,7 +38,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGetClusterGroup
         }
         IGetClusterGroupInfo_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetGroupHandle: GetGroupHandle::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGetClusterNetInterfaceInfo_Impl: ::windows_core::BaseImpl {
     fn GetNetInterfaceHandle(this: &Self::This, lobjindex: i32) -> HNETINTERFACE;
@@ -57,7 +55,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGetClusterNetIn
             GetNetInterfaceHandle: GetNetInterfaceHandle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGetClusterNetworkInfo_Impl: ::windows_core::BaseImpl {
     fn GetNetworkHandle(this: &Self::This, lobjindex: i32) -> HNETWORK;
@@ -75,7 +72,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGetClusterNetwo
             GetNetworkHandle: GetNetworkHandle::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGetClusterNodeInfo_Impl: ::windows_core::BaseImpl {
     fn GetNodeHandle(this: &Self::This, lobjindex: i32) -> HNODE;
@@ -90,7 +86,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGetClusterNodeI
         }
         IGetClusterNodeInfo_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, GetNodeHandle: GetNodeHandle::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IGetClusterObjectInfo_Impl: ::windows_core::BaseImpl {
     fn GetObjectName(this: &Self::This, lobjindex: i32, lpszname: ::windows_core::BSTR, pcchname: *mut i32) -> ::windows_core::Result<()>;
@@ -113,7 +108,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGetClusterObjec
             GetObjectType: GetObjectType::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -145,7 +139,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGetClusterResou
             GetResourceNetworkName: GetResourceNetworkName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Graphics_Gdi\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
 #[cfg(all(feature = "Win32_Graphics_Gdi", feature = "Win32_UI_WindowsAndMessaging"))]
@@ -182,7 +175,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IGetClusterUIInf
             GetIcon: GetIcon::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -232,7 +224,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusApplicatio
             OpenCluster: OpenCluster::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -297,7 +288,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusCryptoKeys
             RemoveItem: RemoveItem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -358,7 +348,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusDisk_Impl,
             Partitions: Partitions::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -408,7 +397,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusDisks_Impl
             get_Item: get_Item::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -513,7 +501,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusNetInterfa
             Cluster: Cluster::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -568,7 +555,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusNetInterfa
             get_Item: get_Item::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -700,7 +686,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusNetwork_Im
             Cluster: Cluster::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -755,7 +740,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusNetworkNet
             get_Item: get_Item::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -810,7 +794,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusNetworks_I
             get_Item: get_Item::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -963,7 +946,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusNode_Impl,
             NetInterfaces: NetInterfaces::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1018,7 +1000,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusNodeNetInt
             get_Item: get_Item::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1073,7 +1054,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusNodes_Impl
             get_Item: get_Item::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1167,7 +1147,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusPartition_
             FileSystem: FileSystem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1239,7 +1218,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusPartitionE
             VolumeGuid: VolumeGuid::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1289,7 +1267,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusPartitions
             get_Item: get_Item::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1415,7 +1392,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusProperties
             Modified: Modified::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1573,7 +1549,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusProperty_I
             UseDefaultValue: UseDefaultValue::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1671,7 +1646,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusPropertyVa
             Data: Data::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1737,7 +1711,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusPropertyVa
             RemoveItem: RemoveItem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1803,7 +1776,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusPropertyVa
             RemoveItem: RemoveItem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1828,7 +1800,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusRefObject_
         }
         ISClusRefObject_Vtbl { base__: <super::super::System::Com::IDispatch as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, Handle: Handle::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1893,7 +1864,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusRegistryKe
             RemoveItem: RemoveItem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1974,7 +1944,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusResDepende
             RemoveItem: RemoveItem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2055,7 +2024,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusResDepende
             RemoveItem: RemoveItem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2236,7 +2204,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusResGroup_I
             Cluster: Cluster::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2322,7 +2289,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusResGroupPr
             AddItem: AddItem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2393,7 +2359,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusResGroupRe
             DeleteItem: DeleteItem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2464,7 +2429,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusResGroups_
             DeleteItem: DeleteItem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2540,7 +2504,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusResPossibl
             Modified: Modified::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2661,7 +2624,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusResType_Im
             AvailableDisks: AvailableDisks::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2716,7 +2678,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusResTypePos
             get_Item: get_Item::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2787,7 +2748,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusResTypeRes
             DeleteItem: DeleteItem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2858,7 +2818,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusResTypes_I
             DeleteItem: DeleteItem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3179,7 +3138,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusResource_I
             SetMaintenanceMode: SetMaintenanceMode::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3250,7 +3208,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusResources_
             DeleteItem: DeleteItem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3311,7 +3268,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusScsiAddres
             Lun: Lun::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3438,7 +3394,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusVersion_Im
             MixedVersion: MixedVersion::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3656,7 +3611,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISCluster_Impl, 
             NetInterfaces: NetInterfaces::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3722,7 +3676,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISClusterNames_I
             DomainName: DomainName::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
 #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3777,7 +3730,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: ISDomainNames_Im
             get_Item: get_Item::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWCContextMenuCallback_Impl: ::windows_core::BaseImpl {
     fn AddExtensionMenuItem(this: &Self::This, lpszname: &::windows_core::BSTR, lpszstatusbartext: &::windows_core::BSTR, ncommandid: u32, nsubmenucommandid: u32, uflags: u32) -> ::windows_core::Result<()>;
@@ -3795,7 +3747,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWCContextMenuCa
             AddExtensionMenuItem: AddExtensionMenuItem::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWCPropertySheetCallback_Impl: ::windows_core::BaseImpl {
     fn AddPropertySheetPage(this: &Self::This, hpage: *const i32) -> ::windows_core::Result<()>;
@@ -3813,7 +3764,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWCPropertySheet
             AddPropertySheetPage: AddPropertySheetPage::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3840,7 +3790,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWCWizard97Callb
             EnableNext: EnableNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Win32_Foundation\"`"]
 #[cfg(feature = "Win32_Foundation")]
@@ -3867,7 +3816,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWCWizardCallbac
             EnableNext: EnableNext::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWEExtendContextMenu_Impl: ::windows_core::BaseImpl {
     fn AddContextMenuItems(this: &Self::This, pidata: ::core::option::Option<&::windows_core::IUnknown>, picallback: ::core::option::Option<&IWCContextMenuCallback>) -> ::windows_core::Result<()>;
@@ -3885,7 +3833,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWEExtendContext
             AddContextMenuItems: AddContextMenuItems::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWEExtendPropertySheet_Impl: ::windows_core::BaseImpl {
     fn CreatePropertySheetPages(this: &Self::This, pidata: ::core::option::Option<&::windows_core::IUnknown>, picallback: ::core::option::Option<&IWCPropertySheetCallback>) -> ::windows_core::Result<()>;
@@ -3903,7 +3850,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWEExtendPropert
             CreatePropertySheetPages: CreatePropertySheetPages::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWEExtendWizard_Impl: ::windows_core::BaseImpl {
     fn CreateWizardPages(this: &Self::This, pidata: ::core::option::Option<&::windows_core::IUnknown>, picallback: ::core::option::Option<&IWCWizardCallback>) -> ::windows_core::Result<()>;
@@ -3921,7 +3867,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWEExtendWizard_
             CreateWizardPages: CreateWizardPages::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWEExtendWizard97_Impl: ::windows_core::BaseImpl {
     fn CreateWizard97Pages(this: &Self::This, pidata: ::core::option::Option<&::windows_core::IUnknown>, picallback: ::core::option::Option<&IWCWizard97Callback>) -> ::windows_core::Result<()>;
@@ -3939,7 +3884,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWEExtendWizard9
             CreateWizard97Pages: CreateWizard97Pages::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 pub trait IWEInvokeCommand_Impl: ::windows_core::BaseImpl {
     fn InvokeCommand(this: &Self::This, ncommandid: u32, pidata: ::core::option::Option<&::windows_core::IUnknown>) -> ::windows_core::Result<()>;
@@ -3954,5 +3898,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IWEInvokeCommand
         }
         IWEInvokeCommand_Vtbl { base__: <::windows_core::IUnknown as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE, InvokeCommand: InvokeCommand::<Identity, Impl, OFFSET> }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }

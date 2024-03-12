@@ -89,7 +89,6 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPwmControllerPr
             SetPulseParameters: SetPulseParameters::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
 #[doc = "Required features: `\"Foundation_Collections\"`"]
 #[cfg(feature = "Foundation_Collections")]
@@ -118,5 +117,4 @@ impl<Identity: ::windows_core::ImplProvider<Impl = Impl>, Impl: IPwmProvider_Imp
             GetControllers: GetControllers::<Identity, Impl, OFFSET>,
         }
     };
-    const VTABLE_REF: &'static Self::Vtable = &<Self as ::windows_core::Vtable<Identity, OFFSET>>::VTABLE;
 }
